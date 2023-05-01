@@ -1,0 +1,62 @@
+Increased weight gain by C-section: Functional significance of the primordial microbiome
+
+Abstract
+
+Epidemiological evidence supports a direct association between early microbiota impact—including C-section—and obesity. We performed antibiotic-free, fostered C-sections and determined the impact on the early microbiota and body weight during development. Mice in the C-section group gained more body mass after weaning, with a stronger phenotype in females. C-section–born mice lacked the dynamic developmental gut microbiota changes observed in control mice. The results demonstrate a causal relationship between C-section and increased body weight, supporting the involvement of maternal vaginal bacteria in normal metabolic development.
+
+INTRODUCTION
+
+C-section is a lifesaving practice that is needed in 10 to 15% of births to avoid risking the life of mother or child (1, 2). However, C-section delivery is often overused, with some regions of the world reaching 43% of births (3). Concomitantly with the increase in C-section, obesity (4–6) and immune-related diseases [type 1 diabetes (7, 8), allergies (3, 9), and celiac disease (10)] are on the rise.
+
+C-section circumvents natural exposure to the vaginal microbiota during labor and birth and, in addition, involves preventive antibiotics, which have also been related to increased risk of the modern diseases mentioned above. Early impacts on the developing microbiota lead to increased obesity in animal models (11, 12). Here, we determined the effect of antibiotic-free, fostered C-sections on body weight gain and gut microbiota during early development in mice.
+
+RESULTS
+
+C-section causes increased body weight gain
+
+A total of 34 C-section–born fostered mice were compared with 35 control mice (fig. S1). C-section–delivered mice showed higher postweaning body mass gain (Fig. 1) and total body mass (fig. S2), in relation to vaginally delivered controls. Overall, mice gained 33% more weight at age 15 weeks if they were born by C-section, but females showed a stronger phenotypic effect, with 70% higher weight gain (Fig. 1), and with body masses similar to those of males (fig. S2). Mice that were delivered by C-section also showed a marginal increase in the proportion of body fat at 15 weeks of age, as determined by dual-energy x-ray absorptiometry (DEXA; fig. S3). These results are consistent with the epidemiological association between C-section and increased risk of obesity (4, 13–16).
+
+C-section causes abnormal development of the fecal microbiota
+
+By examining the early gut microbiota during the 4 weeks following weaning, we observed a significant segregation by delivery mode [analysis of similarities (ANOSIM), P = 0.001; Fig. 2 and figs. S4 to S8], in both genders and at all time points. Segregation by delivery mode was highest in female mice (fig. S5). Maturation of the microbiome structure in control mice occurred with a progressive approximation (reduction of UniFrac distances) to the fecal microbiota of 6-week-old animals. However, C-section mice showed no major changes in microbiome maturity or structure (Fig. 2, C and D) over the same 4-week period. Fecal microbiota diversity in control animals was highest at weaning and decreased with age (Fig. 3A and fig. S9), unlike in C-section–delivered mice that had a significantly lower α diversity at weaning, which increased with age (Fig. 3A). α diversity differences were consistent across different metrics [phylogenetic diversity (PD) whole tree, observed species, and Shannon index; Fig. 3 and figs. S7, S10, and S11]. Birth mode–discriminatory underrepresented taxa in C-section mice at weaning included Bacteroides, Ruminococcaceae, Lachnospiraceae, and Clostridiales, and overrepresented taxa included S24.7, Lactobacillus, and Erysipelotrichaceae (Fig. 3, B to D, and fig. S11). In general, the proportions of dominant taxa discriminant for birth mode decreased throughout the first 3 weeks after weaning (fig. S8).
+
+DISCUSSION
+
+One limitation of this work is that we could not tell with precision when the phenotype arose before weaning, which is the time when the C-section offspring had already gained significantly more weight than the vaginally born controls (fig. S2). Regardless, developmental weight gains occur at increasingly higher rates in C-section–born animals than in control animals.
+
+Unlike the procedure in humans, C-sections were performed in this work without the use of perinatal antibiotics. The compounded effect of both C-sections and antibiotics is unknown but would be expected to be stronger on the offspring phenotype than C-section alone. Another difference with human C-sections is that our mouse C-section involves fostering because survival C-section attempts were not successful. Future work will be needed to discriminate between the effects of birth mode and fostering.
+
+Early gut microbiota abnormalities associated with C-section are consistent with alterations in bacterial modulation of development in relation to the normal pioneer maternal microbiota, which protects from excessive weight gain. The bacterial taxa found here that are associated with vaginal delivery (Bacteroides, Ruminococcaceae, and Clostridiales) have previously been associated with lean phenotypes in mice (11, 17).
+
+Further research is needed to identify the antiobesogenic individual taxon or combination of taxa responsible for the effects observed here. The results of this work support the idea that birth acquisition of maternal vaginal microbes is needed for normal metabolic development and present important new information of significance in the context of the global obesity epidemics.
+
+MATERIALS AND METHODS
+
+Mice
+
+Experiments were approved by the New York University School of Medicine Institutional Animal Care and Use Committee (NYUSoM IACUC) (protocol IACUC 16-00878). Conventional outbred Swiss Webster mice were maintained under a 12-hour light cycle and fed autoclaved low-fat chow (Purina Pico Rodent #5053). Adult female mice (n = 11) from Taconic Biosciences were time-mated. On gestational day E19, five pregnant females underwent C-section [n = 34 pups (18 males and 16 females)], and litters were fostered by mothers that had delivered vaginally within the previous 48 hours. Six control dams delivered vaginally [n = 35 pups (21 males and 14 females); fig. S1]. Body weight was measured weekly, from weaning to week 15 of age, and fecal samples were collected during early development, from weaning to week 6 of age. DEXA was performed at 15 weeks of age.
+
+DNA extraction and sequencing
+
+Total DNA was extracted from fecal samples using the MoBio PowerSoil kit according to the manufacturer’s instructions, modified as described in the Earth Microbiome Project protocol (http://press.igsb.anl.gov/earthmicrobiome/protocols-and-standards/dna-extraction-protocol/). The V4 region of the 16S ribosomal RNA (rRNA) gene was amplified by polymerase chain reaction (PCR) using barcoded primers, as previously described (18). Reagents for DNA extraction and for PCR amplification were sequenced as controls (19). The amplicons were pooled in equimolar ratios and were sequenced on the Illumina MiSeq platform (Genome Technology Center of NYU Medical Center) using a paired-end technique. 16S rRNA sequences were uploaded to the public database Qiita (study ID #11156).
+
+Data analysis
+
+The effect of delivery mode on the changes in body weight was evaluated by ANOVA test, with resampling. The 16S rRNA gene sequence analyses were performed with the QIIME suite of software tools (v1.9) (20). The filtered sequence reads (Phred Q ≥ 20) were used to pick the operational taxonomic units (OTUs), with an open-reference OTU picking method based on 97% identity to entries in the Greengenes database (v13_8). After the chimeric sequences were removed using ChimeraSlayer (21), communities were rarefied to 3100 reads per sample. The unweighted/weighted UniFrac distances (22) were calculated to obtain the pairwise β diversity (similarities between two communities), which was further evaluated by ANOSIM test using the vegan package in R to test the significance of delivery mode with 999 permutations. The effect of age on microbial community was analyzed by comparing the UniFrac distance between fecal communities at any age and those from vaginally born mice at week 6, using ANOVA test, with resampling. Linear discriminant analysis effect size (LEfSe) (23) was used to search for bacterial taxa that had the largest effects on discriminating grouping factors, that is, delivery mode, by a combination of uni- and multivariate analysis. On the basis of microbial community composition, a random forest model was built with fecal samples from vaginally delivered mice as the training set to predict the maturity indices of mice born via C-section using the randomForest package in R, as previously reported (24).
+
+ Supplementary Material
+
+   
+
+Fig. 1
+
+Change in body mass (in grams) in 69 mice discordant to birth mode during early development, relative to 4 weeks of age (postweaning). Lines represent the average, and the shaded area represents 95% confidence interval. Significance was determined by analysis of variance (ANOVA) test, with resampling. *P < 0.05, **P < 0.01, ***P < 0.001. At 15 weeks of age, C-section (CS) females gained 70% more weight than controls versus 14% increased weight gain in males. VD, vaginally born control.
+
+Fig. 2
+
+( ) Principal coordinate analysis (PCoA) of the fecal microbiota by birth mode at all time points. Communities segregate significantly by birth mode (P = 0.001). PC, principal coordinate. ( ) PCoA of fecal microbiota of mice born vaginally or by C-section (by age). Differences in fecal microbiota were significant during early development, from weaning to week 6 (P = 0.001). ( ) Microbiome maturity indices calculated by a random forest model trained on microbial communities from vaginally delivered mice. ( ) Unweighted UniFrac distances of fecal communities at any age from 6 weeks of age of vaginally born mice. Distances are highest at weaning and at 6 weeks of age. For (A) and (B), significance was determined pairwise by ANOSIM test, with resampling 999 times. For (D), significance was determined pairwise by ANOVA test, with resampling 999 times.
+
+Fig. 3
+
+( ) Chao1 index. Diversity in controls was higher at weaning and drops between week 3 and week 5 but increases by week 6, whereas no major age changes were observed in C-section–born mice before week 5. Significance was determined pairwise by ANOVA test, with resampling 999 times; blue brackets compare vaginally born communities, red brackets compare C-section communities, and black brackets compare birth modes. ( ) Heat map of relative abundance. (  and  ) Average relative abundance of bacterial taxa (C) with significant Linear Discriminant Analysis (LDA) scores (D) by delivery mode from weaning to 6 weeks of age.
+

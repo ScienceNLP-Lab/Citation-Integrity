@@ -1,0 +1,92 @@
+Effects of smoking on the genetic risk of obesity: the population architecture using genomics and epidemiology study
+
+Abstract
+
+Background
+
+Although smoking behavior is known to affect body mass index (BMI), the potential for smoking to influence genetic associations with BMI is largely unexplored.
+
+Methods
+
+As part of the ‘Population Architecture using Genomics and Epidemiology (PAGE)’ Consortium, we investigated interaction between genetic risk factors associated with BMI and smoking for 10 single nucleotide polymorphisms (SNPs) previously identified in genome-wide association studies. We included 6 studies with a total of 56,466 subjects (16,750 African Americans (AA) and 39,716 European Americans (EA)). We assessed effect modification by testing an interaction term for each SNP and smoking (current vs. former/never) in the linear regression and by stratified analyses.
+
+Results
+
+We did not observe strong evidence for interactions and only observed two interactions with p-values <0.1: for rs6548238/TMEM18, the risk allele (C) was associated with BMI only among AA females who were former/never smokers (β = 0.018, p = 0.002), vs. current smokers (β = 0.001, p = 0.95, p  = 0.10). For rs9939609/FTO, the A allele was more strongly associated with BMI among current smoker EA females (β = 0.017, p = 3.5x10-5), vs. former/never smokers (β = 0.006, p = 0.05, p  = 0.08).
+
+Conclusions
+
+These analyses provide limited evidence that smoking status may modify genetic effects of previously identified genetic risk factors for BMI. Larger studies are needed to follow up our results.
+
+Clinical Trial Registration
+
+NCT00000611
+
+Background
+
+The relationship between BMI and smoking is complex. Genetic variation is partially responsible for determining BMI, and genome-wide association studies (GWAS) have identified multiple variants associated with body mass index (BMI) in novel loci [1]. Lifestyle factors also play a key role in determining BMI: smoking affects body fat distribution [2], and current smokers tend to have lower BMI than non-smokers. The mechanism by which smoking regulates adiposity likely involves both appetite suppression via neural pathways [3] and interactions with energy-regulating hormonal feedback loops [4]. The interrelationship between BMI-setting genetic pathways and smoking behavior remains to be explored.
+
+This study examines the potential for effect modification by smoking in the well-replicated association between GWAS-identified SNPs and BMI, using data derived from 56,466 European American (EA) and African American (AA) men and women as part of the NHGRI-supported ‘Population Architecture using Genomics and Epidemiology (PAGE)’ Consortium [5]. We hypothesize that genetic associations with BMI may differ by smoking status. Our results may lead to better understanding of the combined effects of genetics and smoking on obesity among AA and EA men and women.
+
+Methods
+
+Study populations
+
+PAGE involves several studies, described in detail elsewhere [5]. PAGE studies included in this analysis are Atherosclerosis Risk in Communities Study (ARIC), Coronary Artery Risk in Young Adults (CARDIA), Cardiovascular Health Study (CHS), Women’s Health Initiative (WHI), Multiethnic Cohort (MEC), and Epidemiologic Architecture for Genes Linked to Environment (EAGLE) accessing the National Health and Nutrition Examination Surveys (NHANES). All studies collected self-identified racial/ethnic group and baseline smoking status via questionnaire. All studies were approved by Institutional Review Boards at their respective sites, and all participants provided informed consent.
+
+To reduce the likelihood of including individuals with extreme BMI due to a comorbid condition or a rare mutation, these analyses only included subjects with BMI ≥18.5 and <70. In our prior analyses, we found that using tighter BMI restrictions (i.e., BMI <40 and BMI <50) did not substantially alter results [6]. A total of 56,466 participants were selected from the PAGE consortium for analysis.
+
+Anthropometric measurements
+
+In MEC, self-reported height and weight were used to calculate baseline BMI (calculated as weight (kg) ÷ height (m)2). Multiple studies have described systematic biases in self-reported compared to measured height and weight; yet in general these differences are small (<1.0 kg/m2) and are unlikely to affect any conclusions [7-9]. At all other sites, BMI was calculated from height and weight measured at study enrollment in a clinic setting, with the exception of 140 (0.8%) of the 16,836 WHI subjects whose first available measurements were collected 1 or 3 years after enrollment.
+
+SNP selection and genotyping
+
+SNPs were selected from GWAS studies published online as of December 31, 2008, based on prior GWAS findings of positive association with BMI or obesity. We analyzed a total of 10 SNPs, after excluding correlated SNPs. Details of the SNP selection process, DNA extraction and genotyping procedures, as well as the association between each of these SNPs and BMI in PAGE have been reported elsewhere [6]. Nine SNPs were analyzed in EA (Table 1), and four SNPs were analyzed in AA (Table 2). We limited our analyses in each group to those SNPs previously associated with BMI in that racial/ethnic group, either in prior GWAS or in our prior report [10]. We also analyzed rs3751812/FTO in AA because this SNP has been previously associated with BMI in populations with African ancestry, although our previous analyses were underpowered to detect an association [10,11]. We did not analyze rs3751812/FTO in EA because it is strongly correlated with rs9939609/FTO in this population. 
+
+Statistical analysis
+
+All analyses were adjusted for continuous age and stratified by racial/ethnic group. Because it has been described that nicotine has antiestrogenic properties and is metabolized differently in men and women, all analyses were additionally stratified by sex [12]. To evaluate effect modification by current smoking, we estimated the association between each SNP and natural log-transformed BMI (lnBMI) in models using linear regression with robust standard errors (SEs) [13], and including a SNP*smoking (current = 1 vs. former/never = 0) interaction term. SNP genotype was coded assuming an additive genetic model (i.e., 0, 1, or 2 copies of the coded allele). We obtained betas specific to current smokers from this model, and to obtain stratum-specific betas for former/never smokers, we re-ran each analysis with a reverse-coded smoking variable (i.e., current = 0 vs. former/never = 1).
+
+To evaluate the association between each SNP and smoking status, we performed logistic regression using current smoking status as the dependent variable (current = 1 vs. former/never = 0).
+
+Results (effect sizes and SEs) from each PAGE study were combined with meta-analysis using R [14]. Fixed-effects meta-analysis was used to calculate effect sizes (β for lnBMI) and 95% confidence intervals (CIs) for each SNP. Within strata defined by racial/ethnic group, smoking status, and sex, we calculated the population mean BMI (BMI ) as the weighted average of mean BMIs reported by each PAGE site (Table 3). We calculated the mean BMI associated with 1 copy of the risk allele with the following formula: BMI  = exp ( ln (BMI ) + β ). We then subtracted the BMI  from BMI  to obtain the difference in mean BMI associated with 1 copy of the risk allele. We evaluated I2 as a measure of heterogeneity [15], to identify any excess variation between the PAGE cohorts. To address potential population stratification, we repeated analyses for studies that had Ancestry Informative Markers (AIMS) (WHI, ARIC, and MEC, representing >70% of subjects) including the most significant principal components (PCs) derived from AIMs in each model, and compared the results to unadjusted models. 
+
+Finally, as a sensitivity analysis to explore the effect of age, we repeated all analyses excluding subjects enrolled in CARDIA, who tended to be younger than subjects enrolled at the other PAGE sites (Table 3).
+
+Results
+
+Participant demographics and BMI are detailed in Table 3. Analyses included a total of 39,716 EA, and 16,750 AA, with BMI ranging from 18.5 – 69.5 kg/m2. Allele frequencies did not differ substantially by smoking status or sex, and thus combined frequencies are presented in all tables. We found no evidence of population stratification, and the sensitivity analysis revealed that excluding subjects enrolled in CARDIA (i.e., younger subjects) did not substantially alter results (data not shown). Thus, we present results unadjusted for PCs, and for all available PAGE subjects (Table 3).
+
+Out of all analyses performed in EA and AAs, none of the SNP*smoking interaction terms were, statistically significant at p-value ≤ 0.05 (Tables 1 and 2). We observed only two interactions that had p-values <0.1: In AA females, the C vs. A allele of rs6548238/TMEM18 was associated with a 1.82% difference in mean BMI in former/never smokers, compared to a 0.10% difference in mean BMI in current smokers (p  = 0.10). In EA men and women, the difference in BMI associated with the C allele of rs6548238/TMEM18 was very similar in current smokers and former smokers. Rs6548238/TMEM18 was not associated with smoking status in any of the sex/race groups (data not shown).
+
+Further, we observed that in female EA, the A allele of rs9939609/FTO was almost three-fold more strongly associated with BMI in current smokers (1.71% difference in mean BMI) compared with former/never smokers (0.60% difference in mean BMI, (p  = 0.08). In EA males, there was no difference in the effect of rs9939609/FTO on BMI by smoking status (p = 0.94). The A allele of rs9939609/FTO was not associated with current smoking status in either sex (data not shown). As noted above, rs9939609 was not analyzed in AA due to lack of evidence for an association between this SNP and BMI in African ancestry populations.
+
+Discussion
+
+In our results, we found little evidence for effect modification by smoking status, although two SNPs (rs6548238/TMEM18 and rs9939609/FTO) showed weak evidence for interaction that should be followed up in a larger study. There was some evidence that the BMI-increasing effect of the rs6548238/TMEM18 C allele was stronger in AA female former/never smokers. The function of TMEM18 (transmembrane protein 18) is unknown. TMEM18 is highly expressed in neural tissue, and has been hypothesized to play a role in energy homeostasis via neural pathways controlling food intake [16]. Although TMEM18 has not been associated with smoking behavior or nicotine metabolism thus far, smoking may modify the effect of TMEM18 on BMI via energy homeostasis.
+
+The FTO protein may also be involved in neural pathways of energy homeostasis [17]. In our analyses of EA females, the A allele of rs9939609/FTO was more strongly associated with BMI among current smokers compared with former/never smokers, although the analysis was underpowered to detect a statistically significant difference between the two groups. If the effect of this SNP truly differs by smoking status, we still cannot determine if smoking affects the function of the risk allele, or if the risk allele attenuates smoking behavior. The latter hypothesis is supported by a study of 6,877 Polish subjects, in which the A allele of rs9939609/FTO was associated with older age at smoking initiation and fewer cigarettes smoked per day [18].
+
+Sex-and race/ethnicity-based differences in interaction with smoking could be attributable to differences in smoking behavior, such as cigarette brand choice, and daily vs. occasional “social” smoking [19]. Although we did not have access to such variables, we found no evidence of heterogeneity that would indicate systematic between-group differences.
+
+We did not adjust any analyses to account for multiple testing because we restricted all analyses to SNPs previously known to be associated with BMI. However, these unadjusted results may be prone to increased type 1 error and our results should be replicated in future, larger studies.
+
+Conclusion
+
+We provide an investigation of the hypothesis that genetic predisposition to obesity may be modified by tobacco use among EA and AA men and women. We observed no strong evidence for SNP*smoking interaction. Despite the relatively large sample size of over 50,000 participants power was limited and future larger studies should investigate the potential sex-specific effects of smoking on each variant’s association with energy balance.
+
+Competing interests
+
+The authors declare that they have no competing interests.
+
+Authors’ contributions
+
+MDF, KEN, DCC, MDG, JHF, SL, MG, CSC, LHK, TCM, CPH, BEH, MA, PM, NSB KRM, MDR, RLP, LNK, JEM, JP, LAH, NF, LRW, CAH, LLM, UP participated in the design of the study. DF, UL, PB JH, RG RRR, JP performed the statistical analysis. MDF and UP drafted the manuscript. All authors read and commented on the manuscript and approved the final manuscript.
+
+Pre-publication history
+
+The pre-publication history for this paper can be accessed here:
+
+http://www.biomedcentral.com/1471-2350/14/6/prepub
+

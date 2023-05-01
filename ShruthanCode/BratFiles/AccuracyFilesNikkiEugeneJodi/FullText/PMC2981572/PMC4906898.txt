@@ -1,0 +1,86 @@
+Investigation of potential molecular biomarkers and small molecule drugs for hepatocellular carcinoma transformed from cirrhosis
+
+Abstract
+
+Hepatocellular carcinoma (HCC) is one of the most common malignant tumors in China and the third leading cause of cancer-associated morality. The aim of the present study was to investigate and analyze differentially-expressed genes (DEGs) between cirrhosis and HCC, in order to screen the key genes involved in the transformation from cirrhosis to HCC and provide novel targets for the diagnosis and treatment of HCC in patients with cirrhosis. The gene expression profile, GSE17548, was obtained from Gene Expression Omnibus database and the DEGs were identified by LIMMA package in R language. Kyoto Encyclopedia of Genes and Genomes and gene ontology biology process analysis were performed for the DEGs. Differential co-expression network (DEN) analysis was conducted and the network was visualized using Cytoscape. Small molecule drugs were also screened from the Comparative Toxicogenomics Database for higher degree DEGs. A total of 95 DEGs were obtained, including 46 upregulated and 49 downregulated genes. The upregulated DEGs were primarily involved in biological processes and pathways associated with the cell cycle, while the downregulated DEGs were primarily involved in immune-associated biological processes. A total of 22 key DEGs were identified by DEN analysis, which distinguished HCC from cirrhosis samples. Furthermore, estradiol, benzo(a)pyrene, acetaminophen, copper sulfate and bisphenol A were identified as the five most associated chemicals to these 22 DEGs. In conclusion, the hub genes and chemicals identified by the present study may provide a theoretical basis for additional research on diagnosis and treatment of HCC transformed from cirrhosis.
+
+Introduction
+
+Hepatocellular carcinoma (HCC) is one of the most common malignant tumors in China and the third leading cause of cancer-associated mortality (1,2). Notably, China accounts for >60% of the global incidence of HCC (3,4). In the past 15 years, the incidence of HCC has increased, and is a serious threat to human health (5).
+
+Risk factors of HCC include hepatitis B and C infections, cirrhosis and alcohol intake (6). As a common chronic and progressive disease with extensive liver parenchymal cells damage (7), cirrhosis is the largest risk factor, which accounts for between 80 and 90% of the total number of HCC cases (8). The pathogenesis from cirrhosis to HCC appears to arise from the development of regenerative nodules with dysplasia of hepatic cells (7). In total, ~1–5% of cirrhosis cases transform to HCC every year (9). The overall survival time of patients with cirrhosis that receive early detection and treatment may be extended to ~5 years (7); however, symptomatic HCC patients may only survive for ~3 months post-diagnosis, and the 1-year survival rate is 44% for these patients (10,11). Therefore, early detection of HCC in patients with cirrhosis is crucial for improving the survival time of patients and preventing the progression of HCC (12,13).
+
+Currently, molecular biomarkers have been developed for diagnostic use in numerous diseases (14–16). For HCC, α-fetoprotein (17), des-carboxyprothrombin (18), insulin-like growth factor (19), osteopontin (20) and glypican-3 (21) have been identified as potential biomarkers. However, none of these markers is capable of distinguishing HCC from cirrhosis. Therefore, the present study aimed to investigate potential biomarkers for HCC in patients with cirrhosis. The present study screened differentially-expressed genes (DEGs) by comparing the expression data of cirrhosis and HCC, and identified key DEGs using co-expression network analysis. In addition, five chemicals most associated with these key DEGs were identified, based on the Comparative Toxicogenomics Database (CTD), to investigate effective treatments for HCC transformed from cirrhosis.
+
+Materials and methods
+
+Affymetrix microarray data
+
+To identify the DEGs between cirrhosis and HCC, the present study obtained the publicly available microarray data GSE17548 (22) from the Gene Expression Omnibus database, which is based on the Affymetrix GPL 571 platform data (Affymetrix Human Genome U133A 2.0 Array; Affymetrix, Thermo Fisher Scientific, Inc., Waltham, MA, USA). A total of 37 chips were available for analysis, including 20 cirrhotic tissue samples and 17 HCC tissue samples.
+
+Identification of DEGs
+
+The original microarray expression data was preprocessed by Affymetrix Bioconductor package in R ( ; v1.30.0) (23), and probe annotation was performed using an annotation file supplied by Affymetrix. Subsequently, LIMMA Bioconductor package in R ( ; v2.8) (24) was used to identify the DEGs. A false discovery rate (FDR) of <0.05 and |log  fold change|>1 were chosen as the cut-off criteria to select genes that were differentially-expressed in HCC compared with cirrhotic samples.
+
+Functional enrichment analysis of DEGs
+
+Gene Ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway enrichment analyses of DEGs were performed using the Database for Annotation, Visualization and Integrated Discovery software ( ; v6.7) (25). P<0.05 was considered significantly enriched, and the results were visualized with Enrichment Map (26) by Cytoscape software ( ; v2.8.3) (27).
+
+Co-expression network construction of DEGs and identification of hub nodes
+
+A differential co-expression network (DEN) was constructed using the following method. The targets that interacted with the encoding proteins of DEGs were selected in the Search Tool for the Retrieval of Interacting Genes/Proteins database ( ) (28). The protein-protein interaction (PPI) network was constructed with a cut-off criterion of a combined score of >0.6. Subsequently, Spearman's correlation analysis was used to analyze the correlation between the pairs in the PPI network for cirrhotic and HCC tissues, using the cor.test function in R software ( ; v2.15.3). Pairs with a FDR of <0.05 were considered as co-expressed correlations, and the DEN was constructed. Three sub-networks of DEN were constructed, namely C.DEN for unique co-expressed pairs in cirrhosis, H.DEN for unique co-expressed pairs in HCC and S.DEN for co-expressed pairs shared by cirrhosis and HCC. The three DENs were visualized by Cytoscape software. Nodes in the sub-networks of DENs with degrees larger than the average degree of the DEN were considered as hub nodes. Two-way hierarchical clustering dendrograms were generated using the heatmap.2 function of the plots package in R software.
+
+Chemical-disease-inference gene symbol analysis
+
+The CTD ( ) provided the association between Chemical-Disease-Inference Gene Symbol and the inference scores of chemical-gene interactions (29,30). Chemical-DEG interactions, chemical-cancer interactions and DEG-cancer interactions were searched from this database. Chains with inference scores of ≥21 were extracted to build chemical-cancer-gene interaction pairs.
+
+Results
+
+Identification of DEGs in HCC and cirrhosis
+
+A total of 95 DEGs were identified from the analysis of the gene expression profile of GSE17548, including 46 upregulated and 49 downregulated DEGs in HCC compared with cirrhosis.
+
+Enrichment analysis of DEGs
+
+The results of GO BP and KEGG enrichment analysis for the unregulated and downregulated genes are presented in Fig. 1. The upregulated DEGs were primarily enriched in biological processes and pathways associated with the cell cycle and DNA and protein synthesis (Fig. 1A), while the downregulated DEGs were primarily enriched in immune-associated biological processes and pathways, including complement activation and the immune response (Fig. 1B). The top 10 GO BP terms and all the KEGG terms are presented in Table I.
+
+Identification of hub nodes according to DENs
+
+There were 1.469 edges and 127 nodes in the DEN, including 35 upregulated genes, 9 downregulated genes and 83 non-differentially-expressed genes in HCC (Fig. 2A). The three sub-networks of DENs, C.DEN, S.DEN and H.DEN, are presented in Fig. 2B. The edges, nodes and average degrees of the three sub-networks are presented in Table II.
+
+Since the average degree of the nodes in the DEN was 23.1, the DEGs with degrees of >23.1 were extracted from the three sub-networks. As a result, a total of 22 genes were obtained, which were all highly-expressed in HCC (Table III). Two-way hierarchical clustering analysis demonstrated that the expression of these 22 key DEGs distinguished between HCC and cirrhosis samples (Fig. 3).
+
+Network of the key gene-chemical-cancer interactions
+
+The network of the key gene-chemical-cancer interactions was constructed based on the CTD (Fig. 4). The network included 8 key DEGs, 9 diseases and 74 chemicals. The 8 key DEGs were DNA topoisomerase 2-alpha (TOP2A), budding uninhibited by benzimidazoles 1 homolog beta (BUB1B), ubiquitin-conjugating enzyme E2 C (UBE2C), TTK protein kinase (TTK), PDZ binding kinase (PBK), cyclin B1 (CCNB1), hyaluronan-mediated motility receptor (HMMR) and abnormal spindle-like microcephaly-associated protein (ASPM). The top 5 chemicals with high degrees in the interaction network are presented in Table IV, and are estradiol, benzo(a)pyrene, acetaminophen, copper sulfate and bisphenol A.
+
+Discussion
+
+Currently, numerous studies focus on the difference between molecular biomarkers in patients with liver cancer compared with healthy individuals, while there are limited studies comparing the molecular differences between HCC and cirrhosis (31–33). Therefore, the present study aimed to investigate biomarkers that may distinguish HCC from cirrhosis, using bioinformatics methods.
+
+The present results demonstrated that there were 46 upregulated and 49 downregulated DEGs in HCC compared with cirrhosis. In cancer, the cell cycle, nucleotide replication and protein synthesis are increased, which is consistent with the results of the present functional enrichment analysis. Further analysis of the genes revealed that there were 22 DEGs with high degrees, and 8 of these were reported to be associated with cancer, including TOP2A, BUB1B, UBE2C, TTK, PBK, CCNB1, HMMR and ASPM. Hierarchical clustering analysis indicated that the expression of these 22 key DEGs were capable of distinguishing HCC from cirrhosis samples.
+
+HMMR is a key member of the hyaluronan-mediated motility receptor family, which has been associated with various malignant processes, including cell invasiveness and metastasis in certain tumors (34). The present results suggest that HMMR was upregulated in HCC compared with cirrhosis. The DEN in the present study revealed that HMMR directly interacted with a number of DEGs, including CCNB1, ASPM and UBE2C. In a previous study, the mRNA level of ASPM was significantly increased in HCC compared with healthy samples, and ASPM has been reported as a novel marker for vascular invasion (35). Therefore, the present study additionally confirmed that the upregulated expression of HMMR may promote cell invasiveness and metastasis in HCC transformed from cirrhosis, and an interaction between HMMR and ASPM may be involved. In addition, higher transcript levels of HMMR and CCNB1 have been associated with more advanced systemic progression of prostate cancer (36), and increased levels of CCNB1 promote colorectal carcinogenesis and metastasis (37). Therefore, the increase of these genes may promote cell metastasis in HCC. Additionally, it was reported that a potential tumor suppressor, C2ORF40, inhibited cell invasion and migration by blocking cell cycle progression at the G2/M phase by suppressing the expression of UBE2C (38). Considering the upregulated expression of UBE2C from cirrhosis to HCC identified in the present study, it may be hypothesized that there may be a switch mechanism of HMMR-C2ORF40 in cell invasion and migration. In summary, HMMR and UBE2C may be key genes in the invasion/migration pathogenesis of HCC from cirrhosis. This suggests the theoretical basis for HMMR and UBE2C to be studied as molecular biomarkers for HCC in cirrhosis patients. Furthermore, the present study showed the high expression of TOP2A, BUB1B, TTK and PBK in HCC compared with cirrhosis. TOP2A, which regulates the topological states of DNA, has been shown to be associated with tumor advancement and recurrence in HCC (39). BUB1B, as a key gene in the mitotic spindle checkpoint, is overexpressed and closely linked to cell cycle proliferation in HCC (40). TTK has been reported to participate in the regulation of the DNA damage checkpoint and is also overexpressed in HCC (40). PBK has been demonstrated to play a critical role in an early step of mitosis and the inhibition of tumor growth (41). This data suggests that TOP2A, BUB1B, TTK and PBK may play an important role in promoting the proliferation of malignant tumors by affecting the cell cycle process.
+
+Although there are several medications for the treatment of HCC, including chemotherapy drugs, such as cisplatin (42), and oral drugs, such as fluorouracil (43), these medicines are do not provide enough benefit to patients with HCC and more effective drugs are required. In the present study, 5 medication candidates were selected with high degrees, including estradiol, benzo(a)pyrene, acetaminophen, copper sulfate and bisphenol A. It has been previously confirmed that estradiol treatment inhibits cancer cell migration and invasion to a ceratin degree (44,45). In addition, short-interfering RNA-mediated metastasis associated lung adenocarcinoma transcript 1 (MALAT-1) silencing may impair lung cancer cell metastasis and affect the expression of numerous genes, including HMMR (46). A previous study has identified that 17β-estradiol treatment inhibits breast cell invasion and migration by decreasing the MALAT-1 RNA level (47). Therefore, it is reasonable to hypothesize that estradiol may be used as a treatment for HCC targeted to HMMR, by decreasing the MALAT-1 RNA level. Bisphenol A promotes cell invasion and migration and triggers the transformation of colorectal cancer cells from epithelial to mesenchymal transitions via protein kinase B (AKT)/glycogen synthase kinase-3β-mediated stabilization of Snail (48). Phosphoinositide 3-kinase/AKT phosphorylates mediator complex subunit 1, resulting in UBE2C locus looping (49). Therefore, the present study hypothesizes that the potential mechanism of bisphenol A in the treatment for HCC transformed from cirrhosis may be used as a regulator of cell invasion and migration by AKT-mediated disruption of the expression of UBE2C.
+
+In addition, benzo(a)pyrene is a common environmental and foodborne pollutant, which could promote HCC cell migration and invasion by the nuclear factor-κB pathway (50). Acetaminophen is the most widely used analgesic; however, it could cause severe hepatic necrosis, thereby leading to acute liver failure (51). Excess copper sulfate has been considered as a potent oxidant and causes the generation of reactive oxygen species, which could accelerate the cellular damage induced by oxidative stress in cancer (52). All these studies suggested that novel drugs could be designed against benzo(a)pyrene exposure, acetaminophen and copper sulfate for the treatment of HCC patients.
+
+In conclusion, the present study identified 22 key genes in the transformation from cirrhosis to HCC using bioinformatics analysis of microarray data, and these results have the potential to aid in the diagnosis and development of biomarkers for HCC in cirrhosis patients. The identified chemicals, estradiol, benzo(a)pyrene, acetaminophen, copper sulfate and bisphenol A, should be additionally studied for HCC treatment. Overall, the present results provides novel targets for HCC; however, the molecular mechanisms underlying the progression from cirrhosis to HCC require additional investigation, since liver cancerization is a complex process. Additional investigation is particularly required, since there is a lack of effective therapies for this disease.
+
+Figure 1.
+
+Functional enrichment of (A) upregulated and (B) downregulated differentially-expressed genes.
+
+Figure 2.
+
+(A) DEN. (B) Three sub-networks of DEN, C.DEN, S.DEN and H.DEN. Green, red and blue nodes represent high-expressed DEGs, low-expressed DEGs and non-DEGs in HCC, respectively. C.DEN, unique co-expressed pairs in cirrhosis; H.DEN, unique co-expressed pairs in HCC; S.DEN, co-expressed pairs shared by cirrhosis and HCC. DEN, differential expression network; HCC, hepatocellular carcinoma.
+
+Figure 3.
+
+Hierarchial clustering of 22 key nodes.
+
+Figure 4.
+
+Network of the key gene-chemical-cancer interactions. Red triangle nodes, green square nodes and blue oval nodes represent key genes, cancers and chemical IDs, respectively. Yellow ringed nodes are the chemicals with the highest degrees.
+

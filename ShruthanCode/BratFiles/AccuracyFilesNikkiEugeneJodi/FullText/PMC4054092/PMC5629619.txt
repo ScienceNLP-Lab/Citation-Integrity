@@ -1,0 +1,747 @@
+A link prediction approach to cancer drug sensitivity prediction
+
+Abstract
+
+Background
+
+Predicting the response to a drug for cancer disease patients based on genomic information is an important problem in modern clinical oncology. This problem occurs in part because many available drug sensitivity prediction algorithms do not consider better quality cancer cell lines and the adoption of new feature representations; both lead to the accurate prediction of drug responses. By predicting accurate drug responses to cancer, oncologists gain a more complete understanding of the effective treatments for each patient, which is a core goal in precision medicine.
+
+Results
+
+In this paper, we model cancer drug sensitivity as a link prediction, which is shown to be an effective technique. We evaluate our proposed link prediction algorithms and compare them with an existing drug sensitivity prediction approach based on clinical trial data. The experimental results based on the clinical trial data show the stability of our link prediction algorithms, which yield the highest area under the ROC curve (AUC) and are statistically significant.
+
+Conclusions
+
+We propose a link prediction approach to obtain new feature representation. Compared with an existing approach, the results show that incorporating the new feature representation to the link prediction algorithms has significantly improved the performance.
+
+Electronic supplementary material
+
+The online version of this article (doi:10.1186/s12918-017-0463-8) contains supplementary material, which is available to authorized users.
+
+Background
+
+Cancer has a significant global impact on public health; it is the second leading cause of death in the United States of America [1]. Cancer patients respond differently to potential drugs (i.e., chemotherapy) due to environmental causes, tumor heterogeneity, and genetic factors, making cancer drug discovery difficult [2–5]. The increasing number of deaths associated with cancer has attracted the attention of researchers from numerous domains, such as computational biology, machine learning, and data mining [6–9]. Costello et al. [10] assessed the performance of 44 drug sensitivity prediction algorithms based on profiling datasets (i.e., genomic, proteomic, and epigenomic data) in breast cancer cell lines. The training set consists of 35 cell lines, in which each cell line is associated with 28 drug responses. The test set consists of 18 cell lines. The task of each prediction algorithm is to learn a model from the training cell lines and perform predictions on the test set. The predictions correspond to a ranking of the 28 drugs—from the most sensitive to the most resistant for each cell line on the test set. The top-performing approach [10] improved the performance by integrating several profiling datasets with improved representation with a probabilistic nonlinear regression model. The second-best performing approach employed random forest regression to make predictions on the test set. The prediction algorithms were evaluated using the weighted probabilistic c-index (wpc-index) and resampled Spearman correlations [10]. The remaining prediction algorithms were not statistically different.
+
+Geeleher et al. [11] proposed the following approach to drug sensitivity in which the input data are baseline expressions with drug IC  values in cell lines and in vivo tumor gene expressions. The raw microarray data for the cell lines and clinical trials are processed separately and then combined and homogenized. The homogenized expression data consist of cell line expression data (i.e., baseline gene expression levels in the cell lines) and clinical trial expression data (i.e., baseline tumor expression data from the clinical trial). A learning algorithm is applied to the cell line expression data with the associated drug IC  values for cell lines to learn a model. The resulting model is applied to clinical trial expression data to yield drug sensitivity predictions.
+
+Two problems associated with the previous drug sensitivity prediction algorithms contribute to the degradation of the performance: (1) the poor quality of cell lines, especially when cell lines are not screened against all compounds [12]; and (2) the failure to adopt a new feature representation, because new feature representations provide a basis for improving the performance of learning algorithms [13–15].
+
+In this paper, we model the cancer drug sensitivity as a link prediction problem, which is a classical research topic in computational social science [16–19] and biomedicine [20, 21]. Modeling the problem as link prediction enables us to exploit two link prediction algorithms: (1) the supervised link prediction algorithm, which aims to select better quality cancer cell lines; and (2) the extended supervised link prediction, which selects cancer cell lines and the top-k genes (i.e., features) using state of the art CUR matrix decomposition [22]. Our experimental results indicate that the proposed link prediction algorithms outperform the baseline prediction algorithms proposed by Geeleher et al. [11].
+
+The key contributions of our paper are as follows: 1) we represent cancer drug sensitivity as a link prediction problem, which to the best of our knowledge is the first robustly transfer cancer drug sensitivity prediction to link prediction, 2) we connect a social network domain to a health informatics domain for advancing health informatics, 3) we propose two link prediction algorithms, and 4) we perform an experimental study on clinical trial data to demonstrate the predictive power and stability of our proposed link prediction algorithms against the prediction algorithms that employ the current approach [11].
+
+This paper is organized as follows: In Related works section, we review the relevant literature, which pertains to both link prediction and cancer drug sensitivity prediction. In Methods section, we describe how the cancer drug sensitivity problem can be modeled as a link prediction problem. Then, we propose two link prediction algorithms that employ our link prediction approach: the supervised link prediction algorithm (A1) and the extended supervised link prediction algorithm (A2). Results and experiments section reports the experimental results and compares our link prediction algorithms against the baseline on the clinical trial data that pertains to breast cancer and multiple myeloma. Conclusions section summarizes our contributions in this paper.
+
+Related works
+
+Link prediction in gene regulatory networks
+
+Given m genes, in which each gene has n expression values, we can denote their gene expression profiles by   ∈   m × n, which contains m rows—each row corresponds to a gene—and n columns—each column corresponds to an expression value [23]. To learn a model, we need to know the regulatory relationships (i.e., labels) among the genes, which are stored in the matrix   ∈   p × 3.   contains p rows—each row shows a known regulatory relationship between two genes—and three columns. The first column shows the source gene (i.e., the transcription factor). The second column shows the target gene, and the third column shows the label, which is denoted as +1 (i.e., present link) when the source gene regulates the target gene or −1 (i.e., missing link) when the source gene does not regulate the target gene. Thus,  represents the observed (i.e., known) gene regulatory network. To learn a model, we need to construct the training set  ∈   p × 2n + 1. The p examples in   are constructed as follows: For each pair of genes with the associated label in matrix , the n expression values of each pair of genes in matrix   are extracted, and the concatenation of the n expression values of each pair of genes and the corresponding label is performed. For example, consider the ith example in the training set   , which is denoted by     and defined as where   are the n expression values of   (also called the expression profile of  ),   are the n expression values of  , and y   ∈ {1, −1}. The ith example of the test set,  , is denoted by     and constructed as follows: where   are the n expression values of  , and   are the n expression values of  . These feature vector definitions have been used by the existing supervised inference of gene regulatory networks [23–28]. After constructing the feature vectors, the learning algorithm is applied to   to induce (i.e., learn) the model h. The resulting model is used to perform prediction on . The known regulations among genes enable using the induction principle to predict new regulations (i.e., labels): If gene   has an expression profile that is similar to gene  , which is known to be regulated by  , then   is likely to be regulated by   [29]. Genes with similar expression profiles that are likely to be co-regulated have been used in the unsupervised clustering of expression profiles [30–32].
+
+Cancer drug sensitivity prediction
+
+The gene expression profiles denoted by X ∈   p × n, which contains p rows—each row corresponds to a cell line or a sample—and n columns—each column corresponds to a gene. Y = (y  ,  … , y  )T consists of the corresponding real-value drug responses (i.e., drug IC  values) to X, where Y ∈   p (i.e., the p-dimensional column vector). IC  is defined as the concentration of a compound that is required to produce 50% cancer cell growth inhibition after 48 h of treatment [33]. A training set is defined as  , where  . Let the ith example of the training set  , denoted by    , be defined as where   represent the n genes of the cancer cell line   (also called the expression profile of  ), and y   ∈   is the drug response value. The ith example of the test set  , denoted by    , is constructed as follows:  
+
+These feature vector definitions have been used by existing supervised cancer drug sensitivity prediction algorithms [9–11, 33–36]. A learning algorithm is applied to   to induce model h, which is subsequently used to perform predictions on  . Known cancer cell lines with associated drug responses enabled the use of the induction principle: If tumor   has an expression profile similar to  , then   is likely to have a drug response value closer to the drug response value associated with  .
+
+Methods
+
+The fundamental task of cancer drug sensitivity prediction is to correctly predict the response of a tumor to the drug. This prediction is typically achieved based on how closely this tumor (also referred to as the test example) is related to a known cancer cell line with the associated drug response. Proximity, which is a measure of closeness, lies at the heart of both link prediction in gene regulatory networks and cancer drug sensitivity prediction [29, 37].
+
+Feature vector construction
+
+To bridge link prediction and cancer drug sensitivity, we transform the feature representations of Eqs. (3) and (4) to the corresponding Eqs. (1) and (2) as follows: Let   be the cancer cell lines, where  ∈   p × n + 1 , b = p.Find the k
+’ nearest neighbors \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_1^{\ast },{\mathtt{g}}_2^{\ast },\dots, {\mathtt{g}}_{k^{\hbox{'}}}^{\ast } $$\end{document}g1∗,g2∗,…,gk'∗ of each \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_i $$\end{document}gi in D. (In this study k
+’ = 1.). Generate synthetic cell lines along the lines between the randomly selected k
+’ nearest neighbors and each \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_i $$\end{document}gi using the following lines of code:2.1for i = 1 to p
+2.1.1for j = 1 to k
+’
+2.1.1.1
+b = b + 12.1.1.2
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_b={\mathtt{g}}_i+\left({\mathtt{g}}_j^{\ast }-{\mathtt{g}}_i\right)\lambda $$\end{document}gb=gi+gj∗−giλ
+2.1.1.3Store \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \left[{\mathtt{g}}_i,{\mathtt{g}}_b,{y}_i\right] $$\end{document}gigbyi in G
+
+2.1.2end for
+2.2end for
+. for i = 1 to p
+2.1.1for j = 1 to k
+’
+2.1.1.1
+b = b + 12.1.1.2
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_b={\mathtt{g}}_i+\left({\mathtt{g}}_j^{\ast }-{\mathtt{g}}_i\right)\lambda $$\end{document}gb=gi+gj∗−giλ
+2.1.1.3Store \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \left[{\mathtt{g}}_i,{\mathtt{g}}_b,{y}_i\right] $$\end{document}gigbyi in G
+
+2.1.2end for
+. for j = 1 to k
+’
+2.1.1.1
+b = b + 12.1.1.2
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_b={\mathtt{g}}_i+\left({\mathtt{g}}_j^{\ast }-{\mathtt{g}}_i\right)\lambda $$\end{document}gb=gi+gj∗−giλ
+2.1.1.3Store \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \left[{\mathtt{g}}_i,{\mathtt{g}}_b,{y}_i\right] $$\end{document}gigbyi in G
+
+. 
+b = b + 1. 
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_b={\mathtt{g}}_i+\left({\mathtt{g}}_j^{\ast }-{\mathtt{g}}_i\right)\lambda $$\end{document}gb=gi+gj∗−giλ
+. Store \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \left[{\mathtt{g}}_i,{\mathtt{g}}_b,{y}_i\right] $$\end{document}gigbyi in G
+. end for. end for  
+
+where the index b refers to only those synthetic cell lines (e.g.,   when the index b = p + 1) that differ from the cell lines in  , whose indexes run from 1 to p, λ = 0.3, and   ∈   p × 2n + 1 is the new feature representation of the cell lines of the training set. Step 2.1.1.2 creates the synthetic cell line  . Let     be the ith row of  , defined as where   represent n genes of the cancer cell line  ,   represent the synthetic n genes of the synthetic cancer cell line  , and y   ∈   denotes that both   and   are linked by sharing the same drug response value. Let   be the test set of tumors, where   ∈   q × n. Note that Steps 1–2 are similar to the Synthetic Minority Oversampling Approach (SMOTE) [38, 39], However, Step 2.1.1.3 is a different core step in which we increase the dimensionality (i.e., the number of features) instead of the size, as SMOTE does. We then apply the previous steps (i.e., Steps 1 and 2—changing Step 2.1 to i = 1 to q and Step 2.1.1.3 to Store   in   ') to   to obtain   ' ∈   q × 2n.   ' is the new feature representation of the clinical trial expression data of the test set. Let   be the ith row of   ', which is defined as  
+
+where   represent n genes of tumor  , and  represent n synthetic genes of the synthetic tumor  . A learning algorithm is called on the training set,   to induce the model h, which is subsequently used to perform predictions on the test set   '. The logic behind the mechanism of the induction principle is as follows: If the expression profiles of the pair of tumors   are similar to those of the cell lines  , then   is likely to have a drug response value closer to the drug response value associated with  . In machine learning terms, let   be a row feature vector that encodes information about the pair of cancer cell lines  . Given a new pair of tumors encoded by  , if   has feature values similar to  , whose label is y  , then   is more likely to have a closer response (i.e., label) value to y  .
+
+Notations and algorithms
+
+Notations
+
+To provide a better understanding of our proposed prediction algorithms, the notations used throughout the remainder of this paper are summarized as follows: Matrices are denoted by boldface uppercase letters, e.g., matrix  . We denote the row vectors of a matrix by boldface uppercase letters with a subscript, e.g.,     is the jth row of matrix . Vectors are denoted by boldface lowercase letters, e.g., vector  . Vector entries are denoted by italic lowercase letters with a subscript, e.g., v   is the ith entry of vector  . The number of entries of a vector is denoted by the cardinality symbol, e.g. ∣ ∣ is the number of elements of vector  . Scalars are denoted by italic lowercase letters, e.g., m. f , f ∗ , and h are reserved letters, where f refers to a learning algorithm (e.g., SVR), f ∗ refers to an induced (i.e., learned) model, and h is an induced model used to perform predictions on the test set. We refer to specific learning algorithms and induced models using subscripts. For example,   denotes the ith learning algorithm and induced model, respectively.
+
+The supervised link prediction algorithm (A1)
+
+Figure 1 outlines the supervised link prediction algorithm, which we designate A1, as follows. (a) Given a training set of cancer cell lines with associated drug responses   ∈   p × n + 1 and a test set of tumors   ∈   q × n that are described as in cancer drug sensitivity prediction subsection. (b) Transform   and   using the feature vector construction method described in feature vector construction subsection, to obtain a new feature representation   ∈   p × 2n + 1 for the training set and a new feature representation   ' ∈   q × 2n for the test set. (c) Our link filtering method aims to select a better quality training set that works as follows: Each row (i.e., feature vector) in the new representations   and   ' can be viewed as a cell line or tumor, represented by a 2n–dimensional row vector when the drug responses of the training set   are excluded. We weigh each cell line [40]   in the training set   by the minimum distance from the cell line   to all tumors   in the testing set   ': where  ,  , w   is the weight assigned to  , and   is the Euclidean distance. Let w = (w  , w  ,  … , w  ). Then, we perform the following steps to select better quality training cell lines using our modified version of Query by Committee (QBC) [41–43]:Let med be the median of the w vector of weights of each \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_i $$\end{document}gi in G
+. Let \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \mathbf{X}=\left\{\left({\mathtt{g}}_i,{y}_i\right)|\left({\mathtt{g}}_i,{y}_i\right)\in \mathbf{G}\;\mathrm{and}\;{w}_i\le med\right\} $$\end{document}X=giyigiyi∈Gandwi≤med
+. Let \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathbf{X}}^{\hbox{'}}=\left\{{\mathtt{g}}_i|{\mathtt{g}}_i\kern0.24em \mathrm{in}\kern0.24em \mathbf{G}\;\mathrm{and}\;{w}_i\le med\right\} $$\end{document}X'=gigiinGandwi≤med
+. Let \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \mathbf{Z}=\left\{\left({\mathtt{g}}_i,{y}_i\right)|\left({\mathtt{g}}_i,{y}_i\right)\in \mathbf{G}\;\mathrm{and}\;{w}_i\ge med\right\} $$\end{document}Z=giyigiyi∈Gandwi≥med
+. Let \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathbf{Z}}^{\hbox{'}}=\left\{{\mathtt{g}}_i|{\mathtt{g}}_i\kern0.24em \mathrm{in}\kern0.24em \mathbf{G}\;\mathrm{and}\;{w}_i\ge med\right\} $$\end{document}Z'=gigiinGandwi≥med
+. Apply the learning algorithm, f
+1 or f
+2, to X or Z, respectively, to induce the model \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}_1^{\ast}\;\left({f}_2^{\ast },\mathrm{respectively}\right) $$\end{document}f1∗f2∗respectively. (In this study, we chose ridge regression as the learning algorithm). Apply the model \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}_1^{\ast}\;\left({f}_2^{\ast },\mathrm{respectively}\right) $$\end{document}f1∗f2∗respectively to perform predictions on Z
+' or X′, respectively) and store predictions in v or b respectively). Let q = ∣v∣ = ∣b∣. Let P = (v, b)T
+.  Let r = {y
+i| y
+i in Z} and  e = {y
+i| y
+i in X}.  Let R = (r, e)T
+.  
+j*
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ =\underset{j\in \left\{1,2\right\}}{\arg\;\max}\kern0.24em \frac{1}{q}{\left({\mathbf{P}}_j-{\mathbf{R}}_j\right)}^2 $$\end{document}=argmaxj∈121qPj−Rj2
+. 
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \mathbf{S}=\left\{\begin{array}{l}\mathbf{X}\kern0.36em \mathrm{if}\ {j}^{\ast }=1\\ {}\mathbf{Z}\kern0.24em \mathrm{otherwise}\end{array}\right. $$\end{document}S=Xifj∗=1Zotherwise
+. 
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \mathbf{U}=\left\{\begin{array}{l}\mathbf{Z}\kern0.36em \mathrm{if}\ {j}^{\ast }=1\\ {}\mathbf{X}\kern0.24em \mathrm{otherwise}\end{array}\right. $$\end{document}U=Zifj∗=1Xotherwise
+   
+
+QBC aims to partition the training set   into   and  , where   or  is treated as the labeled or unlabeled set, respectively. QBC is accompanied by two major items: (1) the set of models (i.e., the committee) that are consistent with all labeled cell lines in  ; and (2) given the unlabeled set,  , the QBC applies the models (i.e., the committee) to   to select the unlabeled tumor that maximizes the disagreement because it represents the most important tumor that will be added to  , in addition to querying the drug response value associated with the tumor. The main obstacle of the first major step of QBC is to find models that agree on all the labels of set   with reasonable computational complexity [43]. Thus, we relax the first major step according to Steps 1–14, where relaxation is practiced to address the first major step [41]. Steps 1–5 partition the training set into   and   using the median as a threshold, where   or   contains cell lines from   that are near or far, respectively, from the test set   '. Steps 6–14 aim to assign the set of cell lines where the model incurred fewer errors (or more errors, respectively) to   or  , respectively. The logic behind these steps (i.e., Steps 13–14) is that we want   or  , respectively, to contain the set of cell lines that are more or less, respectively, correctly labeled by one model (i.e., one member of the committee). Steps 1–14 are motivated by other QBC approaches [41–43], in which the success of the second major step of QBC is dependent on the first major step.Repeat k” times15.1Apply the learning algorithms f
+1 , f
+2 ,  …  , f
+t on S to induce the models (i.e., committee) \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}_1^{\ast },{f}_2^{\ast },\dots, {f}_t^{\ast } $$\end{document}f1∗,f2∗,…,ft∗. (In this study, t = 3, and the learning algorithms include support vector regression with a linear kernel (SVR + L), SVR with a polynomial kernel of degree 5, and SVR with a sigmoid kernel (SVR + S))15.2Let \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {w}_t^{\hbox{'}} $$\end{document}wt' be the weight of the ith model \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}_i^{\ast } $$\end{document}fi∗ where \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\boldsymbol{w}}^{\hbox{'}}=\sum_{i=1}^t{w}_i^{\hbox{'}}=1 $$\end{document}w'=∑i=1twi'=1. (In this study, t = 3 and \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {w}_1^{\hbox{'}}={w}_2^{\hbox{'}}={w}_3^{\hbox{'}}=\frac{1}{3} $$\end{document}w1'=w2'=w3'=13)15.3For each \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_j $$\end{document}gj in U, let \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}^{\hbox{'}}\left({\mathtt{g}}_j\right)=\sum_{i=1}^t{\boldsymbol{w}}_i^{\hbox{'}}{f}_i^{\ast}\left({\mathtt{g}}_j\right) $$\end{document}f'gj=∑i=1twi'fi∗gj where \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}_i^{\ast}\left({\mathtt{g}}_j\right) $$\end{document}fi∗gj is the prediction of the ith learned model on the jth cell line \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_j $$\end{document}gj, and \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}^{\hbox{'}}\left({\mathtt{g}}_j\right) $$\end{document}f'gj is the weighted ensemble average of the jth cell line \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_j $$\end{document}gj.15.4Find the cell line \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_{j^{\ast }} $$\end{document}gj∗ that maximizes the disagreement:15.4.1.
+j*
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ =\underset{j\in \left\{1,\dots, |\mathbf{v}|\right\}}{\arg\;\max}\kern0.24em \sum_{i=1}^t{\boldsymbol{w}}_i^{\hbox{'}}{\left({f}_i^{\ast}\left({\mathtt{g}}_j\right)-{f}^{\hbox{'}}\left({\mathtt{g}}_j\right)\right)}^2 $$\end{document}=argmaxj∈1…v∑i=1twi'fi∗gj−f'gj2
+
+15.5Find the label \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {y}_{j^{\ast }} $$\end{document}yj∗ of \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_{j^{\ast }} $$\end{document}gj∗ in U
+15.6Add the pair \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \left({\mathtt{g}}_{j^{\ast }},{y}_{j^{\ast }}\right)\in \mathbf{U} $$\end{document}gj∗yj∗∈U to S and remove the pair \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \left({\mathtt{g}}_{j^{\ast }},{y}_{j^{\ast }}\right) $$\end{document}gj∗yj∗ from U
+15.7Update ∣v∣ = ∣v∣ − 1
+. Apply the learning algorithms f
+1 , f
+2 ,  …  , f
+t on S to induce the models (i.e., committee) \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}_1^{\ast },{f}_2^{\ast },\dots, {f}_t^{\ast } $$\end{document}f1∗,f2∗,…,ft∗. (In this study, t = 3, and the learning algorithms include support vector regression with a linear kernel (SVR + L), SVR with a polynomial kernel of degree 5, and SVR with a sigmoid kernel (SVR + S)). Let \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {w}_t^{\hbox{'}} $$\end{document}wt' be the weight of the ith model \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}_i^{\ast } $$\end{document}fi∗ where \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\boldsymbol{w}}^{\hbox{'}}=\sum_{i=1}^t{w}_i^{\hbox{'}}=1 $$\end{document}w'=∑i=1twi'=1. (In this study, t = 3 and \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {w}_1^{\hbox{'}}={w}_2^{\hbox{'}}={w}_3^{\hbox{'}}=\frac{1}{3} $$\end{document}w1'=w2'=w3'=13). For each \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_j $$\end{document}gj in U, let \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}^{\hbox{'}}\left({\mathtt{g}}_j\right)=\sum_{i=1}^t{\boldsymbol{w}}_i^{\hbox{'}}{f}_i^{\ast}\left({\mathtt{g}}_j\right) $$\end{document}f'gj=∑i=1twi'fi∗gj where \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}_i^{\ast}\left({\mathtt{g}}_j\right) $$\end{document}fi∗gj is the prediction of the ith learned model on the jth cell line \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_j $$\end{document}gj, and \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {f}^{\hbox{'}}\left({\mathtt{g}}_j\right) $$\end{document}f'gj is the weighted ensemble average of the jth cell line \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_j $$\end{document}gj.. Find the cell line \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_{j^{\ast }} $$\end{document}gj∗ that maximizes the disagreement:15.4.1.
+j*
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ =\underset{j\in \left\{1,\dots, |\mathbf{v}|\right\}}{\arg\;\max}\kern0.24em \sum_{i=1}^t{\boldsymbol{w}}_i^{\hbox{'}}{\left({f}_i^{\ast}\left({\mathtt{g}}_j\right)-{f}^{\hbox{'}}\left({\mathtt{g}}_j\right)\right)}^2 $$\end{document}=argmaxj∈1…v∑i=1twi'fi∗gj−f'gj2
+
+. 
+j*
+\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ =\underset{j\in \left\{1,\dots, |\mathbf{v}|\right\}}{\arg\;\max}\kern0.24em \sum_{i=1}^t{\boldsymbol{w}}_i^{\hbox{'}}{\left({f}_i^{\ast}\left({\mathtt{g}}_j\right)-{f}^{\hbox{'}}\left({\mathtt{g}}_j\right)\right)}^2 $$\end{document}=argmaxj∈1…v∑i=1twi'fi∗gj−f'gj2
+. Find the label \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {y}_{j^{\ast }} $$\end{document}yj∗ of \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathtt{g}}_{j^{\ast }} $$\end{document}gj∗ in U
+. Add the pair \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \left({\mathtt{g}}_{j^{\ast }},{y}_{j^{\ast }}\right)\in \mathbf{U} $$\end{document}gj∗yj∗∈U to S and remove the pair \documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ \left({\mathtt{g}}_{j^{\ast }},{y}_{j^{\ast }}\right) $$\end{document}gj∗yj∗ from U
+. Update ∣v∣ = ∣v∣ − 1. Return S
+  
+
+Table 1 Abbreviations of the drug sensitivity prediction algorithms. Steps 15.1–15.4.1 return the index of the cell line in set   that maximizes the disagreement, where disagreement is defined in Step 15.4.1 [44]. Then,   is added to or removed from   or   respectively, as shown in Steps 15.5–15.6. (In this study, k” = 5.) Step 15.7 updates |v| as the size of U is reduced after each iteration.  (Step 16) is the returned set that will be used as the training set. (d) We apply a learning algorithm on   to induce the model h. Finally (i.e., (e in Fig. 1)), we apply model h to perform predictions on the test set   ' (i.e., the set of new feature representations of the clinical trial expression data). In the remainder of this paper, we refer to the supervised link prediction algorithms that employ the following machine learning algorithms (SVR and RR) as: A1 + SVR + L, A1 + SVR + S, and A1 + RR (abbreviations are listed in Table 1). 
+
+The extended supervised link prediction algorithm (A2)
+
+Figure 2 shows the data flow diagram of the extended supervised link prediction (A2). Steps (a), (b), and (c) are the same as Steps (a), (b), and (c) of the supervised link prediction algorithm. (d) Mahoney et al. [22] proposed CUR matrix decomposition as a dimensionality reduction paradigm that aims to obtain a low rank approximation of matrix  , which is expressed in terms of the actual rows and columns of the original matrix  :   
+
+where   consists of a small number of the actual columns of   ,   consists of a small number of the actual rows, and   is a constructed matrix that guarantees that   is close to   . We select k genes based on their importance score (refer to Equation 9), which depends on matrix   and the input rank parameter l (in this study, we used the default parameter value for l in CUR function [45].) If   is the j-th element of the ξ − th right singular vector of   , then the normalized statistical leverage scores are equal to for all j = 1..2n, and  . Statistical leverage scores have been successfully employed in data analysis to identify the most influential genes and outlier detection [22]. A high statistical leverage score for a given gene indicates that the gene is regarded as an important (i.e., influential) gene. A low statistical leverage score for a given gene indicates that the gene is regarded as a less important gene. We store the indexes of the highest k leverage scores in  ; these correspond to the positions of the k most influential genes in matrix   . We select k genes from the training set   using their positions in   and store subsampled cell line expression data with k genes in   '. (e) A learning algorithm is called on   ' to induce model h. (f) The k genes in the test set   ' are selected using their positions in   and stored in   ''. Model h is applied on the test set   '' to perform predictions. We refer to the extended supervised link prediction algorithms that employ machine learning algorithms as A2 + SVR + L, A2 + SVR + S, and A2 + RR (see Table 1).
+
+Results
+
+We empirically evaluate our proposed approach and compare it against the baseline approach proposed by Geeleher et al. [11] on clinical trial datasets. This section first describes the datasets and experimental methodology and presents the experimental results.
+
+Datasets
+
+Data pertaining to breast cancer
+
+The training set   ∈   482 × 6539 contains 482 cancer cell lines, 6538 genes, and drug IC  values that correspond to a 482-dimensional column vector. The test set   ∈   24 × 6538 consists of 24 breast cancer tumors and 6538 genes. The drug IC  values for docetaxel (a chemotherapy drug) [46, 47] were downloaded from (http://genemed.uchicago.edu/~pgeeleher/cgpPrediction/). The cell line expression data were downloaded from the ArrayExpress repository [48] (accession number is E-MTAB-783, also available at https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-783/?query=EMTAB783). The clinical trial data corresponding to the test set were downloaded from the Gene Expression Omnibus (GEO) repository (http://www.ncbi.nlm.nih.gov/geo/) with accession numbers GSE350 and GSE349 [49–51]. The data with accession numbers GSE350 and GSE349 contain 10 and 14 samples, respectively. If the remaining tumor was <25% or ≥25%, a breast cancer patient is considered to be sensitive or resistant, respectively, to docetaxel treatment. All the data were downloaded and processed according to the approach proposed by Geeleher et al. [11].
+
+Data pertaining to multiple myeloma
+
+The training set   ∈   280 × 9115 contains 280 cancer cell lines, 9114 genes, and drug IC  values that correspond to a 280-dimensional column vector. The test set   ∈   188 × 9114 is composed of 188 multiple myeloma patients and 9114 genes. The drug IC  values for bortezomib [52, 53] were downloaded from (http://genemed.uchicago.edu/~pgeeleher/cgpPrediction/), and the data for the cancer cell lines were downloaded from the ArrayExpress repository (accession number is E-MTAB-783 or available at https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-783/?query=EMTAB783). The clinical trial data corresponding to the test set were downloaded from the Gene Expression Omnibus (GEO) repository (http://www.ncbi.nlm.nih.gov/geo/) with accession number GSE9782 [54]. The data were downloaded, processed and mapped according to Geeleher et al. [11].
+
+Data pertaining to non-small cell lung cancer and triple-negative breast cancer
+
+The training sets correspond to an 258 × 9508 matrix and an 497 × 9621 matrix for non-small cell lung cancer and triple-negative breast cancer, respectively. The test sets correspond to an 25 × 9507 matrix (excluding labels) and an 24 × 9620 matrix (excluding labels) for non-small cell lung cancer and triple-negative breast cancer, respectively. The data were downloaded from (http://genemed.uchicago.edu/~pgeeleher/cgpPrediction/) [11].
+
+Experimental methodology
+
+Kernel-based methods, such as SVM and support vector regression (SVR), are popular machine learning algorithms and exhibit state-of-art performance in many applications [55, 56], including biological fields [57]. Therefore, in our experiments, we used SVR with linear kernel (SVR + L) and sigmoid kernel (SVR + S) as machine learning algorithms, coupled with our proposed link prediction algorithms (A1 or A2). We also employed our proposed link prediction algorithms with linear ridge regression (RR). In total, we considered 9 drug sensitivity prediction algorithms, as summarized in Table 1.
+
+Each prediction algorithm was trained on the same training set, whose labels are continuous to yield models (see Methods section). Then, each model is applied to the same test set to yield predictions, as discussed in Methods section. The test set consists of the clinical trial expression data of patients, including baseline tumor expression data from primary tumor biopsies prior to treatment with an anticancer drug. The responses (i.e., labels) of the test set are categorical (e.g., either “sensitive” or “resistant”). These labels were clinically evaluated by the degree of reduction in tumor size to the given drug [11].
+
+To evaluate whether the proposed approach exhibits stable superior performance as the sample size changes, we gradually reduced the sample size for the training set by 1 to 4% in each run. That is, we have 5 runs with sample sizes of 482, 478, 473, 468, and 463 and 280, 278, 275, 272, and 269 for the two datasets, respectively.
+
+The accuracy of the prediction algorithms is measured using the Area Under the ROC Curve (AUC), as shown in [11]. The higher AUC an algorithm has, the better performance that algorithm achieves. We denote the mean of the AUC values averaged over the five runs of the test set as the MAUC. A run of the test set is defined as predictions of a learned model on the test set, such that the model is learned from the training set. The size of this training set is varied to assess the stability of prediction algorithms, in which a stable prediction algorithm is one for which the prediction accuracy on the test set does not change dramatically due to small changes in the size of the training set [58, 59]. This type of assessment is important in biological systems, in which the best prediction algorithm outperforms other algorithms many times in the conducted experiments. Statistical significance is measured between all pairs of the prediction algorithms.
+
+The software employed in this study included support vector regressions with linear and sigmoid kernels in the LIBSVM package [60], ridge regression [11], gene selection using CUR and topLeverage functions in the rCUR package [45], and R code for processing the datasets and performance evaluation [11]. We used R to write the code for the link prediction algorithms and perform the experiments.
+
+Experimental results
+
+Table 2 AUC scores of docetaxel sensitivity prediction algorithms in breast cancer patients on the test set. Table 3 AUC scores of bortezomib sensitivity prediction algorithms in multiple myeloma patients on the test set. Tables 2 and 3 show the AUC of 9 docetaxel and bortezomib, respectively, sensitivity prediction algorithms on clinical breast cancer or multiple myeloma trial data. For each variation in training set size the prediction algorithm with the best performance (i.e., the highest AUC) on the clinical trial data is shown in bold.  
+
+Table 2 shows that our prediction algorithms perform better than the baseline prediction algorithms (i.e., B + SVR + L and B + SVR + S) including B + RR, which is a prediction algorithm proposed by Geeleher et al. Row “m” and “d”, shows the number of cell lines or genes, respectively, in the training set that were provided to each prediction algorithm. We provided the same training set to each prediction algorithm. Rows “m + A1” and “m + A2”, or “d + A1” and “d + A2” show the number of selected cell lines or genes, respectively, that were used in the prediction algorithms that employed our approach for learning the models. The results of our prediction algorithms are dominant compared with the baseline prediction algorithms that employ clinical trial data of breast cancer in terms of the AUC of four runs and the MAUC. In contrast to the baseline prediction algorithms, the performance of our prediction algorithms on the test set outperforms in terms of the AUC when we reduce the training set size.
+
+Table 3 shows that our prediction algorithms perform better than the baseline prediction algorithms (i.e., B + SVR + L and B + SVR + S) and B + RR, which is a prediction algorithm proposed by Geeleher et al. Row “m” or “d”, respectively, shows the number of cell lines or genes, respectively, in the training set that were provided to each prediction algorithm. We provided the same training set to each prediction algorithm. Rows “m + A1” and “m + A2” or “d + A1” and “d + A2” show the number of selected cell lines or genes, respectively, used in the prediction algorithms that employ our approach for learning the models. The results of our prediction algorithms are dominant compared with the baseline prediction algorithms on the multiple myeloma clinical trial data in terms of the AUC of each run and the MAUC. In particular, A2 + RR achieves the highest mean AUC (MAUC) of 0.693 and performed the best in all runs. In contrast to the baseline prediction algorithms, the performance of A2 + RR on the test results in the best AUC as we reduce the training set size, which indicates that A2 + RR has a stable performance.
+
+Table 4  P-values of Wilcoxon signed rank test (two-tailed) between all pairs of prediction algorithms. Table 4 shows the p-values of the two-tailed Wilcoxon signed rank test [61, 62] to measure the statistical significance between the prediction algorithms using clinical trial data of breast cancer and multiple myeloma patients. The p-values indicate that our A1 + SVR + L and A2 + SVR + L prediction algorithms significantly outperformed the baseline prediction algorithms B + SVR + L, B + SVR + S, and B + RR. The remaining prediction algorithms that employ our approach are not statistically different from B + SVR + S. 
+
+Figures 3 and 4 show the ranking of all prediction algorithms from the highest to the lowest MAUC using clinical trial data pertaining to breast cancer and multiple myeloma patients, respectively. Each MAUC is calculated over the 5 runs of the clinical trial data. As shown in Figs. 3 and 4, our prediction algorithms outperform the baseline prediction algorithms [11] w.r.t the MAUC.  
+
+Figure 5 shows the predictions of three prediction algorithms on the test set (clinical data samples of 24 breast cancer patients) when the prediction algorithms were trained on a dataset with the size m = 482 (i.e., the complete training set without any reductions). Figure 5a–c show the predictions of A2 + SVR + L A1 + SVR + L and B + SVR + S, respectively. For A2 + SVR + L in Fig. 5a, the difference between the predicted drug sensitivity in breast cancer patients was highly statistically significant (P=472 × 10−6 from the result of a t-test) between the trial-defined sensitive and resistant groups. The result of A1 + SVR + L in Fig. 5b was also highly statistically significant (P=614 × 10−6 from a t-test). B + SVR + S in Fig. 5c achieved statistical significance (P=1176 × 10−6 from a t-test). Higher sensitivity or higher resistance, respectively, denote the greater or lesser effectiveness of the drug. In Fig. 5d, the ROC reveals AUC values of 0.892, 0.878 and 0.842 for A2 + SVR + L, A1 + SVR + L, and B + SVR + S, respectively, as shown in Table 2. 
+
+In Fig. 6, the predictions of three prediction algorithms are reported on the test set (clinical trial data of 188 multiple myeloma samples of patients) when prediction algorithms learned models from a training set of size m = 280 (i.e., the training set without any reductions). Figure 6a–c show the predictions of the A2 + RR, A1 + RR, and B + RR, algorithms, respectively. For A2 + RR (Fig. 6a), the difference between the predicted drug sensitivity in multiple myeloma patients was highly significant (P=8 × 10−6 from a t-test) between trial-defined responder groups and non-responder groups. The result of A1 + RR was also highly significant (P=11 × 10−6 from a t-test), while B + RR achieved statistically significant result (P=2612 × 10−6 from a t-test). Figure 6d–f break down the responders and non-responders of Fig. 6a–c, respectively, to CR, PR, MR, NC or PD. In Fig. 6g, The ROC reveals AUCs of 0.686, 0.685, and 0.614 for A2 + RR, A1 + RR, and B + RR, respectively, as shown in Table 3. 
+
+We also evaluated the performance of prediction algorithms on the clinical trial data pertaining to non-small cell lung cancer patients and the triple-negative breast cancer patients. We observed similar results that our prediction algorithms noticeably outperform the baseline prediction algorithms (See Additional file 1: Tables S1 and S2).
+
+It is worth mentioning that we also assessed the performance of other machine learning algorithms, including random forests [63], support vector regression with a polynomial kernel of degree 2, and support vector regression with a Gaussian kernel. Moreover, we applied other dimensionality reduction methods such as principal component analysis (PCA) [64] based on the prcomp package in R [65], sparse PCA [66, 67], non-negative and sparse cumulative PCA, and negative and sparse PCA [68, 69]. However, they did not exhibit acceptable predictive performance; consequently, their results are not included in this paper.
+
+Discussion
+
+Gene (feature) selection is important to the success of the proposed method. After many years of biomedical research, some signaling pathways have been known for being implicated in various cancers. It is tempted to exploit this pathway information for feature selection. For example, we might consider adding the signaling pathways as a constraint to get reliable feature sets. Consequently, we assessed the performance of the proposed prediction algorithms using only the genes in the signaling pathways that are known to the cancers. We obtained inferior results (See Additional file 2 for details). It is noted that the current pathway information is limited. If we consider only those signaling genes, we may miss those important genes not identified yet by domain knowledge. This may hurt the overall performance as shown in our case. Therefore, a better strategy may be to include all genes but assign more weights to those signaling pathway genes. This is an interesting direction, and we leave it to our future work.
+
+Conclusion
+
+In this paper, we introduce a link prediction approach to cancer drug sensitivity prediction. The benefit of introducing a link prediction approach is to obtain satisfactory feature representation for better prediction performance. We propose two algorithms that employ the link prediction approach: (1) A supervised link prediction algorithm, which selects better quality training cancer cell lines using a modified version of QBC; and (2) An extended supervised link prediction, which selects both better training cancer cell lines and a subset of important genes using state of the art CUR matrix decomposition.
+
+In our study, the link prediction algorithms use two machine learning algorithms: support vector regression and ridge regression. The experimental results demonstrate the stability of the proposed link prediction algorithms, which outperform drug sensitivity prediction algorithms of an existing approach as measured by their higher and statistically significant AUC scores.
+
+Additional files
+
+ Performance evaluation of prediction algorithms on clinical trial data pertaining to non-small cell lung cancer patients and triple-negative breast cancer patients. (DOCX 31 kb)  Performance of prediction algorithms using signaling pathways as a constraint to get reliable feature set. (DOCX 25 kb)  
+
+Fig. 1
+
+Data flow diagram that shows our supervised link prediction algorithm to predict in vivo drug sensitivity. ( ) The training and test data are provided to the supervised link prediction algorithm. ( ) A feature vector construction method is applied to the training and test data, to obtain new feature representations of the training and test data. ( ) A link filtering algorithm is applied to the new feature representation of the training data, to yield subsampled data. ( ) A learning algorithm takes as input the subsampled data, to induce the model h. ( ) The model h is applied to the new feature representation of the test data, to yield predictions
+
+Fig. 2
+
+Data flow diagram showing the major steps in our extended supervised link prediction algorithm to predict in vivo drug sensitivity. ( ) The training and test data are provided to the extended supervised link prediction algorithm. ( ) A feature vector construction method is applied to the training and test data, to obtain new feature representations of the training and test data. ( ) A link filtering algorithm is applied to the new feature representation of the training data, to yield subsampled data. ( ) A feature selection step is applied to subsampled data, to obtain subsampled data with fewer features (i.e., genes). ( ) A learning algorithm takes as input the subsampled data with fewer features, to induce the model h. ( ) The features in the test data are selected using the same positions as in the training data and the model h is applied to the test data with the selected features, to yield predictions
+
+Fig. 3
+
+Mean AUC (MAUC) results of docetaxel sensitivity prediction algorithms in breast cancer patients ranked from the highest MAUC (left) to the lowest MAUC (right)
+
+Fig. 4
+
+Mean AUC (MAUC) of bortezomib sensitivity prediction algorithms in multiple myeloma patients ranked from highest MAUC (left) to lowest MAUC (right)
+
+Fig. 5
+
+Prediction of docetaxel sensitivity in breast cancer patients. Strip charts and boxplots in ( ), ( ), and ( ) show the differences in predicted drug sensitivity for individuals who are sensitive or resistant to docetaxel treatment using the prediction algorithms A2 + SVR + L, A1 + SVR + L and B + SVR + S, respectively, while ( ) shows the ROC curves of prediction algorithms, revealing the proportion of true positives compared to the proportion of false positives. ROC = receiver operating characteristics
+
+Fig. 6
+
+Prediction of bortezomib sensitivity in multiple myeloma patients. Strip charts and boxplots in ( ), ( ), and ( ) show predicted drug sensitivity for in vivo responders and non-responders to bortezomib using A2 + RR, A1 + RR and B + RR prediction algorithms, respectively. Strip charts and boxplots ( ), ( ), and ( ) further break down responders and non-responders of strip charts and boxplots ( , ( ,) and ( ) as showing CR, PR, MR, NC or PD using A2 + RR, A1 + RR and B + RR, respectively, prediction algorithms. ( ) ROC curves illustrating estimated prediction accuracy of prediction algorithms. CR, complete response; PR, partial response; MR, minimal response; NC, no change; PD, progressive disease
+

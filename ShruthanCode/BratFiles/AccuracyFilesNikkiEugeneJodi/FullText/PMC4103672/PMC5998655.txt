@@ -1,0 +1,955 @@
+Weighted mining of massive collections of  \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym}  \usepackage{amsfonts}  \usepackage{amssymb}  \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} }{}$P$\end{document} -values by convex optimization
+Abstract
+
+Researchers in data-rich disciplines—think of computational genomics and observational cosmology—often wish to mine large bodies of  -values looking for significant effects, while controlling the false discovery rate or family-wise error rate. Increasingly, researchers also wish to prioritize certain hypotheses, for example, those thought to have larger effect sizes, by upweighting, and to impose constraints on the underlying mining, such as monotonicity along a certain sequence. We introduce Princessp, a principled method for performing weighted multiple testing by constrained convex optimization. Our method elegantly allows one to prioritize certain hypotheses through upweighting and to discount others through downweighting, while constraining the underlying weights involved in the mining process. When the  -values derive from monotone likelihood ratio families such as the Gaussian means model, the new method allows exact solution of an important optimal weighting problem previously thought to be non-convex and computationally infeasible. Our method scales to massive data set sizes. We illustrate the applications of Princessp on a series of standard genomics data sets and offer comparisons with several previous ‘standard’ methods. Princessp offers both ease of operation and the ability to scale to extremely large problem sizes. The method is available as open-source software from github.com/dobriban/pvalue_weighting_matlab (accessed 11 October 2017).
+
+1. Introduction
+
+1.1 Large-scale inference
+
+Large-scale inference (Efron, 2012) is the new term of art for an emerging set of activities that cross-cut all of scientific data analysis. Due to new data collection and computing technology, massive inference problems are appearing that challenge traditional statistical approaches.
+
+An emblem of the new era is the compilation of vast collections of  -values to be mined and analyzed.
+
+ Workers in computational biology, working with different forms of genome-derived data—gene expression, single nucleotide polymorphism (SNP) and so on—routinely compute a \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-value for each genomic locus, providing statistical evidence that the locus is associated with some outcome. When done for millions of such sites, massive collections of \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-values emerge (see, e.g., Tusher et al., 2001; Burton et al., 2007 for representative examples).. Workers in extragalactic astronomy look for evidence of non-Gaussianity in the cosmic microwave background (CMB), by compiling \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-values for tests of non-Gaussianity associated with different regions, orientations and scales of the CMB data (e.g., Komatsu et al., 2003).  
+
+The emergence of large collections of  -values is happening in field after field. In fact, scientific publication itself can now be viewed as a collection of numerical  -values: Researchers such as Ioannidis, Leek and collaborators have conducted extensive text scraping exercises, extracting millions of \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-values out of the abstracts and bodies of published scientific articles (e.g., Allen et al., 2008; Jager & Leek, 2013). 
+
+This emergence creates an urgent demand for tools that can conveniently and reliably facilitate the main tasks of large-scale inference.
+
+1.2 Weighted multiple hypothesis testing
+
+A primary task in large-scale inference (LSI) is simultaneous testing of individual null hypotheses—the focus of this article. This is also known as multiple hypothesis testing. Intuitively, this task allows one to discover the ‘signals’ amid a sea of ‘noise’  -values, while providing some form of rigorous type I error control.
+
+Many popular multiple testing methods are available, such as the Bonferoni method, Holm’s method (Holm, 1979) or the Benjamini–Hochberg method (Benjamini & Hochberg, 1995), but all suffer from a fundamental limitation: they treat the hypotheses as equal and thus are unable to exploit important prior information about the likely significance of some hypotheses. Incorporating prior knowledge into the multiple testing problem holds the promise of higher detection power.
+
+Weighted Bonferroni testing of  -values is an increasingly popular method to prioritize certain effects over others. We assign a weight   to the  th  -value and reject the  th null hypothesis if  . The larger the weight  , the less stringent the rejection threshold and the easier it is to reject a null. See the reviews Roeder & Wasserman (2009) and Gui et al. (2012).
+
+There is a growing trend to use weighted testing of  -values, especially in the biomedical literature, where a number of successful applications to genome-wide association studies (GWAS) are listed in Table 1.
+
+Table 1 Some recent uses of prior information in biomedical studies.   
+
+Unfortunately, the existing  -value weighting methods have limited ability to cope with important practical requirements. We next explain this claim in detail.
+
+1.3 Optimal weighting and obstacles to practitioner acceptance
+
+To understand the limitations of existing methods, consider a setting where we have some uncertain prior estimates   of the expected effect sizes. For instance, in a GWAS of longevity (Fortney et al., 2015), we formed   as a weighted average of the effects in age-related diseases such as heart disease. We wish to use   to improve power in the current study. Formally, our goal is to perform weighted testing controlling type I error, but offering optimal detection power under the alternative hypothesis that   are the true effect sizes. The resulting weights are known as the Spjøtvoll weights. They are a direct generalization of the classical Neyman–Pearson tests for simple null vs. simple alternative to the multiple testing framework. Indeed, Neyman–Pearson maximizes power subject to level constraints. Spjøtvoll maximizes the sum of powers subject to sum of levels constraints (see, e.g., Spjøtvoll, 1972; Westfall et al., 1998; Genovese et al., 2006; Rubin et al., 2006).
+
+The Spjøtvoll weights can have certain unusual properties that render them unacceptable to practitioners. First, the weights need not be monotone in the effect sizes  . This is counter-intuitive, because we would think that larger prior guesses should get bigger weights. Secondly, the Spjøtvoll weights can be very close to zero, causing the weighted  -values   to be extremely unstable. Practitioners do not consider it safe and effective to rely on weights with such properties. Existing approaches developed to cope with these unfortunate aspects involve non-convex optimization (Westfall et al., 1998; Westfall & Krishen, 2001) and so do not scale well to large problem sizes. At the moment, there is no effective way to impose ‘practitioner’ constraints such as monotonicity and strict positivity; in the era of practical LSI we cannot yet apply optimal weighting to massive collections of  -values.
+
+1.4 Princessp: new approach based on convex optimization
+
+This article develops Princessp, a new approach to weighted Bonferroni multiple testing of  -values, which resolves the practitioner obstacles just mentioned. Princessp employs convex optimization and so can scale to very large problem sizes. It allows linear inequality constraints, which can include monotonicity of weights in the effect size and also lower bounds keeping all weights at a definite distance from zero. Hence, the key priorities of practitioners—scale, monotonicity and definite positiveness of the weights—are all handled by our new method.
+
+In more detail, we now enumerate our main contributions: We formulate Princessp as the convex optimization problem of maximizing average power of the weighted Bonferroni method (Section 2). The concavity of the receiver-operating characteristic (ROC) is the key property enabling this. We establish concavity in the important setting of two-sided tests in exponential families.. We give several examples of practical convex constraints to be used with Princessp (Section 2.3). Our framework allows one to consider in a unified way several types of weights (such as stratified or smooth weights) that have been considered in previous work and also leads to new methods (such as bounded and monotone weights; Section 3).. We develop an efficient interior-point method for monotone bounded weights under normal observations (Section 4). The direct use of interior-point methods leads to a severely ill-conditioned problem and is inapplicable to large-scale problems. Therefore, we develop a new subsampling algorithm to avoid the ill-conditioning (Section 4.2.2). We establish that subsampling is fast and accurate.. This allows us to efficiently solve large-scale problems with potentially tens of millions of hypotheses, such as those common in genomics. A MATLAB implementation, and the code to reproduce our results, is available at github.com/dobriban/pvalue_weighting_matlab (accessed 11 October 2017).. We illustrate Princessp on a series of standard GWAS data sets (Section 3.2). The boundedness of the weights leads to a good empirical performance compared with the state-of-the-art weighted Bonferroni methods. 
+
+In Section 2, we explain Princessp first in the Gaussian case, then more generally for monotone likelihood ratio families and two-sided tests. We give several concrete examples of convex constraints (Section 2.3). We study the important special case of monotone  -value weights (Section 3), illustrating their empirical performance on standard GWAS data sets and simulated data (Section 3.2). Finally, we develop numerical methods to compute them (Section 4.2).
+
+2. Princessp: convex \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-value weights
+
+To explain our framework, we start with the normal means model. Suppose we observe test statistics  ,   and want to test the individual hypotheses   against   simultaneously. Here,   are the standardized effect sizes, which are arbitrary fixed parameters.
+
+We construct  -values   and reject the  th null   if  , with   and  . This is the weighted Bonferroni procedure, which controls the family-wise error rate—the probability of making any false rejections—at level  . The weights are based on independent prior data. Without loss of generality we assume  .
+
+To optimize the choice of weights, it is customary to proceed in two stages. First, we assume that we know  and derive formally optimal ‘oracle’ weights   depending on the unknown parameters. These are of course not usable directly, because we do not know  . Secondly, when   are unknown, but estimable by some estimators   based on prior independent empirical data, we use the weights  . These weights are fully usable in practice.
+
+In this article, we will focus on the first stage, and assume   are known. In practice, this corresponds to oracle weighting conditioning on  . We do weighting as if the true parameters were  , but we do not use those estimates for other statistical inference tasks. We return to this issue at the end of the section, just before Section 2.1. In simulations, one can see that the power loss due to assuming known   is usually small.
+
+If   are known, we can assign zero weight to any non-negative  ; so in the remainder we will assume that all  . We can choose the remaining weights to maximize the expected number of discoveries. The statistical power to reject   when the true parameter is   equals  , leading to the optimization problem  
+
+This class of weighted multiple testing problems was studied first by Spjøtvoll (1972), thus we call this the Gaussian Spøtvoll weights problem. Rubin et al. (2006) and Roeder & Wasserman (2009) showed that the weights are  , for the unique   such that the weights sum to  . They studied the problem parametrized by the critical value   instead of the weight  . In that parametrization, the objective is not concave, and therefore, it is unclear how to efficiently incorporate additional constraints. As a key observation for this article, in the weight parametrization, the function   is the ROC curve of the Gaussian test and is strictly concave if   (e.g., Lehmann & Romano, 2005, p. 101).
+
+Our Princessp method takes this observation to its natural conclusion, allowing arbitrary convex constraints for the weights. Specifically, let  ,   be convex and twice continuously differentiable functions, encoding convex inequality constraints  . Let   be an   matrix encoding equality constraints  . We let the   vector   be the first row of  , and   be the first entry of  . We assume rank  . In the following examples, one can easily check these conditions.
+
+The Princessp problem of computing constrained optimal weights for Bonferroni multiple testing is thus, in the Gaussian case,  
+
+More generally, beyond one-sided Gaussian tests, we replace   with the appropriate ROC curves. For instance, if we want to perform two-sided tests of a null hypothesis   against  , then the analogous objective function is  
+
+We will show in Proposition 2.2 that the objective is concave, despite only one term in each pair being concave in  . That result applies more generally to continuous exponential families. For one-sided tests, we can handle even more general observations, arising from monotone likelihood ratio families (Section 2.1).
+
+One of the most important convex constraints is monotonicity. For Gaussian data, suppose that our guesses for the means are sorted such that  . Monotonicity requires that larger absolute effects   have a larger weight, so that  . Unconstrained Spjøtvoll weights are not monotone in general. However, monotonicity is clearly desirable in practice. We discuss monotone weights in Section 3.
+
+In Section 4, we will also explain how to solve the Gaussian problem numerically. Despite its simplicity, the problem has interesting numerical aspects. We show that the log-barrier interior-point method converges in theory, but it has serious numerical difficulties; namely, a severely ill-conditioned Karush–Kuhn–Tucker (KKT) system. For monotone weights, we show how to avoid ill-conditioning using a subsampling approach.
+
+Returning to the issue mentioned above, in practice, we will have some empirical estimates   of the effect sizes and solve the Princessp problem with those values substituted for  , effectively conditioning on  . Thus, in practice, we will use the optimization formulation merely as a means to efficiently specify an algorithm for use on real data. The formal optimality properties of those plug-in weights are beyond our present scope.
+
+2.1 Monotone likelihood ratio
+
+For one-sided tests, we have convex problems very generally in monotone likelihood ratio (MLR) families. Suppose   is a real-parameter family of densities with respect to Lebesgue measure, supported on a common open interval  , where the end points can be infinite. We assume that   for all  , so that the distribution functions   are differentiable and strictly increasing on  . Then, the inverse functions   are well defined for  . Our key assumption is that   has a monotone increasing likelihood ratio in  , for  .
+
+Define the ROC curve  . This gives the power at   of a one-sided test with rejection region  , as a function of the level   under  .
+
+Suppose now that we have test statistics  , and we are testing   against   simultaneously. As is well known, the uniformly most powerful individual test rejects for  . With the  -values  , the weighted Bonferroni test rejects the  th null if  .
+
+As before, suppose we have prior guesses   for the parameters. The power of the  th test at   is  . To optimize the average power of the weighted Bonferroni method for this set of alternatives, we must solve  
+
+By Proposition 2.1, this objective is concave and can be solved efficiently. In this set-up, the Princessp problem adds a general convex problem. This extension of Princessp to MLR allows us to handle one-sided tests in the following well-known statistical models: One-dimensional exponential families with continuous support: Clearly, exponential families \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$p_{\theta}(x) = \exp(\theta \cdot x - A(\theta))$\end{document} have monotone likelihood ratio in \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$x$\end{document}. Our framework includes one-sided tests on the natural parameter, such as the mean of a normal family \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mathcal{N}(\mu,\sigma^2)$\end{document} (\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\sigma^2$\end{document} fixed), the variance in a normal family \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mathcal{N}(\mu,\sigma^2)$\end{document} (\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mu$\end{document} fixed), beta distributions (with one shape parameter fixed) or gamma distributions (with either the shape or the rate parameter fixed).. Non-central \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$t,F,\chi$\end{document} distributions: The distribution of the \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$t$\end{document}-statistic with fixed degrees of freedom and non-centrality parameter \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\mu/\sigma$\end{document} has MLR in \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$t$\end{document} (e.g., Lehmann & Romano, 2005, p. 224). Similarly, the distribution of the non-central \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$F$\end{document} and \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\chi^2$\end{document}-statistics with fixed degrees of freedom have MLR (e.g., Lehmann & Romano, 2005, p. 307).. Location families: Location families \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$f_{\theta}(x) = f(x-\theta)$\end{document} with strictly positive and almost surely smooth log-concave density \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$f$\end{document} have monotone likelihood ratio. Examples include double-exponential (Laplace) distributions with \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$f_{\theta}(x) = \exp(-|x-\theta|)/2$\end{document} and logistic distributions \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$f_{\theta}(x) = \exp(x-\theta)/(1+\exp(x-\theta))^2$\end{document}. 
+
+We emphasize that the assumptions on the family of densities   made in this section are essential and not merely technical. Indeed, if the distributions   do not have a density, then the ROC curve may be discontinuous, rendering the optimization problem discontinuous, and definitely non-convex. For instance, if   denotes the distribution function of a Bernoulli variable with success probability  , then the ROC is the step function  
+
+Similar problems occur when the densities can be zero or when the supports are non-overlapping.
+
+An even more general convexity property holds for likelihood ratio tests. As is well known in statistical folklore and formalized, for instance, in Peña et al. (2011, Proposition 3.1), the ROC curve of LR tests is often automatically concave. However, in our applications, the alternative is usually composite, parametrized by a scalar  , not just a simple alternative. There is often some uncertainty in specifying   from prior data. For this reason, it is important to have good uniform optimality properties against composite alternatives. For this, one essentially needs the MLR, which is why we chose that setting here.
+
+2.2 Two-sided tests in exponential families
+
+For two-sided tests, we can guarantee that Princessp works in exponential families, a setting more restricted than MLR, but more general than Gaussian. Suppose that we have observations   with density   with respect to some dominating measure. We want to test   against  . Suppose we reject the  th null if   for critical values   such that the test has level  . Let   be the power of this test at an alternative hypothesis  . We analyze the convexity of the ROC curve in this setting. We are also interested in strong convexity, because it is needed for the convergence of the log-barrier method.
+
+An example of special interest is testing normal observations   for   against  . Then, the two-sided analogue of Spjøtvoll weights amounts to the optimization problem  
+
+Note that the first term is concave in  , but the second term is not. However, their sum is concave by Proposition 2.2. This reinforces that the results in this section go beyond those from the previous section.
+
+We can also find a nearly explicit form for the two-sided optimal Gaussian weights. This leads to a fast algorithm for computing them, as well as insights into their behaviour (see Section 3).
+
+2.3 Examples of convex constraints
+
+The key flexibility of Princessp lies in the wide variety of user-specified convex constraints that it can be used with. To help potential users see how this is relevant in a variety of contexts, we now give several examples of such constraints.
+
+ 
+Monotone weights. Suppose in the Gaussian case that the means are sorted such that \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$0 < |\mu_1| \le |\mu_2| \le \cdots \le |\mu_J|$\end{document}. Monotone weights require that larger absolute effects \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$|\mu_i|$\end{document} have a larger weight, so that \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_1 \le w_2 \le \cdots \le w_J$\end{document}.. Unconstrained Spjøtvoll weights are not monotone in general. However, monotonicity is intuitively desirable, as larger effects are worth more. Many popular weighting schemes are monotone, including exponential weights \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_i \propto \exp(\beta|\mu_i|)$\end{document} and cumulative weights \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_i \propto {\it{\Phi}}(|\mu_i|-B)$\end{document}, for \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$B>0$\end{document}, both proposed in Roeder et al. (2006). The weights of Li et al. (2013) based on normalized versions of \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$(-2\log \tilde P_j)^{1/2}$\end{document}, where \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\tilde P_j$\end{document} are \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-values from independent expression quantitative trait locus (eQTL) studies, are also monotone in the strength of the prior information. Princessp offers a principled way to incorporate monotonicity as a constraint in any weighting scheme.. 
+Bounded weights. Boundedness requires that \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$l \le w_i \le u$\end{document} for two constants \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$0 \le l < 1 < u$\end{document}. This ensures that the current \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-values \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P_i$\end{document} get multiplied by at most \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$1/l$\end{document}. Hence, if \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$l=1/2$\end{document} and the original \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-value cutoff is—say—the conventional threshold \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$q = 5\cdot 10^{-8}$\end{document} for genome-wide significance, then each hypothesis with \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-value \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P_i \le ql = 2.5 \cdot 10^{-8}$\end{document} is significant, regardless of the strength of prior information. This is desirable as the prior information is often unreliable. Small weights are risky, as they can weaken strong \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-values. For instance, if \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P_i = 10^{-10}$\end{document} but \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_i = 10^{-9}$\end{document}, then the weighted \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-value is a meager \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$Q_i = 0.1$\end{document}.. Choosing the lower bound presents a bias–variance trade-off. A large lower bound, say 0.5, has ‘low variance’ as the weighted \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-values do not change much. However, it potentially has ‘high bias’ as the truly optimal weights may be small. Empirically, we found that a lower bound in the range 0.01–0.5 often works well (see the data analysis section).. Using an upper bound \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$u$\end{document}, no hypothesis with \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-value \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P_i > qu$\end{document} is rejected. For instance, if \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$q = 5\cdot 10^{-8}$\end{document} and \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$u=10$\end{document}, then only the \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P$\end{document}-values \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$P_i \le 5\cdot 10^{-7}$\end{document} have a chance of being rejected. The upper bound ensures that we do not place too much weight on any hypothesis. Princessp allows the user to conveniently specify arbitrary bounds for the weights.. 
+Stratified weights. Let \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$S_1, \ldots, S_k$\end{document} be disjoint subsets of \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\{1,\ldots,J\}$\end{document}. With stratified weights, we want to assign an equal weight to the hypotheses in the same subset \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$S_i$\end{document}, for each \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$i$\end{document}. This is the linear equality constraint that \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$w_j = w_k$\end{document}, for all \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$j,k \in S_i$\end{document} and for all \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$i$\end{document}.. Stratification is natural when effects are grouped, say into different functional classes of genetic variants in GWAS. The stratified false discovery rate (FDR) method (Sun et al., 2006), is closely related.. Related ideas were also used more informally in previous work. In a study of nicotine dependence with approximately 3700 genetic variants, Saccone et al. (2007) improve power by giving nicotine receptor genes 10 times the weight of other candidate genes. More generally, Roeder & Wasserman (2009) study binary weights that take only two possible values. Similarly, Sveinbjornsson et al. (2016) assign weights to classes of variants in GWAS based on functional annotation. As another example, Eskin (2008) groups polymorphisms by location in the genome, assigning them to a tag and requiring the same weight for each tag. Stratified weights can be incorporated in a direct way as convex constraints in Princessp.. 
+Smooth weights. If the hypotheses have some spatial structure, then it is reasonable to require that the weights be ‘smooth’ with respect to this structure. For instance, genetic variants are aligned on chromosomes, and one could require the weights to be smoothly varying as a function of the position. This can be achieved in many ways, borrowing from the vast literature on regularization in statistics. A simple example is to add a total variation constraint \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\sum_i |w_i-w_{i+1}| \le {\varepsilon} J$\end{document}, for \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}${\varepsilon} = 0.01$\end{document} say.. A related idea appears in Rubin et al. (2006), who show in simulations that power improves substantially by applying a smoothing spline to the weights, when the true effects \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$i \to \mu_i$\end{document} are smooth as a function of \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$i$\end{document}. Roeder & Wasserman (2009) also find that smoothing the weights improves power when weights are estimated by sample splitting. Ignatiadis et al. (2015) observe that adding a total-variation penalty or a penalty of the form \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\sum_i|w_i-1| \le c$\end{document} can reduce variance. Princessp allows users to specify such constraints in a general principled framework.  
+
+In specific applications, there can be many other constraints that incorporate problem-specific information and requirements.
+
+2.4 Related work
+
+There are many methods for multiple testing with prior information, partially reviewed by Roeder & Wasserman (2009) and Gui et al. (2012), some mentioned earlier. Candidate studies—testing the top candidates based on prior information—are as old as statistics itself. They can be viewed as  -value weighting methods with binary weights.
+
+More general methods for multiple testing with prior information have been developed since at least the 1970s. Most work focuses on single-step Bonferroni procedures maximizing the average power and controlling the family-wise error rate. In seminal work, Spjøtvoll (1972) described theoretically such procedures under very general conditions.
+
+Later work extended Spjøtvoll’s results in several ways. Benjamini & Hochberg (1997) allowed weights in the importance of the hypotheses. Roeder & Wasserman (2009) and Rubin et al. (2006) found explicit optimal weights in the Gaussian model  . Eskin (2008) and Darnell et al. (2012) extended their framework to GWAS, accounting for correlations.
+
+ Westfall et al. (1998) considered the model   with proper priors on  . They gave small-scale algorithms to find optimal weights for the Bonferroni method via non-convex optimization. Dobriban et al. (2015) showed how to find the weights efficiently under a Gaussian prior.
+
+Less is known beyond the Bonferroni method. Holm (1979)’s step-down method can use weights, and Westfall & Krishen (2001) and Westfall et al. (2004) considered finding optimal weights for small  . Genovese et al. (2006) showed that the weighted Benjamini–Hochberg procedure controls the FDR and Roquain & Van De Wiel (2009) showed how to choose weights optimally in a special asymptotic regime. Peña et al. (2011) developed a general decision-theoretic framework for weighted family-wise error rate and FDR control.
+
+ Bretz et al. (2009) and follow-up work developed a graphical approach to stepwise multiple testing. To use this in large-scale applications, one needs to design a graph specifying how the levels are distributed upon rejection of each individual hypothesis.
+
+Another line of work considers data reuse, by constructing weights using the same data set where the tests are performed. Rubin et al. (2006) proposed a sample-splitting approach combined with smoothing. In a slightly different set-up, Storey (2007) developed the optimal discovery procedure, maximizing the expected number of true discoveries, subject to a constraint on the expected number of false discoveries. Sun & Cai (2007) developed a method maximizing the marginal false nondiscovery rate (mFNR) subject to controlling the marginal FDR (mFDR), estimated the oracle procedure consistently in a hierarchical model.
+
+ Bourgon et al. (2010) proposed an independent filtering approach, where test statistics are independent of the prior information only under the null, not under the alternative hypothesis. Recently, Ignatiadis et al. (2015) proposed the more general independent hypothesis weighting framework. This promising approach focuses on the FDR, relies on convex relaxations for efficient computations and splits of the tests to ensure type I error control.
+
+3. Monotone \documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}$\boldsymbol{P}$\end{document}-value weights
+
+The key practitioner constraints motivating Princessp were the need for monotonicity and boundedness of one-sided Gaussian weights. We now study that important example in detail. We develop algorithms to compute bounded monotone weights for one-sided Gaussian tests and explore their performance in simulations and GWAS data analysis. This is a helpful example, because unconstrained Gaussian Spjøtvoll weights are well understood and provide a solid background for comparison.
+
+Assuming the prior means are sorted such that  , the bounded monotone weights problem with lower bound   and upper bound   is   
+
+One justification for monotonicity is that larger effects are worth more. Another justification is that for a sufficiently small significance level  , the optimal Spjøtvoll weights are in fact monotone.
+
+A similar but somewhat more involved statement also holds for two-sided Spjøtvoll weights.
+
+While the above propositions hold under a mild constraint, the optimal weights are not bounded away from zero or infinity in general. This must be imposed as a separate constraint.
+
+We illustrate monotone weights and their dependence on the bounds. We take   hypotheses, set the  -value cut-off   and draw random effect sizes  , where   are i.i.d. standard normal. First, we vary   from 0 to 0.75 in steps of size 0.25, keeping  . Next, we vary   from 1.25 to 2 in steps of size 0.25, keeping   (Fig. 1).
+
+Lower bounded weights (Fig. 1(a)) are flat near the two end points and increase sharply in between. This may be surprising because flatness is not required in the optimization problem. In addition, increasing the lower bound also leads to a decreased upper bound, a property that is not immediately obvious theoretically. Upper bounded weights (Fig. 1(b)) have a similar but steeper shape. The weights are still flat; however, they are not automatically lower bounded (strictly above 0) any more. Finally, we vary both   and   (Fig. 1(c)), with   in  , and   in  . The weights have the same general shape.
+
+3.1 Power loss compared to Spjøtvoll weights
+
+Since bounded weights are suboptimal to Spjøtvoll weights when the model is correct, it is interesting to understand the loss in power. This may help to form heuristics for the choice of lower and upper bounds. In Fig. 2 we report the results of a simulation where  ,  , the means are generated as i.i.d. negative absolute Gaussian, while the lower bounds are   and the upper bounds are  . We define the power as the value of the maximized objective function in Equation (4). We also display the power of the unweighted Bonferroni method (lowest horizontal line) and the optimal Spjøtvoll weighted Bonferroni method (highest horizontal line).
+
+In this setting, an upper bound of two leads to a severe power loss of at least 50%, regardless of the lower bound. However, an upper bound of 10 leads to only a small loss in power, while an upper bound of   leads to nearly full power if the lower bound is at most  . We conclude that lower bounds below 0.1 and upper bounds above 10 seem to lead to a small loss in power.
+
+3.2 Data analysis example
+
+To illustrate the empirical performance of Princessp, and specifically of bounded monotone weights, we analyze a standard set of data sets on GWAS. We follow the protocol and methodology laid out in Dobriban et al. (2015). There, we analyzed five studies on four complex human traits and diseases: CARDIoGRAM and C4D for coronary artery disease (Schunkert et al., 2011; Coronary Artery Disease Genetics Consortium, 2011), blood lipids (Teslovich et al., 2010), schizophrenia (Schizophrenia Psychiatric Genome-Wide Association Study Consortium, 2011) and estimated glomerular filtration rate (eGFR) creatinine (Köttgen et al., 2010).
+
+In addition to these, here we also include the 90Plus data set (Deelen et al., 2014), which compares the lifespan of a sample of Caucasian individuals living at least 90 years with matched controls (see Section 6). These studies have  -values for the marginal association of 500,000–2.5 million SNPs to the outcome. More detail is provided in Section 6.
+
+Testing SNPs one at a time using unweighted Bonferroni is typically the first analysis performed in GWAS (see, e.g., Schunkert et al., 2011; Coronary Artery Disease Genetics Consortium, 2011; Teslovich et al., 2010; Schizophrenia Psychiatric Genome-Wide Association Study Consortium, 2011; Köttgen et al., 2010). Therefore, in our data analysis, we compare directly the state-of-the-art unweighted Bonferroni method to weighted Bonferroni methods.
+
+We analyze several pairs of these data sets, starting with those that were already included in Dobriban et al. (2015). As a positive control for our method, we use CARDIoGRAM as prior information for C4D. Motivated by the Bayesian analysis of Andreassen et al. (2013), we use the blood lipids study as prior information for the schizophrenia study. Motivated by the comorbidity between heart disease and renal disease (Silverberg et al., 2004), we use the creatinine study as prior information for the C4D study.
+
+In addition to these pairs, we add four new examples: We switch the roles of the two heart disease studies and use C4D as prior information for CARDIoGRAM.. We use the 90Plus data set as a target study and check whether studies on heart disease and schizophrenia can increase the number of hits. This is a challenging example, as the 90Plus data set has weak signal (Deelen et al., 2014). We use the above three data sets as prior information as they seem to be the most promising from our prior work (Fortney et al., 2015). 
+
+For each pair of studies, we restrict to the SNPs that appear in both. For each SNP, we have a two-sided  -value   in the prior study, typically computed from a normal meta-analysis. From this, we can back out the prior  -score  . We choose the sign so that   and optimize our weights for a one-sided follow-up test in the same direction. This corresponds to a test for replicated sign. We do this because we have discussed monotone bounded weights for one-sided tests. We rescale the effect size  , as in Dobriban et al. (2015, Section 6.2), to estimate the effect size in the new study. Here   and   are the current and prior sample size for the  th variant, respectively. We control the family-wise error rate at  .
+
+We then compute optimal  -value weights with various methods. In Dobriban et al. (2015), we reported the results of five weighting schemes: unweighted Bonferroni testing, as well as weighted Bonferroni testing using Spjøtvoll weights, Bayes weights (Dobriban et al., 2015), filtering and exponential weights (Roeder et al., 2006). Filtering selects all tests below a prior  -value cut-off, weighting them equally. Here, we report new results using Princessp, specifically bounded monotone weights with lower bounds   and upper bound  . The results for upper bound   are very similar. We exclude exponential weights, as other methods performed better in our earlier work.
+
+As in Dobriban et al. (2015), we prune the significant SNPs for linkage disequilibrium using the DistiLD database (Palleja et al., 2012). We compute a score   for each weighting method   on each data set  . This is defined as   if the weighting method increases the number of hits compared to unweighted testing, 0 if it leaves it unchanged and   otherwise. The score   of a weighting method   is the sum of scores over data sets. We compute scores separately for the pruned and unpruned analysis and add them to find the final score. Table 2 shows the number of significant loci.
+
+Table 2 Number of significant loci for five methods on three examples. Top: results pruned for linkage disequilibrium. Bottom: results without pruning. The score of each method is also reported. The weighting schemes compared are unweighted (Un); Spjøtvoll (Spjot); filtering (Filter), Bayes, and Monotone (Mon) with \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym}  \usepackage{amsfonts}  \usepackage{amssymb}  \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} }{}$l=0.01,0.1,0.5$\end{document} and \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym}  \usepackage{amsfonts}  \usepackage{amssymb}  \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} }{}$u=\infty$\end{document}. CG stands for CARDIoGRAM, SCZ for the schizophrenia study and eGFRcrea for the creatinine study.   
+
+Princessp, i.e., monotone weighting, shows good performance for all settings. In the pruned analysis, it has a score of 2 for the lower bound  . It increases the number of rejections in two out of the seven settings and keeps it the same in the others. In the unpruned analysis, it has a score of 4 with  , increasing the number of hits in four settings and never decreasing it. Monotone weights with other lower bounds   also lead to more hits in some cases, but they can also decrease the number of discoveries.
+
+Monotone weights perform well compared with the other methods. In particular, filtering decreases the number of hits in many cases, especially when the  -value cut-off is   or  . Bayes weights, especially for  , have a relatively stable performance. With  , they decrease the number of hits in only two settings, while increasing it in five pairs. However, they decrease the number of hits more frequently for other   values. Moreover, monotone weights have a larger number of discoveries than Bayes weights.
+
+No weighting scheme increases the number of pruned SNPs in the 90Plus study. Even in this challenging example, monotone weights seem more stable than the others, as they do not decrease the number of hits.
+
+4. Optimization methods
+
+4.1 General remarks
+
+The Princessp optimization problems presented in Section 2 are convex programs with convex inequality constraints. Here, we propose using the log-barrier interior-point method, which is a general approach to such problems (e.g., Boyd & Vandenberghe, 2004, Section 11). However, it is not immediate a priori that this approach will work well in our case. Indeed, we find that for monotone weights, the straightforward application of the method leads to severely ill-conditioned KKT systems for large problems. Therefore, we develop a new subsampling method to avoid ill-conditioning.
+
+For concreteness, we will focus on Gaussian one-sided weights presented at the beginning of Section 2, but the more general case is similar; only the ROC function changes. To start, we discuss a few analytic properties of the optimization problem. The ROC function   (plotted in Fig. 3) is defined without ambiguity on   and can be defined by continuity at the two end points. Indeed, as  ,  , so that  . Similarly   at the other end point. Further,   is concave on  , and importantly, its derivatives are convenient to compute. Indeed, denoting the  -score  , we have   and  . Thus,   is concave in   for all  , and it is strictly concave for  . The second derivative is unbounded as  , because   is much larger than the other terms.
+
+The log-barrier method solves a sequence of equality-constrained problems indexed by   replacing the inequality constraints by a penalty    for an increasing sequence of  . The equality-constrained problems are solved using Newton’s method. Under the assumptions stated at the beginning of Section 2, it follows from the general convergence analysis for the barrier method (see Boyd & Vandenberghe, 2004, p. 577, Section 11.3.3) that the barrier method converges for solving the convex constrained Spjøtvoll weights optimization problem. Since we assumed that an optimal   exists, strong convexity is ensured by compactness of the set  .
+
+In the two-sided normal testing example, the log-barrier method converges when restricted to the region   for  , where the problem is strongly convex.
+
+4.2 Monotone weights
+
+In this section, we explain our method for computing monotone bounded weights (Equation (4)). To enable efficient computation for problems with tens of millions of weights, we need to exploit the tridiagonal structure of the Hessian and solve the KKT systems arising the in the Newton steps in  -time directly. For this purpose, we need to implement several steps of the optimization method (Algorithm 1).
+
+The method involves a number of optimization parameters, for which we use the default settings from Boyd & Vandenberghe (2004, Section 11). In addition, we need to choose a strictly feasible starting point  . For this, we let   and   be the mean-centered version of  . Then, we let   where   is the all 1s vector and   is a small constant, such that the vector   is strictly feasible. This is clearly possible if  .
+
+4.2.1 Centring problem
+
+From now on, we flip the sign of the objective, so that we are minimizing a convex function. For a penalty parameter  , the logarithmic barrier problem—or centring step—is the convex program   
+
+Here, we define the constants  ,   for brevity.
+
+We now show that the KKT matrix is a sum of a tridiagonal and a rank 1 matrix, so that the KKT system can be solved in   time. Let   be the objective function,   its gradient and   its Hessian. Let us also denote by   the Newton step for  , and by   the scalar dual variable corresponding to the sum constraint (Boyd & Vandenberghe, 2004, p. 577). Then, the KKT system for finding   at a particular   (suppressed for ease of notation) is  
+
+Assuming   is invertible, standard linear algebra shows that the solution has the form  
+
+The Newton decrement is defined as  
+
+To solve the Newton system, we must calculate   and  . First, the components of the gradient are   where we denoted the  -score by  . Next, the diagonal components of the Hessian are   and the off-diagonal terms vanish except for those on the band just one off the diagonal, which are  . Hence, the Hessian matrix   is tridiagonal. With the notation  , the Hessian has the form  , where   is the tridiagonal matrix   and   is the diagonal matrix   Finally,   is invertible, because it is the sum of two positive definite matrices. Indeed the diagonal terms in   are strictly positive if  . Further,   is positive definite, as for a vector  , the quadratic form   equals   Now   for all  , so   implies that all   are equal to 0. This shows that   is positive definite.
+
+Hence, we have shown that   is positive definite and thus invertible. Therefore, the KKT system involves the solution of a tridiagonal-plus-rank 1 linear system, taking   time. This is implemented using a standard sparse tridiagonal linear solver in MATLAB, which is stable since   is positive definite.
+
+4.2.2 Subsampling
+
+Based on the earlier simulation results (e.g., Fig. 1), and on intuition from isotonic regression, we expect that the solution may have many equal terms, lying on the boundary of the feasible set. It is known that this can lead to an ill-conditioned KKT system (e.g., Nocedal & Wright, 2006, Chapter 17).
+
+To deal with this problem, we propose a subsampling method. If   is larger than a constant  , we subsample   means evenly spaced among the indices  . Here, we choose  . To avoid ties, we then subsample the remaining means   starting from   and discard the remaining terms   until the first index   where  . We then repeat this starting from  , and so on. We choose the small constant  . We use the barrier method to compute weights on the subsample and then interpolate linearly to the remaining means.
+
+This new subsampling approach is crucial to enable the application of Princessp to large-scale problems with millions of hypotheses. We also show in Section 4.3.1 that subsampling does not affect too much the accuracy of the weights on smaller problems. On larger problems, it usually avoids the ill-conditioned KKT systems encountered by the naive barrier method.
+
+4.3 Experiments
+
+In this section, we report the results of several experiments with our optimization method.
+
+4.3.1 Accuracy of subsampling
+
+In Section 4.2.2, we introduced a subsampling method to avoid the ill-conditioning of the KKT system. Here, we show that the method does not lose too much accuracy compared with the full barrier method. We set  ,  , draw random  , where   are i.i.d. standard normal and set the bounds  ,  . We compute weights using the standard barrier method ( ) and using the barrier method with subsampling ( . We then compute the absolute error   and relative error (defined pointwise as  ). The two weighting schemes (Fig. 4) agree within at least two significant digits in terms of absolute error for all means. The relative error can be as large as  , but only when the absolute error is smaller than  , so that this still translates to a good accuracy.
+
+4.3.2 Comparison with Spjøtvoll
+
+We showed in Proposition 3.1 that Spjøtvoll weights are monotone if   is small. Thus, we can compare the two methods on a problem where they should give the same results. We set  ,  , draw random  , where   are i.i.d. standard normal, and set  ,  . Spjøtvoll weights (1) and monotone weights (4) are visually indistinguishable (Fig. 5(a)).
+
+4.3.3 Running time
+
+To test the running time of our method, we vary   in the range  – , choosing   as above. The parameters   and   are chosen randomly as  ,  , where  ,   are independent uniform random variables on the unit interval. We also take  . The average running times over 50 simulations are shown in Fig. 5(b), and they are below a second even for the largest  .
+
+5. Discussion
+
+In this article, we developed the Princessp method, employing convex optimization for large-scale weighted Bonferroni multiple testing. Our approach enabled many different constraints. We found that bounded monotone weights perform well empirically in the analysis of GWAS.
+
+In particular, it appears that imposing a lower bound such as   can improve the empirical performance of  -value weighting methods. The reason is that the current  -values,  , are multiplied by a small constant—at most 2 in the example above—and hence significant effects stay significant. Many of the current state-of-the-art weighting methods, such as Spjøtvoll, exponential or Bayes weighting, do not have this property. Therefore, practitioners using them risk losing significant  -values. Bounded weights offer a principled way to avoid this problem. We think that this observation may go a long way in making  -value weighting methods more routinely applicable.
+
+6. Data sources
+
+6.1 CARDIoGRAM and C4D
+
+CARDIoGRAM is a meta-analysis of 14 coronary artery disease GWAS, comprising 22,233 cases and 64,762 controls of European descent (Schunkert et al., 2011). The study includes 2.3 million SNPs. In each of the 14 studies and for each SNP, a logistic regression of coronary artery disease status was performed on the number of copies of one allele, along with suitable controlling covariates. The resulting effect sizes were combined across studies using fixed-effects or random-effects meta-analysis with inverse variance weighting. Finally, two-sided normal  -values were computed.
+
+C4D is a meta-analysis of five heart disease GWAS, totalling 15,420 coronary artery disease cases and and 15,062 controls (Coronary Artery Disease Genetics Consortium, 2011). The samples did not overlap those from CARDIoGRAM. The analysis steps were similar to CARDIoGRAM.
+
+The consortia require that the following acknowledgment be included: Data on coronary artery disease / myocardial infarction have been contributed by CARDIoGRAMplusC4D investigators and have been downloaded from www.CARDIOGRAMPLUSC4D.ORG.
+
+6.2 Chronic kidney disease consortium
+
+This is a GWAS of kidney traits in 67,093 participants of European ancestry from 20 population-based cohorts (Köttgen et al., 2010). Estimated glomerular filtration rate creatinine was the trait with the largest sample size. There is no reported overlap with the samples from C4D. The analysis steps were similar to the previous two studies.
+
+6.3 Blood lipids
+
+This is a GWAS of blood lipids in a sample from European populations (Teslovich et al., 2010). Triglyceride levels were one of the traits, with sample size 96,598, chosen here out of all lipids because of its previous appearance in Andreassen et al. (2013). Standard protocols for GWAS were used: linear regression analysis controlling for study-specific covariates, combined using fixed-effects meta-analysis.
+
+6.4 Psychiatric genomics consortium—schizophrenia
+
+This is a mega-analysis, which uses the raw data and not just summaries of other studies, combining GWAS data from 17 separate studies of schizophrenia, with a total of 9,394 cases and 12,462 controls (Schizophrenia Psychiatric Genome-Wide Association Study Consortium, 2011). They tested for association using logistic regression of schizophrenia status on the allelic dosages. The overlap with the blood lipids study consists of 1,459 controls, which amounts to   of controls in the schizophrenia study. The overlapping controls are from the British 1958 Birth Cohort of the Wellcome Trust Case Control Consortium.
+
+6.5 90Plus study—aging
+
+ Deelen et al. (2014) performed a genome-wide association meta-analysis of 5,406 long-lived individuals of European descent (aged at least 90 years). They combined the results of 14 studies originating from seven European countries. The analysis steps were similar to the ones above. This data set was used in Fortney et al. (2015), and it is the most conveniently available aging data set among those analyzed in that article.
+
+Fig. 1.
+
+Upper and lower bounded weights.
+
+Fig. 2.
+
+The loss in power of bounded weights compared to Spjøtvoll weights.
+
+Fig. 3.
+
+Plot of the function   appearing in the objective for various parameters  .
+
+Algorithm 1
+
+Barrier method for monotone weights
+
+Fig. 4.
+
+Accuracy of subsampling.
+
+Fig. 5.
+
+(a) Spjøtvoll and monotone weights. (b) Base 10 log running time of barrier method. Averages and two standard errors over 50 independent MC trials.
+

@@ -1,0 +1,215 @@
+Synthesis of Isomeric Phosphoubiquitin Chains Reveals that Phosphorylation Controls Deubiquitinase Activity and Specificity
+Summary
+
+Ubiquitin is post-translationally modified by phosphorylation at several sites, but the consequences of these modifications are largely unknown. Here, we synthesize multi-milligram quantities of ubiquitin phosphorylated at serine 20, serine 57, and serine 65 via genetic code expansion. We use these phosphoubiquitins for the enzymatic assembly of 20 isomeric phosphoubiquitin dimers, with different sites of isopeptide linkage and/or phosphorylation. We discover that phosphorylation of serine 20 on ubiquitin converts UBE3C from a dual-specificity E3 ligase into a ligase that primarily synthesizes K48 chains. We profile the activity of 31 deubiquitinases on the isomeric phosphoubiquitin dimers in 837 reactions, and we discover that phosphorylation at distinct sites in ubiquitin can activate or repress cleavage of a particular linkage by deubiquitinases and that phosphorylation at a single site in ubiquitin can control the specificity of deubiquitinases for distinct ubiquitin linkages.
+
+Introduction
+
+The post-translational modification of proteins with ubiquitin (Ub) modulates an expanding array of cellular processes (Komander and Rape, 2012). Ub is attached to a target protein through the formation of an isopeptide bond between a lysine in the target protein and the C terminus of the Ub. A cascade of enzymes (E1s, E2s, and E3s) directs protein ubiquitination: Ub is first activated, as a thioester conjugate to a cysteine residue in an E1-activating enzyme, and is then transferred to the active site cysteine of an E2-conjugating enzyme, before it is conjugated to the target protein with the help of an E3 ligase. The E3 may either activate direct transfer of Ub from the E2 (RING and U-box E3 ligases), or it may transiently accept Ub from the E2 to form an E3-Ub intermediate before transfer of Ub to the target amine (RBR and HECT E3 ligases) (Berndsen and Wolberger, 2014). In human cells there are two E1s, ∼40 E2s, and >600 E3s (Clague et al., 2015).
+
+The action of the E1, E2, and E3 cascade is counteracted by deubiquitinases (DUBs) that cleave the isopeptide bond between the target protein and Ub. There are five established families of DUBs: Ub-specific proteases (USPs), Ub C-terminal hydrolases (UCHs), ovarian tumor proteases (OTUs), Josephins, and JAMMs (Komander et al., 2009). The interplay between the specificity of the E1, E2, and E3 systems and the specificity of DUBs defines the ubiquitinated proteome, and factors that alter the activity and specificity of these enzymes reconfigure the ubiquitinated proteome and alter biological outcomes.
+
+Many proteins have been identified as targets of ubiquitination. Proteins can be mono-ubiquitinated or modified with Ub polymers, in which Ub is linked via an isopeptide bond between the C terminus of one monomer and a lysine residue (K6, K11, K27, K29, K33, K48, or K63) or via a peptide bond to the N terminus (M1) of another monomer.
+
+Ub linkages have been identified in cells at varying abundances (Kulathu and Komander, 2012). Because of the low abundance of Ub chains (Kaiser et al., 2011) and the challenge of purifying specific Ub linkage isomers from cells, the development of methods for the synthesis of well-defined Ub chains (Faggiano et al., 2016, Kumar et al., 2010, Virdee et al., 2010) has been crucial for characterizing the structural and biochemical properties of Ub chains. The characterization of atypical Ub chains has often preceded an understanding of their physiological significance, and biochemical and structural data for Ub chains of unknown function continue to inform in vivo experiments aimed at addressing physiological significance (Bremm et al., 2010, Hospenthal et al., 2013, Kristariyanto et al., 2015, Michel et al., 2015).
+
+Ub is a target for post-translational modifications, including acetylation (Ohtake et al., 2015) and phosphorylation (Kane et al., 2014, Kazlauskaite et al., 2014, Koyano et al., 2014). Several sites of phosphorylation (Thr7, Thr12, Thr14, Ser20, Ser57, Tyr59, Ser65, and Thr66) have been identified on Ub within mammalian cells (Herhaus and Dikic, 2015).
+
+We recently reported the directed evolution of SepRS/tRNA  pairs (Rogerson et al., 2015) that function with a mutant of EF-Tu (Park et al., 2011) for the efficient genetic encoding of phosphoserine and its non-hydrolyzable analog in response to an amber codon, which can be introduced into a gene of interest at a desired position (Rogerson et al., 2015). Here we use this approach to synthesize phosphoubiquitin isomers bearing phosphorylation at the three serines in Ub that are modified in vivo (serine 20, serine 57, and serine 65).
+
+The physiological significance for serine 65 phosphorylation is the most well-established of any phosphorylation in Ub. Ser65 phosphorylation on Ub is installed by PINK1, which also phosphorylates the E3 ligase Parkin (Kane et al., 2014, Kazlauskaite et al., 2014, Kondapalli et al., 2012, Koyano et al., 2014, Lai et al., 2015, Shiba-Fukushima et al., 2012). Mutations in PINK1 and Parkin are the most common cause of autosomal recessive Parkinson’s disease (Corti et al., 2011, Valente et al., 2004). It appears that phosphorylation of both Parkin and Ub is required to activate Parkin and to ubiquitinate and clear damaged mitochondria from cells (Kumar et al., 2015, Lazarou et al., 2015). Ser65 phosphorylation is detected as <1.5% of global Ub in human cells, but the fraction of phosphorylated Ub at the mitochondria can reach 10%–20%. These observations further demonstrate that low global levels of phosphoubiquitin species are consistent with physiologically relevant function.
+
+Ub phosphorylated at Ser65 may be prepared by enzymatic phosphorylation with PINK1 (Wauer et al., 2015). However, for the other serine phosphorylation sites on Ub, the kinases that install the phosphorylation are unknown, and the molecular consequences of Ub phosphorylation remain uncharacterized. Serine 57 is the major (most abundant) phosphorylation site on Ub (Swaney et al., 2015), and it has been found repeatedly in independent studies in yeast and mammalian cells (Bennetzen et al., 2010, Bian et al., 2014, Malik et al., 2009, Phanstiel et al., 2011, Sharma et al., 2014, Swaney et al., 2015, Villén et al., 2007, Zhou et al., 2013). Recently, serine 57 phosphorylation was shown to be globally upregulated in response to oxidative stress (Swaney et al., 2015). Serine 20 phosphorylation has been detected repeatedly in human, mouse, and rat (Choudhary et al., 2009, Lundby et al., 2012, Manes et al., 2011).
+
+Here we used genetic code expansion to express and purify multi-milligram quantities of Ub bearing homogeneous phosphorylation at Ser20 (Ub [pSer20]), Ser57 (Ub [pSer57]), and Ser65 (Ub [pSer65]) from E. coli and to solve the structure of Ub (pSer20). We determined the consequences of each phosphorylation for E1 activation and E2 conjugation by 18 E2s. We assembled and purified 20 phosphorylated Ub dimers, with distinct sites of peptide linkage (M1, K6, K11, K29, K33, K48, and K63) and phosphorylation (Ser20, Ser57, and Ser65), using the E2/E3 combinations reported for the synthesis of unmodified Ub chains. In the process of assembling and characterizing phosphoubiquitin chains, we discovered that phosphorylation of serine 20 on Ub converts UBE3C from a dual-specificity E3 ligase into a ligase that primarily synthesizes K48 chains. DUB assays with phosphorylated Ub dimers revealed that (1) phosphorylation at distinct sites on Ub can control DUB-mediated cleavage of a given Ub linkage, and that (2) phosphorylation at each site in Ub can control the specificity with which DUBs cleave different Ub linkages.
+
+Results
+
+Production of Ub (pSer20), Ub (pSer57), and Ub (pSer65)
+
+We expressed each phosphorylated Ub variant from the corresponding Ub (Ser XX TAG)-His6 gene, where XX defines the site of serine phosphorylation in the protein, TAG is the amber codon, and His6 encodes the hexahistidine tag. Phosphoserine was directed into the protein using an evolved SepRS/tRNA  pair, an approach that we previously demonstrated allows the production of homogeneous and site-specifically phosphorylated Ub and other phosphoproteins (Rogerson et al., 2015). Ub (pSer20), Ub (pSer57), and Ub (pSer65) were purified with yields of 1.5, 0.5, and 24 mg/l, respectively (Figure 1A). We also expressed and purified the corresponding K48R mutants of Ub required for the assembly of K6-linked Ub chains (Hospenthal et al., 2013). Electrospray ionization mass spectrometry (ESI-MS) confirmed the phosphorylation of each Ub (Figure 1B), and targeted MS confirmed the site of phosphorylation (Kirkpatrick et al., 2006) (Data S1). While a previous report also claimed to have made phosphoubiquitin species using an unevolved SepRS/tRNA  pair (Ordureau et al., 2015, Park et al., 2011), no characterization of phosphoserine incorporation was reported. Moreover, we previously demonstrated that the unevolved synthetase/tRNA pair is 20 times less efficient than the evolved pair we used here (Rogerson et al., 2015), and others previously demonstrated that the unevolved SepRS/tRNA  pair incorporates natural amino acids into proteins in response to the amber codon, leading to heterogeneous protein products (Heinemann et al., 2012), which make interpreting biochemical experiments challenging.
+
+We obtained crystals for Ub (pSer20), which diffracted to 1.55 Å (Table S1) and showed clear density for the phosphate group (Figure 1C). This underscores the quantity and purity of proteins obtained using the evolved SepRS/tRNA  pair (Rogerson et al., 2015). The fold of the phosphorylated protein is comparable to that of unphosphorylated Ub (root-mean-square deviation [RMSD] to 1UBQ [Vijay-Kumar et al., 1987] residues 1–72 is 0.8 Å; Figure 1D), though the charge distribution on one face of the molecule is perturbed (Figure 1E).
+
+Phosphorylation at Ser20, Ser57, or Ser65 Does Not Affect the Loading of E2s with Ub
+
+To test whether phosphorylation at serine in position 20, 57, or 65 influenced the first two steps in the ubiquitination cascade, E2-charging reactions containing an E1 (Ube1), ATP, and 18 different E2s were performed (Figures 2A–2R). We did not observe differences in charging efficiency among Ub (pSer20), Ub (pSer57), Ub (pSer65), and unmodified Ub. We conclude that phosphorylation at Ser20, Ser57, or Ser65 does not affect the first two steps of the ubiquitination cascade with the E2s tested. Our results define the effects of Ser20 and Ser57 phosphorylation of Ub on E2 charging, and they are consistent with previous observations, using a subset of the E2s we have investigated (Wauer et al., 2015), for Ser65 phosphorylation.
+
+Synthesis of Isomeric Phosphoubiquitin Chains
+
+Next we asked whether Ub (pSer20), Ub (pSer57), and Ub (pSer65) chains linked through M1, K6, K11, K29, K33, K48, or K63 on Ub can be formed using combinations of enzymes that are known to assemble these chains with unmodified Ub (Faggiano et al., 2016). We followed the extent of Ub chain formation as a function of time by SDS-PAGE (Figure 3) and the composition of the chain formed by targeted MS, with isotopically labeled, absolute quantitation (AQUA) peptide standards (Kirkpatrick et al., 2006) (henceforth referred to as targeted MS) (Data S1).
+
+For the enzymes that assemble M1-linked linear Ub chains (Ube1, UBE2L3, and HOIP), the extent of chain formation was not attenuated with Ub (pSer20) and Ub (pSer57) (Figure 3A). However, we observed a decrease in chain formation for Ub (pSer65), consistent with previous observations (Wauer et al., 2015). Phosphorylation at position 20 of Ub increased the fraction of K11 linkages formed (from undetectable levels with unmodified Ub to 9% with Ub [pSer20]), while phosphorylation at position 65 increased the fraction of K33 linkages formed to 10% with Ub (pSer65) (Data S1).
+
+For the enzymes that assemble K6 chains (Ube1, UBE2L3, and NleL), using K48R mutants of Ub to avoid forming K48 chains, we observed no substantial differences in the extent of Ub chain formation with the K48R Ub species tested (Figure 3B). However, K11 linkages were formed with Ub (K48R, pSer20) (7%) and K63 linkages were formed with Ub (K48R, pSer65) (10%) (Data S1).
+
+K11- and K63-linked Ub chains can be formed by Ube1 and UBE2S-UBP. The addition of AMSH removes K63 chains leaving pure K11-linked Ub. We observed no substantial effect on the extent of chain formation with Ub (pSer20), Ub (pSer57), or Ub (pSer65) (Figure 3C), and Ub (pSer20) and Ub (pSer57) predominantly formed K11 chains (Data S1). However, Ub (pSer65) led to 33% K11 linkages and 62% K63 linkages (Data S1). These observations are consistent with our DUB assays (Figure 5), which revealed that AMSH does not cleave K63-linked Ub (pSer65) dimers (Figure 5G). We conclude that Ube1 and UBE2S-UBP form a mixture of K11- and K63-linked Ub (pSer65), which is not further modified by AMSH.
+
+A mixture of K29- and K48-linked chains can be assembled by Ube1, UBE2D3, and UBE3C. Addition of the DUB vOTU cleaves K48 chains in this mixture, leaving pure K29 chains (Kristariyanto et al., 2015). We observed a striking decrease in the extent of chain formation for Ub (pSer20) when incubated with Ube1, UBE2D3, UBE3C, and vOTU (Figure 3D). Further investigation revealed that UBE3C forms Ub (pSer20) chains in the absence of vOTU (Figures 4A and S1), and these chains contain K48 linkages, but not K29 linkages (Figures 4A–4C). Our results reveal that Ub that is phosphorylated on Ser20 is a substrate for the K48 ligase activity of UBEC3, but it is not a substrate for the K29 ligase activity of UBE3C. We conclude that Ser20 phosphorylation on Ub changes UBE3C from a dual-specificity ligase that makes K48- and K29-linked chains with unmodified Ub to a ligase that makes predominantly Ser20 phosphorylated K48-linked chains with Ser20 phosphorylated Ub (Figure 6B). In contrast, phosphorylation at Ser57 or Ser65 of Ub has more modest effects on UBE3C ligase activity (Data S1).
+
+A mixture of K33-, K11-, and K48-linked chains can be assembled with Ube1, UBE2D1, and AREL1. To create pure K33 chains, the DUBs Cezanne-EK and OTUB1 are added to hydrolyze K11 and K48 chains, respectively, and leave pure K33 chains (Michel et al., 2015). The phosphorylation sites investigated did not substantially influence chain formation with these enzymes (Figure 3E). Moreover, most of the Ub linkages formed were at K33 for Ub (pSer20), Ub (pSer57), or Ub (pSer65) and Ub (Data S1). However, consistent with our observation that K11-linked Ub (pSer20) is a worse substrate for Cezanne than Ub (Figure 5C), we observed 7% of K11 linkages for Ub (pSer20).
+
+We used an E1/E2 combination (Ube1 and UBE2R1) that assembles K48 chains with Ub for chain assembly with each of the phosphorylated Ubs. We found that chain assembly was attenuated for Ub (pSer65) (Figures 3F and S2). Phosphorylation of Ser65 in Ub led to a decrease in the fraction of K48 chains formed and an increase in the formation of K63 linkages (from undetectable levels for Ub to 12% of linkages for Ub [pSer65]; Data S1), in qualitative agreement with previous work (Wauer et al., 2015). We found that Ser20 phosphorylation also decreased the fraction of K48 linkages and led to an increase in K6 linkages with Ube1 and UBE2R1 (Data S1).
+
+We used an E1/E2 combination (Ube1, UBE2N, and UBE2V1) that assembles K63 chains with unmodified Ub for chain assembly with each of the phosphorylated Ubs. We observed a modest attenuation of chain assembly for Ub (pSer20) and Ub (pSer57) and a more dramatic attenuation of chain assembly for Ub (pSer65) (Figure 3G). However, phosphorylation at the sites tested did not affect the linkage composition (Data S1). We conclude that phosphorylation of Ub affects the kinetics of K63 chain formation with these enzymes but does not substantively affect the composition of the chains formed.
+
+Phosphorylation of Ub at Ser20, Ser57, and Ser65 Controls DUB Specificity
+
+Next we addressed the consequences of Ub phosphorylation for DUB activity and specificity. We purified dimers of Ub, dimers of Ub (pSer20), dimers of Ub (pSer57), and dimers of Ub (pSer65) from each linkage assembly reaction (Figure S3), yielding 27 dimeric substrates for DUB profiling. To profile activity of DUBs on phosphoubiquitin dimers, we adapted a MALDI-TOF assay that previously was used to profile DUB activity, specificity, and inhibition on unmodified Ub dimers (Ritorto et al., 2014). We followed the extent of phosphorylated diubiquitin cleavage by the appearance of the monomeric phosphoubiquitin species in MALDI-TOF, using quantitatively phosphorylated 15N-labeled Ub as an internal standard.
+
+We tested the cleavage of each of the 27 purified Ub dimers with 31 DUBs in 837 Ub dimer/DUB combinations (Figures 5 and S4). The DUBs profiled included members of the USP, OTU, and JAMM families that can be purified and assayed in vitro, and they cover about a third of the DUBs encoded in the human genome. A potential caveat in interpreting some of the DUB data comes from the observation that some of the reactions used to assemble the Ub dimers led to small amounts of other linkages (Figure S4; Data S1). However, because we also have data on the cleavage of the other linkages by the same DUB and most Ub phosphorylations inhibit DUB cleavage, the contaminating linkages were not cleaved in most cases. Therefore, it was still possible to clearly interpret the DUB specificity data.
+
+DUBs did not cleave the unphosphorylated Ub dimer for 88 of the Ub dimer linkage/DUB combinations tested. Phosphorylation of Ub at Ser20, Ser57, or Ser65 did not activate DUB-mediated cleavage of the Ub dimers that were not cleaved when Ub was unmodified (Figure S4). For the remaining 479 Ub dimer/DUB combinations, we compared the activity of the DUB on each phosphorylated Ub dimer to the activity of the DUB on the unmodified Ub dimer of the same linkage (Figure 5). Most DUBs tested were less able to cleave the phosphorylated Ub dimers. Ser65 phosphorylation led to the greatest reduction of Ub dimer cleavage by most of the DUBs tested (Figure 5).
+
+Our data define the role of Ub phosphorylation at Ser20, Ser57, and Ser65 in regulating the DUB-mediated cleavage of each Ub linkage (Figures 5 and 6). CYLD had comparable activity on Ub (pSer65) linear Ub dimers and unmodified linear dimers of Ub, but it was much less active on linear dimers of Ub (pSer20) or Ub (pSer57) (Figures 5A and 6C).
+
+USP8 cleaved K6-linked dimers of Ub (pSer20) and Ub (pSer57) more efficiently than K6-linked dimers of Ub, and phosphorylation of Ub at residue 65 substantially reduced K6 dimer cleavage by USP8 (Figures 5B and 6D). In contrast, the cleavage of K6-linked Ub dimers by USP16 and USP21 was activated by Ser65 phosphorylation, but not by phosphorylation at Ser20 or Ser57 (Figures 5B and 6D).
+
+The cleavage of K11-linked Ub dimers by OTUD3 was activated by phosphorylation of Ser20 in Ub, but it was inhibited by phosphorylation at Ser57 or Ser65 (Figure 5C). USP4 and USP5 cleaved K11-linked dimers of Ub with Ser57 or Ser65 phosphorylation, while USP6 cleaved K11-linked Ub dimers with Ser20 or Ser57 phosphorylation as efficiently as unmodified K11-linked dimers of Ub, but it was less efficient at cleaving K11-linked dimers of Ub (pSer65) (Figure 5C). However, the results for K11 chains with Ser65 phosphorylation must be interpreted with caution, because these chains contained a substantial amount of K63-linked Ub (pSer65) (Figure S4; Data S1).
+
+The cleavage of K29-linked dimers by USP2 was activated by phosphorylation at Ser57, but the cleavage of K29-linked dimers of Ub by USP2 was deactivated by Ser65 phosphorylation (Figures 5D and 6E). The USP16-mediated cleavage of K33-linked Ub dimers was specifically enhanced by phosphorylation at Ser65 of Ub (Figures 5E and 6F).
+
+The cleavage of K48-linked dimers of Ub by OTU family DUBs (OTUB1 and OTUB2) and several USP family DUBs (USP4, USP16, USP21, and VCPIP1) was activated by phosphorylation of Ser65, but it was deactivated by phosphorylation at Ser20 or Ser57 (Figures 5F and 6G). The cleavage of K63-linked Ub by USP8 and USP36 was severely attenuated by phosphorylation of Ser65 in Ub, but phosphorylation at Ser20 or Ser57 had little effect on cleavage of K63-linked Ub by these enzymes (Figures 5G and 6H).
+
+Our data also define how each Ub phosphorylation alters the specificity with which DUBs cleave different Ub linkages (Figures 5 and 6). Ser20 phosphorylation increased OTUD3-mediated cleavage of K11-linked Ub, but it decreased OTUD3-mediated cleavage of K48 linkage (Figure 6I). Ser20 phosphorylation increased USP8-mediated cleavage of K6-linked Ub, but it decreased the USP8-mediated cleavage of K11 and K48 linkages (Figure 6J).
+
+Ser57 phosphorylation increased USP2-mediated cleavage of K29-linked Ub, but it decreased USP2-mediated cleavage of K6 and K48 linkages (Figure 6K). Ser57 phosphorylation increased USP6-mediated cleavage of K11-linked Ub, but it decreased USP6-mediated cleavage of K6, K33, K48, and K63 linkages (Figure 6L). Ser57 phosphorylation increased USP8-mediated cleavage of K6-linked Ub, but it decreased USP8-mediated cleavage of K33 and K48 linkages (Figure 6M).
+
+Ser65 phosphorylation increased OTUB2-mediated cleavage of K48-linked Ub, but it decreased OTUB2-mediated cleavage of K63 linkages (Figure 6N). Ser65 phosphorylation increased USP4-mediated cleavage of K11- and K48-linked Ub, but it decreased USP4-mediated cleavage of K6-, K29-, and K33-linked Ub (Figure 6O).
+
+Discussion
+
+We report the synthesis of multi-milligram quantities of Ub phosphorylated at position 20, 57, and 65 and the structure of Ub phosphorylated at Ser20. We report the assembly of K6-, K11-, K33-, K48-, and K63-linked Ub bearing phosphorylation at Ser20, Ser57, or Ser65 and the assembly of K29-linked Ub bearing Ser57 or Ser65 phosphorylation. While we have only sampled a small subset of possible E3 ligase activities on phosphoubiquitin species, our data demonstrate that the site-specific phosphorylation of Ub can control the extent and isomeric composition of Ub chains synthesized and that phosphorylation at distinct sites on Ub have distinct effects on Ub polymer synthesis. The most striking observation from the chain assembly experiments is the change in linkage specificity of UBE3C upon phosphorylation at Ser20 of Ub; this enzyme assembles K29 and K48 linkages with comparable efficiency when using Ub as a substrate, but it primarily assembles K48 chains with a Ub (pSer20) substrate (Figure 6B).
+
+UBE3C associates with the proteasome (Chu et al., 2013). In response to proteolytic stress, UBE3C is reported to ubiquitinate Rpn13 (a proteasome-resident Ub-binding protein) with K29-linked chains and decrease the proteasome’s ability to bind and degrade Ub-conjugated proteins (Besche et al., 2014). Our results suggest that the phosphorylation of Ser20 in Ub may shut down the formation of K29-linked Ub chains formed by UBE3C, and this may enable the proteasome to resume proteolysis and aid cellular recovery following proteolytic stress.
+
+Our data provide a wealth of new information on the consequences of Ub phosphorylation on DUB activity. Previous work investigated the effects of Ser65 phosphorylation on a single preferred substrate of five DUBs (Wauer et al., 2015), which does not illuminate the effects of phosphorylation on DUB isopeptide linkage specificity. In contrast, we have defined the effects of phosphorylation at Ser65 (Figure 7A) on the isopeptide linkage specificity of 31 DUBs. Moreover, we have defined the consequences of Ser20 and Ser57 phosphorylation (Figure 7A) for the DUB-mediated cleavage of each Ub linkage. Our data reveal that (1) phosphorylation at distinct sites in Ub can have different effects on the cleavage of a particular Ub linkage isomer by a DUB, and that (2) phosphorylation at a single site in Ub can have a different effect on the cleavage of different Ub linkage isomers by a particular DUB.
+
+DUBs bind to their substrates through a distal Ub-binding site (which binds the Ub that yields a free carboxylate upon [iso]peptide cleavage) and a proximal binding site (which yields a free amine upon cleavage) (Mevissen et al., 2013). The distal binding site binds Ub in a well-defined orientation, while the proximal site may allow Ub binding in several orientations to facilitate the cleavage of different linkage isomers. For several DUBs (Figure 6), we observed that the cleavage of a particular Ub linkage isomer is affected differently by phosphorylation at distinct sites on Ub in the dimer. Phosphorylation may affect the binding of Ub to the proximal binding site in a DUB, the distal binding site, or to both sites.
+
+There are structural data for four DUBs with Ub in both the proximal and the distal binding sites (OTUB1 [Juang et al., 2012], AMSH-LP [Sato et al., 2008], OTULIN [Keusekotten et al., 2013], and CYLD [Sato et al., 2015]). In the structure of OTUB1 and AMSH, which cleave K48 and K63 linkages, respectively, all the serine phosphorylation sites in the distal Ub are solvent exposed and would not be predicted to directly affect binding or enzymatic activity (Figure 7B). In contrast, Ser20 and Ser57, but not Ser65, are close to the interface of the proximal Ub with OTUB1 (Figure 7C), and all sites of serine phosphorylation are close to the interface between AMSH-LP and the proximal Ub (Figure 7D).
+
+Interestingly, there is a correlation between those phosphorylation sites that are close to the interface in the proximal Ub bound to these enzymes and their inhibition (Figures 5F and 6G). This is consistent with phosphorylation in the proximal Ub controlling the activity by inhibiting binding or activity (Figure 7E). The three phosphorylation sites in the Ub bound to the distal binding site of OTULIN are solvent exposed, consistent with phosphorylation of the distal Ub not controlling OTULIN activity. Ser20 and 57 in the proximal Ub are close to the distal Ub bound to OTULIN, while Ser65 on the proximal Ub is solvent exposed (Figure S5A). We propose that the OTULIN inhibition on M1 linkages observed for Ser20 and Ser57 phosphorylation (Figure 5A), but not for Ser65 phosphorylation, results from the simultaneous binding of the distal Ub and phosphorylated proximal Ub being incompatible on OTULIN. For CYLD, the three phosphorylation sites in the Ub bound to the distal binding site of CYLD are solvent exposed, and Ser20 and Ser57 also are solvent exposed in the proximal Ub, while Ser65 interacts with a flexible loop on CYLD (Figure S5B). Thus, the current structures of CYLD bound to diubiquitin do not provide an explanation of how phosphorylation controls Ub linkage cleavage.
+
+For many DUBs tested, phosphorylation at one site inhibits the cleavage of all the Ub linkage isomers tested, with Ser65 phosphorylation of Ub leading to the greatest inhibition of DUB activity in most cases. The simplest explanation for these observations is that each phosphorylation has a defined effect on the activity of each DUB, by controlling Ub binding, regardless of the linkage isomer, at the distal binding site. This model is supported by the structure of Ub bound to the distal site of USP2 (Figure 7F), an enzyme that is inhibited from cleaving all Ub linkages by phosphorylation of Ser65 (Figure 5). Ser65 of the distal Ub is buried at the interface with USP2, and we suggest that phosphorylation of USP2 may control the cleavage of all Ub linkages by inhibiting binding of the distal Ub (Figure 7G).
+
+For some DUBs (OTUD3, USP8, USP2, USP6, OTUB2, and, USP4) (Figures 6I–6O), the phosphorylation of Ub at a particular site can enhance the cleavage of a Ub linkage isomer, while phosphorylation at the same site in a different Ub linkage isomer can reduce the cleavage mediated by the same DUB. The differential cleavage of site-specifically phosphorylated Ub dimers as a function of linkage isomer is consistent with the phosphorylation affecting binding in the proximal Ub-binding site, where different isomers are bound in different orientations, rather than in the distal Ub-binding site, where Ub is bound in a common orientation. Consistent with this hypothesis, the structures of USP2, USP8, and OTUB2 with Ub bound in the distal binding site reveal that the relevant serine residues (Ser57 for USP2, Figure 6K; Ser20 and 57 for USP8, Figures 6J and 6M; and Ser65 for OTUB2, Figure 6N) are solvent exposed in the distal binding sites (Figure 7H). We conclude that specific phosphorylations on Ub may control the linkage specificity of DUBs by regulating the binding of selected isomers in the proximal binding site of the DUB (Figure 7I).
+
+We demonstrate that the cleavage of a Ub linkage type may be regulated by phosphorylation of Ub and that phosphorylation at different sites in Ub can have distinct effects on the cleavage of a linkage. Since phosphorylation of serine residues in Ub commonly inhibits DUB activity but has less effect on the subset of Ub chain synthesis enzymes tested, we suggest that phosphorylation may regulate the levels of Ub chains, primarily through effects on DUB activity and specificity.
+
+Experimental Procedures
+
+Purification of E1, E2, E3, DUB, 15N-Ub, and Ub oligomers were by standard methods (Faggiano et al., 2016, Ritorto et al., 2014) and are described in the Supplemental Experimental Procedures. MS, MALDI-TOF assays (Ritorto et al., 2014), and targeted parallel reaction monitoring MS are detailed in the Supplemental Experimental Procedures.
+
+Expression and Purification of Phosphorylated Ub Variants
+
+BL21 ΔserB(DE3) cells containing pKW2 EF-Sep and pNHD-Ub (described in Rogerson et al., 2015) containing Ub-His , UbK48R-His , Ub20TAG-His , Ub20TAG:K48R-His , Ub57TAG-His , Ub57TAG:K48R-His , Ub65TAG-His , or Ub65TAG:K48R-His  were grown overnight at 37°C in terrific broth (TB) media containing 50 μg/ml chloramphenicol and 25 μg/ml tetracycline. The culture was diluted 1:100 into fresh TB media containing 25 μg/ml chloramphenicol and 12.5 μg/ml tetracycline and incubated at 37°C; once the OD  reached 0.5, dexfosfoserine (pSer) (Bachem) was added to a final concentration of 2 mM. After 30 min of further incubation, additional pSer was added to the culture to reach a final concentration of 4 mM, and the culture was induced using 1 mM isopropyl β-D-1-thiogalactopyranoside (IPTG) at 37°C for 6 hr.
+
+Cells were harvested by centrifugation, resuspended in 50 mM Tris-HCl (pH 7.4), 150 mM NaCl, 30 mM imidazole, 0.5 mg/ml lysozyme (Sigma), and 50 μg/ml DNase (Sigma), and lysed by sonication. The lysate was clarified by centrifugation at 39,000 × g for 30 min and filtration through a 0.4 μm polyethersulfone (PES) membrane. Ub was purified using nickel affinity chromatography (HisTrap HP column, GE Healthcare) with a linear gradient of imidazole (30–500 mM). The protein was dialysed overnight against 10 mM Tris-HCl at 4°C, the C-terminal His -tag was removed by incubating the sample with 15 μg/ml UCHL3 at 37°C for 5 hr, and Ub was further purified by ion exchange chromatography (MonoS 4.6/100 PE column, GE Healthcare), using an NaCl gradient (0–500 mM) in 50 mM ammonium acetate (pH 4.5). Pure fractions were confirmed by ESI-MS and pooled before overnight dialysis against 20 mM Tris-HCl (pH 7.4). The sample was then concentrated to ∼15 mg/ml using Amicon Ultra-15 (3 kDa molecular weight cut off [MWCO]) centrifugal filter device (Millipore). All purifications were performed at 4°C.
+
+Crystallographic Analysis of Ub (pSer20)
+
+Purified Ub (pSer20) in 20 mM Tris (pH 7.4) was crystallized at 10 mg/ml in a hanging-drop setup using the vapor diffusion method. Crystals grew in 45% (w/v) PEG 400 and 100 mM Tris-HCl (pH 7.0), and they were vitrified in the same mother liquor. Data were collected at the ID-29 beamline at the European Synchrotron Radiation Facility (ESRF). The structure was determined by molecular replacement in Phaser (McCoy et al., 2007), using a search model of Ub (PDB: 1UBQ [Vijay-Kumar et al., 1987]) that lacked the last five flexible C-terminal residues. Model building and refinement were carried out in Coot (Emsley et al., 2010) and Phenix (Adams et al., 2010, Adams et al., 2011), respectively. The final statistics are shown in Table S1.
+
+Author Contributions
+
+J.W.C. defined the direction of research. N.H.-D. designed and performed all biochemical experiments and performed crystallographic analyses. J.P. performed MS with AQUA peptide standards experiments and V.D.C. performed DUB experiments under the supervision of M.T. A.K. provided reagents for biochemical experiments and purified 15N-labelled Ub (pSer65). Y.A.K. provided reagents and advice for Ub chain purification together with Y.K. D.T.R performed initial cloning and expression of Ub(TAG) constructs with N.H.-D. All authors analyzed the data. N.H.-D. and J.W.C. wrote the paper with input from all authors.
+
+Figure 1
+
+Production and Characterization of Ub (pSer20), Ub (pSer57), and Ub (pSer65)
+
+(A) Coomassie staining of equal amounts of unmodified Ub and phosphorylated Ub. 20, 57, and 65 designate the phosphorylated serine residue on Ub.
+
+(B) ESI-MS demonstrates the quantitative incorporation of pSer into Ub (Ub: expected 8,564.8 Da, observed 8,564.78 Da; Ub (pSer20): expected 8,644.78 Da, observed 8,644.42 Da; Ub (pSer57): expected 8,644.78 Da, observed 8,644.21 Da; and Ub (pSer65): expected 8,644.78 Da, observed, 8,644.05 Da).
+
+(C) 2FoFc map around the phosphate of Ub (pSer20) contoured at 1.3 sigma is shown.
+
+(D) Alignment of the structure of Ub (pSer20) (yellow) and a Ub reference structure (PDB: 1UBQ; Vijay-Kumar et al., 1987) (light blue), RMSD for residues 1–72 = 0.8 Å (calculated with DALI [Hasegawa and Holm, 2009]). The phosphate atom is displayed in orange and oxygen atoms are in red.
+
+(E) Electrostatic surface potential changes on the surface of Ub, unmodified (top) and pSer20 (bottom) in similar orientation. Potentials were calculated with the APBS plug-in within PyMOL, using established phosphoserine parameters (Steinbrecher et al., 2012).
+
+See also Table S1.
+
+Figure 2
+
+E1 Activation and E2 Charging Are Not Affected by Serine Phosphorylation in Ub
+
+(A–R) Commassie staining of E2-charging reactions containing an E1 (Ube1), ATP, 18 different E2s, and Ub, Ub (pSer20), Ub (pSer57), or Ub (pSer65) after 1 hr (A–J, L, P, and R) or 5 min (K, M–O, and Q) incubation at 30°C. Ub, Ubiquitin; E2∼Ub, Thioester-linked E2-Ub pair; Ub-E2∼Ub, Thioester-linked E2-Ub pair with one covalently E2 attached Ub; 20, 57, and 65 designate the phosphorylated serine residue on Ub. See also Figure S2 and Table S2.
+
+Figure 3
+
+The Synthesis of Ub Chains Is Differentially Affected by Phosphorylation at Different Sites in Ub
+
+Chain assembly time course reactions are shown. All reactions contained Ube1 and the E2s, E3s, and DUBs indicated. The protein ladder is Precision Plus All Blue Prestained Protein Standards (BioRad).
+
+(A) M1 chain assembly. Time (left to right): 1, 5, 10, 20, 30, and 40 min.
+
+(B) K6 chain assembly. UbK48R, UbK48R (pSer20), UbK48R(pSer57), or UbK48R(pSer65) were used for these reactions. Time (left to right): 1, 5, 10, 15, 30, and 60 min.
+
+(C) K11 chain assembly. The DUB AMSH was added after the 6 hr time point. Time (left to right): 5, 15, 40, 200, and 360 min and overnight.
+
+(D) K29 chain assembly. Time (left to right): 5, 15, 60, 180, and 360 min and overnight.
+
+(E) K33 chain assembly. The DUBs OTUB1 and Cezanne EK were added to the reaction after the 6 hr time point. Time (left to right): 0.5, 1, 4, 6, and 8 hr and overnight.
+
+(F) K48 chains were assembled with Ube1 and UBE2R1. Time (left to right): 15, 45, 120, 240, and 360 min and overnight.
+
+(G) K63 chain assembly. Time (left to right): 15 min; 1, 2, 4, and 6 hr; and overnight.
+
+See also Figure S3, Table S2, and Data S1.
+
+Figure 4
+
+UBE3C Is Converted from a Dual-Specificity Ligase to a K48-Specific Ligase by Phosphorylation of Serine 20 in Ub
+
+(A) Formation of a Ub(20pSer) dimer by Ube1, UBE2D3, and UBE3C followed by Coomassie staining. No more Ub dimer is detectable after the addition of the DUB vOTU after the 3-hr time point.
+
+(B and C) Targeted MS using AQUA peptides on purified trimers formed by Ube1, UBE2D3, and UBE3C, using either unmodified Ub (B) or Ub (pSer20) (C).
+
+See also Figure S1.
+
+Figure 5
+
+Profiling DUB Activity on Isomeric Phospho-Ub Dimers
+
+(A–G) Purified dimers of Ub, Ub (pSer20), Ub (pSer57), and Ub (pSer65) from each linkage assembly reaction (Figure 3) were used to profile deubiquitnase acivity using MALDI-TOF MS with an 15N-labeled Ub internal standard. The activity of each DUB on each phosphorylated Ub dimer, relative to an unmodified Ub dimer of the same linkage, is color coded from blue (no cleavage) under the assay conditions to white (same activity as unmodified Ub) to red (increased cleavage compared to unmodified Ub). (A) M1 Ub dimers, (B) K6 Ub dimers, (C) K11 Ub dimers, (D) K29 Ub dimers, (E) K33 Ub dimers, (F) K48 Ub dimers, and (G) K63 Ub dimers are shown.
+
+See also Figures S3 and S4, Tables S2 and S3, and Data S1.
+
+Figure 6
+
+Synthesis of Phosphorylated Ub and Isomeric Phospho-Ub Chains Reveals the Effects of Ub Phosphorylation on E3 Ligase and DUB Specificity
+
+(A) The phosphoubiquitin species synthesized. Ub is symbolized by a light gray circle on which each phosphorylated residue is symbolized by a smaller green (Ub [pSer20]), orange (Ub [pSer57]), or blue (Ub [pSer65]) circle. Each linkage is symbolized by a colored line as follows: M1, red; K6, blue; K11, yellow; K29, green; K33, dark blue; K48, orange; and K63, gray.
+
+(B) Phosphorylation of Ser20 converts UBE3C from a dual-specificity E3 ligase to a K48-specific E3 ligase.
+
+(C–H) Phosphorylation at Ser20, Ser57, and Ser65 of Ub has distinct effects on the cleavage of Ub linkages. The arrows indicate the efficiency of linkage cleavage for the indicated phosphoubiquitin dimer and are color coded as in Figure 5.
+
+(I–O) Phosphorylation controls the specificity of Ub isomer cleavage by DUBs.
+
+Figure 7
+
+Structural Models for the Control of DUB Specificity by Phosphorylation
+
+(A) Cartoon representation of Ub. The positions of the phosphate groups are represented by a green (pSer20), orange (pSer57), or blue (pSer65) circle. The same color scheme is used throughout the figure.
+
+(B) The structure of OTUB1 in complex with proximal and distal Ub linked through a K48 isopeptide bond (PDB: 4DDG [Juang et al., 2012]). The position of each phosphorylation on the proximal and distal Ub is color coded.
+
+(C) The site of phosphorylation on the proximal, but not distal, Ub may control the specificity of K48-linked Ub dimer cleavage by OTUB1. Ub is shown as a circle, and Ub linkages and phosphorylations are color coded as in Figure 6. Each DUB is shown in wheat. Arrow coloring is taken from Figure 5 (blue is inhibition and red is activation of DUB activity with respect to a non-phosphorylated Ub substrate).
+
+(D) The structure of AMSH-LP in complex with proximal and distal Ub linked through a K63 isopeptide bond (PDB: 2ZNV [Sato et al., 2008]). Each phosphorylation on the proximal and distal Ub is color coded.
+
+(E) The site of phosphorylation on the proximal, but not distal, Ub may control the specificity of K63-linked Ub dimer cleavage by AMSH-LP. Ub linkages are color coded as in Figure 6.
+
+(F) The structure of USP2 in complex with Ub bound at the distal site (PDB: 2HD5 [Renatus et al., 2006]). The site of Ser65 phosphorylation is colored blue.
+
+(G) Phosphorylation on the distal Ub in USP2 may inhibit cleavage of all Ub linkages. Linkages are color coded as in Figure 6.
+
+(H) The structures of USP8 (PDB: 3N3K [Ernst et al., 2013]), OTUB2 (PDB:4FJV [Altun et al., 2015]), and USP2 (PDB: 2HD5 [Renatus et al., 2006]) bound to distal Ub. The sites of phosphorylation that activate the cleavage of one linkage by a DUB, while inhibiting the cleavage of another linkage by the same DUB, are shown for each complex with the distal Ub. The sites of phosphorylation lie far from the protein interface between the DUBs and the distal Ub, suggesting that, for these enzymes, specificity is controlled through the proximal Ub.
+
+(I) Linkage specificity may be controlled by site-specific phosphorylation controlling proximal Ub binding in different orientations, which may be inhibitory or activating.
+
+See also Figure S5.
+

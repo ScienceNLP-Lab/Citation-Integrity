@@ -1,0 +1,139 @@
+IID 2018 update: context-specific physical protein–protein interactions in human, model organisms and domesticated species
+Abstract
+
+Knowing the set of physical protein–protein interactions (PPIs) that occur in a particular context—a tissue, disease, or other condition—can provide valuable insights into key research questions. However, while the number of identified human PPIs is expanding rapidly, context information remains limited, and for most non-human species context-specific networks are completely unavailable. The Integrated Interactions Database (IID) provides one of the most comprehensive sets of context-specific human PPI networks, including networks for 133 tissues, 91 disease conditions, and many other contexts. Importantly, it also provides context-specific networks for 17 non-human species including model organisms and domesticated animals. These species are vitally important for drug discovery and agriculture. IID integrates interactions from multiple databases and datasets. It comprises over 4.8 million PPIs annotated with several types of context: tissues, subcellular localizations, diseases, and druggability information (the latter three are new annotations not available in the previous version). This update increases the number of species from 6 to 18, the number of PPIs from ∼1.5 million to ∼4.8 million, and the number of tissues from 30 to 133. IID also now supports topology and enrichment analyses of returned networks. IID is available at http://ophid.utoronto.ca/iid.
+
+INTRODUCTION
+
+Physical protein–protein interaction (PPI) data have become a widely used resource in molecular biology. They are important because most cellular processes, such as growth, metabolism, and repair, occur primarily through PPIs. Consequently, understanding the molecular mechanisms behind diseases and treatments requires knowledge of PPIs. Currently available PPI data, though far from complete, have provided important insights into numerous problems in molecular biology including identification of gene function (1,2), disease genes (3,4), biomarker signatures (5,6), drug targets (7,8), and drug efficacy (9).
+
+While PPI data can help address numerous research problems, effectively using these data can be challenging due to several reasons: false positive and false negative errors, lack of context information (e.g. tissue and disease annotations of PPIs), and difficulty extracting meaningful conclusions from PPI networks. For example, improving a lung cancer signature would require a reliable, comprehensive, lung-specific network involving prognostic signature proteins, and ways of interpreting how this network can improve the signature; unfortunately, meeting these requirements can be difficult. False positive rates have been estimated at over 80% for some PPI detection studies (10), but may be typically lower, and can be reduced by filtering PPIs based on the quantity and reliability of supporting evidence. False negatives (i.e. missing interactions) can often be a bigger problem; about 50% of human proteins have few or no detected interactions (Figure 1)—rendering any PPI-based analysis inapplicable to much of the proteome and affecting data interpretation. The rate of missing interactions is unevenly distributed across proteins; some proteins may have high rates due to technical challenges of detecting their interactions (11), or research bias in favor of other proteins (12). The overall false negative rate for human PPI data may be greater than 50%, based on an estimated human interactome size of 650,000 PPIs (13). The number of detected human PPIs has already exceeded several lower estimates of interactome size (10,14), and the yearly rate of detected PPIs has not plateaued—further implying a large percentage of missing interactions. If PPIs are available, they need to occur in the relevant context, such as the tissue, cell-type, or disease state being studied. However, PPI detection is typically conducted in yeast or cell-lines. The chances of detected PPIs occurring in a relevant context may be low, since tissues may express less than half of the genome (15). Estimating the in vivo context of interactions requires integrating transcriptomic, proteomic or other data. If PPIs in the relevant context can be detected, the next challenge is to interpret the network and its biological significance.
+
+Our database portal, the Integrated Interactions Database (IID), focuses on addressing the problems of errors, context, and interpretability of PPI data. Given a set of proteins and a context (e.g. tissue, subcellular localization, disease), IID returns a reliable, comprehensive, context-specific interaction network for these proteins, and helps to interpret this network through topological and enrichment analyses. IID provides extensive options for controlling false positive and false negative rates, context, network annotation, and analysis. The content of IID has greatly expanded since the previous release in 2015: the number of species has increased from 6 to 18, the number of tissue contexts has expanded from 30 to 133, three new types of contexts have been added, as well as network analysis.
+
+MATERIALS AND METHODS
+
+PPI sources
+
+Experimentally detected PPIs were obtained primarily from seven curated databases: BioGRID (16) 3.4.158, DIP (17) 2017-02-05, HPRD (18) Release 9, I2D (19) 2.3, InnateDB (20) 5.4, IntAct (21) 4.2.12, and MINT (22) downloaded 2018-05-15. Smaller numbers of PPIs were obtained through targeted curation of literature and from curated PPIs reported in Lefebvre et al. (23). Predicted PPIs were obtained from five sources: predictions from Rhodes et al. (24) with a likelihood ratio cut-off of 381, predictions from Lefebvre et al. (23) with probabilities greater than 0.5, predictions from Elefsinioti et al. (25) with probabilities greater than 0.7, predictions from Zhang et al. (26) with likelihood ratios of at least 600, and FpClass predictions from Kotlyar et al. (11) with a false discovery rate less than 0.6. Predicted interactions were available only for human and yeast.
+
+Orthologous PPIs were generated by mapping experimentally detected PPIs in each of the eighteen IID species to orthologous protein pairs in the other 17 species. Mappings were done using 1:1 orthologs from Ensembl (27) release 92.
+
+Mapping between gene and protein IDs
+
+Mappings between various gene and protein IDs were based on UniProt (28) release 2018_06. For a more complete set of mappings between Ensembl and UniProt IDs, mappings from Ensembl release 92 were also used; this enabled more orthologous PPIs and better support for queries using Ensembl IDs.
+
+Assignment of context to PPIs
+
+Tissues
+
+A PPI was assigned to a tissue if its two encoding genes were expressed in the tissue. A gene was considered expressed in a tissue if its mas5 normalized expression was greater than 200, as in Bossi et al. (29). Gene expression levels in tissues were determined from 20 gene expression datasets downloaded from NCBI GEO (30): GSE1133, GSE3526, GSE7307, GSE7763, GSE9485, GSE10246, GSE20113, GSE20990, GSE23328, GSE24207, GSE25138, GSE39796, GSE89347, GSE90449, GSE100083, GSE106641, GSE107494, GSE108033, GSE115799, GSE117834. All datasets were normalized using the mas5 function in the affy package (31) in R. In each dataset, disease tissues were removed, replicates were averaged and probeset IDs were mapped to Entrez Gene IDs. If a gene was represented by multiple probesets, the one with the highest variance was selected.
+
+Detailed joint-related tissues
+
+Human PPIs were assigned to joint-related tissues by the same approach as other tissues, described above. Gene expression levels in joint-related tissues were determined from seven gene expression datasets downloaded from NCBI GEO (30): GSE9329, GSE10024, GSE10500, GSE18338, GSE32398, GSE39795, GSE40942.
+
+Detailed brain structures
+
+Human PPIs were assigned to brain structures where both encoding genes were expressed. Normalized microarray gene expression data for brain structures was obtained from the Allen Human Brain Atlas (32) (http://human.brain-map.org/static/download). Probe expression levels were averaged across samples and if a gene was represented by multiple probes, the probe with the highest variance was selected. A gene was considered expressed in a brain structure if its log -normalized expression was above 5—a threshold described in the database documentation (http://help.brain-map.org/display/humanbrain/Documentation). A PPI was assigned to a brain structure if its two encoding genes were expressed at or above this level in the structure.
+
+This procedure was used to assign human PPIs to 38 brain structures, each represented by at least 20 samples. PPIs were also assigned to 64 higher level brain structures that subsume these 38 structures according to the Human Brain Atlas ontology (http://help.brain-map.org/display/api/Atlas+Drawings+and+Ontologies#AtlasDrawingsandOntologies-StructuresAndOntologies). A PPI assigned to a given low-level structure, was also assigned to all ancestors of this structure in the ontology.
+
+Subcellular localizations
+
+PPIs were assigned to 13 high-level subcellular localizations, based on Gene Ontology (GO) (33,34) compartment annotations of the interacting proteins. A PPI was assigned to a localization if both proteins were annotated with the localization or with its descendent terms in the GO compartment ontology. GO compartment annotations for proteins were obtained from UniProt (28) release 2018_06.
+
+Diseases
+
+PPIs were assigned to 37 diseases and 54 disease categories from Disease Ontology (35), based on gene-disease associations from DisGeNET (36) v5.0. A PPI was assigned to a disease if its two encoding genes were associated with the disease in DisGeNET. To increase the reliability of gene-disease associations, only associations supported by at least two publications were used.
+
+DisGeNET disease names were mapped to Disease Ontology names by using UMLS (37) concept IDs. PPIs were annotated with these diseases and also with categories from Disease Ontology that encompassed these diseases; a PPI assigned to a disease was also assigned to all ancestors of the disease in the ontology. PPIs were annotated with 91 diseases and higher level disease categories. Non-human PPIs were assigned to diseases based on disease associations of orthologous human protein pairs.
+
+Drug target categories
+
+PPIs were assigned to four major classes of drug targets (38): enzymes, ion channels, receptors, and transporters. A PPI was assigned to a class if one or both proteins were annotated with the GO category of this class according to UniProt (28) or with a descendent of the category in the GO ontology.
+
+Drug targets
+
+PPIs were annotated with drugs that target either of the interacting proteins according to DrugBank (39) v5.0. PPIs were also annotated with drugs that target orthologs of the interacting proteins.
+
+Topology analysis
+
+Topology analysis calculates degree, clustering coefficient, and normalized betweenness centrality of proteins in returned networks. Degree and clustering coefficient are calculated by custom javascript code and normalized betweenness centrality is calculated by cytoscape.js (40).
+
+Enrichment analysis
+
+Enrichment P-values are calculated using a hypergeometric cumulative distribution (hcd) function implemented in javascript. To calculate the enrichment of a given PPI annotation, PPIa (e.g. presence in plasma membrane), in the returned network, the following parameters are used with the hcd function: N = number of PPIs matching the user-selected evidence and species (e.g. number of experimentally detected PPIs in mouse); M = number of PPIs matching the selected species and evidence type, and having annotation PPIa; n = number of PPIs in the returned network; m = number of PPIs in the returned network, with annotation PPIa. Enrichment is available for the following annotations: tissues (not detailed structures), subcellular localizations, diseases, and drug target categories.
+
+WEBSITE DESCRIPTION
+
+IID provides access to detected and predicted PPIs in 18 species (Table 1). PPIs are annotated with tissue, subcellular localization, disease and druggability information. These annotations can be used for filtering PPIs or helping to interpret the resulting network. Returned networks can be analyzed by topology or enrichment for PPI annotations.
+
+Inputs
+
+Required inputs to IID comprise gene or protein IDs and their species. IDs may include gene symbols, Entrez, Ensembl, and UniProt. Optional inputs control how IID searches for PPIs (e.g. retrieves interactions between pairs of query proteins, or between query proteins and any others), the required evidence for PPIs, the context for filtering PPIs, and PPI annotations included in output.
+
+Controlling error rates
+
+IID provides ways of controlling false positive and false negative rates of retrieved PPIs. The false positive rate can be controlled by setting a minimum number of publications or bioassays supporting each PPI. PPIs supported by a single publication and bioassay have been considered less reliable (12), but increasing these thresholds may remove true PPIs detected only by specialized assays or in specific contexts (41), and thus may substantially increase false negative rates.
+
+The false negative rate can be reduced by allowing more types of interaction evidence: experimental (i.e., detection by bioassays), orthology based, or predicted. Experimental evidence is typically considered most reliable, but is largely unavailable for most non-human species, and even in human, less than 50% of PPIs may have been detected by bioassays. Using orthology-based PPIs may dramatically decrease the false negative rate in most non-human species, but the false positive rates of these PPIs have not been extensively benchmarked. Computationally predicted PPIs may also substantially decrease the false negative rate, but are currently available in IID for human and yeast networks only. Predicted PPIs comprise high-confidence predictions from five computational studies (11,23–26), which conducted extensive assessments of false positive rates, in most cases with experimental validation. These predictions decrease the number of low-degree proteins and PPI ‘orphans’ (11), making PPI-based analysis methods (e.g. for improving disease signatures) applicable to a larger portion of the proteome and less biased.
+
+Specifying context
+
+IID enables filtering PPIs by tissue, subcellular localization, disease and druggability. Tissue options include 26 high-level categories (e.g. adipose tissue, brain, Figure 2A), and comprehensive options for joint-related tissues (five categories, Figure 2B) and human brain structures (102 categories, Figure 2C). As visible in Figure 2A, options for non-human species are more limited. IID uses gene expression data from GEO (30) and Allen Brain Atlas (32) to assign tissues—a PPI is annotated with tissues where the two encoding genes are expressed above background noise. This annotation approach has been used previously (29,42–44), and resulting networks have been shown to outperform unfiltered networks for applications such as prioritization of disease genes (45–47). As an example, we queried IID for interactions of SLC22A6, a protein involved in renal sodium-dependent transport and excretion of organic anions (https://www.genecards.org/cgi-bin/carddisp.pl?gene=SLC22A6). A researcher who would be interested in knowing the molecular basis of SLC22A6′s role in kidney and who would collect all interactions of SLC22A6 would use a misleading network: as highlighted in Figure 2D, only two-thirds of SLC22A6 PPIs are predicted to be in kidney. The output of IID is a tab-separated file that can be used for network visualization and analysis—in our example we used NAViGaTOR 3.08 (http://ophid.utoronto.ca/navigator) (48).
+
+Subcellular localizations comprise 13 high-level GO cellular compartment categories (e.g. Golgi apparatus, cytoplasm) (Figure 3). A PPI is annotated with a localization if the two proteins are annotated with the localization or its Gene Ontology descendants. Similarly, a PPI is annotated with a disease if the two encoding genes are associated with the disease according to DisGeNET (36). PPIs are also annotated with higher level disease categories, based on Disease Ontology (35). Figure 4 shows the distribution of human PPIs per disease. The last context type, druggability, helps identify PPIs that may be amenable to modulation by drugs (Figure 3). There are two ways to filter by druggability: using drug target classes or drug targets. Filtering by target classes returns PPIs where one or both interacting proteins are members of protein classes (enzymes, ion channels, receptors, transporters) that are commonly targeted by drugs. Filtering by drug targets returns PPIs where one or both interacting proteins are targeted by drugs or have orthologs that are targeted.
+
+IID enables users to select any number of contexts and combine these contexts in different ways. Within each context type (e.g. tissue), users can specify whether returned PPIs can be in any of the selected contexts (e.g. present in either kidney or liver) or must be in all selected contexts (e.g. present in kidney and liver). If multiple context types are selected (e.g. tissues and subcellular localizations), the context types will be combined as conjunctions.
+
+Output and downloads
+
+Results are returned in a tabular format with one PPI per row. Users can choose to include interaction evidence (PubMed IDs, detection methods) in the results, as well as any context annotations. Full networks for each species, including context annotations, can be downloaded in tab-delimited format.
+
+Analysis
+
+IID provides topology and enrichment analysis for returned networks. Topology analysis can identify important proteins in the network based on degree and betweenness. Proteins of high degree (hubs) tend to be conserved across species and frequently have a large impact on phenotype (49), though high degree may also be due to research bias (50). Such proteins may be the best candidates for further investigating pathways, disease signatures, or drug side-effects. Topology analysis can also help identify protein complexes comprising more than two proteins, by calculating clustering coefficients. Proteins with high clustering coefficients may form complexes involving most of their interaction partners. Proteins in the same complex typically have similar properties. Consequently, a complex can be helpful for predicting the properties of its members, such as function, subcellular localization and disease.
+
+IID enrichment analysis can help identify conditions where the network is physiologically important. Typically, enrichment analysis determines whether a set of proteins (genes) is enriched for certain annotations, relative to a background population such as all proteins in the known interactome or the proteome. However, IID determines if retrieved PPIs (rather than proteins) are enriched for annotations, relative to all PPIs in the same species, and with the same interaction evidence that was selected in the query. For example, if a user searched for mouse PPIs supported by experimental evidence, then enrichment will be calculated relative to all mouse PPIs with experimental evidence. Enrichment analysis can be done on tissue, subcellular localization, disease, or drug annotations.
+
+Novel features in IID 2018
+
+This update substantially expands both the content and functionality of IID 2015-09. The number of species has increased from 6 to 18 (Table 1). While the first 6 species were human and common model organisms, the 12 new species are meant to support veterinary and agricultural research. The total number of PPIs has increased from ∼1.5 million to ∼4.8 million. Available context annotations for PPIs have substantially expanded as well. The number of tissues increased from 30 to 133 with the addition of detailed human brain structures and joint-related tissues. Three new context types have been added: subcellular localizations, diseases, and druggability information. The functionality of IID now includes two types of network analysis: topology analysis to identify important parts of the network and enrichment analysis of tissues, localizations, diseases, and druggability.
+
+The addition of comprehensive options for brain and joint-related tissues supports the use of PPI networks in neurological and arthritis research. Brain disorders are increasing in incidence worldwide, but there is no cure for diseases like neurodegenerative disorders, autism, or schizophrenia. Unfortunately, failure rates in drug development for neurologic and psychiatric diseases are quite high, due to the complexity of the human brain—linked to difficulties developing appropriate animal models, and resulting in pharmaceutical companies losing interest in the field (51). Similarly, the degenerative disease osteoarthritis affects a large part of the population globally, yet remains without curative treatment (52). We previously demonstrated that many drug targets and evolutionarily recent proteins (like the ones present in brain) are understudied. With the current IID update we aim to provide the tools to fill this research gap, and enable molecular and pharmacological researchers to improve the success of drug development strategies (11).
+
+IID displays available brain tissues as an ontology tree, and joint-related and high-level tissues as lists; users can select any number of these tissues. Moreover, IID provides annotations for druggability of PPIs (calculated as described in methods). Figure 3 shows the number of PPIs per species, annotated with different classes of targets.
+
+PPIs are not static but rather occur in specific environments or conditions and change with time (53). We focused on two types of annotations that can change with time—localization and disease conditions. Localization, for example, is important because even if a PPI is reported in a database, if the two binding proteins do not share the same localization, the interaction is unlikely to happen in vivo (54). We added 13 localization annotations in this update, and Figure 3 shows the distribution of PPIs per species annotated with each localization. Finally, we annotated PPIs with 91 diseases based on DisGeNET (36). Available diseases are displayed as an ontology tree, and users can retrieve PPIs present in at least one or in multiple diseases of interest.
+
+Comparison with other PPI resources
+
+Compared to other PPI resources, IID is one of the broadest and largest physical interaction databases, and provides more options for reducing false negatives, specifying context, and analyzing networks (especially in non-human species). Several resources, including APID (55), HIPPIE v2.0 (44), HINT (56), iRefWeb (57), MyProteinNet (43), STRING (58) and TissueNet v.2 (42) provide some of the same functionality, but have important differences in their options for error-reduction, filtering by context, and network analysis.
+
+Control of false positive rate is quite similar among these resources—all provide PPI scores, calculated in various ways, to indicate the reliability of PPIs. Reduction of the false negative rate is achieved by integration of PPIs from multiple databases that conduct literature curation. IID is the only PPI resource that also offers high-confidence predicted physically binding PPIs, which further reduce the false negative rate (e.g. for human, about two-thirds of available PPIs are predicted). Several databases, including STRING (58) and FunCoup (59), provide predictions for functional rather than physical interactions.
+
+Filtering PPIs by context is supported by HIPPIE v2.0, MyProteinNet, and TissueNet v.2. All three provide filtering by tissue, HIPPIE v2.0 and MyProteinNet also provide filtering by Gene Ontology, and HIPPIE v2.0 provides filtering by disease as well. IID supports filtering by these contexts as well as by druggability, detailed brain structures and joint-related tissues. Users can specify whether PPIs can be in any of the selected contexts or should be present in all of them. Also, IID provides context filtering for the largest number (17) of non-human species; HIPPIE v2.0 and TissueNet v.2 are available only for human, and MyProteinNet is available for 11 species.
+
+Network analysis is supported by HIPPIE v2.0 and STRING. HIPPIE v2.0 analyses enrichment of disease and GO annotations of network proteins. STRING provides summary topology statistics for networks, and enrichment analysis of pathways and functions. IID provides both topology and enrichment analysis; it identifies important network nodes, and calculates enrichment of tissues, localizations, diseases, and druggability for network interactions, rather than network proteins.
+
+CONCLUSION
+
+IID helps address key challenges of using PPI data: high error rates, lack of context, and networks that are difficult to interpret. IID provides unique functionality for reducing false negatives by integrating multiple curated and high-confidence computationally-predicted interaction sources. It specifies context by using ontologies and multiple tissue, localization, disease, and drug-related data resources. It helps interpret returned networks by providing topological and enrichment analyses. Importantly, IID supports non-human species, many of which are vitally important in biomedical research but lack comprehensive, context-specific PPI networks. Future IID updates will focus on including more species, reliably transferring interaction information between species, and further expanding interaction annotations from ontologies and relevant data sets.
+
+Figure 1.
+
+Figure shows the percentage of proteins with degree 5 or lower in each species, taking into consideration the entire set of interactions in IID (light blue) or only the experimental ones (dark blue).
+
+Figure 2.
+
+Tissue distributions of PPIs in each IID species ( ). Distribution in human of detailed joint ( ) and brain tissues ( ). Network of SLC22A6, a protein involved in renal sodium-dependent transport and excretion of organic anions. Blue edges indicate PPIs in kidney, yellow edges indicate PPIs in synovial macrophages, green edges indicate PPIs in both tissues, and black edges indicate PPIs without tissue annotations ( ). Data from IID, network layout generated using NAViGaTOR 3.08 (48).
+
+Figure 3.
+
+Drug target class (top) and localization (bottom) distributions of PPIs in each IID species.
+
+Figure 4.
+
+Disease distributions of human PPIs. PPIs are annotated with a disease if both interactors are annotated with the disease in DisGeNET.
+

@@ -1,0 +1,101 @@
+Identifying key stage-specific genes and transcription factors for gastric cancer based on RNA-sequencing data
+Abstract
+
+Background:
+
+To identify gastric cancer (GC)-associated genes and transcription factors (TFs) using RNA-sequencing (RNA-seq) data of Asians.
+
+Materials and methods:
+
+The RNA-seq data (GSE36968) were downloaded from Gene Expression Omnibus database, including 6 noncancerous gastric tissue samples, 5 stage I GC samples, 5 stage II GC samples, 8 stage III GC samples, and 6 stage IV GC samples. The gene expression values in each sample were calculated using Cuffdiff. Following, stage-specific genes were identified by 1-way analysis of variance and hierarchical clustering analysis. Upstream TFs were identified using Seqpos. Besides, functional enrichment analysis of stage-specific genes was performed by DAVID. In addition, the underlying protein–protein interactions (PPIs) information among stage IV-specific genes were extracted from STRING database and PPI network was constructed using Cytoscape software.
+
+Results:
+
+A total of 3576 stage-specific genes were identified, including 813 specifically up-regulated genes in the normal gastric tissues, 2224 stage I and II-specific genes, and 539 stage IV-specific genes. Also, a total of 9 and 11 up-regulated TFs were identified for the stage I and II-specific genes and stage IV-specific genes, respectively. Functional enrichment showed SPARC, MMP17, and COL6A3 were related to extracellular matrix. Notably, 2 regulatory pathways HOXA4-GLI3-RUNX2-FGF2 and HMGA2-PRKCA were obtained from the PPI network for stage IV-specific genes. In the PPI network, TFs HOXA4 and HMGA2 might function via mediating other genes.
+
+Conclusion:
+
+These stage-specific genes and TFs might act in the pathogenesis of GC in Asians.
+
+Introduction
+
+Gastric cancer (GC) is the second-leading cause of cancer-related death worldwide.[1] In recent decade, even with multiple therapies, the prognosis of GC remains poor with 5-year survival rate ranging between 25% and 35%.[2] The low survival rate is mainly due to the undetectable characteristics of GC at early stage.[3] Therefore, it is of great significance to identify the molecular biomarkers pivotal for development and progression of GC.
+
+Recently, several studies have devoted to investigate the mechanisms of GC. Downregulated X-linked inhibitor of apoptosis (XIAP) in human GC cells causes apoptosis and chemotherapeutic sensitivities, and it may contribute to develop a new therapeutic strategy for GC.[4] Previous study indicates that the transcriptional silencing of deleted in liver cancer 1 (DLC-1), which is induced by epigenetic mechanism, may play a role in gastric carcinogenesis.[5] Especially, expression profiles of GC have been extensively investigated, yielding useful insights into the molecular mechanism of carcinogenesis of GC. For example, by performing a genome-wide expression analysis, Junnila et al identified 58 differentially expressed genes (DEGs) between cancerous and non-neoplastic gastric tissues, among which overexpressed CXCL1 was positively associated with improved survival.[6] Lei et al screened out 260 DEGs in gastric tissues and further proposed serpin eptidase inhibitor, clade H1 (SERPINH1) and G protein-coupled receptor family C type 5A (GPRC5A) as potential biomarkers for GC.[7] However, a microarray-based method has those following limitations: background levels of hybridization limit the accuracy of expression measurements, particularly for transcripts with low abundance[8]; prior knowledge of the genome is used to design probes for hybridization with targets (DNA or RNA), and therefore the unknown genomic regions cannot be interrogated.[9]
+
+RNA-sequencing (RNA-seq) technology emerges as a new and powerful tool superior to hybridization-based approach in measuring gene expression without those limitations mentioned earlier.[10] This technology can provide a more detailed and precise view of the entirely expressed transcripts, including low-expressed genes, alternative splice variants, and novel transcripts.[11] In 2012, by performing RNA-seq, Kim et al obtain an global view of transcriptome in Asian GC and subsequently identify the regulatory effects of AMP-activated protein kinase (AMPK) α2 on energy homeostasis.[12] While, the obtained results are restricted and RNA-seq data need deeper exploration.
+
+Bioinformatics methods can help excavate more useful information from the large number of microarray data or sequencing data.[13] Based on bioinformatics methods, this study reanalyzed the published RNA-seq data.[12] First, the stage-specific genes in different stage GC samples were identified, and the stage-specific genes which have transcriptional regulation function of transcription factors (TFs) were annotated. Then, their potential functions were predicted by functional enrichment analysis. Moreover, the underlying interactions among stage IV-specific genes were investigated by protein–protein interaction (PPI) network.
+
+Methods
+
+RNA-seq data
+
+RNA-seq data of GSE36968 were downloaded from Gene Expression Omnibus (GEO, http://www.ncbi.nlm.nih.gov/geo/) established at the National Center for Biotechnology Information (NCBI) database,[12] which were previously sequenced using paired-end sequencing based on the GPL9442 AB SOLiD System 3.0 platform. GSE36968 included 6 normal gastric tissue samples, 5 stage I GC samples, 5 stage II GC samples, 8 stage III GC samples, and 6 stage IV GC samples of Asians. The tissue samples were taken from the National Research Resource Bank Program of the Korea Science and Engineering Foundation in the Ministry of Science and Technology. And tumor stages were identified and classified by a pathologist from the Gene Bank at Yonsei University Severance Hospital. The RNA-seq data used in this study were downloaded from GEO database, thus ethical approval and informed consent were not necessary.
+
+Data preprocessing
+
+The author used Tophat2 (version 2.0.10, http://ccb.jhu.edu/software/tophat/index.shtml)[14] to align the RNA-seq reads against the University of California Santa (UCSC) hg19 genome sequences (http://www.genome.ucsc.edu/index.html) with default parameters, allowing 1 or 2 base mismatches. Also, the sequence alignment should be unique for each read. Following, the author assembled the transcripts and calculated the gene expression levels using Cuffdiff and fragments per kilobase of exon model per million fragments mapped method in Cufflinks, respectively.[14]
+
+Stage-specific gene screening
+
+One-way analysis of variance (ANOVA) was applied to screen DEGs among different groups with the cutoff criterion of P < 0.05. Subsequently, the screened DEGs were conducted with hierarchical clustering analysis to determine stage-specific genes for specific GC stages.
+
+Transcription factor screening
+
+Furthermore, the author annotated the stage-specific genes which have transcriptional regulation function of TFs based on the TRANSFAC database (http://transfac.gbf.de/TRANSFAC/).[15] Besides, the author defined upstream 1.5 kb region of the transcription start site as promoter region and then perform Motif Finding for all stage-specific genes using Seqpos.[16]P < 0.00001 was used as the threshold.
+
+Functional enrichment analysis
+
+DAVID software was employed to identify significantly enriched Gene Ontology functions in biological processes (BP), molecular function, and cellular component (CC) categories for stage-specific genes.[17]
+
+Construction of PPI network
+
+STRING is developed as an online database resource, which provides uniquely comprehensive information for assembling, evaluating, and disseminating PPI in a user-friendly way (http://string-db.org/).[18] To reveal the underlying interactions among stage IV-specific genes, the author further extracted the PPI information from STRING database[18] and constructed PPI network using Cytoscape software (http://cytoscape.org/).[19]
+
+Results
+
+Stage-specific genes screening
+
+Based on ANOVA and subsequent hierarchical clustering analysis, the author systematically compared the expression profiles at different GC stages, and finally obtained the heat map of stage-specific genes (Fig. 1). A total of 3576 genes with stage-specific expression patterns were identified. Among them, 813 DEGs (23%, 813/3576) were specifically highly expressed in the normal gastric tissues, and 2224 DEGs (62%, 2224/3576; e.g., Kinesin family member C1, KIFC1; and septin 2, SEPT2) which were specifically highly expressed in stage I had extremely similar expression patterns in stage II GC samples, as well as 539 specifically highly expressed genes (15%, 539/3576; e.g., Neuropilin-2, NRP2; collagen triple helix repeat containing-1, CTHRC1; secreted protein, acidic, cysteine-rich, osteonectin, SPARC; matrix metalloproteinase 17, MMP17; and collagen, type VI, alpha 3, COL6A3) in stage IV GC samples. However, no stage-specific genes were found in stage III GC samples.
+
+Transcription factors screening
+
+Based on the TRANSFAC database, a total of 82 TFs were screened from the stage I and II-specific genes and 22 TFs from the stage IV-specific genes. Following, the author further explored the upstream regulators, which might have regulatory effects on stage-specific genes in stage I and II GC and stage IV GC samples. A total of 9 TFs (e.g., high mobility group box-1, HMGB1; and homeobox A13, HOXA13) were identified to be significantly enriched in the promoter region of highly expressed stage I and II-specific genes, which also experienced over-expression in stage I and II GC and stage IV GC samples (Table 1). Besides, 11 TFs were screened for the stage IV-specific genes, which were up-regulated in stage IV GC samples (Table 1).
+
+Functional enrichment analysis
+
+Functional enrichment analysis was performed separately for the GC stage-specific genes, and the results were shown in Fig. 2. For stage-specific genes in normal tissues, functions including digestion, ion transport, and G-protein signaling were significantly enriched. Besides, the stage-specific genes in stage I and II GC samples were mainly associated with mitotic cell cycle and RNA processing. Additionally, the stage-specific genes in stage IV GC samples were dramatically enriched in functions, including vasculature development, skeletal system development, and urogential system development. Accordingly, GC stage IV-specific genes were significantly enriched in BP such as cell migration and negative regulation of cell differentiation.
+
+Importantly, the author further focused on the involved genes which could encode proteins for CC, including extracellular matrix (ECM) and cell surface. As shown in Table 2, the author identified 24, 7, and 22 genes involved in ECM separately in normal gastric tissues, stage I and II GC samples, and stage IV GC samples, respectively. Besides, 22, 29, and 16 genes were highly expressed at cell surface in normal, GC stage I and II, and stage IV tissues, respectively.
+
+PPI network analysis
+
+Based on the PPI information from STRING database, the author further constructed the PPI network for stage IV-specific genes using Cytoscape. A total of 13 nodes were identified with degree >10 in the PPI network (Fig. 3). In addition, homeo box A4 (HOXA4), GLI family zinc finger 3 (GLI3), runt-related TF 2 (RUNX2), fibroblast growth factor 2 (FGF2), high mobility group AT-hook 2 (HMGA2), and protein kinase C, alpha (PRKCA) were involved in 2 regulatory pathways which were considered to play key roles in stage IV GC, including HOXA4-GLI3-RUNX2-FGF2 and HMGA2-PRKCA (Fig. 3). In the first pathway, HOXA4, GLI3, and RUNX2 were identified as TFs. And in the second pathway, HMGA2 was confirmed as TF.
+
+Discussion
+
+A total of 2224 stage I and II-specific genes were identified. Moreover, those genes were mainly associated with mitotic cell cycle and RNA processing, implying their overexpression might promote cancer cells proliferation. For example, KIFC1, a C-terminal kinesin motor, belongs to the minus-end-directed kinesin-14 family in human cells.[20] Several studies have shown that KIFC1 plays an essential role in mitosis and meiosis by organizing and stabilizing spindles using its sliding activity along microtubules.[21,22] The deletion of KIF14 in cells may lead to eventual apoptosis.[23] In addition, SEPT2 has also been proved to play an important role in carcinoma cell division and proliferation through affecting cytoskeletons, which could be suggested as a promising target for GC therapy.[24] Therefore, the author speculated that the overexpressed of KIF14 and SEPT2 in stage I and stage II GC might contribute to the aggravated cell proliferation.
+
+On the other hand, 539 stage IV-specific genes were screened, which were significantly enriched in functions, including vasculature development, skeletal system development, neuron differentiation, and urogenital system development. For instance, Nrp2 is a transmembrane glycoprotein receptor for vascular endothelial growth factor-C, which is an important lymphangiogenic factor and exerts crucial role in lymph node metastasis of various human cancers including GC.[25] Several studies have reported the up-regulation of CTHRC1 in various human solid cancers and associated it with cancer cell adhesion to ECM in the progression of cancer invasion and metastasis.[26,27] Moreover, the author identified several ECM-related genes with up-regulation in stage IV of GC, including SPARC, MMP17, and COL6A3. The relative expression level of the SPARC was shown to be higher in GC tissues than in adjacent normal mucosae, leading to lower 5-year overall survival.[28] The down-regulation of SPARC inhibits invasion and growth of human GC cells.[29]MMP-17 belongs to the membrane type-MMPs subfamily anchored to the plasma membrane via a glycosyl-phosphatidyl inositol anchor,[30] which is highly expressed in human cancers and associated with cancer progression.[30,31] Besides, COL6A3 has also been found to participate in GC progression[32] by regulating ECM-receptor interaction pathway.[33] Thus, the author could speculate that these up-regulated and stage IV-specific genes may contribute to a gradual disappearance of tissue specificity and diverse cell differentiation potentials via affecting various BP.
+
+Besides, by performing Motif Scanning, the author also screened out some key TFs for different stage-specific genes, which can bind the promoter sequence of most stage-specific genes. Herein, 9 TFs were obtained in stage I and II GC, such as HMGB1 and HOXA13, which also experienced over-expression in stage I and II GC and stage IV GC samples. In the previous study, serum HMGB1 level is significantly associated with invasion, lymph node metastasis, tumor size, and poor prognosis of GC.[34]HMGB1 silencing significantly decreases cell proliferation by regulating cell cycle level and cell cycle-related gene cyclin D1 expression, and inhibits cellular metastatic ability by down-regulating MMP-9 expression in GC MGC-803 cells.[35] Besides, Homeobox (HOX) gene family is known to play crucial roles in tumorigenesis.[36] Recent study indicates that up-regulated HOXA13 may be a novel prognostic marker in GC and correlation with TNM stage, histological differentiation, relapse, and overall survival and disease-free survival rate.[37] The up-regulation of TFs HMGB1 and HOXA13 might contribute to the overexpression of genes in stage I and stage II GC.
+
+Furthermore, by constructing PPI network for the stage IV-specific genes, 2 interaction pathways were obtained, including HOXA4-GLI3-RUNX2-FGF2 and HMGA2-PRKCA. Among these interaction networks, HOXA4, GLI3, RUNX2, and HMGA2 were TFs. Previously, HOXA4 expression is increased in invasive tumors to inhibit cell invasion.[38] HMGA2 silencing induces apoptosis and suppresses proliferation of GC MKN-45 cells.[39] The first pathway indicated that activation of RUNX2 was based on HOXA4–GLI3 interaction and GLI3–RUNX2 interaction, which may subsequently regulated FGF2-mediated expression activation of downstream genes in stage IV GC samples. The second regulatory pathway HMGA2-PRKCA suggested that the HMGA2 might regulate the downstream genes via interacting with PRKCA in stage IV GC samples.
+
+Conclusion
+
+In conclusion, a total of 3576 stage-specific genes were identified. Also, a total of 9 and 11 up-regulated TFs were identified for the stage I and II-specific genes and stage IV-specific genes, respectively. Besides, KIF14, SEPT2, NRP2, CTHRC1, SPARC, MMP17, COL6A3, HMGB1, HOXA13, HOXA4, and HMGA2 might play important roles in pathogenesis of GC in Asians. The present study provided a novel insight into the molecular mechanisms underlying different GC stages. However, the results were obtained by bioinformatics methods and the sample sizes were small, thus further experimental validations were still needed.
+
+Figure 1
+
+The heat map of hierarchical clustering analysis. The orange, blue, and pink bars represent stage-specific genes in normal stomach tissues, stage I and II GC samples and stage IV GC samples, respectively. GC = gastric cancer.
+
+Figure 2
+
+Functional enrichment results of normal gastric-specific genes and stage I and II-specific genes and stage IV-specific genes. GC = gastric cancer.
+
+Figure 3
+
+The PPI network of stage IV-specific genes. The red nodes represent transcription factors, the green nodes represent genes with degree >10, and the orange nodes represent other stage IV-specific genes. PPI = protein–protein interaction.
+

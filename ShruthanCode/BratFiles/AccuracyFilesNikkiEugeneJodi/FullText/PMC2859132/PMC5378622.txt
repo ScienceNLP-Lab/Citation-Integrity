@@ -1,0 +1,108 @@
+Phenome‐Wide Association Study of Autoantibodies to Citrullinated and Noncitrullinated Epitopes in Rheumatoid Arthritis
+
+Abstract
+
+Objective
+
+Patients with rheumatoid arthritis (RA) develop autoantibodies against a spectrum of antigens, but the clinical significance of these autoantibodies is unclear. Using a phenome‐wide association study (PheWAS) approach, we examined the association between autoantibodies and clinical subphenotypes of RA.
+
+Methods
+
+This study was conducted in a cohort of RA patients identified from the electronic medical records (EMRs) of 2 tertiary care centers. Using a published multiplex bead assay, we measured 36 autoantibodies targeting epitopes implicated in RA. We extracted all International Classification of Diseases, Ninth Revision (ICD‐9) codes for each subject and grouped them into disease categories (PheWAS codes), using a published method. We tested for the association of each autoantibody (grouped by the targeted protein) with PheWAS codes. To determine significant associations (at a false discovery rate [FDR] of ≤0.1), we reviewed the medical records of 50 patients with each PheWAS code to determine positive predictive values (PPVs).
+
+Results
+
+We studied 1,006 RA patients; the mean ± SD age of the patients was 61.0 ± 12.9 years, and 79.0% were female. A total of 3,568 unique ICD‐9 codes were grouped into 625 PheWAS codes; the 206 PheWAS codes with a prevalence of ≥3% were studied. Using the PheWAS method, we identified 24 significant associations of autoantibodies to epitopes at an FDR of ≤0.1. The associations that were strongest and had the highest PPV for the PheWAS code were autoantibodies against fibronectin and obesity (P = 6.1 × 10−4, PPV 100%), and that between fibrinogen and pneumonopathy (P = 2.7 × 10−4, PPV 96%). Pneumonopathy codes included diagnoses for cryptogenic organizing pneumonia and obliterative bronchiolitis.
+
+Conclusion
+
+We demonstrated application of a bioinformatics method, the PheWAS, to screen for the clinical significance of RA‐related autoantibodies. Using the PheWAS approach, we identified potentially significant links between variations in the levels of autoantibodies and comorbidities of interest in RA.
+
+A defining feature of rheumatoid arthritis (RA) is a break in tolerance leading to the development of autoantibodies 1, 2. The development of antibodies against citrullinated protein epitopes appears to be relatively specific to RA 3, and the presence of anti–citrullinated peptide antibodies (ACPAs) is a component of the American College of Rheumatology/European League Against Rheumatism classification criteria for RA 4. However, RA patients have antibodies against a broad range of epitopes, both citrullinated and noncitrullinated 5. The recent identification of epitopes implicated in the pathogenesis of RA allow investigators to study the types of ACPAs that are present in different patients with RA. Whether these ACPAs can further categorize RA patients into clinically relevant subsets remains unclear. One of the major challenges in determining the clinical relevance of these autoantibodies is the need for comprehensive information regarding a patient's other conditions or comorbidities. Large observational cohort studies include adequate numbers of patients with blood samples but vary in terms of details of the clinical data for patients with conditions not related to RA.
+
+The use of electronic medical record (EMR) data as research databases may facilitate comprehensive studies of relationships between biomarkers and disease phenotypes. In particular, EMRs linked to biorepositories allow for the development of EMR‐based research platforms, which can support studies examining clinical subsets of disease. Combined with bioinformatics methods such as the phenome‐wide association study (PheWAS) method 6, 7, these platforms are ideal for examining the potential clinical relevance of novel biomarkers.
+
+The PheWAS method was initially developed for use with EMRs; this approach is used to screen for important associations between biomarkers or genetic variants of interest and a broad range of phenotypes 6, 8, 9, 10. Phenotypes are typically defined using structured data such as diagnosis billing codes. Although the PheWAS was initially designed for application in cohorts in which clinical EMR data are linked with genetic data, our group previously applied the PheWAS to screen for potential associations between clinically available biomarkers of autoimmunity and phenotypes based on EMR data 7.
+
+The objective of this study was to use the PheWAS approach to screen for antibodies against RA‐related epitopes in a large cohort of RA patients identified from EMRs. The PheWAS method generates hypotheses on potential relationships between RA autoantibodies and subphenotypes of RA. As part of this study, we also provide a “road map” demonstrating how to apply updated biostatistics methods for PheWAS and outline the bioinformatics approach, from performing a screen to evaluating the strength of association.
+
+PATIENTS AND METHODS
+
+Study population
+
+We conducted this study in a cohort of RA patients identified from the EMRs of large academic institutions, Brigham and Women's Hospital and Massachusetts General Hospital. This cohort was identified using a validated algorithm with a positive predictive value (PPV) of 94% to classify patients with RA 11, 12. Discarded blood samples from Partners Healthcare (Boston) clinical laboratories were collected from 2009 to 2010, using an institutional review board–approved process 13. The result was a de‐identified data set containing clinical data from the EMRs until 2009, with linked biospecimens. Due to data suggesting differences in autoantibody expression across ethnicities 14, the analyses were limited to individuals of European ancestry 13. Ancestry data were obtained from a previous analysis of ancestry using ancestry‐informative markers.
+
+Laboratory studies
+
+Using a validated multiplex bead assay 5, we measured 36 autoantibodies targeting epitopes of 10 antigens (citrullinated and noncitrullinated) found in the synovial tissue lysates of patients with RA. Autoantibody data were grouped according to epitope (Table 1). Antibodies against second‐generation cyclic citrullinated peptide (anti–CCP‐2) were measured using a BioPlex system (Bio‐Rad).
+
+Statistical analysis
+
+Using EMR‐derived data, we extracted all unique International Classification of Diseases, Ninth Revision (ICD‐9) codes associated with each patient any time during follow‐up. The ICD‐9 codes were grouped into disease categories, called PheWAS codes, using a previously published method 6, 9. The method for mapping and grouping ICD‐9 codes into PheWAS codes is freely available (https://phewas.mc.vanderbilt.edu/). This method was created to group ICD‐9 codes in a manner that would facilitate phenotype–genotype studies in linked EMR data sets. For example, “Rheumatoid arthritis and other inflammatory arthropathies” is the name of a PheWAS code. This PheWAS code for RA includes Felty's syndrome (ICD‐9 714.1) along with RA (ICD‐9 714.0) but does not include juvenile idiopathic arthritis (JIA) (ICD‐9 714.3); the subtypes of JIA are considered genetically distinct from those of RA 15. We considered only PheWAS codes that are present in at least 3% of the population, to ensure that the effective sample size (number of cases) was at least 30. This is the smallest sample size needed to ensure stability for fitting the logistic regression model, adjusting for age, sex, and race and deriving a stable score statistic. For each PheWAS code, patients with ≥1 code were considered as having the phenotype. Data for these binary traits were linked to the autoantibody data obtained from the laboratory studies described above.
+
+Because this study involved multiple testing of a large number of hypotheses, P values were considered significant if they were lower than a threshold selected to control a desired false discovery rate (FDR) of 10% 16. An FDR of 10% was considered, because we expected the rate of Type I errors to be <10% among the rejected hypotheses. PheWAS codes, which are derived from ICD‐9 codes, are highly correlated. The standard FDR‐controlling method that accounts for the correlation tends to be overly conservative 17, 18. Thus, to account for the high degree of correlation without requiring strong assumptions about the correlation structure, we applied a modified Benjamini and Hochberg method, which allows for efficient and simultaneous testing of associations between a large number of PheWAS codes and multiple autoantibodies (Cai T, et al: unpublished observations).
+
+For the primary analysis, we summarized the overall association between each PheWAS code and each autoantibody group according to the epitope target (Table 1). The score test statistic was calculated from fitting the logistic regression model, adjusting for age, sex, and race. For example, we calculated the score test statistic for the association between fibrinogen as a group and each PheWAS code. The P value from the score test statistic accounts for the size of the autoantibody group. This approach reduces bias for autoantibodies with a higher number of the same protein targets. For example, fibrinogen had 11 different targeted autoantibodies compared with enolase, for which only a single autoantibody targeting it was measured. As a secondary analysis, we studied the association between the PheWAS codes and autoantibodies, stratified according to whether the targets were citrullinated epitopes. The direction of the effect for a group was determined by averaging the direction of the effect (positive or negative) over all epitopes in the group, and then taking the sign (plus or minus) of this average.
+
+We reported the significant associations for protein targets identified at an FDR level of ≤0.1, and ranked the autoantibody/PheWAS code pairs according to P values. For the 15 strongest associations, we selected a random sample of 50 patients who had the corresponding PheWAS code and reviewed their medical records to determine the accuracy of the code. The reviews excluded PheWAS codes based on ICD‐9 codes describing nonspecific conditions, e.g., nonspecific abnormal results of function studies.
+
+The accuracy of the PheWAS codes was reported as the PPV, calculated by dividing the number of patients confirmed by medical record review to have the condition described by the PheWAS code by the number of patients reviewed. The reviews were performed by 3 of the authors (KPL, IK, and JS). For each PheWAS code, the first 10 patients were reviewed by 2 reviewers (JS and IK, or KPL and IK), and all cases were discussed. Subsequently, any ambiguous cases were discussed between the reviewers until consensus was reached (<10% cases reviewed).
+
+This study was approved by the Partners Institutional Review Board. Analyses were conducted using SAS version 9.3 (SAS Institute) and R Project for Statistical Computing (http://www.r-project.org).
+
+RESULTS
+
+The clinical characteristics of patients in the RA cohort are shown in Table 2. The cohort included 1,006 RA patients. The mean ± SD age of the patients was 61.0 ± 12.9 years, 79% were female, and 72% were anti–CCP‐2 positive (as determined by clinical assay) (Table 2).
+
+In this cohort, 3,568 unique ICD‐9 codes were grouped into 625 PheWAS codes, of which 206 PheWAS codes had a prevalence of ≥3%. We observed 28 associations that achieved phenome‐wide significance (FDR ≤0.1) between autoantibody groups and PheWAS codes (Figure 1). The majority of associations were observed with antibodies against fibrinogen epitopes.
+
+The 3 strongest significant associations were between apolipoprotein E (Apo E) and “polymyalgia rheumatica” (P = 5.36 × 10−7), between fibronectin and “other diseases due to viruses and Chlamydiae” (P = 3.98 × 10−6), and between Apo A‐I and “other disease of blood and blood‐forming organs” (P = 3.93 × 10−5) (Figure 1 and Table 3). Autoantibodies targeting enolase, vimentin, or biglycan had no significant associations with PheWAS codes.
+
+Among the significant associations (FDR ≤0.10), the PheWAS codes with the highest accuracy were “diseases of white blood cells,” “overweight, obesity,” and “other alveolar and parietoalveolar pneumonopathy.” Physicians used the pneumonopathy code (ICD‐9 code 516.x) for the following conditions: cryptogenic organizing pneumonia, obliterative bronchiolitis, lipoid pneumonia, and alveolitis. Table 3 shows the associations between autoantibody epitope targets and PheWAS codes, ranked by PPV. The mean direction of effect for the association was also calculated. For associations with a positive direction, an increasing concentration of titers was associated with an increased likelihood of having the PheWAS code.
+
+As a secondary analysis, we investigated phenome‐wide significant associations between autoantibodies, stratified by those targeting citrullinated versus noncitrullinated proteins (Figure 2). For example, the associations between anti–cit‐fibrinogen and PheWAS codes did not generally overlap with those between anti‐fibrinogen and PheWAS codes. Several of the associations between anti‐fibrinogen and PheWAS codes included diseases of the respiratory system, e.g., “other alveolar and parietoalveolar pneumonopathy,” “chronic sinusitis,” “allergic rhinitis,” and “other diseases of respiratory system.” In contrast, conditions related to vascular occlusion such as “ischemic heart disease,” “occlusion and stenosis of precerebral arteries,” and “coagulation defects,” had stronger associations with anti–cit‐fibrinogen.
+
+In the majority of cases, the associations were driven by autoantibodies targeting either the citrullinated or the noncitrullinated epitopes. The directions of the mean effects, stratified by citrullination status, are shown in Table 4.
+
+DISCUSSION
+
+In this study, we applied the PheWAS method to examine potential associations between RA autoantibodies and RA subphenotypes identified from the EMRs of the cohort. Furthermore, we applied novel biostatistical methods aimed at accounting for correlations between diagnoses and correlations between autoantibodies in our data set. Using this data‐driven approach, we identified significant associations with corresponding PheWAS codes, with an accuracy of ≥80%. These include associations between anti‐fibronectin antibodies and obesity, between anti–Apo A‐I antibodies and peptic ulcers, and between anti‐fibrinogen antibodies and inflammatory lung conditions and chronic sinusitis. All of these associations require formal validation in an independent cohort to directly test these hypotheses.
+
+Notably, there are existing data that already support the associations observed in this study. In the current study, we observed an association between higher titers of antibodies against fibrinogen with “other alveolar and parietoalveolar pneumonopathy,” describing diagnoses including cryptogenic organizing pneumonia, obliterative bronchiolitis, lipoid pneumonia, and alveolitis. These findings are consistent with those from a previous study examining the association between ACPA titers and interstitial lung disease (ILD) 19, 20. In that study of 177 RA patients who had lung imaging, pulmonary function tests, and ACPA testing, a higher titer of all ACPAs was associated with worse ILD. However, an analysis focused on antibodies targeting specific antigens was not performed. Additionally, a recently published study used a PheWAS to evaluate clinical differences between seropositive and seronegative RA 20. That study showed that seropositive RA was associated with lung abnormalities, specifically chronic airway obstruction. Because the study used measurements of rheumatoid factor and anti‐CCP, ordered as part of routine care, to define seropositivity, finer subphenotyping of RA based on specific ACPAs was not performed.
+
+The results of the current study also demonstrated a potential link between autoantibodies against fibrinogen and ischemic heart disease. These findings are consistent with a previously published finding that higher levels of anti–cit‐fibrinogen were associated with a higher plaque burden, as measured by the aortic calcium score 21. In a previous study designed for hypothesis testing, we observed that higher levels of anti–cit‐fibrinogen were associated with coronary artery disease, as verified by medical record review (Hejblum BP, et al: unpublished observations). However, one study that used a different platform to detect ACPAs did not show an association between anti–cit‐fibrinogen levels and subclinical atherosclerosis 22.
+
+Additionally, we highlighted a recent advance in analyzing the clinical importance of groups of biomarkers. In previous studies examining the link between autoantibodies and phenotypes, each association was tested individually. Because ACPAs are highly correlated, testing individual autoantibody/phenotype pairs reduced the power to detect an association. Testing the association between autoantibodies grouped by epitope target and phenotypes has not yet been performed, partially due to the lack of suitable existing methods. Summarizing the overall effect of autoantibody groups on individual phenotypes via a score statistic, and performing multiple testing correction in the presence of complex yet‐unknown correlation structures allowed, for the first time, assessment of the overall association between groups of autoantibodies and phenotypes while controlling for a desired FDR. This approach is substantially more powerful than the Bonferroni correction. Additionally, this method allowed us to incorporate information on the concentration of antibodies into the analyses rather than using cutoffs for positive and negative results.
+
+Some notable limitations to this study include the accuracy of ICD‐9 codes, which can limit interpretation of the associations. To address this issue, we reviewed the EMRs of patients with the diagnosis codes to determine the accuracy of the codes. As with any EMR study, the data may not reflect complete capture of a patient's diagnoses, because he or she may seek care outside of our healthcare system. On the other hand, we used information derived from a patient's entire follow‐up in the medical records, reflecting diagnosis assigned by other healthcare providers not limited to rheumatologists. Because autoantibodies were measured in all patients in the study, we avoided the bias that can occur in studies using measurements that are performed as part of routine care. Future studies are needed to directly test the associations identified in this study and control for additional potential confounders.
+
+In summary, using an EMR‐based research platform, we performed a PheWAS screen to examine the potential significance of autoantibodies in patients with RA. Our findings suggest that these biomarkers may help identify subsets of disease. Additionally, the results of our PheWAS screen supported previous findings that autoantibodies may be useful markers for pulmonary conditions and ischemic heart disease in RA. Comprehensive PheWAS screening for ACPAs can provide data for ongoing as well as future studies in RA. Finally, we demonstrate methods that can be applied to any EMR‐based population in which biomarkers may be helpful in understanding disease subsets to inform screening, management, and treatment.
+
+AUTHOR CONTRIBUTIONS
+
+All authors were involved in drafting the article or revising it critically for important intellectual content, and all authors approved the final version to be published. Drs. Liao, Sparks, and T. Cai had full access to all of the data in the study and take responsibility for the integrity of the data and the accuracy of the data analysis.
+
+Study conception and design
+
+Liao, Sparks, Hejblum, Cui, Liu, T. T. Cai, Sokolove, T. Cai.
+
+Acquisition of data
+
+Liao, Sparks, Kuo, Lahey, Cagan, Gainer, Sokolove, T. Cai.
+
+Analysis and interpretation of data
+
+Liao, Sparks, Hejblum, Kuo, Cui, Lahey, Cagan, Gainer, Liu, T. T. Cai, Sokolove, T. Cai.
+
+ADDITIONAL DISCLOSURES
+
+Author Luo is an employee of Biogen.
+
+Figure 1
+
+Phenome‐wide significant associations between autoantibodies (grouped by epitope target) and phenome‐wide association study (PheWAS) codes (false discovery rate [FDR] ≤10%). CCP = cyclic citrullinated peptide; Apo E = apolipoprotein E; NEC = not elsewhere classified.
+
+Figure 2
+
+Phenome‐wide significant associations between autoantibodies (stratified by citrullination status of the epitope target) and PheWAS codes (FDR ≤10%). See Figure 1 for definitions.
+

@@ -1,0 +1,326 @@
+Structure-based discovery of fiber-binding compounds that reduce the cytotoxicity of amyloid beta
+
+Abstract
+
+Amyloid protein aggregates are associated with dozens of devastating diseases including Alzheimer’s, Parkinson’s, ALS, and diabetes type 2. While structure-based discovery of compounds has been effective in combating numerous infectious and metabolic diseases, ignorance of amyloid structure has hindered similar approaches to amyloid disease. Here we show that knowledge of the atomic structure of one of the adhesive, steric-zipper segments of the amyloid-beta (Aβ) protein of Alzheimer’s disease, when coupled with computational methods, identifies eight diverse but mainly flat compounds and three compound derivatives that reduce Aβ cytotoxicity against mammalian cells by up to 90%. Although these compounds bind to Aβ fibers, they do not reduce fiber formation of Aβ. Structure-activity relationship studies of the fiber-binding compounds and their derivatives suggest that compound binding increases fiber stability and decreases fiber toxicity, perhaps by shifting the equilibrium of Aβ from oligomers to fibers.
+
+  http://dx.doi.org/10.7554/eLife.00857.001
+
+eLife digest
+
+Alzheimer’s disease is the most common form of dementia, estimated to affect roughly five million people in the United States, and its incidence is steadily increasing as the population ages. A pathological hallmark of Alzheimer’s disease is the presence in the brain of aggregates of two proteins: tangles of a protein called tau; and fibers and smaller units (oligomers) of a peptide called amyloid beta.
+
+Many attempts have been made to screen libraries of natural and synthetic compounds to identify substances that might prevent the aggregation and toxicity of amyloid. Such studies revealed that polyphenols found in green tea and in the spice turmeric can inhibit the formation of amyloid fibrils. Moreover, a number of dyes reduce the toxic effects of amyloid on cells, although significant side effects prevent these from being used as drugs.
+
+Structure-based drug design, in which the structure of a target protein is used to help identify compounds that will interact with it, has been used to generate therapeutic agents for a number of diseases. Here, Jiang et al. report the first application of this technique in the hunt for compounds that inhibit the cytotoxicity of amyloid beta. Using the known atomic structure of the protein in complex with a dye, Jiang et al. performed a computational screen of 18,000 compounds in search of those that are likely to bind effectively.
+
+The compounds that showed the strongest predicted binding were then tested for their ability to interfere with the aggregation of amyloid beta and to protect cells grown in culture from its toxic effects. Compounds that reduced toxicity did not reduce the abundance of protein aggregates, but they appear to increase the stability of fibrils. This is consistent with other evidence suggesting that small, soluble forms (oligomers) of amyloid beta that break free from the fibrils may be the toxic agent in Alzheimer’s disease, rather than the fibrils themselves.
+
+In addition to uncovering compounds with therapeutic potential in Alzheimer’s disease, this work presents a new approach for identifying proteins that bind to amyloid fibrils. Given that amyloid accumulation is a feature of many other diseases, including Parkinson’s disease, Huntington’s disease and type 2 diabetes, the approach could have broad therapeutic applications.
+
+  http://dx.doi.org/10.7554/eLife.00857.002
+
+Introduction
+
+Protein aggregates, both amyloid fibers and smaller amyloid oligomers, have been implicated in the pathology of Alzheimer’s and other neurodegeneration diseases (Chiti and Dobson, 2006; Eisenberg and Jucker, 2012). The increasing prevalence of Alzheimer’s disease in our aging societies, the associated tragedy for patients and their families, and the mounting economic burden for governments have all stimulated intense research into chemical interventions for this condition. Much work has been focused on screening compounds that prevent aggregation and the associated cytotoxicity of the amyloid β-peptide (Aβ) (reviews by Sacchettini and Kelly, 2002; Bartolini and Andrisano, 2010; Hard and Lendel, 2012).
+
+Screens have often focused on natural products from plants and lichens. These include polyphenols, such as epigallocatechin gallate (EGCG) from green tea (Ehrnhoefer et al., 2008) and curcumin from the spice turmeric (Yang et al., 2005). These natural polyphenolic compounds show inhibition on the fibrillation of a variety of amyloid proteins, including Aβ40 as well as α-synuclein, IAPP and PrP (Porat et al., 2006; Dasilva et al., 2010; Ono et al., 2012). Several dyes have also been found to ameliorate amyloid toxicity. Orcein from lichens appears to diminish toxic oligomers and enhance fiber formation (Bieschke et al., 2011). Congo red, thioflavin T and their analogs, commonly used as staining reagents for amyloid detection, exhibit ameliorative effects on neurodegenerative disorders, such as Alzheimer’s, Parkinson’s, Huntington’s, and prion diseases (Frid et al., 2007; Alavez et al., 2011), however their application is limited by significant side effects (Klunk et al., 2004).
+
+Additional screens have identified a variety of molecules, including proteins (Evans et al., 2006), antibodies (Kayed et al., 2003; Ladiwala et al., 2012), synthetic peptide mimetics (Findeis, 2002; Kokkoni et al., 2006; Takahashi and Mihara, 2008; Cheng et al., 2012) and small molecules (Wood et al., 1996; Williams et al., 2005; McLaurin et al., 2006; Necula et al., 2007; Bartolini and Andrisano, 2010; De Felice et al., 2001; Ladiwala et al., 2011; Hard and Lendel, 2012; Kroth et al., 2012), that inhibit Aβ fibrillogenesis and/or Aβ-associated cytotoxicity in vitro. While most efforts have targeted the deposition of Aβ fibers as the hallmark of Alzheimer’s, smaller amyloid oligomers are now receiving greater attention as the possible toxic entities in Alzheimer’s and other neurodegenerative diseases (Hartley et al., 1999; Cleary et al., 2005; Silveira et al., 2005). Furthermore, emerging evidence suggests that mature, end-stage amyloid fibers may serve as a reservoir, prone to releasing toxic oligomer (Xue et al., 2009; Cremades et al., 2012; Krishnan et al., 2012; Shahnawaz and Soto, 2012). Recent screens have identified compounds that reduce Aβ cytotoxicity, without interfering with Aβ fibrillation (Chen et al., 2010) or promoting the formation of stable Aβ aggregates (Bieschke et al., 2011).
+
+Structural information about protein targets often aids drug development, so here we take a structure-based approach, combined with computational screening, to discover amyloid interacting compounds that reduce amyloid toxicity. This approach has been enabled by the determination of atomic structures of the adhesive segments of amyloid fibers, termed steric zippers (Nelson et al., 2005), and of solid state NMR-based structures of amyloid fibers (such as full-length Aβ fibers [Luhrs et al., 2005; Petkova et al., 2005] and the HET-s prion domain complexed with Congo Red [Schutz et al., 2011]). The steric zipper structures reveal a common motif for the spine of amyloid fibers, in which a pair of fibrillar β-sheets is held together by the side-chain interdigitation (Sawaya et al., 2007). We focus on Aβ, a peptide of 39–42 residues cleaved from the Amyloid precursor protein (APP) associated with Alzheimer’s, as a target for inhibitor discovery. The segment Aβ  with the sequence KLVFFA is an amyloid-forming peptide, which packs in a steric zipper form, and has been identified as the spine of the full-length Aβ fiber (Luhrs et al., 2005; Petkova et al., 2006; Colletier et al., 2011). Co-crystal structures have been determined for small molecules in complex with the fibrillar β-sheets of Aβ  (Landau et al., 2011). One of these structures—Aβ  with the dye Orange G—reveals the specific pattern of hydrogen bonds and apolar interactions between orange G and the steric zipper: the negatively charged dye binds specifically to lysine side chains of adjacent sheets, and its planar aromatic portion packs against apolar residues (phenylalanine and valine) of adjacent sheets. By creating a tight, low energy interface across several β-strands within fiber core, this fiber-binding molecule appears to stabilize the fiber structure. With this atomic structure as a basis, we are able to screen for small molecular compounds that bind to amyloid fibers, stabilizing them and possibly reducing amyloid toxicity. Applying our structure-based screening procedure, we screen computationally for compounds that bind to Aβ fibers, termed BAFs (Binders of Amyloid Fibers) and then experimentally test their effects on Aβ aggregation and cytotoxicity.
+
+Results
+
+Structure-based screening procedure
+
+We have devised a structure-based procedure for the identification of small molecules that bind to amyloid and affect amyloid toxicity (Figure 1). The procedure starts from a co-crystal structure of a ligand bound to an amyloidogenic segment of Aβ (Landau et al., 2011), the dye orange G bound to the fiber-like crystal structure of KLVFFA(Aβ ) segment. This structure reveals the chemical environment or ‘pharmacophore’ presented by the ligand binding site of this Aβ segment, that is, orange G binds to stacked β-sheets of Aβ. Knowledge of the amyloid pharmacophore (Figure 1A) permitted us to screen for compounds that could be expected to bind in this chemical environment, possibly stabilizing amyloid fibers.
+
+Construction of compound libraries for computational screening
+
+For assembling the compounds in our screening library, we sought three characteristics: (a) commercially available compounds since we intended to follow the in silico screening with experimental validation; (b) compounds with known three-dimensional structures such that our screening would be as realistic as possible; (c) generally flat compounds able to bind to the β-sheets of the steric zipper, as does orange G. Some ∼11,000 compounds having the first two characteristics (CSD-ZINC set) were selected as the intersection of molecules found both in the Cambridge Structure Database (http://www.ccdc.cam.ac.uk) and the Zinc Database of purchasable compounds (http://zinc.docking.org/) (Irwin and Shoichet, 2005). This CSD-ZINC set spans a variety of structural shapes and molecular properties. A second set of ∼7000 compounds, the Flat Compound Set, was gathered from the ZINC database to include molecules expected to bind to the flat surface of a steric zipper. The members of this set contain multiple aromatic rings or one aromatic ring with additional planar groups.
+
+Computational screening of compounds that bind to Aβ fibers
+
+Computational screening was carried out with the RosettaLigand program (Davis and Baker, 2009), after adapting its docking approach to carry out high-throughput screening (Figure 2). The conformational flexibilities of ligand and protein side chains are in a ‘near-native’ perturbation fashion, meaning that the fine sampling of conformations was restrained to be close to the starting conformation. A balance was achieved between extensive sampling and the speed required for screening a large compound library by fine sampling of side chain and ligand torsion angles only around their starting conformations, as illustrated by sticks in Figure 2C.
+
+In the screening steps of computational docking (Figure 2A), a library of ∼18,000 purchasable compounds (Sets 1 and 2) was scanned computationally for structural compatibility with the pharmacophore (ligand binding site) presented by a single sheet of the Aβ  steric zipper. Structural compatibility was assessed by a combination of binding energy (Meiler and Baker, 2006) and steric complementarity (Lawrence and Colman, 1993). After computational docking, the distribution of calculated binding energies suggests that, statistically the flat compounds from Set 2 fit more snugly on the flat surfaces of Aβ  fibers than those with diverse shapes in Set 1 (Figure 2B). The best scoring compounds were screened further by requiring that each is also structurally compatible with the solid-state NMR-derived model of the Aβ full-length fiber structure (Petkova et al., 2006) (Figure 1C and Figure 1—figure supplement 3).
+
+Experimental characterization of BAFs
+
+Table 1. List of all tested BAF compoundsDOI: http://dx.doi.org/10.7554/eLife.00857.010. Table 2. Detailed list of the active BAF compoundsDOI: http://dx.doi.org/10.7554/eLife.00857.011. Table 3. List of the representative BAFs 11, 30, 31 and their derivativesDOI: http://dx.doi.org/10.7554/eLife.00857.012. After in silico screening of a library of ∼18,000 purchasable compounds, twenty-five of the top-ranking compounds all with better scores for binding energy and steric complementarity than orange G (Figure 1D, Figure 2—figure supplement 1), were selected for experimental validation. First these 25 compounds were tested for their ability to protect mammalian cells from Aβ toxicity (Figure 1E, Tables 1 and 2), and five of them were found to reduce the toxic effects of Aβ. These five were tested for binding to both Aβ  and Aβ  fibers by NMR. Two were found to have tighter binding than orange G, and the others gave insufficient NMR signals for detection. To expand this set of the five compounds, a second cycle of inhibitor discovery was performed. From the computed positions of the five compounds, a refined pharmacophore was inferred (Figure 1F), and used in the next cycle of screening. Added to the compound set were nine additional compounds apparently related to the five lead compounds from the initial cycle, plus 17 chemical derivatives of compounds (Tables 1 and 3). The second cycle produced three additional compounds and three compound derivatives that also protected the mammalian cells from Aβ fibers. One of these compounds was confirmed by NMR to bind to Aβ fibers. The detailed description of those experimental results is as follows.
+
+Inhibition of Aβ1–42 toxicity by BAFs
+
+Table 4. Student’s t-test and p value analysis suggests that BAFs reduce the cytotoxicity of Aβ fibers significantlyDOI: http://dx.doi.org/10.7554/eLife.00857.016. Having identified compounds that bind Aβ fibers, by a structure-based procedure, we tested their effects on the cytotoxicity of Aβ  fiber against two mammalian cell lines: PC12 and HeLa (Figure 3). Five BAFs—1,4,8,11, and 12—in the initial cycle and three additional BAFs—26, 30, and 31—from the second cycle, with diversified chemical structures shown in Figure 4, significantly increased both PC12 and HeLa cell survival after 24 hr incubation with Aβ  (0.5 µM) at concentration of 2.5 µM, while the BAFs alone had little or no effect on cell survival (Figure 3—figure supplement 1). Three BAFs—11, 26, and 31—showed clear dose-response profiles in their protection of both PC12 and HeLa cells (Figure 3B). Among them, the two best BAFs—26 and 31—were tested and did not affect the cytotoxicity of amyloid fibers other than Aβ (Figure 3—figure supplement 2). Although all of these BAFs provide protection against Aβ toxicity, none diminish the amount of Aβ fibers in electron micrographs (Figure 3C).
+
+Validation of compound binding by NMR titration
+
+Table 5. Predicted binding energy and experimental measurement of the binding of two BAFs and orange G against both Aβ16–21 (KLVFFA) and full-length Aβ fibersDOI: http://dx.doi.org/10.7554/eLife.00857.022. Table 6. Comparison of the measured binding parameters of the representative BAFs with orange G by NMR titrationsDOI: http://dx.doi.org/10.7554/eLife.00857.023. Promising candidate binders from in silico screening and toxicity tests were validated by titration of Aβ fibers into solutions of each compound, as monitored by NMR signals of aromatic protons of the compound (Figure 5). The proton resonances of the freely rotating compounds disappear as the compound binds to the fibers. By increasing the amount of fibers, an apparent Kd for compound binding can be estimated. From in silico screening, all tested BAF compounds are calculated to bind more tightly to Aβ fibers than orange G. In NMR studies, the apparent Kd of orange G binding to Aβ  fibers was found to be 43 ± 21 µM, whereas the apparent Kd of BAF1 binding to Aβ  fibers is 12 ± 7 µM. BAFs were found to bind to both Aβ  fibers and Aβ  fibers. Figure 5F shows a notable correlation between the calculated binding energies and the reduction in NMR peak areas upon Aβ binding. That is, all BAFs with predicted binding energy better than orange G also reduce NMR peak areas more than orange G. On the other hand, BAF31ΔOH, a derivative of BAF31 by removal of a key hydroxyl group essential for binding, exhibits both a worse calculated binding energy and a diminished reduction of NMR peak upon titration of Aβ  fibers.
+
+Structure-activity relationship studies of the Aβ pharmacorphore
+
+Based on the lead compounds found in the initial cycle of the procedure, we carried out a second cycle to expand our understanding of the Aβ pharmacorphore. BAF11 (Figure 6A), one of the lead compounds in the initial cycle, was used to perform structure-activity relationship studies. Twelve derivatives of BAF11 were scanned to pinpoint the essential apolar and polar interactions for the pharmacorphore refinement (Figure 6B, Figure 6—figure supplement 1). These derivatives are grouped in five classes, whose effects on Aβ toxicity have been tested (Figure 6C). Classes I and II assess the polar region of BAF11, which makes hydrogen bonds to charged Lys16 ladders of the Aβ fiber: the deletion of the hydroxyl group (Class I) significantly decreased the inhibition of toxicity; the swapping of the hydroxyl group with the aromatic tail (Class II) almost abolished inhibition of toxicity. Classes III, IV, and V focused on the aromatic moieties of BAF11: altering the sizes of aromatic groups (Class III) showed little change in inhibition of toxicity while adding charged or polar groups within aromatic region (Classes IV and V) resulted in a significant decrease of inhibition of toxicity. These differences among BAF11 derivatives in inhibition of toxicity (Figure 6C) further validated our structure-based approach and provided guidelines for the refinement of Aβ pharmacophore.
+
+In the second cycle, nine new compounds were derived from the refined pharmacophore (Figure 7). Three of them detoxified Aβ in cell survival assay. BAF31, the best inhibitor which protected mammalian cells from Aβ toxicity in the second cycle, increased cell survival from the 40% induced by Aβ alone to >90% (Figure 3). A derivative of BAF31, BAF31ΔOH, lacking the hydroxyl group believed to bind to the Lys residue of the Aβ fiber (shown by the magenta oval in Figure 8B), is calculated no longer to bind to the Aβ fiber. NMR and cell viability assessments indicated that BAF31ΔOH binds much less strongly to Aβ fibers than BAF31 itself and shows significantly reduced power to inhibit toxicity (Figure 8E). Similarly, the detoxifying profile of derivatives of another inhibitor, BAF30, validated the key interactions of BAF30 across the binding interface (Figure 9). Our conclusion is that the NMR binding and toxicity results for the BAF derivatives studied are consistent with our model for the pharmacophore of Aβ (Figure 10).
+
+Discussion
+
+Structure-based discovery of compounds that bind amyloid fibers
+
+Amyloid fibers differ fundamentally in structure from the enzymes and signaling proteins that are the traditional targets in structure based design of binding compounds, and thus their pharmacophores might be expected to differ fundamentally as would the types of compounds that bind. In general, the binding sites of the traditional targets are often concave pockets; in contrast, the surfaces of amyloid fibers are flat and repetitive along the fiber axis, without well-defined surface cavities. The widely used ligand-docking software, such as DOCK (Ewing et al., 2001), or AutoDock (Morris et al., 2009), is intended to fit well-defined protein pockets rather than shallow grooves at flat fiber surfaces.
+
+Consequently we have adapted the RosettaLigand program (Davis and Baker, 2009) for docking a library of commercially available compounds onto the flat surface of amyloid fibers. Similarly to other software packages, RosettaLigand scores each candidate compound for its energetic fit to its binding site. The initial site is chosen near that occupied by a bound compound, as determined in a crystal structure. The conformational flexibilities of ligand and protein side chains are modeled in a ‘near-native’ perturbation fashion (‘Materials and methods’), meaning that the fine sampling of conformations was restrained to be close to the starting conformation. To find the position along the flat fibrillar surface of greatest binding energy for each candidate compound, our screening approach leverages the rotamer repacking algorithm (Leaver-Fay et al., 2011) and Rosetta energy function (Kuhlman and Baker, 2000) to account for flexibility of protein side chains and ligand, which is critical in modeling of such shallow grooves on the fiber surface.
+
+Our procedure identified 34 BAF compounds predicted to bind to Aβ fibers, among which eight BAFs diminish the toxicity of the fibers in mammalian cells. We suggest that the same procedure can be used to discover other compounds that reduce the toxicity of Aβ fibers, starting from other co-crystal structures of Aβ segments with other bound ligands. Similarly, the same procedure can be applied to the discovery of compounds that bind to other amyloid proteins, for use as either toxicity inhibitors or imaging agents for amyloid diagnosis.
+
+Mechanism of inhibition of Aβ toxicity
+
+Our observation is that our tightest binding BAFs all diminish the toxicity of Aβ fibers, and yet do not substantially diminish the amount of fibers. Further study will be required to understand the molecular mechanism underlying the inhibition of Aβ toxicity, but here we offer the following hypothesis.
+
+Emerging evidence suggest  that amyloid oligomers, rather than amyloid fibers, are toxic entities (Hartley et al., 1999; Cleary et al., 2005; Silveira et al., 2005), and that perhaps toxic oligomers can be released from amyloid fibers (Xue et al., 2009; Cremades et al., 2012; Krishnan et al., 2012; Shahnawaz and Soto, 2012). By binding to fibers, BAFs stabilize them, thereby shifting the equilibrium of Aβ molecules from smaller, toxic entities towards the fibrillar state. The BAF compounds in their computationally docked sites on Aβ fibers contact several (as few as three and as many as six) adjacent β-strands of the fiber. By creating a low energy binding interface across several fiber strands, the BAFs apparently stabilize the Aβ fibers from breaking into smaller entities.
+
+Table 7. BAFs reduce Aβ cyto-toxicity by targeting fibers rather than oligomers.DOI: http://dx.doi.org/10.7554/eLife.00857.033. From previous studies, we expect BAFs to bind to amyloid fibers rather than oligomers. In recent work (Laganowsky et al., 2012; Liu et al., 2012), we proposed that amyloid forming proteins can enter either of two distinct aggregation pathways, which are separated by an energy barrier. One pathway leads to in-register fibers in which every β-strand lies directly above or below an identical strand in the fiber. The other pathway leads to out-of-register oligomers in which antiparallel β-strands are sheared relative to one another and roll into a β-barrel. We found that three out-of-register amyloid-like structures exhibit cytotoxicity (Laganowsky et al., 2012; Liu et al., 2012), which tend to be transient, equilibrating eventually into in-register fibers. In our approach, we search for BAFs based on in-register β-sheets rather than out-of-register β-strands found in toxic oligomeric structures, to which our BAFs are not expected to bind (Figure 11). We speculate that BAFs stabilize the in-register fibers revealed by our steric zippers, relative to out-of-register toxic oligomers, thereby shifting the equilibrium from toxic oligomers towards fibers (Figure 12). Supporting this is our result that diminished toxicity accompanies compound binding.
+
+BAFs strengthen the hypothesis that Aβ16–21 fibers reflect essential features of full Aβ fibers
+
+The identification of BAFs starts with the atomic structure of orange G bound within the fiber-like crystals of Aβ , because as yet there is no high-resolution atomic structure available for ligands bound to full-length Aβ fibers. Nevertheless, we found that BAFs diminish toxicity of full-length Aβ fibers. This finding suggests that the steric zipper structure of Aβ  fibers recapitulates some of the essential structural features of full-length Aβ fibers. We are currently attempting cocrystallization of BAFs with Aβ  and other steric zipper structures. We speculate that coupled with computational methods, other steric zipper structures could enable the discovery of the lead compounds for inhibitors of other toxic amyloid entities.
+
+Materials and methods
+
+Computational procedures
+
+Two choices of compound libraries for structure-based screening
+
+We generated two sets of purchasable compounds to be screened via the computational docking:Cambridge Structure Database (CSD) set. 102,236 organic compounds, whose crystal structures have R-factor better than 0.1, were extracted from the Cambridge Structure Database (version 5.32 November 2010) using ConQuest. The SMILES string of each structure was then used to locate its purchasing information among the ZINC purchasable set (http://zinc.docking.org/) (Irwin and Shoichet, 2005) by OpenBabel package (http://openbabel.org/) (Guha et al., 2006). The fast index table of all SMILES strings of the ZINC purchasable set was generated to allow the fast search of each CSD structure against ZINC purchasable set. CSD structures that failed in locating their purchasing information (i.e., without any hit in searching against ZINC purchasable set) were omitted. A library of 13,918 structures from CSD representing 11,057 compounds were finally compiled, whose purchasing information is annotated by ZINC purchasable database. The complete list of CSD/ZINC entries of these compounds in this CSD set can be found in Supplementary file 1.. Flat Compound (FC) set. A library of 6589 compounds containing phenol and less than three freely rotatable bonds were extracted from the ZINC database (http://zinc.docking.org/) (Irwin and Shoichet, 2005). Those compounds have a common feature of planar aromatic ring, resulting in a ‘flat’ compound. The flat compound library includes compounds with similar chemical structures to naturally fiber-binding molecules, for instance, Thioflavin-T (ThT), Congo red, Green tea epigallocatechin-3-gallate (EGCG), and Curcumin. It also includes many natural phenols, such as gallic acid, ferulic acid, coumaric acid, propyl gallate, epicatechin, epigallocatechin, etc. The complete list of ZINC entries of these compounds in this FC set can be found in Supplementary file 2. 
+
+Ligand ensemble preparation with near-‘native’ perturbation
+
+Each molecule in our two compound libraries was prepared for the docking simulations. Hydrogen atoms of each molecule were added for the compounds lacking modeled hydrogens using the program Omega (v. 2.3.2, OpenEye) (Bostrom et al., 2003). Ligand atoms were represented by the most similar Rosetta atom type, their coordinates were re-centered to the origin, and their partial charges were assigned by OpenEye’s AM1-BCC implementation. We then generated the ligand perturbation ensemble near the crystal conformation (CSD set) or starting conformation (FC set) of each molecule. For each rotatable bond of the ligand, a small degree torsion angle deviation (±5°) was applied. K-mean clustering method was used to generate the ligand perturbation ensemble and similar/redundant conformations (rmsd to the selected conformation is less than 0.5 Å) were omitted. Finally, up to 100 conformations for each ligand were generated and made available for Rosetta LigandDock.
+
+Rosetta LigandDock with additional near ‘native’ perturbation sampling
+
+We adopted the docking algorithm based on the method previously described in the RosettaLigand docking paper (Meiler and Baker, 2006; Davis and Baker, 2009). In general, the algorithm includes three stages: coarse-grained stage, Monte Carlo minimization (MCM) stage and gradient-based minimization stage. Whereas the original RosettaLigand method performed a full sampling of torsional degrees of freedom in the internal ligands and protein side-chains, we made modifications to enable the fast run time required by the screening method. Specially, we sampled the ligand and protein side-chain torsion angles in near-‘native’ perturbation fashion, where only the near-‘native’ conformation of side-chain and ligand rotamers were allowed and any conformation far away from the starting conformation was omitted. For each protein side-chain, the deviations (±0.33, 0.67, 1 SD) around each input torsion were applied based on the standard deviation value of the same torsion bin from the backbone-dependent Dunbrack rotamer library. For each internal torsional angle of the ligand, the deviations (±5°) around the input torsion were applied as described above.
+
+To optimize possible interactions (H-bonding or packing) between compound and fiber, we carried out random perturbations to the TS rigid-body degrees of freedom (5 Å for translational degrees of freedom; 360° for full rotational degrees of freedom) to explore different rigid body arrangements. For each rigid-body perturbation, different conformations of fiber sidechains, and compounds were explored to maximize the binding interactions. We next carried out simultaneous quasi-Newton optimization of the compound rigid body orientation and the sidechain torsion angles, and in some cases, the torsion angles of the compound and the backbone torsion angles in the binding site, using the complete Rosetta energy function.
+
+Docking of molecules to KLVFFA and Aβ fibrillar structure
+
+The structure of KLVFFA fiber was taken from the co-crystal structure of KLVFFA with orange G (pdb entry: 3OVJ) (Landau et al., 2011). After removing orange G, the sidechain torsion of KLVFFA was optimized to correct any conformational bias from the presence of orange G, and then the optimized structure were inspected to ensure that sidechain torsions are still within the original conformation of the co-crystal structure. The Aβ fibrillar structure was from ssNMR fiber structure of full-length Aβ (pdb entry: 2LMO) 40. The same optimization step was applied before docking. The comparison of docking onto both KLVFFA and Aβ fibrillar structure are discussed in Figure 13.
+
+Post-docking analysis to rank the compounds
+
+The docked compounds were filtered based on the following criteria: (1) The docking models with a compound-fiber van der Waals attractive energy > −7.0 kcal/mol were removed; (2) The docking models with a compound-fiber hydrogen-binding energy >−0.2 kcal/mol were eliminated. The remaining docked compounds were then ranked according to the energy of binding of compound to fiber. We used not only the total binding energy but also on each of the energy components separately (Lennard-Jones interactions, solvation, hydrogen bonding, and electrostatics) (Lazaridis and Karplus, 1999; Kuhlman and Baker, 2000; Kortemme et al., 2003) for ranking. The compounds ranked in the top 40% according to all of these measures were selected. Finally, the compounds were ranked by tightest binding energy (Meiler and Baker, 2006) and best shape complementarity (Lawrence and Colman, 1993).
+
+Description of geometrical parameters of the interactions between BAFs and Aβ fiber defined based on structure-based screening of Aβ toxicity inhibitor
+
+Based on the rounds of computing search and experimental test, general rules of the essential interactions of BAF binding to Aβ fibers are summarized here. As illustrated in Figure 10, the geometrical parameters of those key interactions are specified as followings:H-bond acceptor (or negative charge) of the inhibitor makes either hydrogen bond or salt bridge to sidechain nitrogen atoms (NZ) of at least two Lysine residues from adjacent Aβ strands along the fiber axis. Our data suggest that the BAFs need to have good contacts across 2 to 4 adjacent Aβ strands, in order to effectively bind to Aβ fiber and reduce Aβ toxicity.. The hydrogen bond or salt bridge described in 1) follows the general rule of H-bond geometry, which are:. Distance (d1, as shown in the figure) between the NZ atom of Lys16 and H-bond acceptor atoms of BAFs: 2.8∼3.5 angstrom;. Angle (Θ1) at BAF H-bond acceptor atoms:100∼150°;. Angle (Θ2) at the NZ atom of Lys16: 130∼180°.. Hydrophobic interactions between the apolar residues (phenylalanine18 and valine 20) and the planar aromatic portion of the compounds. The aromatic portion of compounds should be planar or semi-planar to pack against the flat surface of Aβ which spans across at least two adjacent Aβ strands.. The hydrophobic interactions described in 3) follow the pi-pi stacking geometry, which are:. Distance (d2) between the center of the apolar sidechains and the center of BAF aromatic rings: 4.0∼5.0 angstrom;. Dihedral angle (Φ) between the surface plane defined by Phe18 and Val20 and the aromatic ring of the BAFs: 0∼40°. 
+
+Experimental procedures
+
+Chemicals and reagents
+
+Chemicals were obtained from a variety of companies (Table 1) and were of the highest purity available.
+
+Source of KLVFFA(Aβ16–21) and Aβ1–42 peptide
+
+N-terminal acetylated and C-terminal amidated KLVFFA(Aβ ) peptide was synthesized by Celtek Bioscience Peptides (Nashville, TN). Aβ  peptide was overexpressed through Escherichia coli recombinant expression system and was purified as reported previously (Finder et al., 2010). The fusion construct for Aβ  expression contains an N-terminal His tags, followed by 19 repeats of Asn-Ala-Asn-Pro, TEV protease site and the human Aβ  sequence. Briefly, the fusion construct was expressed into inclusion bodies in E.coli BL21(DE3) cells. 8 M urea was used to solubilize the inclusion bodies. Fusion proteins were purified through HisTrap HP Columns, followed by Reversed-phase high-performance liquid chromatography (RP-HPLC). After TEV cleavage, Aβ  peptide was purified from the cleavage solution by RP–HPLC followed by lyophilization. To disrupt preformed aggregation, lyophilized Aβ  was resuspended in 100% Hexafluoroisopropanol (HFIP) which was finally removed by evaporation.
+
+Preparation of KLVFFA (Aβ16–21) and Aβ1–42 fiber samples for 1D 1H NMR titration measurement
+
+KLVFFA (Aβ ) peptide was dissolved in PBS buffer, pH 7.4 at the concentration of 1 mM and incubated at 37° with continuing shaking for 3 months. Pre-disaggregated Aβ  was dissolved in PBS buffer, pH 7.4 at the concentration of 200 μM and incubated at 37° with continuing shaking for 2 months. For NMR titration samples preparation, KLVFFA (Aβ ) or Aβ  fiber stocks were diluted in the PBS buffer solution at the indicated concentrations, followed by adding the small molecules from 100 mM stock solutions in DMSO into fibrillar solution. The final concentration of the small molecule was 50uM or 100 μM. The final volume of NMR samples was 500 μL containing 5% D O. Prior to NMR spectra collection, samples were incubated at room temperature for 0.5 hr. 500 MHz 1H NMR spectra were collected on a Bruker DRX500 at 283 K with either 256 or 1024 scans collected depending on the intensity of the small molecule signal. H O resonance was suppressed via excitation sculpting (Hwang and Shaka, 1995); DMSO resonance was suppressed via a frequency shifted presaturation of the DMSO peak. Spectra were processed with XWINNMR 3.6.
+
+Dissociation constant (Kd) of small molecules to fibers calculated from NMR data
+
+NMR data were analyzed to estimate the binding constant for the interaction between the BAF compounds and KLVFFA fibers. We monitored the decrease in the 1H aromatic resonance of the compounds as a function of increasing concentrations of KLVFFA fibers. The general equation for deriving the apparent dissociation constant (Kd) is as follows:
+
+For a general reaction of a ligand binding to fibers (containing N monomers): .
+
+We estimated the concentration of fibers at any given monomer concentration as: and then we could get:
+
+ ,  , where [F]  is the total monomer concentration, [L]  is the total ligand concentration and [F L] is the concentration of bound fiber; and thus 
+
+Finally, we could get the concentration of bound complex [F L]: 
+
+We then applied this equation (1) to our NMR experiments, where we monitored the integrated area of each NMR peak ( ) of the compounds over a range of KLVFFA fiber concentrations. Assuming the complex of the BAF compound with fiber is in fast exchange, the peak area is the average of the peak signals for free and bound states, weighted by the fraction of the observed molecule in each state: 
+
+And the change in NMR peak area ( ),   
+
+Hence, the observed fraction of peak area change during the titration of increasing fiber concentration against fixed small compound, 
+
+Our structural model suggests that one BAF compound binds three fiber monomers. To obtain the Kd, we fit the equation for 1:3 (small molecule:fiber) binding to the NMR titration curve (N = 3), with   defined as the fraction of peak area decrease   for each titration experiment, and   defined as the fraction maximum of peak area decrease   for the saturated complex.
+
+MTT cell viability assay
+
+We performed MTT-based cell viability assay to assess the cytotoxicity of Aβ  with or without the addition of BAFs and orange G. A CellTiter 96 aqueous non-radioactive cell proliferation assay kit (MTT) (Promega cat. #G4100, Madison, WI) was used. HeLa and PC-12 (ATCC; cat. # CRL-1721, Manassas, VA) cell lines were used for measuring the toxicity of Aβ . Prior to toxicity test, both HeLa and PC-12 cell lines were plated at 10,000 cells per well in 96-well plates (Costar cat. # 3596, Washington, DC). HeLa cells were cultured in DMEM medium with 10% fetal bovine serum, PC-12 cells were cultured in ATCC-formulated RPMI 1640 medium (ATCC; cat.# 30–2001) with 10% heat-inactivated horse serum and 5% fetal bovine serum. Cells were cultured in 96-well plates for 20 hr at 37°C in 5% CO . For Aβ  and BAFs samples preparation, purified Aβ  was dissolved in PBS at the final concentration of 5 μM, followed by the addition of BAFs at indicated concentrations. The mixtures were filtered with a 0.2-μm filter and further incubated for 16 hr at 37°C without shaking for fiber formation. To start the MTT assay, 10 μl of pre-incubated mixture was added to each well containing 90 μl medium. After 24 hr incubation at 37°C in 5% CO , 15 μl Dye solution (Promega cat. #G4102) was added into each well. After incubation for 4 hr at 37°C, 100 μl solubilization Solution/Stop Mix (Promega cat. #G4101) was added to each well. After 12 hr incubation at room temperature, the absorbance was measured at 570 nm with background absorbance recorded at 700 nm. Four replicates were measured for each of the samples. The MTT cell viability assay measured the percentage of survival cell upon the treatment of the mixture of Aβ  and BAFs. The toxicity inhibition (%) or rescuing percentage (%) of each BAF compound was calculated by normalizing the cell survival rate using the PBS buffer-treated cells as 100% and 0.5 μM (final concentration) Aβ  fiber alone-treated cell as 0% viability 
+
+Transmission electron microscopy (TEM)
+
+TEM was performed to visualize the fibrillation of Aβ  in presence of BAFs. The samples of Aβ  and BAFs mixture for TEM measurement were the same as those for MTT assay. For specimen preparation, 5 μl solution was spotted onto freshly glow-discharged carbon-coated electron microscopy grids (Ted Pella, Redding, CA). Grids were rinsed twice with 5 μl distilled water after 3 min incubation, followed by staining with 1% uranyl acetate for 1 min. A CM120 electron microscope at an accelerating voltage of 120 kV was used to examine the specimens. Images were recorded digitally by TIETZ F224HD CCD camera.
+
+ThT fibrillation assay
+
+Purified Aβ  was dissolved in 10 mM NaOH at the concentration of 200 μM, followed by sonication for further solubilizing Aβ . Aβ  was diluted into PBS buffer at the final concentration of 20 μM, and was mixed with 20 μM Thioflavin T (ThT) and different concentrations of BAFs. The reaction mixture was filtered with a 0.2 μm filter, split into four replicates and placed in a 96-well plate (black with flat optic bottom). The ThT fluorescence signal was measured every 5 min using the Varioskan plate reader (Thermo Fisher Scientific, Inc) with excitation and emission wavelengths of 444 and 484 nm, respectively, at 37°C.
+
+Figure 1.
+
+In step ( ) the crystal structure (Landau et al., 2011) is determined of a complex of an amyloidogenic segment of Aβ (in this case residues 16-KLVFFA-21 of the spine of the Aβ fiber) with an amyloid-binding Ligand X (in this case orange G), revealing aspects of the pharmacophore for Ligand X. Prior to step ( ) a large library of available compounds is selected for computational docking (∼18,000 purchasable compounds in this case). In step ( ) computational docking is applied to test the compatibility of each member of the library for the pharmacophore of the amyloidogenic segment defined in step ( ). In step ( ), the top scoring members of the library are tested for compatibility of binding within a full-length Aβ fiber (in this case the 400 top scoring members were tested on a solid state NMR-derived model of an Aβ fiber, pdb entry 2LMO) (Petkova et al., 2006). The representative models from steps   and   are shown in Figure 1—figure supplements 1 and 2. In step ( ), the compounds are ranked by tightest binding energy and best shape complementarity for the pharmacophore. In step ( ), the top-ranking compounds (25 in this case) are selected for experimental characterization and validation, including NMR assessment of binding, EM assays of their effects on fiber formation, and cell viability assays for their effects on Aβ cytotoxicity. In step ( ), new compounds (9 in this case) and compound derivatives (17 in this case) are selected for an additional cycle of computational and experimental testing, based on their similarity to the lead compounds from the initial cycle.
+
+  http://dx.doi.org/10.7554/eLife.00857.003
+
+Figure 1—figure supplement 1.
+
+In step ( ) (Figure 1), a large library of ∼18 thousand commercially available compounds were docked onto the Aβ  fiber, and ∼400 top ranking compounds, whose binding energy and shape complementary score are better than the control molecule orange G, were selected for the next docking step. The models of representative BAFs docked on single beta-sheet of Aβ  fiber are compared to that of orange G. ( ). A side view of the compound BAF1 (in green sticks) docked on the Aβ  fiber (in a grey color) with a predicted binding energy of −8.4 kcal/mol. ( ). A side view of BAF8 (in cyan sticks) docked on the Aβ  fiber with a predicted binding energy of −12 kcal/mol. ( ). A side view of orange G (in orange sticks) docked on the Aβ  fiber with a predicted binding energy of −8.0 kcal/mol. The charge interactions between the compounds and Lysine residues of Aβ  fiber are highlighted by black lines.
+
+  http://dx.doi.org/10.7554/eLife.00857.004
+
+Figure 1—figure supplement 2.
+
+In step ( ) (Figure 1), the top-ranking compounds after the first docking step were further filtered by docking onto full-length Aβ fiber model (pdb entry 2LMO) (Petkova et al., 2006). The models of representative BAFs docked onto Aβ fiber are compared to that of orange G. ( – ). A top view of the compounds (BAF1, BAF8 and orange G) docked onto Aβ fiber (in a light yellow color). ( – ). A side view of the same compounds docked onto Aβ fiber. (  and  ). BAF1 (in a green color) binds to the side of Aβ fiber (in a light yellow color) with a predicted binding energy of −10 kcal/mol. (  and  ). BAF8 (in a cyan color) binds to the side of Aβ with a predicted binding energy of −12 kcal/mol. (  and  . Orange G (in an orange color) binds to the side of Aβ fiber with a predicted binding energy of −9 kcal/mol. The charge interactions between the compounds and Lysine residues are highlighted by black lines.
+
+  http://dx.doi.org/10.7554/eLife.00857.005
+
+Figure 1—figure supplement 3.
+
+When identifying BAFs by two steps of computational docking (Figure 2A as well as step   and   in Figure 1), most models of the second docking step (docking to full-length Aβ fiber in step ( ) retained their binding modes found in the previous docking step (docking to Aβ  fiber in step ( ). Interestingly, docking of BAF1 onto full-length Aβ fiber not only recapitulated the initial binding mode found in previous Aβ  docking step but also revealed the different binding mode with comparable binding energies. Two examples of those alternative binding modes are shown in (  and  ). In both modes, BAF1 tends to use its polar (hydroxyl) group to interact with the charged residues Glu22 of Aβ and use its non-polar (aromatic) portion to pack against the hydrophobic residues Phe20 of Aβ full fibers.
+
+  http://dx.doi.org/10.7554/eLife.00857.006
+
+Figure 2.
+
+( ). Outline of our procedure for structure-based screening. We prepare two sets of compounds (shown in the upper left) for screening against both types of fibers shown in the upper right. Compound Set 1 is the intersection of the ZINC Database of purchasable compounds with the Cambridge structural database (CSD) of known structures. Set 2 consists of other flat aromatic and multiple conjugated compounds found in the ZINC Database. The full description of each computational step is in ‘Materials and methods’. ( ). Distribution of calculated binding energies for the compound libraries of Sets 1 and 2. Those top-ranking compounds have better predicted binding energy than orange G. Structural comparison of docked models of such compound BAF8 and orange-G is discussed in the Figure 2—figure supplement 1. Notice the starred bins which suggest that some members of Set 2, containing flat compounds, tend to be among the top scoring compounds, presumably having the tightest binding to the flat fiber surface. ( ). The conformational ensemble of a compound representative shown docked onto the Aβ  fiber structure. ( ). A model of BAF8 docked onto an NMR-derived model of full-length Aβ fiber. Notice that the apolar ring structure of the compound binds to the relatively flat apolar (gray) surface of the fiber, and the polar moieties of the compound (red) form hydrogen bonds to the polar groups of the fiber (yellow). The stereo view of BAF8 model is shown in Figure 2—figure supplement 2.
+
+  http://dx.doi.org/10.7554/eLife.00857.007
+
+Figure 2—figure supplement 1.
+
+BAF8 has a chemical structure similar to orange G (top panels). The comparison of the shape complimentary at binding interfaces reveals that BAF8 binds more tightly to the side of fibers than orange G. ( ). A top view of the docked model of BAF8 (in a cyan color) with the predicted binding energy of −12 kcal/mol highlights the tight shape complementary at the fiber-ligand interface. ( ). A top view of the docked model of orange G (in an orange color) with the predicted binding energy of −8 kcal/mol shows a poorly packed interface with cavities.
+
+  http://dx.doi.org/10.7554/eLife.00857.008
+
+Figure 2—figure supplement 2.
+
+A wall-eyed stereo view of BAF8 (Figure 2D) (in cyan sticks) docked to the side of an Aβ  fiber (light yellow) reveals good non-polar and polar interaction across binding interfaces. The hydrophobic binding site for the aromatic portion of BAF8 is indicated by grey mesh surfaces to highlight the good shape complementary. The polar interaction of hydrogen bonds between the charged residues Lys 16 of Aβ and the polar portion of BAF8 are indicated by black thick lines.
+
+  http://dx.doi.org/10.7554/eLife.00857.009
+
+Figure 3.
+
+Our newly discovered BAFs diminish Aβ  toxicity without significantly reducing Aβ  fibrillation. ( ). Eight BAFs reduce Aβ toxicity in mammalian cell lines (PC12 in orange; HeLa in green). These identified compounds with diversified chemical structures are quite different from orange G, whose co-crystal structure with an amyloid segment is the basis of our approach (Figure 4 and Table 2). For each compound, 2 to 4 repeats of each independent experiment were performed. For each experimental repeat, four replicates per sample per concentration were tested. The symbol * indicates a p<0.1; the symbol ** indicates a p<0.01 and the symbol *** indicates a p<0.001. The student’s t-test and p-value analysis are in Table 4. ( ). The representative BAFs—31, 26, and 11—inhibit Aβ cyto-toxicity in a dose-dependent manner. ( ). Transmission electron microscopy (TEM) images of Aβ fibers alone and Aβ fibers with the BAFs, the same samples prepared for cell viability assay. All 8 BAFs that diminish Aβ toxicity do not noticeably diminish Aβ fibrillation. Scale bars indicate 200 nm.
+
+  http://dx.doi.org/10.7554/eLife.00857.013
+
+Figure 3—figure supplement 1.
+
+Incubating cells with or without BAFs for 24 hours caused little or no change for cell viability of both PC12 and HeLa. The error bars are calculated from four experiment replicates.
+
+  http://dx.doi.org/10.7554/eLife.00857.014
+
+Figure 3—figure supplement 2.
+
+The final concentration of IAPP is 1 µM and α-synuclein is 2 µM. The molar ratio of amyloid fibers and BAFs is 1:1. BAFs (26 and 31), which significantly reduces Aβ toxicity (Figure 3), cannot rescue the toxicity of IAPP and α-synuclein, suggesting that the toxicity alleviating effect of BAFs are specific to the fibers for which they were designed.
+
+  http://dx.doi.org/10.7554/eLife.00857.015
+
+Figure 4.
+
+Orange G in an orange box is also displayed for comparison.
+
+  http://dx.doi.org/10.7554/eLife.00857.017
+
+Figure 5.
+
+NMR binding experiments were performed on BAF compounds and the dye orange G. By monitoring the aromatic regions of the 1H NMR spectra of BAFs 1, 8, and 31, these compounds were shown to bind to both Aβ  and Aβ  fibers more tightly than does orange G. As shown in (  and  ), BAF1 binds to Aβ  fibers with affinity stronger than orange G. The determination of binding parameters for Aβ  fibers is detailed in Table 5 and Figure 5—figure supplements 1 and 3. In panel ( )  the 1H NMR spectrum of compound BAF1 (at 100 μM) is shown as a function of increasing concentration of Aβ  fibers (0–500 μM, as monomer). The insert shows the area decrease of BAF1 NMR peaks as a function of Aβ  concentration, and the red curve fitting the data defines an apparent Kd of 12 ± 7 µM. In panel ( ), the NMR spectrum of orange G (50 μM) is plotted against increasing concentration of Aβ  fibers (0–950 μM), giving an apparent Kd of 43 ± 21 µM. In ( ,   and  ), BAFs 1 and 8 both bind to Aβ  fibers more strongly than orange G. Notice that the molar ratio of BAFs to Aβ  fibers is comparable to that used in cell toxicity assays (Figure 3). ( ). The calculated binding energies of BAFs—1, 8, and 31—to Aβ  fibers are compared to the decreases in NMR peak of these compounds upon their binding to full-length Aβ fibers. These three BAFs have higher affinities and a larger NMR peak reduction than orange G while the ‘knock-out’ derivative with removal of key interactions (BAF31ΔOH) discussed below has a weaker calculated affinity and a smaller NMR peak reduction than orange G. We observe good correlation between computed energies and experimental data from NMR.
+
+  http://dx.doi.org/10.7554/eLife.00857.018
+
+Figure 5—figure supplement 1.
+
+The 1D 1H NMR spectrum shows the aromatic proton regions of BAF1 upon the titration of Aβ  fibers shown in Figure 5A. The insert is the chemical structure of BAF1 with the color-labeled aromatic proton observed in the NMR spectrum. The arrows with different colors indicate the proton assignment for NMR peaks.
+
+  http://dx.doi.org/10.7554/eLife.00857.019
+
+Figure 5—figure supplement 2.
+
+The 1D 1H NMR spectrum shows the aromatic proton regions of orange G against the increasing concentrations of Aβ  fibers shown in Figure 5B. The insert is the chemical structure of orange G with the highlighted label of the aromatic proton shown in the NMR spectrum. The arrows with different colors indicate the proton assignment for NMR peaks.
+
+  http://dx.doi.org/10.7554/eLife.00857.020
+
+Figure 5—figure supplement 3.
+
+To validate our computation methods, NMR titration experiments were performed. ( ) One representative peak of aromatic protons of the 1D 1H NMR spectra of the compound BAF8 (at 100µM) upon Aβ  fibers titration (0–500 µM, monomer equivalent). ( ) Fitting curve upon the area decrease of BAF8 NMR peaks as a function of fiber concentration. The apparent Kd of BAF8 (24 ± 5 µM) is lower than that of orange-G (Figure 4B), indicating the tighter binding affinity of BAF8 to Aβ  fibers.
+
+  http://dx.doi.org/10.7554/eLife.00857.021
+
+Figure 6.
+
+( ) Atomic model of BAF11 from the initial cycle docked on the full-length Aβ fiber, viewed in perpendicular to the fiber axis (left panel) and down the fiber axis (right panel). BAF11 is shown as a cyan stick model, whose polar groups form hydrogen bonds (green thick lines) to Lys16 of Aβ. The extensive non-polar interactions arise from the flat aromatic rings of BAF11 packing against the hydrophobic surface formed by Val18 and Phe20 of Aβ. ( ) Schematic representation of the polar and nonpolar interactions of BAF11 and its derivatives modeled on the Aβ fiber (in orange and light brown). In the process of the Aβ pharmacophore refinement, five different classes (I–V) of BAF11 derivatives were introduced into the second cycle of screening, to expand the BAF set and to assess the specificity of the compounds identified in the initial cycle. The full description and chemical structure of each derivative are in Table 3 and Figure 5—figure supplement 1. ( ) Comparison of the toxicity inhibition (defined in ‘Materials and methods’) among five types of BAF11 derivatives after 24 hr incubation with Aβ (0.5 µM). Notice that all changes to BAF11 which remove binding groups diminish its effectiveness as an inhibitor of toxicity.
+
+  http://dx.doi.org/10.7554/eLife.00857.024
+
+Figure 6—figure supplement 1.
+
+12 derivatives of the lead compound BAF11 were included to expand the set during the refinement of amyloid pharmacophore (Figure 6C). ( ) Chemical structures of BAF11 derivatives. A magenta open circle indicates the deletion of the important hydroxyl group. A green open circle indicates the missing of aromatic atoms in hydrophobic region of BAF11. The red color in chemical structures indicates the addition of atoms or groups to BAF11. The full description of each derivative is in Table 3. ( ) Comparison of toxicity inhibition among BAF11 derivatives after 24 hour incubation with Aβ fibers.
+
+  http://dx.doi.org/10.7554/eLife.00857.025
+
+Figure 7.
+
+( ). Amyloid pharmacophore based on the structural overlay of active BAFs and derivatives. The overlay of the lead compounds from the initial round (BAF4, BAF8, and BAF11) elucidated the consensus of polar and nonpolar interactions at fiber binding interfaces, which sheds light on the amyloid pharmacophore. The amyloid pharmacophore was further refined by iterative approaches of computational docking and experimental testing. The derivatives of those lead compounds were tested to explore the essential role of those consensus interactions, and the differences of binding patterns and toxicity inhibition effects of the BAF derivatives can provide a guideline for the further refinement of amyloid pharmacophore. ( ). New BAFs were ‘designed’ based on the refined pharmacophore. One successful example, BAF31 (green sticks) derived from the pharmacophore (grey sticks), showed the enhanced capability of inhibiting Aβ toxicity (Figure 8C). The success of developing enhanced binder from pre-defined pharmacophore highlights the important role of iterative docking/test approach in structure-based drug development.
+
+  http://dx.doi.org/10.7554/eLife.00857.026
+
+Figure 8.
+
+( ) Atomic model of the new inhibitor BAF31 (our most tightly binding BAF) derived from the refined pharmacophore (Figure 7, Figure 1F) in the second cycle, viewed perpendicular to the fiber axis on the left and down the fiber axis on the right. In panel ( ), one important hydroxyl group forming hydrogen bonds to Lys16 residue of Aβ is highlighted by a magenta circle. ( ) A representative NMR band (left panel) of mixture of Aβ fiber with the compound BAF31 compares with that (right panel) of Aβ fiber the derivative BAF31ΔOH which omits that important hydroxyl group. Their full NMR spectrums showing the same trend are shown in Figure 8—figure supplement 1. ( ) Cell survival rates after 24 hr incubation with Aβ (0.5 µM), the molar ratio (1:5) of Aβ and the compound is comparable with the ratio in NMR binding experiment ( ). ( ) Notably, the elimination of one hydrogen bond from BAF31 (the derivative BAF31ΔOH) causes both the marked decrease in inhibition of Aβ toxicity to HeLa cells ( ) and the loss of NMR binding to Aβ fibers ( ).
+
+  http://dx.doi.org/10.7554/eLife.00857.027
+
+Figure 8—figure supplement 1.
+
+( ). 1D 1H NMR spectrum of BAF31 (100 µM) without (in black) and with Aβ  fiber (12.5 µM monomer equivalent, in a green color). The magnified peaks are shown in the right panel to highlight the peak differences. ( ). NMR spectrum of its derivative BAF31ΔOH (100 µM) when BAF31 is modified by the removal of a key hydroxyl group, without or with Aβ  fiber (0 µM, 12.5 µM). The significant difference in NMR signal reduction between the BAF31 and BAF31ΔOH further validates the model of BAF31docked onto Aβ fibers.
+
+  http://dx.doi.org/10.7554/eLife.00857.028
+
+Figure 9.
+
+Structural models of BAF30 (green sticks) docked on Aβ fiber structure (in a light yellow color) are shown in (  and  ). The important polar (black hydrogen bonds) interaction between BAF30 and single β-sheet of Aβ fiber, as well as shape complimentary between the aromatic rings of BAF30 and the hydrophobic patches of Aβ fiber are highlighted respectively. Schematic representation of the polar and nonpolar interactions of BAF30 with Aβ fiber is shown in panel ( ). The magenta circles highlight two important hydroxyl groups which are absent in BAF30 derivatives. ( ). The chemical structure of each derivative is listed. The dark blue open circles indicate the deletion of the important hydroxyl group. The red color in chemical structures indicates the addition of atoms or groups to BAF30. ( ). HeLa cell survival rates in the presence of Aβ (0.5 µM monomer equivalent) and BAF30 or the derivatives are compared. The hydrogen bonds between BAF30 and Lys16 residues of Aβ fiber are important for binding of Aβ fiber and inhibition of Aβ toxicity. With additional groups at the opposite side of hydrogen binding sites, the derivative BAF30αR showed little change in toxicity inhibition. However, two BAF30 derivatives (σOHAαOH and σOHAΔOHBαCOO), which alter or delete the two important hydroxyl groups (magenta circles in panel  ) of BAF30 that form hydrogen bonds to Lys16, showed a significant decrease in the toxicity inhibition. Furthermore, when BAF30 was modified by shifting both hydroxyl groups (  and  ) to their neighboring positions, the derivative BAF30σOHABαCH  almost lost the inhibition of Aβ toxicity. The rescuing percentage (%) is defined in ‘Materials and methods’.
+
+  http://dx.doi.org/10.7554/eLife.00857.029
+
+Figure 10.
+
+The carbonyl group is used to represent the H-bond acceptor (or negative charge) of BAFs, and the naphthalene ring is used to represent the planar aromatic portion of BAFs. Based on the rounds of computing search and experimental test, the detailed description about essential interactions and geometrical parameters are in ‘Materials and methods’.
+
+  http://dx.doi.org/10.7554/eLife.00857.030
+
+Figure 11.
+
+As illustrated in ( ), BAFs bind to in-register β-sheets. Our structure-based approach searches for BAFs based on in-register β-sheets in Aβ fibers. These BAFs are predicted to bind along the flat hydrophobic surfaces of the fibers and are anchored by polar sidechains of Lysine residues. The Cβ distances between the Lys residues interacting with the BAFs are ∼9.6 Å following the stacked arrangement of in-register β-sheets. Orange G, as well as screened BAFs, favorably interact with the in-register fiber and are compatible with the geometry of the Lys residues aligned in in-register β-sheets. As illustrated in ( ), BAFs cannot bind to out-of-register β-sheets. The estimation of Cβ distance between the lysine residues, based on three out-of-register β-sheets structures previously determined (Laganowsky et al., 2012; Liu et al., 2012), ranges from 11 Å to 14 Å, quite different from the ∼9.6 Å measured in in-register β-sheet. We speculate that the BAFs are unable to bind to out-of-register β-sheets, and this difference accounts for the diminished toxicity that accompanies compound binding. Supporting this is our in vitro cell toxicity tests (Table 7 and Figure 11—figure supplement 1).
+
+  http://dx.doi.org/10.7554/eLife.00857.031
+
+Figure 11—figure supplement 1.
+
+To assess if BAFs inhibit Aβ toxicity by directly interfering with toxic Aβ oligomers, four BAFs —1,11,26,31—, showing the inhibition to Aβ toxicity, were incubated with pre-formed Aβ oligomer and then tested by MTT cell viability assay using HeLa cell line. None of the BAFs significantly reduces toxicity of pre-formed Aβ oligomer. Aβ oligomer was prepared by incubating purified Aβ  in PBS for 4 hr at 37°C at the concentration of 5 µM without agitation. Pre-formed Aβ oligomer was mixed with four different BAFs (Aβ /BAFs = 1:1 molar ratio) and further incubated for 15 min to allow potential binding of BAFs to pre-formed oligomer. The final concentration of Aβ oligomer as monomer is 0.5 µM, the same as what we test Aβ toxicity in MTT cell viability assay.
+
+  http://dx.doi.org/10.7554/eLife.00857.032
+
+Figure 12.
+
+BAFs (green) bind to the side of amyloid fibers, stabilizing the fiber, and shifting the equilibrium from smaller and more toxic oligomers towards fibers. This shift in equilibrium reduces amyloid toxicity.
+
+  http://dx.doi.org/10.7554/eLife.00857.034
+
+Figure 13.
+
+A subtlety of our procedure for compound discovery is that it involves both parallel ( ) and antiparallel ( ) amyloid β-sheets. In the X-ray structure of orange G bound to the segment Aβ (KLVFFA) of Aβ, the sheets are antiparallel ( ). The library of compounds is initially selected based on docking to the antiparallel β-sheet of Aβ . In the next step of our procedure, each compound is further screened against the solid-state-NMR-derived model of full-length Aβ fiber, which is a parallel sheet ( ). The structure models of orange G docked onto Aβ  structure and full-length Aβ model are shown in Figure 13—figure supplement 1. As simplified here in (  and  ), sulfate ions (red) of orange G are respectively hydrogen bonded to two lysine residues (light brown), which keep nearly identical geometry (the same ∼9.6 Å distance between the two lysine residues) in either parallel or antiparallel sheet. Evidence that orange G, as well as BAF compounds identified by our procedure, all bind to both antiparallel and parallel sheets is given by the NMR experiments summarized in Figure 5, where orange G and BAFs are shown to bind to both Aβ  and full-length Aβ fibers. Apparently both parallel and antiparallel amyloid β-sheets are effective in binding to the same compounds.
+
+  http://dx.doi.org/10.7554/eLife.00857.035
+
+Figure 13—figure supplement 1.
+
+( ). The side view of orange G (in an orange color) docked on the Aβ  fiber (in a grey color) with a predicted binding energy of—8 kcal/mol. ( ) side view of orange G (in an orange color) docked on the Aβ full fiber (in a light pink color) with a predicted binding energy of—9 kcal/mol. The charge interactions between the orange G and Lysine 16 are highlighted by dark grey lines.
+
+  http://dx.doi.org/10.7554/eLife.00857.036
+

@@ -1,0 +1,222 @@
+RNA Framework: an all-in-one toolkit for the analysis of RNA structures and post-transcriptional modifications
+Abstract
+
+RNA is emerging as a key regulator of a plethora of biological processes. While its study has remained elusive for decades, the recent advent of high-throughput sequencing technologies provided the unique opportunity to develop novel techniques for the study of RNA structure and post-transcriptional modifications. Nonetheless, most of the required downstream bioinformatics analyses steps are not easily reproducible, thus making the application of these techniques a prerogative of few laboratories. Here we introduce RNA Framework, an all-in-one toolkit for the analysis of most NGS-based RNA structure probing and post-transcriptional modification mapping experiments. To prove the extreme versatility of RNA Framework, we applied it to both an in-house generated DMS-MaPseq dataset, and to a series of literature available experiments. Notably, when starting from publicly available datasets, our software easily allows replicating authors' findings. Collectively, RNA Framework provides the most complete and versatile toolkit to date for a rapid and streamlined analysis of the RNA epistructurome. RNA Framework is available for download at: http://www.rnaframework.com.
+
+INTRODUCTION
+
+The advent of Next-Generation Sequencing (NGS) made possible the development of several novel techniques for the comprehensive characterization of the RNA epistructurome (1), a term we recently coined to collectively define both RNA structure and the set of post-transcriptional modifications of the transcriptome of an organism.
+
+RNA footprinting experiments, aimed to interrogate the secondary/tertiary structure of RNA molecules, make use of either chemical reagents or nucleases that are able to specifically modify/cleave either single- or double-stranded RNA residues. Most high-throughput RNA footprinting methods, such as PARS, SHAPE-seq, DMS-seq, Structure-seq, CIRS-seq, icSHAPE and SPET-seq (2–9), are based on the detection of reverse transcriptase (RT) drop-off due to a nuclease cut (e.g. S1 Nuclease, cutting unpaired RNA residues) or to the presence of chemicals-mediated adducts on the free 2′-OH of the ribose moiety (e.g. SHAPE reagents, modifying structurally flexible residues), or due to modifications on the Watson-Crick face of nucleobases (e.g. Dimethyl sulfate, DMS, alkylating unpaired A/C residues). More recently, mutational profiling approaches (MaP) have emerged, such as SHAPE-MaP, RING-MaP and DMS-MaPseq (10–12). These methods are based on the use of special RT enzymes (e.g. TGIRT-III (10)) or reverse transcription conditions (11,12) enabling read-through at sites of adduct formation/modification, that are then recorded as mutations in the resulting cDNA molecule. Readout of these experiments is a reactivity profile that can be incorporated by RNA structure prediction software, such as ViennaRNA (13) or RNAstructure (14), in the form of constraints (or restraints) to guide in silico folding of the RNA molecule. These constraints are usually converted into pseudo-free energy terms that are then used to adjust the free energy contribution of each base-pair. Such incorporation of experimentally-derived footprinting data has been proven to greatly increase the accuracy of prediction algorithms (6,15–17).
+
+RNA post-transcriptional mapping experiments either exploit specific chemical properties of modified nucleobases in order to achieve single-base resolution mapping, or otherwise make use of specific antibodies to selectively immunoprecipitate (IP) RNA fragments bearing the modified residues. Only a handful of the over 100 RNA post-transcriptional modifications known to date (18) have been mapped. Nucleotide methylations (and hydroxymethylations) such as m6A, m1A, m5C and hm5C can be readily mapped by immunoprecipitation (19–23), an approach generically known as MeRIP-seq (methylated RNA immunoprecipitation). Beside IP, m5C can also be detected by bisulfite sequencing (24,25), a single-base resolution approach largely used to map m5C in genomic DNA, although it cannot discriminate hm5C residues. To date, only a few other key modifications can be mapped by means of single-base resolution methods. Pseudouridine (Ψ) mapping by either Ψ-seq or Pseudo-seq (26,27), is based on the RT drop-off induced by the alkali-resistant adduct formed between N-cyclohexyl-N′-(2-morpholinoethyl)carbodiimide metho-p-toluenesulfonate (CMCT) and the N3 of Ψ. 2′-O-Methylation (2′-OMe) mapping by 2OMe-seq is based on the differential processivity of the RT through 2′-OMe residues under limiting dNTP concentrations (28), whereas an alternative approach named RiboMeth-seq is based on the increased resistance of 2′-OMe residues toward alkaline hydrolysis (29,30).
+
+Some attempts have been made to realize tools aimed at the analysis of the aforementioned experiments, although most of them are only able to handle individual protocols. StructureFold, Mod-seeker, Spats and ShapeMapper (31–34) have been designed to respectively analyze Structure-seq, Mod-seq, SHAPE-seq and SHAPE-MaP experiments. They all require a control sample to perform background subtraction, and thus are not suitable for the analysis of similar approaches lacking an untreated control, like DMS-seq and DMS-MaPseq. RME (35), although suffering of the same limitation of requiring a control sample, is more versatile as it can analyze structure-probing data from diverse RT drop-off methods, whereas it is not able to handle mutational profiling approaches. Much more complicated is the situation when looking at RNA post-transcriptional modification mapping experiments. Several tools have been specifically designed for the analysis of m6A MeRIP-seq experiments, such as MeTCluster, DRME, MeRIP-PF, MeTDiff and HEPeak (36–40), while to our knowledge no tool is currently available for the analysis of single-base resolution mapping experiments such as Ψ-seq, Pseudo-seq, 2OMe-seq and RiboMeth-seq.
+
+We here present RNA Framework, the first comprehensive tool for the analysis of both RNA footprinting and RNA post-transcriptional modification mapping experiments. We show the ability of RNA Framework to deal with most RNA epistructurome NGS-based techniques by both analyzing an in-house produced DMS-MaPseq dataset and demonstrating its ability to replicate published analyses starting from raw data of several different experimental protocols.
+
+MATERIALS AND METHODS
+
+General RNA Framework structure
+
+RNA Framework is written in Perl 5, and has multi-thread support. It consists of a suite of independent tools (Figure 1), built on top of a set of object-oriented modules enabling input/output of different file formats (FASTA, Vienna, CT etc.), process handling, nucleic acid sequence manipulation, SVG graphics generation, and more. A detailed API reference will be provided in future releases.
+
+Reference index generation (rf-index)
+
+The rf-index module enables the automatic generation of Bowtie v1 and v2 (41,42) reference indexes. This tool requires an internet connection as it relies on querying the UCSC Genome Browser database (43) to obtain transcript annotations and reference genome sequences. It requires the reference genome assembly (a complete list of UCSC available assemblies can be found at https://genome.ucsc.edu/FAQ/FAQreleases.html), and the name of the UCSC MySQL table containing the gene annotations (a complete list of available tables can be found at https://genome.ucsc.edu/cgi-bin/hgTables). The user has also the possibility to choose whether building a reference using either protein coding or non-coding transcripts only. Index generation relies on BEDTools (44) to extract transcript sequences, and on the bowtie-build (or bowtie2-build) utility shipped with the Bowtie package. Alternatively, pre-build indexes can be automatically retrieved from our webserver (available at http://www.rnaframework.com/indexes.html).
+
+Reads mapping (rf-map)
+
+The rf-map module can process any number of FastQ files, from both single-read or paired-end layout experiments. Mixed layout samples can be processed in parallel. It relies on Cutadapt (45) for sequencing adapters and low quality bases clipping, and on Bowtie v1 or v2 for reads mapping. Output alignments are automatically sorted and converted to BAM format (if required) using SAMtools (46).
+
+Counting RT drop-off rates, mutations and coverage (rf-count)
+
+The rf-count module constitutes the core component of the framework. It can process any number of SAM/BAM files to calculate per-base RT drop-off rates (or mutations) and coverage. Counts are reported using a proprietary binary format, named RNA Count (RC). RC files store transcript sequences, per-base RT-stop/mutation counts, per-base read coverage, and the total number of reads covering the transcript (Table 1).
+
+Additionally, the RC end-of-file (EOF) stores the number of total mapped reads in the experiment (uint64_t), the RC version (uint16_t), and a seven-character long EOF marker. RC files can be indexed for fast random access. RC index files (RCI) are automatically generated by rf-count.
+
+When analyzing MaP experiments, a substantial portion of the structural signal is encoded as deletions in the reverse transcribed cDNA molecules. Since when performing read mapping aligners often report a single possible alignment for a deletion, although multiple equally-scoring alignments are possible, rf-count also performs either the left realignment, or the removal, of unambiguously aligned deletions by using a previously described approach (47). Briefly, the portions of the sequence surrounding the deletion are concatenated, and the resulting sequence is stored. Then, the deletion is slid in one nucleotide steps along the sequence, and each time the surrounding sequences are extracted and concatenated. If the stored sequence matches any of the sequences generated during deletion sliding, then the deletion is marked as ambiguous (Figure 2A).
+
+Normalization of structure probing data (rf-norm)
+
+The rf-norm module processes RNA structure probing experiments' RC files to perform reactivity normalization. To ensure the maximal analysis flexibility, rf-norm currently implements four different scoring and three different normalization schemes. The following scoring schemes are available: Ding et al. (5). Per-base signal is calculated as the ratio of the natural log(ln) of the raw count of RT-stops/nuclease cuts at a given position of a transcript, to the average of the ln of RT-stops/nuclease cuts along the whole transcript:
+\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\begin{equation*}{U_i} = \frac{{\ln \left( {{n_{Ui}} + p} \right)}}{{\left( {\mathop \sum \nolimits_{j = 0}^l \frac{{\ln \left( {{n_{Uj}} + p} \right)}}{l}} \right)}}{\rm{\;}}\end{equation*}\end{document}\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\begin{equation*}{\rm{\;}}{T_i} = \frac{{{\rm{ln}}\left( {{n_{Ti}} + p} \right)}}{{\left( {\mathop \sum \nolimits_{j = 0}^l \frac{{{\rm{ln}}\left( {{n_{Tj}} + p} \right)}}{l}} \right)}}{\rm{\;}}\end{equation*}\end{document}. where nUi and nTi are respectively the raw read counts in the untreated and treated samples at position i of the transcript, l is the transcript's length, and p is a pseudocount added to deal with non-covered regions. Ui and Ti are respectively the normalized number of RT-stops at position i in the untreated and treated samples. Score at position i is then calculated as:
+\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\begin{equation*} \;{S_i} = \;{\rm{max}}\left( {0,\;\left( {{T_i} - {U_i}} \right)} \right) \end{equation*}\end{document}. Rouskin et al. (4). Oppositely to the previous scoring scheme, this method does not need an untreated control sample. Raw per-base RT-stop counts are used as a direct measure of the reactivity signal.. Siegfried et al. (12). This method takes into account both an untreated control sample, and (optionally) a denatured control sample. Per-base raw signal is calculated as:
+\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\begin{equation*}\;{S_i} = \frac{{\frac{{{n_{Ti}}}}{{{c_{Ti}}}} - \frac{{{n_{Ui}}}}{{{c_{Ui}}}}}}{{\frac{{{n_{Di}}}}{{{c_{Di}}}}}}{\rm{\;}}\end{equation*}\end{document}. where nTi, nUi, and nDi are respectively the mutation counts in the treated, untreated, and denatured samples at position i of the transcript, while cTi, cUi, and cDi are respectively the reads covering position i of the transcript in the treated, untreated, and denatured samples. When no denatured control sample is provided, raw signal is simply calculated as:
+\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\begin{equation*} \;{S_i} = \frac{{{n_{Ti}}}}{{{c_{Ti}}}}\; - \frac{{{n_{Ui}}}}{{{c_{Ui}}}} \end{equation*}\end{document}. Zubradt et al. (10). Oppositely to the previous scoring scheme, this method does not need an untreated control sample. Per-base raw signal is calculated as:
+\documentclass[12pt]{minimal}
+\usepackage{amsmath}
+\usepackage{wasysym} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{amsbsy}
+\usepackage{upgreek}
+\usepackage{mathrsfs}
+\setlength{\oddsidemargin}{-69pt}
+\begin{document}
+}{}\begin{equation*}\;{S_i} = \;\frac{{{n_{Ti}}}}{{{c_{Ti}}}}\end{equation*}\end{document} 
+
+where nTi and cTi are respectively the mutations count and the read coverage at position i of the transcript.
+
+Following score calculation, raw reactivities can be normalized using one of the following normalization schemes: 2–8% normalization. From the top 10% of raw reactivity values, the top 2% is discarded, then each reactivity value is divided by the average of the remaining 8%. This generally yields reactivities ranging from 0 to ∼2.. 90% Winsorizing. Raw reactivity values above the 95th percentile are set to the 95th percentile and raw reactivity values below the 5th percentile are set to the 5th percentile, then each reactivity value is divided by the 95th percentile. Yields reactivities ranging from 0 to 1.. Box-plot normalization. Raw reactivity values more than 1.5 times greater than the interquartile range (the numerical distance between the 25th and 75th percentiles) above the 75th percentile are removed. After excluding these outliers, the next 10% of remaining reactivity values are averaged, and all reactivities (including outliers) are divided by this value. This generally yields reactivities ranging from 0 to ∼1.5. 
+
+While 90% Winsorizing yields normalized reactivities ranging from 0 to 1 (respectively indicating residues with a low or high propensity toward single-strandedness), 2–8% normalization and box-plot normalization yield reactivities ranging from 0 to >1. These values can be further remapped to values ranging from 0 to 1 by applying the approach previously proposed by Zarringhalam et al. (48). Briefly, values <0.25 are linearly mapped to values in the range 0-0.35, values ≥0.25 and <0.3 are linearly mapped to values in the range 0.35–0.55, values ≥0.3 and <0.7 are linearly mapped to values in the range 0.55–0.85, and values ≥0.7 are linearly mapped to values in the range 0.85–1. Normalization can be performed either in a single step on the whole transcript or using a sliding window approach. The user can moreover specify which bases should be considered during normalization (e.g. A/C for DMS treatment, G/U for CMCT treatment etc.). For each transcript being analyzed, the rf-norm module outputs an XML file reporting the used scoring/normalization parameters, the transcript's sequence, and the per-base normalized reactivities.
+
+RNA secondary structure prediction (rf-fold)
+
+The rf-fold module is designed to allow transcriptome-wide reconstruction of RNA structures, starting from XML files generated by the rf-norm tool. Predictions can be performed using either the ViennaRNA package (13) or RNAstructure (14). Folding can be either computed in a single step on the whole transcript or using a previously described sliding window approach (12). This windowed folding approach consists of 3 stages (Figure 2B). At each stage, normalized reactivities are included in the form of soft constraints. In stage I (optional), a window is slid along the transcript, and potential pseudoknots are detected using the ShapeKnots algorithm (16). The user can choose between the original algorithm, built on top of RNAstructure, or an RNA Framework-specific implementation, built on top of the ViennaRNA package. The latter has comparable performances with transcripts up to 250 nucleotides in length but becomes exponentially faster as the transcript's length increases (Figure 2C). The rf-fold module can support even very complex pseudoknotted RNA topologies thanks to the use of an expanded dot-bracket notation's alphabet (Figure 2D), similar to the one employed by the Stockholm format of Rfam (49). Predicted pseudoknotted base-pairs are retained if they appear in >50% of the analyzed windows, and if their average reactivity is below a user-defined threshold. In stage II, a window is slid along the transcript, and the partition function is calculated. If stage I has been performed, pseudoknotted base-pairs are hard-constrained to be single-stranded. Predicted base-pair probabilities are then averaged across all windows in which they have appeared, and base-pairs occurring with >99% probability are retained, and hard-constrained to be base-paired in stage III. In stage III, a window is slid along the transcript, and minimum free energy (MFE) folding is performed, including hard-constraints derived from stages I and II. Predicted base-pairs are retained if they appeared in >50% of the analyzed windows. At this stage, if step I has been performed, pseudoknotted base-pairs are added back to the structure, and the free energy is computed. It is worth noting that, at all stages, increased sampling is performed at both 5′ and 3′ ends to avoid end biases. Predicted structures can be reported either in Vienna format (dot-bracket notation), or in connectivity table (CT) format. The module also produces Wiggle track files containing per-base Shannon entropies, calculated as:  where pi is the probability of base i of being base-paired (12), Furthermore, dot-plot files of base-pairing probabilities are produced, along with vector graphical reports in SVG format, reporting a bar-plot of per-base reactivities, the predicted structure, a chart of per-base Shannon entropies, and base-pairing probabilities.
+
+Optimization of RNA folding parameters (rf-jackknife)
+
+Incorporation of RNA footprinting-derived constraints into RNA folding algorithms is usually performed through the formula (15):  where m is the slope, b is the intercept, and the pseudoΔG term represents the pseudo-free energy contribution of nucleotide i. Tuning of slope and intercept on a set of reference RNA structures allows determining the values yielding the prediction that better approximates the true reference structure, an operation commonly known as grid search, or jackknifing. Although this represents a key step in RNA structure inference experiments, as the optimal slope/intercept pair can vary in an experiment-to-experiment fashion, no tool exists to date (to our knowledge) which allows performing automatic grid search. The rf-jackknife module takes a set of XML reactivity files generated by rf-norm, and a set of reference RNA structures, and iteratively calls the rf-fold module by tuning the slope and intercept parameters. For each slope/intercept pair, the structure is predicted and compared to the reference using two metrics: the Positive Predictive Value (PPV), measured as the fraction of base-pairs present in the predicted structure that are also present in the reference structure, and the sensitivity, measured as the fraction of base-pairs in the reference structure that are also present in the predicted structure. The module outputs the optimal slope/intercept pair, as well as three CSV tables respectively reporting the PPV, the sensitivity, and the geometric mean of the 2 metrics for each slope/intercept pair.
+
+Comparison of predicted structures to reference (rf-compare)
+
+The rf-compare module allows comparing a set of rf-fold inferred structures to a set of reference structures, thus allowing assessing the overall accuracy of the experiment. For each structure pair the module returns the PPV and sensitivity. Moreover, for each comparison it generates an SVG graph, reporting specular arc plots for the reference and compared structures, with base-pairs colored according to their presence in both structures.
+
+Analysis of RNA immunoprecipitation experiments (rf-peakcall)
+
+The rf-peakcall module allows performing peak calling of RNA immunoprecipitation (IP) experiments starting from RC files generated by the rf-count module, both in the presence or in the absence of a control (or input) sample. Analysis is performed by sliding a window along the transcript, and calculating the signal enrichment in the IP sample versus the control (or input) sample as:
+
+   
+
+where w is the window's length, i and i+w are the start and end position of the window, μIP(i..i+w) and μCtrl(i..i+w) are respectively the mean coverage within the analyzed window in the IP and in the control samples, MdIP and MdCtrl are respectively the median transcript's coverage in the IP and control samples, and p is a pseudocount added to deal with non-covered regions.
+
+If no control sample is provided, the signal enrichment is simply calculated as:  
+
+A P-value is then calculated for each window with an enrichment above a user-defined threshold using a Fisher's exact test. The following 2 × 2 contingency matrix is defined for each threshold-passing window:
+
+If no control sample is provided, the contingency matrix is instead defined as:
+
+where μIP windows is the average of each possible window in the IP sample. P-values are Benjamini-Hochberg corrected. Consecutive significantly enriched windows are then merged together, and P-values are combined by Stouffer's method.
+
+Analysis of single-base resolution post-transcriptional modification mapping experiments (rf-modcall)
+
+The rf-modcall module allows performing analysis of single-base resolution RNA post-transcriptional modification mapping experiments such as Ψ-seq/Pseudo-seq, 2OMe-seq and RiboMeth-seq. For each position of a transcript 2 measures are computed: the score, a measure of the modification's enrichment, and the ratio, a measure of the modification stoichiometry. For Ψ-seq/Pseudo-seq and 2OMe-seq experiments the score and the ratio are computed as previously described (26–28):   where Si and Ri are respectively the score and the ratio at position i, w is the size of a window centered on position i, nTi and nUi are respectively the number of RT-stops in the CMCT-treated (for Ψ-seq/Pseudo-seq) or low dNTP (for 2OMe-seq) sample and in the CMCT-untreated (for Ψ-seq/Pseudo-seq) or high dNTP (for 2OMe-seq) sample, and cTi is the read coverage at position i in the CMCT-treated (for Ψ-seq/Pseudo-seq) or low dNTP (for 2OMe-seq) sample.
+
+For RiboMeth-seq experiments the score and the ratio are instead calculated as:   where ni is the number of RT drop-off at position i, and ω is a weighting parameter linearly varying in 0.1 increments with respect to distance (d) from position i, so that ω = 0.5 for d = ±6, and ω = 1 for d = ±1. For each transcript being analyzed, the rf-modcall module outputs a XML file reporting the transcript's sequence, and the per-base score and ratio.
+
+Additional utilities
+
+In addition to the aforementioned modules, two additional utilities are shipped with the RNA Framework package. The rf-combine module allows combining XML files from multiple experiments (generated either by rf-norm or rf-modcall) into a single profile (e.g. multiple replicates, or two complementary experiments such as DMS and CMCT probings in CIRS-seq experiments). When replicates are combined, the resulting XML files will contain an optional error tag for each combined measure (reactivity-error for experiments analyzed using rf-norm, and score-error/ratio-error for experiments analyzed using rf-modcall). The rf-wiggle module allows processing both RC or XML files into Wiggle tracks for visualization in IGV (50) or other genomics data visualization browsers.
+
+Software help and support
+
+A detailed RNA Framework documentation can be found at the address: http://rnaframework.readthedocs.io/en/latest/. Users can post support requests or report bugs/issues using either the GitHub interface (https://github.com/dincarnato/RNAFramework/issues) or the forum (https://groups.google.com/forum/#!forum/rnaframework). News and updates are available through our blog at the address: http://www.rnaframework.com/blog.
+
+Comparison with ShapeMapper 2
+
+Paired-end FastQ files for E. coli TPP, 5S, 16S, 23S, and tRNAPhe, T. thermophila Group I intron and O. iheyensis Group II intron SHAPE-MaP data (untreated, 1M7-treated denatured and 1M7-treated in vitro folded) from Siegfried et al. (12) have been analyzed using ShapeMapper 2 with parameters: –min-depth 1000 –min-mapq 10 –min-qual-to-count 20 –indiv-norm. For analysis with RNA Framework, reads were mapped using rf-map with parameters: -b2 -cqo -cq5 20 -mp ‘–local –sensitive-local –mp 3,1 –rdg 5,1 –rfg 5,1 –dpad 30 –maxins 800 –ignore-quals –no-unal –dovetail’ -mo. Mapping parameters were selected to reflect those used by ShapeMapper 2. Count of mutations was performed using rf-count with parameters: -r -nm -m -es -cc. Reactivity normalization was performed using rf-norm with parameters: -sm 3 -nm 3 -n 1000. Folding was performed using either the ViennaRNA package (13) or RNAstructure (14), with default slope and intercept values (slope: 1.8 kcal/mol, intercept: -0.6 kcal/mol).
+
+DMS treatment
+
+A single colony of Escherichia coli strain DH10B was inoculated into 250 ml of LB medium without antibiotics and grown at 37°C with shaking (150 RPM) for ∼4 h, until OD  was ∼0.3 (log phase). 25 ml aliquots of bacteria were then pelleted by centrifugation at 1800g for 15 minutes (4°C). After centrifugation, medium was decanted, and cells from 25 ml of culture each were resuspended in 1 ml of structure probing buffer [50 mM HEPES–KOH pH 7.9; 100 mM NaCl; 3 mM KCl]. DMS was diluted 1:6 in 100% ethanol to a final concentration of 1.76 M. Diluted DMS was added to bacteria to a final concentration of ∼105 mM. Samples were incubated with moderate shaking (800 RPM) at 25°C for 2 min, after which reactions were immediately transferred on ice. DTT was added to a final concentration of 0.7 M to quench DMS, and samples were vigorously vortexed for 10 s. Bacteria were then pelleted by centrifugation at 10 000g for 30 s (4°C), and the supernatant was decanted. Pellets were then washed once with 1 ml Isoamyl alcohol (Sigma Aldrich, cat. W205702) to remove traces of water-insoluble DMS. Bacteria were then pelleted by additional centrifugation at 10 000g for 30 s (4°C), supernatant was decanted, and samples were snap-frozen in liquid nitrogen.
+
+DMS-MaPseq library preparation
+
+1 μg of DMS-treated RNA, either total, or rRNA-depleted using Ribo-Zero rRNA Removal Kit (Illumina), was fragmented in the presence of 10 mM MgCl  at 94°C for 8 min. RNA was end-repaired by treatment with 1 U rSAP (NEB) at 37°C for 30 min. After heat-inactivating the enzyme at 65°C for 5 minutes, RNA fragments were phosphorylated by treatment with 10 U T4 Polynucleotide kinase (NEB) in the presence of 1 mM final ATP at 37°C for 1 h. After reaction cleanup on RNA Clean & Concentrator™-5 columns (Zymo Research), 3′ and 5′ adapters were ligated to RNA fragments using the NEBNext® Small RNA Library Prep Set (NEB). RNA was then heat-denatured at 70°C for 5 min and incubated at room temperature for 5 min. Reverse transcription was carried out in a final volume of 10 μl, in the presence of 1 mM dNTPs, 10 pmol of SR RT primer (NEBNext® Small RNA Library Prep Set kit), 20 U RNaseOUT™ Recombinant Ribonuclease Inhibitor, and 100 U TGIRT™-III Reverse Transcriptase (InGex), by incubating at 50°C for 5 min, followed by 2 h at 57°C. Template RNA was degraded by adding 1 μl of 5 M NaOH and incubating at 95°C for 3 min. After reaction cleanup, cDNA was eluted in 20 μl nuclease-free water, and barcodes were introduced by 15 cycles of PCR in the presence of 25 pmol of each primer, and 25 μl NEBNext® High-Fidelity 2× PCR Master Mix.
+
+Deposited data
+
+Sequencing data have been deposited on the NCBI Gene Expression Omnibus (GEO) under the accession GSE111962.
+
+RESULTS AND DISCUSSION
+
+To demonstrate the features, versatility and easiness of use of RNA Framework, and its applicability to a wide range of cases, we here analyze an in-house produced DMS-MaPseq dataset, and re-analyze a set of previously published experiments, showing the ability of RNA Framework to replicate authors' analyses and findings.
+
+RNA structure probing experiments data analysis
+
+In order to demonstrate some of the RNA Framework features, we here produced a small DMS-MaPseq mutational profiling dataset by probing exponential phase E. coli cells with dimethyl sulfate (DMS, Supplementary Note 1). DMS is a cell-permeable reagent that modifies unpaired A and C residues. We produced libraries from both total RNA and ribo-depleted RNA (Figure 3A), that were mapped by rf-map using Bowtie v2. The resulting BAM files were combined and passed to rf-count to perform mutation count, revealing a mutational signature enriched on A and C residues (48.3% and 32.4% respectively), typical of DMS-MaPseq experiments. To determine optimal folding parameters (slope and intercept), we applied the Zubradt et al., 2016 scoring scheme (10) and box-plot normalization to 16S and 23S rRNA data through the rf-norm module and passed the resulting normalized XML files to the rf-jackknife module, along with the phylogenetically-inferred reference rRNA structures (51) to perform grid search (Figure 3B). This analysis revealed optimal slope and intercept values to be respectively 1.2 kcal/mol and –0.8 kcal/mol. We then applied the same normalization scheme to all other transcripts (Figure 3C), and performed constrained folding using the rf-fold module. Application of constraints derived from DMS probing data increased the overall prediction accuracy for both pseudoknotted (Figure 3D) and non-pseudoknotted (Figure 3E) structures.
+
+Beside DMS, SHAPE reagents are widely used as probes of RNA structural flexibility as they can form adducts with the free 2′-OH of the ribose moiety of structurally flexible residues. 1-methyl-7-nitroisatoic anhydride (1M7) is one of the best-known SHAPE reagents and can be used to readily probe RNA structures both in vitro and in vivo (although its suitability for in vivo probing is controversial (52)) on a small time-scale (half-life: ∼17 s at 37°C) (53). In a previous work Weeks et al. have applied SHAPE-MaP to probe the ex virio deproteinized structure of the HIV-1 genome (12). The original dataset was composed of three samples: an untreated control, a denatured control obtained by treating HIV-1 RNA with 1M7 under denaturing conditions (high temperature in the presence of formamide), and a 1M7-treated sample under native conditions (Supplementary Note 2). Samples were mapped to the HIV-1 genome (GenBank: M19921.2) using rf-map and Bowtie v2, then mutations were counted using rf-count. Raw reactivities were computed using the Siegfried et al. (2014) scoring scheme, and normalized by box-plot normalization using rf-norm (Figure 4A and B). The reconstructed SHAPE reactivity profile well resembled the original profile from Siegfried et al. (2014) (PCC = 0.91, Supplementary Figure S1A and B). Normalized data was then provided to rf-fold, and the structure was inferred using the windowed folding approach, using the original authors-defined parameters. Besides predicting the minimum expected accuracy (MEA) structure (Figure 4B), the algorithm also computed base-pairing probabilities and the Shannon entropy (Figure 4C). According to the authors, regions of low median SHAPE reactivity (Figure 4A) and low Shannon entropy (Figure 4C) correspond to stable secondary structure elements. In agreement with this observation, our algorithm successfully inferred key structural elements of the HIV-1 genome in these regions (Figure 4D).
+
+We further sought to compare the performances of RNA Framework to those of ShapeMapper 2 (33), the only other tool available to date for the analysis of SHAPE-MaP data, using a previously published dataset of in vitro folded transcripts subjected to SHAPE-MaP analysis (12). Pseudoknot-free structures were predicted using either the ViennaRNA package (13) or RNAstructure (14). Notably, while analysis conducted using RNAstructure with soft constraints derived by either tools yielded comparable results in terms of both PPV and sensitivity (median PPV/sensitivity: 0.87/0.89 for both tools, Supplementary Figure S2A), analysis conducted using the ViennaRNA package gave markedly better results with soft constraints inferred by RNA Framework (RNA Framework median PPV/sensitivity: 0.92/0.89, ShapeMapper 2 median PPV/sensitivity: 0.76/0.78, Supplementary Figure S2B). Although we have not further looked into the reasons of these differences, this data suggests that RNAstructure is less sensitive to small SHAPE reactivity variations than the ViennaRNA package and confirms the robustness of RNA Framework despite of the employed RNA structure prediction software.
+
+RNA post-transcriptional modification mapping data analysis
+
+To demonstrate data analysis of RNA post-transcriptional modification mapping experiments we re-analyzed three previously published datasets. The first two are datasets of m6A-seq and m1A-seq in HepG2 cells (20,21), while the second is a dataset of single-base resolution Ψ mapping by Pseudo-seq in exponential phase yeast (26). m6A has been reported by several authors to occur in highly conserved regions within the consensus sequence RRACH (mostly GGACH), in strict proximity to stop codons (20,23,54), while m1A has been reported to be mainly enriched in thermodynamically stable 5′-UTRs and proposed to occur in purine-rich contexts (21,22). Samples were mapped to the human transcriptome using rf-map and Bowtie v1, coverage was calculated using rf-count, and peaks were called using rf-peakcall (Supplementary Note 3, 4). In agreement with previous reports, m6A-seq peaks were enriched around stop codons, and motif discovery analysis revealed a significant enrichment of the core m6A consensus GGAC (P = 5.6e–14, Wilcoxon Rank Sum test, Figure 5A). As previously described, m6A peaks are more conserved than expected by chance (P = 1.9e–5, Wilcoxon Rank Sum test, Figure 5B). Conversely, m1A peaks are enriched toward TSSs, and motif enrichment analysis revealed the presence of the expected purine-rich motif (P = 9.0e–16, Figure 5C), beside an enrichment for CG-rich sequences (data not shown) in agreement with previous reports showing preferential positioning of m1A residue within CG-rich regions (21). Since m1A positive 5′-UTRs have been shown to be more thermodynamically stable than unmethylated 5′-UTRs, we further applied RNA Framework to the analysis of PARS data from HepG2 cells and compared length-adjusted MFE values for m1A positive versus m1A negative 5′-UTRs. As previously described, m1A positive UTRs form significantly more thermodynamically stable secondary structures (median: –57.8 kcal/mol) than their unmethylated counterparts (median: −49.2 kcal/mol, P < 2.2e–16, Figure 5D).
+
+To further show the ability of RNA Framework to deal with the analysis of post-transcriptional modification mapping experiments, we also re-analyzed a dataset of Ψ mapping by Pseudo-seq. Ψ is the most abundant RNA post-transcriptional modification and occurs on several rRNA sites. After mapping the Pseudo-seq dataset, composed of a CMC-treated (CMC+) and a CMC-untreated (CMC-) sample, on 18S and 25S sequences from Saccharomyces cerevisiae using rf-map and Bowtie v1, we counted RT drop-off rates using rf-count and proceeded to the analysis using rf-modcall (Supplementary Note 5). Analysis successfully identified known rRNA Ψ residues using the score metric (26), and their relative stoichiometry using the ratio metric (27) (Figure 5E, see Material and Methods).
+
+CONCLUSION
+
+The increasing interest RNA is receiving from the scientific community is rapidly leading to the generation of large amounts of NGS data. Despite this growing interest, efficient tools enabling fast and streamlined data analysis are still missing. We here presented RNA Framework, the to date most complete toolkit for the comprehensive analysis of NGS-based RNA structure and post-transcriptional modification mapping experiments. We demonstrated through different application cases that our software enables the rapid analysis of most NGS approaches developed to date, thus providing a cornerstone for the study of the RNA epistructurome.
+
+DATA AVAILABILITY
+
+RNA Framework is available at http://www.rnaframework.com. For support request or to report bugs a user group is available at https://groups.google.com/forum/#!forum/rnaframework. For news and walkthrough examples a blog is available at http://www.rnaframework.com/blog. Sequencing data have been deposited on the NCBI Gene Expression Omnibus (GEO) under the accession GSE111962.
+
+Supplementary Material
+
+Click here for additional data file. 
+
+Figure 1.
+
+Overview of the RNA Framework suite. Schematics of RNA Framework step-by-step analysis of RNA structure probing and post-transcriptional modification mapping experiments starting from FastQ files.
+
+Figure 2.
+
+RNA Framework features. ( ) Ambiguously mapped deletions removal by RNA Framework's rf-count for the accurate analysis of mutational profiling (MaP) experiments. ( ) Schematics of the rf-fold windowed RNA folding approach. ( ) Runtimes comparison for ShapeKnots and RNA Framework pseudoknots detection algorithms on a set of 21 randomly generated RNA sequences (3 × 50–100–250–500–750–1000–2000 nucleotides). ( ) Sample of the expanded dot-bracket alphabet implemented by RNA Framework to deal with complex topology pseudoknotted RNAs.
+
+Figure 3.
+
+DMS-MaPseq data analysis. ( ) Distributions of read mappings on different classes of transcripts in the total RNA and Ribo-depleted DMS-MaPseq libraries (top), and combined base mutation frequencies (bottom). ( ) Matrix of PPV/sensitivity geometric means calculated by rf-jackknife by tuning slope and intercept parameters on 16S and 23S rRNA reference structures. The optimal slope/intercept pair is marked by a green rectangle (slope: 1.2; intercept: –0.8). ( ) Example of raw DMS-MaPseq data normalization by rf-norm using the box-plot normalization method on RNase P (rnpB). ( ) Arc plot comparison of RNase P (rnpB) reference structure, and structure inferred by rf-fold both in the absence (top) and presence (bottom) of DMS-MaPseq soft constraints. Image was automatically generated by the rf-compare utility. ( ) Arc plot comparison of tRNA Val and Asn (valW and asnU) reference structures, and structures inferred by rf-fold both in the absence (top) and presence (bottom) of DMS-MaPseq soft constraints. Images were automatically generated by the rf-compare utility.
+
+Figure 4.
+
+SHAPE-MaP data analysis. ( ) Bar-plot of median SHAPE reactivity in 55 nt windows compared to median SHAPE reactivity along the whole HIV-1 genome. Low SHAPE reactivity regions correspond to stable secondary structure elements. ( ) Bar-plot of base-level SHAPE reactivity (top) and arc plot of HIV-1 MEA structure (bottom). Reactivity was capped to a value of 2 for graphical reasons. Plots were automatically generated by the rf-fold module. ( ) Plot of base-level Shannon entropy (top) and arc plot of base-pairing probabilities. Plots were automatically generated by the rf-fold module. ( ) Secondary structure models of key HIV-1 structural motifs. Models were generated using VARNA (55). Bases were colored according to their SHAPE reactivity.
+
+Figure 5.
+
+RNA post-transcriptional modification mapping experiments data analysis. ( ) Meta-gene plot of m6A peaks distribution and top enriched motif as detected by DREME (56). ( ) Box-plot of PhastCons scores from multiz20way alignment for m6A peaks (scaled to 200 nt with respect to the peak's center) compared to random mRNA windows of matching size. ( ) Meta-gene plot of m1A peaks distribution and top A-containing enriched motif as detected by DREME. ( ) Box-plot of 5′-UTR length-adjusted MFE values for m1A 5′-UTRs compared to non m1A 5′-UTRs. ( ) Bar-plots of raw RT drop-off signal in CMC– and CMC+ samples, score, and ratio in a 200 nt region of yeast 25S rRNA containing 6 known Ψ residues (highlighted in gray).
+

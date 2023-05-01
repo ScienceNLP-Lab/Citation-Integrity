@@ -1,0 +1,275 @@
+Monitoring Human-Induced Pluripotent Stem Cell-Derived Cardiomyocytes with Genetically Encoded Calcium and Voltage Fluorescent Reporters
+Summary
+
+The advent of the human-induced pluripotent stem cell (hiPSC) technology has transformed biomedical research, providing new tools for human disease modeling, drug development, and regenerative medicine. To fulfill its unique potential in the cardiovascular field, efficient methods should be developed for high-resolution, large-scale, long-term, and serial functional cellular phenotyping of hiPSC-derived cardiomyocytes (hiPSC-CMs). To achieve this goal, we combined the hiPSC technology with genetically encoded voltage (ArcLight) and calcium (GCaMP5G) fluorescent indicators. Expression of ArcLight and GCaMP5G in hiPSC-CMs permitted to reliably follow changes in transmembrane potential and intracellular calcium levels, respectively. This allowed monitoring short- and long-term changes in action-potential and calcium-handling properties and the development of arrhythmias in response to several pharmaceutical agents and in hiPSC-CMs derived from patients with different inherited arrhythmogenic syndromes. Combining genetically encoded fluorescent reporters with hiPSC-CMs may bring a unique value to the study of inherited disorders, developmental biology, and drug development and testing.
+
+Introduction
+
+The ability to reprogram adult somatic cells into pluripotent stem cells by a set of transcription factors has revolutionized biomedical research (Takahashi et al., 2007, Takahashi and Yamanaka, 2006). The generated human-induced pluripotent stem cells (hiPSCs) can be coaxed to differentiate into a variety of cell lineages (including cardiomyocytes [Zhang et al., 2009, Zwi et al., 2009]) that can then be utilized for the development of autologous cell-replacement therapies, disease modeling, and drug discovery (Robinton and Daley, 2012).
+
+In the cardiac field, hiPSC lines were established from healthy individuals (Zhang et al., 2009, Zwi et al., 2009) and from patients inflicted with acquired (heart failure) (Zwi-Dantsis et al., 2013) and inherited cardiac disorders. Among the latter, patient-specific hiPSC-derived cardiomyocytes (hiPSC-CMs) models of different inherited arrhythmogenic syndromes (Bellin et al., 2013, Caspi et al., 2013, Itzhaki et al., 2011a, Itzhaki et al., 2012, Jung et al., 2012, Moretti et al., 2010) and diverse cardiomyopathies (Lan et al., 2013, Sun et al., 2012) were established. The patient/disease-specific hiPSC-CMs were shown to recapitulate the disease phenotypes in culture, to provide mechanistic insights into disease processes, and to evaluate existing and novel therapies. Similarly, hiPSC-CMs were also proposed as a valuable tool for drug development (Mercola et al., 2013), demonstrating, for example, their value for safety pharmacology by screening the proarrhythmic effects of certain compounds (Braam et al., 2013, Liang et al., 2013, Zwi et al., 2009).
+
+One of the key prerequisites for achieving the goals of these applications is to develop efficient tools to study the functional properties of the hiPSC-CMs and specifically of their electrophysiological and excitation-contraction-coupling properties. To this end, different electrophysiological techniques (patch-clamp (Itzhaki et al., 2011a) and multielectrode extracellular potential recordings [Zwi et al., 2009]) and imaging modalities (using voltage- or calcium-sensitive fluorescent dyes) were utilized. While providing valuable information, these methodologies also display inherent limitations, such as relatively low-throughput (patch-clamp), limited electrophysiological information (extracellular recordings), phototoxicity (voltage and calcium sensitive dyes), and inability to obtain long-term repeated recordings (patch-clamp, fluorescent dyes). Consequentially, a method that allows long-term, serial, and cellular functional phenotyping of healthy and diseased hiPSC-CMs is direly needed, especially if it can be achieved in a non-invasive, high-resolution, and large-scale manner.
+
+The developments in the field of genetically encoded fluorescent indicators may provide a possible solution to the aforementioned challenges. Genetically encoded indicators are composed of a sensing element, which is usually fused to an autofluorescent protein (like circularly permuted enhanced GFP; cpEGFP) that alters its fluorescent intensity as a result of conformational changes in the sensing element. While utilized in numerous neuroscience-related experimental models (Akemann et al., 2010, Cao et al., 2013, Grienberger and Konnerth, 2012, Looger and Griesbeck, 2012, Tian et al., 2009), the use of similar indicators in non-neuronal tissues, such as the heart, has been more limited (Addis et al., 2013, Chong et al., 2014, Kaestner et al., 2014, Leyton-Mange et al., 2014). Here, we aimed to transfer these emerging technologies to the cardiac field, specifically focusing on genetically encoded calcium indicators (GECIs) (Grienberger and Konnerth, 2012, Kaestner et al., 2014, Tian et al., 2009) and genetically encoded voltage indicators (GEVIs) (Jin et al., 2012, Kralj et al., 2012, Leyton-Mange et al., 2014), in an attempt to establish experimental platforms to monitor the functional activity of hiPSC-CMs. To this end, we aimed to express GCaMP5G (Addis et al., 2013, Tian et al., 2009), a GECI that displays improved dynamic range, improved sensitivity, and maintains relatively stable expression levels, and ArcLight A242 (Cao et al., 2013, Jin et al., 2012, Leyton-Mange et al., 2014), a new variant of the Ciona intestinalis voltage-sensitive (CiVS)-based fluorescent protein voltage sensor (Barnett et al., 2012, Murata et al., 2005) super-family, in both healthy and diseased hiPSC-CMs.
+
+Results
+
+Expression of ArcLight in hiPSC-CMs
+
+Dermal fibroblasts from a healthy individual were reprogrammed to generate hiPSCs by retroviral delivery of SOX-2, KLF-4, and OCT4. The generated hiPSC colonies displayed characteristic morphology, expressed the pluripotency markers NANOG, SSEA4, OCT-4, and TRA-1-60 (Figure S1A), and maintained a normal karyotype (Figure S1B). Pluripotency of the hiPSCs was verified by the presence of cell derivatives of all three germ layers in differentiating EBs (Figure S1C) and by formation of teratomas in SCID-beige mice (Figure S1D). Finally, hiPSCs showed silencing of the three retroviral transgenes (Figure S1E) and reactivation of endogenous pluripotency genes NANOG, SOX2, and OCT4 (Figure S1F).
+
+Cardiomyocyte differentiation of the hiPSCs was achieved using a modification of the monolayer-based directed differentiation system (Wang et al., 2014). This resulted in efficient differentiation with the percentage of cardiac troponin I (cTnI)-positive cells, ranging from 80% to 95% in the different hiPSC lines used. Gene expression analysis revealed the expression of cardiac-specific genes (NKX2.5, MLC-2V, MYH-6, and MYH-7) by the hiPSC-CMs and the downregulation of pluripotent genes (Figure S1G). Immunostaining studies showed positive staining for sarcomeric α-actinin and cTnI (Figure S1H).
+
+The hiPSC-CMs were dispersed into single cells by enzymatic dissociation and plated on Matrigel-coated coverslips. Lentiviral transduction was used to deliver the ArcLight transgene to the plated cells, resulting in robust expression of the fluorescent reporter (Figure 1A). Importantly, as shown in Movie S1, the fluorescence levels of the ArcLight-expressing hiPSC-CMs changed during the cardiac cycle, with a reduction in fluorescence intensity concomitant with membrane depolarization (during the action potential), followed by a rise in fluorescence during membrane repolarization and at the resting state.
+
+To quantify the fluorescence changes, we utilized the line-scan mode of the confocal microscope (Figures 1A–1C). The optical signals derived were highly stable, allowing continuous recordings of several optically derived action potentials (APs) from the same cardiomyocyte (Figure 1B) and detailed characterization of each sampled AP (Figure 1C). Interestingly, similar to previous reports using intracellular recordings (Zhang et al., 2009), three types of hiPSC-CMs’ optical AP morphologies were noted (ventricular-, atrial-, and nodal-like; Figure 1D), suggesting the presence of different cardiomyocyte subtypes.
+
+Monitoring the Effects of Ion-Channel Modulators
+
+Next, we evaluated the ability of ArcLight to detect changes in the AP morphology of the hiPSC-CMs, focusing on alterations in AP duration (APD) because of the importance of this parameter for modeling inherited arrhythmogenic syndromes (short and long QT syndromes) and for the field of cardiac safety pharmacology. To this end, we applied specific ion-channel modulators designed to either block the slow (I ) or fast (I ) components of the delayed rectifier potassium current or to augment the late-sodium current (I ), simulating alterations in currents most relevant to the congenital long QT syndrome types 1, 2, and 3, respectively.
+
+Application of the I  blocker E4031 (500 nM) led to significant prolongation of the optical APD (Figure 1E, top left) in the hiPSC-CMs with APD  (time to 90% repolarization), increasing from 329 ± 22 ms to 571 ± 66 ms (p < 0.01, n = 27; Figure 1E, right). Interestingly, E4031 was highly arrhythmogenic in many hiPSC-CMs (48%), leading to development of early afterdepolarizations (EADs) and triggered beats (Figure 1E, bottom). Similarly, blocking of I  with chromanol-293B (30 μM) also prolonged APD  in the hiPSC-CMs (p < 0.01, n = 29, Figure 1F). Consistent with the notion that I  does not play as an important role in hiPSC-CMs repolarization as I , the arrhythmias induced by chromanol were significantly less frequent with only 3% of the cells displaying EADs. Finally, application of ATX-II (30 nM), known to augment I , also led to marked APD  prolongation (p < 0.01, n = 28; Figure 1G), which was associated with arrhythmogenic activity in 61% of the cells (Figure 1G, bottom). In contrast, application of vehicle-control solution (DMSO-0.1% v/v) did not alter APD  or induce EADs in the tested cells (from 378 ± 31 to 374 ± 35, n = 16; Figure 1H).
+
+Generation of Stable ArcLight-Expressing hiPSC Clones
+
+While lentiviral transduction led to robust expression of ArcLight and allowed long-term analysis of the hiPSC-CMs, it requires repeating the process for any new batch of hiPSC-CMs studied. To overcome this limitation, we aimed to generate a stable transgenic hiPSC line that continuously expresses ArcLight. Undifferentiated hiPSCs were transduced with a lentiviral vector encoding for ArcLight under the control of a constitutive promoter, CAG. The transduced hiPSC colonies were propagated and further enriched using fluorescence-activated cell sorting selection based on ArcLight fluorescent levels. This resulted in an increase in the mean proviral integration from 9.7 to 12.7 copies/cell. This process also allowed derivation of relatively homogeneous hiPSC clones (Figure 2A), showing high ArcLight expression levels even after several passages (Figure 2A).
+
+The generated ArcLight-hiPSC clones maintained a normal karyotype (Figure S2A) and continued to fulfill the criteria defining hiPSCs, including expression of different pluripotent markers (Figure 2B), differentiation into cell derivatives of the three germ-layers both in vitro (Figure S2B) and in vivo (Figure S2C), silencing of the three retroviral transgenes (Figure S2D), and reactivation of endogenous pluripotency genes (Figure S2E). The ArcLight-hiPSCs could be efficiently coaxed to differentiate into cardiomyocytes (Movie S2). Gene expression and immunostaining studies revealed expression of cardiac-specific genes by the ArcLight-hiPSC-CMs at both the mRNA and protein (Figures 2C and 2D) levels, while confirming continued expression of the ArcLight reporter (Figures 2E and S2F). Importantly, ArcLight fluorescent levels in the hiPSC-CMs monolayers cyclically changed during the cardiac cycle (Figure 2E; Movie S3). Note the decrease in fluorescent intensity (during membrane depolarization) that immediately precedes the eventual cells contraction.
+
+Confocal line scans of dispersed single-cell ArcLight-hiPSC-CMs showed typical optical APs (Figure 2F). This allowed acquisition of optical signals from several ArcLight-hiPSC-CMs and quantitative analysis of the distribution of AP-derived parameters (such APD ) from a large population of cells (Figure 2G). Importantly, while the use of voltage-sensitive dyes may be hampered by cellular toxicity and reduced photostability, the optical signals derived from the ArcLight-hiPSC-CMs were highly stable (Figures 3A and 3B), without any obvious signs of toxicity. This allowed continuous acquisition of optical APs for prolonged periods, both acutely (Figure 3A) and during repeated cellular phenotyping of the same cells over several days (Figure 3B).
+
+In further validation experiments, we loaded the ArcLight-hiPSC-CMs with the voltage-sensitive dye, di-8-ANEPPS. Fluorescence emission was then split using a dichroic mirror and collected by two photomultipliers simultaneously. When comparing the ArcLight optical signals (black tracing in Figure 3C) with those derived from the voltage-sensitive dye (red-tracing), we noted a relatively good correlation between the two signals. This was manifested by a high correlation (R2 = 0.98) between the APD  values measured by both methods from the same cells (Figure 3D). However, similar to previous reports in neurons (Jin et al., 2012) and hESCs-CMs (Leyton-Mange et al., 2014) suggesting a delayed response of ArcLight at high frequencies, the phase 0 of the ArcLight optical AP was delayed compared to the di-8-ANEPPS signal (Figure 3C).
+
+Importantly, ArcLight optical imaging of hiPSC-CMs was superior to di-8-ANEPPS in terms of the signal-to-noise ratio (SNR; Figure 3E) and in the stability of the optical signal over time (Figure 3F). Thus, while the di-8-ANEPPS signal was attenuated by 53% ± 4% and 66% ± 5%, due to photobleaching at 15 and 30 s of imaging, respectively, the ArcLight signal was reduced by only 2% ± 0.3% and 4% ± 0.5% (n = 17; p < 0.001; Figure 3F). ArcLight imaging was also less toxic to the hiPSC-CMs with 97.7% of the cells (n = 10 experiments involving 121 cells) continuing to beat at 3 hr following imaging in contrast to only 67.4% following di-8-ANEPPS imaging (n = 7 experiments with 70 cells; p < 0.001; Figure S3A).
+
+Finally, we also evaluated the hiPSC-CMs’ AP properties during pacing (using field stimulation) at different rates (Figure 3G). This allowed derivation of restitution curves, evaluating changes in AP properties (APD ) in the same cells as function of beating frequency (n = 7; Figure 3H). Note in the plot, the typical shortening of APD  at faster pacing rates.
+
+Drug Testing Using ArcLight-hiPSC-CMs
+
+Next, we evaluated the ability to use ArcLight-hiPSC-CMs for drug testing and specifically in the area of safety pharmacology. Drug-induced AP prolongation may lead to life-threatening arrhythmias and represents the single most important reason for withdrawal of already approved drugs from the market (Roden, 2004). To evaluate the ability to discern such drug effects, we studied clinically relevant drugs known to prolong the QT interval in the electrocardiogram (the clinical correlate of APD) and to be associated with pro-arrhythmia due to their hERG channel (I ) blocking activity.
+
+Cisparide is an antiemetic drug that was withdrawn from the market due to its potent hERG-blocking activity that led to arrhythmias and sudden death. Application of cisapride (100 nM) to the ArcLight-hiPSC-CMs led to significant APD  prolongation from 355 ± 21 to 410 ± 25 ms (n = 15, p < 0.01; Figure 4A) and to the development of EADs in 27% of the cells (Figure 4A, right). Significant APD  prolongation (from 396 ± 19 to 588 ± 59 ms, n = 29, p < 0.01) and development of EADs (14% of cells) were also observed following application of 30 μM erythromycin (Figure 4B), an antibiotic known to prolong QT interval and elicit arrhythmias in susceptible individuals. Similarly, application of sotalol, a class III anti-arrhythmic agent directly inhibiting I , also led to APD  prolongation (from 444 ± 50 to 645 ± 56 ms, n = 22, p < 0.01; Figure 4C) and development of EADs in 36% of the ArcLight-hiPSC-CMs.
+
+We also attempted to detect drug-induced QT changes that are not related only to direct I  blockade but are the result of multi-current interactions. Tyrosine kinase inhibitors (TKIs) have become the treatment of choice for multiple cancer types. However, unexpected cardiotoxicity has arisen in some patients, which may be related to downstream effects on multiple ion currents as suggested by a recent study in canine cardiomyocytes (Lu et al., 2012). To test the ability to detect such effects by TKIs, we applied nilotinib (1 μM) for 1 hr, which led to significant APD  prolongation (from 470 ± 36 to 821 ± 79 ms, n = 17, p < 0.01) and development of EAD in 18% of the ArcLight-hiPSC-CMs (Figure 4D).
+
+Evaluation of LQTS-hiPSC-CMs with ArcLight
+
+To evaluate the ability to use ArcLight for studying diseased hiPSC-CMs, we utilized a disease-specific hiPSC line, previously derived from a patient with the long QT syndrome type 2 (LQTS2) (Itzhaki et al., 2011a). LQTS2-hiPSCs were differentiated into cardiomyocytes (Figure 5A), dispersed into single cells, and lentivirally transduced to express the ArcLight reporter. ArcLight optical recordings could identify the major LQTS abnormality in the LQTS2-hiPSC-CMs, namely, prolonged APD (Figure 5B). Thus, the mean optical APD  was significantly longer (p < 0.01) in the LQTS-hiPSC-CMs (1,041 ± 58 ms, n = 97) when compared to healthy control hiPSC-CMs (408 ± 8 ms, n = 203). These values are consistent with previously reported patch-clamp recordings from the same cells (Itzhaki et al., 2011a). However, in contrast to the low-throughput nature of patch-clamping, ArcLight imaging permitted screening of several cells. This allowed, for example, comparing APD  values in hiPSC-CMs clustered into groups according to their different beating rates. This analysis revealed significantly longer APD  values in LQTS2-hiPSC-CMs when compared to healthy control cells at all beating frequencies, but especially at slow rates (Figure 5C). Finally, LQTS2-hiPSC-CMs were highly arrhythmogenic, with 53% of the cells (n = 165) showing EADs, triggered beats, and even continuous arrhythmogenic activity (Figure 5D).
+
+Expression of GCaMP5G in hiPSC-CMs
+
+Next, we shifted our focus to calcium handling and evaluated the ability to monitor intracellular calcium transients in hiPSC-CMs with GECIs. We used lentiviral transduction to express the GCAMP5G transgene (under control of the cTnT promoter) in dispersed single-cell hiPSC-CMs (Figure 6A). Notably, GCaMP5G fluorescence in the imaged hiPSC-CMs cyclically changed (Figure 6A; Movie S4) with an increase in fluorescence intensity during the systolic rise in intracellular calcium levels, followed by a reduction in fluorescence during relaxation. A line-scan evaluation of the GCaMP5G-hiPSC-CMs allowed continuous recordings of several optically derived calcium transients from the same cardiomyocyte over time and detailed morphological analysis of each signal (Figure 6C).
+
+In further validation experiments, we loaded the GCaMP5G-expressing hiPSC-CMs with the calcium-sensitive dye Rhod-3. When comparing the GCaMP5 optical signals (black tracing in Figure 6C) with those of Rhod-3 (red tracing in Figure 6C) from the same cells, we noted a good correlation between the two methods (Figures 6C and 6D; Movie S5). However, the calcium transient rise time in the GCaMP5G signal (277 ± 21 ms, n = 18, p < 0.01) was slightly longer than in the Rhod-3 signal (218 ± 23 ms; Figure 6D, left). The transient decay constant was not significantly different between the two methods (757 ± 49 and 695 ± 64, respectively; Figure 6D, right). Importantly, when compared to Rhod-3 imaging, the GCaMP5G optical calcium transients had a higher signal-to-noise ratio (Figure 6E), were highly stable (Figure 6F, top), and displayed both larger ΔF/F  values (p < 0.01; Figure 6F, bottom left) and greater photostability (Figure 6F, bottom right). Thus, while the Rhod-3 signal decreased by more than 20% for every minute, the corresponding GCaMP5G signal was reduced by only 1.5% (p < 0.01; Figure 6F, bottom right).
+
+Drug Testing Using the GCaMP5G Reporter
+
+Next, we evaluated whether the GCaMP5G-hiPSC-CMs can be used for drug testing. Initially, we evaluated the ability to trace potential chronotropic changes. Application of the beta-adrenergic agonist isoproterenol (1 μM) increased the beating rate of the hiPSC-CMs (Figure 6G, middle) as manifested by a significant decrease in their mean cycle length by 61% (n = 21, p < 0.01, Figure 6G, bottom). Isoproterenol also led to significant shortening of the signal rise (by 12%, p < 0.05) and decay (by 42%, p < 0.01) times, indicating faster activation and to a greater extent more rapid relaxation (Figure 6G, bottom).
+
+Next, we studied drugs known to alter calcium handling in cardiomyocytes. Ouabin is a sodium/potassium ATPase blocker that can lead through a cascade of events to intracellular Ca2+ accumulation, activation of the membrane sodium/calcium exchanger (NCX), development of delayed-after-depolarizations (DADs), and triggered activity. Application of ouabin to the GCaMP5G-hiPSC-CMs resulted in a dose-dependent pro-arrhythmic effect. 500 nM ouabin led to development of DADs, occasional triggered beats, and double- and triple-humped calcium transients (Figure 6H, middle). Increasing the ouabin dose to 1 μM worsened this arrhythmogenic activity with each individual calcium transient followed by a series of repeated triggered-events (Figure 6H, bottom panel).
+
+Combined Voltage and Calcium Imaging
+
+Next, we evaluated the feasibility of simultaneously monitoring, in the same cell, changes in membrane voltage and intracellular calcium levels. A potential hurdle in using combined ArcLight and GCaMP5 imaging for such a task is that both reporters use changes in cpEGFP fluorescence as their functional output. To overcome this limitation, we initially used ArcLight as the voltage reporter and the calcium-sensitive dye, Rhod-3, for calcium imaging. As shown in Figure 6I, this allowed simultaneous acquisition of the optically derived AP (black tracing) and intracellular calcium transient (red), with the calcium transient peak typically lagging behind the voltage changes.
+
+To perform combined calcium and voltage imaging using a dual genetically encoded indicator system, we replaced ArcLight with an alternative GEVI. Arch(D95N) is a microbial rhodopsin-based voltage indicator with fast kinetics and red-shifted excitation and emission spectra (Kralj et al., 2012). As depicted in Figures 6J and S3B, the combined line-scan imaging of Arch(D95N) and GCaMP5G allowed us to simultaneously acquire both the optically derived AP (black tracing) and the calcium transient (red). This permitted us to capture arrhythmogenic events that can be identified in by both the calcium and voltage optical signals (such as development of a premature beat; Figure S3B, left) or only in one (development of EADs noted only in the membrane potential signal; Figure S3B, right); both events were induced by application of ATX-II (30 nM).
+
+Evaluation of CPVT2-hiPSC-CMs with GCaMP5G
+
+Finally, we evaluated the ability to use GCaMP5G for studying calcium-handling properties in diseased hiPSC-CMs. To this end, we focused on CPVT, a familial arrhythmogenic disorder caused by unstable sarcoplasmic-reticulum (SR) Ca2+ storage, leading to exercise-induced ventricular arrhythmias and sudden cardiac death (Katz et al., 2009). The dominant form of CPVT (type1) stems from mutations in the cardiac ryanodine receptor gene (RyR2), while the less common recessive form (CPVT2) is due to mutations in the calsequestrin gene (CASQ2) (Katz et al., 2009). In both cases, arrhythmias are thought to result from diastolic SR Ca2+ leak, leading to DADs and triggered arrhythmias.
+
+While we previously modeled CPVT-1 using patient-specific hiPSC-CMs (Itzhaki et al., 2012), we chose to focus on the more malignant, recessive form of the disease. We therefore reprogrammed fibroblasts from a patient who is part of a large family diagnosed with CPVT-2, due to the homozygous D307H missense mutation in CASQ2 (Lahat et al., 2001). The generated CPVT2-hiPSC colonies exhibited characteristic morphology (Figure 6A), stained positively for pluripotency markers (Figure S4A), gave rise to cell derivatives of all three germ layers in differentiating EBs (Figure S4B), showed silencing of the three retroviral transgenes (Figure S4C), and showed reactivation of endogenous pluripotency genes (Figure S4D). Finally, genomic analysis confirmed the presence of the CASQ2 homozygous D307H mutation in the generated hiPSCs (Figure S4E). The CPVT2-hiPSCs were then coaxed to differentiate into cardiomyocytes. Immunostaining studies confirmed the positive staining of the CPVT2-hiPSC-CMs for sarcomeric α-actinin and cTnI (Figure 7A) and gene expression analysis revealed the expression of cardiac-specific transcription factors (NKX2.5) and structural genes (MLC-2V, MYH-6, and MYH-7) and downregulation of the pluripotent genes by these cells (Figure 7B).
+
+Lentiviral transduction resulted in robust expression of GCaMP5G by the CPVT2-hiPSC-CMs and allowed us to monitor their intracellular calcium transients. When compared to healthy control hiPSC-CMs (Figure 7C), the CPVT2-hiPSC-CMs displayed marked arrhythmogenic activity (Figure 7D). This abnormal activity, noted in 20% of the CPVT2-hiPSC-CMs (n = 111), ranged from localized intracellular diastolic calcium release events (Figure 7D, top) to development of double-humped signals (Figure 7D, second panel) and, finally, to marked arrhythmogenic activity (Figure 7D, bottom two panels). Since arrhythmias in CPVT patients are associated with exercise or emotional stress, we next treated the CPVT2-hiPSC-CMs with isoproterenol (1 μM). Consistent with the clinical phenotype, isoproterenol led to the development of significant arrhythmias (Figure 7E) in 54% of the cells that were not arrhythmogenic at baseline (n = 9).
+
+Discussion
+
+To fulfill the potential of the hiPSC technology for several cardiovascular applications, methods should be developed for efficient, long-term, and large-scale functional phenotyping of hiPSC-CMs. The successful utilization of genetically encoded fluorescent indicators in the neuroscience field (Akemann et al., 2010, Cao et al., 2013, Grienberger and Konnerth, 2012, Looger and Griesbeck, 2012, Tian et al., 2009) and initial reports using similar GEVIs (Leyton-Mange et al., 2014) and GECIs (Chong et al., 2014) in hESC-CMs suggest that similar approaches could also prove useful for studying different hiPSC-CMs.
+
+Here, we combined the use of ArcLight and GCaMP5G with hiPSC technology to monitor the electrophysiological and calcium-handling properties of healthy and diseased hiPSC-CMs. Our results demonstrate the ability to robustly acquire and analyze optically derived APs and intracellular calcium transients from the hiPSC-CMs through either transient or stable expression of ArcLight or GCaMP5G. We also showed the advantages of using these genetically encoded reporters in comparison to traditional voltage- and calcium-sensitive dyes in terms of their significant photostability, superior signal-to-noise ratio and minimal cellular-toxicity properties. These properties allowed us to obtain continuous, high-quality stable optical signals from the same hiPSC-CMs for both short-term recordings (hours) and repeated cellular phenotyping over several days.
+
+The aforementioned qualities allowed monitoring changes in AP and calcium-handling properties and the development of arrhythmias in hiPSC-CMs in response to application of various drugs and in the setting of different genetic disorders. First, we showed the potential of ArcLight-hiPSC-CMs for screening the effects of drugs known to prolong APD due to their hERG channel (I )-blocking activity (“QT screening”). Drug-induced AP prolongation, leading to life-threatening arrhythmias, represents the single most important reason for withdrawal of already approved drugs from the market (Roden, 2004). Our results revealed the ability of ArcLight-based analysis to robustly identify APD prolongation in the hiPSC-CMs, as well as markers of arrhythmogenicity (EADs and triggered beats), following application of a variety of QT-prolonging agents.
+
+Next, we provided evidence for the potential of nilotinib (a TKI used to treat multiple cancers) to prolong AP and induce arrhythmias in human cardiomyocytes. This finding may be important not only because of the clinical importance of TKIs but also because of the suggested mechanism underlying APD prolongation by these agents, as suggested in a recent canine study (Lu et al., 2012), which involves interaction with multiple currents and is not immediate. This highlights the potential advantages of using ArcLight-hiPSC-CMs over traditional heterologous expression systems used for QT screening (that evaluate only a single current) and even over intracellular recording of hiPSC-CMs, since ArcLight imaging allows us to follow AP properties in the same cell over time. Finally, we also showed the ability to use GCaMP5G (alone or combine with voltage-imaging) to detect drug-induced alterations in the calcium-handling properties of human cardiomyocytes leading to arrhythmias.
+
+In addition to studying drug effects on AP and calcium handling, we also showed the potential of using genetic reporters for studying inherited arrhythmogenic disorders. To this end, we utilized a previously established LQTS2 patient-specific line (Itzhaki et al., 2011a) and also generated a new hiPSC line from a patient with CPVT2 due to a homozygous CASQ2 mutation. Importantly, our results confirmed the ability of ArcLight imaging to recapitulate the LQTS clinical phenotype (AP prolongation and the development of EADs and triggered arrhythmias) and of GCaMP5G to study CPVT (showing abnormal calcium handling and the development of arrhythmias).
+
+The genetically encoded reporters used in this study also possess certain limitations. The optical fluorescent signals only allow monitoring of relative changes in membrane potential and intracellular calcium levels and cannot provide absolute values. Moreover, although previous validation studies using simultaneous intracellular patch-clamp recordings and ArcLight fluorescence-imaging in neurons (Jin et al., 2012) and in hESC-CMs (Leyton-Mange et al., 2014) revealed a relative good correlation in identifying single APs, in the overall morphology of the AP, in measuring APD, and in the ability to detect arrhythmias, it also revealed an inherent limitation in the frequency response of ArcLight. This was manifested by some delay at fast frequencies, such as occuring during the rapid depolarization (phase 0) of the AP in cardiomyocytes. In the case of GCaMP5G, we also observed a short delay in evaluating the rise time of the intracellular calcium transient when compared to Rhod-3-AM fluorescent-dye imaging. This minimal delay will probably not be very significant for future studies. Ongoing efforts in the field are focused on generating newer generation of GEVIs and GECIs with superior temporal properties that may potentially solve this drawback.
+
+Despite these limitations, our results reveal the unique potential of combing the hiPSC technology with GEVIs and GECIs for several cardiovascular applications. This unique potential stems from the ability to follow the functional properties of hiPSC-CMs over time, from the potential for large-scale analysis and high-throughput screening, the ability to study different excitation-contraction coupling processes simultaneously (electrophysiology, calcium handling, and mechanics), and the potential to combine the described methods with other techniques (such as single-cell gene expression analysis). Moreover, long-term fluorescent analysis can be combined with traditional electrode-based extracellular potential recordings, for example, by culturing hiPSC-CMs on multielectrode arrays (MEA) culture plates (Zwi et al., 2009). This will allow the advantage of using the MEA technique for analyzing extracellular potentials and for studying the tissue’s syncytial properties, while obtaining, through the use of the GEVIs and GECIs, data at higher spatial resolution and functional information regarding the intracellular properties (membrane potential and calcium transients).
+
+The described approach could also bring a unique value to questions related to hiPSC-CMs differentiation and maturation. This should allow non-invasive monitoring of the effects of interventions aiming to augment cardiac-lineage differentiation, to direct differentiation toward specific cardiomyocyte subtypes and to induce hiPSC-CMs maturation. The advantages of combing patient/disease-specific hiPSC-CMs and genetically encoded reporters (as exemplified here for the LQTS and CPVT syndromes) should provide a unique tool to study inherited cardiac disorders for better mechanistic understanding and for screening of existing and novel therapeutic strategies. Similarly, although we focused in the current study on the potential applications in the field of safety pharmacology (QT screening), the same concepts could be expanded for other drug development and target validation approaches.
+
+Experimental Procedures
+
+Please also refer to the Supplemental Experimental Procedures.
+
+Human-Induced Pluripotent Cells Derivation
+
+Dermal fibroblasts were obtained from a healthy individual and from a patient with CPVT2. All studies were approved by the IRB (Helsinki) committee of Rambam Medical Center. Fibroblasts were reprogrammed to generate hiPSC clones by retroviral delivery of three reprogramming factors (SOX2, KLF4, and OCT4) as previously described (Itzhaki et al., 2011b).
+
+Propagation of hiPSCs and Cardiomyocyte Differentiation
+
+Colonies of hiPSCs were propagated on Matrigel using mTeSR-1 (StemCell Technologies). Cells were passaged by dissociation with 0.5 mM EDTA every 4–6 days. For cardiomyocyte induction, a differentiation medium containing RPMI-1640, 2% B27 supplement minus insulin (Life Technologies), 1% penicillin/streptomycin, and 6 μM CHIR99021 (Stemgent) was used for 2 days. On day 2, medium was changed to RPMI/B27 (without CHIR), and on days 3–4, it was supplemented with 5 μM IWR-1. The resulting beating monolayers (30–50 days of differentiation) were enzymatically dissociated into small clusters or single cardiomyocytes using TrypLE and then plated on matrigel-coated coverslips for characterization.
+
+Lentiviral Transduction of the ArcLight and GCaMP5G Transgenes
+
+Transient Expression in hiPSCs-CMs
+
+pLV-CAG-ArcLight and pLV-TroponinT-GCaMP5 plasmids were kindly provided by David Milan (Massachusetts General Hospital) and John Epstein (University of Pennsylvania), respectively. pLV-GCaMP5G-ArchD95N was obtained from Addgene (plasmid 42168). HEK293T cells were transfected with 4.5 μg of the relevant plasmid, 3 μg of NRF packaging plasmid, and 1.5 μg of the VSVG plasmid using jetPEI reagent (Polyplus). Fresh virus-containing media were collected at 48 and 72 hr and used for two rounds of infections of dissociated hiPSC-CMs to improve transduction efficiency. Viral dosages for the ArcLight, GCaMP5, and GCaMP5+D95N plasmids were 7 × 105 TU/ml, 1.3 × 106 TU/ml, and 3.4 × 106 TU/ml, respectively. No cellular adverse effects were noted following transduction.
+
+Establishing Stable ArcLight-hiPSC Clones
+
+Undifferentiated hiPSCs were infected in the same manner with the pLV-CAG-ArcLight lentiviral vector. Positive ArcLight-expressing colonies were identified (green fluorescence), isolated by microdissection, and further propagated. This enrichment process was repeated at 3 and 4 weeks.
+
+Pharmacological Studies
+
+E4031 (500 nM), ATX-II (30 nM; both from Alomone labs), ouabain (0.5–1 μM), sotalol (20 μM), isoproterenol (1 μM), and erythromycin (30 μM) were dissolved in H O, while chromanol 293B (30 μM), cisapride (100 nM; all from Sigma), and nilotinib (1 μM; Adooq Bioscience) were dissolved in DMSO. Identical DMSO amounts (0.1%) were used as vehicle controls.
+
+Optical Imaging of ArcLight or GCaMP5G-Expressing hiPSC-CMs
+
+A Zeiss LSM700 laser-scanning confocal microscope was used to measure the fluorescence intensity of ArcLight, GCaMP5G, or Rhod-3-AM. To derive a dynamic display depicting the changes in fluorescence intensity over time, the frame-acquisition mode was used. For acquisition of optical APs and calcium transients, the line-scan mode was used. For drug studies, recordings were performed 15 min after adding the different drugs to the Tyrode’s solution, except for nilotinib (60–90 min).
+
+Dual Calcium Indicator Imaging
+
+GCaMP5G and Rhod-3-AM were excited simultaneously by the 488- and 555-nm lasers, respectively. Emission was split by a variable secondary dichroic beamsplitter set into two photomultipliers. For GCaMP5G, emission was short-pass filtered at 555 nm; while for Rhod-3, emission was long-pass filtered at 560 nm.
+
+Combined Calcium and Voltage Imaging
+
+For simultaneous ArcLight and Rhod-3 imaging, the setup described above was used. For dual imaging of GCaMP5G and Arch(D95N), hiPSC-CMs were excited simultaneously by 488- and 555-nm lasers, respectively. Emission was split and short-passed filtered at 555 nm for GCaMP5 and long-passed filtered at 640 nm for Arch(D95N).
+
+Data Analysis
+
+Optical APs
+
+ArcLight recordings were analyzed using a custom-written Matlab program. APD  was measured as the interval between the timing of 50% maximal upstroke amplitude until the time point of 90% of repolarization. The peak-to-peak interval was used to determine beating rate.
+
+Optical Calcium Transients
+
+GCaMP5G and Rhod-3 recordings were analyzed using the Clampfit10 program (Molecular Devices) to measure: (1) rise time, defined as the interval from the timing of the signal at 10% of its maximal amplitude to the peak, (2) decay time, the interval from the timing of the peak to the point where calcium level is reduced to 10% of the peak amplitude, and (3) beating rate. Optical calcium transients are presented as F/F , where F  is the resting diastolic fluorescence.
+
+Statistical Analysis
+
+Continuous variables are reported as mean ± SEM. Categorical variables are expressed as frequencies. Categorical differences between groups were evaluated by the chi-square test. Differences between group means were compared using an unpaired Student’s t test. For drug studies, differences between baseline and post-drug application values were compared using a paired Student’s t test. A value of p < 0.05 was considered statistically significant.
+
+Figure 1
+
+ArcLight Expression and Imaging
+
+(A) Lentiviral transduction of the hiPSC-CMs led to robust ArcLight expression, manifested by cyclic changes in the cell fluorescence with reduced intensity during depolarization. Scale bars, 20 μm.
+
+(B and C) Optical APs derived from line-scan imaging of ArcLight-expressing hiPSC-CMs.
+
+(D) Optical APs revealing ventricular-, atrial-, and nodal-like AP morphologies.
+
+(E–G) Changes in AP morphologies (top-left images, red signals depict post-treatment tracings), following the application of blockers of the fast (E4031, 500 nM, n = 27 in three independent experiments, E) and slow (Chromanol293B, 30 μM, n = 29 in three independent experiments, F) components of the delayed rectifier potassium currents and activator of the late-sodium current (ATX-II-30nM, n = 28 in three independent experiments, G). All agents caused significant APD  prolongation (right) and development of EADs and triggered beats (lower). ∗p < 0.01 when compared to baseline values.
+
+(H) No significant differences were noted after control-solution application (DMSO 0.1% v/v, n = 16 in three independent experiments).
+
+Error bars represent SEM.
+
+Figure 2
+
+Establishment of Stable Transgenic ArcLight-hiPSCs
+
+(A) Expression of ArcLight (green fluorescence) by undifferentiated ArcLight-hiPSC colonies (top), but not by the parental hiPSC colonies (bottom). The merged light (DIC) and fluorescent images (right) are also shown. Scale bars, 50 μm.
+
+(B) Immunostaining of ArcLight-hiPSC colonies for OCT4, NANOG, SSEA4, and TRA-1-60.
+
+(C) Immunostaining of ArcLight-hiPSC-CMs for sarcomeric α-actinin and cTnI.
+
+(D) qPCR analysis of ArcLight-hiPSC-CMs showing expression of cardiac-specific genes (NKX2.5, MLC-2V, MYH-6, and MYH-7) and downregulation of pluripotent genes (OCT4 and NANOG). Experiments included three biological replicates measured as two technical replicates.
+
+(E and F) ArcLight expression by hiPSC-CMs monolayers (E) and single-dispersed cells (F) and the derived optical AP. Note the increase in fluorescence during repolarization (resting state) and the decreased intensity during depolarization (AP development). Scale bar, 20 μm.
+
+(G) Optical tracings analysis used to measure APD . This process can be scaled up to analyze several cells (bottom).
+
+Error bars represent SEM.
+
+See also Figure S2.
+
+Figure 3
+
+Simultaneous ArcLight and di-8-ANEPPS Recordings from hiPSC-CMs
+
+(A) Short-term recordings revealing stable optical APs over a 1 hr period (left). Note also the stable APD  values (right, n = 14 in three independent experiments). See also Figure S3A.
+
+(B) Repeated phenotyping of the same cell over several days.
+
+(C) Optical APs acquired simultaneously using ArcLight (black tracing) and di-8-ANEPPS (red tracing).
+
+(D) High correlation (R2 = 0.98) between ArcLight- and di-8-ANNEPS-based APD  measurements from the same cells.
+
+(E) Improved signal-to-noise ratio (SNR) values in the ArcLight optical signals when compared to di-8-ANNEPS analysis (∗p < 0.001, n = 17 in three independent experiments).
+
+(F) Changes in the optical-signal intensity at 15 and 30 s of continuous imaging. Note the significant attenuation of the di-8-ANEPPS signal (due to photobleaching) in contrast to the limited effect on the ArcLight signal (∗p < 0.001, n = 17 in three independent experiments).
+
+(G) Optical APs recorded from ArcLight-hiPSC-CMs during pacing at different rates.
+
+(H) Restitution plot depicting the effects of the pacing cycle-length on APD  values (n = 7 in three independent experiments). Note the typical shortening of APD  values at faster rates.
+
+Error bars represent SEM.
+
+Figure 4
+
+Drug Testing Using ArcLight-hiPSC-CMs
+
+(A–C) Evaluating the effects of different hERG (I ) blockers, including cisapride (100 nM, n = 15 in three independent experiments, A), erythromycin (30 μM, n = 29 in three independent experiments, B), and sotalol (20 μM, n = 22 in three independent experiments, C) on the optical APs of ArcLight-hiPSC-CMs. Note the resulting AP prolongations (red tracings, left), leading to significant increases in APD  values (middle) and the development of EADs in several (27%, 12%, and 36%, respectively) hiPSC-CMs (right). ∗p < 0.01 when compared to baseline recordings.
+
+(D) AP prolongation (left and middle) and arrhythmogenic activity (right) in ArcLight-hiPSC-CMs, following 1 hr treatment with the TKI nilotinib (1 μM, n = 17 in three independent experiments, ∗p < 0.01).
+
+Error bars represent SEM.
+
+Figure 5
+
+ArcLight Imaging of LQTS2 hiPSC-CMs
+
+(A) Differentiation of the LQTS2-hiPSCs (representative colony shown on the left; scale bar, 100 μm) into cardiomyocytes, positively stained for sarcomeric α-actinin (middle) and cTnI (right). Scale bars, 20 μm.
+
+(B) ArcLight imaging showing prolonged optical APs in the LQTS2-hiPSC-CMs (bottom) when compared to healthy control cells (top).
+
+(C) Summary of the average APD  values, measured at different beating rates, in the healthy control (blue, n = 203 in 19 independent experiments) and LQTS2 (red, n = 97 in 11 independent experiments) hiPSC-CMs. Note the significantly longer (∗p < 0.01) APD  values in the LQTS2-hiPSC-CMs at all rates, but especially at slow beating rates.
+
+(D) Typical recordings from the LQTS2-hiPSC-CMs showing the development of EADs, triggered beats, and sustained arrhythmogenic activity.
+
+Error bars represent SEM.
+
+Figure 6
+
+GCaMP5G Expression and Calcium Imaging of hiPSC-CMs
+
+(A) Lentiviral transduction of hiPSC-CMs led to robust GCaMP5G expression and cyclic changes in the cell fluorescence with an increase in intensity concomitant with the rise in intracellular calcium concentration. Scale bars, 20 μm.
+
+(B) Line-scan imaging (using the red line in A) showing typical optical intracellular calcium transients.
+
+(C–E) Optical calcium transients (C) acquired simultaneously from the same cells (n = 16 in three independent experiments) using GCaMP5G (black tracing) and Rhod-3 (red tracing). The transients displayed similar general appearance and decay times, while the rise time was slightly longer in the GCaMP5G signal (∗p < 0.01) (D). SNR values were significantly higher (∗p < 0.001) for the GCaMP5G optical tracings when compared to the Rhod-3 signals (E).
+
+(F) Continuous optical calcium recordings from the GCaMP5G-hiPSC-CMs (top). The GCaMP5G signals displayed higher mean amplitude (lower left) and significantly less attenuation in fluorescent intensity over time when compared to Rhod-3 signals. ∗p < 0.01.
+
+(G) Drug testing using GCaMP5G-hiPSC-CMs. Isoproterenol (1 μM) led to a significant increase in the beating rate (shorter cycle-length), as well as a shorter decay and rise times of the calcium transient (∗p < 0.05, ∗∗p < 0.01, n = 21 in three independent experiments).
+
+(H) Application of ouabain led to a dose-dependent arrhythmogenic activity, ranging from local calcium release events, double- and triple-humped transients, to sustained triggered activity.
+
+(I) ArcLight-hiPSC-CMs were loaded with Rhod-3. Combined line-scan imaging allowed simultaneous recording of both the optical AP (black) and intracellular calcium transient (red).
+
+(J) Combined voltage (black tracing) and calcium (red) imaging using hiPSC-CMs transduced to express both Arch(D95N) and GCaMP5G.
+
+Error bars represent SEM.
+
+See also Figure S3B.
+
+Figure 7
+
+GCaMP5G-Based Calcium Imaging of CPVT2-hiPSC-CMs
+
+(A) Differentiation of the CPVT2-hiPSCs (left; scale bar, 100 μm) into cardiomyocytes positively stained for sarcomeric α-actinin (middle) and cTnI (right). Scale bars, 20 μm. See also Figure S4.
+
+(B) qPCR analysis of the CPVT2-hiPSC-CMs showing expression of cardiac-specific genes (NKX2.5, MLC-2V, MYH-6, and MYH-7) and downregulation of OCT4 and NANOG. Experiments included three biological replicates measured as two technical replicates.
+
+(C and D) GCaMP5G optical calcium imaging of healthy control (C) and CPVT2 (D) hiPSC-CMs. The CPVT2-cardiomyocytes were highly arrhythmogenic, displaying diastolic local calcium release events (top), double-humped signals (second panel), and sustained arrhythmias (bottom).
+
+(E) An example of new arrhythmias in a CPVT2-hiPSC-CM (bottom) caused by isoproterenol.
+
+Error bars represent SEM.
+

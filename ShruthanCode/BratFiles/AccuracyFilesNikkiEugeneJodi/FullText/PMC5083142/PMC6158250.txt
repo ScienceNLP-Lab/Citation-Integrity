@@ -1,0 +1,142 @@
+Genetic risk for schizophrenia and autism, social impairment and developmental pathways to psychosis
+
+Abstract
+
+While psychotic experiences (PEs) are assumed to represent psychosis liability, general population studies have not been able to establish significant associations between polygenic risk scores (PRS) and PEs. Previous work suggests that PEs may only represent significant risk when accompanied by social impairment. Leveraging data from the large longitudinal IMAGEN cohort, including 2096 14-year old adolescents that were followed-up to age 18, we tested whether the association between polygenic risk and PEs is mediated by (increasing) impairments in social functioning and social cognitive processes. Using structural equation modeling (SEM) for the subset of participants (n = 643) with complete baseline and follow-up data, we examined pathways to PEs. We found that high polygenic risk for schizophrenia (p = 0.014), reduced brain activity to emotional stimuli (p = 0.009) and social impairments in late adolescence (p < 0.001; controlling for functioning in early adolescence) each independently contributed to the severity of PEs at age 18. The pathway between polygenic risk for autism spectrum disorder and PEs was mediated by social impairments in late adolescence (indirect pathway; p = 0.025). These findings point to multiple direct and indirect pathways to PEs, suggesting that different processes are in play, depending on genetic loading, and environment. Our results suggest that treatments targeting prevention of social impairment may be particularly promising for individuals at genetic risk for autism in order to minimize risk for psychosis.
+
+Introduction
+
+An increasing number of studies on the etiology of schizophrenia and related disorders focus on psychotic experiences (PEs) as early and potentially powerful markers of illness liability1. PEs are mild expressions of psychotic symptoms that are present in about 10%2 of the general population, and are known precursors of severe psychotic and non-psychotic disorders3,4.
+
+However, the etiology of PEs is unknown. Most previous general population studies examining genome-wide association study (GWAS)-based polygenic risk scores (PRS) have not been able to find evidence for a significant association between increased genetic vulnerability to psychiatric illness and PEs in the general population1,5–7. While it has been argued that this lack of evidence may indicate that, within the healthy population, risk manifests through symptoms other than psychotic experiences5,7, it may also indicate that, in and of itself, experiencing subclinical psychotic phenomena does not represent risk. The latter premise is supported by recent studies in high-risk samples, suggesting that PEs increase the chance of developing a clinically significant psychiatric disorder only when accompanied by increasing and persistent social impairments, irrespective of the baseline severity of PEs8,9. Severe mental disorders are often preceded by impairments in interpersonal contact10,11, and the association between subclinical psychotic symptoms and impairments in interpersonal social functioning is well established12,13. This latter association may also help explain why, within the general population, apart from those with genetic risk for schizophrenia (SCZ), individuals with genetic risk for autism spectrum disorder (ASD) are at a considerably higher risk for developing PEs later in life14. Social communicative deficits that contribute to impairments in interpersonal functioning characterize ASD15, and it seems probable that ASD is a vulnerability factor for the development of PEs14,16, potentially due to an association between social impairment and psychosis.
+
+In this study, we tested whether the association between genetic risk for psychiatric illness and PEs is mediated by (increasing) impairments in social functioning, using a Structural Equation (pathway) Model that minimized assumptions about interactions between variables. As associations may differ for those with an increased genetic vulnerability to SCZ and increased genetic vulnerability to ASD, we explored both genetic risk variants. We expected that an increased genetic risk for SCZ and ASD would be associated with an increased risk of PEs at age 18, and that this association would be at least partly mediated by (increasing) social impairments for both risk variants.
+
+Our data came from the IMAGEN study17; a longitudinal study that has the unique advantage of having followed-up individuals from the ages 14 to 18, a critical time for the development of peer relationships as well as the development of psychotic symptoms18–20. With this dataset, we also had the opportunity to link measures of reported difficulties in social functioning with fMRI measures of brain activity while participants viewed salient social and emotional stimuli21–23. Brain activation in response to emotional stimuli has been associated with the severity of social impairment in ASD24,25 and SCZ populations26.
+
+Materials and methods
+
+Participants and procedures
+
+The IMAGEN study is a multi-site multi-national longitudinal research project17. This collaboration between eight European sites across the United Kingdom, Ireland, France and Germany includes 2462 14-year-old adolescents and their parents. The study protocol was approved by the KCL (King’s College London) College Research Ethics Committee CREC/06/07-71 and by local ethics research committees at each site. Parents and adolescents gave written consent and verbal assent, respectively. Biosamples, brain imaging, clinical characteristics, and functioning data were collected at baseline. Behavioral assessments were repeated at 2 and 4 years after completion the baseline. A detailed description of recruitment and research procedures has been published elsewhere17.
+
+Table 1 Characteristics of 2096 volunteers participating in the IMAGEN study. A total of 2096 IMAGEN participants (1066 females and 1030 males, M age at baseline = 14.45 years (range 12.89–16.44; SD = 0.41) had complete socio-demographic data and no formal DSM-IV social disorder diagnosis (see Supplementary material for dropout analyses). Table 1a lists the demographic details of the study sample.
+
+Measures of clinical characteristics and functioning
+
+Social functioning was determined using the strength and difficulties questionnaire (SDQ;27 Combining self and parental reports, this scale provides a dimensional assessment of emotional problems (anxiety-depression), peer problems, conduct problems, hyperkinetic symptoms, and pro-social behavior. In the current study, we analyzed responses from the peer problem domain, as this subscale aligns most closely with the social impairments commonly reported in schizophrenia and related psychotic disorders20, but is also known to be compromised in individuals with an autism spectrum disorder15. Questions in the peer problem domain include “I am usually on my own”, “I have one good friend or more”, “Other people my age generally like me”, “I get on better with adults than with people my age”, and “Other children or young people pick on me”. Because, the latter item taps into bullying, a known risk factor for the development of PEs28, and therefore a potential confounder, this item was removed from analyses. All items were rated on a three-point scale, with scores ranging from ‘Not True’ to ‘Always True’. Two items were recoded so that for all items higher scores indicated better functioning.
+
+IQ was estimated by averaging sum scores of the WISC-IV subscales Matrix Reasoning (fluid IQ marker) and Vocabulary (crystalized IQ marker)29.
+
+PEs were assessed using the community assessment of psychic experiences (CAPE) which evaluates subclinical psychotic experiences in the affective and non-affective domains (http://www.cape42.homestead.com/). The CAPE is a self-report questionnaire based on the Peters et al. Delusions Inventory30 but with the addition of questions on hallucinatory experiences. We used the sum score on frequency of positive symptoms.
+
+Measures of genetic vulnerability
+
+Table 2 Processing of the ASD and SCZ GWAS summary statistics. IMAGEN genetic data, extracted from whole-blood samples (~10 mL) using Illumina 610Quad v1 chip, were accessed through the IMAGEN consortium17. GWAS was performed at Centre National de Genotype (Evry France, Head M Lathrop). In order to access high-quality data combined across IMAGEN waves, QC + genotyped SNPs (n = 477,245, list provided by IMAGEN) were extracted from downloaded imputed, hard-called data and filtered for 0% missing data. Further quality control (QC) included exclusion of SNPs with Hardy Weinberg equilibrium HWE P < 10–4 and SNPs with minor allele frequency (MAF <2%). After quality control, 1834 cases were included in our sample, totaling 463,940 SNPs available for PRS analysis. Ten MDS (multidimensional scaling) components were also downloaded from IMAGEN, and were used as covariates in the analyses. MDS is a singular-value decomposition number based on an individual-pairwise identity by relation matrix, and is essentially equivalent to PCA but implemented in plink. This method is standard to generate genotype ancestry covariates. All genetic data processing and analyses were performed using plink31. Details on (the processing of) the ASD32 and SCZ33 summary statistics are presented in Table 2.
+
+Neuroimaging measure of social cognitive processing
+
+The imaging task of interest was the Faces task17, measuring emotional reactivity to social stimuli34. Participants were asked to passively view short videos of either faces that always started from a neutral position, and then either (1) morphed to an angry expression, or (2) displayed a neutral movement, or (3) displayed a non-biological control stimulus that consisted of contracting or expanding concentric circles of contrasts roughly matching that of the faces stimuli34.
+
+Functional magnetic resonance imaging (fMRI) was performed on 3T scanners from a range of manufacturers (Siemens, Philips, General Electric, Bruker) across the eight IMAGEN assessment sites.
+
+A total of 1060 volumes per subject were obtained, each containing 40 2.4 mm slices (with a 1 mm gap), with a repetition time of 2.2 s and an echo time of 30 ms. Data preprocessing was performed centrally at the Neurospin centre using the SPM12 software. Time-series data were corrected for slice-timing effects and motion, and then nonlinearly warped to MNI space (using a custom EPI template), and Gaussian smoothed at 5 mm full width at half maximum.
+
+Individual contrast maps for the ‘angry minus control’ contrast from the Faces task were created in SPM using the general linear model with the AR noise model. Twenty-one additional regressors of no interest were added to the design matrix, comprising 12 motion regressors, 3 white matter regressors and 6 nuisance variables for the ventricles.
+
+We then created a mask of regions thought to be involved in social processing. First, we used the automatic meta-analysis tool ‘NeuroSynth’ to create a reverse-inference brain map for the term ‘social’ on the basis of 1000 fMRI studies of social functioning35. This map was already registered to the MNI152 (2 mm) space. In order to co-register the map to the IMAGEN functional data, we created a warp from the MNI brain to the IMAGEN EPI200 brain using the ANTs normalization software with a mutual information cost function36. This warp was then applied to the reverse inference map obtained from NeuroSynth using nearest neighbor interpolation. For more specific information about data acquisition and fMRI data preprocessing, we would like to refer to refs 17,37.
+
+Statistical analyses
+
+Demographic characteristics of the baseline and available follow-up samples were compared using regression analyses and χ2-tests.
+
+Preparatory analyses
+
+Initial analyses were conducted to explore what specific PRS and fMRI data to include in the final integrative structural equation modeling (SEM) pathway analysis.
+
+Polygenic risk scores
+
+First, we examined which polygenic risk thresholds to consider in subsequent analyses by exploring the association (R2) between SCZ polygenic risk (PRS) P-value thresholds and PEs at age 18, and between ASD polygenic risk (ASD-PRS) and social functioning at the same age using linear regression analyses. To examine the unique variance (R2) explained by the polygenic risk scores, age, sex, research center, and ancestry (MDS) coordinates were included as covariates and the PRS residuals were retained for regression analyses.
+
+fMRI processing
+
+In order to parsimoniously capture each participant’s fMRI response to viewing angry faces, we calculated the principal component projection of fMRI BOLD activity in response to viewing angry faces (vs baseline)17 in the social cognition network. The social cognition network was identified as the ten regions with the highest z-score (and cluster extent) from an automatic meta-analysis of 1000 fMRI studies of social processing35, as in refs 38,39.
+
+Structural equation modeling (SEM)
+
+Pathway analyses were constructed to model the relationship between genetic risk, social impairment at age 14 and 18, social cognitive (brain) processing and the eventual emergence of PEs. Sex, research center and IQ were added as potential contributing factors to the model. SEM provides estimates, or path coefficients, that indicate the direction and significance of the association between constructs, as well as several fit indices evaluating the fit of the proposed model.
+
+For acceptable model fit, the established and widely used cutoff values for SEM as described by Hu and Bentler were used36. Following these rules, χ2 (chi-square) should be non-significant (meaning that model is congruent with observed data), root mean square error of approximation (RMSEA) should be lower than 0.05, and the comparative fit index (CFI) should be higher than 0.90. Under population error, the RMSEA value is reported along with lower and upper bounds of its 90% confidence interval. The standardized root mean square residual (SRMR) is the standardized difference between the observed and predicted correlation, and considered acceptable with values at 0.08 or less40. The comparative fit index (CFI) considers the number of paths in the model and is considered good at 0.93 or above. Finally, we considered the bayesian information criterion (BIC), where no absolute value is indicative of good model fit, but lower values of BIC represent a better fit. Both direct and indirect effects (path estimates) were examined.
+
+In our final pathway model, we began with a fully saturated model, including IQ, sex, research center, ASD-PRS, SCZ-PRS, fMRI data on social cognitive processing, social impairment at age 14 and 18, and PEs to examine their interrelationship, and removed non-significant pathways to produce models with the optimal balance of explanatory power and parsimony. We used a maximum-likelihood approach, only including those with all data points available. For sensitivity purposes, analyses were repeated using a maximum-likelihood analysis with missing values, and potential mediating pathways were confirmed with a Sobel-Goodman test (SGMEDIATION).
+
+All main analyses were conducted in STATA 14.2(Statacorps).
+
+Results
+
+PRS thresholds
+
+Table 3 Predictive value of SCZ polygenic risk scores (PRS) on psychotic experiences, and of ASD polygenic risk scores (PRS) on social functioning scores. As shown in Table 3, the predictive value was highest for a SCZ-PRS threshold of p ≤ 1e−2 (R2 = 0.0063, t = 2.55, p = 0.010), and similar for an ASD-PRS threshold of p ≤ 0.5 & p ≤ 1 (R2 = 0.0044, t = −2.18, p = 0.030), and the SCZ-PRS threshold of p ≤ 1e−2 & ASD-PRS threshold of p ≤ 0.5 were used in subsequent analyses. In these analyses, MDS coordinates were included as covariates in the prediction of PRS and the residuals were retained.
+
+Brain areas involved in social cognitive processing
+
+With the meta-analytic tool we identified bilateral clusters in the dorsomedial and ventromedial prefrontal cortex, posterior cingulate, temporal pole, and amygdala that were significantly associated with social processing. These ten clusters with the highest z-score (also largest in size) were used for further analysis (see Fig. 1 and supplementary material). A principal component analysis including beta-values of the ‘angry faces minus control’ contrasts in these areas identified a single component that explained over 50% of the variance within the ‘social brain’ network. This principal component assigned similar weights to activity in all ten regions, and subject loadings along this component were entered as one of the variables in the pathway models.
+
+Pathway model
+
+Table 4 Model fit statistics. For the main SEM model, we limited our analyses to the 642 participants (341 females) of whom a complete baseline and follow-up dataset was available (see Table 1b for a description of the sub sample used in SEM analyses). Model statistics of the fitted path models are presented in Table 4. For a visual display of all models, and correlation matrix of all variables included see Supplementary Material.
+
+Model L (visually presented in Fig. 2) was the best fitting model. The overall model (χ2(10) = 6.38, p = 0.78; RMSEA = 0.000; 90% CI = 0.000–0.029, SRMR = 0.016; CFI = 1.00) accounted for 12% of the variance in PEs at age 18. The model suggested a direct path leading from increased genetic polygenic risk for SCZ to a higher number of reported PEs (standardized coefficient = 0.09, SE = 0.04, Z = 2.47, p = 0.014). Another direct pathway led from brain altered brain activation in response to ‘social emotional’ stimuli to PEs (standardized coefficient = −0.10, p = 0.009), indicating that a lower brain response in the ‘social brain’ network was associated with more PEs. The model also revealed that the association between ASD-PRS and a higher number of PEs at age 18 was mediated by peer problems that had evolved during the period between ages 14 and 18 (stand. indirect coefficient = 0.03, p = 0.025). In this model, social functioning at the age of 14 did not have a direct independent effect on the development of PEs by age 18. In addition, in our best fitting model, IQ did not significantly contribute to the explanation of PEs.
+
+While a model allowing an additional direct causal pathway from PEs to social functioning at age 18 resulted in almost equally acceptable fit (χ2(10) = 5.28, p = 0.81; RMSEA = 0.000; 90% CI = 0.000–0.028, SRMR = 0.015; CFI = 1.000), this direct pathway was not statistically significant (stand. coefficient = 0.13, p = 0.316).
+
+Sensitivity analyses
+
+To confirm that using a sample with complete data did not bias our results analyses were repeated, including data of all participants. An SEM analysis using maximum-likelihood with missing values approach yielded largely similar results (see Supplementary results).
+
+In addition, a Sobel-Goodman mediation test (including 1003 individuals with available PRS, social functioning and PE data) was employed to examine whether the mediating effect of social functioning in the pathway from ASD-PRS to PEs held in a simplified model. Also in these exploratory analyses, the effect of ASD-PRS on PEs was significantly mediated by social functioning at follow-up (proportional mediation effect = 23.3%, p = 0.03), while for SCZ-PRS no mediation effect of social functioning was apparent (proportional mediation effect = 12.8%, p = 0.30).
+
+Discussion
+
+The present study provides initial evidence for multiple pathways leading to the development of PEs. In our sample, severity of subclinical PEs at age 18 was independently predicted by (1) greater polygenic risk for schizophrenia, (2) poorer social functioning, and (3) brain activation in response to emotional stimuli. In our study, all regions within the ‘social cognition network’ contributed to the prediction of psychotic experiences to a similar degree, suggesting that disruption to the overall social cognition network may be critical to the development of psychotic experiences.
+
+In contrast to previous studies1,5–7, our results indicate a small but statistically significant direct association between PRS for schizophrenia and PEs, although they also suggest that this is likely not the ‘single pathway’ to PEs. There is wide heterogeneity in the presentation of PEs, and different types of PEs (e.g., hallucinatory, delusions) may have different etiologies41. There is also heterogeneity in presentation of the clinical disorders which may help explain why interventions targeting the behavior and those aimed at altering neurobiological function have only been effective in treating subsections of patient populations42.
+
+We also found an indirect pathway suggesting that the association between genetic risk for ASD and psychotic experiences may be mediated by social impairment that appears between age 14 and 18. This finding is consistent with recent molecular-genetic and population-based studies that indicate genetic and familial overlap between ASD and SCZ43–45, and with studies finding increased psychosis rates in individuals with ASD14,46.
+
+Collectively, our findings strengthen the idea that social impairment is a strong predictor of PEs largely independent of genetic risk or irregular neural emotion-processing. The stronger association between PEs and social impairment at age 18 than at age 14 suggests that the period in between may be particularly important for the development of social impairments that constitute risk for psychosis.
+
+Although the association between social impairment and psychotic manifestations is well-established, the direction of this relationship is unclear13. While the pathway from social impairment to PEs showed significantly better fit than a pathway from PEs to social impairment, causality should be interpreted cautiously. It is not inconceivable that the association between social impairment and PEs involves a dynamic feedback loop; while initial impairments in interpersonal contact may contribute to the development of certain delusions, these PEs may subsequently reinforce social impairment, further reinforcing PEs. To better understand the potential mechanisms underlying the association between social impairment and PEs, further longitudinal studies are required.
+
+Limitations
+
+The results of this study should be interpreted in light of some key limitations. First, there was a relatively high level of missing data (>30%) in our key variables of interest. Although findings were comparable when we estimated missing values in SEM analyses (supplementary results) and by repeating the mediating pathways using a more conservative mediation model, we did not want to over-interpret our findings by imputing such a large proportion of biological and clinical data. Therefore, our main analyses included only those individuals with all data points available, reducing the sample size considerably.
+
+Second, while the overall fit of our SEM model was good, we cannot rule out that an alternative model may have fitted our data equally well.
+
+Third, when testing the association between brain activation and both genetic vulnerability and social impairments, we examined only one aspect of the brain network related to social cognitive processing which may have underestimated the association. Investigations of the relationship between structural or functional connectivity in this network, or of brain activation on other tasks in relation to genetic vulnerability and social impairments could offer complementary information.
+
+Fourth, measures of social functioning were obtained using a relatively short assessment tool, and it may be that other aspects of social functioning not captured with this tool have different associations with the development of psychotic experiences. Nonetheless, the instrument used here captured the key problems known to be prominent in adolescents with both an autism spectrum disorder and those vulnerable to psychosis.
+
+Fifth, because PEs were only assessed at age 18, we have no data on their onset. Future studies to the potential mechanisms underlying the association between social impairment and PEs should include PE measures collected on multiple time points and more detailed social functioning measures.
+
+Sixth, the reported associations between PRS and outcome are small, accounting for only around 0.5% of variance in psychotic experiences and functioning. It is therefore important to note that these findings are solely of theoretical interest, as they point to different potential pathways to the development of psychosis.
+
+Finally, it is important to note that ASD and SCZ polygenic risk scores are not unitary constructs. To disentangle the differential association between ASD and SCZ polygenic risk scores and psychotic experiences, it will be crucial to dissect their genetic correlation and non-overlapping risk.
+
+Overall, our results provide new insight about potential etiological pathways to psychotic experiences. We found that poor social functioning at age 18 was related to both increased polygenic risk for ASD and more psychotic experiences at that age indicating a cross-diagnostic role of social impairment in psychiatric illness. Social contact is thought to be an important source of support in times of stress47, and the association between persistent social disengagement and stress-regulation (a known risk factor of psychotic symptoms48) warrants further study. Our results suggest that treatments targeting social impairment may be particularly promising for individuals at genetic risk for autism in order to minimize risk for psychosis.
+
+It is also critical that future clinical studies use multi-faceted measures to determine whether our findings can be generalized to individuals after first hospitalization, and thus, to determine whether the pathways as described in our study actually lead to a clinical psychotic disorder. If multiple pathways can be detected, these findings urge caution in the exclusive assignment of therapy to psychosis, since it is probable that different processes are in play depending on genetic loading, or environment.
+
+Electronic supplementary material
+
+ Supplement 1. Measurement of Axis I diagnosis  Supplement 2. fMRI data preparation and initial processing  Supplement 3. Dropout analyses  Supplement 4. Different SEM models tested  Supplement 5. Sensitivity analyses  Supplement 6. Correlation matrix of variables included in the pathway models  
+
+Fig. 1
+
+An automatic meta-analysis using NeuroSynth identified a network ofregions involved in social processing. This network overlaps with the Default Mode Network, and includedthe dorsomedial and ventromedial prefrontal cortex, precuneus, temporal pole, and amygdala. Activity inthese regions during processing of faces was examined, and used as a predictor of psychotic experiences
+
+Fig. 2
+
+Associations between the observed variables are represented by straight arrow lines. The double-headed arrow represents covariance between the two polygenic risk scores. Information about all coefficients and co-variances can be found in the supplementary figure. **p < 0.01, *p < 0.05. ASD autism spectrum disorder, SCZ schizophrenia
+

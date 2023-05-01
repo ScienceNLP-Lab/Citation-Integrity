@@ -1,0 +1,151 @@
+Unbiased Taxonomic Annotation of Metagenomic Samples
+Abstract
+
+      
+
+1. Introduction
+
+N  have moved forward the development of metagenomics, a new field of science devoted to the study of microbial communities by the analysis of their genomic content, directly sequenced from the environment (Kunin et al., 2008; Wooley et al., 2010; Thomas et al., 2012). A sequenced metagenomic sample consists of a large number of relatively short DNA or RNA fragments, called reads, and one of the first steps in the computational analysis of a metagenomic sample is the identification of the organisms present in the sequenced environment and their relative abundance, that is, the classification of the metagenomic sample.
+
+In this article, we focus on the taxonomic annotation problem, that is, the classification of the reads from a metagenomic sample using a reference taxonomy, for which we adapt some basic notions from statistical classification in machine learning. We abstract away from the computational problem of mapping reads to reference sequences, and assume that a set of candidate sequences in a reference taxonomy is given for each read in the metagenomic sample to be classified. These candidate sequences are usually obtained either by sequence composition methods (those reference sequences with oligonucleotide frequencies within a given distance threshold to the oligonucleotide frequencies of the read) or by sequence similarity methods (those reference sequences that the read can be aligned to within a given threshold of sequence similarity, or those reference sequences that the read can be mapped to with at most a given number of mismatches).
+
+In a statistical binary classification problem, the confusion matrix (Table 1) shows the number of correctly and incorrectly classified instances of each class. True positives (TP) are the correctly classified positive instances, true negatives (TN) are the correctly classified negative instances, false positives (FP) are the misclassified negative instances, and false negatives (FN) are the misclassified positive instances. The TP rate, sensitivity, or recall R of a classification is the ratio   of TP to the total number of positive instances, the FP rate is the ratio   of FP to the total number of negative instances, the TN rate or specificity is the ratio   of TN to the total number of negative instances, and the FN rate is the ratio   of FN to the total number of positive instances. Furthermore, the precision of a classification is the ratio   of TP to the total number of positive predictions. They are usually combined into a single indicator of classification error as either the area under the receiver operating characteristic (ROC) curve   or the F-measure, which is the harmonic mean   of precision and recall (Powers, 2011).
+
+In a metagenomic classification problem, the annotation of a read as coming from a particular sequence in a reference taxonomy often involves solving the ambiguity of multiple candidate sequences, caused among other factors by reads being not long enough to ensure a unique identification of the reference sequences they come from. Reference taxonomies are rooted trees, with the leaves labeled by sequences at the taxonomic rank of species or strain, and these ambiguities are solved by annotating reads as coming from internal nodes, at higher taxonomic ranks in the reference taxonomy. When classifying a read as coming from an internal node in a reference taxonomy (Fig. 1), the leaves under the internal node are TP if they are labeled by candidate sequences, otherwise they are FP, and the remaining leaves under the lowest common ancestor (LCA) of the candidate sequences are FN if they are labeled by candidate sequences; otherwise, they are TN. Annotating a read as coming from the LCA of the candidate sequences in a reference taxonomy (Huson and Weber, 2013) maximizes precision, as in that case there are no TN and no FN, but at the expense of specificity, because the number of FP in a reference taxonomy can be very large. Annotating a read as coming from an internal node with the largest F-measure value (Clemente et al., 2011; Alonso et al., 2013; Fosso et al., 2015, 2017) minimizes the classification error as a combination of precision and sensitivity.
+
+However, there are at least two sources of bias in the taxonomic annotation of a metagenomic sample. One the one hand, reference taxonomies are imbalanced, that is, the instances of one class significantly outnumber the instances of the other classes, and this can be observed at any taxonomic rank. For example, the NCBI Taxonomy (Federhen, 2012, 2015), which is the most comprehensive taxonomic reference to date, includes as of March 13, 2017, an imbalanced number of sequences for Bacteria (1,412,065), Eukaryota (685,380), and Archaea (27,322). Within the Bacteria, for example, there is also an imbalanced number of sequences for the Actinobacteria (593,837), Proteobacteria (440,315), Firmicutes (245,632), Bacteroidetes (77,866), Planctomycetes (8899), Fusobacteria (7789), and others (37,727).
+
+In a statistical binary classification problem, imbalanced data sets result in a good coverage of the positive instances and a frequent misclassification of the negative instances, since most of the standard machine learning algorithms consider a balanced training set (López et al., 2013). In a metagenomic classification problem, an imbalanced reference taxonomy may also yield an imbalance between the positive and negative classes, because the larger the clade of the LCA in a reference taxonomy of the candidate sequences for a read, the larger the negative class for the classification of the read. In this article, we show that this is in general not the case, and we also show that the Rand index is a better indicator of classification error than the often used area under the ROC curve and F-measure, when the reference taxonomy is imbalanced and also for balanced reference taxonomies.
+
+Another source of bias in the taxonomic annotation of a metagenomic sample lies in the existence of multiple candidate nodes in a reference taxonomy with the least classification error for a given read, one of which is usually chosen arbitrarily for the taxonomic annotation of the read (Clemente et al., 2011; Alonso et al., 2013). Instead of breaking ties independently for each read in a metagenomic sample, we show in this article that the shift from a one-sequence-read-at-a-time view to a whole-set-of-sequence-reads view yields a better resolution of any remaining ambiguities in the taxonomic annotation of a metagenomic sample.
+
+2. Taxonomic Annotation Using Imbalanced Reference Taxonomies
+
+Recall that in a metagenomic classification problem, an imbalanced reference taxonomy yields an imbalance between the positive and negative classes. Let us define the balance ratio of a classification problem as the ratio of the size of the positive class to the size of the negative class.
+
+  Let TP, TN, FP, and FN be the number of TP, FP, TN, and FN in a binary classification problem. The balance ratio of the classification problem is  .
+
+Recall also that the reference taxonomies used in metagenomic classification are highly imbalanced. It turns out that balanced and imbalanced reference taxonomies yield exactly the same metagenomic classification problems, as long as they have the same number of internal nodes. Some evidence supporting this observation follows.
+
+The topology of the most possible balanced binary reference taxonomy is a complete binary tree, as every internal node (and also the root) has two descendant clades of exactly the same size. On the other hand, the topology of the least possible balanced binary reference taxonomy is a rooted caterpillar, as every internal node (and also the root) has one big descendant clade and one small (with only one node) descendant clade. Borrowing the notion of total cophenetic index for phylogenetic trees (Mir et al., 2013) to measure the balance of reference taxonomies, complete binary trees have indeed the minimum value while rooted caterpillars have the maximum value. Notice, however, that the total cophenetic index of the NCBI Taxonomy (Federhen, 2012, 2015) restricted to the standard taxonomic ranks (Kingdom, Phylum, Class, Order, Family, Genus, and Species) is 206,110,330,551, which represents only 0.00032060% of the interval between the minimum value (727,931) and the maximum value (64,288,827,123,576,010) for the number of taxa in the restricted NCBI Taxonomy.
+
+Now, in a metagenomic classification problem, any subset of the leaves of a reference taxonomy may be labeled by the candidate sequences for the classification of a given read. For a given subset of the leaves of a reference taxonomy, each candidate internal node (at or under the LCA of the subset of the leaves) for the taxonomic annotation of the read yields a certain number of TP, FP, TN, and FN. For example, for the reference taxonomy in Figure 1, the subset of grayed leaves yields, for the candidate internal node j, a metagenomic classification problem with  ,  ,  ,  , and thus, balance ratio  . Table 2 shows the distribution of the number of TP, FP, TN, and FN for all subsets of the leaves of a reference taxonomy and for every candidate internal node for the taxonomic annotation of a read having as candidate sequences the subset of the leaves, for both a complete binary tree and a rooted caterpillar with 8 leaves.
+
+The resulting distribution of   values (Table 2, right) is exactly the same in both cases, and thus, a complete binary tree and a rooted caterpillar with the same number of leaves have the same balance ratio. In fact, any two reference taxonomies for the same taxa have the same balance ratio as long as they have the same number of internal nodes, because they yield a metagenomic classification problem for any subset of the leaves and for any candidate internal node, and   equals the number of leaves in the subset.
+
+Let us assume that the reads in a metagenomic sample to be classified come from known sequences in a reference taxonomy, as it is usually the case in the taxonomic annotation of metagenomic samples, whereas reads coming from novel sequences are annotated by using clustering methods instead. Given a read and a set of candidate sequences in a reference taxonomy, the taxonomic annotation of the read at a certain node in the clade of the LCA in the reference taxonomy of the set of candidate sequences can then be taken to be correct if, and only if, the candidate sequence that the read comes from lies in the clade of the node at which it is annotated.
+
+Based on this observation, we have studied the performance of some of the most often used indicators of classification error: the Yule   (Yule, 1912), also known as Matthews correlation coefficient (Matthews, 1975), the area under the ROC curve, the Youden J (Youden, 1950), the F-measure (Powers, 2011), the Jaccard similarity coefficient (Jaccard, 1901), and the Rand index (Rand, 1971), in the taxonomic annotation of metagenomic samples.
+
+  Let TP, TN, FP, and FN be the number of TP, FP, TN, and FN in a binary classification problem.
+
+If the denominator in any of these formulas is zero, the value of the indicator is arbitrarily set to zero.
+
+We have computed the value of all these indicators of classification error for each possible set of candidate sequences in a reference taxonomy and for each possible candidate node for the taxonomic annotation of a read coming from each of the candidate sequences, for different taxonomic reference topologies: complete binary trees that have the largest possible balance but yield the least balanced metagenomic classification problems, and rooted caterpillars that have the smallest possible balance but yield the most balanced metagenomic classification problems. For these classification problems, we have counted the number of times the taxonomic annotation is correct, that is, the number of times the candidate sequence that the read comes from lies in the clade of the node in the reference taxonomy at which it is annotated.
+
+The results (Table 3) show that the worst indicator of classification error is the Yule  , followed by AUC and the Youden J (which are equivalent, as  ), the F-measure and the Jaccard similarity coefficient C (which are also equivalent, as  ), and that the Rand index R is the best indicator of classification error for the taxonomic annotation of metagenomic samples. This can be explained by the fact that in a metagenomic classification problem, we focus on the correct classification of a correct taxonomic annotation while in a statistical classification problem in machine learning, where both positive and negative instances are taken into account, correlation measures such as the Yule   (which is equivalent to the Pearson correlation coefficient for binary classification problems) often are the best indicators of classification error.
+
+Now, the taxonomic annotation of a metagenomic sample involves obtaining the candidate nodes in a reference taxonomy with the least classification error (for a given indicator) for each of the reads in the metagenomic sample. We have proved in Clemente et al. (2011) that, when the F-measure is taken as indicator, it suffices to consider candidate nodes that are either candidate sequences themselves, or the LCA of two or more candidate sequences in the reference taxonomy. That is, it suffices to consider as candidate nodes the LCA skeleton tree (Fischer and Huson, 2010) of the set of candidate sequences for a given read.
+
+We prove below that it also suffices to consider the LCA skeleton tree when the Yule  , the Youden J, the area under the ROC curve, the Jaccard similarity coefficient, or the Rand index is taken as indicator of classification error.
+
+Let T be a reference taxonomy, let   be the set of candidate sequences for the classification of read i, and let   be the subtree of T rooted at the LCA of  . See Figure 1 for a schematic view.
+
+  A node j in Ti is called relevant if it is equal to a candidate sequence in Mi or equal to the LCA of two or more candidate sequences in Mi.
+
+Also, for every node j in Ti, let   be the subtree of Ti rooted at j, let Li be the set of all candidate sequences in Ti, and let Ni be the set of all candidate sequences in Ti that do not belong to Mi (hence,  ). Similarly, let   be the set of all candidate sequences in   that belong to Mi, let   be the set of all candidate sequences in   that do not belong to  , and let  . Using this notation, for the taxonomic annotation at node j of a read i with candidate sequences Mi (Fig. 1), the TP are   =  , the FP are   =  , the TN are   =  , and the FN are   =  . Let   be the Jaccard correlation coefficient for node j in Ti, that is,  . Similarly, let  ,  ,  , and   be the Yule  , the Youden J, the area under the ROC curve, and the Rand index for node j in Ti, respectively. We have:
+
+  For each node j in Ti, there exists a relevant node   such that  ,  ,  , , and  .
+
+Proof. Suppose that j is a node in Ti that is not relevant. In particular, j is not the root of Ti. Let   be the LCA of the candidate sequences in  . Clearly,   is relevant and it is a strict descendant of j, and therefore, since   is a strict subtree of  ,   while  .    ■
+
+Let  ,  ,  ,   and, similarly, let  ,  ,  ,  . We have that  ,  ,  ,  , and  .
+
+We shall rewrite the numerators. It is straightforward to check that if we denote  ,  ,  ,  , and  , then  
+
+and, therefore, Equation (1) becomes  
+
+where  . Moreover, notice that   because j is not the root of Ti.
+
+Consider the function  
+
+Equation (2) says that   if  . So, to complete the proof of the statement, it is enough to prove that the function   is decreasing on  . Its first derivative is  
+
+Then  
+
+Now, if  , then   for every x, while if  , then  
+
+and in this case  
+
+because  
+
+and the latter inequality holds because  . This implies that, also in this case, if  , then  .
+
+  The Yule  , the Youden  , the area under the ROC curve  , the Jaccard correlation coefficient  , and the Rand index   only need to be computed for nodes j in Ti that are relevant.
+
+3. A Set Cover Approach to Taxonomic Annotation
+
+Let us recall from Garey and Johnson (1979) that an instance of the set cover problem is a collection C of subsets of a finite set X whose union is X, and a solution to the set cover problem is a smallest subset   such that every element in X belongs to at least one member of  . The set cover problem is non-deterministic polynomial time complete (NP-complete), but a logarithmic approximation can be computed in linear time (Johnson, 1974; Bar-Yehuda and Even, 1981) and an exact solution can be obtained by integer linear programming.
+
+Recall also that in a metagenomic classification problem, there are often multiple candidate nodes in a reference taxonomy with the least classification error for a given read. As a set cover problem, the set of elements X is the set of candidate nodes in a reference taxonomy with the least classification error for the reads in a metagenomic sample, and the collection C of subsets of X is the collection of sets of candidate nodes in the reference taxonomy with the least classification error for each read.
+
+The following example is adapted from Cormen et al. (2009, §35.3); see Figure 2.
+
+  Consider a metagenomic sample with reads   and candidate nodes in a reference taxonomy with the least classification error as follows:   for x1,   for x2,   for x3,   for x4,   for x5,   for x6,   for x7,   for x8,   for x9,   for  ,   for  , and   for   Then, as an instance of the set cover problem,   and  , where  ,  ,  ,  ,  , and  .
+
+In a solution   to a metagenomic classification problem viewed as a set cover problem  , each read in X is annotated to a node in  . Such a taxonomic annotation is not necessarily unique, and there may still be ambiguities in the classification of the metagenomic sample. For the problem instance from Example 1, the smallest solution is  , which implies the taxonomic annotation of reads x1, x4, and   to node y3, reads x2, x5, x8, and   to node y4, reads x3, x6, x9, and   to node y5, and read x7 to either node y3 or node y4 in the reference taxonomy. The greedy algorithm of Johnson (1974) yields the approximate solutions   and  .
+
+The taxonomic annotation of a metagenomic sample can thus be seen as the reduction, and ideally the removal, of ambiguity in the identification of the reads in the metagenomic sample, where a read is ambiguous if it is annotated to more than one node in a reference taxonomy. Viewing the metagenomic classification problem as a set cover problem, an element of X is ambiguous if it belongs to more than one subset of the collection  . The subsets of a set cover overlap on ambiguous elements.
+
+  Let X be a finite set and let C be a collection of subsets of X whose union is X. The overlap of a set cover   is the total size of the subsets minus the size of X.
+
+Let the size of a set cover be the number of subsets of X that it contains, and let the total size of a set cover be the total size of the subsets of X that it contains. This corresponds to set cover problems I and II in Johnson (1974). It turns out that a set cover of smallest size does not necessarily have the least overlap, while a set cover of smallest total size always has the least overlap.
+
+  A set cover with the least number of subsets does not necessarily have the least overlap.
+
+Proof. Let   and assume, without loss of generality, that   for  . Let S be the following collection of subsets of X:
+
+The set cover   has size 2, which is the smallest possible for S and X, and overlap n. The set cover   also has size 2, but it has overlap 1. Same for the set cover  , and S and X have no other set cover of size 2. However, the set cover   has size   and overlap 0, which is the least possible overlap.    ■
+
+The following result follows directly from Definition 4.
+
+  A set cover with the least total size of subsets has the least overlap.
+
+Based on the solution of a set cover problem with the least total size of subsets, the abundance profile of a metagenomic sample is given by the proportion of reads mapped to each node in the set cover, adjusted by a uniform distribution of any still ambiguous reads among all the nodes in the set cover that they are mapped to.
+
+  The relative abundance profile of the solution to the set cover view of the metagenomic classification problem of Example 1 is as follows:
+
+4. Experimental Results
+
+We have implemented the set cover approach to taxonomic annotation in a next release of the TANGO software (Clemente et al., 2011; Alonso et al., 2013), which belongs in the BioMaS (Fosso et al., 2015) and MetaShot (Fosso et al., 2017) pipelines. The new implementation of TANGO consists of the following: • a first Python script for extracting the candidates matches for each read from the BLAST output,. • a second Python script for taxonomic annotation using the NCBI Taxonomy (Federhen, 2012, 2015), based on the ETE Toolkit (Huerta-Cepas et al., 2016),. • a third Python script for taxonomic annotation using the Greengenes taxonomy (McDonald et al., 2012),. • fourth Python script for resolving any remaining ambiguities by finding an exact solution to a set cover problem with the least total size of subsets, based on Gurobi Optimizer (Gurobi Optimization, Inc., 2017), and. • a fifth Python script for obtaining the relative abundance profile of the metagenomic sample. 
+
+While the second and third scripts process the input metagenomic sample one-sequence-read-at-a-time, the fourth script processes the output of the second or third script for the whole set of reads.
+
+When using BLAST to map the reads to target sequences in the chosen reference taxonomy, the candidate matches for a read are those with the same E-value as the top hit. Notice that TANGO can be used with any read mapping tool alternative to BLAST [see Li and Homer (2010); Schbath et al. (2012) for a survey] by adapting the first script to the output format of the particular tool. Notice also that TANGO can be used for the taxonomic annotation of both amplicon reads (Tringe and Hugenholtz, 2008), with an amplicon reference taxonomy such as RDP (Cole et al., 2014), Greengenes (McDonald et al., 2012), or SILVA (Quast et al., 2013), and shotgun reads (Metzker, 2010), with a whole-genome reference taxonomy such as the NCBI Reference Sequence database (O'Leary et al., 2016).
+
+To assess the reduction in ambiguity of the set cover approach as opposed to the TANGO approach to taxonomic annotation, we have classified a representative subset of 302,581 reads from the human microbiome metagenomic data set of Caporaso et al. (2011) (available from  ) using the plain TANGO approach, the plain set cover approach, and the combined TANGO plus set cover approach. As illustrated in Figure 3, when mapping the 302,581 reads from the human microbiome metagenomic data set to the 99,322 microbial sequences in release 13.5 of the Greengenes taxonomy clustered at 97% identity and classifying them with TANGO, there are no reads with more than three candidate annotations and, when refining the TANGO output with the set cover approach, the number of unambiguous reads raises from 300,907 to 301,101, the number of reads with two candidate annotations drops from 200 to only 9, and the number of reads with three candidate annotations drops from 3 to 0.
+
+Furthermore, to also assess the influence of the reference taxonomy in the taxonomic annotation of the metagenomic data set, we have mapped these 302,581 reads using release 2.2.31 of BLAST (Altschul et al., 1990) to the microbial sequences in release 13.5 of the Greengenes taxonomy (McDonald et al., 2012) clustered at various identity percent values, ranging from 61% to 100% (Table 4). The reduction in ambiguity follows a similar pattern: at 99% identity, the number of unambiguous reads raises from 300,916 to 301,111, the number of reads with two candidate annotations drops from 193 to only 1, and the number of reads with three candidate annotations drops from 3 to 0, and, at 100% identity, the number of unambiguous reads raises from 300,941 to 301,109, the number of reads with two candidate annotations drops from 171 to only 6, and the number of reads with three candidate annotations drops again from 3 to 0.
+
+Finally, we have computed the relative abundance profiles at the phylum rank of the BLAST matches, the TANGO taxonomic annotations, the nontaxonomic annotations with the set cover approach, the TANGO taxonomic annotations refined with the set cover approach and, for reference, the QIIME taxonomy assignment using open-reference OTU picking (Navas-Molina et al., 2013; Rideout et al., 2014), for the 302,581 reads from the human microbiome metagenomic data set and the 99,322 microbial sequences of the Greengenes taxonomy clustered at 97% identity. As can be seen in Table 5, the four relative abundance profiles are consistent, with only minor differences between them and the QIIME relative abundance profile.
+
+5. Conclusion
+
+We have addressed two potential sources of bias in the taxonomic annotation of metagenomic samples, which is usually done by first mapping the reads to the reference sequences and then classifying each read at a node in the clade of the LCA of the candidate sequences in the reference taxonomy with the least classification error. On the one hand, we have shown that the reference taxonomy being balanced or imbalanced does not affect the balance of the metagenomic classification problem, and we also shown that the Rand index is a better indicator of classification error for metagenomic classification problems than the often used area under the ROC curve and F-measure. On the other hand, we have reduced the taxonomic annotation problem for a whole metagenomic sample to a set cover problem, for which a logarithmic approximation can be obtained in linear time and an exact solution can be obtained by integer linear programming, and we have shown that a solution to the set cover problem with the least total size of subsets minimizes the ambiguity in the taxonomic annotation of the reads in a metagenomic sample.
+
+We have also developed a proof-of-concept implementation of the set cover approach to taxonomic annotation in a next release of the TANGO software, as a series of Python scripts. Experimental results on a human microbiome metagenomic data set using BLAST and the latest release of the Greengenes taxonomy show that the set cover approach further reduces ambiguity in the taxonomic annotation obtained with TANGO without distorting the relative abundance profile of the metagenomic sample.
+
+Future work includes extending the computation of balance ratio and total number of correct taxonomic annotations to the NCBI Taxonomy, taking ancestry relationships among the nodes in the reference taxonomy into account in the set cover formulation of the taxonomic annotation problem and last, but not least, extending the set cover problem formulation of the taxonomic annotation problem to a nontaxonomic metagenomic classification problem, with reference sequences but without a reference taxonomy.
+
+FIG. 1.
+
+Classifying a read using a reference taxonomy. The grayed leaves are the candidate sequences for the classification of the read, and node i is their lowest common ancestor in the reference taxonomy. The taxonomic annotation of the read at node i implies the absence of TN and FN. With a taxonomic annotation of the read at node j, however, the grayed leaves under node j are the true positives, the remaining grayed leaves are the FN, the remaining leaves under node j are the false positives, and the still remaining leaves under node i are the TN of the metagenomic classification problem. FN, false negatives; FP, false positives; TN, true negatives; TP, true positives
+
+FIG. 2.
+
+Left: A metagenomic classification problem viewed as a set cover problem. X is the set of reads from a metagenomic sample, and C is the collection of candidate nodes in the reference taxonomy with the least classification error for some reads from the metagenomic sample. Right: The smallest solution to the set cover problem instance.
+
+FIG. 3.
+
+Histogram of BLAST matches, TANGO taxonomic annotations, nontaxonomic annotations with the set cover approach, and TANGO taxonomic annotations refined with the set cover approach, for the 302,581 reads from the human microbiome metagenomic data set and the 99,322 target sequences of the Greengenes taxonomy clustered at 97% identity. The rightmost bars correspond to 16 or more candidate annotations.
+

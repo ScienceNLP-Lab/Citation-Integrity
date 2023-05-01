@@ -1,0 +1,70 @@
+Identification of therapeutic targets for Parkinson's disease via bioinformatics analysis
+
+Abstract
+
+The present study aimed to identify molecular targets that have important roles in the progression of Parkinson's disease. The gene expression profile dataset GSE7621 and the microRNA (miRNA) expression profile dataset GSE16658 were downloaded from the Gene Expression Omnibus database. R programing software was used to identify differentially expressed genes and miRNAs. Subsequently, enriched Gene Ontology terms of differentially expressed genes were obtained using the Database for Annotation, Visualization and Integrated Discovery. Target genes of differentially expressed miRNAs were identified using the starBase database and a miRNA-gene regulatory network was constructed using Cytoscape software. A total of 391 differentially expressed genes and 88 differentially expressed miRNAs were identified. Gene Ontology terms that were associated with nervous system activity, including synapse and dopamine metabolic process, were shown to be enriched in the differentially expressed genes. A total of 620 target genes were identified from the differentially expressed miRNAs, and 10 overlaps were identified between these target genes and differentially expressed genes. Furthermore, 10 miRNA-gene regulation pairs were obtained between the overlaps and differentially expressed miRNAs. In conclusion, the present study used bioinformatics analysis of gene and miRNA expression profile datasets, and identified potential therapeutic targets for Parkinson's disease.
+
+Introduction
+
+Parkinson's disease (PD), which is a degenerative disorder of the central nervous system, is the second most prevalent neurodegenerative disorder. PD affects 1% of individuals >65 years old and 4% of individuals >80 years old worldwide (1). The predominant pathological features associated with PD are death of dopaminergic neurons within the substantia nigra pars compacta, cytoplasmic accumulation of α-synuclein and other proteins in Lewy bodies and Lewy neuritis (2,3). At the molecular level, mutations in ~9 genes, including SNCA, PINK1 and UCHL1, have been reported to be responsible for familial forms of PD (4). However, these mutations have only been detected in <5% patients with PD, thus suggesting that additional genes may contribute to the susceptibility of patients to the disease (5–7). Therefore, the exact mechanisms underlying the pathogenesis of PD require further investigation.
+
+Recently, the authors of the present study have extended their research in microRNA (miRNA) expression profiles to determine the underlying mechanisms and functions of miRNA in PD. miRNAs are RNA molecules, 18–24 nucleotides long, which are associated with numerous biological processes, including development, apoptosis and proliferation. miRNAs serve a crucial role in the regulation of gene expression at the post-transcriptional level by binding to the 3′-untranslated region of the target mRNA (8,9). It has been hypothesized that >50% of human genes are regulated by miRNAs and the regulatory mechanisms are highly conserved among invertebrates and vertebrates. Furthermore, associations between miRNAs and neurodegenerative diseases, particularly PD, have been reported in brain and blood samples (10–12). The present study conducted a comprehensive analysis of global miRNA and mRNA expression profiles of normal individuals and patients with PD. A total of 88 miRNAs and 391 mRNAs were dysregulated in patients with PD. In addition, a network of miRNA-gene associations, which is linked to dysfunctional genes and signaling pathways associated with PD pathology, was established.
+
+Materials and methods
+
+mRNA and miRNA expression datasets
+
+In the present study, the mRNA expression dataset GSE7621 (13) and the miRNA expression dataset GSE16658 (14) were downloaded from the National Center for Biotechnology Information Gene Expression Omnibus database ( ). In the GSE7621 dataset, 16 substantia nigra samples from patients with PD and nine control samples were included, which were analyzed using the Affymetrix Human Genome U133 Plus 2.0 Array (Affymetrix, Santa Clara, CA, USA). In the GSE16658 dataset, expression profiles were obtained from peripheral blood mononuclear cells from 19 patients with PD and 13 normal controls, and were quantified using the miRCURY LNA microRNA Array, v.10.0-hsa, mmu & rno (Exiqon A/S, Vedbæk, Denmark).
+
+Microarray data mining
+
+Expression data preprocessing, including background correction and normalization, was performed for both mRNA and miRNA microarrays using the robust multi-array algorithm based on affy package ( ) of R. Furthermore, using the limma package ( ), differentially expressed genes (DEGs) and miRNAs (DEMs) were identified using an adjusted P-value <0.05 and a fold-change ≥1.414 as criteria.
+
+Functional enrichment analysis
+
+Based on the Database for Visualization, Annotation and Integrated analysis (DAVID;  ) (15), the enriched Gene Ontology (GO) terms for DEGs were identified. In the present study, only the GO terms that were enriched in ≥5 genes were included.
+
+Construction of miRNA-gene regulatory network
+
+starBase ( ) is a web-based tool, which was developed by Li et al (16), and can be used to determine hundreds of thousands of RNA-RNA [such as miRNA-mRNA, long non-coding RNA (lncRNA)-miRNA and lncRNA-mRNA] and protein-RNA (such as transcription factor-mRNA) regulatory relationships from 108 CLIP-Seq experiments. In the present study, target genes of the DEMs were screened for using starBase. Furthermore, Cytoscape (17) was used to visualize the miRNA-gene regulatory network.
+
+Results
+
+DEGs and DEMs
+
+The preprocessed mRNA and miRNA expression values were used to screen DEGs and DEMs. Briefly, 164 up- and 227 downregulated DEGs (Fig. 1), and 2 up- and 86 downregulated DEMs were identified in patients with PD compared with the normal controls. The top 10 up- and downregulated DEGs and DEMs are presented in Tables I and II, respectively.
+
+Functional enrichment analysis
+
+Using DAVID, 96 enriched GO terms were obtained for DEGs. The 10 most significantly enriched GO terms, including cellular amino acid derivative biosynthetic, phenol metabolic, diol metabolic, catecholamine metabolic, catechol metabolic, dopamine metabolic, synapse, biogenic amine biosynthetic, dopamine biosynthetic and catecholamine biosynthetic processes, according to their P-value, are presented in Fig. 2.
+
+miRNA-gene regulation network
+
+Using starBase, 620 target genes of DEMs were identified, and 10 overlaps were identified between these target genes and DEGs. Furthermore, 10 miRNA-gene pairs (Fig. 3) were obtained among the 10 overlapped genes and 5 DEMs. Six of these miRNA-gene pairs (which are indicated by a red border in Fig. 4) exhibited an inverse tendency with regards to changes in miRNA and mRNA expression.
+
+Discussion
+
+miRNAs are regulatory molecules, which were initially described in 1993 (18), and have been hypothesized to serve a critical role in gene expression associated with the pathogenesis of PD (19). PD is a multifactorial disorder that is characterized by the loss of dopaminergic neurons within the substantia nigra, and is associated with genetic and environmental factors. Numerous studies have addressed whether the alterations in miRNA expression in the brain are involved in the development and progression of PD (11,14,20). Furthermore, it has previously been suggested that miRNAs are able to specifically regulate the expression of known PD-associated genes and gene products, including leucine-rich repeat kinase and alpha-synuclein (21,22). However, their detailed mechanistic functions in vivo remain to be elucidated.
+
+In the present study, 32 miRNA expression profiles and 25 mRNA expression profiles, including patients with PD and normal controls, were selected from the original datasets. A total of 164 up- and 227 downregulated DEGs, and 2 up- and 86 downregulated DEMs were identified in patients with PD compared with normal controls. A GO analysis revealed that several significantly enriched terms were identified in the biological process category, including catecholamine biosynthetic process, dopamine biosynthetic process and biogenic amine biosynthetic process, which were markedly over-represented in patients with PD. Previous studies have reported that dopamine-dependent neurotoxicity of α-synuclein induced selective neurodegeneration in PD (23). Furthermore, it has previously been suggested that regulatory enzymes of catecholamine synthesis are important in PD (24). According to this functional analysis and previous reports, the present study suggests that it may be of therapeutic interest for particular elements of these biological processes to be further researched.
+
+The present study also identified numerous regulatory pairs between DEMs and their target genes, including miR-140-5P-heterogeneous nuclear ribonucleoprotein H3, miR-140-5p-lysosomal associated membrane protein 2, miR-338-3p-male-specific lethal 2 homolog (Drosophila), miR-140-5p-solute carrier family 38 member 2, miR-142-3p-ligand dependent nuclear receptor corepressor and miR-590-5p-sprouty homolog 2 (Drosophila) (SPRY2). SPRY2 is a protein-coding gene that is involved in thanatophoric dysplasia and Legius syndrome (25). The encoded protein contains a carboxyl-terminal cysteine-rich domain, which is essential for the inhibitory activity on receptor tyrosine kinase signaling proteins and controls various biological processes of the central nervous system. In immature neurons, overexpression of wild type Spry2 suppresses neurite formation and neurofilament light chain expression; however, inhibition of Spry2 induces multiple neuritis (26). A genome-wide association study analyses confirmed that the most associated locus was located in chromosome 13q31 and contained LOC729479 and SPRY2 (27). An association study of heterogeneous nuclear ribonucleoprotein (hnRNP)-A1 and its regulatory miRNA miR-590 was conducted in 274 patients with frontotemporal lobar degeneration and 287 patients with Alzheimer's disease (AD) compared with 344 age- and gender-matched controls. The relative expression levels of miR-590 were decreased in patients with AD compared with the controls (0.685±0.080 vs. 0.931±0.111; P=0.079), and the expression values of miR-590 and hnRNP-A1 mRNA were negatively correlated (r=−0.615; P=0.0237). Notably, the present study demonstrated that miR-590 levels were decreased in patients with PD. These results indicated that the diminished expression of miR-590 and the overexpression of its target gene SPRY2 may have an essential role in the progression of PD. In addition, miR-142-3p has been hypothesized to target genes including methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 (miRanda), SOX6 (TargetScan and PicTar) and SOX11 (TargetScan), among others, which have key roles in neural development (28). Furthermore, in a previous study, transfection of precursor miR-338 into the axons of primary sympathetic neurons decreased the mRNA and protein expression levels of cytochrome c oxidase IV, resulting in decreased mitochondrial activity (29). This mitochondrial dysfunction and subsequent increased oxidative stress leads to neuronal damage that may result in the development of PD. The present study may therefore hypothesize that miR-338 may be important in the pathological process of PD.
+
+In conclusion, the results of the present study are consistent with those of the aforementioned studies, and may be a valuable resource regarding the understanding of miRNA functions in the pathophysiology of PD. However, the observed associations remain controversial; therefore, more studies with larger sample sizes across diverse populations and further molecular biology experiments are required.
+
+Figure 1.
+
+Differentially expressed genes in patients with Parkinson's disease compared with normal controls. Black circles, not differentially expressed genes; red, upregulated genes; blue, downregulated genes.
+
+Figure 2.
+
+Enriched Gene Ontology terms of differentially expressed genes obtained from the Database for Annotation, Visualization and Integrated Discovery.
+
+Figure 3.
+
+miRNA-gene regulatory network. Green circles, miRNAs; red circles, genes. miRNA, microRNA.
+
+Figure 4.
+
+The log2FC of differentially expressed miRNAs and genes presented in the miRNA-gene regulatory network. FC, fold-change; miRNA, microRNA.
+

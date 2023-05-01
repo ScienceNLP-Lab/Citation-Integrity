@@ -1,0 +1,243 @@
+Transmembrane Protease TMPRSS11B Promotes Lung Cancer Growth by Enhancing Lactate Export and Glycolytic Metabolism
+SUMMARY
+
+Pathways underlying metabolic reprogramming in cancer remain incompletely understood. We identify the transmembrane serine protease TMPRSS11B as a gene that promotes transformation of immortalized human bronchial epithelial cells (HBECs). TMPRSS11B is upregulated in human lung squamous cell carcinomas (LSCCs), and high expression is associated with poor survival of non-small cell lung cancer patients. TMPRSS11B inhibition in human LSCCs reduces transformation and tumor growth. Given that TMPRSS11B harbors an extracellular (EC) protease domain, we hypothesized that catalysis of a membrane-bound substrate modulates tumor progression. Interrogation of a set of soluble receptors revealed that TMPRSS11B promotes solubilization of Basigin, an obligate chaperone of the lactate monocarboxylate transporter MCT4. Basigin release mediated by TMPRSS11B enhances lactate export and glycolytic metabolism, thereby promoting tumorigenesis. These findings establish an oncogenic role for TMPRSS11B and provide support for the development of therapies that target this enzyme at the surface of cancer cells.
+
+In Brief
+
+Updegraff et al. show that transmembrane protease TMPRSS11B is upregulated in lung squamous cell carcinoma, where it interacts with MCT4 and its obligate chaperone Basigin. TMPRSS11B catalytic activity promotes Basigin solubilization, which enhances lactate export and glycolytic metabolism, thereby promoting tumorigenesis.
+
+INTRODUCTION
+
+Tumor cells acquire and metabolize glucose at rates far exceeding their mitochondrial oxidative capacity (Hanahan and Weinberg, 2011). This enhanced flux allows for shunting of glycolytic intermediates toward biosynthetic pathways to meet the proliferative demands of rapidly dividing tumor cells (DeBerardinis et al., 2008). Most pyruvate from glycolysis is reduced to lactate by lactate dehydrogenase (LDH) and ex-ported from the cell through the dedicated H+-coupled monocar-boxylate transporters MCT1 and MCT4 (encoded by SLC16A1 and SLC16A3, respectively) (Dimmer et al., 2000; Halestrap and Price, 1999; Warburg et al., 1927). This reduction of pyruvate to lactate regenerates NAD+, which facilitates flux through the glycolytic pathway. Co-transport of protons generated from this reaction with lactate through MCTs is also critical for maintenance of appropriate intracellular pH. In tumors, impairing MCT4-mediated lactate export disrupts tumor pH, tumor growth, and glycolytic flux (Le Floch et al., 2011). In some systems, MCT1 drives lactate uptake and fuels mitochondrial oxidation (Sonveaux et al., 2008), whereas MCT4 favors lactate export and is upregulated during hypoxia and in highly glycolytic tissues (Dimmer et al., 2000; Ullah et al., 2006; Bonen, 2001). These transporters therefore orchestrate diverse metabolic responses to oxygen and nutrient availability in human tumors (Hensley et al., 2016).
+
+Several observations contribute to our knowledge of lactate metabolism in both normal physiology and pathological contexts. Tumor-derived lactate has been shown to blunt immune cell proliferation and effector function through acidification of the microenvironment and upregulation of tumor PD-L1 expression (Feng et al., 2017; Fischer et al., 2007). Moreover, the lactate content of tumors is positively correlated with radiation resistance, metastasis, and patient mortality (Quennet et al., 2006; Sattler et al., 2010; Walenta et al., 2000). This large carbon pool was initially thought to be solely a glycolytic waste product.However, in human lung tumors, it was shown that imported lactate contributes more than twice as many tricarboxylic acid (TCA) cycle carbons as pyruvate immediately derived from glycolysis (Faubert et al., 2017). These studies suggest that manipulation of lactate production or transport is a vulnerability that may be exploited for therapeutic targeting of cancer cells.
+
+Cell surface expression of MCT1 and MCT4 is facilitated by the transmembrane glycoprotein Basigin/CD147 (Kirk et al., 2000). In addition to important roles in development, Basigin is expressed highly across numerous cancer types and has been shown to promote tumor growth and metastasis (Hori et al., 2000; Igakura et al., 1998; Zucker et al., 2001). However, the mechanisms through which Basigin promotes tumorigenesis remain incompletely understood, with reports implicating its interactions with extracellular matrix (ECM) factors, regulation of matrix metalloproteases (MMPs), and hyaluronan production (Marieb et al., 2004; Kanekura et al., 2002). Basigin plays a well-established role in trafficking MCTs to the plasma membrane for proper function (Yurchenko et al., 2002; Li et al., 2001; Marieb et al., 2004; Izumi et al., 2003). In this study, we describe the unexpected finding that a poorly characterized transmembrane serine protease TMPRSS11B promotes Basigin/MCT4-mediated lactate export. TMPRSS11B belongs to the differentially expressed in squamous cell cancer (DESC) family of genomically clustered trypsin-like serine proteases that share commonality in their type II transmembrane insertion, catalytic triad spacing, and disulfide bonding anchoring their serine protease domain to a membrane proximal cysteine (Bugge et al., 2009). Using extracellular factor profiling coupled with metabolomics, we demonstrate that TMPRSS11B promotes cell surface expression and solubilization of Basigin and that this enhances the efficiency of MCT4-mediated lactate export, glycolytic flux, and tumor growth. Collectively, this work identifies an oncogenic transmembrane protease that promotes tumorigenesis, thereby uncovering an enzymatic activity that may be targeted for cancer therapy.
+
+RESULTS
+
+To identify genes that promote transformation of human bronchial epithelial cells (HBECs), we performed Sleeping Beauty (SB)-mediated transposon mutagenesis of immortalized HBECs stably expressing CDK4, human telomerase reverse transcriptase (hTERT), and short hairpin RNA (shRNA) targeting TP53 (HBEC-shp53). These cells progress to full malignancy upon overexpression of oncogenes such as KRASG12V and MYC (Sato et al., 2013). We transfected cells with the mutagenic T2/ Onc transposon and the SB100 transposase, as previously described (Guo et al., 2016). Following SB mutagenesis, transformation was assessed by the ability to efficiently form large colonies in soft agar. Genomic DNA extracted from ~300 large colonies served as a template for ligation-mediated PCR (LM-PCR) followed by deep sequencing to identify transposon insertions. Common insertion site (CIS) analysis was then performed, revealing candidate genes that may promote transformation in this system (Table S1). Among the putative oncogenes identified in this screen, we were particularly interested surface proteins, because they might represent therapeutic targets that are accessible to antibody-based therapies. One of the identified CIS genes encodes the transmembrane serine protease TMPRSS11B, which lacks known physiological substrates. Several TMPRSS11 family members were identified in the screen, and we selected TMPRSS11B as a representative family member for functional studies. We found that TMPRSS11B expression is highly upregulated in lung squamous cell carcinoma (LSCC) compared to normal lung tissue or other subtypes of non-small cell lung cancer (NSCLC), including adenocarcinoma (Figure S1A). Moreover, high expression of TMPRSS11B mRNA correlated with poor overall survival in NSCLC patients, warranting further investigation of the role of this enzyme in tumorigenesis (Figure S1B) (Lee et al., 2008).
+
+TMPRSS11B Promotes Transformation and Tumorigenesis
+
+To confirm that TMPRSS11B promotes transformation of bronchial epithelial cells, we stably expressed the protein in HBECshp53 cells and assessed colony formation. To test whether catalytic function is necessary for transforming activity, we mutated residues in the catalytic triad of this family of proteases (D270N and S366A) (Figure 1A) (Miller et al., 2014). Expression of V5-tagged TMPRSS11B proteins was confirmed by western blotting (Figure S2A). The S366A mutation resulted in faster migration of the protein, consistent with disruption of a nearby N-linked glycosylation site (Figures S2A and S2B). Expression of wild-type TMPRSS11B robustly stimulated anchorage-independent growth, and this effect was strongly impaired by the catalytic mutations (Figure 1B). Moreover, stable ectopic expression of TMPRSS11B enhanced proliferation of HBECshp53 cells (Figure S2C) and promoted growth in soft agar in several human LSCC lines (Figure 1C). These data suggest that TMPRSS11B exhibits oncogenic activity in lung epithelial and LSCC cells.
+
+To determine whether inhibition of TMPRSS11B limits tumor growth, we performed loss-of-function studies using shRNAmediated knockdown and CRISPR-mediated genome editing. First, lentivirally delivered shRNA was used to deplete TMPRSS11B in the LSCC lines HCC2814 and H157 and the prostate cancer line DU145 (Figure 1D), which expressed high levels of TMPRSS11B mRNA (Barretina et al., 2012). Xenograft assays in immunocompromised non-obese diabetic/severe combined immunodeficiency (NOD/SCID) Il2rgγ_/_ (NSG) mice demonstrated a strong impairment of tumorigenesis following depletion of TMPRSS11B in each of these cell lines (Figures 1E–1G; Figure S2D). To confirm these findings, we mutated the endogenous TMPRSS11B locus using CRISPR-mediated genome editing in HCC2814 cells. Again, this resulted in greatly reduced tumor growth, an effect that could be rescued by ectopic expression of TMPRSS11B (Figure 1H). Altogether, these data demonstrate that inhibition of TMPRSS11B impairs tumorigenesis, raising the possibility that targeting TMPRSS11B may provide a therapeutic strategy in LSCC.
+
+TMPRSS11B Promotes Solubilization of Basigin
+
+Given that TMPRSS11B harbors an extracellular (EC) protease domain, we hypothesized that proteolysis of a membrane-bound substrate may underlie its transforming activity. To identify candidate substrates of TMPRSS11B, a set of soluble receptors was interrogated using proteome profiler arrays with conditioned media (CM) from HBEC-shp53 cells with or without TMPRSS11B overexpression. This revealed an ~10-fold enrichment in the levels of soluble Basigin/CD147 in conditioned media from cells expressing TMPRSS11B (Figures 2A and 2B). Through the analysis of HBEC-shp53 cells expressing wild-type TMPRSS11B or two catalytic mutants, we confirmed that expression of proteolytically active TMPRSS11B results in Basigin solubilization (Figure 2C). TMPRSS11B overexpression in HCC95 and HCC1313 LSCC cells also stimulated Basigin release (Figure 2D). shRNA-mediated inhibition of TMPRSS11B or treatment with the irreversible serine protease inhibitor 4-(2-aminoethyl)benzene-sulfonyl fluoride (AEBSF) reduced Basigin solubilization in a dose-dependent manner (Figures 2E and 2F). Moreover, AEBSF treatment of LSCC and lung adenocarcinoma cells reduced Basigin release (Figure 2G). Overall Basigin mRNA and protein expression was similar in control and TMPRSS11B-expressing cells (Figures S3A–S3D). Furthermore, similar levels of Basigin mRNA and protein were observed in LSCC cells with control and TMPRSS11B shRNA and in AEBSF-treated HBEC-shp53 cells (Figures S3E–S3H).
+
+Previous studies have shown that Basigin stimulates proliferation (Arendt et al., 2014; Su et al., 2009). We therefore assessed whether released Basigin could non-cell-autonomously enhance proliferation of HBEC-shp53 cells. Conditioned media from HBEC-shp53 cells expressing GFP, TMPRSS11B-D270N, TMPRSS11B-S366A, or WT TMPRSS11B were transferred to untransfected HBEC-shp53 cells. No difference in proliferation was observed, suggesting that released Basigin in conditioned media does not stimulate proliferation in this system(Figure S3I).
+
+TMPRSS11B Interacts with Basigin and MCT4 at the Plasma Membrane
+
+We next assessed interactions among TMPRSS11B, Basigin, and MCT4 by performing reciprocal co-immunoprecipitations in HBEC-shp53 and HCC2814 cells expressing tagged TMPRSS11B and Basigin constructs. Co-immunoprecipitation Revealed interactions between hemagglutinin (HA)-tagged TMPRSS11B and V5-tagged Basigin and between V5-tagged TMPRSS11B and endogenous MCT4 (Figures 3A and 3B). We confirmed the interaction between V5-tagged TMPRSS11B and endogenous Basigin in HCC2814 cells by co-immunoprecipitation with three independent antibodies (Figure 3C). Immunofluorescence confocal microscopy revealed substantial co-localization of TMPRSS11B, MCT4, and Basigin at the plasma membrane of HBEC-shp53 cells (Figures 3D and 3E; Figure S4A). These data demonstrate that TMPRSS11B interacts with Basigin and MCT4 at the plasma membrane.
+
+Immunofluorescence staining showed modest alterations in Basigin localization upon TMPRSS11B loss of function. TMPRSS11B knockdown in HCC2814 cells resulted in less distinct membrane staining of Basigin relative to control cells (Figure S4B). Total levels of cellular Basigin remain unchanged in these cells (Figure S3F), suggesting that TMPRSS11B may influence trafficking of Basigin to the plasma membrane.
+
+TMPRSS11B Promotes Lactate Export
+
+To investigate the role of Basigin downstream of TMPRSS11B, CRISPR/Cas9 was used to generate clonal HBEC-shp53-TMPRSS11B cells with Basigin (BSG) knockout. This led to decreased protein levels of MCT1 and MCT4, consistent with earlier reports demonstrating the essential chaperone function of Basigin for these lactate transporters (Figure S5A) (Philp et al., 2003). Moreover, Basigin and MCT4 are expressed similarly in control HBEC-shp53-GFP and HBEC-shp53-TMPRSS11B cells (Figure S3B), suggesting that membrane release of Basigin mediated by TMPRSS11B does not alter MCT4 expression. Next, we monitored the effects of Basigin depletion in HBEC-shp53 lacking TMPRSS11B by generating CRISPR/Cas9-edited clones (Figure S5B). Basigin knockout in these cells had no appreciable effect on proliferation (Figure 4A). However, stable expression of TMPRSS11B failed to significantly stimulate proliferation in Basigin knockout cells (Figure 4A), and TMPRSS11B-mediated anchorage-independent growth was reduced (Figure 4B). These data demonstrate that Basigin knockout is tolerated in HBEC-shp53 cells and that TMPRSS11B-mediated proliferation and transformation are facilitated by Basigin in this system.
+
+Given the critical role for Basigin in MCT1 and MCT4 trafficking, we hypothesized that Basigin solubilization might regulate MCT1 and MCT4-mediated lactate transport function. Consistent with this hypothesis, intracellular lactate quantification revealed an ~25% reduction in steady-state lactate content of HBEC-shp53-TMPRSS11B compared with control HBEC-shp53-GFP cells (Figure 4C). This reduction was reversed in independent BSG knockout clones and partially reversed in HBEC-shp53-TMPRSS11B cells treated with AEBSF (Figure 4C).To rule out the possibility that this reduction in steady-state intracellular lactate levels was due to a defect in glucose uptake and therefore reduced glycolytic flux, we measured uptake of the fluorescent glucose analog (2-(N-(7-Nitrobenz-2-oxa-1,3-di-azol-4-yl)Amino)-2-Deoxyglucose) (2-NBDG). No significant difference between HBEC-shp53-TMPRSS11B and HBEC-shp53 control cells was observed (Figure S5C). Extracellular flux analysis demonstrated that TMPRSS11B enhanced extracellular acidification rates (ECARs), a readout of glycolytic flux and a commonly used proxy for lactate secretion (Figure 4D). The enhanced export was reduced in independent Basigin knockout (KO) clones and rescued in cells by reintroduction of a CRISPR/Cas9-resistant Basigin construct (Figure 4D). Moreover, in separate Basigin KO cells lacking TMPRSS11B expression, we found only a modest (~10%) reduction in ECAR compared with control non-targeting guide RNA (gRNA) (sgNS) cells, suggesting that Basigin KO is tolerated in HBEC-shp53 cells (Figure 4E). This may reflect a vulnerability of TMPRSS11B-expressing cells to Basigin KO that is not observed in syngeneic cells lacking TMPRSS11B. To distinguish between the roles of MCT1 and MCT4 in this system, we compared HBEC-shp53-TMPRSS11B cells with either MCT4 deletion or treatment with the chemical MCT1 inhibitor SR13800 and observed that ECAR was reduced dramatically in MCT4 KO cells but minimally upon MCT1 inhibition (Figure 4F; Figure S5D). Altogether, these findings provide evidence that TMPRSS11B enhances the lactate transport efficiency of Basigin/MCT4 complexes in HBEC-shp53 cells.
+
+Depletion of TMPRSS11B Reduces Lactate Export
+
+To demonstrate its role in promoting lactate export, TMPRSS11B was depleted using shRNA in the LSCC lines HCC2814, H157, and HCC95 and the prostate cancer line DU145. CRISPR-medi-ated genome editing was used to mutate the endogenous TMPRSS11B locus in polyclonal populations of the lung adenocarcinoma cell line H2073 and in clonal lines of HCC2814 cells (Figure S5E; Table S2). TMPRSS11B reduction in these cells resulted in an 0.3- to 3.5-fold increase in intracellular lactate levels (Figure 5). Increased intracellular lactate in TMPRSS11B KO clones was specifically due to TMPRSS11B loss of function, because restoring TMPRSS11B expression with cDNA harboring silent mutations in the single guide RNA (sgRNA) targeting site led to a significant reduction in intracellular lactate levels (Figure 5G). We confirmed that these cells consume similar amounts of 2-NBDG (Figure S6), ruling out the possibility that this lactate accumulation is caused by enhanced glucose uptake.
+
+To monitor the metabolic consequences of TMPRSS11B inhibition, we performed [1,6-13C]glucose tracing in HCC2814 cells with shRNA-mediated TMPRSS11B knockdown and observed a reduction in lactatem+1 export (Figure S7A) in the same cells in which we documented significant accumulation of steady-state intracellular lactate (Figure 5A). Overall, our findings suggest that TMPRSS11B in LSCC enhances tumorigenesis by facilitating lactate export.
+
+RNA sequencing (RNA-seq) was used to assess the cellular consequences of TMPRSS11B gain of function (GOF) (HBEC-shp53-GFP versus HBEC-shp53-TMPRSS11B) and loss of func-tion (LOF) (HCC2814-EV and HCC2814-shTMPRSS11B). In TMPRSS11B-overexpressing cells, Database for Annotation, Visualization, and Integrated Discovery (DAVID) pathway anal-ysis of significantly upregulated genes retrieved metabolic path-ways as the top hit (p < 0.05, false discovery rate [FDR] < 0.1) (Figure S7B). We also assessed levels of transcripts in pathways involved in glucose metabolism. This revealed subtle yet consistent upregulation of genes involved in glucose uptake, glycolysis, the pentose phosphate pathway (PPP), and the TCA cycle following TMPRSS11B overexpression and downregulation of these pathways following TMPRSS11B loss of function (Figure S7C). This poses the intriguing possibility that enhanced lactate export also induces a transcriptional program favoring a metabolic shift toward aerobic glycolysis and that this may function to bolster the proliferative capacity of cells. This is in agreement with earlier studies demonstrating that depletion of MCT4, Basigin, or both induces lactate accumulation and slows glycolytic flux (Marchiq et al., 2015). In addition to enhancing glycolytic ECAR, overexpression of TMPRSS11B significantly enhanced the oxygen consumption rate (OCR) (Figure S7D), consistent with a report demonstrating that transported lactate contributes to the TCA cycle carbon pool more than pyruvate directly derived from glycolysis (Faubert et al., 2017).
+
+Finally, we determined whether expression of TMPRSS11B or its other family members correlated with lactate secretion in cultured human LSCCs. Rates of lactate secretion were measured in a panel of NSCLC cell lines, including 12 cell lines derived from LSCC. The lactate secretion rate was then correlated with transcript abundance for each of the TMPRSS11 family members. TMPRSS11B mRNA, but none of the other TMPRSS11 family members, positively correlated with lactate secretion (Figure 6), suggesting TMPRSS11B acts non-redundantly to enhance lactate secretion.
+
+DISCUSSION
+
+To identify genes that promote transformation of HBECs, we performed an unbiased forward genetic screen and identified putative oncogenes and tumor suppressors relevant to lung cancer pathogenesis. We were particularly interested in cell surface proteins, because they may represent therapeutic targets that are accessible to antibody-based therapies. These efforts revealed that overexpression of the transmembrane serine protease TMPRSS11B promotes transformation in this system. TMPRSS11B is highly expressed in LSCC tumors and is associated with poor clinical outcomes. TMPRSS11B overexpression induces cellular transformation in vitro, while depletion of TMPRSS11B reduces the tumor growth of LSCC and prostate cancer cells in mice, supporting an oncogenic function for this protein in tumorigenesis. Our mechanistic studies support a model whereby TMPRSS11B interacts with and promotes Basigin solubilization, resulting in enhanced MCT4-mediated lactate export. Consequently, this increases glycolytic flux and tumor growth (Figure 7). These results, coupled with TMPRSS11B being an enzyme localized to the cell membrane, raise the possibility that this protein may be targeted with therapeutic antibodies or small molecules in LSCC and other malignancies. Moreover, these findings further our understanding of the function and regulation of Basigin, a protein that is known to act as an essential chaperone for cell surface expression of the lactate transporters MCT1 and MCT4.
+
+Studies have demonstrated that human lung tumors, as well as most healthy tissues in the body, use circulating lactate to fuel TCA cycle oxidation, suggesting that glycolytic flux is uncoupled from TCA cycle flux at the level of pyruvate reduction to lactate and that enhancing lactate secretion may fuel cellular respiration non-autonomously (Hui et al.,2017; Faubert et al., 2017). Moreover, clinical progression of post-operative NSCLC patients correlated with tumor lactate uptake and oxidation in a manner dependent on MCT1 in experimental NSCLC tumors (Faubert et al., 2017). These findings underscore the importance of investigating mechanisms of lactate transport to develop novel therapies that target this process.
+
+TMPRSS11B may regulate Basigin through multiple possible non-mutually exclusive mechanisms, including direct proteolytic cleavage, as well as enhanced Basigin secretion. Consistent with the latter possibility, MCT4 and Basigin have been found in secreted vesicles purified from the sera of prostate cancer patients and in conditioned media of human ovarian and breast carcinoma cell lines (Gallagher et al., 2007; Millimaggi et al., 2007; Yoshioka et al., 2014). Metabolic profiling of exosomal vesicles isolated from prostate cancer patients revealed higher concentrations of lactate than any other metabolite measured (Zhao et al., 2016). In addition, flux analysis in cultured cells revealed substantial rates of labeled lactate secretion via exosomes and uptake of exosomal lactate by recipient cells (Achreja et al., 2017). This raises the intriguing possibility of vesicular export of lactate, in which the pH gradient between cytosol and Golgi secretory compartments, along with the topological orientation of Basigin and MCT4, would favor the import of lactate into vesicles (Achreja et al., 2017; Zhao et al., 2016). Moreover, Basigin-decorated vesicles are subject to regulated endosomal recycling through clathrin-independent endocytosis (Maldonado-Báez et al., 2013). Our data demonstrating reduced plasma membrane localization of Basigin upon TMPRSS11B loss of function is consistent with this hypothesis. Nevertheless, proteolysis is likely a key component of the relevant TMPRSS11B mechanism given our data demonstrating the reduced transforming activity and Basigin solubilization by TMPRSS11B catalytic mutants. Thus, while our findings have uncovered a previously unrecognized TMPRSS11B-Basigin regulatory interaction that is crucial for lactate metabolism and secretion in cancer cells, important mechanistic questions remain for future investigation.
+
+Our study expands our understanding of the metabolic alterations that contribute to tumor progression in LSCC. Yet the mechanism by which TMPRSS11B is upregulated in LSCC is unknown. In a mouse model of LSCC with homozygous deletion of Pten and Stk11 (Lkb1), the mouse ortholog of TMPRSS11B, Tmprss11bnl, is among the top 20 upregulated genes in tumors, hinting at a conserved mechanism of tumor metabolic regulation (Xu et al., 2014). Physiological TMPRSS11B expression is largely restricted to cervical and esophageal tissue (GTEx Consortium, 2013) but is highly upregulated in LSCC and other squamous cell carcinomas (Gao et al., 2013), while Basigin and MCT4 are expressed highly throughout the body in tissues such as erythrocytes, brain, skeletal muscle, and activated immune populations. This suggests that therapies targeting TMPRSS11B may be more specific to tumor cells and result in fewer side effects and less toxicity compared to Basigin or MCT4 inhibitors (Halestrap and Price, 1999). Additional studies are warranted to identify substrates of TMPRSS11B in both physiological and pathophysiological settings. Given that this cell surface protein is also an enzyme, small molecules or antibodies directed against the site of catalysis may be developed to inhibit TMPRSS11B function in future studies
+
+STAR+METHODS
+
+CONTACT FOR REAGENT AND RESOURCE SHARING
+
+Further information and requests for resources used in this paper should be directed to the Lead Contact, Kathryn O’Donnell at  
+
+EXPERIMENTAL MODEL AND SUBJECT DETAILS
+
+Animals and xenograft assays
+
+All procedures involving mice were performed in accordance with the recommendations of the Panel on Euthanasia of the American Veterinary Medical Association and protocols approved by the UT Southwestern Institutional Animal Care and Use Committee (protocol # 2017–102112). Cells were trypsinized, counted, resuspended in HBSS-, and injected subcutaneously at 4–5 3 106 cells per flank onto both flanks of 4–6-week-old female NOD.Cg-PrkdcscidIl2rgtm1Wjl/SzJ (NSG) mice. For inducible shRNA experiments, 2g/L doxycycline hyclate (Sigma, Cat. No. D9891) and 1.5% w/v sucrose was supplied in drinking water ad libitum. Tumors were measured every 3–4 days using digital calipers in two perpendicular directions with width measurements being the smaller of the two measurements. Tumor volume was calculated with the formula: volume (mm3) = (length*(width2))/2. At the end of the experiment, mice were euthanized and excised tumors photographed. Tumor fragments were stored in 10% neutral buffered formalin or snap-frozen in liquid nitrogen. TMPRSS11B CRISPR clone 3 was used for tumorigenesis experiments shown in Figure 1H.
+
+METHOD DETAILS
+
+Tissue culture and cell lines
+
+Lung squamous cell carcinomas (HCC95 (M), HCC1313 (M), HCC1588 (F), HCC2814 (M), and H157(M)), lung adenocarcinoma (H2073 (F)), and prostate carcinoma (DU145 (M)) cells were cultured in ATCC-formulated RPMI-1640 with 5% FBS and antibiotic-antimycotic (ThermoFisher Cat. Nos. A1049101 and 15240112, Sigma Cat. No. F2442) (Wistuba et al., 1999; Gazdar et al., 2010). Human bronchial epithelial cells with stable knockdown of TP53 (HBEC-shp53) and all derivatives were cultured in keratinocyte serum-free media (KSFM, ThermoFisher Cat. No. 17005042) with antibiotic-antimycotic and supplied supplements (Ramirez et al., 2004). All cell lines used in this study were cultured in 5% CO  at 37C, tested negative for mycoplasma contamination, and have been authenticated using PowerPlex (Promega).
+
+Soft agar colony formation assays
+
+Complete medium with 25% v/v FBS, antibiotic-antimycotic, and sterile agarose (SeaKem LE Agarose, Cat. No. 50004) added to 0.5% (bottom layer) and 0.37% (top layer) was added to 12-well plates and 1×103 cells were added per well. Cells were cultured in 5% CO  at 37C with fresh medium with 5% FBS added every three days for the duration of the experiment. Large colonies were quantified 3 weeks after plating.
+
+Lentivirus and plasmids
+
+TMPRSS11BD270N and TMPRSS11BS366A mutant constructs were generated with Phusion site-directed mutagenesis (ThermoFisher) of IOH35719 (pENTR221, Invitrogen Ultimate ORF collection). TMPRSS11B, GFP, or mCherry were cloned into pLX303 (25897, Addgene) using Gateway LR clonase II (Invitrogen, Cat. No. 11791100). For BSG and SLC16A3 knock-out, sgRNAs (Table S3, oligonucleotides) were cloned into pLentiCRISPRv2 modified to express GFP. Single GFP+ cells were sorted into 96-well plates and expanded for further study. For Basigin rescue experiments, Basigin (IOH3378, Invitrogen Ultimate ORF collection) was modified by site-directed mutagenesis to introduce synonymous mutations to sgRNA binding residues at 2, 6, and 9nt from the PAM and cloned into pLX307 (pLX303 modified to express mCherry instead of a BlastR cassette) using Gateway LR clonase II. Following transduction mCherry+ cells were collected by FACS.
+
+For TMPRSS11B knock-out, sgRNAs were cloned into pLentiCRISPRv2-Puro. TMPRSS11B-specific shRNA (Table S3, oligonu-cleotides) was cloned into pTRIPZ (Dharmacon, Cat. No. RHS4696). All lentiviral vectors were packaged in HEK293T cells by co-transfection with packaging plasmids pMD2.G (Addgene,12259) and psPAX2 (Addgene,12260) using Effectene transfection reagent (QIAGEN Cat. No. 301427). Conditioned media was taken 48 and 72 hours post transfection, clarified of cells and debris, concen-trated with Lenti-X following the manufacturer’s protocol (Clontech, Cat. No. 631231), and resuspended in Hank’s balanced salt so-lution (HBSS) (Invitrogen, Cat. No. 14175095). Recipient cells were transduced in the presence of 8 mg/mL hexadimethrine bromide for 5–8 hours. Transduced cells were selected with either Blasticidin (2–5 mg/mL), Puromycin (1.5–3 mg/mL), or collected FACS on a BD FACSAria II (GFP and mCherry selection).
+
+[1,6-13C] glucose tracing
+
+3×105 HCC2814 cells with control or TMPRSS11B shRNA were plated in 6-well plates, cultured overnight, and exchanged into glucose- and bicarbonate-free RPMI-1640 with 4.5g/L [1,6-13C] glucose and 2g/L NaHCO  added. Small aliquots of media were taken at t = 0, 5 m, 15 m, 30 m, and 60 m after media exchange, clarified of debris, and stored at 80C. At the last time point, cells were washed on ice in cold saline solution, scraped into 50% methanol, and transferred to 80C for subsequent analysis. We used a previously described GC-MS protocol (DeNicola et al., 2015) with the aforementioned culture conditions. Cells were lysed in RIPA to determine protein content, and lactate secretion rates were determined by normalizing the lactate abundance in the medium to cellular protein in each well.
+
+Lactate assays
+
+Cells were washed twice in cold HBSS- and scraped on ice. Following centrifugation at 1,500 RPM for 5 m at 4 C, cells were resus-pended in 500 mL Lactate Assay Buffer (Sigma, Cat. No. MAK064) and acoustically lysed in a BioRuptor for 20 m of 1 m on/off sonication on high at 4 C. Insoluble material was pelleted at 14,000xg for 5 m and supernatant transferred to Amicon Ultra 0.5mL 10K MWCO columns and centrifuged at 14,000xg for 20 m to remove endogenous LDH. Undiluted filtrate was analyzed according to the manufacturer’s protocol.
+
+Seahorse XFe96 assays
+
+1.5*104 HBEC cells were plated in a Seahorse XFe 96-well culture plate in KSFM. Glucose, oligomycin, and SR13800 (or DMSO) were loaded into injection wells of an XFe96 cartridge to achieve final concentrations of 10mM, 2 mM, and 5nM, respectively. At the start of the experiment, cells were washed and exchanged into L-15 media without glucose or bicarbonate and run through 4 cycles of 3 minute mix / 3 minute measure per injectant, with the latter 3 measurements being used for data analysis and representation. Bicarbonate- and glucose-free Dulbecco’s modified eagle media (DMEM) yielded similar results.
+
+RT-qPCR
+
+Cells with inducible shRNA were cultured in 2 mg/mL dox for > 3 days with fresh dox added every 2 days. Cells were washed in cold HBSS-, scraped on ice into HBSS-, and centrifuged at 1,500RPM for 5 m at 4C. Cell pellets were resuspended in 600 mL RLT buffer with fresh b-mercaptoethanol, vortexed, transferred to a QiaShredder column, and centrifuged at max speed for 2 m at 4C. RNA was then extracted according to the RNeasy protocol (QIAGEN) with on-column DNase digest and resuspended in 50 mL nuclease-free H O. RNA (1 mg) served as template for reverse transcription with SuperScript IV VILO (Invitrogen, Cat. No. 11756050). TaqMan probes (Invitrogen) corresponding to TMPRSS11B (Hs01113515 m1 and Hs00699337 m1), BSG (Hs00936295_m1), and GAPDH (Hs03929097) were used to detect transcripts in 384-well format, and expression calculating using the 2ddCt method.
+
+RNA sequencing
+
+Cells were plated in triplicate in 15cm2 dishes and allowed to reach 70% confluence. Cells were then washed in cold HBSS- twice and scraped on ice into HBSS-. Cells were pelleted at 1,500RPM for 5 m at 4C and resuspended in 600 mL RLT buffer with fresh b-mercaptoethanol, vortexed, transferred to a QiaShredder column, and centrifuged at max speed for 2 m at 4C. RNA was then extracted according to the RNeasy protocol (QIAGEN) with on-column DNase digest and resuspended in 50 mL nuclease-free H O. Samples were run on the Agilent 2100 Bioanalyzer to evaluate RNA quality and were quantified by Qubit (Invitrogen) prior to starting library prep. Four micrograms of total DNase treated RNA were prepared with the TruSeq Stranded Total RNA LT Sample Prep Kit from Illumina. Poly-A RNA was purified and fragmented before strand specific cDNA synthesis. cDNA were A-tailed and indexed adapters were ligated. Samples were then PCR amplified and purified with AmpureXP beads, and validated again on the Agilent 2100 Bioanalyzer. Sequencing was performed on an Illumina NextSeq 500 to generate 76-bp single-ended reads.
+
+2-NBDG uptake assay
+
+Cells were washed in warm HBSS- and exchanged into glucose- and bicarbonate-free RPMI1640 media with 5% FBS, antibiotic-antimycotic, 2g/L NaHCO , +/ 50 mM 2-NBDG (Fisher, Cat. No. N13195). After incubation for 30 m at 37C, cells were washed twice in warm HBSS-, trypsinized, resuspended in cold FACS buffer, and 2-NBDG uptake was assessed using a BD Accuri benchtop flow cytometer in the FL-1 channel.
+
+sReceptor Proteome Profiler Array
+
+Conditioned media was taken from 75% confluent HBEC-shp53-GFP and HBEC-shp53-TMPRSS11B cells, debris pellet at 1,500xg for 10 m, and supernatant used as substrate for the immobilized antibody array following the manufacturer’s protocol (119 factors, sReceptor Proteome Profiler, R&D Systems, Cat. No. ARY012). Developed arrays were scanned and pixel density was quantitated using ImageJ software.
+
+Basigin ELISA
+
+For conditioned media quantitation, media was taken and clarified of cells and debris by pelleting at 1,500xg for 10 m. HALT protease and phosphatase inhibitor cocktail (ThermoFisher, Cat. No. 78443) was added to the supernatant and assayed immediately according to the manufacturer’s protocol (R&D systems, Human EMMPRIN/CD147 Quantikine ELISA kit, Cat. No. DEMP00). For cellular Basigin quantitation, cells were washed in cold HBSS- after conditioned media collection, scraped on ice into HBSS-, and cells pelleted at 1,500RPM for 5 m at 4C. Cell pellets were resuspended in non-denaturing lysis buffer (LB-17, R&D systems) with protease/phosphatase inhibitors and acoustically lysed using a BioRuptor Plus (Diagenode) at 1 m on/off sonication cycle for 20 m on high at 4C. Insoluble material was pelleted at 14,000xg for 5 m at 4C and supernatant transferred to a clean tube for imme-diate analysis according to the manufacturer’s protocol. Basigin solubilization was calculated as ([soluble Basigin] / [cellular Basigin]).
+
+Western blotting
+
+Cells were washed and scraped on ice into HBSS-, pelleted at 1,500 RPM for 5 m at 4C, and resuspended in LB-17 with HALT pro-tease inhibitor cocktail (ThermoFisher, Cat. No. 78443). Cells were acoustically ruptured in a Bioruptor for 15 m of 1 m on/off on high, or in some instances lysed using a QiaShredder column. Insoluble material was pelleted at 14,000xg for 5 m at 4C and supernatant was transferred to a clean tube. Protein concentration of samples was determined by BCA assay (23227, ThermoFisher). 10–30 mg total protein was combined with 4X LDS loading buffer (NP0008, ThermoFisher) and 10X reducing agent (B0009, ThermoFisher), heated to 70C for 10 m, and loaded into 4%–12% or 10% polyacrylamide SDS gels. Electrophoresed protein was transferred to nitro-cellulose membranes using semi-dry transfer (iBlot II, Invitrogen) then blocked and probed in TBST with 5% w/v milk. A detailed list of antibodies used in this study can be found in the Key Resources Table.
+
+Immunoprecipitation
+
+Cells were plated in 15cm2 dishes and cultured to 70% confluence. Cells were washed twice in cold HBSS- on ice, scraped into cold HBSS-, and pelleted at 1,500 RPM for 5 m at 4C. Cell pellets were resuspended and lysed and immunoprecipitated following the manufacturer’s protocol (Dynabeads Protein G Immunoprecipitation Kit, Cat. No. 10007D) using 5 mg of antibody. Western blots were probed with antibodies of a different host species than what was used for immunoprecipitation.
+
+Immunofluorescence and confocal microscopy
+
+Cells were seeded in 6-well plates with UV-sterilized glass coverslips. Cells were washed in PBS and fixed with 4% paraformalde-hyde in PBS for 20 min. at room temperature. Cells were washed 3×10 minutes in PBS, blocked with 2% BSA in PBS for 1 hour at room temperature, and then incubated with primary antibodies (1:100 dilution) at 4 C overnight. Cells were washed 3×10 minutes in PBS and incubated in Alexa Flour-conjugated secondary antibodies (CST, 1:500 dilution; Anti-Mouse Alexa Flour 488, Anti-Mouse Alexa Flour 594, Anti-Rabbit Alexa Flour 488, Anti-Rabbit Alexa Flour 594 and Anti-Rat Alexa Flour 647) in 2%BSA in PBS for 2 hours at room temperature. Coverslips with cells were mounted on Fisherbrand Superfrost Plus microscope slides with VECTASHIELD hard set mounting media with DAPI (Vector Labs). All images were captured using a ZEISS LSM-700 confocal microscope.
+
+QUANTIFICATION AND STATISTICAL ANALYSIS
+
+GC/MS Metabolite Tracing
+
+Mass spectrometry and mathematical corrections were performed according to previously established protocols (DeNicola et al., 2015).
+
+RNA-Seq analysis methods
+
+Fastq files were checked for quality using fastqc (http://www.bioinformatics.babraham.ac.uk/projects/fastqc) and fastq screen (http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen) and were quality trimmed using fastq-mcf. (Aronesty, 2013). Trimmed fastq files were mapped to hg19 (UCSC version from igenomes) using TopHat (Kim and Salzberg, 2011), duplicates were marked using picard-tools (https://broadinstitute.github.io/picard/), read counts were generated using featureCounts (Liao et al., 2014) and differential expression analysis was performed using edgeR (Robinson et al., 2010).
+
+GraphPad Prism 7
+
+All growth curves, column graphs, and XY graphs were generated using GraphPad Prism 7 after data normalization and organization in Microsoft Excel. Detailed statistical analyses are listed in figure legends where applicable.
+
+DATA AND SOFTWARE AVAILABILITY
+
+RNA sequencing raw and analyzed data
+
+The accession number for the gene expression data reported in this paper is NCBI GO: GSE114850.
+
+Supplementary Material
+
+  
+
+Figure 1.
+
+(A) Schematic representation of TMPRSS11B with catalytic residues highlighted. TM, transmembrane; SEA, sea urchin sperm protein, aggrecan, and enterokinase domain; SP, serine protease domain.
+
+(B) Soft agar colony formation in human bronchial epithelial cell (HBEC)-shp53 cells expressing GFP (control), D270N and S366A catalytic mutants, or wild-type TMPRSS11B (n = 3, error bars represent SD).
+
+(C) Soft agar colony formation in SCC lines expressing mCherry (control) or TMPRSS11B (n = 3, error bars represent SD).
+
+(D) Quantitative real-time PCR verification of TMPRSS11B knockdown in cells used for xenograft assays in (E)–(G) (n = 3 for each cell line, error bars represent SD).
+
+(E) TMPRSS11B knockdown blunts subcutaneous tumor growth of HCC2814 cells. (Left) Mice treated with doxycycline (dox) water to induce TMPRSS11B knockdown at the time of injection (n = 16 tumors/group). (Right) Mice treated with dox water when tumors were palpable (n = 6 tumors/group). Error bars represent SEM for both right and left graphs.
+
+(F) TMPRSS11B knockdown inhibits subcutaneous tumor growth of H157 cells (n = 16 tumors/group, error bars represent SEM). Mice were treated with dox water at the time of injection.
+
+(G) TMPRSS11B knockdown reduces subcutaneous tumor growth of DU145 cells (n = 16 tumors/group, error bars represent SEM). Mice were treated with dox water at the time of injection.
+
+(H) CRISPR/Cas9 depletion of TMPRSS11B (sgRNA1 clone 3) blunts tumor growth in HCC2814 cells that is restored upon introduction of a CRISPR-resistant TMPRSS11B cDNA (n = 16 tumors/group, error bars represent SEM).
+
+Unpaired t test; Benjamini, Krieger, and Yekutieli approach; *p < 0.05, **p < 0.01, ***p < 0.001, ****p < 0.0001.
+
+Figure 2.
+
+(A) Immobilized antibody array on conditioned media harvested from HBEC-shp53-GFP versus HBEC-shp53-TMPRSS11B cells (119 factors profiled, n = 2).
+
+(B) Pixel density quantitation of array from (A). Data bars represent SD.
+
+(C) Basigin solubilization (conditioned media Basigin:total cellular Basigin) in HBEC-shp53 cells expressing GFP, TMPRSS11B-D270N, TMPRSS11B-S366A, or WT TMPRSS11B (n = 3, error bars represent SD).
+
+(D) TMPRSS11B enhances Basigin membrane release in HCC95 and HCC1313 cells (n = 3, error bars represent SD).
+
+(E) Inducible shRNA depletion of TMPRSS11B reduces Basigin membrane release in HCC2814 cells (n = 3, error bars represent SD).
+
+(F) Treatment of HBEC-shp53 cells with the serine protease inhibitor AEBSF reduces Basigin solubilization (n = 2, error bars represent SD).
+
+(G) Treatment of HCC1588, H2073, and HCC2814T (T denotes TMPRSS11B overexpression) with AEBSF reduces Basigin membrane release (n = 3, error bars represent SD).
+
+Unpaired t test; Benjamini, Krieger, and Yekutieli approach; *p < 0.05, **p < 0.01, ***p < 0.001, ****p < 0.0001.
+
+Figure 3.
+
+(A) Reciprocal co-immunoprecipitation (coIP) of HA-tagged TMPRSS11B and V5-tagged Basigin in HBEC-shp53 cells.
+
+(B) Reciprocal coIP of V5-tagged TMPRSS11B and an antibody that recognizes endogenous MCT4 in HBEC-shp53 cells.
+
+(C) CoIP of endogenous Basigin with three independent antibodies reveals interaction with V5-tagged TMPRSS11B.
+
+(D) Immunofluorescence (IF) confocal microscopy of HBEC-shp53-V5-TMPRSS11B cells stained with anti-V5 and anti-Basigin.
+
+(E) IF confocal microscopy of HBEC-shp53-V5-TMPRSS11B cells stained with anti-V5 and anti-MCT4. All slides were mounted in solution containing DAPI.
+
+Figure 4.
+
+(A) Proliferation of isogenic HBEC-shp53 Basigin knockout (KO) clones or sgNS (control non-targeting sgRNA) with either stable GFP or TMPRSS11B expression.
+
+(B) Soft agar quantitation of large colonies in HBEC-shp53-GFP and HBEC-shp53-TMPRSS11B with and without Basigin KO (n = 3, error bars represent SD).
+
+(C) Intracellular lactate quantification in HBEC-shp53 cells reveals a protease- and Basigin-dependent reduction in cellular lactate content (n = 2, error bars represent SD).
+
+(D) SeaHorse analysis of the extracellular acidifica-tion rate (ECAR) in 1.5 3 104 HBEC-shp53 cells reveals enhanced lactate export in HBEC-shp53-TMPRSS11B relative to HBEC-shp53-GFP cells and HBEC-shp53-TMPRSS11B with Basigin knockout (n = 5–6, error bars represent SEM).
+
+(E) Relative glycolytic ECAR ((ECAR after glucose injection basal ECAR) normalized to HBEC-shp53-sgNS-GFP) of Basigin KO HBEC-shp53 cells expressing GFP or TMPRSS11B (n = 36 for control sgNS-GFP, n = 72 for experimental groups, error bars represent SEM).
+
+(F) Relative ECAR of MCT4 KO and MCT1 inhibitor-treated HBEC-shp53-TMPRSS11B cells (n = 15–18, error bars represent SEM).
+
+Unpaired t test; Benjamini, Krieger, and Yekutieli approach; *p < 0.05, **p < 0.01, ***p < 0.001, ****p < 0.0001.
+
+Figure 5.
+
+(A–F) Inducible knockdown of TMPRSS11B pro-motes lactate accumulation in HCC2814 (A), H157 (B), HCC95 (C), and DU145 (D) cells. CRISPR/Cas9 depletion of TMPRSS11B results in lactate accu-mulation in H2073 (E) and HCC2814 (F) cells (n = 3, error bars represent SD).
+
+(G) Lactate accumulation in CRISPR/Cas9-modi-fied HCC2814 cells can be rescued by introduction of a CRISPR-resistant TMPRSS11B cDNA (n = 3, error bars represent SD).
+
+Unpaired t test; Benjamini, Krieger, and Yekutieli approach; **p < 0.01, ***p < 0.001, ****p < 0.0001.
+
+Figure 6.
+
+TMPRSS11B mRNA expression correlates with lactate secretion in human LSCCs (n = 12 cell lines, linear regression and goodness of fit analysis).
+
+Figure 7.
+
+(Left) In healthy lung lacking TMPRSS11B expression, Basigin serves a chaperone role in regulating the efficiency of lactate export through MCT4. (Right) In LSCCs with upregulated expression of TMPRSS11B, solubilization of Basigin enhances lactate export efficiency through MCT4, in turn removing a feedback-regulatory role of cellular lactate on glycolytic flux.
+

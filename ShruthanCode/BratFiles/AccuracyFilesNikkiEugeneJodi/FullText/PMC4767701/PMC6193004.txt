@@ -1,0 +1,146 @@
+Extracting stability increases the SNP heritability of emotional problems in young people
+
+Abstract
+
+Twin studies have shown that emotional problems (anxiety and depression) in childhood and adolescence are moderately heritable (~20–50%). In contrast, DNA-based ‘SNP heritability’ estimates are generally <15% and non-significant. One notable feature of emotional problems is that they can be somewhat transient, but the moderate stability seen across time and across raters is predominantly influenced by stable genetic influences. This suggests that by capturing what is in common across time and across raters, we might be more likely to tap into any underlying genetic vulnerability. We therefore hypothesised that a phenotype capturing the pervasive stability of emotional problems would show higher heritability. We fitted single-factor latent trait models using 12 emotional problems measures across ages 7, 12 and 16, rated by parents, teachers and children themselves in the Twins Early Development Study sample. Twin and SNP heritability estimates for stable emotional problems (N = 6110 pairs and 6110 unrelated individuals, respectively) were compared to those for individual measures. Twin heritability increased from 45% on average for individual measures to 76% (se = 0.023) by focusing on stable trait variance. SNP heritability rose from 5% on average (n.s.) to 14% (se = 0.049; p = 0.002). Heritability was also higher for stable within-rater composites. Polygenic scores for both adult anxiety and depression significantly explained variance in stable emotional problems (0.4%; p = 0.0001). The variance explained was more than in most individual measures. Stable emotional problems also showed significant genetic correlation with adult depression and anxiety (average = 52%). These results demonstrate the value of examining stable emotional problems in gene-finding and prediction studies.
+
+Introduction
+
+Anxiety and depression, known collectively as emotional problems, are highly prevalent in childhood and adolescence (median prevalence 2–24% for anxiety and 0.2–17% for depression)1. The average age of onset for anxiety is strikingly young (between 11 and 14), and 50% of anxiety disorders begin before age 112. Similarly, 25% of depression cases are diagnosed before age 192. Emotional problems often take a chronic course throughout life3, and predict numerous difficulties in adulthood: anxiety4, bipolar disorder5, disruptive disorders and schizophrenia2. Given that emotional problems are common and disabling, it is essential to unravel their origins in childhood to identify risk factors and develop preventative methods and treatments.
+
+Twin studies have shown that emotional problems in childhood and adolescence are moderately heritable (~20–50%)6–10. In contrast, DNA-based ‘SNP heritability’ estimates for childhood emotional problems are generally low and non-significant (in an underpowered and inconsistent literature—see Supplementary Table 1)11. Low SNP heritability estimates suggest that genome-wide association studies will struggle to shed light on the genetic architecture of early emotional problems, because both SNP heritability and genome-wide association studies are limited to the additive effects of measured common variants (single-nucleotide polymorphisms (SNPs)). Association studies seeking to identify genetic variants influencing the heritability of childhood anxiety and depression have so far been underpowered and unsuccessful12–14. Also, polygenic scores (which aggregate the effects of thousands of genetic variants into a single index of risk for each individual) for a range of traits explain <1% of the variance in emotional problems in childhood and adolescence15–17.
+
+A potential way to improve power to identify significant SNP heritability is to tap into the genetic core of emotional problems by assessing problems that are stable across time. Longitudinal twin studies have shown that emotional problems are only moderately stable across childhood and adolescence, but that stability is predominantly influenced by stable genetic influences18–23. Moreover, longitudinally assessed stable anxiety traits are more heritable than anxiety at a single time-point24–26. In one study, the heritability of adolescents’ stable trait anxiety sensitivity across ages 14, 15 and 17 was 61%, whereas age-specific heritability was zero and non-significant apart from at one age24.
+
+Aggregation across reporters and across measures also yields a more heritable core phenotype. Twin research suggests that variation in the part of children’s behaviour that raters see in common captures more of the genetic action than rater-specific variation27. For example, two studies found higher twin heritability for rater-common than rater-specific parts of variance in childhood anxiety (~46% vs ~17%)28,29. Further, the substantial covariation between anxiety and depression in childhood and adolescence is largely genetically influenced10,30.
+
+Analysing phenotypic measurements can also increase heritability through improved reliability. Latent trait modelling allows us to account for measurement error, and more robustly summarise measurements of the same latent characteristics across time, measures and raters on one scale. In genetic research, reducing measurement error variance by definition reduces environmental variance. This increases the proportion of phenotypic variance explained by genetic variance—heritability (both twin and SNP). Previous studies have used latent trait modelling including factor analysis31,32 and Item Response Theory33 and obtained more reliable psychopathology measures, from which more accurate heritability estimates can be derived, for example, a latent ‘general childhood psychopathology’ factor had a high SNP heritability of 38%, reflecting pervasiveness across domains and raters, as well as lower error32. However, no research thus far has applied latent modelling approaches to longitudinal multi-rater emotional problems data, and estimated both twin and SNP heritability.
+
+Our primary hypothesis was that a phenotype capturing the stability of emotional problems across ages, across measures, and across raters would yield higher heritability than individual anxiety and depression measures. To test our hypothesis, we estimated twin and SNP heritabilities of stable emotional problems phenotypes derived from latent modelling. The use of measures assessing both anxiety and depression across multiple raters increases the likelihood of capturing stability in the emotional problems trait, free of rater- and measure-specific views and bias. By ‘stability’, we therefore refer to trait variance in childhood emotional problems that is shared across time, situations (raters), and measures.
+
+Our secondary hypothesis was that the heritability of a stable factor based on all questionnaire items would yield higher heritability than a scale-level approach. Items have unique properties, so heritability can be assessed more accurately by optimally weighting items and reducing the proportion of variance accounted for by item-specific measurement error33. To test this, we compared the twin and SNP heritabilities of factor scores derived from two complementary methods: scale-level Confirmatory Factor Analysis (CFA) and Item Response Theory (IRT). In supplementary analyses, we assessed whether heritability was also higher for a crude composite constructed without latent modelling. We compared the independent contributions of stability across age and across raters by analysing cross-age composites for each rater and cross-rater composites for each age. We also investigated the extent that the heritability of stable emotional problems is inflated by individuals with persistent, severe symptoms.
+
+In sum, the present study estimates twin and SNP heritability of a stable emotional problems phenotype constructed from 12 measures from three ages and three raters. These are compared to the twin and SNP heritabilities of the individual anxiety and depression measures. We also extend previous work by assessing the prediction of our stable emotional problems phenotype by polygenic scores for adult anxiety (UK Biobank)34 and major depression (PGC)35. Additionally, we report results from genome-wide genetic correlation analyses. Our research therefore sheds light on both the genetic architecture of early emotional problems, and links with adult emotional problems.
+
+Materials and methods
+
+Sample
+
+The sample is from the Twins Early Development Study (TEDS), a multivariate, longitudinal study of >10,000 twin pairs representative of England and Wales, recruited 1994–199636 Analyses were conducted on a sub-sample of unrelated individuals with available emotional problem data and genome-wide genotyping, plus their co-twins (6110 pairs). Informed consent was obtained from all subjects.
+
+Genotyping
+
+Full details are in the Supplementary Information. Genotypes were obtained using the AffymetrixGeneChip 6.0 (N = 3665) and HumanOmniExpressExome-8v1.2 arrays (N = 4649). Typical quality control procedures were followed (e.g., samples were removed based on call rate <0.99, SNPs were removed if minor allele frequency was <0.5%). Genotypes from the two platforms were separately imputed and then merged.
+
+Measures
+
+All anxiety and depression variables from ages 7, 12 and 16, and from self-, parent- and teacher ratings, were included. Across these ages, anxiety and depression were measured with 12 scales. See Supplementary Table 2 and Fig. 1 for descriptive statistics and histograms of the scales.
+
+The emotional problems subscale of the Strengths and Difficulties Questionnaire (SDQ)37 at ages 7, 12 and 16 was completed by parents7,12, teachers7,12 and children themselves12,16.
+
+The Moods and Feelings Questionnaire (MFQ)38 (self- and parent-rated) assessed depressive symptoms at ages 12 and 16. Note that for all MFQ measures except self-rated at age 16, 11 rather than 13 items were collected, due to similarity to SDQ emotional problems items.
+
+The Anxiety-Related Behaviours Questionnaire (ARBQ)6 was administered at age 16 to assess parent ratings of anxiety symptoms, behaviour, emotions and cognition.
+
+The Childhood Anxiety Sensitivity Index (CASI)39 was used at age 16 to measure self-rated anxiety sensitivity (i.e. fear of the experience of anxiety, and the belief that anxiety has negative consequences).
+
+Overall scale scores
+
+Total scores were derived for each scale by taking a mean of the items, requiring at least half the items to be present (e.g. at least 9 for the 18-item CASI). All items had three response categories, taking integer values 0–2. Hence each scale has a range of values from 0 to (2 × number of items).
+
+Statistical analyses
+
+Overview
+
+Figure 1 depicts our workflow. We used two latent trait approaches to model our 12 longitudinal multi-rater measures: CFA at the scale level, and IRT at the item-level. In the first stage, we fitted latent trait models to reflect a stable emotional problems factor, accounting for the structure of the twin data (allowing twin heritability to be estimated). In stage two, we extracted individual factor scores for both twins in pair from this latent model (N = 6110). Stage three involved four analyses using the stable emotional problems factor scores: (i) estimating twin heritability; (ii) estimating SNP heritability; (iii) predicting stable emotional problems with polygenic scores for adult emotional problems; and (iv) genome-wide association analysis of stable emotional problems. In the fourth stage, we used summary statistics from GWA to explore genetic correlations between stable emotional problems and adult psychopathology. Each stage is explained further below.
+
+To test whether heritability results held with a simpler, non-latent modelling approach, and without combining raters, we conducted sensitivity analyses using simple mean composites across all 12 variables, across age for each variable, and across variables at each age (see Supplementary Figure 4). We also tested whether heritability results held when individuals with persistent severe problems were excluded (see Supplementary Information).
+
+Confirmatory Factor Analysis (CFA)
+
+Figure 2 presents our twelve-indicator one-factor CFA model for twin pairs. The model contains 12 observed continuous variables for each twin of a pair. We included all 12 measures across ages and raters. Two correlated latent emotional problems factors are each measured by the 12 observed factor indicators.
+
+The model was estimated in Mplus, taking into account within-twin-pair correlations at the factor level and at the scale level (N = 6110 pairs). Individuals’ factor scores were extracted for estimation of twin and SNP heritability.
+
+The CFA model with twin data also allowed us to obtain twin heritability estimates directly—i.e. by simultaneously estimating the latent trait model and directly decomposing the variance of two latent factors (one for each twin) into genetic and environmental components. In Supplementary Table 7 we present the estimates from simultaneous latent trait twin analyses, plus twin heritability estimates for extracted factor scores. The latter approach can introduce more error than simultaneous modelling33.
+
+Item Response Theory (IRT)
+
+IRT models describe the relationship between individuals’ responses to specific questionnaire items and their level of the ‘latent variable’ being measured. In the standard two-parameter IRT model, the parameters (item difficulty and discrimination) are equivalent to thresholds and factor loadings in CFA. However, IRT involves categorical observed variables and logistic regressions (rather than continuous and linear). We used all 112 items from the 12 longitudinal cross-rater measures of anxiety and depression in an IRT model. A diagram would look the same as the CFA model in Fig. 1, but with 112 rather than 12 factor indicators for each twin of a pair. Sample size was the same as for CFA.
+
+Heritability analyses of factor scores
+
+Factor scores obtained from the above models for 6110 twin pairs were used to estimate twin and SNP heritabilities. For comparison, we estimated twin and SNP heritabilities for the 12 individual measures.
+
+In the twin design, differences in within-pair correlations for MZ and DZ twins are used to estimate genetic, shared environmental and non-shared environmental effects on traits. Greater MZ than DZ similarity indicates genetic influence. Within-pair similarity that is not due to genetic factors is attributed to shared environmental influences. Non-shared environment accounts for individual-specific factors that influence differences among siblings from the same family, plus measurement error. Twin model fitting analysis using full-information maximum likelihood was carried out with structural equation modelling software OpenMx in R40.
+
+SNP heritability analyses were conducted using one twin of each pair. Analyses were restricted to individuals with available genotyping and factor scores. During estimation of SNP heritability, individuals with missing covariates and excessive genetic relatedness were removed (one from each pair of individuals with pairwise identity-by-descent (IBD) of >0.025 (third degree relatives)), reducing the final samples to 6002 and 6001, respectively.
+
+SNP heritability was estimated using genomic relatedness matrix restricted maximum likelihood (GREML), implemented in the Genome-wide Complex Trait Analysis (GCTA) program41. For this method, we calculate genetic similarity for each pair of unrelated individuals across all genotyped SNPs. To decompose trait variance, genetic similarity is used to predict phenotypic similarity. GCTA only detects additive genetic effects tagged by common SNPs (here, allele frequencies >5%) in our DNA arrays; the residual component includes any other source of variance, including non-additive genetic effects, rare variants, environment, gene–environment interaction and error. We used sex and the first 10 principal components as covariates. See Supplementary Information for details.
+
+Polygenic score analyses
+
+Polygenic scores aggregate the effects of thousands of SNPs from genome-wide association studies, including variants that do not achieve genome-wide significance, to provide individual-specific ‘genetic propensity’ estimates. An individual’s polygenic score is the sum of their allele count weighted by the effect size for each SNP, as derived from GWAS. We used the high-resolution approach in PRSice 242 to obtain the most predictive polygenic score (with the best p-value threshold for inclusion of SNPs) for each phenotype. Our analyses included 10,000 permutations to obtain more stringent empirical p-values.
+
+In this study, we generated polygenic scores using summary statistics from PGC Depression (130,664 MDD cases and 330,470 controls; without 23&Me—results based on summary statistics for a subset of 10,000 variants in a sample including 23&Me are reported in Supplementary Table 8)35 and UK Biobank case–control anxiety (25,453 probable Generalised Anxiety Disorder cases and 58,113 controls)34 genome-wide association studies. We predicted phenotypic variance in the CFA- and IRT-derived stable emotional problems scores with the polygenic scores for depression and anxiety. To compare the prediction of the stable scores with that of individual measures, the 12 individual measures were also regressed on the two polygenic scores. We used sex and the first 10 principal components as covariates.
+
+Genome-wide association analysis
+
+Genome-wide association analysis was performed on the CFA-derived stable emotional problems phenotype (N = 6110 individuals) using PLINK v1.90b3.3143.
+
+Subsequent analyses were conducted using the summary statistics: calculation of genetic correlations with UK Biobank anxiety and PGC depression using LD Score Regression 44 (color and linked) and with a range of phenotypes from publicly available external GWAS using LD Hub45.
+
+Code availability
+
+Computer code used in our analyses is available from the authors upon request.
+
+Results
+
+Latent trait analyses
+
+A CFA single-factor model using 12 longitudinal multi-rater emotional problems measures was fitted to the data. All scales loaded significantly on the stable emotional problems factor (p < 0.0005). As expected given the low stability of anxiety and depression across childhood (see Supplementary Figure 2 for phenotypic correlations), model fit was relatively poor. However, our aim was to extract a stable developmental factor and estimate its heritability, and not to offer the best explanation of covariance. See Supplementary Tables 4–6 for CFA results.
+
+Heritability analyses
+
+Results support our hypothesis that extracting stable variance increases the heritability of childhood emotional problems. Figure 3 shows that twin heritability increased from 45% on average (range: 28% (se = 0.05; 95% CI = 0.18–0.38) – 57% (se = 0.02; 95% CI = 0.51–0.63)) to 76% (se = 0.02; 95% CI = 0.72–0.81). SNP heritability rose from 5% on average (range: 0% (se = 0.07; 95% CI = −0.15 to 0.15) –13% (se = 0.07; 95% CI = −0.001 to 0.25)) to 14% (se = 0.05; 95% CI = 0.04–0.24; p = 0.002). For most individual anxiety and depression measures, point estimates are low and the intervals based on standard errors cross zero. None of these individual measures had a significant SNP heritability (p < 0.05), except teacher-rated SDQ at age 7.
+
+Scale- and item-level approaches increased SNP heritability equally. Promisingly, IRT factor scores are more normally distributed (see Supplementary Figure 3), but CFA is easier to understand and execute. We thus used CFA but not IRT factor scores in subsequent analyses. Twin heritability estimates for simultaneous latent trait-twin modelling and extracted factor scores were equivalent: point estimates were almost identical and SE intervals were overlapping. See Supplementary Table 7 for full twin and SNP heritability results. Supplementary Figure 4 contains results from sensitivity analyses confirming that aggregation across age and raters increases heritability even when not using latent modelling to account for unreliability. These results also suggest that heritability is still higher when aggregating across age for each rater, and across raters for each age. We show in Supplementary Information that there is no statistically significant difference in heritability upon removal of individuals with persistently severe emotional problems, although point estimates were lower, so replication of this analysis in an independent sample is needed.
+
+Polygenic scoring
+
+Polygenic scores for anxiety and depression significantly explain variance in stable emotional problems (Table 1). More variance is explained than in most of the individual measures (~0.4% vs. ~0.2% on average, although comparison of R2 statistics is difficult, given the differing target sample sizes and the lack of error estimates).
+
+Genome-wide association
+
+Table 1 Proportion of phenotypic variance predicted in stable emotional problems, and in 12 anxiety and depression measures, by polygenic scores for Major Depressive Disorder and for General Anxiety Disorder. No genome-wide significant SNP associations were identified. See Supplementary Information for Manhattan plots (Supplementary figures 7, 8).
+
+Our stable emotional problems score showed significant genetic correlations with adult depression (case–control (0.48) and symptoms (0.64)), case–control anxiety (0.45), and wellbeing (−0.36). The latter did not remain significant after multiple testing correction, and genetic correlations with nine other phenotypes were non-significant (see Supplementary Table 9).
+
+Discussion
+
+This study found that a phenotype capturing the pervasive stability of emotional problems across childhood and adolescence showed higher heritability than individual measures. Twin heritability increased from 45% on average for individual measures to 76% (se = 0.02; 95% CI = 0.72–0.81) for stable emotional problems. SNP heritability rose from 5% on average to 14% (se = 0.05; 95% CI = 0.04–0.24; p = 0.002) by capturing common variance across ages and raters. These findings were consistent for a common factor based on scale-level and item-level data for the 12 measures. The findings also held for a simple, non-latent variable approach. This simple approach is easier to calculate but does not account for measurement error. Additionally, polygenic scores for adult anxiety and depression significantly explained variance in stable emotional problems, and the variance explained (0.4% (p = 0.0001) was higher than in most individual measures. Stable emotional problems showed significant genetic correlation with adult depression and anxiety (average = 52%), mirroring previous findings in adults34,46. Together, the polygenic score and genetic correlation results demonstrate that a significant proportion of common SNPs influencing stable emotional problems in childhood also influence adult anxiety and depression.
+
+This research has several limitations. Our hypothesis was concerned with capturing stability in emotional problems, and not with finding the best-fitting model explaining stability and change across age, and the structure of age-, scale- and rater-specific influences. Consequently, we did not explicitly separate out transient and enduring factors, but acknowledge that the presence of genes driving stable emotional problems does not preclude age effects. We also note the contribution of stability in measurement, not only of longitudinal stability, to increased heritability, although heritability remains higher for stable within-rater composites (Supplementary Figure 4). Structural equation models such as the Trait–State–Occasion (TSO) model47 can be used to explicitly separate these effects. However, our inclusion of multi-rater data is an advantage of this study. The common variance that has been extracted is free of rater bias or rater-specific views. Our factor scores therefore reflect a core emotional problems trait: longitudinally stable and agreed upon by three raters.
+
+Our findings suggest that common genetic variants have stable influences on emotional problems throughout childhood and adolescence, which extend into later life. Additional research from large longitudinal studies is needed to determine whether the SNP heritability of emotional problems is more accurately estimated by capturing pervasive stability beyond age 16, or even throughout the life course. This is likely, given the evidence from twin research that genetic influences on emotional problems at age 3 remain influential well into adulthood18. Further research could also investigate whether extracting a measure of stability increases the heritability of other less developmentally stable and less heritable traits.
+
+Future genomic studies of emotional problems could benefit from adopting a lifelong approach, using measures of adult case/control status as well as childhood dimensions. Our results indicate that stable emotional problems offer a more useful phenotype than individual measures for: finding variants predisposing to early emotional problems; creating polygenic scores for emotional problems in childhood and adolescence; and for using as a target phenotype for polygenic prediction. Subsequent research should examine how polygenic risk for stable child and adolescent emotional problems is expressed throughout development and into adulthood, as well as the mediators, moderators and multivariate outcomes of this polygenic risk.
+
+The young age of onset of emotional problems, and their persistent, wide-ranging negative outcomes, mean that prediction and prevention should be prioritised. The key contribution of genomic research into early emotional problems is likely to be the predictive value of polygenic scores. The predictive accuracy of polygenic scores is increasing with gains in power for genome-wide association, thanks to collaborative consortia and large national projects with homogenous phenotyping such as the UK Biobank. Researchers are working towards the much-needed large-scale genomic study of emotional problems in childhood itself. The present research underlines the utility of extracting a more stable emotional problems phenotype. This phenotype, theoretically grounded in evidence from decades of twin research, is more reliable, heritable and useful for prediction studies.
+
+Electronic supplementary material
+
+ Supplementary Information  
+
+Fig. 1
+
+   
+
+Fig. 2
+
+Note: Em1 and Em2 are latent emotional problem factors for twin 1 and twin 2. The 24 left-hand variables are observed factor indicators (for each twin), with their variable names as labels (e.g. gp1 = parent-rated SDQ at 7 for twin 1, gp2 = parent-rated SDQ at 7 for twin 2). Twin pairs were allowed to correlate at the latent factor level (shown) and at the scale level (not shown in this figure). Both factors were constrained to a standard normal distribution of mean zero and variance one. Consequently, thresholds, factor loadings and residual variances were all freely estimated, but equated across twins
+
+Fig. 3
+
+Note: sample sizes were 6110 for twin analyses; 6002 and 6001 for SNP heritability analyses of CFA and IRT stable emotional problems scores, respectively. ‘*’ indicates statistically significant SNP heritability estimates (p < 0.05)
+

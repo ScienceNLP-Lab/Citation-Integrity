@@ -1,0 +1,208 @@
+Targeted next generation sequencing for molecular diagnosis of Usher syndrome
+
+Abstract
+
+Background
+
+Usher syndrome is an autosomal recessive disease that associates sensorineural hearing loss, retinitis pigmentosa and, in some cases, vestibular dysfunction. It is clinically and genetically heterogeneous. To date, 10 genes have been associated with the disease, making its molecular diagnosis based on Sanger sequencing, expensive and time-consuming. Consequently, the aim of the present study was to develop a molecular diagnostics method for Usher syndrome, based on targeted next generation sequencing.
+
+Methods
+
+A custom HaloPlex panel for Illumina platforms was designed to capture all exons of the 10 known causative Usher syndrome genes (MYO7A, USH1C, CDH23, PCDH15, USH1G, CIB2, USH2A, GPR98, DFNB31 and CLRN1), the two Usher syndrome-related genes (HARS and PDZD7) and the two candidate genes VEZT and MYO15A. A cohort of 44 patients suffering from Usher syndrome was selected for this study. This cohort was divided into two groups: a test group of 11 patients with known mutations and another group of 33 patients with unknown mutations.
+
+Results
+
+Forty USH patients were successfully sequenced, 8 USH patients from the test group and 32 patients from the group composed of USH patients without genetic diagnosis. We were able to detect biallelic mutations in one USH gene in 22 out of 32 USH patients (68.75%) and to identify 79.7% of the expected mutated alleles. Fifty-three different mutations were detected. These mutations included 21 missense, 8 nonsense, 9 frameshifts, 9 intronic mutations and 6 large rearrangements.
+
+Conclusions
+
+Targeted next generation sequencing allowed us to detect both point mutations and large rearrangements in a single experiment, minimizing the economic cost of the study, increasing the detection ratio of the genetic cause of the disease and improving the genetic diagnosis of Usher syndrome patients.
+
+Background
+
+Usher syndrome (USH) is an autosomal recessive disease characterized by the association of sensorineural hearing loss, retinitis pigmentosa (RP) and, in some cases, vestibular dysfunction. Its prevalence ranges from 3 to 6.2 per 100,000 [1–3] and it is the most common form of hereditary syndromes combining hearing loss and retinitis pigmentosa.
+
+USH has a remarkable clinical and genetic heterogeneity. According to the severity and progression of the disease, three clinical types are distinguished. Type I (USH1) is defined by profound congenital hearing loss, onset of RP usually within the first decade of life and an absence of vestibular function. Usher syndrome type II (USH2) patients display congenital moderate-severe hearing loss, onset of RP around or after puberty and normal vestibular function. Usher syndrome type III (USH3) is characterized by postlingual progressive hearing loss, RP with a variable age of onset and variable vestibular response [4]). However, in some patients the disease does not fit into any of these three subtypes, and they are classified as ‘atypical Usher syndrome’.
+
+To date, 10 genes and three additional loci have been associated with the disease. For USH1 six genes have been identified: MYO7A (USH1B), USH1C (USH1C), CDH23 (USH1D), PCDH15 (USH1F), USH1G (USH1G) and CIB2 (USH1J); and two additional loci have been described: USH1E [5] and USH1H [6]. Three genes have been found to cause USH2: USH2A (USH2A), GPR98 (USH2C) and DFNB31 (USH2D). For USH3 only mutations in CLRN1 have been described, and a second locus was proposed, USH3B. Furthermore, most of these genes are also responsible for non-syndromic hearing loss or isolated RP [4,7].
+
+In addition to these 10 genes, three other genes have been associated with USH. PDZD7 was proposed as a contributor of digenic inheritance with GPR98, and as a retinal disease modifier in USH2A patients [8]. Recently, a novel biallelic missense variant in HARS was identified in two patients with a phenotype compatible with USH3. This gene encoding an aminoacyl tRNA synthetase was proposed as a novel gene causative of USH3 [9]. More recently, CEP250 has been associated with atypical Usher syndrome [10].
+
+Proteins encoded by Usher genes belong to different classes: actin-based motor protein, scaffolding proteins, cell-adhesion molecules or transmembrane proteins, some of them with very large extracellular domains. These proteins through their protein-protein interacting domains are integrated in a network known as “Usher-interactome”. The main sites of colocalization of Usher proteins are the stereocilia or hair bundle of the inner ear hair cells, and the synaptic and periciliary areas of the photoreceptors [4,11].
+
+In the stereocilia, two different USH protein networks are known to be involved in the development and maintenance of the inner ear hair cells. One of them is composed of the USH2 proteins, myosin VIIA (encoded by MYO7A), Vezatin and PDZD7 [12,13]. Vezatin is encoded by VEZT and it is required for the sound resilience of cochlear hair cells. In addition, it has been proposed that it is involved in the maturation steps of these cells or in the maintenance of junction integrity between hair cells and supporting cells in the inner ear [14]. The second stereocilia interactome is composed of the USH1 proteins [15]. In this network, several unconventional myosins, as myosin XVa, have also been found [16–18]. Mutations in MYO15A, the gene encoding Myosin XVa, are responsible for non-syndromic autosomal recessive hearing loss DFNB3 [19]. In addition, Myosin XVa interacts with whirlin in stereocilia, considered a key event in hair-bundle morphogenesis [20], and this direct interaction at the stereocilia tip is likely to control the elongation of stereocilia [21].
+
+In the retina, two similar molecular networks composed of USH2 and USH1 proteins have also been described. The USH2 protein network, localized at the periciliary ridge complex region, contributes to the trafficking of cargos moving from the inner segment to the outer segment of the photoreceptor cells through the connecting cilium. The USH1 interactome has been reported to localize at the membrane-membrane connection site between the outer segment of the photoreceptor cells and the calyceal processes in primates. This USH1 protein complex is thought to form an adhesion belt and would contribute to the daily renewal of photoreceptors outer segments [22–24].
+
+Traditionally, the molecular diagnosis of Usher syndrome has been mainly based on Sanger sequencing [25,26]. However, the large size of most USH genes (above 350 exons in total) makes this technique expensive and time-consuming. Array-based mutation screenings (arrayed primer extension (APEX) technology) have become a rapid and efficient technique to detect previously described mutations, and a specific APEX-microarray for USH was developed [26]. However, most of USH mutations are private, so the low detection rate of the APEX-microarray for Usher syndrome hampers the use of this technology [27,28]. Furthermore, Copy Number Variants (CNVs) have been identified as an important cause of the disease in Usher syndrome. Deletions and duplications are screened by Multiplex Ligation-dependent Probe Amplification (MLPA), for which commercial probemix is only available for USH2A and PCDH15, or by array-Comparative Genomic Hibridization (a-CGH) [29–31].
+
+In recent years, next generation sequencing (NGS) techniques have been developed further, permitting the whole genome, whole exome and targeted gene sequencing to be more feasible, and hence making the identification of diseased genes and the underlying mutations easier, rapid and cost-effective. The improvement of NGS has been especially useful in the diagnosis of genetically heterogeneous diseases, such as hearing loss or retinal dystrophies [32–35].
+
+For Usher syndrome, several NGS methods have been developed. Licastro et al. [36] used two different approaches: whole exome sequencing with the use of the SOLiD system and long-PCR sequencing on nine USH genes with two different platforms, Illumina (Genome Analyzer II) and the Roche 454 (GS FLX). Recently, Besnard et al. [37] developed a targeted NGS approach. They included 9 USH genes, 2 candidate USH genes (VEZT and PDZD7), seven hearing-loss genes and the choroideremia-causative gene CHM and the sequencing was carried out on Roche GS Junior sequencer. Yoshimura et al. [38] has also applied a massively parallel DNA sequencing methodology, but only for USH1 patients. Recently, Rong W et al. [39] used the NGS approach to identify three new alleles and one known mutation in MYO7A in three Chinese families.
+
+We developed a molecular diagnosis of Usher syndrome based on a targeted NGS technique, HaloPlex (Agilent) gene target enrichment for Illumina platforms, including the ten USH known genes and four candidate genes that allowed us to identify not only point mutations but also CNVs, implementing a platform for the genetic diagnosis of this disease.
+
+Methods
+
+Patients
+
+A cohort of 44 patients diagnosed with Usher syndrome was selected for this study. Their clinical classification into USH1, USH2, USH3 or atypical USH was performed on the basis of their clinical history and ophthalmologic, audiometric and vestibular tests. Patients included in this work were divided into two groups: a test group and a group composed by USH patients without genetic diagnosis.
+
+Whenever possible, samples from additional family members were used to perform segregation analysis of the sequence variants identified in the index patient.
+
+All patients and relatives included in the present study signed authorizing their written informed consent. The study was approved by the institutional board of the Ethics Committee of the University Hospital La Fe.
+
+Test group
+
+Table 1  Test group: patients carrying sequence variants in USH genes previously detected . The test group was composed of 11 patients: five USH1, four USH2, one USH3 and one atypical USH. These patients had been screened using a combination of techniques as Sanger sequencing, APEX microarray for Usher syndrome or MLPA. Variants of different nature in six USH genes had been previously detected and were used as positive controls in the present study. Table 1 shows the previously identified changes in the test group.
+
+Cohort of USH patients previously unscreened
+
+A cohort of 33 USH patients without genetic diagnosis was enrolled in this study. It was composed of 13 USH1 patients, 17 USH2 and 3 USH3 cases.
+
+DNA Samples
+
+Genomic DNA from patients and relatives was extracted from EDTA blood using an automated DNA extractor (Magna Pure, Roche). DNA samples were purified with the “QIAqick PCR Purification Kit” following the manufacturer’s instructions. The concentration of the genomic DNA was determined with the “Qubit dsDNA BR Assay Kit” in the Qubit 2.0 fluorometer.
+
+Targeted next generation sequencing design
+
+A custom HaloPlex panel was designed using Agilent’s SureDesign tool (www.agilent.com/genomics/suredesign) to capture all exons and 25 bp of intronic flanking regions of 14 genes. The target genes included in our work were the 10 causative Usher syndrome genes (MYO7A, USH1C, CDH23, PCDH15, USH1G, CIB2, USH2A, GPR98, DFNB31 and CLRN1), two related USH genes (HARS and PDZD7) and two candidate genes VEZT and MYO15A, due to their involvement in the Usher interactome [14,20,21]. The novel CEP250 [10] had not been associated with USH at the beginning of this study, so it was not included in our work.
+
+Table 2  Details about the exons studied in this targeted NGS analysis for the 14 genes analyzed . The entire custom design was 481 targets with a total size of 132.763 Kb. The exons from the different isoforms included in this study are summarized in Table 2. The intronic region where the USH2A mutation c.7595-2144A > G [37] is located, was included in the design. The final probe design size was 296.74 Kb with a theoretical coverage of 99.88% for our targeted regions. The difference in size between our entire custom design and the final probe design was due to an intrinsic process of the engineering of probes by Agilent’s Sure Design tool for the HaloPlex protocol.
+
+Sequence capture and next generation sequencing
+
+Sequence capture was performed according to the “HaloPlex Target Enrichment System” (Protocol Version D.5, Agilent Technologies Inc, CA, USA) for Illumina Sequencing. Between 225 to 450 ng of gDNA were digested by 16 different restriction enzymes to create a library of gDNA restriction fragments. Four 12-reaction runs were performed including in each of them 11 gDNA samples and one Enrichment Control DNA sample. These enzymatic digestions were validated by electrophoretic analysis in a polyacrylamide gel. The gDNA restriction fragments were hybridized to the HaloPlex probe capture library. In this step, the Illumina sequencing motifs including index sequences were incorporated into the targeted fragments and the target DNA-HaloPlex probe hybrids were circularized. These hybrid molecules were captured using streptavidin beads. The DNA ligase was then added to close nicks in the circularized HaloPlex probe-target DNA hybrids and the captured DNA libraries were eluted with NaOH.
+
+A PCR amplification of the captured target libraries was performed following the manufacturer’s instructions and, after its purification with the “AMPure XP beads” (BECKMAN CULTER Inc), the validation and quantification of the enriched target DNA in each library was performed using the 2100 Bioanalyzer system with the High Sensitivity DNA Kit and the 2100 Expert Software (Agilent Technologies Inc, CA, USA). The last step of the protocol was to pool samples for multiplexed sequencing in the Illumina sequencing platform MiSeq System (Illumina,Inc).
+
+Variant analysis
+
+Data was analyzed using the platform provided by DNAnexus (www.dnanexus.com). Two different versions were used: DNAnexus Classic and the DNAnexus version recently implemented. Annotated variants were selected according to the following criteria: the quality value should be ≥250, a percentage of heterozygosity ≥30% of the reads, their annotation in the dbSNP (http://www.ncbi.nlm.nih.gov/SNP) and their description in the Usher syndrome mutation database (https://grenada.lumc.nl/LOVD2/Usher_montpellier). Variants should be observed in both direct and reverse strands.
+
+Variants selected and suspected to be pathogenic were confirmed by Sanger sequencing. The DNA fragments containing the variants were amplified by PCR with specific primers and were sequenced on both strands using the Big Dye 3.1 Terminator Sequencing Kit. The purified sequence products were analyzed on a 3500xl ABI instrument (Applied Biosystems by Life Technologies, Thermo Fisher Scientific, Inc).
+
+The pathogenicity of novel missense variants was analyzed with the SIFT (http://sift.bii.a-star.edu.sg/) and PolyPhen-2 (http://genetics.bwh.harvard.edu/pph2/) algorithms. Those putative variants that affect the splicing process were studied with the NetGene2 (http://www.cbs.dtu.dk/services/NetGene2), NNSPLICE v0.9 (http://www.fruitfly.org/seq_tools/splice.html), Human Splicing Finder (HSF; http://www.umd.be/HSF) and RESCUE-ESE (http://genes.mit.edu/burgelab/rescue-ese/) programs.
+
+Novel variants were classified based on the classification system for Unknown Variants (UV) (https://grenada.lumc.nl/LOVD2/Usher_montpellier) as pathogenic (UV4), possibly pathogenic (UV3), possibly non-pathogenic (possibly neutral, UV2) and non-pathogenic (neutral, UV1) according to bioinformatics predictions and segregation analysis. This classification is in line with the guidelines published by the clinical and molecular genetics society (http://cmgdweb.shared.hosting.zen.co.uk/BPGs/Best_Practice_Guidelines.htm).
+
+Nomenclature of variants was performed according to the reference sequences: MYO7A (NM_000260.3), USH1C (NM_153676), CDH23 (NM_022124.5), PCDH15 (NM_033056.3), USH1G (NM_173477), CIB2 (NM_006383.2), USH2A (NM_206933), GPR98 (NM_032119.3), DFNB31 (NM_015404), CLRN1 (NM_174878), HARS (NM_002109), PDZD7 (NM_001195263.1), VEZT (NM_017599) and MYO15A (NM_016239).
+
+Segregation analysis was performed in cases where DNA samples of relatives were available.
+
+Copy number variation analysis and validation
+
+The coverage of every target region of the sample of interest was normalized and compared with average normalized data of all other samples of the same run to obtain the ratio relative coverage. Deletions and duplications were suspected of being present if this ratio fell below 0.7 or rose above 1.3 respectively.
+
+Validation of rearrangements of USH2A and PCDH15 was performed by MLPA analysis. For USH2A the SALSA MLPA probemixes P361 and P362 were used. To confirm the PCDH15 copy number variations the SALSA MLPA probemix P292 was employed. The MLPA reactions were performed according to the manufacturer’s recommendations (http://www.mlpa.com).
+
+In the cases of putative rearrangements identified in CDH23 and GPR98, their validation was carried out by an oligonucleotide array-CGH. The array-CGH chip included 77,366 probes covering the genes MYO7A, CDH23, PCDH15, USH1C, USH1G, USH2A, GPR98, DFNB31, PDZD7 and CLRN1 and 10.000 nucleotides of 5′ and 3′ untranslated regions [30].
+
+Results
+
+Next generation sequencing results of the USH panel
+
+Capture of NGS using our customized USH panel was performed in a cohort of USH patients. High quality results were obtained. On average, a mean coverage of 1334x was obtained per sample and target region. Different average coverages were obtained for the fourteen analyzed genes, ranging from 935x (VEZT) to 1817x (CLRN1) (Figure 1).
+
+Only one of the selected targeted regions showed coverage lower than 40x, the defined limit for proper validation and diagnostic procedures. This target was a coding region of 43 bp in the large exon 2 of MYO15A. A schematic representation of the coverage of all target regions is showed in Figure 2.
+
+Test group: validation of the diagnostic strategy
+
+Eleven USH patients were included in the test group to verify the reliability of our NGS custom panel. In these cases, 17 mutations and polymorphism had been previously detected in different USH genes by Sanger or by MLPA (Table 1).
+
+During the experiment three control patients and one studied patient failed in the capture step of the target DNA of the HaloPlex protocol. Due to a manual/technical problem with the PCR strips and magnetic rack Dynabeads, the circularized target DNA-HaloPlex probe hybrids, containing biotin, were not captured on streptavidin beads and these samples were lost.
+
+The remaining eight patients were carriers of 14 different variants including missense, nonsense, point deletions or insertions and large deletions (Table 1). Our NGS approach allowed us to detect all previously detected changes in the testing cohort, both point mutations and CNVs.
+
+Table 3  Causative mutations and putative pathogenic variants identified in this study . The sequencing of the USH genes allowed the detection of a second pathologic allele in five patients in whom only one mutation was previously detected. In addition, in patient RP-1426, previously a carrier of a pathogenic variant in MYO7A, we were able to identify a novel splice site mutation in CDH23. These results are summarized in Table 3.
+
+Cohort of USH patients previously unscreened
+
+In our cohort of 33 USH patients studied, mutations could be identified in the majority of analyzed cases. One of the USH cases failed in the capture and amplification of the library due to the same manual/technical error explained above. If we take into account the remaining 32 USH cases analyzed, we identified in 22 patients the two expected mutated alleles, in 5 cases only one pathogenic variant and in one case, RP-1950, two pathogenic variants were detected in two different USH2 genes. In four patients no mutation was found. In addition two patients (RP-1847 and RP-1923) were carriers of three mutations in USH genes (Table 3).
+
+In this study, we were able to identify 53 different mutations, of which 24 were novel. These variants included 21 missense, 8 nonsense, 9 frameshifts, 9 intronic mutations and 6 large rearrangements.
+
+Table 4  Summary of putative pathogenic mutations and their bioinformatics predictions . The DNA nexus program showed a high number of novel variants in each patient. These changes were selected according to their nature, or the presence of another pathogenic allele in the same gene in the same patient. The variants were confirmed by Sanger sequencing and missense, isocoding or intronic variants were analyzed by different in silico algorithms to predict their pathogenic effect. According to the bioinformatics predictions, 15 variants out of 25 studied variants were considered as pathogenic (UV4) or possibly pathogenic (UV3) (Table 4).
+
+Segregation analysis of detected alleles with the respective family members was performed in 13 cases, and cosegregation of the mutations with the disease was verified in all these cases (Table 3).
+
+CNVs Detection
+
+Next Generation Sequencing with the Illumina MiSeq system allowed us to perform qualitative and quantitative analysis. We could detect not only point mutations but also CNVs.
+
+In our cohort of patients we performed CNV analysis in all patients where two point mutations had not been detected. This analysis allowed us to identify six large rearrangements: three deletions in USH2A comprising the exons 14, 20 and 44, and three duplications comprising the exon 29 in CDH23, exons 22_23 in PCDH15 and exons 79_83 in GPR98. The USH2A and the CDH23 rearrangements were detected in a heterozygous state, whereas the PCDH15 and GPR98 duplications were identified in a homozygous state.
+
+Large rearrangements in USH2A and PCDH15 were subsequently confirmed by MLPA, whereas patients that carried duplications affecting CDH23 and GPR98 were analyzed by a-CGH (data not shown). In 5 patients, the rearrangements detected by comparison of normalized coverage data were confirmed. The a-CGH technique to confirm the presence of the heterozygous duplication of CDH23 (exon 29) in patient RP-1781 was not succesful due to technical problems. Unfortunately, it was impossible to get a new DNA sample for this patient to repeat the experiment.
+
+Three of the six rearrangements found in this study had been previously described. The USH2A deletions of exon 14 and exon 44 were described by Glockle et al. [35] and the GPR98 duplication was previously described by Besnard et al. [52]. The deletion of exon 14 in USH2A has also been detected by our group, in one Spanish USH patient in a homozygous state (unpublished results).
+
+In our cohort of patients previously unscreened we could detect 51 altered alleles, six of which corresponded to large rearrangements, i.e. 11.76% of the detected pathogenic alleles.
+
+In one patient no point mutation was identified, and the quantitative analysis could not be performed (RP-531). The ratio between this sample and the normalized data was altered in a high number of target regions from most genes. In this case, the image obtained with the bioanalyzer in the validation and quantification of the enriched target DNA process was atypical (Figure 3).
+
+In some cases, we could observe that the CNV analysis displayed doubtful results in the targeted regions. The analysis of those target regions revealed coverages lower than 250x.
+
+Discussion
+
+Resolved cases
+
+Usher syndrome displays both genetic and allelic heterogeneity. The number of genes related to the disease and the large size of most of them contribute to the genetic heterogeneity. Furthermore, mutations causing disease include point mutations and large rearrangements, most of them, being private. Recently, the high-throughput sequence analysis and next generation sequencing, has been proved to be very helpful to carry out genetic studies in heterogeneous diseases.
+
+In this study we have developed a targeted method based on NGS for the molecular diagnosis of Usher syndrome. We evaluated our panel in a group of patients with known USH variants and applied it to a cohort of USH patients previously unscreened.
+
+In our series of study, we were able to detect biallelic mutations in one USH gene in 22 out of 32 USH patients (68.75%) and to identify 51 out of the 64 expected mutated alleles (a detection ratio of 79.7%).
+
+Uncovered regions
+
+We obtained a highly heterogeneous coverage using a custom HaloPlex Target Enrichment System (see Figure 1). However, only one region included in the final design showed a mean coverage lower than 40x in our samples. It corresponded to a 43 bp sequence in the large exon 2 of MYO15A. That fragment shows a high percentage of CGs, 77%. It has been reported that most sequencing platforms, including Illumina sequencers, show a GC content-dependent bias coverage, and protocols should be modified to minimize these events [61].
+
+Unresolved cases
+
+Mutations were not detected in four patients of our cohort. In one USH1 case detailed clinical data could not be obtained, whereas in the remaining cases clinical information was revised and the USH diagnosis was confirmed. Five additional patients were carriers of only one pathogenic variant (Table 3), the second mutation remaining unidentified.
+
+In these cases, in which the second mutated allele escapes detection, the region that contains the mutation may have been excluded from our study. It is possible that the gene responsible for the disease had not yet been identified, and therefore it could not be included in our panel. Furthermore, deep intronic regions, promoter regions or 5′ and 3′ untranslated regions were not systematically included in the panel design. The only intronic region targeted in our panel was designed to detect the USH2A c.7595-2144A > G mutation identified by Vaché et al. [58] in five French patients and four Spanish patients. Moreover, it was subsequently detected in five additional families [31]. Subsequently, Steele-Stallard et al. [31] detected this intronic change in three UK and European USH families.
+
+In two patients, two mutated alleles, each one in a different gene, were detected (Table 3). Patient RP-1426 was carrier of a missense MYO7A variant (p.Ala2204Pro). Using the NGS panel we could not detect a second mutation in MYO7A, but a splice acceptor site mutation (c.5068-2A > T) was found in CDH23. In the USH2 patient RP-1950, the USH2A mutation c.2299delG and a novel missense variant (p.Pro4760Ser) in GPR98 were detected. Bioinformatics algorithms predicted a pathogenic effect for these two novel variants (Table 4). In the former case, the two mutations were present in the same, clinically unaffected parent (data not shown), which does not support a digenic inheritance of USH. Unfortunately, segregation analysis could not be performed in the case of patient RP-1950. Perhaps a second mutation remains undetected in one of these genes in the patients RP-1426 and RP-1950. In two other patients (RP-1847 and RP-1923) with biallelic mutations in USH2A, we were able to detect additional mutations in USH1G and DFNB31, respectively. These cases show the high decisive power of massive parallel re-sequencing, detecting additional mutations in patients carrying the two mutations responsible for the disease in the same gene.
+
+The programs used to analyze the data generated from NGS followed different algorithms. In fact, both the alignment and the base calling are two crucial steps in these analyses. It is possible that some mutations could escape detection due to the algorithms used. Their modification will improve the quality of generated data, avoiding false negatives and allowing detection of missed mutations in further analysis.
+
+Four patients carried two mutations in genes typically responsible for another clinical subtype. Two USH2 patients carried missense mutations in MYO7A (RP-807 and RP-1864), one USH2 case in CDH23 (RP-1781) and a USH3 patient carried a homozygous frameshift deletion in USH2A (RP-890) (Table 2). The situation of USH patients diagnosed with a given clinical subtype, who carry mutations in a gene involved in a different subtype, is not unprecedented, and was previously reported [25]. These findings further support the use of NGS techniques that allow for the study of all known causative genes for Usher syndrome in patients independent of their clinical subtype. It facilitates the detection of mutations in genes typically associated with other clinical types.
+
+Copy number variation analysis
+
+Studies performed in different populations have demonstrated that large rearrangements are an important cause of the disease in Usher syndrome. Le Guedard et al. [62] and Aller et al. [29] demonstrated that PCDH15 rearrangements are a significant cause of USH alterations. Large deletions involving USH2A have been reported [22,35], and large rearrangements in other USH genes as MYO7A, CDH23 or GPR98 have been detected [30,62]. These results indicate that the genetic analysis in USH patients should include the screening of rearrangements.
+
+We have obtained with the MiSeq system a mean coverage in our USH panel of 1334x per sample and target region, allowing for CNV analysis of the selected genes. We could then detect in our series of patients six different rearrangements in CDH23, PCDH15, USH2A and GPR98, which represents 11.8% of the mutated detected alleles. We observed that when the coverage of regions fell below 250x, the results obtained in the CNV analysis were questionable and we did not take into account those regions. In order to perform quantitative analysis, we recommend, therefore, coverage of targeted regions above 250x.
+
+In one patient (RP-531) the validation of the enrichment process gave an atypical image in the bioanalyzer (Figure 3). In this case the CNV analysis could not be performed. However, this does not affect the detection of point mutations. In fact, in another patient with a similar image in the validation (RP-808), two point mutations were detected.
+
+Comparison with other NGS studies of USH
+
+Traditionally, Sanger sequencing was used to identify the mutations responsible of the disease [25,50]. Nowadays different methods based on NGS have been used for Usher syndrome. Licastro et al. [36] employed two different approaches: the whole exome sequencing and long-PCR sequencing on nine USH genes. Whole exome sequencing has several problems: a low coverage of the interesting regions and the need of a correct interpretation of the high number of sequence variations identified. Regarding the long-PCR method, it displayed a better mean coverage, higher than 25x in 94% of regions. Taking together both approaches, the detection of pathogenic alleles was 62.5%.
+
+Recently, Besnard et al. [37] developed a targeted NGS panel where 9 USH genes, 2 candidate USH genes (VEZT and PDZD7), seven hearing-loss genes and CHM were included. The overall depth of coverage obtained was estimated as 77x across the whole design ranging from 55.8x to 106.9x, with a detection ratio of 84.6% in the studied USH cohort.
+
+In our series, the detection rate of mutated alleles was 79.7%. Our results are close to the Besnard et al. [37] study and higher than to the Licastro et al. [36] approaches. However, it is difficult to obtain conclusions due to the low number of patients included in those studies (thirteen and twelve USH patients respectively), whereas in our series 32 USH patients previously unscreened were sequenced.
+
+Furthermore, in both previous studies, only point mutations were detected. The mean coverage obtained did not allow for the analysis of CNVs, that has been observed as an important USH cause. As has been pointed by Eisenberger et al.[63], high and extensive coverage allows for systematic analysis for CNVs and reduces the risk of mutations escaping detection because of their localization in regions with low coverage.
+
+Conclusions
+
+Our developed targeted NGS method based on HaloPlex gene target enrichment technology for the genetic diagnosis of Usher syndrome provides nearly complete coverage of all coding regions of the ten USH genes and four related and candidate USH genes. Furthermore, the high coverage obtained in our study allowed us to detect large rearrangements. It is important to detect both point mutations and large deletions or duplications with a single technique to minimize the economic cost of these studies, increasing the detection ratio of the genetic cause of the disease and improving the genetic diagnosis of Usher syndrome patients.
+
+Availability of supporting data
+
+LOVD http://www.lovd.nl/2.0/index_list.php
+
+Figure 1
+
+   The blue line shows the lower limit of coverage appropriate to perform CNV analyses (250x).
+
+Figure 2
+
+   
+
+Figure 3
+
+   Typical image obtained in most patients.   Atypical image obtained in the patient RP-531, in whom CNV analysis could not be performed.
+

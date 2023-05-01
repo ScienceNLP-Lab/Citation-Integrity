@@ -1,0 +1,117 @@
+Differentiation of Human Induced Pluripotent Stem Cells to Mammary-like Organoids
+Summary
+
+Human induced pluripotent stem cells (iPSCs) can give rise to multiple cell types and hold great promise in regenerative medicine and disease-modeling applications. We have developed a reliable two-step protocol to generate human mammary-like organoids from iPSCs. Non-neural ectoderm-cell-containing spheres, referred to as mEBs, were first differentiated and enriched from iPSCs using MammoCult medium. Gene expression profile analysis suggested that mammary gland function-associated signaling pathways were hallmarks of 10-day differentiated mEBs. We then generated mammary-like organoids from 10-day mEBs using 3D floating mixed gel culture and a three-stage differentiation procedure. These organoids expressed common breast tissue, luminal, and basal markers, including estrogen receptor, and could be induced to produce milk protein. These results demonstrate that human iPSCs can be directed in vitro toward mammary lineage differentiation. Our findings provide an iPSC-based model for studying regulation of normal mammary cell fate and function as well as breast disease development.
+
+Introduction
+
+Induced pluripotent stem cells (iPSCs) can be generated directly from terminally differentiated cells (Okita et al., 2007). Not only can they bypass the need for embryos but they also enable patient-specific or personalized disease modeling using iPSCs from each individual. Human iPSCs (hiPSCs) can give rise to multiple cell types, such as neurons, cardiomyocytes, and hepatocytes (Kawamura et al., 2016, Sareen et al., 2014, Tomizawa et al., 2016). Despite much research effort on directed differentiation of iPSCs in vitro and tremendous interest in mammary tissue regeneration or bioengineering, no study has reported on the induction of mammary-like cells and organoids from hiPSCs using in vitro systems.
+
+Taking a cue from our understanding of human embryonic mammary gland development (Mikkola, 2007, Propper et al., 2013), we conceptualized that the first step for in vitro induction of mammary differentiation from hiPSCs was to pattern iPSCs to non-neural ectoderm, thus enriching mammary progenitors. Formation of embryoid bodies (EBs) from iPSCs is a well-known and broadly used differentiation method, mimicking in vivo embryo development. However, this method preferentially induces neural ectoderm from iPSCs and embryonic stem cells (Zhang et al., 2013). Although neural and non-neural ectoderm cells coexist at the same embryonic stage, in vitro studies have shown that the “default” differentiation for iPSCs is the neural lineage (Schwartz et al., 2008). To convert iPSCs to cells and organoids specific to tissues originating from non-neural ectoderm, a protocol that first enriches non-neural ectoderm cells is an essential step.
+
+Although the molecular biology of early human mammary gland development is poorly understood (Javed and Lteif, 2013), studies using mouse models have revealed that the crosstalk among fibroblast growth factor (FGF)/FGF receptor, TBX3, NRG3/ERBB4, and Wnt/LEF1 signaling is critical for the specification of the mammary gland during early development (Mikkola, 2007, Propper et al., 2013, Sternlicht, 2006, Widelitz et al., 2007). In addition, BMP4 may interact with pTHrP signaling and play an essential role in early embryonic mammary gland commitment and subsequent development (Cho et al., 2006) while inhibiting hair follicle development (Hens et al., 2007). Postnatal mammary gland development is controlled by systemic and regional hormones and growth factors (Howard and Gusterson, 2000, Petersen and Polyak, 2010). In vitro studies have revealed that growth factors, such as insulin-like growth factor 1 (IGF-1), epidermal growth factor (EGF), FGF, and hepatocyte growth factor (HGF) (Gurusamy et al., 2014, Howard and Lu, 2014, Zhang et al., 2014), are critical in the growth, differentiation, and maturation of mammary epithelial cells. In addition, ectodysplasin/nuclear factor κB (NF-κB) signaling is fundamental for embryonic hormone-independent mammary ductal growth by inducing pTHrP, Wnt, and EGF signals (Lindfors et al., 2013, Voutilainen et al., 2012). Besides the aforementioned factors, extracellular matrix (ECM) also plays a key role during mammary gland development (Howard, 2012). Previous studies showed that the combination of Matrigel and Collagen I promotes branching but no protrusions into the matrix during elongation (Nguyen-Ngoc and Ewald, 2013).
+
+Here, we attempted to exploit our current knowledge on mammary gland development to develop a reliable method for generating human mammary-like cells from iPSCs. We introduced a two-step differentiation protocol involving a suspension sphere culture system that enriches for non-neural ectoderm progenitors and a mixed gel floating 3D culture system that mimics the physical ECM for mammary differentiation. Our results demonstrate the derivation of mammary-like cells and organoids from hiPSCs using this protocol.
+
+Results
+
+mEB Culture Enriching Non-neural Ectoderm Cells
+
+To direct human mammary lineage differentiation from iPSCs, we developed a two-step procedure that consisted of MammoCult medium-cultured EB (mEB) formation (step 1) and 3D mixed floating gel culture (step 2) (Figure 1A). We intended to first enrich non-neural ectoderm cells, the origin of mammary stem cells. EBs at days 5–10 post-iPSC differentiation are known to highly enrich for neural ectoderm stem cells. Considering that non-neural ectoderm cells coexist with neural ectoderm stem cells at similar embryonic stages, we examined TUJ1 and CK18 expression as neural and non-neural ectoderm stem cell markers, respectively, in EBs at day 10. When those EBs were attached onto Matrigel-coated plates, the majority of the cells expressed TUJ1 as opposed to a few cells expressing CK18 (Figure S1A). We then tested another suspension culture method for EBs using the complete MammoCult medium, which was reported to enrich normal mammary stem cells (Hassiotou et al., 2012). We postulated that this might specifically enrich for stem cells that can further differentiate to cells of the mammary lineage. To this end, EBs and mEBs at day 10 were collected. Western blotting showed that mEBs expressed CK8 and CK18 but not SOX11, a neuron progenitor marker (Bergsland et al., 2006, Wang et al., 2013) (Figure S1B). In contrast, EBs expressed high levels of SOX11 but lacked CK8 and CK18 expression. Likewise, immunofluorescence staining demonstrated that EBs contained a large percentage of cells expressing the neural ectoderm marker OTX2, while mEBs exhibited the non-neural ectoderm marker AP-2γ (Figure S1C).
+
+To determine the optimal time point of mEB culture that harbors the maximum percentage of non-neural ectoderm stem cells, iPSCs were cultured in suspension with MammoCult medium for 30 days, and mEBs were collected at different days to evaluate their differentiation state. We performed immunohistochemical (IHC) staining to examine the differential expression of non-neural (AP-2α and CK18) and neural ectoderm (PAX6) markers in mEBs of different days (Figure 1B). Of note, hiPSCs aggregated and formed solid spheres from day 2, and cavities started to appear from day 10 (Figure 1B, right panel, red arrows). This phenotype was observed in different donor-derived hiPSC lines (Figure S1D). To better assess the quantitative changes of embryonic development markers in the 30-day mEB culture period, we also performed western blotting. As shown in Figure 1C, markers for non-neural ectoderm differentiation, such as AP-2α, AP-2γ, P63, CK8, and CK18, were highly induced in 10-day mEBs. In contrast, neural (FOXG1, TUJ1, OTX2, SOX11, and PAX6), early mesoderm (T/Brachyury, TGFβ1), and endoderm (FOXA2, GATA4) markers were decreased, unchanged, or mildly increased. Activation of canonical Wnt (Hens and Wysolmerski, 2005) and NF-κB (Lindfors et al., 2013, Voutilainen et al., 2012) have been associated with mammary lineage differentiation. In line with these previous findings, high levels of non-phospho (Ser33/37/Thr41) β-catenin (active) and p-p65 (Ser536), indicative of Wnt and NF-κB activation, were also detected in 10-day mEBs (Figure 1C). As expected, expression of pluripotent markers (NANOG, OCT4, SOX2) was dramatically reduced at the same time point (Figure 1C). Taken together, our data suggest that mEB culture, contrary to regular EB culture, enriches for non-neural ectoderm cells.
+
+Ingenuity Pathway Analysis of mEB Gene Expression Profiles
+
+We then performed cDNA microarray analysis to examine transcriptomic profiles of 5-day and 10-day mEBs and to determine whether we could predict the forthcoming differentiation potential relative to hiPSCs. The differentially expressed genes were subjected to ingenuity pathway analysis (IPA) analysis (http://www.ingenuity.com/products/ipa) for exploring the molecular basis of mEB differentiation. Three analyses, including bio functions, upstream regulators, and regulatory network construction, were performed (see the Supplemental Experimental Procedures for detailed description). Activation Z score calculated by IPA was used to quantitatively evaluate the activation (positive numbers shown in red) and inhibition (negative numbers shown in blue).
+
+First, bio function analysis showed that both 5-day and 10-day mEBs possessed activated bio functions, including development of epithelial tissue, formation of gland, and growth of mammary gland (Figure 2A). Compared with 5-day mEBs, 10-day mEBs showed higher activation Z scores, suggesting 10-day mEBs harbored a greater effect on the aforementioned bio functions. Next, we analyzed the upstream regulators to examine whether known developmental regulators in mammary differentiation were activated in mEBs. SOX1, 2, 3 transcriptional factors were inhibited in 5-day and 10-day mEBs, suggesting that the early commitment of neural differentiation was inhibited (Figure 2B, blue arrows). Molecules involved in BMP, Wnt/β-catenin, and NF-κB activation, such as BMP4, RELA, CTNNB1, and SMAD3, were more activated in 10-day relative to 5-day mEBs (Figure 2B, red arrows). Pluripotency markers, POU5F1/OCT4 and KLF4, were less activated in 10-day relative to 5-day mEBs (Figure 2B, orange arrows). Interestingly, the absolute Z score for most of the upstream regulators were higher in 10-day mEBs compared with 5-day mEBs, indicating greater inhibitive or activating effects of these regulators in 10-day mEBs.
+
+We further performed regulatory network construction to uncover the intrinsic links within gene expression profiles, bio functions, and upstream regulators. Based on the prediction from analysis of upstream regulators and differential gene expression levels (cDNA microarray analysis of mEBs), we found that 5-day mEBs predicted formation of mammary gland (Figure S2A). However, 10-day mEBs had greater potential predicting mammary gland formation, suggested by more involved upstream regulators and more complicated network (Figure 2C). As expected, both 5-day (Figure S2B) and 10-day (Figure S2C) mEBs showed inhibition of neural lineage commitment. Collectively, our findings suggest that 10-day mEBs had greater differentiation potential for further mammary gland lineage commitment.
+
+Generation of Mammary-like Organoids in 3D Culture
+
+To generate mammary-like organoids, we developed a 3D culture method using a floating mixed gel composed of Matrigel and Collagen I. We first tested the mixed gel using primary mouse and human mammary organoids. As shown in Figure 3A, primary cultured organoids from 2-week-old mice formed complex branched alveolar structures in the floating 3D culture in a 30-day period. Similarly, the majority of human mammary organoids formed alveolar structures with a less prominent branched component (Figure 3B). We next grew 10-day mEBs in the mixed gel floated in EpiCult-B medium, which is commonly used in primary culture of human mammary epithelial cells (MECs) (Stingl et al., 2001). Given that 10-day mEBs may be predisposed to mammary commitment, as suggested by gene and pathway analysis (see Figure 2), we added pTHrP, a hormone involved in embryonic mammary development (Boras-Granic et al., 2011), to the culture and grew the organoids for 5 days, followed by supplementation of the culture with hydrocortisone, insulin, FGF10, and HGF to increase mammary cell specification. Then a lactogenic medium containing insulin, prolactin, and hydrocortisone was used to induce milk protein expression. As presented in Figure 3C, alveolar mammary-like structures started to appear at day 10 of mEB 3D culture, and this morphology became more pronounced at day 30. Together, the floating mixed gel culture system promotes the growth of mammary-like organoids from hiPSC-derived mEBs.
+
+To further investigate whether these organoids are of the mammary lineage, expression of widely used mammary markers was examined by IHC. We found the structures were positive for breast markers (α-lactalbumin/LALBA, milk protein, and acetyl-CoA), luminal epithelial markers (EpCAM and CK18), and basal markers (CK14 and P63) (Figure 3D, red circles). These markers were also detected in normal human mammary gland tissue used as controls (Figures S3A and S3B). Similar breast marker profiles were found in mammary-like branched structures from another iPSC line (Figure S3C, yellow arrows). Of note, mEBs failed to form alveolar structures and exhibit mammary-associated marker expression in the absence of pTHrP (Figure S3D). Furthermore, the late-stage mEBs (21-day), which did not express AP-2α and AP-2γ, gave rise to organoids expressing the intestinal markers CDX2 and CK20 but not milk and P63 proteins (Figure S3E), when grown in the same 3D culture.
+
+Of note, the basal layer was not discernable in these structures. Because the basal layer is partially disrupted in the lactating human breast (Yallowitz et al., 2014), we postulated that the lactogenic 3D culture condition might alter normal mammary epithelial structure. Thus, luminal CK8 and basal P63 marker expression was examined by immunofluorescence (IF) staining in mammary-like organoids grown in non-lactogenic culture (see Experimental Procedures). We observed acinar structures comprising luminal-like cells (CK8+) surrounded by a thin layer of basal-like cells (P63+) (Figures 4A–4D). Similarly, luminal and basal cell distributions in mammary-like alveolar and acinar structures were also observed by IHC (Figure S4A). In addition, IF staining revealed EpCAM+/CD49f+, EpCAM+/CD49f−, EpCAM−/CD49f+, and EpCAM−/CD49f− populations in these organoids (Figure 4E), suggesting the presence of multiple cell populations. Furthermore, colony formation assays also showed that cells isolated from the organoids could yield luminal-like, myoepithelial-like, and mixed-morphological colonies (Figures 4F and S4B). Notably, a group of cells forming a coiled structure also expressed basal markers but not breast or luminal markers (Figure 3D, yellow circles), suggesting that non-MECs may also differentiate from non-neural ectoderm stem cells in our culture system.
+
+It was also noted that estrogen receptor (ER) expression was not detected in mammary-like cells under lactogenic conditions (Figure 4G), which may be due to the inhibition of ER expression under lactogenic conditions (Hatsumi and Yamamuro, 2006). Indeed, IHC showed that ER expression was drastically decreased in human lactating breast tissue compared with non-lactating tissue (Figure S4C). Consistent with these results, ER expression was induced in mammary-like cells under non-lactogenic conditions (Figures 4H and S4A). In summary, our results suggest that our semisolid floating matrix culture system may facilitate the differentiation of iPSCs into functional mammary-like organoids.
+
+Discussion
+
+Although hiPSCs have been directed to differentiate into various organoids/tissues and in vitro differentiation from bovine iPSCs toward a partial mammary phenotype has been reported (Cravero et al., 2015), generation of mammary organoids/cells from hiPSCs has not been established. Our study represents a stepwise approach to generate and characterize mammary-like cells and organoid structures from human iPSCs.
+
+The classical EB protocol preferentially enriches for neural lineage cells. We found that the MammoCult medium, commonly used to enrich breast stem cells, directed iPSC differentiation toward the non-neural ectoderm cell fate. Protein and RNA analysis suggests that 10-day mEBs harbor high levels of non-neural stem cell markers but not neural ectoderm or mesoderm markers. Importantly, 10-day mEBs are susceptible to culture conditions for the formation of mammary-like cells and organoids.
+
+The development of normal human mammary glands are controlled by cytokines and hormones (Sternlicht et al., 2006), such as insulin, hydrocortisone, FGF10, and HGF, all well known for mammary epithelial cell survival and differentiation (Farrelly et al., 1999). pTHrP and BMP4 are also required for the commitment of embryonic mammary lineage (Hens et al., 2007, Hiremath and Wysolmerski, 2013). Terminal differentiation of mammary epithelial acinus requires lactogenic hormones, including prolactin, insulin, and glucocorticoids (Blatchford et al., 1999). Based on the published methods for 3D culture of human MECs (Linnemann et al., 2015), we developed a floating mixed gel system to induce mammary cell differentiation from hiPSCs. Of note, Collagen I (1 mg/mL) is included in the 3D culture, as it may yield a similar stiffness as in the normal mammary gland, at about 170 Pa (Paszek et al., 2005). The alveolar structures observed in this 3D culture expressed breast, luminal, and basal markers, suggesting mammary-like cells are induced. In non-lactogenic mammary-like cells, ER expression and organized basal-luminal structures were also observed. These results have suggested mammary-like differentiation from hiPSCs in our system.
+
+In conclusion, we have developed a two-step method of directing mammary differentiation from human iPSCs. The hiPSC-derived mammary-like organoids can be used to build in vitro models for pinpointing the precise effects of various factors on mammary cell transformation and breast cancer development and for personalized bioengineering of mammary tissue. Future research is warranted to elucidate the effect of individual hormones and growth factors on iPSC differentiation into mammary cells and to refine the culture system for generating two-layer mammary ductal structures in vitro. We hope our findings can open up new avenues for developing iPSC-based approaches to solve critical questions in human mammary gland and breast cancer development challenging for conventional methodology.
+
+Experimental Procedures
+
+Human Tissues
+
+This study was approved by the institutional review board at Cedars-Sinai Medical Center. Normal human breast tissues were obtained from prophylactic surgeries with written informed consent.
+
+Mammary-like Organoid Differentiation
+
+Mammary differentiation was divided into three stages using complete EpiCult-B medium supplemented with different hormone and growth factors. All three iPSC lines formed mammary organoids with similar efficiency with the described protocol. Detailed information is provided in Supplemental Information.
+
+Author Contributions
+
+Y.Q., X.C., D.S., and A.G. designed experiments; Y.Q., B.H., and B.G. performed iPSC culture and differentiation; Y.Q., X.C., B.Z., and W.Y. interpreted cDNA data; Y.Q., B.H., S.B., and K.W. performed western blots and imaging; Y.Q. and X.C. wrote the manuscript; D.S., A.G., and S.B. reviewed the manuscript.
+
+Figure 1
+
+Generation of mEBs from hiPSCs
+
+(A) A two-step protocol for in vitro differentiation of hiPSCs to mammary-like cells. Bars, 100 μm.
+
+(B) Marker expression in differentiated mEBs at different stages. hiPSCs were cultured in MammoCult medium on ultra-low attachment plates for indicated days. Spheres were collected and western blotting analysis was used to quantify marker expression. Red square, highlight of 10-day mEBs showed high non-neural ectoderm and low other lineage marker expression.
+
+(C) Immunohistochemistry (IHC) of neural and non-neural marker expression in mEBs collected at indicated days. Morphologies are shown in phase contrast images. Red arrows, cavity in mEBs. Scale bar, 100 μm.
+
+Figure 2
+
+IPA Analysis of 5-day and 10-day mEB mRNA Profiles
+
+cDNA microarray analysis was used to profile 5-day mEBs, 10-day mEBs, and control hiPSCs. Relative expression level changes were calculated comparing mEBs (5-day or 10-day) to hiPSCs. The comparison between 5-day and 10-day mEBs was based on fold changes relative to hiPSCs.
+
+(A) Bio function analysis using IPA shows most significant up- and downregulated bio functions in mEBs compared with hiPSCs. Comparison between 5-day and 10-day mEBs was performed. Activation Z score (top) and –log (p value) (bottom) are shown.
+
+(B) Upstream regulator analysis was performed to compare 5-day and 10-day mEBs. Activation Z score (left) and –log (p value) (right) are shown.
+
+(C) Regulatory network constructed by selected activated upstream regulators and their associated downstream differentially expressed genes in 10-day mEBs. Red numbers, the activation Z score for each upstream regulator. Genes in purple are known factors in mammary lineage commitment.
+
+Figure 3
+
+Mammary Differentiation from 10-day mEBs in 3D Floating Mixed Gel
+
+(A and B) 3D structures formed by primary mouse mammary organoids (A) and primary human mammary organoids (B) cultured in 3D floating mixed gel.
+
+(C) Culture of 10-day mEBs in 3D floating mixed gel.
+
+(D) IHC of breast, basal, and luminal marker expression in differentiated mammary-like structures (from 83iCTR-n1 hiPSC line). Red circles, mammary-like structures. Yellow circles, keratinocyte-like cells. Whole-mount staining was performed using DAPI to show nuclei and F-actin-AF555 to show actin structure. Images were taken using confocal microscopy followed by the z stack process.
+
+Scale bars, 100 μm.
+
+Figure 4
+
+IF Staining of hiPSC-Differentiated Mammary-like Structures
+
+(A) Phase contrast (left) and IF images of a mammary-like acinus. White broken lines show the edges of the acinus.
+
+(B) Higher magnification images presenting the selected area in (A) as indicated by red broken lines. These images focus on the edge (left) and center (middle) of the structure. A merged image is shown on the right. Arrows 1–3 show P63-expressing cells.
+
+(C) P63 and CK8 double staining in an acinar structure.
+
+(D) P63 staining in primary human mammary epithelial cells. Nuclear staining (arrow 4) is positive signal. Cytoplasmic staining (arrow 5) is non-specific.
+
+(E) EpCAM and CD49f co-staining in non-lactogenic mammary-like acini. Arrow 6, EpCAM−/CD49f+; arrow 7, EpCAM+/CD49f−; arrow 8, EpCAM+/CD49f+; arrow 9, EpCAM−/CD49f−. Right image, a stained whole organoid.
+
+(F–H) Colony formation assays were performed using non-lactogenic mammary-like cells isolated from 3D culture. The percentage of luminal-like, myoepithelial-like, and mixed-colonies was plotted. Data represent mean ± SD of three independent assays. ER staining in lactogenic (G) and non-lactogenic (H) mammary-like cells are shown by IF staining.
+
+Scale bars, 100 μm.
+

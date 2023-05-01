@@ -1,0 +1,100 @@
+Estimating measures of interaction on an additive scale for preventive exposures
+
+Abstract
+
+Measures of interaction on an additive scale (relative excess risk due to interaction [RERI], attributable proportion [AP], synergy index [S]), were developed for risk factors rather than preventive factors. It has been suggested that preventive factors should be recoded to risk factors before calculating these measures. We aimed to show that these measures are problematic with preventive factors prior to recoding, and to clarify the recoding method to be used to circumvent these problems. Recoding of preventive factors should be done such that the stratum with the lowest risk becomes the reference category when both factors are considered jointly (rather than one at a time). We used data from a case-control study on the interaction between ACE inhibitors and the ACE gene on incident diabetes. Use of ACE inhibitors was a preventive factor and DD ACE genotype was a risk factor. Before recoding, the RERI, AP and S showed inconsistent results (RERI = 0.26 [95%CI: −0.30; 0.82], AP = 0.30 [95%CI: −0.28; 0.88], S = 0.35 [95%CI: 0.02; 7.38]), with the first two measures suggesting positive interaction and the third negative interaction. After recoding the use of ACE inhibitors, they showed consistent results (RERI = −0.37 [95%CI: −1.23; 0.49], AP = −0.29 [95%CI: −0.98; 0.40], S = 0.43 [95%CI: 0.07; 2.60]), all indicating negative interaction. Preventive factors should not be used to calculate measures of interaction on an additive scale without recoding.
+
+Introduction
+
+Interaction refers to the situation where the effect of one exposure on a certain outcome is different across strata of another exposure. This means that if interaction between two exposures is present, these exposures are not independent in causing a certain outcome. A classical example is the interaction between smoking and asbestos on the risk of lung cancer [1]. The presence and direction of interaction depends on the scale, e.g. additive or multiplicative, that is used. Interaction on an additive scale means that the combined effect of two exposures is larger (or smaller) than the sum of the individual effects of the two exposures, whereas interaction on a multiplicative scale means that the combined effect is larger (or smaller) than the product of the individual effects. A number of epidemiologists have argued that biologic interaction should be assessed on an additive scale rather than a multiplicative scale [1–6]. Interaction on an additive scale can be calculated using relative risks and different measures quantifying this interaction have been described, such as the relative excess risk due to interaction (RERI), the proportion attributable to interaction (AP), and the synergy index (S) [7]. Provided that the odds ratio approximates the relative risk, these measures can be used to assess interaction on an additive scale even with case-control data. Moreover, methods to calculate confidence intervals around these measures have been developed [8–10], and methods to quantify interaction on an additive scale in the case of continuous determinants have been presented [11].
+
+The measures quantifying interaction on an additive scale were developed to use with exposures that are risk factors rather than preventive factors. Risk factors meaning that the relative risk of the factor with the outcome is larger than 1, and preventive factors meaning that the relative risk of the factor with the outcome is smaller than 1. It is not commonly known that these measures should only be applied to risk factors (see for example [12–15]). Rothman proposed, in case of preventive factors, to choose the high-risk category of each exposure to be the exposed category [1]. This method turns the preventive factor into a risk factor by considering absence of the preventive to be the cause. Empirical examples of this method, however, are lacking. Moreover, it is unclear from Rothman’s description and similar description that have followed his [16] whether this recoding should be done one factor at a time or by selecting a reference category when both factors considered jointly.
+
+Our objectives were to show what happens if estimates of measures of interaction on an additive scale are calculated with preventive factors instead of risk factors using an example dataset, and to clarify the method of recoding of preventive factors.
+
+Methods
+
+Example dataset
+
+The empirical dataset that we used for illustration comprised a nested case-control study including 205 cases of incident diabetes and 2,050 controls [17]. One of the aims of the study was to examine whether the ACE insertion/deletion gene modified the effect of the use of ACE inhibitors on the risk of incident diabetes. For simplicity, we combined past and current use of ACE inhibitors. Homozygous for the deletion gene in the ACE gene will be referred to as the DD genotype of the ACE gene, and homozygous or heterozygous for the insertion gene of the ACE gene will be referred to as the II or ID genotype of the ACE gene.
+
+Measures of interaction on an additive scale
+
+For two dichotomous factors A and B: RR  is the relative risk of disease if both factors A and B are present, RR  is the relative risk of disease if factor A is present but factor B is absent, RR  is the relative risk of disease if factor A is absent but factor B is present.
+
+ Relative excess risk due to interaction (part of the total effect that is due to interaction):\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\text{RERI}} = {\text{RR}}_{{{\text{A}} + {\text{B}} + }} - {\text{RR}}_{{{\text{A}} + {\text{B}} - }} - {\text{RR}}_{{{\text{A}} - {\text{B}} + }} + 1 $$\end{document}RERI = 0 means no interaction or exactly additivity; RERI > 0 means positive interaction or more than additivity; RERI < 0 means negative interaction or less than additivity; RERI can go from − infinity to + infinity.  
+
+ Proportion attributable to interaction (proportion of the combined effect that is due to interaction):\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\text{AP}} = {\frac{\text{RERI}}{{{\text{RR}}_{{{\text{A}} + {\text{B}} + }} }}} $$\end{document}
+AP = 0 means no interaction or exactly additivity; AP > 0 means positive interaction or more than additivity; AP < 0 means negative interaction or less than additivity; AP can go from −1 to +1.  
+
+ Synergy index (ratio between combined effect and individual effects):\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\text{S}} = {\frac{{{\text{RR}}_{{{\text{A}} + {\text{B}} + }} - 1}}{{\left( {{\text{RR}}_{{{\text{A}} + {\text{B}} - }} - 1} \right) + \left( {{\text{RR}}_{{{\text{A}} - {\text{B}} + }} - 1} \right)}}} $$\end{document}S = 1 means no interaction or exactly additivity; S > 1 means positive interaction or more than additivity; S < 1 means negative interaction or less than additivity; S can go from 0 to infinity.  
+
+Method of recoding
+
+We show in the “Appendix” that if the category with the lowest risk when both factors are considered together is selected as the reference category then all three measures of additive interaction will always agree. We also given a numerical example in the “Appendix” that shows that if decisions about recoding are made one factor at a time by selecting the category with the lowest risk as the reference group then the three measures of additive interaction may diverge and one may calculate a negative value of the synergy index.
+
+Analyses
+
+First, we calculated the odds ratio of the use of ACE inhibitors on the risk of diabetes, and the odds ratio of the DD genotype of the ACE gene on the risk of diabetes. These odds ratios represent the effect of one of the exposures analyzed without conditioning on the other exposure. We refer to these effects as ‘single effects’. Subsequently, we calculated joint effects of the use of ACE inhibitors and the DD genotype of the ACE gene using one reference category.
+
+Second, we calculated the three measures of interaction on an additive scale (RERI, AP, and S) and their 95% confidence intervals using the delta method [9], assuming that the odds ratios calculated in the example dataset approximated relative risks. We also calculated 95% confidence intervals using the method described by Zou [18], which resulted in similar confidence intervals.
+
+Third, we recoded the variables in such a way that the stratum with the lowest risk, when both factors are considered jointly, became the reference category. We calculated the measures of additive interaction again and compared the results with the original results.
+
+Because we used the data for illustration purposes only, we did not take into account the matching of cases and controls, and we did not adjust for potential confounders.
+
+Results
+
+Before recoding use of ACE inhibitors or DD genotype of ACE gene
+
+Table 1 Use of ACE inhibitors and DD genotype of ACE gene as preventive and risk factor for diabetes: effects of both exposures irrespective of the value of the other exposure, joint effects of both exposures using one reference category, and measures of interaction on additive scale. Table 1 presents the effect of the use of ACE inhibitors on the risk of diabetes irrespective of the value of the ACE gene, and the effect of the DD genotype of the ACE gene on the risk of diabetes irrespective of the value of the use of ACE inhibitors. Furthermore, the joint effects of the use of ACE inhibitors and the DD genotype of the ACE gene using one reference category (no use of ACE inhibitors and II or ID genotype of the ACE gene) are presented. Use of ACE inhibitors was a preventive factor for diabetes (OR = 0.76 [95%CI: 0.57–1.03]), while the DD genotype of the ACE gene was a small risk factor for diabetes (OR = 1.03 [95%CI: 0.75–1.41]). However, when both factors were considered jointly, then in the absence of use of ACE inhibitors, the DD genotype of the ACE gene was a preventive factor for diabetes (OR = 0.90 [95%CI: 0.61–1.34]). 
+
+The relative excess risk due to interaction on an additive scale is 0.26 (95%CI: −0.30; 0.82), meaning that the combined effect is 0.26 more than the sum of the individual effects. One arrives at this 0.26 by calculating the difference between the expected combined effect (30% plus 10% risk reduction would suggest 40% risk reduction when both exposures are present) and the observed combined effect (14% risk reduction). The synergy index is below 1 indicating negative interaction, while the relative excess risk due to interaction and the proportion attributable to the interaction are both above 0 indicating positive interaction. So, the different measures give inconsistent results indicating that this is not the proper way to calculate these measures.
+
+Recoding use of ACE inhibitors
+
+Table 2 No use of ACE inhibitors and DD genotype of ACE gene as risk factors for diabetes after recoding use of ACE inhibitors: single effects of both exposures, joint effects when using one reference category, and measures of interaction on additive scale. The OR was lowest in the stratum of ‘use of ACE inhibitors and ACE gene II or ID’ (Table 1; OR = 0.70 [95%CI: 0.49–1.00]). To make this stratum the reference category, we recoded the variable ‘use of ACE inhibitors’, so ‘no use of ACE inhibitors’ was coded as 1 and ‘use of ACE inhibitors’ as 0. Table 2 presents the results after recoding the use of ACE inhibitors and shows that both individual effects are indicating risks of diabetes (OR = 1.43 for no use of ACE inhibitors; OR = 1.23 for DD genotype of ACE gene). The RERI, AP and synergy index now give consistent results as they all indicate negative interaction on an additive scale, meaning that the combined effect is less than the sum of the effects of not using ACE inhibitors and having the DD genotype of the ACE gene. Note that not only the sign of the RERI and AP changed, but also the estimate itself. 
+
+Explaining the differences
+
+The reason why using preventive factors gives wrong and inconsistent results in the measures of interaction on an additive scale is because a relative risk is restricted between 0 and 1 for a preventive factor while it can go from 1 to infinity for a risk factor. For example, a relative risk of 0.60 means a relative risk reduction of 40%, whereas the inverse (1/0.60 = 1.67) means a relative increase in risk of 67%. Clearly, this could lead to different results if these numbers are used in calculating the measures of additive interaction (e.g. the denominator in the synergy index S could be negative).
+
+Discussion
+
+In this study we showed that calculating measures of interaction on an additive scale using preventive factors can give inconsistent results. Researchers should therefore be aware to not use preventive factors to calculate these measures unless they have been recoded. After recoding exposures, careful thought about the interpretation of the measure of interaction is needed as the exposure is changed to its opposite, e.g., physical inactivity rather than physical activity, or continued smoking instead of smoking cessation, and this of course has to be taken into account in the interpretation of the interaction.
+
+Recoding of preventive factors is a pragmatic solution to calculate the correct measures of interaction on an additive scale. When measures of additive interaction are of interest, this recoding of the variables should be done in such a way that the stratum with the lowest risk when both factors are considered jointly becomes the reference category. The result of this recoding is that the individual effects (the effect of one of the exposures in the absence of the other exposure) become risk factors for the outcome. This is important because these individual effect estimates are used in the formulas for calculating interaction on an additive scale. In particular, by choosing the stratum with the lowest risk (when both factors are considered jointly) as the reference category it is ensured that after recoding the presence of each factor will have a non-negative effect in the absence of the other so that all of the measures of interaction can be appropriately interpreted. If factors are recoded one at a time (rather than jointly as we suggest), this can again result in inconsistent effect measures. It was unclear in prior literature whether factors should be recoded one at a time or when considered jointly; the previous descriptions [1, 16] are ambiguous and if anything read as though the recoding should be done one factor at a time. We have shown that recoding should be done by considering both factors jointly.
+
+The focus of the recoding method we have described here has been to ensure that all three measures of additive interaction (RERI, AP and S) give consistent results with regard to indicating positive or negative interaction on the additive scale. When inference about certain forms of antagonism are in view, alternative recoding schemes will be of interest [19].
+
+The recoding described here can also be motivated by considerations of the interpretation of the interaction measures themselves. The acronym RERI stands for the “Relative Excess Risk due to Interaction.” This may be seen as a reasonable description of this measure because the measure itself can be rewritten as:   and thus indicates the extent to which the relative excess risk (the extent to which the risk exceeds 1) when both factors are present is greater than the sum of the relative excess risks for each of the factors individually in the absence. This difference in the relative excess risks is “due to interaction.” If, however, one of the factors is preventive in the absence of the other (i.e. if one of RR  or RR  are less than 1) then it is no longer clear in what sense the description “relative excess risk due to interaction” is reasonable. It may be that RR = 1 and that the measure   is greater than 0 simply because one of the factors is preventive. The measure RERI only merits an interpretation as a “relative excess risk due to interaction” when neither factor is preventive. Some authors now thus refer to the measure as the Interaction Contrast Ratio [20].
+
+Likewise the synergy index for additivity   only merits the interpretation as a ratio measure for assessing relative excess risk if neither factor is preventive. The method of recoding we have described here ensures that RERI and S will always carry the interpretation of relative excess measures.
+

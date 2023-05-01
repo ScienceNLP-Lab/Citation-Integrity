@@ -1,0 +1,62 @@
+Quantifying Energy Intake Changes during Obesity Pharmacotherapy
+
+Abstract
+
+Objective
+
+Despite the fact that most obesity drugs primarily work by reducing metabolizable energy intake, elucidation of the time course of energy intake changes during long-term obesity pharmacotherapy has been prevented by the limitations of self-report methods of measuring energy intake.
+
+Methods
+
+We used a validated mathematical model of human metabolism to provide the first quantification of metabolizable energy intake changes during long-term obesity pharmacotherapy using body weight data from randomized, placebo-controlled trials that evaluated 14 different drugs or drug combinations.
+
+Results
+
+Changes in metabolizable energy intake during obesity pharmacotherapy were reasonably well-described by an exponential pattern comprising three simple parameters, with early large changes in metabolizable energy intake followed by a slow transition to a smaller persistent drug effect.
+
+Conclusions
+
+Repeated body weight measurements along with a mathematical model of human metabolism can be used to quantify changes in metabolizable energy intake during obesity pharmacotherapy. The calculated metabolizable energy intake changes followed an exponential time course, and therefore different drugs can be evaluated and compared using a common mathematical framework.
+
+Introduction
+
+Weight loss results from an imbalance between metabolizable energy intake and energy expenditure, both of which dynamically change over time (1). Most obesity drugs work in humans by decreasing metabolizable energy intake with minor effects on energy expenditure (2). Unfortunately, current methods for measuring energy intake in free-living humans are either notoriously inaccurate (3, 4, 5) or are prohibitively expensive (6). Therefore, the time course of energy intake during long-term obesity pharmacotherapy remains to be elucidated.
+
+Here, we used repeated mean body weight measurements as the sole model inputs to a validated mathematical model of human metabolism (7, 8, 9) and provide the first quantification of metabolizable energy intake changes during long-term obesity pharmacotherapy. We evaluated 14 different drugs or drug combinations from randomized, placebo-controlled trials (10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24). Obesity pharmacotherapy led to an early decrease in metabolizable energy intake followed by a slow exponential relaxation to a much smaller persistent effect. This universal exponential pattern suggests that drugs can be compared using a common mathematical framework comprising three simple parameters.
+
+Methods
+
+We searched PubMed on January 24, 2014 for randomized, placebo-controlled, obesity pharmacotherapy data with body weight time course data of at least 30 weeks in duration and at least 6 repeated body weight measurements. We found 15 studies matching our search criteria investigating 14 different drugs or drug combinations (10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24).
+
+Several of the interventions included a prescribed lifestyle modification involving a reduced calorie diet and a modest increase in physical activity. The physical activity prescription was practically negligible in terms of its energy cost, especially considering the likely incomplete adherence. Furthermore, spontaneous physical activity typically decreases during caloric restriction (25) and this would tend to offset any voluntary activity increase. Therefore, for simplicity, we assumed that physical activity was constant.
+
+The repeated mean body weight data were provided as the inputs to a mathematical model of human energy metabolism to quantify the underlying changes in metabolizable energy intake, ΔEI, in each group of subjects, including the placebo groups (7, 9). While repeated body weight data from individual subjects can be used to calculate confidence intervals of ΔEI (7, 9), in the present study we only had access to the mean body weight data published for each group. Therefore, we did not calculate confidence intervals for ΔEI.
+
+All of the drugs appeared to generate a similar ΔEI pattern: a large early decrease from the zero baseline followed by a slow exponential rise towards a smaller constant persistent effect. Therefore, we fit each calculated ΔEI time course using a simple three parameter exponential model:    where p  represents the initial decrease in energy intake from baseline, p  represents the long-term decrease in energy intake, τ is the exponential time constant characterizing the number of days required to transition from early to long-term metabolizable energy intake change, and t′=time−(N−1)T/2 shifts the time axis such that p  corresponds to the earliest calculation of ΔEI, where N is the number of body weight measurements and T was the time interval between measurements used for each model-calculated ΔEI time point. We did not consider more complex functions to fit the ΔEI time courses since the introduction of additional parameters comes with the significant risk of over-fitting.
+
+The ΔEI time courses for both the placebo and treatment groups were separately fit using equation [1]. Therefore, the placebo-subtracted ΔEI time course could be expressed as the difference between these two exponential functions. However, the calculated placebo-subtracted ΔEI did not demonstrate an obvious double exponential pattern since the characteristic time constants for the two groups were not very different. Therefore, we also fit the placebo-subtracted data using a single exponential model. The analyses were conducted using MATLAB (MathWorks Inc, Natick, MA) and the code can be downloaded as Supplementary Information.
+
+Results
+
+Figure 1A illustrates the mean body weight over 2 years in 1587 subjects receiving placebo and 1595 subjects receiving 10 mg of locaserin (20). Both groups were also prescribed a reduced calorie diet and instructed to exercise moderately for 30 minutes per day. Body weight decreased rapidly in both groups over the first few months and reached a plateau that is typically observed within the first year. Figure 1B shows the calculated mean metabolizable energy intake changes, ΔEI, in both groups corresponding to the body weight measurements from Figure 1A. The curves in Figure 1B correspond to the best fit exponential description of ΔEI for each group using equation 1. Interestingly, both groups were characterized by a large early reduction in energy intake from baseline followed by a slow exponential relaxation to less than 100 kcal/d below the baseline energy intake. Figure 1C illustrates the placebo subtracted effect of locaserin and demonstrates that the drug had a large initial effect on ΔEI amounting to about 500 kcal/d followed by a slow exponential relaxation towards a persistent effect of about 40 kcal/d.
+
+All the drugs investigated appeared to follow this same universal pattern (see the Supplemental Information for Figures corresponding to each intervention). Therefore, the three model parameters, p , τ, and p  that quantify the shape of this ΔEI curve can be used as a common framework to compare the effects of different drugs or drug doses on energy intake.
+
+Table 1 presents the calculated best-fit exponential parameter values for placebo subtracted ΔEI for 14 drugs or drug combinations, with some studied at multiple doses. The relatively high coefficients of determination (R2 values) demonstrate that the exponential model provided a reasonably good fit to these data. The drugs produced initial decreases in energy intake, ranging between 145–1146 kcal/d (p ), followed by an exponential relaxation with a characteristic time constant ranging between 19–501 days (τ) approaching a smaller persistent drug effect on energy intake ranging from a decrease of 600 kcal/d to a small increase (p ). Supplementary Tables 1 and 2 show the best-fit exponential parameter values and coefficients of determination separately for the placebo and treatment groups.
+
+Discussion
+
+Long-term obesity pharmacotherapy can lead to clinically meaningful long-term weight loss (26) achieved primarily via reductions in metabolizable energy intake (2). To our knowledge, the current study is the first report quantifying the long-term changes in metabolizable energy intake during obesity pharmacotherapy. To do this, we used repeated body weight measurements as the sole inputs to a validated mathematical model of human energy metabolism that quantifies the dynamic relationships between energy intake, energy expenditure, body weight, and body composition (7, 8, 9). Energy expenditure was modeled to dynamically change as a function of energy intake and body weight, but we assumed that the drugs under investigation had a negligible direct impact on human energy expenditure (2). Future studies could also include independent drug effects on energy expenditure and incorporate changes in physical activity to investigate how such parameters influence the calculated ΔEI.
+
+We found that all drugs resulted in a universal pattern of metabolizable energy intake change characterized by a large early decrease followed by a slow exponential relaxation to a smaller persistent effect. During the first several months, weight loss is typically rapid but begins to plateau within the first year. Interestingly, following the early large reduction in energy intake at the onset of the intervention, the magnitude of ΔEI progressively decreased during the weight loss period. At the point of maximum weight loss, ΔEI has already waned to a small fraction of its initial effect. In other words, there is an apparent disconnect between the time course of ΔEI and its downstream maximum effect on body weight. This occurs because of the long characteristic time lag in humans between when a change in energy intake results in the eventual stabilization of a new steady state body weight (8). The long-term steady state body weight depends on the persistent effect of the drug (p ). Indeed, all of the weight lost will eventually be regained unless the persistent drug effect is greater than zero. However, large persistent effects on ΔEI are not necessary for clinically meaningful weight loss maintenance (8).
+
+The placebo and treatment groups were both reasonably well-characterized by exponential functions of time. The fact that all placebo-subtracted treatment groups were also well-characterized by this universal pattern suggests that our method can be used as a common framework for comparing different drugs or drug doses. Why do changes in metabolizable energy intake follow this universal pattern? What are the mechanisms underlying the slow waning of both the placebo and the drug effects over time? Answers to these intriguing questions should be the subject of future investigations.
+
+Supplementary Material
+
+ 
+
+Figure 1
+
+(A) Mean body weight changes during placebo (○) and lorcaserin (■) treatment as measured by Smith et al. (20). (B) Model-calculated changes in energy intake corresponding to the measured body weight trajectories along with the exponential best-fit curves. (C) Model-calculated placebo-subtracted effect of lorcaserin on energy intake (■) along with the exponential best-fit curve.
+

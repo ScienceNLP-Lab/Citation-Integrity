@@ -1,0 +1,129 @@
+Measuring Vaccine Efficacy Against Infection and Disease in Clinical Trials: Sources and Magnitude of Bias in Coronavirus Disease 2019 (COVID-19) Vaccine Efficacy Estimates
+Abstract
+
+Background
+
+Phase III trials have estimated coronavirus disease 2019 (COVID-19) vaccine efficacy (VE) against symptomatic and asymptomatic infection. We explore the direction and magnitude of potential biases in these estimates and their implications for vaccine protection against infection and against disease in breakthrough infections.
+
+Methods
+
+We developed a mathematical model that accounts for natural and vaccine-induced immunity, changes in serostatus, and imperfect sensitivity and specificity of tests for infection and antibodies. We estimated expected biases in VE against symptomatic, asymptomatic, and any severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infections and against disease following infection for a range of vaccine characteristics and measurement approaches, and the likely overall biases for published trial results that included asymptomatic infections.
+
+Results
+
+VE against asymptomatic infection measured by polymerase chain reaction (PCR) or serology is expected to be low or negative for vaccines that prevent disease but not infection. VE against any infection is overestimated when asymptomatic infections are less likely to be detected than symptomatic infections and the vaccine protects against symptom development. A competing bias toward underestimation arises for estimates based on tests with imperfect specificity, especially when testing is performed frequently. Our model indicates considerable uncertainty in Oxford-AstraZeneca ChAdOx1 and Janssen Ad26.COV2.S VE against any infection, with slightly higher than published, bias-adjusted values of 59.0% (95% uncertainty interval [UI] 38.4–77.1) and 70.9% (95% UI 49.8–80.7), respectively.
+
+Conclusions
+
+Multiple biases are likely to influence COVID-19 VE estimates, potentially explaining the observed difference between ChAdOx1 and Ad26.COV2.S vaccines. These biases should be considered when interpreting both efficacy and effectiveness study results.
+
+The coronavirus disease (COVID-19) phase III vaccine trials have demonstrated efficacy against symptomatic infection for multiple vaccines, with estimates ranging from 50% to 95% [1]. Yet a vaccine that protects against symptomatic disease may work by preventing infection (infection-blocking vaccine), by preventing progression to symptoms upon infection (disease-blocking vaccine), or by a combination of these 2 mechanisms (Supplementary Figure 1) [2]. Understanding the extent to which the COVID-19 vaccines protect against infection is important because the success of their vaccination programs is highly contingent not only on symptomatic cases but also asymptomatic infection and community transmission [3].
+
+The predominant primary outcome of the COVID-19 vaccine trials is vaccine efficacy (VE) against the first case of polymerase chain reaction (PCR)-confirmed symptomatic disease, VE . This is measured by PCR-testing trial participants with COVID-19 symptoms and is sensitive to the clinical case definition [4]. As secondary outcomes, most trials also measure the incidence of asymptomatic infections, using either (i) regular swabbing and PCR testing, or (ii) serological testing for anti-nucleocapsid antibodies at prespecified time intervals, which allows seroconversion after infection to be identified for vaccines based on the spike protein (Table 1). Both strategies allow for estimation of VE against asymptomatic infection (VE ) and VE against any infection (VE ).
+
+ Methods for Measuring Vaccine Efficacy Against Infection, Symptomatic Infection and Asymptomatic Infection in the COVID-19 Phase III Trials  Abbreviations: COVID-19, coronavirus disease 2019; GRI, Gamaleya Research Institute; mRNA, messenger RNA; PCR, polymerase chain reaction; SARS-CoV-2, severe acute respiratory syndrome coronavirus 2.. COV002 (UK) trial only.. Vaccines only listed where measurement approach has been reported. Trial numbers provided in Supplementary Table 1.. For vaccines based on the whole virus, it may be possible to infer infection via a rise in SARS-CoV-2 antibodies following a period after vaccination. 
+
+ VE   is a complex outcome due to its relationship with the 2 mechanisms of VE. A vaccine that protects only against infection will reduce the number of symptomatic and asymptomatic infections in equal proportions, leading to a positive VE . Yet a vaccine that protects against symptom development will convert symptomatic cases to asymptomatic, potentially giving a negative VE . The counterintuitive interpretation of this outcome has been noted [2, 5], but the relationship between VE , VE , and VE against progression to symptoms (VE ) has not been quantified.
+
+Estimates of VE are known to be biased by factors such as imperfect test sensitivity and specificity and the accumulation of immunity over time [6–8]. However, there has been little discussion on the potential biases of the COVID-19 VE estimates [9, 10]. We developed a mathematical model of a vaccine trial to investigate the factors affecting observed values of VE. We first illustrate parameters affecting measured VE , then quantify the influence of different biases on VE estimates, notably the impact of (i) the build-up of immunity from undetected asymptomatic infections, (ii) imperfect test sensitivity and specificity for alternative testing strategies, (iii) differential detection of asymptomatic and symptomatic infections, and (iv) confounding of VE and probability of symptoms by age. We finish by estimating bias-adjusted VEs for 2 COVID-19 vaccines.
+
+METHODS
+
+Analytical Derivations
+
+VE is defined as 1-RR, where RR is some measure of the relative risk in the vaccine compared with the control arm [11]. For most primary and secondary outcomes of the COVID-19 vaccine trials, the relative risk is based on an incidence rate ratio (IRR) such that
+
+where IR  and IR  are the incidence rate in the vaccine and control groups respectively.
+
+For outcomes measured at fixed time points (eg, seroconversions), the relative risk can be calculated using the cumulative incidence ratio (CIR) such that
+
+where CI  and CI  are the cumulative incidence in the vaccine and control groups respectively. For a “leaky” vaccine, VE based on cumulative incidence approximates that based on the incidence rate for low incidence or short follow-up periods but biases toward zero as follow-up time and incidence increase [8].
+
+For vaccines that protect against infection and/or symptoms, VE against symptomatic infection is given by
+
+[12]. VE against asymptomatic infection depends on the incidence of asymptomatic infections that are not prevented by the vaccine and on symptomatic infections that the vaccine prevents from progressing, such that
+
+where p  is the probability of symptoms in the absence of vaccination. Substituting equation 1 into equation 2 allows VE  to be derived as a simple function of VE  and VE 
+
+Rearranging equation 1 and substituting equation 3 into equation 1 then provides a solution for VE 
+
+If asymptomatic infections are less likely to be detected than symptomatic infections, and a vaccine is protective against symptom development (VE  > 0), then observed VE  ≠ true VE . The observed VE  depends on the relative incidence of detected infections, and can be related to the true efficacy by
+
+where σ represents the relative probability of asymptomatic to symptomatic infection detection. For intermediate steps for equations 3–5 and estimation of confidence intervals for VE  and VE ; see Supplementary Methods.
+
+Analytical solutions become more complex when incorporating additional biases, so we developed a stochastic mathematical (cohort) model of a phase III vaccine trial.
+
+Mathematical Model
+
+The model follows a susceptible, infected, recovered (SIR) structure, implemented as a Markov model, and allows for asymptomatic and symptomatic infections, natural immunity, changes in serostatus and imperfect test sensitivity and specificity. We assume a constant infection rate over time and a “leaky vaccine” model, so each vaccinated individual’s probability of infection is reduced by VE  and their risk of then developing symptoms is reduced by VE . We assume no heterogeneity in population characteristics but perform a sensitivity analysis to assess the effect of variation in p  and VE by age.
+
+We model 2 testing approaches for asymptomatic infections: (i) weekly PCR testing and (ii) serological testing at 1, 2, 6, 12, and 24 months after baseline. We assume that responsive PCR testing detects all symptomatic infections. Observed VE is calculated from the simulated incidence of detected infections in each trial arm. Efficacy is estimated as 1-IRR for all outcomes except those estimated using serology, for which efficacy is estimated as 1-CIR, using the cumulative number of seroconversions detected in each serology assessment up to the present time interval. Point estimates and confidence intervals are given by the mean and 2.5 and 97.5 percentiles of 1000 simulated estimates.
+
+Application to COVID-19
+
+Applying the model to COVID-19, we assumed a natural probability of developing symptoms upon infection of 0.67 [13], a serology test specificity of 99.84% [14], and sensitivity of 95% and 80% to symptomatic and asymptomatic infections, respectively [15]. We used data on the probability of PCR detection over time since infection for individuals without symptoms [16] to estimate the probability of detecting an asymptomatic infection with weekly PCR swabbing (Supplementary Table 2) and assumed a PCR test specificity of 99.945% [17]. We used the model to estimate bias-adjusted VE estimates for 2 adenovirus vector vaccines with published trial data on asymptomatic infection, ChAdOx1 (Oxford-AstraZeneca) and Ad26.COV2.S (Janssen). We used our best parameter estimates to estimate the infection rate from the number of reported infections in the placebo arm, accounting for imperfect test characteristics. We ran the model under a range of true VE  and VE  values to find which combination gave the trial-reported estimates, then generated 95% uncertainty intervals (UI) using Latin hypercube sampling to give the range within which the VE is expected to lie, considering both statistical variation and parameter uncertainty. We then used rank regression to evaluate the contribution of individual parameters to the biases (Supplementary Methods).
+
+The model is described further in Supplementary Methods and Supplementary Figures 2 and 3. Model parameters are provided in Supplementary Table 3. Code is available at: https://github.com/lucyrose96/COVID-19-Trial-Model.
+
+RESULTS
+
+Interpretation of Vaccine Efficacy Against Asymptomatic Infection
+
+Observed VE  was positively associated with VE  but negatively associated with VE  and the proportion of infections that were symptomatic (Figure 1). For vaccines that only prevented infection, VE  was equal to VE . For vaccines with efficacy predominantly mediated by prevention of symptoms, VE  was low or negative, particularly when a large proportion of infections were naturally symptomatic. For vaccines with high VE  (Figure 1A), protection against infection can be expected with lower values of VE  than vaccines with moderate VE  (Figure 1B). VE  and VE  could be estimated from VE  and VE  using equations 3 and 4 (Supplementary Figure 4).
+
+Possible Biases in COVID-19 Vaccine Trials
+
+The build-up of immunity from undetected asymptomatic infections caused VE  to bias in opposite directions for infection-blocking and disease-blocking vaccines. For infection-blocking vaccines, estimated VE  decreased over time, with greater decreases observed for higher infection rates and lower probabilities of symptoms (Figure 2A). For disease-blocking vaccines, a downward bias was only observed when the probability of symptoms was low (Figure 2C). Instead, for most combinations of parameters, estimated VE  increased slightly over time. For an infection and disease-blocking vaccine (50% VE , 40% VE ), a small downward bias was observed (Figure 2B). The biases were sensitive to the VE calculation, as VE  estimated with cumulative incidence decreased over time for all vaccine profiles (Supplementary Figure 5).
+
+Imperfect test characteristics biased efficacy estimates toward zero. Factors increasing the magnitude of the bias were: reduced specificity, reduced sensitivity, increased testing frequency, and calculation with the CIR instead of the IRR. Although the serology estimated VE  was based on the CIR (as person-time at risk is unknown), the bias was usually lower than the weekly-PCR estimate, for a given sensitivity and specificity, due to the lower frequency of testing (Figure 3). This led to substantial bias particularly in low incidence settings. For example, with a high specificity (99.8%) and sensitivity (100%), a true VE  of 70% in a low incidence setting (5% per year) was underestimated at 23%.
+
+For a vaccine that was protective against symptom development (VE  > 0), VE  was overestimated when asymptomatic infections were less likely to be detected than symptomatic infections (Figure 4). The greater the difference in the detection probabilities and the greater the vaccine’s protection against symptoms, the greater the overestimation.
+
+These results were insensitive to adding age stratification to the probability of symptoms. However, also adding age-stratification to VE led to biased VE  and VE  estimates, when not adjusted for age (Figure 5). When VE decreased with age and the probability of symptoms increased, VE  was overestimated and VE  underestimated, while the opposite was observed when efficacy increased with age. The magnitude of the difference was greater with an increased association between age and the probability of symptoms, and between age and efficacy.
+
+Estimating VEin, VEpr, and the Likely Bias From the Published Trial Results
+
+Applying equations 3 and 4 to the reported trial results gave an estimated VE  for ChAdOx1 of 43.6% (95% confidence interval [CI] 20.6–59.9) (Table 2). For Ad26.COV2.S, VE  was estimated at 66.2% (95% CI 55.9–74.1), and VE  just 0.9% (95% CI −46.8 to 33.2).
+
+Incorporating the aforementioned biases, the model gave best estimates for ChAdOx1 VE , VE  and VE  of 59.0% (95% UI 38.4–77.1), 27.4% (95% UI −32.1 to 87.4) and 31.5% (95% UI −20.7 to 55.0) respectively. While, for Ad26.COV2.S, the corresponding bias-adjusted estimates were 70.9% (95% UI 49.8–80.7), 79.2% (95% UI 14.6–99.0). and −15.2% (95% UI −73.3 to 33.2). The biases were most sensitive to the test specificity, infection rate, and testing adherence (Supplementary Tables 4–6).
+
+DISCUSSION
+
+Accurately estimating COVID-19 VE outcomes is important to understand vaccine benefits, their likely impact on transmission and the long-term prospects for disease control. Simulating a COVID-19 vaccine trial helps to characterize the likely influence of biases and may help to explain differences seen between vaccines, trials, and populations.
+
+We first derived the relationship between VE  with efficacy against infection and against disease in breakthrough infections. While increasing VE  increased VE , increasing VE  decreased VE  because more infections were prevented from becoming symptomatic. This influence of VE  was stronger when the probability of symptoms was higher. Therefore, although counterintuitive, for COVID-19 where a minority of infections present asymptomatically and the vaccines have high efficacies against symptomatic infection, protection against infection can be expected even when VE  is low or negative. A vaccine with a high VE  would work predominantly by preventing infection (high VE , low VE ), whereas a vaccine with a low VE  would work predominantly by preventing symptoms (low VE , high VE ).
+
+Second, we estimated that the ChAdOx1 weekly PCR-measured VE  was underestimated by 8.1% (Trial 50.9%, Model 59.0%) and VE  by 12.8% (Trial 14.6%, Model 27.4%). The VE  calculated from the trial reported VE  and VE  would therefore be an overestimation (Calculation 43.6%, Model 31.5%). However, a wide range of values are compatible with the reported trial results when considering stochastic variation and parameter uncertainty. The small sample size informing the Ad26.COV2.S VE  estimate and parameter uncertainty for the test specificity, infection rate and adherence to PCR testing, in particular, reduced the precision of our uncertainty intervals. The true VE  may range between 38.4% and 77.1%, and VE  between −20.7% and 55.0%. Given the strong bias that can be caused by reduced test specificity and a high frequency of testing, it would not be unreasonable for the true VE  to be closer to our upper uncertainty interval, especially considering that effectiveness studies have estimated greater protection against infection than the trial [27, 28]. For Ad26.COV2.S, our model suggests that the true VE  lies between 49.8% and 80.7%, with a best estimate of 70.9%. Although this indicates a negative VE , we believe this is unlikely and rather explained by the small sample size informing the trial VE  estimate.
+
+We explain these overall expected differences by 4 likely biases acting in the COVID-19 trials.
+
+These biases also apply to effectiveness studies, based on cohort or case-control designs. Notably, the bias arising from differential detection of asymptomatic and symptomatic infections will likely be greater in real-world studies, where asymptomatic testing is less rigorous. This should be considered when comparing real-world and trial reported estimates, as it could lead to greater bias toward overestimation of VE  in effectiveness studies.
+
+Limitations to our analysis include uncertainties over parameter estimates. There is limited evidence on serology and PCR test sensitivities for asymptomatic infections, and how these change over time. As we show, differences in test sensitivity by symptom status can lead to overestimation of VE  so further studies are needed to clarify the potential role of this bias. We also did not consider the vaccines’ effects on viral load and how this alters virological and serological test sensitivity. Multiple COVID-19 vaccines reduce SARS-CoV-2 viral load [18, 38], and lower load infections are less likely to lead to seroconversion [39]. Therefore serology-based efficacy estimates may be more representative of high viral load infections than all infections, and may be comparable to estimates based on DNA sequenced swabs, which must exceed a threshold viral load to be sequenced. Finally, we do not consider point prevalence estimates from single time point PCR swabs, however this has been explored elsewhere [9, 10].
+
+In conclusion, multiple biases have the potential to influence COVID-19 VE estimates, with their direction and magnitude dependent on the vaccine properties and testing strategies. These biases may explain differences between the ChAdOx1 and Ad26.COV2.S trial estimates despite similar vaccine platform technologies, and should be considered when interpreting efficacy and effectiveness study results as they are reported for these and other vaccines.
+
+Supplementary Data
+
+Supplementary materials are available at Clinical Infectious Diseases online. Consisting of data provided by the authors to benefit the reader, the posted materials are not copyedited and are the sole responsibility of the authors, so questions or comments should be addressed to the corresponding author.
+
+Figure 1.
+
+Estimated vaccine efficacy against asymptomatic infection. Red to blue gradient represents the transition from a disease-blocking vaccine (VE  = 0% and VE  = VE ) to an infection-blocking vaccine (VE  = VE  and VE  = 0%). Each successive line represents a 10% increase in VE  and a corresponding decrease in VE  (such that VE  remains the same). Lines show predicted values from equation 2; points and error bars show the observed mean and 2.5 and 97.5 percentiles from 1000 simulations, with efficacy calculated as 1-IRR, censoring after the first infection. A, Vaccine with 70% efficacy against symptomatic infection (eg, Oxford-AstraZeneca/Janssen vaccines). B, Vaccine with 90% efficacy against symptomatic infection (eg, Pfizer/Moderna vaccines). Abbreviations: IRR, incidence rate ratio; VE , vaccine efficacy against asymptomatic infection; VE , vaccine efficacy against infection; VE , vaccine efficacy against progression to symptoms; VE , vaccine efficacy against symptomatic infection.
+
+Figure 2.
+
+Change in estimated vaccine efficacy against symptomatic infection over a 2-year follow-up. Points and error bars show the observed mean and 2.5 and 97.5 percentiles from 1000 simulations, with efficacy calculated as 1-IRR, censoring after the first symptomatic infection. Time = 0 months represents 2 weeks post second dose. Sensitivity and specificity = 100%. True vaccine efficacies: VE  = 70%. A, VE  = 70%; VE  = 0%. B, VE  = 50%, VE  = 40%. C, VE  = 0%, VE  = 70%. Abbreviations: IRR, incidence rate ratio; ; VE , vaccine efficacy against asymptomatic infection; VE , vaccine efficacy against infection; VE , vaccine efficacy against progression to symptoms; VE , vaccine efficacy against symptomatic infection.
+
+Figure 3.
+
+Impact of imperfect test sensitivity and specificity on serology-estimated and PCR-estimated vaccine efficacy against infection. A, Low force of infection (5% per year). B, High force of infection (30% per year). At 6-month follow-up visit: serology tests taken at month 1, 2, and 6 (cumulative seroconversions up to 6-month visit); PCR tests taken weekly. Serology efficacy calculated using 1-CIR; PCR efficacy calculated using 1-IRR. Sensitivity assumed to be equal for symptomatic and asymptomatic infections. Points and error bars represent the mean and 2.5 and 97.5 percentiles from 1000 simulations. At 100% specificity, a slight bias is observed for the serology-estimated VE  because estimates based on the CIR bias toward zero over time, particularly in high incidence settings [8]. Abbreviations: CIR, cumulative incidence ratio; IRR, incidence rate ratio; PCR, polymerase chain reaction; VE , vaccine efficacy against infection.
+
+Figure 4.
+
+Impact of differential detection of asymptomatic and symptomatic infections on observed vaccine efficacy against infection. Lines show values estimated with equation 4, points and error bars show the observed mean and 2.5 and 97.5 percentiles from 1000 simulations, with efficacy calculated as 1-IRR, censoring after the first infection. Specificity = 100%, yearly force of infection = 5%, follow-up = 12 months from 2 weeks post 2nd dose. Abbreviations: IRR, incidence rate ratio; VE , vaccine efficacy against infection; VE , vaccine efficacy against progression to symptoms.
+
+Figure 5.
+
+Estimated vaccine efficacy in a population with a higher probability of symptoms with age. Points and error bars represent the mean and 2.5 and 97.5 percentiles of 1000 simulations. True VE  = true VE  = true VE  = 70%. Specificity = 100%, yearly force of infection = 20%, follow-up = 12 months from 2 weeks post 2nd dose. Abbreviations: VE , vaccine efficacy against asymptomatic infection; VE , vaccine efficacy against infection; VE , vaccine efficacy against symptomatic infection
+

@@ -1,0 +1,167 @@
+Nicotinic Cholinergic Receptors in VTA Glutamate Neurons Modulate Excitatory Transmission
+SUMMARY
+
+Ventral tegmental area (VTA) glutamate neurons are important components of reward circuitry, but whether they are subject to cholinergic modulation is unknown. To study this, we used molecular, physiological, and photostimulation techniques to examine nicotinic acetylcholine receptors (nAChRs) in VTA glutamate neurons. Cells in the medial VTA, where glutamate neurons are enriched, are responsive to acetylcholine (ACh) released from cholinergic axons. VTA VGLUT2+ neurons express mRNA and protein subunits known to comprise heteromeric nAChRs. Electrophysiology, coupled with two-photon microscopy and laser flash photolysis of photoactivatable nicotine, was used to demonstrate nAChR functional activity in the somatodendritic subcellular compartment of VTA VGLUT2+ neurons. Finally, optogenetic isolation of intrinsic VTA glutamatergic microcircuits along with gene-editing techniques demonstrated that nicotine potently modulates excitatory transmission within the VTA via heteromeric nAChRs. These results indicate that VTA glutamate neurons are modulated by cholinergic mechanisms and participate in the cascade of physiological responses to nicotine exposure.
+
+INTRODUCTION
+
+Nicotine activates nicotinic acetylcholine receptors (nAChRs) in ventral tegmental area (VTA) neurons, which depolarizes the membrane potential, enhances firing, and boosts dopamine (DA) release in target structures such as nucleus accumbens (NAc) (Brazell et al., 1990; Calabresi et al., 1989). VTA DAergic and GABAergic neurons strongly express nAChRs, and nicotine acts on VTA circuitry by (1) stimulating DA neurons via nAChR activation (Calabresi et al., 1989), (2) inhibiting such neurons through nAChR activation on VTA GABA neurons (Mansvelder et al., 2002), and (3) facilitating glutamate release from afferents expressing α7 nAChRs (Mansvelder and McGehee, 2000). This framework has been valuable, but recent appreciation for VTA glutamate neurons indicate that it is incomplete. These cells are enriched in the medial VTA (mVTA) and project to several forebrain structures (Hnasko et al., 2012; Ntamati and Lüscher, 2016; Qi et al., 2016; Root et al., 2014a, 2014b; Yoo et al., 2016). These circuits are functionally significant, being involved in both reward and aversion (Qi et al., 2016; Root et al., 2014a; Yamaguchi et al., 2007; Yoo et al., 2016). VTA glutamate neurons also make widespread intrinsic contacts with DAergic and non-DAergic neurons within the VTA itself (Dobi et al., 2010; Wang et al., 2015; Yoo et al., 2016).
+
+Glutamatergic transmission in the VTA plays a critical role in nicotine dependence (Kenny et al., 2009), but the receptor and circuitry mechanisms are unclear. Whether and how nicotine modulates VTA output by impinging on intrinsic glutamatergic circuitry in VTA is completely unknown. On the basis of the influence of these neurons on local VTA circuitry, their distinct connectivity pattern with target structures, and their ability to co-release DA or GABA (Stamatakis et al., 2013; Stuber et al., 2010), we speculated that if nAChRs are functionally expressed in VTA glutamate neurons, they could be uniquely positioned to influence motivated behavior circuits by enhancing excitatory transmission within, and downstream of, the VTA. In this study, we demonstrate the existence of functional nAChRs in VTA glutamate neurons, characterize their pharmacological properties, examine their subcellular distribution pattern, and uncover a role for them in intrinsic excitatory transmission in VTA microcircuits.
+
+RESULTS
+
+nAChRs Are Expressed in mVTA Neurons
+
+During patch-clamp recordings and two-photon laser scanning microscopy (2PLSM) imaging of dye-filled mVTA neurons in slices from mice expressing tdTomato (tdT) in cholinergic somata/axons (ChAT-Cre::Ai14 mice) (Figure 1A), we noted a modest number of tdT+ fibers adjacent to mVTA neurons (Figure 1B). Analysis of image stacks in x–y, y–z, and x–z planes revealed cholinergic fibers in close apposition to neuronal somata and dendrites (Figures 1C and 1D), suggesting that these neurons are sensitive to ACh. This is supported by results localizing α4, α6, β2, and β3 nAChR subunits to mVTA neurons of knockin mice expressing GFP-fused nAChRs (Shih et al., 2014) (Figures S1A and S1B). To examine ACh sensitivity of mVTA cells, ChR2-EYFP was expressed and functionally validated in pedunculopontine tegmental nucleus (PPTg) cholinergic neurons of ChAT-Cre mice (Figures 1E and S1C–S1H). Voltage-clamped mVTA neurons in slices containing ChR2-EYFP+ fibers were photo-stimulated with 470 nm light flashes (20 s, 0.12 mW/mm2), producing a slow inward current (Figures 1F and 1G). Galantamine (1 μM; validated in Figures S1I and S1J) enhanced these photocurrents (Figures 1H and 1I), whereas co-application of a nAChR antagonist cocktail with galantamine eliminated them (Figure 1I). Following Cre-independent expression of ChR2-EYFP in PPTg of ChAT-Cre mice, we recorded fast glutamatergic optically evoked excitatory postsynaptic currents (oEPSCs) in mVTA neurons (Figures S1K–S1M). This reflects underlying differences in neurotransmission between cholinergic versus non-cholinergic PPTg fibers to mVTA neurons. Collectively, these results indicate that mVTA neurons participate in cholinergic transmission through nAChRs.
+
+mVTA Glutamate Neurons Express Functional nAChRs
+
+To examine nAChR subunit expression in VTA glutamate neurons, triple-channel mRNA fluorescence in situ hybridization (FISH) was used. First, nAChR probes (Chrna4, Chrna6, and Chrnb2) were validated (Figures S2A–S2I). Co-labeling of mVTA interfascicular nucleus (IF) neurons with probes for Slc17a6 (VGLUT2), Chrna4, and Th revealed multiple co-expression patterns (Figure 2A), indicating that a majority of Slc17a6+ neurons are positive for Chrna4 (Table S1; Figures 2B and 2C). Within Slc17a6+/Chrna4+ neurons, a majority also express Th (Table S1; Figure 2C). Co-labeling of Slc17a6 and Chrna4 was qualitatively similar in lateral VTA neurons, as was the fraction of Slc17a6+/Chrna4+ neurons that co-labeled for Th (Table S1; Figures 2D and 2E). The same analysis using probes for Chrna6 and Chrnb2 produced very similar results (Figures 2F–2O). To determine whether the nAChR expression profile in VTA glutamate neurons is unique or generalizable, we examined nAChR expression in GABA (Gad2+) neurons with FISH (Figures S2J, S2O, and S2T). Like Slc17a6 labeling revealed, a majority of IF Gad2+ cells express Chrna4, Chrna6, and Chrnb2 (Figures S2K, S2L, S2P, S2Q, S2U, and S2V). Interestingly, Th was expressed in 30%–50% of Gad2+/nAChR+ neurons, depending on the subunit examined (Figures S2L, S2Q, and S2V). Compared with mVTA IF, lateral VTA neurons tend to have fewer neurons co-labeling for Gad2 and nAChR subunits as well as fewer Th+ neurons that co-labeled for Gad2 and nAChR subunits (Figures S2M, S2N, S2R, S2S, S2W, and S2X).
+
+To fluorescently mark mVTA glutamate neurons in adult mice for analysis of functional nAChRs, hM4Gi-mCherry (DREADD receptor) was expressed in mVTA of VGLUT2-Cre mice (Figures 3A and S3A). Robust ACh-elicited currents were recorded in VGLUT2+ IF neurons (Figure 3B), and pharmacological analysis indicated that α6β2 and α4β2(non-α6) were the dominant nAChR subtypes (Figure 3C). To compare these currents with those in VTA GABA and DA neurons, GAD2-Cre and DAT-Cre mice, respectively, were crossed with mice (Ai14 strain) driving tdT expression in a Cre-dependent manner (Figures 3D and 3G). Relative to results in VGLUT2+ neurons (Figures 3B and 3C), ACh-evoked currents in VTA GABA (Figures 3E and 3F) and DA (Figures 3H and 3I) neurons were qualitatively similar. Presynaptic blockers partially reduced the currents in VTA VGLUT2+ neurons (Figure 3J), but a vehicle control experiment demonstrated that run-down of nAChR currents cannot account for the reduction in current we observed during pharmacological analysis (Figure 3K). To control for strain differences in nAChR function, we performed a similar analysis in unlabeled VTA IF neurons from C57BL/6 mice. These results from a presumptive pool of DA/GABA/VGLUT2 neurons were similar to results in the Cre lines (Figures S3B and S3C). In pooled C57BL/6 but not VGLUT2+, GAD2+, or DAT+ VTA neurons (two-sided paired t tests, respectively: p = 0.0283, p = 0.1136, p = 0.0860, and p = 0.1327), an α7 nAChR antagonist (methyllycaconitine [MLA]; 10 nM) further reduced the residual ACh-evoked current that was insensitive to combined α-Ctx MII[H9A;L15A]+DHβE treatment.
+
+Next, we asked whether nAChRs in mVTA glutamate neurons are localized to somata or dendrites. VGLUT2+ IF neurons in slices from VGLUT2-Cre::AAV-DIO-hM4Gi-mCherry mice were identified via tdT fluorescence using 2PLSM imaging (Figure 3A). Photoactivatable nicotine (PA-Nic) (Banala et al., 2018) (Figure 3L) was used to study functional nAChR responses in mVTA VGLUT2+ neurons during recording and 2PLSM imaging. PA-Nic photolysis (405 nm, 2 mW) in spots (1 μm diameter) adjacent to VGLUT2+ neuron somata and dendrites revealed fast inward currents (Figure 3M), indicating the presence of functional somatodendritic nAChRs in mVTA glutamate neurons.
+
+mVTA Glutamate Neuron nAChRs Modulate Excitatory Neurotransmission
+
+To determine whether nAChRs modulate glutamatergic transmission between VTA glutamate and non-glutamate neurons, we first validated Cre-dependent ChR2 expression in VGLUT2-Cre mice by microinjecting AAV-DIO-ChR2-EYFP into mVTA of VGLUT2-Cre::Ai14 mice. These microinjections largely saturated the mVTA with ChR2+ fibers and infected VGLUT2+ cell bodies (Figure 4A). Next, we recorded from local uninfected neurons in mVTA to study excitatory transmission between ChR2− (putative VGLUT2−) and ChR2+ (VGLUT2+) neurons (Figure 4B, left). Full-field illumination (470 nm, 1–5 ms) activated ChR2 on VGLUT2+ somata and local terminals, evoking oEPSCs in ChR2− mVTA neurons (Figure 4B, right) that were sensitive to NBQX + D-AP5. oEPSCs in ChR2− neurons were distinguishable from direct photocurrents in VGLUT2+ neurons via their clear synaptic delay and faster decay time constant (Figure 4C). To examine whether nAChRs in VGLUT2+ mVTA neurons modulate these oEPSCs, we compared the oEPSC amplitude ± nicotine (0.3 μM). Nicotine application enhanced oEPSC amplitude in mVTA ChR2− neurons (Figures 4D and 4E), demonstrating a role for nAChRs in excitatory transmission between mVTA VGLUT2+ and ChR2− (putative VGLUT2−) neurons. Nicotine (0.3 μM) was unable to enhance oEPSC amplitudes in the presence of DHβE (repeated-measures [RM] one-way ANOVA of ACSF versus ACSF + DHβE versus ACSF + DHβE + nicotine; F [1.577, 7.885] = 1.523, p = 0.2698) (Figure 4F), implicating β2-containing nAChRs.
+
+To determine whether nicotine acts directly or indirectly to influence oEPSCs, we knocked down β2 nAChR subunits selectively in VGLUT2+ mVTA neurons using CRISPR/Cas9. VGLUT2-Cre mice crossed to Rosa26-LSL-Cas9-2A-EGFP mice (referred to as R26-LSL-Cas9) were microinjected in mVTA with adeno-associated virus (AAV) vectors delivering single guide RNAs (sgRNAs) targeting Chrnb2 or no specific gene (control) (Figure 4G). Comparison of 1 mM ACh-evoked current amplitudes in R26-LSL-Cas9::VGLUT2-Cre mice expressing control or Chrnb2-targeted sgRNAs confirmed functional knockdown of nAChRs (Figures 4H and 4I). As an additional control for Chrnb2 knockdown, nicotine (0.3 μM) increased cell-attached firing in VGLUT2+ mVTA neurons from mice expressing control sgRNAs but not Chrnb2 sgRNAs (Figures 4J and 4K). To study the effect of Chrnb2 knockdown on nAChR-modulated oEPSCs between VGLUT2+ and ChR2− mVTA neurons, ChR2-EYFP was expressed in VGLUT2+ neurons of control or Chrnb2 knockdown mice. Whereas nicotine could still enhance oEPSCs in ChR2− mVTA neurons from control sgRNA-injected mice, oEPSC enhancement by nicotine was blocked in Chrnb2 sgRNA-injected mice (RM two-way ANOVA: control/Chrnb2 virus [F(1, 8) = 0.8818, p = 0.3752] × drug treatment [F(1, 8) = 9.193, p = 0.0163], interaction [F(1, 8) = 40.27, p = 0.0002]) (Figures 4L and 4M).
+
+Last, we asked whether presynaptic nAChRs on glutamatergic fibers in NAc from VTA VGLUT2+ neurons modulate glutamate transmission onto NAc neurons. ChR2-EYFP expression in NAc medial shell following mVTA microinjection of AAV-DIO-ChR2-EYFP was first validated (Figure S4A). Although excitatory oEPSCs were evident (Figure S4B, left), nicotine (0.3 μM) did not boost these responses (Figure S4B, right). To control for functional nAChRs in the mVTA to NAc projection, fluorescent retrograde tracers were used. After confirming that NAc medial shell microinjection of green retrobeads efficiently labels mVTA neurons (Figure S4C), we labeled NAc medial shell-projecting VGLUT2+ mVTA neurons by microinjecting green retrobeads into NAc medial shell of VGLUT2-Cre::Ai14 mice (Figure S4D). Such neurons were visually identified in the slice via dual red (tdT+)/green (retrobead+) fluorescence. ACh-evoked currents were evident in these cells (Figures S4E and S4F), confirming functional nAChR expression in VTA to NAc VGLUT2+ cells. These results rule out the interpretation that nicotine failed to modulate NAc glutamate transmission because of a lack of nAChR expression. Nicotine-modulated oEPSCs (Figures 4D and 4E) may occur in mVTA DAT+ and/or GAD2+ neurons, but these neuron types were not uniquely identifiable when examining I  current amplitude, action potential firing rate, or input resistance (Figures S4G–S4J).
+
+DISCUSSION
+
+In this study, we examined how nAChR distribution and function maps onto the trio (DAT, GAD2, VGLUT2) of neurotransmitter-defined VTA neurons by examining these receptors in glutamate neurons and comparing their expression and function with nAChRs in DA and GABA neurons. β2-containing nAChRs, which exhibit high sensitivity to ligand and strong nicotine-mediated desensitization (Pidoplichko et al., 1997), are the predominant subtype in VTA glutamate neurons. This is consistent with prior work (Klink et al., 2001) but extends those findings by suggesting not only nicotinic cholinergic modulation of glutamate release from VTA neurons but similar modulation of DA/glutamate (Stuber et al., 2010) and GABA/glutamate (Root et al., 2014b; Yoo et al., 2016) co-release. Given that VTA VGLUT2+ neurons project to atypical forebrain targets, cholinergic modulation of VTA-derived glutamatergic afferents may occur at synapses that are not yet characterized. Consistent with the relatively non-specific targeting of VTA DAT/GAD2/VGLUT2 neurons by hindbrain cholinergic nuclei (Faget et al., 2016), we did not find evidence for selective expression of particular nAChR subtypes in VTA glutamate neurons. However, individual VGLUT2+, DAT+, and GAD2+ cells express different levels of functional nAChR subtypes (Figure 3).
+
+Our results showing innervation of mVTA neurons by cholinergic fibers extend prior work in ChAT-Cre rats (Dautan et al., 2016; Xiao et al., 2016). 2PLSM imaging (Figures 1B–1D) and optogenetic data (Figure S1H) show modest to sparse innervation of IF neurons by cholinergic fibers. This is consistent with slow kinetics of inward currents activated by optical release of ACh (Figures 1F and 1H). Prolonged photostimulations (20 s) were required to elicit these currents, and we found no evidence for fast (millisecond timescale) cholinergic transmission. On this basis, volume transmission may be the operable cholinergic mechanism in mVTA. Despite this likelihood, we also uncovered fast (millisecond timescale) nAChR currents at VTA VGLUT2+ neuronal somata and dendrites when rapidly “jumping” the concentration of exogenous nicotine using laser photolysis of PA-Nic (Figure 3M). This strongly suggests that slow responses following optical release of ACh reflect intrinsic limitations imposed by cholinergic transmission rather than receptor activation/desensitization kinetics. Nicotine photolysis confirms what has previously only been inferred: VTA nAChRs are not only located on somata where they likely modulate firing, but also in dendrites where they may mediate cholinergic modulation of dendritic integration. Last, nicotine photolysis studies, juxtaposed with optical release of ACh, illustrate the dramatic difference between endogenous ACh transmission and how it is biophysically “highjacked” by nicotine.
+
+A local glutamatergic connection in VTA between VGLUT2+ and TH+ neurons has been described that modulates reward processing (Wang et al., 2015; Yoo et al., 2016). The present work extends those results by revealing that nicotine can potently enhance excitatory transmission at these synapses. In doing so, nicotine increases the gain and reliability of local glutamate to DA neuron transmission. Additionally, by this activity, nicotine will likely sensitize mVTA DA and/or GABA neurons to other excitatory input, such as corticolimbic glutamate transmission (Mansvelder and McGehee, 2000) and direct nAChR stimulation by nicotine or ACh. Although presynaptic nAChRs are abundant in DA axons of dorsal striatum and NAc (Champtiaux et al., 2002), nicotine did not modulate VTA to NAc glutamate transmission (Figures S4A–S4F). Future work will be required to determine whether nAChRs in VTA VGLUT2+ neurons are specifically targeted to DA-releasing axonal compartments (Zhang et al., 2015) or are excluded from presynaptic compartments altogether.
+
+Nicotine’s reinforcing property is critically dependent on its interaction with VTA circuitry. Until now, the totality of nicotine’s action in VTA was assumed to involve activation of nAChRs on DA and GABA neurons coupled with potentiation of glutamatergic and GABAergic afferents (Champtiaux et al., 2002; Klink et al., 2001; Mansvelder et al., 2002; Mansvelder and McGehee, 2000). Our demonstration that nAChRs on VTA glutamate neurons modulate local microcircuits adds an additional level of complexity to our understanding of nicotine’s action in mesolimbic circuits. These results require that we update the existing framework regarding nicotine-elicited modulation of electrical and chemical signaling in the mesocorticolimbic system.
+
+EXPERIMENTAL PROCEDURES
+
+Mice
+
+All experimental protocols involving mice were approved by the Institutional Animal Care and Use Committee at Northwestern University (protocols IS00003282, IS00003604, and IS00006642). Procedures also followed the guidelines for the care and use of animals provided by the NIH Office of Laboratory Animal Welfare. All efforts were made to minimize distress and suffering during experimental procedures, including during the use of anesthesia. Mice were housed at 22°C on a 12 hr light/dark cycle with food and water ad libitum. Mice were weaned on postnatal day 21 and housed with same-sex littermates. A tail sample was taken from each mouse for genotyping via PCR as previously described (Drenan et al., 2008). Creation and characterization of knockin (α3-GFP, α4-GFP, β2-GFP, β3-GFP, and β4-GFP) or bacterial artificial chromosome transgenic mice (α6-GFP) harboring in-frame insertions of GFP into the coding sequence of specific nAChR subunit genes have been previously described (Mackey et al., 2012; Shih et al., 2014). The following mouse strains were obtained from The Jackson Laboratory: ChAT-IRES-Cre (Jax 006410), VGLUT2-IRES-Cre (Jax 016963), DAT-IRES-Cre (Jax 06660), GAD2-IRES-Cre (Jax 010802), Rosa26-LSL-Cas9-2A-EGFP (Jax 026175), Ai14 (Jax 007908), and C57BL/6J (Jax 000664). Mice expressing tdT in a Cre-dependent manner (ChAT-IRES-Cre::Ai14, VGLUT2-IRES-Cre::Ai14, GAD2-IRES-Cre::Ai14, and DAT-IRES-Cre::Ai14) or Cas9 in a Cre-dependent manner (R26-LSL-Cas9::VGLUT2-Cre) were obtained by crossing mice heterozygous for each mutation, which produced ~25% double-heterozygous progeny. Male and female mice (aged 6–24 weeks) were used in approximately equal numbers.
+
+mRNA Expression Analysis
+
+In brief, mRNA expression was performed by hybridizing probes targeting genes of interest to brain tissue sections. All probes were acquired from Advanced Cell Diagnostics (ACD). Procedures were conducted as described in the ACD RNAscope Fluorescent Multiplex Assay manual. Confocal images of probe-labeled sections were analyzed using ImageJ (NIH) to identify cells expressing each probe target. A full description of our analysis routine, which was adapted from (Wallace et al., 2017), is provided in the Supplemental Information.
+
+Electrophysiological Recordings
+
+Brain slices were prepared from adult (>6 weeks) mice as previously described (Engle et al., 2012). Neurons were visualized using a Scientifica Slicescope or a Nikon Eclipse FN-1, and fluorescent markers (tdT, mCherry, EYFP, etc.) were used to make targeted recordings. Whole-cell recordings were made using glass pipettes filled with a K-gluconate internal solution. Atropine was present in all recordings to suppress muscarinic ACh receptor activity. QX-314 was typically included in the internal solution for improved voltage control. Photo-stimulation of ChR2 during recordings was executed using a 40× (0.8 NA) objective, a light-emitting diode (LED) light source, and TTL pulses delivered from the recording/acquisition software. Drugs were delivered to the slice via bath application (superfusion) or directly to the recorded cell via pressure ejection from an adjacent drug-filled pipette.
+
+Two-Photon Imaging and Nicotine Uncaging
+
+Brain slices were imaged via two-photon excitation microscopy using an Olympus BX51 microscope with a 60× (1.0 NA) objective. Infrared excitation light was provided via a Ti:sapphire laser system (Mai Tai HP1040; Spectra Physics), and non-de-scanned fluorescence emission was acquired via dual photomultiplier tubes. The microscope was equipped with a dual scanhead; one x–y galvanometer mirror system controlled the imaging laser beam while another x–y galvanometer system independently positioned a photostimulation (405 nm; OBIS FP LX; Coherent) beam for photolysis of PA-Nic (Banala et al., 2018). For two-photon experiments, all aspects of imaging, photostimulation, and recording were conducted using Prairie View 5.4 software (Bruker Nano).
+
+Statistics and Data Analysis
+
+The α level was set to 0.05 for all statistical tests, which were conducted with GraphPad Prism 7 software. Statistical tests included two-sided unpaired Student’s t test, two-sided paired t test, and ANOVA. Error bars denote SEM or SD, as indicated in figure legends. Image analysis was performed with ImageJ. Analysis of electrophysiological data was performed with Clampfit (Molecular Devices) and custom scripts written in MATLAB (The MathWorks). Throughout the figure legends, the number of individual neurons tested is stated immediately before the number of animals from which those neurons were derived.
+
+Supplementary Material
+
+ 
+
+Figure 1
+
+(A) Imaging and recording configuration for (B)–(D).
+
+(B) 2PLSM image of a dye-filled mVTA neuron and cholinergic fibers.
+
+(C and D) Soma (C) and dendrites (D) from the cell in (B) shown proximal to cholinergic fibers. Representative of n = 4 cells/n = 3 mice.
+
+(E) Approach used in (F)–(I).
+
+(F) Voltage clamp current deflections during 470 nm light flashes (20 s) in slices from ChR2− versus ChR2+ mice. Averaged traces for five to ten cells shown.
+
+(G) Light-evoked current amplitudes for (n = 9/2 and n = 5/2) neurons in control (no virus) and ChR2+ mice. (scatter plot with mean ± SEM). p value is from a two-sided unpaired t test.
+
+(H) Averaged photocurrents (470 nm, 20 s flash) for neurons from ChR2+ mice ± galantamine (1 μM).
+
+(I) Light-evoked current amplitudes for (n = 8/4) individual neurons before drug (con), during galantamine (Gal) application, and during co-application of galantamine + nAChR antagonist cocktail (10 μM DHβE, 100 nM α-Ctx MII, 10 nM MLA). p values are from two-sided paired t tests.
+
+See also Figure S1.
+
+Figure 2
+
+(A–E) Co-expression of (mRNA) Chrna4 and (mRNA) Slc17a6 in VTA neurons.
+
+(A) Fluorescence in situ hybridization (FISH) in mVTA neurons for probes: Chrna4, Slc17a6 (VGLUT2), and Th. Chrna4+ neurons indicated in “merge” panel and shown enlarged (right), were (1) Chrna4+/Slc17a6+/Th+, (2) Chrna4+/Slc17a6+/Th−, and (3) Chrna4+/Slc17a6−/Th+.
+
+(B) Scatterplot of Slc17a6 (abscissa) and Chrna4 (ordinate) “% coverage” for all analyzed neurons.
+
+(C) Left: pie graph of Slc17a6+ neurons that were Chrna4+ versus Chrna4−. Right: Th expression for Slc17a6+/Chrna4+ neurons from left pie graph.
+
+(D and E) Chrna4/Slc17a6 co-expression in lateral VTA was performed as in mVTA (B and C).
+
+(F–J) Co-expression of (mRNA) Chrna6 and (mRNA) Slc17a6 in VTA neurons.
+
+(F) Fluorescence in situ hybridization (FISH) in mVTA neurons for probes: Chrna6, Slc17a6 (VGLUT2), and Th. Chrna6+ neurons indicated in ‘merge’ panel, and shown enlarged (right panels), were: 1) Chrna6+/Slc17a6+/Th+; 2) Chrna6+/Slc17a6+/Th−; 3) Chrna6+/Slc17a6−/Th+.
+
+(G) Scatter plot of Slc17a6 (abscissa) and Chrna6 (ordinate) ‘% coverage’ for all analyzed neurons.
+
+(H) Left: Pie graph of Slc17a6+ neurons that were Chrna6+ vs. Chrna6−. Right: Th expression for Slc17a6+/Chrna6+ neurons from left pie graph.
+
+(I and J) Chrna6/Slc17a6 co-expression in lateral VTA was performed as in mVTA (G and H).
+
+(K–O) Co-expression of (mRNA) Chrnb2 and (mRNA) Slc17a6 in VTA neurons.
+
+(K) Fluorescence in situ hybridization (FISH) in mVTA neurons for probes: Chrnb2, Slc17a6 (VGLUT2), and Th. Chrnb2+ neurons indicated in ‘merge’ panel, and shown enlarged (right panels), were: 1) Chrnb2+/Slc17a6+/Th+; 2) Chrnb2+/Slc17a6+/Th−; 3) Chrnb2+/Slc17a6−/Th+.
+
+(L) Scatter plot of Slc17a6 (abscissa) and Chrnb2 (ordinate) ‘% coverage’ for all analyzed neurons.
+
+(M) Left: Pie graph of Slc17a6+ neurons that were Chrnb2+ vs. Chrnb2−. Right: Th expression for Slc17a6+/Chrnb2+ neurons from left pie graph.
+
+(N and O) Chrnb2/Slc17a6 co-expression in lateral VTA was performed as in mVTA (L and M).
+
+Complete data for nAChR/Slc17a6 FISH are listed in Table S1. Data are pooled from n = 3 mice. See also Figure S2 and Table S2.
+
+Figure 3
+
+(A) hM4Gi-mCherry vectors were unilaterally microinjected in mVTA of VGLUT2-Cre mice, and DsRed stain (middle) shows infected neurons. Right 2PLSM image shows hM4Gi-mCherry in VGLUT2+ neurons of acute slices.
+
+(B) Averaged trace for application of 1 mM ACh to VGLUT2+ mVTA neurons.
+
+(C) Left: 1 mM ACh-induced net charge ± α-Ctx MII[H9A;L15A] for (n = 8 cells/n = 3 mice) VGLUT2+ neurons. Right: 1 mM ACh-induced net charge in the presence of α-Ctx MII[H9A;L15A] versus α-Ctx MII[H9A;L15A] + 1 μM DHβE for the same neurons shown at left. p values are from two-sided paired t tests.
+
+(D and G) DsRed/TH stain for GAD2-Cre::Ai14 and DAT-Cre::Ai14 (D, left). tdTomato channel (G, left) shows GAD2+ (D, right) and DAT+ (G, right) neurons targeted for recordings.
+
+(E, F, H, and I) Averaged 1 mM ACh-evoked responses (E and H) and pharmacological analysis (F and I), conducted as described in (B) and (C), are shown for GAD2+ (n = 8/2) and DAT+ (n = 7/2) neurons, respectively.
+
+(J) ACh (1 mM)-induced net charge ± [CNQX (10 μM), D-AP5 (50 μM), TTX (0.5 μM), picrotoxin (100 μM)]. n = 7/2 VGLUT2+ neurons. p value is from a two-sided paired t test.
+
+(K) Net charge responses to repeated application of 1 mM ACh for n = 8/2 mVTA VGLUT2+ neurons. Vehicle (ACSF) was superfused and responses recorded at indicated times after break-in.
+
+(L) Photoactivatable nicotine (PA-Nic) was applied to neurons, and nicotine was uncaged with focal 405 nm laser photolysis.
+
+(M) Representative voltage clamp PA-Nic photolysis responses (traces) and summary plot (right; mean ± SD) for perisomatic and dendritic uncaging locations in mVTA VGLUT2+ neurons (n = 8/2).
+
+See also Figure S3.
+
+Figure 4
+
+(A) ChR2-EYFP vectors were unilaterally microinjected in mVTA of VGLUT2-Cre::Ai14 mice and sections stained for DsRed/GFP (large image). Enlarged views (right) of boxed area show VGLUT2+ neuron expression of ChR2-EYFP.
+
+(B) In mVTA slices from VGLUT2-Cre mice microinjected as described in (A), oEPSCs were recorded in ChR2− neurons (left). oEPSCs sensitivity to NBQX (10 μM)+D-AP5 (50 μM) (right; n = 6 cells/n = 3 mice). p value is from a two-sided paired t test.
+
+(C) Representative oEPSC and photocurrent in ChR2− and ChR2+/VGLUT2+ neuron, respectively (left). Photocurrent and oEPSC onset delay and decay tau in (n = 5/4) ChR2+/VGLUT2+ and (n = 13/9) ChR2− mVTA neurons (scatterplots; mean ± SD). p values are from two-sided unpaired t tests.
+
+(D) Representative oEPSC (individual trials, gray; averaged trace, blue) for ChR2− neurons ± nicotine (0.3 μM).
+
+(E) Control versus nicotine-enhanced oEPSC current amplitude (n = 7/5). p values are from two-sided paired t tests.
+
+(F) oEPSC amplitude in ChR2− neurons (n = 6/6) during bath application of ACSF (control), ACSF+DHβE (1 μM), and ACSF+DHβE (1 μM)+nicotine (0.3 μM). p value is from repeated-measures one-way ANOVA.
+
+(G) CRISPR/Cas9 knockdown approach. R26-LSL-Cas9::VGLUT2-Cre mice were microinjected in mVTA with sgRNA AAVs.
+
+(H–K) Validation of Chrnb2 knockdown. ACh (1 mM)-evoked currents (H, representative traces; I, summary scatterplot with mean ± SEM) in VGLUT2+ neurons from R26-LSL-Cas9::VGLUT2-Cre mice microinjected in mVTA with control (n = 14/4) or Chrnb2 (n = 21/6) sgRNA AAVs. Cell-attached firing ± nicotine (0.3 μM) in VGLUT2+ neurons from R26-LSL-Cas9::VGLUT2-Cre mice microinjected in mVTA with (J) control (n = 7/5) or (K) Chrnb2 (n = 7/6) sgRNA AAVs. p values are from two-sided paired t tests.
+
+(L and M) Effect of Chrnb2 knockdown on nicotine-enhanced glutamate transmission in VTA. R26-LSL-Cas9::VGLUT2-Cre mice prepared as shown in (G) were microinjected in mVTA with AAV-DIO-ChR2-EYFP and oEPSCs in ChR2− cells recorded. Representative oEPSC traces (L) (individual trials, gray; averaged trace, black/red) and summary data (M) for nicotine (0.3 μM)-mediated changes in oEPSC amplitude are shown for control (n = 5/3) and Chrnb2 (n = 5/4) knockdown. p values are from Sidak’s multiple-comparisons test after two-way repeated-measures ANOVA.
+
+See also Figure S4.
+

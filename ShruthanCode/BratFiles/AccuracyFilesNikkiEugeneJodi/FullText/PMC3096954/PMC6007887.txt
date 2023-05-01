@@ -1,0 +1,137 @@
+IMP3 Stabilization of WNT5B mRNA Facilitates TAZ Activation in Breast Cancer
+SUMMARY
+
+Insulin-like growth factor-2 mRNA-binding protein 3 (IMP3) is an oncofetal protein associated with many aggressive cancers and implicated in the function of breast cancer stem cells (CSCs). The mechanisms involved, however, are poorly understood. We observed that IMP3 facilitates the activation of TAZ, a transcriptional co-activator of Hippo signaling that is necessary for the function of breast CSCs. The mechanism by which IMP3 activates TAZ involves both mRNA stability and transcriptional regulation. IMP3 stabilizes the mRNA of an alternative WNT ligand (WNT5B) indirectly by repressing miR145-5p, which targets WNT5B, resulting in TAZ activation by alternative WNT signaling. IMP3 also facilitates the transcription of SLUG, which is necessary for TAZ nuclear localization and activation, by a mechanism that is also mediated by WNT5B. These results demonstrate that TAZ can be regulated by an mRNA-binding protein and that this regulation involves the integration of Hippo and alternative WNT-signaling pathways.
+
+INTRODUCTION
+
+IMP3 (insulin-like growth factor-2 [IGF2] mRNA-binding protein 3) is a member of a family of IGF2 mRNA-binding proteins that function in RNA stabilization, trafficking, and localization (Nielsen et al., 1999). This protein has attracted considerable interest because it exhibits the properties of an oncofetal protein, and its expression correlates with the aggressive behavior of many tumors (Degrauwe et al., 2016; Jiang et al., 2006; Walter et al., 2009; Wei et al., 2017). In breast cancer, IMP3 is associated with the highly aggressive triple-negative (TNBC) subtype (Walter et al., 2009). The challenge is to identify specific proteins and functions that are regulated by IMP3 and to establish the contribution of IMP3 to the distinguishing features of TNBC. In this direction, we implicated IMP3 in the function of breast cancer stem cells (CSCs) (Samanta et al., 2016), which is relevant because TNBCs contain a much higher frequency of CSCs than other breast cancer subtypes and this population of cells is thought to be responsible for their aggressive behavior (Pece et al., 2010). These findings are consistent with other studies on the contribution of IMP3 to CSCs (Degrauwe et al., 2016).
+
+IMP3 has the potential to impact the expression of a multitude of proteins, a consideration that has been substantiated by individual nucleotide resolution UV crosslinking and immunoprecipitation (iCLIP) studies (Conway et al., 2016; Palanichamy et al., 2016). Based on this fact, there is a need to identify specific proteins that are regulated by IMP3, which are also important for the biology of TNBC. As an approach to this problem, we compared the mRNA expression profile of TNBC cells to the same cells that had been depleted of IMP3. The results obtained revealed that the expression of genes known to be regulated by the Hippo effectors YAP and TAZ is influenced by IMP3. This observation piqued our interest because TAZ, in particular, has been implicated in TNBC and the function of breast CSCs (Cordenonsi et al., 2011; Park et al., 2015). For this reason, we investigated the hypothesis that IMP3 facilitates TAZ activation and pursued the mechanism involved.
+
+RESULTS
+
+Causal Relationship between IMP3 and TAZ in Breast Cancer
+
+To discover novel IMP3 targets that impact the aggressive behavior of TNBC, we performed RNA sequencing analysis using a TNBC cell line (SUM-1315) that had been transfected with either a control small hairpin RNA (shRNA) or shRNAs specific for IMP3 (see Tables S1 and S2 for a summary of results). Analysis of the sequencing data using gene set enrichment analysis (GSEA) revealed a causal link between IMP3 and the expression of established TAZ and YAP target genes (CTGF, CYR61, and DKK1) (Piccolo et al., 2014; Yu and Guan, 2013) (Figure S1A), which we verified by qPCR (Figure 1A). To gain additional insight into the relationship between IMP3 and YAP/TAZ in breast cancer, we analyzed gene expression profiles of 2,509 patients using cBioPortal (Cerami et al., 2012; Gao et al., 2013). A positive correlation between IMP3 and TAZ mRNA expression was observed, and their expression was enriched in basal-like and claudin-low subtypes of breast cancers, the majority of which are TNBCs (Figures S1B and S1C) (Badve et al., 2011; Prat et al., 2010). We substantiated this result by demonstrating that IMP3 and TAZ co-localize in TNBC (Figure S1D). In contrast, YAP and IMP3 mRNA expression did not correlate significantly, and the expression of YAP is distributed across breast cancer subtypes (Figures S1B and S1C). Moreover, nuclear localization of TAZ is associated with TNBC (Díaz-Martín et al., 2015), but YAP nuclear localization does not correlate with any specific subtype (Vlug et al., 2013; Yuan et al., 2008). For these reasons, we focused our efforts on IMP3 and TAZ.
+
+The hypothesis emerged from the foregoing data that IMP3 contributes to TAZ activation in TNBC. Before testing, we excluded the possibility that IMP3 affects TAZ indirectly by influencing cell proliferation (Figure S1E). Since nuclear localization is an indicator of TAZ activation, we compared TAZ localization in control and IMP3-depleted cells using both sub-cellular fractionation and immunofluorescence. IMP3 depletion caused a significant decrease in nuclear TAZ localization and a concomitant increase in its cytoplasmic localization (Figures 1B and 1C). Also, IMP3 depletion decreased the expression of TAZ target genes significantly (Figures 1D and S1F).
+
+Subsequently, we strengthened our conclusion that IMP3 facilitates TAZ activation. To control for the specificity of IMP3 depletion, we expressed IMP3 in IMP3-depleted cells using a construct that is resistant to shRNA, and we observed that this construct was able to rescue TAZ nuclear localization, as well as target gene expression (Figure 1E). CRISPR-mediated IMP3 depletion in SUM-1315 cells also reduced TAZ expression and the expression of TAZ target genes (Figure 1F). We also made use of SKBR3 cells, a non-TNBC cell line, because they do not express IMP3 and express low levels of TAZ (Figure 1G). Exogenous expression of IMP3 in these cells increased nuclear TAZ expression, as well as TAZ target genes (Figure 1G).
+
+IMP3 Activation of TAZ Is Mediated by WNT5B
+
+In the search for a mechanism by which IMP3 activates TAZ, a possibility was that IMP3 increases TAZ mRNA stability. We observed, however, that IMP3 depletion affected neither TAZ mRNA expression nor its stability (Figure S2A). For this reason, we were intrigued by our RNA sequencing data that the expression of WNT5B, an alternative WNT ligand (Park et al., 2015), was diminished upon IMP3 depletion, because alternative Wnt signaling has been implicated in TAZ activation (Park et al., 2015).
+
+The findings on WNT5B led us to hypothesize that the contribution of IMP3 to TAZ activation is mediated by WNT5B and that IMP3 regulates the expression of this non-canonical WNT ligand directly. In pursuit of this hypothesis, we found that IMP3 depletion in TNBC cell lines decreased WNT5B protein and mRNA expression (Figures 2A and S2B) and exogenous expression of IMP3 in SKBR3 cells increased WNT5B (Figure 2B), verifying our RNA sequencing data. Moreover, depletion of WNT5B reduced nuclear TAZ (Figure S2C), and its expression in IMP3-depleted cells rescued TAZ target gene expression and nuclear TAZ localization and it increased cytoplasmic TAZ (Figures 2C and S2D). Importantly, we observed that IMP3 stabilizes WNT5B mRNA (Figure S2E), providing a mechanism for how IMP3 influences WNT5B expression.
+
+We presumed that IMP3 binds directly to WNT5B mRNA, but analysis of three independent published databases of IMP3-bound mRNAs did not support this idea (Conway et al., 2016; Ennajdaoui et al., 2016; Palanichamy et al., 2016). We noticed, however, that miR145-5p is elevated upon IMP3 depletion (Figure 2D), which is relevant because this miR targets WNT5B (Vlachos et al., 2015) and it is suppressed in TNBC (Sugita et al., 2016). These observations suggested that IMP3 stabilizes WNT5B mRNA by suppressing miR145-5p. Indeed, expression of an anti-miR145-5p oligonucleotide in IMP3-depleted SUM-1315 cells increased WNT5B mRNA, as well as TAZ target gene expression (Figure 2E).
+
+The mechanism by which alternative Wnt signaling activates TAZ involves Rho GTPase activation and the consequent inhibition of large tumor suppressor kinase (LATS) activity (Park et al., 2015; Yu et al., 2012). This is significant because LATS directly phosphorylates TAZ at the serine 89 position and inhibits its nuclear localization and ability to regulate target gene expression (Park et al., 2015). In support of our hypothesis that IMP3 activates TAZ by WNT5B signaling, we observed that LPA, a Rho activator, rescued TAZ target gene expression in IMP3-depleted cells (Figure 2F). Moreover, depletion of either IMP3 or WNT5B increased LATS activity, as measured by phospho-LATS1 (Thr1079) and phospho-TAZ (Ser89), but it did not impact LATS1 expression (Figure 2G).
+
+A critical issue is whether IMP3 stabilization of WNT5B mRNA and consequent TAZ activation are relevant to the function of this RNA-binding protein. Previously, we reported that IMP3 contributes to mammosphere formation (Samanta et al., 2016), which is also dependent on TAZ activation (Cordenonsi et al., 2011). For this reason, we assessed whether WNT5B contributed to mammosphere formation and whether it could rescue the ability of IMP3-depleted cells to form mammospheres. Indeed, we found that depletion of WNT5B decreased the mammosphere-forming ability of SUM-1315 cells (Figure 2H, left bar graph) and expression of WNT5B in IMP3-depleted cells rescued mammosphere formation (Figure 2H, right bar graph). Moreover, shRNA-mediated TAZ depletion decreased mammosphere formation (Figure 2I) and exogenous expression of a constitutively active TAZ (4SA-TAZ) (Lei et al., 2008) in either IMP3-depleted or WNT5B-depleted cells increased mammosphere formation (Figure 2J). Also, the expression of WNT5B, TAZ, and its target genes is elevated in breast CSCs compared to non-CSCs (Al-Hajj et al., 2003) (Figure S2F).
+
+To exclude the possibility that IMP3 contributes to canonical WNT signaling, we noted that the canonical WNT3A ligand is expressed at low levels in TNBC compared to other breast cancer subtypes (Figure S2G). Also, we discovered that β-catenin is primarily non-nuclear in TNBC cell lines and tumor specimens and localized in cell membranes (Figure S2H). Moreover, IMP3 depletion did not impact β-catenin localization (data not shown). There is also evidence that β-catenin is expressed at low levels in TNBC (Shen et al., 2016).
+
+Role of SLUG in IMP3 and WNT5B-Mediated TAZ Activation
+
+Previously, we reported that one mechanism by which IMP3 contributes to the aggressive behavior of TNBC and breast CSCs is to regulate SLUG (Samanta et al., 2016). Moreover, analysis of the cBioPortal database revealed that SLUG is expressed preferentially in TNBC and claudin-low tumors and that it correlates with TAZ (Figure 3A). These findings are relevant because SLUG has been shown to stabilize TAZ protein and maintain its nuclear localization (Tang et al., 2016). For this reason, we investigated a possible relationship between IMP3 regulation of WNT5B and SLUG. Initially, we found that SLUG depletion in TNBC cell lines reduced nuclear TAZ and increased TAZ cytoplasmic localization (Figures 3B and S3A) and it decreased the expression of TAZ target genes (Figure 3C). Also, exogenous expression of SLUG in SKBR3 cells increased both nuclear TAZ and TAZ target genes (Figure 3D). More definitive evidence was obtained by rescuing SLUG expression in IMP3-depleted cells and observing a significant increase in TAZ target genes (Figure 3E) and nuclear TAZ (Figure S3B). Interestingly, although SLUG depletion increased TAZ phosphorylation, LATS1 phosphorylation remained unchanged (Figure 3F). This observation verifies the report that SLUG promotes TAZ nuclear retention without affecting LATS kinase activity (Tang et al., 2016). Moreover, treatment of SLUG-depleted cells with the Rho activator LPA did not rescue TAZ target gene expression (Figure S3C), in agreement with the report that SLUG activation of TAZ is independent of LATS kinase activity (Tang et al., 2016).
+
+Although IMP3 regulates SLUG mRNA expression, it does not impact the stability of SLUG mRNA (Figure S4A), suggesting that it may contribute to the regulation of SLUG transcription. Transfection of a luciferase reporter construct containing a 4-kb SLUG promoter in control and IMP3-depleted cells revealed that IMP3 depletion decreased luciferase activity significantly (Figure 4A). In an effort to integrate WNT5B into this mechanism, we observed that WNT5B depletion reduced SLUG expression significantly (Figure 4B), as well as TAZ target gene expression (Figure 4C). In contrast, modulating SLUG expression had no effect on WNT5B expression, indicating that SLUG functions downstream of WNT5B (Figure S4B). Importantly, expression of WNT5B in IMP3-depleted cells rescued SLUG mRNA (Figure 4D), as well as activity of the SLUG reporter construct (Figure 4E). These data are strengthened by a positive correlation between WNT5B and SLUG mRNA expression in patients (Figure 4F).
+
+DISCUSSION
+
+This study contributes significantly to our understanding of how IMP3 impacts the behavior of breast cancer cells, especially cells from TNBCs. The fact that IMP3 is expressed preferentially in TNBC among all the subtypes of breast cancer (Walter et al., 2009) (Figure S1B) has suggested a causal role for this RNA-binding protein in the aggressive behavior of these tumors, which are characterized by a high frequency of CSCs (Pece et al., 2010). Our implication of IMP3 in TAZ activation establishes this causal link because TAZ itself is expressed preferentially in TNBC and it is important for breast CSCs, as well as the aggressive behavior of poorly differentiated tumors (Cordenonsi et al., 2011). Moreover, our demonstration that the mechanism involves IMP3 regulation of a non-canonical WNT ligand (WNT5B) reveals the importance of this signaling pathway and its coordination with Hippo signaling in TNBC.
+
+Although the importance of TAZ in breast and other cancers has been affirmed (Zanconato et al., 2016), the mechanisms that regulate its activation are less well understood. Our implication of IMP3 in TAZ activation provides one mechanism for TNBC. Moreover, we discovered that this mechanism involves the ability of IMP3 to regulate the stability of WNT5B mRNA indirectly by repressing the expression of an miR that targets WNT5B, enabling alternative WNT signaling. This observation may relate to the interesting finding that IMP3 ribonucleoprotein granules can function as safehouses that protect against miR-mediated decay of target genes (Jønson et al., 2014). Our findings are consistent with the observations that WNT5B expression is enriched in TNBC compared to other WNT ligands (Figure S2G) and that IMP3 is expressed specifically in TNBC (Walter et al., 2009). Surprisingly, however, the expression of WNT5A, another alternative WNT ligand, is very low in TNBC and appears to be independent of IMP3 regulation. This observation is intriguing because WNT5A has been shown to enhance the growth of mammary stem/progenitor cells (Kessenbrock et al., 2017). In contrast, WNT5B represses the growth of these cells (Kessenbrock et al., 2017), suggesting that the function and expression of these alternative WNT ligands differ in mammary gland biology and cancer.
+
+Another important conclusion from our study is that IMP3 influences TAZ activation at multiple levels: WNT5B mRNA stability and SLUG transcription. Previously, we had reported that IMP3 regulation of SLUG contributes to the behavior of TNBC cells, but the mechanism involved escaped us and we were unable to demonstrate that IMP3 affected SLUG mRNA stability (Samanta et al., 2016). The data obtained here indicate that IMP3 regulates SLUG expression at the transcriptional level and that this regulation is mediated by WNT5B by a mechanism that remains to be determined. We also demonstrate that SLUG is necessary for TAZ nuclear localization and activation, confirming a previous study on osteogenesis (Tang et al., 2016). Similar to IMP3 and WNT5B, SLUG is expressed preferentially in TNBC, and it has been implicated in the genesis of these tumors (Guo et al., 2012; Zhou et al., 2016). For this reason, mechanisms that regulate its expression are critically important. There is evidence, for example, that the SIRT deacetylase stabilizes SLUG protein in this breast cancer subtype (Zhou et al., 2016). Our findings suggest that SLUG expression can be regulated by multiple mechanisms in TNBC, including transcription. Moreover, the possibility that WNT5B contributes to the mechanism of SLUG transcription suggests a novel function for this alternative WNT ligand that may be distinct from the pathway by which it activates TAZ by inhibiting LATS1/2 phosphorylation (Park et al., 2015).
+
+EXPERIMENTAL PROCEDURES
+
+RNA Sequencing Analysis
+
+RNA sequencing analysis was performed using total RNA extracted from control (shControl) and IMP3-depleted SUM-1315 cells. See the Supplemental Experimental Procedures for details.
+
+Biochemical Assays
+
+Immunoblotting of whole-cell extracts, as well as cytoplasmic and nuclear fractions, and qPCR were performed as described previously (Samanta et al., 2016). Primers used for qPCR are listed in Table S3. Mammosphere assays were performed as described previously (Samanta et al., 2016). For the reporter assay, control or IMP3-depleted HEK293T cells were transfected with a firefly luciferase reporter vector containing the SLUG promoter (4 kb) (Chakrabarti et al., 2012) and assayed after 24 hr. A construct expressing renilla luciferase was used as the transfection control. The relative light unit (RLU) value was calculated as the ratio of firefly luciferase to renilla luciferase activity (normalized luciferase activity). To measure mRNA stability, control and IMP3-depleted SUM-1315 cells were treated with actinomycin-D (5 µg/mL). Total RNA was extracted and the expression of specific mRNAs was quantified by qPCR.
+
+Immunofluorescence Staining
+
+Immunofluorescence staining of TAZ was performed as described previously (Chang et al., 2015). The same protocol was used to stain β-catenin. Human breast tumor sections were provided by Dr. Ashraf Khan (University of Massachusetts Medical School).
+
+Statistical Analysis
+
+The data are shown as the ± SE. The p values (*) were determined using a Student’s t test and p ≤ 0.05 was considered significant. For correlation studies, statistical significance was calculated by Pearson’s correlation.
+
+Supplementary Material
+
+     
+
+Figure 1
+
+(A) RNA sequencing result showing decreased expression of CTGF, CYR61, and DKK1 upon IMP3 depletion.
+
+(B–D) Control and IMP3-depleted SUM-1315, MDA-435, and MDA-231 cells were (B) fractionated and blotted for IMP3 (cytoplasmic) and TAZ (nuclear) (actin and histone H3 were used as loading controls for cytoplasmic and nuclear proteins, respectively); (C) assessed for TAZ localization by immunofluorescence (the bar graphs show the quantification of TAZ localization in either the nucleus only or in both cytoplasm and nucleus); and (D) assayed for TAZ target gene expression by qPCR.
+
+(E) Control and IMP3-depleted SUM-1315 cells were transfected with an empty vector (EV) or IMP3-expressing construct that is resistant to shIMP3-1 and stained for TAZ by immunofluorescence, and TAZ localization was quantified. Total RNA isolated from the same cells was used to quantify CTGF mRNA by qPCR (right bar graph). Scale bar, 1 µm.
+
+(F) IMP3 expression was depleted using IMP3-specific guide RNAs (gIMP3-1 and gIMP3-2) in SUM-1315 cells and assayed for expression of TAZ (immunoblots) and its target genes (qPCR). A non-targeting gRNA (CT-gRNA) was used as the control.
+
+(G) SKBR3 cells were transfected with an empty vector or a construct expressing IMP3 and fractionated and blotted for IMP3 (cytoplasmic) and TAZ (nuclear). Total RNA extracted from the same cells was used to quantify TAZ target genes using qPCR. p ≤ 0.05.
+
+Relevant data are shown as ± SE.
+
+Figure 2
+
+(A) Control and IMP3-depleted SUM-1315, MDA-435, and MDA-231 cells were blotted for WNT5B protein.
+
+(B) SKBR3 cells were transiently transfected (48 hr) with an empty vector or IMP3-expressing construct (left immunoblot), and WNT5B mRNA was quantified by qPCR using total RNA isolated from these cells (right bar graph).
+
+(C) Control and IMP3-depleted SUM-1315 cells were transiently transfected with an empty vector (EV) or WNT5B-expressing construct for 48 hr. TAZ localization was quantified in these cells by immunofluorescence (left bar graph). Total RNA was extracted and used to quantify the genes indicated in the right bar graph by qPCR.
+
+(D) RNA sequencing result showing increased expression of miR-145-5p upon IMP3 depletion.
+
+(E) Control and IMP3-depleted SUM-1315 cells were transfected with either a control or anti-miR-145 oligonucleotide (20 nM) for 48 hr, and expression of WNT5B and TAZ target genes mRNA was quantified by qPCR.
+
+(F) Total RNA extracted from LPA- (1 µM, 2 hr) treated control and IMP3-depleted SUM-1315 cells was used to quantify TAZ target genes by qPCR. Blot inset shows IMP3 depletion.
+
+(G) Total cell extracts from control, IMP3-depleted, and WNT5B-depleted SUM-1315 and MDA-231 cells were blotted for pLATS1 (T1079), pTAZ (S89), and WNT5B. pTAZ (S89) blots were obtained using a pYAP(S127) antibody that detects both pTAZ (S89) and pYAP.
+
+(H) Control and WNT5B-depleted (shWNT5B-1 and shWNT5B-2) SUM-1315 cells were grown as mammospheres for 7 days, and the number of spheres was quantified (left). Control and IMP3-depleted SUM-1315 cells were transiently transfected with an empty vector (EV) or a construct expressing WNT5B ligand, grown as mammospheres for 7 days, and the number of spheres was quantified (right).
+
+(I) Total extracts from control and TAZ-depleted (shTAZ-1 and shTAZ-2) SUM-1315 cells were blotted for TAZ (left blot). The same cells were grown as mammospheres for 7 days and quantified (right graph).
+
+(J) Control, IMP3, and WNT5B-depleted SUM-1315 cells were transfected with an empty vector or a vector expressing 4SA-TAZ, grown as mammospheres for 7 days, and quantified. p ≤ 0.05.
+
+Relevant data are shown as ± SE.
+
+Figure 3
+
+(A) Pie chart showing SLUG mRNA expression in breast cancer subtypes (PAM50 classification, cBioPortal). SLUG and TAZ expression was correlated using the same database (right graph).
+
+(B and C) SLUG expression was depleted using shRNAs (shSLUG-1 and shSLUG-2) in SUM-1315, MDA-435, and MDA-231 cells, and nuclear fractions were blotted for SLUG and TAZ (B). The same cells were used to quantify TAZ target genes using qPCR (C).
+
+(D) SKBR3 cells were transfected with an empty vector or a construct expressing SLUG, and nuclear fractions were blotted for SLUG and TAZ. Total RNA extracted from the same cells was used to quantify TAZ target genes by qPCR.
+
+(E) Control and IMP3-depleted SUM-1315 cells were transiently transfected with an empty vector (EV) or SLUG-expressing construct. Total RNA was extracted and used to quantify TAZ target genes by qPCR.
+
+(F) Total cell extracts from control and SLUG-depleted SUM-1315 and MDA-231 cells were blotted for pTAZ (S89) and LATS1 (T1079). p ≤ 0.05.
+
+Relevant data are shown as ± SE.
+
+Figure 4
+
+(A) Control and IMP3-depleted HEK293FT and MDA-435 cells were transfected with a reporter construct bearing a 4-kb SLUG promoter upstream of firefly luciferase, and they were assayed for luciferase activity (RLU) 24 hr post-transfection.
+
+(B and C) Nuclear extracts from control and WNT5B-depleted SUM-1315 and MDA-231 cells were blotted for SLUG protein, and total RNA extracted from these cells was used to quantify SLUG mRNA (B) and TAZ target genes by qPCR (C).
+
+(D) Control and IMP3-depleted MDA-435 cells (shIMP3-1 and shIMP3-2) were transiently transfected with an empty vector or WNT5B-expressing construct. Total RNA was extracted and used to quantify SLUG and WNT5B mRNA by qPCR.
+
+(E) Control and IMP3-depleted HEK293FT cells were transfected with an empty vector (EV) or a construct expressing WNT5B. These cells were re-transfected 24 hr later with a SLUG-luciferase reporter construct and assayed for luciferase activity after another 24 hr.
+
+(F) Expression of WNT5B and SLUG mRNA was correlated using cBioportal. The correlation coefficient (r) was estimated using Pearson’s correlation. *p ≤ 0.05.
+
+Relevant data are shown as ± SE.
+

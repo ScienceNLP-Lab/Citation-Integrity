@@ -1,0 +1,236 @@
+Systematic reconstruction of autism biology from massive genetic mutation profiles
+
+Abstract
+
+Autism spectrum disorder (ASD) affects 1% of world population and has become a pressing medical and social problem worldwide. As a paradigmatic complex genetic disease, ASD has been intensively studied and thousands of gene mutations have been reported. Because these mutations rarely recur, it is difficult to (i) pinpoint the fewer disease-causing versus majority random events and (ii) replicate or verify independent studies. A coherent and systematic understanding of autism biology has not been achieved. We analyzed 3392 and 4792 autism-related mutations from two large-scale whole-exome studies across multiple resolution levels, that is, variants (single-nucleotide), genes (protein-coding unit), and pathways (molecular module). These mutations do not recur or replicate at the variant level, but significantly and increasingly do so at gene and pathway levels. Genetic association reveals a novel gene + pathway dual-hit model, where the mutation burden becomes less relevant. In multiple independent analyses, hundreds of variants or genes repeatedly converge to several canonical pathways, either novel or literature-supported. These pathways define recurrent and systematic ASD biology, distinct from previously reported gene groups or networks. They also present a catalog of novel ASD risk factors including 118 variants and 72 genes. At a subpathway level, most variants disrupt the pathway-related gene functions, and in the same gene, they tend to hit residues extremely close to each other and in the same domain. Multiple interacting variants spotlight key modules, including the cAMP (adenosine 3′,5′-monophosphate) second-messenger system and mGluR (metabotropic glutamate receptor) signaling regulation by GRKs (G protein–coupled receptor kinases). At a superpathway level, distinct pathways further interconnect and converge to three biology themes: synaptic function, morphology, and plasticity.
+
+INTRODUCTION
+
+Autism spectrum disorder (ASD) is a complex genetic disorder. Genome-wide molecular profiling is a proven strategy for complex disease studies. Thousands of genomic variants or loci have been identified as potential ASD causes (1–12). These results confirm the genetic complexity of ASD and provide valuable biological insights. However, greater challenge remains: How to turn these enormous data sets into solid and systematic understanding of the disease mechanism, or biologically relevant molecular pathways, beyond a list of associated genes, their groups, or networks (13–15)? This is a common challenge remaining for genome-wide studies or complex diseases in general, not just ASD.
+
+Recently, two whole-exome studies under two consortia, the Simons Simplex Collection (SSC) (10, 16) and the Autism Sequencing Consortium (ASC) (11, 17), analyzed thousands of ASD families or cases-controls, producing a vast amount of genetic data. These efforts identified thousands of rare mutations and firmly established their roles in ASD (18). Because these variants rarely recur, major challenges remain when we need to (i) evaluate the disease association of individual variants, (ii) pinpoint most pathogenic or driver events from a huge pool of passengers (random mutations), (iii) replicate independent studies, and (iv) verify their results systematically. Important findings have been made, yet a systematic and precise understanding of autism biology has not been achieved with these studies (14, 19).
+
+To address these challenges, we used a holographic (or hologram-like) approach and analyzed these data in the hierarchical context of multiple annotation levels, that is, variant, gene, and pathways. Previously, mutations/variants were divided into one-dimensional groups according to their molecular effects (loss of function, missense, synonymous, etc.) (2, 4, 10), their target gene (CHD8, DYRK1A, GRIN2B, SCN2A, etc.) (10, 20), or function annotation (FMRP targets, synaptic or schizophrenia-related genes, etc.) (10, 11). Compared to this classical one-level approach, the multilevel approach provides more sophisticated and relevant classification and prioritization of de novo (DN) mutations, which makes new and more powerful analyses possible with these rare events. Note that the multilevel approach is a generic strategy, which is used in different types of analysis in this study, including variant prioritization, association analysis, and functional analysis. Although the multilevel approach can be generally useful, this study mainly focuses on solving autism biology through these analyses rather than the methodology.
+
+First, we inferred potential ASD genetic causes using a novel sequential prioritization procedure, which incorporates experimental data, metadata, and annotation data at different levels (Materials and Methods). Second, we did a multilevel recurrence analysis. Certain ASD genes or functional groups have been repeatedly identified in literature. However, this is the first statistical analysis revealing that ASD genetics may be systematically replicated across independent cohorts, although the mutations themselves rarely recur. We dissected ASD genetic association across multiple levels and built a more inclusive gene + pathway dual-hit model. This model better explains ASD risk than the well-accepted mutation burden model. Finally, we did multilevel function analysis on selected variants, genes, and pathways. We reconstructed replicable, systematic, and multiscale molecular mechanisms for ASD, which are either novel or consistent with literature (1–12). Unlike previously reported gene groups or networks, they reveal more interpretable disease biology with relevant context and details. They may also be instrumental for the development of effective ASD diagnostics and therapeutics.
+
+RESULTS
+
+Sequential convergence from variant to gene to pathway level
+
+We selected ASD-related DN mutations, genes, and pathways in probands or cases in SSC or ASC studies using a sequential prioritization procedure, as described in Materials and Methods. The results are listed in Table 1 and table S4. We applied the same selection procedure to siblings in SSC for control. We then assessed the recurrence or reproducibility of the prioritized features across multiple levels.
+
+ASD mutations from different cohorts do not replicate at the variant level, but increasingly do so at gene and pathway levels (Fig. 1A). At the variant level (Fig. 1A), 2600 of 4792 entries were selected in ASC probands (or cases), and 1213 were selected out of the total 3392 considered entries for SSC probands. Among these SSC variants, one selected versus three considered entries replicate the ASC variants (both recurrent ratios equal 0.001). The replicate entries were not enriched in the selected list versus considered list (P = 0.74). Similar comparisons were conducted at gene and pathway levels. At these levels (Fig. 1A), not only do the recurrent ratios increase but also replicate entries are increasingly enriched in the selected list (P = 9.3 × 10−4 and 9.7 × 10−6, respectively). Therefore, ASD mutations show multilevel sequential convergence. Conversely, mutations from probands and siblings in the same SSC cohort do not or rarely replicate at all three levels and do not converge (Fig. 1B).
+
+Besides direct replication, pathway-level analysis shows additional reproducibility (Fig. 1, C and D). Pathway analysis statistics (−log  P) are highly correlated between SSC and ASC (R2 = 0.570), but not so (R2 = 0.030) between probands and siblings in SSC.
+
+The actual replicability between studies should be even higher given that (i) the genetic background is much more divergent between different cohorts than between probands and siblings in the same cohort, and (ii) the exome-sequencing (Exome-Seq) assay and raw data processing procedures differ between the two studies.
+
+ASD mutations within the same cohort do not recur at the variant level, but highly and increasingly do so at gene and pathway levels (fig. S1A). The analysis was done with available data from SSC (10). At the variant level, 0 of 1213 selected versus 5 of the 3392 considered variants are recurrent (P = 1.0). At the gene level, 107 of 540 selected versus 110 of the 1083 considered genes are recurrent (P = 5.0 × 10−31). At the pathway level, 9 of 9 selected versus 22 of the 199 considered pathways are recurrent (P = 8.9 × 10−9). Conversely, mutations in siblings in the same SSC cohort do not recur or less so at all three levels (fig. S1B).
+
+Gene- and pathway-level analysis shows additional evidence of recurrence. As described above, no variants are recurrent per se, but 240 variants come from recurrent genes in probands. These gene-level recurrent variants are enriched in both the selected genes and pathways (fig. S1C). In selected genes versus in other genes and in siblings, such recurrent events are 31.9- and 2.53-fold enriched (P < 0.001; fig. S1C, Gene level). In selected pathways versus outside the pathways and in siblings, recurrent events are 2.08 and 3.21 times enriched (P < 0.001; fig. S1C, Pathway level). For siblings, the selected genes, but not the selected pathways, are enriched for recurrent variants.
+
+Three potential factors contribute to the increasing recurrence rate from variant to gene to pathway level: (i) the background space (that is, the size of the considered list) shrinks, (ii) high local mutation rate due to genomic and epigenomic features, and (iii) true and recurrent disease mechanisms. All potential factors are identical in the siblings/control group and proband/case group except factor (iii). Therefore, the recurrence observed in proband/case mutations, but not in sibling/control mutations, is ASD/disease-related. The higher-level recurrence and replication between SSC and ASC probands, but not for SSC siblings, (i) indicate that our multilevel prioritization procedure is both sensitive and selective and (ii) suggest that our results are likely true and generalizable.
+
+Autism genetic association dissected across multiple levels
+
+In this and following sections, we work only with the SSC data unless noted otherwise. The study is well controlled with simple data structure (10), ideal for association and function analyses. For association analysis, we use all DN variants for testing power. For pathway and function analyses, we focus on validated variants only (Materials and Methods).
+
+Without recurrence or annotation, the DN events tell little about ASD genetics at the variant level alone. To fully dissect the ASD genetic association, we take their gene- and pathway-level effects into account. Variant effects at these two levels largely determine its association with ASD: (i) whether (and how much) the variant disrupts genes and (ii) whether (and potentially how much) it hits the selected pathways.
+
+Probands have more variants in general, particularly variants that disrupt genes and hit selected pathways. Probands have 55% more LGD (likely gene-disrupting, or LoF) (0.175 versus 0.113, P = 2.1 × 10−6) and 11% more missense variants (0.667 versus 0.601, P = 2.2 × 10−2) than siblings, but only 6% more silent variants (0.515 versus 0.484, P = 7.8 × 10−2) (fig. S2, row 1). This is consistent with the original analysis (10). In addition, they have 39% more variants within selected pathways, but only 12% more outside (Fig. 2, row 1). That is, most of the differences between probands and siblings fall in LGD and missense categories within selected pathways. This difference is well exhibited by variant distributions in the Wnt and synapse pathways (figs. S5 to S7, with variant types, and Fig. 3, without variant types).
+
+Proband variants are more frequently gene-disrupting. As described above, probands have more events in LGD and missense categories and in general. After adjusting for the event numbers per pathway assignment or in total (row 2 in Fig. 2 and fig. S2), probands still have 78%, 33%, and 37% higher LGD within selected pathways, outside and together (P = 1.3 × 10−2, 3.0 × 10−4, and 2.8 × 10−5, respectively). This difference is well exhibited by variant distributions in the Wnt and synapse pathways (figs. S5 to S7). The missense variant ratios are similar in probands and siblings (row 2 in Fig. 2 and fig. S2). However, greater portions of missense variants are gene-damaging in probands versus siblings (0.58 versus 0.43 and 0.50 versus 0.47 within and outside selected pathways, P < 0.05 and 0.1, respectively), as predicted by SIFT (Fig. 4A) (21). In addition, more missense variants in selected pathways hit a functional domain in probands versus siblings (0.747 versus 0.558, P < 0.05) (Fig. 4B), especially in Wnt and synapse pathways (figs. S8 and S9; more details in section S4).
+
+Proband variants more frequently hit the selected pathways. Probands have higher absolute event rates than siblings in selected pathways (0.11 versus 0.08, P = 4.2 × 10−4), especially in LGD (0.021 versus 0.008, P = 2.7 × 10−4) and missense (0.053 versus 0.036, P = 3.5 × 10−3) categories, but not in the silent category (0.033 versus 0.032, P = 0.45). After being adjusted for event numbers within each category or in total, probands still have consistently higher pathway event rates than siblings for both LGD (0.12 versus 0.07, P = 4.1 × 10−2) and missense categories (0.08 versus 0.06, P = 2.2 × 10−2), but not for the silent category (0.06 versus 0.07, P = 0.60) (row 3 in Fig. 2).
+
+We propose a gene + pathway dual-hit (or two-factor) model for ASD genetic association based on our results above (Fig. 2, column 3): the level of disrupting effect on target genes (G) and hitting the relevant pathways or not (P). These two factors have significant association with ASD both marginally and conditionally, as described above. In our model, variant load/burden per person (V) becomes less relevant and is marked as hidden. The extra variants in probands (versus in siblings) mostly fall into the gene-disrupting and pathway-hitting categories (Fig. 2, row 1, described above).
+
+There is also a significant interaction between gene and pathway factors (Fig. 2, row 1). Probands and siblings have the biggest differences in variants that are both gene-disrupting and pathway-hitting. The differences diminish outside the pathways or disappear completely in the silent category. This interaction is significant, as indicated by significant overrepresentation in LGD hitting the pathways in probands (52 occurred versus 34.6 expected events, P = 0.001, table S1).
+
+What we propose here is essentially a Noisy-AND model in that risk genetic variant tends to be both gene-disrupting AND pathway-hitting. The model is Noisy because our knowledge of gene-disrupting and pathway assignment is incomplete or because of the incomplete penetrance.
+
+We also estimate the prevalence of DN events with different gene- and pathway-level effects (fig. S3). These statistics are similar to per-patient variant burden statistics (Fig. 2, row 1) and consistent with our two-factor genetic model for ASD (Fig. 2, row 1). With the DN variants alone, this model explains at least 5% (2.8% within and 2.2% outside selected pathways) of all ASD cases (fig. S3). Although consistent with the LoF mutation contribution in the ASC study (11), this is likely a substantial underestimation, because not all variants are called and not all genes in the relevant pathways are known. In addition, when other types of variants [copy number variants (CNVs), common variants, or transmitted/inherited variants] are considered, this model can be generic and more descriptive (section S2).
+
+Pathways of DN events, integrated molecular mechanism
+
+Selected by our special pathway-level testing procedure, these pathways form a coherent yet nonredundant set of ASD disease mechanisms (Table 1). These pathways are novel in various aspects: (i) For two pathways (actin and T junction), this is the first time to report that they are involved in ASD; (ii) for other pathways (lysine, GABA, Wnt, MAPK, Circ, and Glut), there are some evidence on their potential roles in ASD in literature (as in Table 1), but this is the first report that is backed by statistical significance from whole-exome/whole-genome analysis; (iii) for all selected pathways, this is the first report that plots the pathway graphs to show the detailed molecular mechanisms of ASD (Fig. 3 and fig. S4).
+
+These pathways present a catalog of genetic risk factors for ASD (table S5, Fig. 3, and fig. S4). At the variant level, 43 LGD and 75 missense mutations (118 in total) are mapped to the selected pathways (table S5). These mutations have not been identified previously as ASD events. At the gene level, 92 genes fall into these pathways (table S6). Among them, 20 have been reported previously as ASD genes based on the SFARI Gene database (22). The other 72 genes are novel candidates for ASD genes, among them 9 genes are replicated in both SSC and ASC cohorts. Being part of the selected pathways, these mutations and genes are likely pathogenic or disease-causing.
+
+Note that we primarily focus on the selected pathways. A small portion of the events outside these pathways (P = Others in Fig. 2) can also be pathogenic because the pathway definitions are incomplete and some relevant pathways may not be significant because of the limited sample size. Nonetheless, known ASD genes are greatly enriched in the selected pathways compared to all selected genes (20 of 92 versus 67 of 540, P = 0.004). The enrichment of known ASD genes also serves as a systematic validation of our findings.
+
+We generate pathway graphs integrating disease-associated variants and genes from multiple data sets: SSC (10), ASC (11), or SFARI Gene database (Fig. 3 and fig. S4) (22). These pathways are likely true positives and the primary molecular mechanisms for ASD because they are consistently selected in these independent analyses. These analyses agree in details, too: They frequently converge to the same genes, the same gene groups (nodes), or the same signaling branch in a pathway. They also complement each other. For instance, SSC and ASC data provide numerous ASD-associated genes besides those collected in SFARI Gene. Here, SFARI Gene is used mainly for a confirmatory analysis. This database collects ASD genes reported from the literature works, most of which are independent from the SSC and ASC studies.
+
+The pathway list and data-integrated pathway graphs provide coherent and systematic insights into the ASD mechanism. We focus on three pathways for example. These pathways are not entirely new based on literature (more in Table 1) (13–15). However, in our analysis (Fig. 3 and fig. S4), they are visualized as novel molecular maps integrating numerous new and known disease genes or events.
+
+1) Wnt signaling pathway: the canonical branch only (Fig. 3A). All DN events from SSC and ASC and all SFARI genes converge to the canonical Wnt pathway. However, just a few events/genes hit noncanonical Wnt pathways, and these genes are mostly shared by the canonical branch or other selected pathways. In addition, all aspects or steps of canonical Wnt signaling are involved in ASD (Fig. 3A). These include Wnt and co-receptor LRP5/6, messenger Dvl, key components of the destruction complex (APC, GSK3, and CKIε), and other key players in β-catenin phosphorylation/ubiquitination/degradation [TBL1 in p53-induced Skp1/cullin/F-box protein (SCF)–like complex, β-TrCP in SCF E3 ubiquitin ligase complex, PS-1 (presenilin)], and repressors or activators (chromatin remodelers) in β-catenin–directed transcription [CHD8 (Duplin), RUVBL1 (Pontin52), and CREBBP (CBP)].
+
+2) The whole GABAergic synapse pathway is involved in ASD, particularly the following parts (Fig. 3B): (i) GABA  receptors and their signal in the postsynaptic neurons, the negative feedback loops [G  and adenylate cyclase (AC)] in pre- and postsynaptic neurons, and the clearance channel through GABA transporters (GATs) on the presynaptic terminal or neighboring glial cells and (ii) glial cells besides the pre- and postsynaptic neurons.
+
+3) The whole glutamatergic synapse pathway is involved in ASD, particularly the following parts (Fig. 3C): (i) the ionotropic glutamate receptor [iGluRs and NMDARs (N-methyl- -aspartate receptors)] signal, the postsynaptic density scaffold proteins (SHANKs, etc.), the consequent synapse formation, and plasticity; (ii) metabotropic GluRs (mGluRs; mGluR1, 5, 7, and 8), the coupled G proteins (G , G , and G ), and the second-messenger systems downstream [Ca2+, cAMP, diacyglycerol (DAG), and inositol 1,4,5-trisphosphate (IP )]; (iii) the inhibitory autoreceptor mechanism that suppresses excess glutamate release in presynaptic neurons [mGluR7, G , GRK (G protein–coupled receptor kinase), and AC]; and (iv) glial cells besides the pre- and postsynaptic neurons, especially in the clearance and recycling of glutamate.
+
+Other pathways and graphs are equally informative, and many of them are also supported by literature (Table 1). For details, see section S3 and fig. S4.
+
+Subpathway biology, coherent fine details
+
+We analyze the functional consequences of DN variants in selected pathways. Here, we focus on missense, but not LGD, variants. Whereas the latter are highly destructive on overall protein structure and function no matter which part they hit (position-insensitive), the former are subtle and precisely tell what functions are perturbed in ASD (position-sensitive).
+
+In probands, missense variants hit the relevant functions or domains in selected pathways. In Wnt signaling pathway, missense hit the histone acetylation domain KAT11 twice in the CREBBP (CBP) gene and TIP49 domain in RUVBL1, the scaffolding domain WD40 in TBL1XR1, and the CTNNB1-binding domain in TCF7L1 (fig. S8). In synapse pathways, the most essential players, including neurotransmitter receptors, transporters, and ion channels on cell membrane, are heavily targeted (Fig. 4, C and D, and figs. S6 and S7). Missense variants hit the neurotransmitter glutamate-binding domain in the GRIN2B (NMDAR) gene, the seven-transmembrane region of GRM7 (mGluR7), the ion channel domains in GABRA1 and CACNA1C, the sodium/neurotransmitter symporter domains in SLC6A1 (GAT) and SLC6A13 (GAT2/3).
+
+Conversely, missense variants in siblings often hit the nonfunctional regions or the less relevant regions or genes (figs. S8 to S10). This proband-sibling difference is significant overall (Fig. 4B) and extremely so in the example pathways (fig. S8 and S9 and section S4).
+
+Autistic missense events on the same genes tend to hit residues extremely close to each other and in the same domain. This occurs to all cases that we observed in Wnt and synapse pathways (Fig. 4, C and D, or figs. S8 and S9: ADCY5, CREBBP, SLC6A1, and SLC6A13). These data strongly suggest that missense events do not occur in random, but precisely and repeatedly target specific risky loci for ASD (P = 0.002 to 0.03, section S4).
+
+We identified subpathway clusters of missense events in probands. Each event cluster hits multiple interacting genes along the pathway. They reveal recurrent molecular modules in ASD biology.
+
+One cluster hit the cAMP second-messenger system (23) in the glutamatergic synapse pathway (Fig. 4D and fig. S7). Two types of G proteins bind and control adenylate cyclase (AC): G  activates it, whereas G  (G /G ) inhibits it (green dashed box in fig. S7). As shown in Fig. 4D, the Gα domains of GNAS (G ) and GNAO1 (G ) are similar and align seamlessly in 3D (24). They compete to bind to the AC C2A domain in a similar way. Missense variants in these two genes both hit the Gα domain, which affects their binding to AC and hence affects AC’s catalytic activity on cAMP production and downstream signal. In parallel, the two missense events on AC (ADCY5) hit its C1A domain, which perturb AC’s catalytic function, too (Fig. 4D). In the direct upstream (fig. S7), GRM5 (mGluR5) was hit by a destructive in-frame deletion (K679) (table S5). GRM7 (mGluR7) was hit by a missense at the seven-transmembrane region (Fig. 4C), which produces an unbounded cytosol form of the protein and likely a strong antagonist of the original transmembrane signal.
+
+In another cluster, GRKs inhibit mGluR signaling by sequestering heterotrimeric G proteins. See section S4 and fig. S11 for details.
+
+All these subpathway-level biological stories we present above reveal coherent fine details on ASD mechanism. These details are consistent with, but complement to, the integrated pathway graphs (Fig. 3 and figs. S6 and S7).
+
+Superpathway biology, emergent big picture
+
+The selected pathways are distinct yet highly interconnected. For example, MAPKs feed into canonical Wnt pathway and inhibit T cell factor (TCF)/lymphoid enhancer factor (LEF)–dependent transcription (Fig. 3A and fig. S4C). In addition, they also share numerous other connections. For example, Wnt and MAPK are both involved in adherens junctions and focal adhesion (fig. S4, G and H). These commonly connected pathways are also perturbed in ASD except that they are only marginally significant (P = 0.01 to 0.10, table S2).
+
+Two distinct biological themes or modules emerge from the network of selected and connected pathways (Fig. 5). Module I includes Wnt signaling, cell adhesion, junction, and cytoskeleton-related pathways. They are involved in synapse morphology, that is, synapse assembly and stability. Module II includes glutamatergic synapse, GABAergic synapse, and related processes. They are involved in synapse functions, that is, chemical and electrical signal transmissions, regulations, and patterns. Module I concerns neuronal wiring or the “hardware,” whereas module II concerns synaptic transmission or the “software.” These modules are distinct in network topology, too. Connections are dense within each module but none between them. The MAPK pathway is the only bridge node and is highly connected in both modules. There is one less prominent theme: transcription (not shown in Fig. 5). Both Wnt and MAPK pathways end at target gene transcription, which involves chromatin modification, especially the histone lysine methylation branch of lysine degradation (Table 1). We also did a parallel GO term analysis, which converges to the same set of biological themes (section S5 and fig. S12).
+
+DISCUSSION
+
+We analyzed thousands of ASD exome mutations across multiple levels using a novel sequential prioritization procedure. Our results suggest that isolated, rare mutation events are actually connected and recurrent at higher (gene and pathway) levels (Fig. 1). In addition, the otherwise random and divergent results from independent data sets become reproducible. This cross-validation not only confirms the prioritization results but also justifies the multilevel prioritization procedure. As discussed in the literature, valid method and reproducible results are critical for genome-scale studies (25) and autism genetics (26). This same multiple-level analysis procedure is applicable to other complex diseases or problems as well.
+
+We also did a multilevel association analysis and proposed a gene + pathway dual-hit model for ASD risk (Fig. 2). The disease variants need to both (i) disrupt the target genes and (ii) hit the relevant pathways, show reduced or no correlation with ASD risk. Variants missing either factor, including silent variants in the selected pathways or variants outside the pathways, show reduced or no correlation with ASD risk. Previous studies have established the disease association of DN mutation burden with autism (4, 10, 27). In this new model, the contribution of variant load/burden can be explained away by the gene + pathway factors and hence becomes less relevant. This model likely applies to other types of genetic variants including CNV and single-nucleotide polymorphisms (SNP).
+
+We reconstructed a set of coherent molecular mechanisms for ASD (Figs. 3 to 5 and Table 1). We identified several canonical pathways that may cause the disease, as supported by multiple independent data sets. These disease pathways present a catalog of ASD genetic associations (table S5) and also connect hundreds of interacting genes and variants into a whole multiscale system (Figs. 3 to 5). All mutated pathways or functions converge to synapse biology. Synaptic function, morphology, or plasticity (as indicated by transcription) (28, 29) is disrupted in these cases. These results are consistent with previous research on synaptic morphology (30), function, and transcription (11, 13–15). Therefore, ASD is not only a multigenic but also a multipathway disease, and it is ultimately a synapse disease.
+
+Our results are consistent with previous studies (1–12). For example, synapse function and chromatin remodeling–related genes have been repeatedly reported as possible factors in ASD (10, 11, 31), and cell projection/morphogenesis and cytoskeleton/actin-related genes have also been suggested (30–32). In addition to these results, our analyses also present some novel and coherent insights into ASD biology (Figs. 3 to 5), which are more interpretable and informative than the gene networks or Gene Ontology (GO) groups described in the literature. Although most identified pathways are potentially causal, they may also explain associated symptoms of ASD, including intellectual disability (glutamate and GABA synapses) (33), sleeping (circadian entrainment) (34), and digestive (protein digestion and absorption) problems (35).
+
+These results were systematically reproduced or validated in independent cohorts/analyses (Figs. 1 and 3, figs. S1 and S4, and Table 1). With the specific contexts (Fig. 3 and figs. S4 to S7) and multilevel details (Fig. 4 and figs. S8 to S11), these findings are experimentally testable if needed. Although our analysis has taken a systematic approach, our results are far from complete. For example, temporal and spatial information could eventually be incorporated into the gene- and pathway-level analyses to further refine the disease mechanism (9, 36). New insights can be expected with bigger sample size, more data, and better methodology coming in the near future.
+
+MATERIALS AND METHODS
+
+Data collection and integration
+
+The Exome-Seq DN variants from the SSC cohort (10) and ASC cohort (11) were used for this study. Please see the original publications for details of the experimental design, quality control, and raw data processing. The final SSC data include 2517 families, with 2508 affected children, 1911 unaffected siblings, and the parents of each family. The ASC data we used consist of two cohorts: one includes 1445 trios and the other includes 1601 cases and 5397 ancestry-matched controls. The ASC paper originally included 825 trios from the SSC cohort. This overlap was intentionally excluded to create two completely independent data sets for downstream analysis and comparison.
+
+Multilevel genetic prioritization
+
+To search for the genetic causes of disease (ASD), we devised a novel sequential prioritization procedure. The whole procedure is similar to a multistage refinement process. We started with a few thousand rare variants, of which only a small portion are disease-causing mutations (drivers) and most are irrelevant (passengers). Driver events were then selected against passengers through a sequential set of criteria (filters), and in the end, a minor fraction (a few selected pathways) remains greatly enriched in drivers. The procedure thus has three consecutive steps, that is, variant-, gene-, and pathway-level selection; each incorporates experimental data, metadata, and annotation data at corresponding levels. Details of individual selection steps are as follows.
+
+Variant-level selection
+
+Variants were divided into three major categories based on their effects on the target genes. The silent group includes all synonymous variants and variants which fall in the 3′ untranslated region (3′UTR), 5′UTR, intergenic, intron, and noncoding regions. The missense group includes missense variants; the LGD or LoF group includes exon indels (both frameshift and no frameshift), nonsense, and splice-site variants. Variants are selected for gene- and pathway-level analyses based on a few criteria: (i) LGD (or LoF) and missense only, because silent variants are usually not damaging and have little disease association as a group (Fig. 2). (ii) For the SSC study (10), we only considered validated variants, which included those experimentally verified or cross-validated or called in at least two of the three laboratories (Cold Spring Harbor Laboratory, Yale, or University of Washington). (iii) For ASC study (11), we only considered DN variants in the trio families or case-only variants from the case-control cohorts.
+
+Gene-level selection
+
+All selected variants were mapped to genes based on the chromosome coordinates. We selected genes using the following scoring function, which essentially sums up the weighted evidence for each gene. where i is the gene index, j is the patient index, I is the indicator on whether a selected variant occurs to the gene-patient pair, w is the weight, and s is the score
+
+Corresponding to their different study designs and data quality, we used different parameters for the two cohorts. In SSC, we take w  = 1/n  (number of selected variants occurred to patient j) and s  = 0.5, whereas in ASC, w  = 1 and s  = 2. Both criteria control the amount of evidence from mapped variants. The former is more inclusive and the latter is more restrictive because SSC has simpler data structure and better data quality compared to ASC.
+
+Note that for rare DN mutations, we did not consider linkage disequilibrium. Unlike SNPs, which are transmitted in blocks, rare DN mutations are random and independent events. Therefore, linkage disequilibrium does not apply to these events. Gene length itself is an important factor contributing to ASD risk (37, 38); hence, we decided not to explicitly control it. On the other hand, most genes were called significant in gene length–based test because these DN events are rare. All possible genomic features are shared by probands and siblings; hence, the best control to use is the sibling group as we have done (Fig. 1 and fig. S1).
+
+Pathway-level selection
+
+We identified pathways enriched in the selected genes. Different from the regular gene set analysis, we test for both marginal and conditional overrepresentation given the previously selected pathways. This procedure ensures that pathways selected are drivers instead of passengers, which share genes with the former.
+
+The analysis is an application of the set theory. Below is a list of basic and relevant notations following the standard set theory:
+
+{}: set definition or description
+
+A ∩ B: intersection between set A and B
+
+A ∪ B: union between set A and B
+
+A\B: relative complement, subset that belongs to A but not to B
+
+|A|: cardinality, or the number of elements of set A
+
+The list of sets and variables defined for our analyses:
+
+G = {selected genes above}
+
+Pi = {pathway or gene set under testing}
+
+Ps = {selected pathways or gene sets}
+
+P  = {all pathways or gene sets}
+
+U = | G ∩ P  |
+
+V = | G ∩ P \Ps |
+
+X = | G ∩ Pi |
+
+Y = | G ∩ Pi\Ps |
+
+For marginal significance test:
+
+X = j ~ hyperG(j; |Pi|, |P \Pi|, U)
+
+P(X ≥ j) = ∑  PhyperG(j; |Pi|, |P \Pi|, U), where l= {j, j+1,..min(|Pi|, U)}
+
+For conditional significance test:
+
+X = k | Ps ~ Y = k ~ hyperG(k; |Pi\Ps|, |P \Pi,Ps|, V)
+
+P(X ≥ k | Ps) = P(Y ≥ k) = ∑  PhyperG(k; |Pi\Ps|, |P \Pi,Ps|, V), where l = {k, k+1,..min(|Pi\Ps|, V)}
+
+Here, hyperG is the hypergeometric distribution and PhyperG is the standard probability mass function of the hypergeometric distribution.
+
+The same analysis procedure was applied to KEGG pathways and GO terms. The metabolic and signaling pathways from KEGG were tested and analyzed together, and the three branches of GO, that is, biological process, cellular component, molecular function, were analyzed separately. We did multiple-testing correction on P values using false discovery rate (FDR; or q value).
+
+Multilevel recurrence analysis
+
+As shown in Fig. 1, in each level (step) of the sequential prioritization procedure above, we have an input list (considered) and an output list (selected) of entries (variants, genes, or pathways). We test whether the output list (compared to the input list) was enriched in recurrent entries. Recurrent entries were defined relative to the reference list. To analyze the recurrence in SSC proband variants (either input or output), the reference list can be variants from ASC probands, SSC siblings, or SSC probands (themselves) corresponding to recurrent entries in an independent cohort, in the control group of the same cohort, or in the same proband group, respectively. Entries recurring between independent cohorts measure reproducibility of studies. Entries recurring in normal condition were likely irrelevant to the disease, and those recurring in the same disease group were likely relevant to the disease. These different types of recurrence can be used for validation of prioritization procedures. Enrichment of recurrent changes between different cohorts or within the same disease group (likely disease-causing or true positives) suggests sensitivity, whereas depletion of recurrent changes from the control groups (likely disease-irrelevant or false positives) suggests selectivity.
+
+As in Fig. 1 (A and B) and fig. S1 (A and B), enrichment of recurrent entries was tested using hypergeometric test. Input lists were marked as considered (black circle), output lists were marked as selected (red circle), and selected lists from the contrast condition were used as a reference list (blue circle) for recurrence (overlaps in gray or purple). The recurrence rate difference between probands and siblings was analyzed using two-sample t tests (fig. S1C).
+
+Multilevel association analysis
+
+To analyze the ASD association of DN mutations, we take their gene- and pathway-level effects into account. DN variants can be divided into groups based on these effects. At the gene level, they were assigned to silent, LGD, missense, or nonsilent (LGD + missense) groups, as described above. At the pathway level, they belong to either the Selected pathways (Table 1) or Others. That is, DN variants can be divided into 1D or 2D groups based on two variables: gene-level effect (G) and pathway assignment (P), as shown in table S1 (raw counts) and Fig. 2 and fig. S2 (event rates).
+
+The ASD association was then tested for each DN variant group (Fig. 2 and fig. S2). The ASD association can be measured by rate difference (over noise), rate ratio (θ), or log θ between probands and siblings. The data suggested a strong interaction between the two factors G and P (Fig. 2, row 1, and table S1). Therefore, we tested the marginal ASD associations (Fig. 2, row 1) and the conditional ASD associations by fixing factor P or G (Fig. 2, rows 2 and 3). Marginal associated test was conducted on nominal event rate [raw count per cell per number of individuals (n) in table S1] for each variant group, whereas conditional test was conducted on normalized event rate, that is, the nominal rate of individual variant group normalized by the total event rate of each P or G level (raw count per cell/row or column sum in table S1). To test the rate difference between probands and siblings, we conducted two-proportion z test for conditional rates and two-sample t test for marginal rates. Odd ratio tests gave similar results as in our conditional rate tests but were not suitable for marginal tests on absolute variant rates.
+
+Multilevel function analysis
+
+We analyzed the perturbed biological processes and functions in ASD within the hierarchical context of variant, gene, and pathways. In particular, we focused on the few selected pathways (Table 1) and the mapped variants and genes. Details of the function analyses are covered by levels below.
+
+Pathway level—Data integration and visualization
+
+We visualized all selected pathways with ASD variants/genes mapped and integrated (Fig. 3 and figs. S4 to S7). These graphs reveal integrated molecular mechanisms at the pathway level. Pathview package (39) was used for pathway-based data integration and visualization. Variants were first mapped to the target genes, which were then mapped and visualized onto the selected KEGG pathway graphs. In the disease gene view (Fig. 3 and fig. S4), variant-targeted genes from SSC and ASC and SFARI genes are collected, integrated, and shown in the relevant pathways. Different data sources were marked by colors, gene-level scores were marked by brightness, and corresponding pathway analysis P values are also shown. In variant type views (figs. S5 to S7), DN variants from SSC were projected and visualized on the target pathways. Variant types or effects (LGD, missense, or silent) were marked by different colors, and their corresponding event counts were also shown.
+
+Subpathway level—Protein structure and function analysis
+
+We analyzed the functional consequences of DN variants in selected pathways. Here, we focused on missense variants, which are subtle and precisely tell what functions are perturbed in ASD (position-sensitive). The overall functional impact of these variants was assessed using SIFT tool (similar results with PolyPhen and not shown) or based on Pfam protein domains (as domain hitting or not). Variants from probands or siblings were divided into groups by pathway assignment (Selected pathways or Others). The damaging or domain hitting ratios of each variant group were then compared using two-sample t tests assuming binomial variances (Fig. 4, A and B).
+
+Exome variants were mapped to amino acid changes in the target protein using Bioconductor VariantAnnotation package (40). 1D linear protein domain structures were visualized using cBioPortal MutationMapper (41). Protein domain data were retrieved from the Pfam database (42) and updated the protein domain locations. 3D protein structure data were retrieved from the Protein Data Bank (PDB) (43). The mapped exome variants coded into amino acid changes were then visualized with the 3D protein structure using PyMOL (www.pymol.org).
+
+Superpathway level—Networks of KEGG pathways or GO terms
+
+KEGG pathway and GO definition and gene annotation data were downloaded from the corresponding database as of March 2015. We analyzed the functional interactions between pathways. First, we built a network of pathways (Fig. 5), where nodes are pathways and edges are pathway interactions explicitly documented in the KEGG LinkDB database or implicitly suggested by KEGG pathway diagrams or definitions. We focused on a subnetwork where nodes are either selected pathways or other pathways but directly connected by at least three selected pathways. Network on selected GO terms was done similarly (fig. S12). However, we used a bipartite graph. This graph includes GO terms as one node type and biology themes as the other. Edges were directed from GO terms to biology themes only, as suggested by GO term definition or at least one literature work in table S3.
+
+ Supplementary Material
+
+   
+
+Fig. 1
+
+Venn diagrams and test statistics on overlap ( ) between SSC and ASC ASD cohorts, and ( ) between probands and siblings of SSC, at different levels. Correlation of pathway analysis statistics ( ) between SSC and ASC ASD cohorts, and ( ) between probands and siblings of SSC. The term “considered” or “selected” refers to items before or after the selection process at each level (Materials and Methods). See table S4 for full lists of selected variants and genes used in the analysis.
+
+Fig. 2
+
+Columns 1 and 2: DN event rates and association test by gene- and pathway-level effects. Column 3: A descriptive model for autism genetic association. Rows are marginal (row 1) and conditional (rows 2 and 3) association tests and statistics, and corresponding model representations. Variants are grouped based on gene-level effects (G) [silent, missense, LGD, and nonsilent (missense + LGD)] and pathway-level effects (P) (hitting Selected pathways or Others). The associations marked in column 3 should be taken as the theme for corresponding row. Notations α(G; A) and α(G; A |P) are read as marginal association between G and A, and their conditional association given P. The association can be measured by rate difference (over noise), rate ratio (θ), or log θ. P values come from the rate difference tests. Error bars represent SEM. Note raw counts are summarized in table S1. For technical details, see the “Multilevel association analysis” section under Materials and Methods. NA, not applicable.
+
+Fig. 3
+
+( ) hsa04310 Wnt signaling pathway, ( ) hsa04727 GABAergic synapse, and ( ) hsa04724 Glutamatergic synapse (next page). DN variant data come from SSC and ASC studies, and reported autism genes come from the SFARI Gene database. Gene-level scores (Materials and Methods) are marked by color. P values are from pathway analysis (Table 1). Data are integrated and visualized on KEGG pathway graphs using Pathview (23).
+
+Fig. 4
+
+( ) Ratios of damaging events as predicted by SIFT. ( ) Ratios of events hitting a function domain defined in Pfam. ( ) 1D protein domain structure and missense variants of all neurotransmitter receptors, transporters, and ion channel genes in synapse pathways (the bold black box nodes in pathway graphs in figs. S6 and S7). ( ) 1D and 3D protein structures and missense variants hitting the AC, that is, ADCY5, and interacting G proteins, GNAS (G ) and GNAO1 (G ). The pathway context is shown in the green dashed box in fig. S7. AC controls the production of cAMP second-messenger in synapses (section S4). Error bars represent SEM.
+
+Fig. 5
+
+Seven selected pathways are highly interconnected and frequently connected to five additional pathways. All these pathways form a superpathway-level network. Two clusters or modules emerged with distinct topology and function.
+

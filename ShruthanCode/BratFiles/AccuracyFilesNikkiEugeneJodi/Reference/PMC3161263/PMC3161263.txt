@@ -1,0 +1,102 @@
+Further Exploration of the Relationship Between Insulin Glargine and Incident Cancer
+
+Abstract
+
+OBJECTIVE
+
+In vitro evidence suggests insulin glargine promotes tumors; observational human studies are conflicting. We aimed to expand understanding of this potential treatment risk.
+
+RESEARCH DESIGN AND METHODS
+
+This retrospective cohort study of type 2 diabetic patients >68 years old used Medicare inpatient, outpatient (2003–2008), and prescription data (2006–2008). Adjusting for patient characteristics, dose, and metformin use, Cox models yielded hazard ratios (HRs) for incident cancer (breast, prostate, pancreas, colon, any site) associated with three forms of insulin: nonglargine, glargine, or glargine plus nonglargine (combination).
+
+RESULTS
+
+Overall, 81,681 patients were followed for a mean of 23.1 months. Mean age was 77.4 years. Treatment group distribution was 20.7% glargine, 60.5% nonglargine, 18.7% combination insulin. We observed 5,466 incident cancers; crude rates did not vary by treatment group. In fully adjusted models, nonglargine use was the referent; glargine was not associated with significant increased risk of any cancer measure. In secondary analyses including only the top quartile of daily insulin dose patients, glargine was not associated with any cancer risk difference; combination insulin was associated with higher breast cancer risk (HR 1.75 [95% CI 1.10–2.78]) and lower colon cancer risk (0.33 [0.13–0.80]). In age-stratified analyses of highest-dose users, combination insulin conferred a higher risk of breast cancer in those ≤75 years old (2.87 [1.45–1.59]).
+
+CONCLUSIONS
+
+The general lack of association between glargine-only use and cancer is reassuring. Breast cancer risk associated with high-dose combination insulin in secondary analyses could result from multiple comparisons, residual confounding, or true association; further research is warranted.
+
+Type 2 diabetes has been associated with higher incidence of colon, pancreas, and breast cancer (1). The etiology of this excess cancer risk is poorly understood and is complicated by the fact that type 2 diabetes and cancer have common risk factors including age, race/ethnicity, obesity, physical inactivity, and tobacco use (1,2). The role of insulin in cancer promotion is suggested by studies associating circulating insulin levels and cancer of the colon, pancreas, and breast (1,3,4). The association between exogenous insulin and cancer gained attention in 2009 when concurrently published studies assessing incident cancer among users of glargine compared with users of nonglargine insulin reported conflicting findings (5–12).
+
+Glargine is a recombinant DNA analog of human insulin with three amino acid substitutions (11–13). The amino acid substitutions result in a binding affinity for insulin and insulin-like growth factor-1 (IGF-1) receptors six to eight times that of human insulin (11). In vitro studies have demonstrated that glargine is more mitogenic than human insulin and promotes certain tumor cells (11).
+
+Four European research groups conducted retrospective observational studies of diabetic cohorts comparing cancer incidence among users of glargine and nonglargine insulin (6–9). The cohort definitions, data elements, and analytic approach of these studies were diverse. Principal findings are presented in Supplementary Table 1 and elsewhere (11,12). Two studies reported a significant increased risk of cancer overall associated with glargine-only use. One reported an overall cancer hazard ratio (HR) of 1.55 (95% CI 1.01–2.37) (7). Another found increased cancer risk only associated with highest-dose glargine (1.59 [1.30–1.94]) (6). Two studies reported an increased risk of breast cancer among glargine-only users (1.99 [1.31–3.02] and 3.39 [1.46–7.85]) (7,8) One study found no significant association between glargine and cancer (9). Two industry-sponsored studies found no glargine-associated cancer risk (14,15). A small case-control study found a fivefold increased cancer risk associated with high-dose glargine (10).
+
+Limitations among some or all of these studies include the following: potential indication bias (resulting, among other things, from payer restrictions on use), inability to adjust for potential confounders such as BMI, lack of data on dose, limited use of glargine in Europe resulting in small cohorts and sparse outcomes among exposed patients, industry sponsorship, methodologic concerns, and relatively short follow-up time (1.3–3.0 years in the cohort studies and 4–6 years in the case-control and prospective studies).
+
+Despite limitations and conflicting results, these studies have generated concern among clinicians and patients. We aimed to advance understanding of this issue through a study of patients in the U.S., where glargine is commonly used. We used Medicare administrative data to compare incident cancer diagnoses in older patients with type 2 diabetes using nonglargine, glargine, or glargine plus nonglargine (combination) insulin. The Dartmouth Institutional Review Board approved this study.
+
+RESEARCH DESIGN AND METHODS
+
+From the 20% Medicare sample Denominator files, we identified beneficiaries who 1) enrolled in the Medicare Part D prescription drug program between 1 January 2006 and 28 February 2007, 2) were age ≥68 years at the time of Part D enrollment, 3) remained enrolled in Part D for at least 4 months (with no more than one 31-day gap), and 4) had at least 36 months of continuous fee-for-service (nonmanaged care) inpatient and outpatient enrollment immediately preceding Part D enrollment. From this group, we identified beneficiaries with type 2 diabetes defined as follows: at least one inpatient or two outpatient (separated by 7–270 days) ICD-9 diagnoses (ICD-9 250.x0 or 250.x2) occurring during the 12 months preceding Part D enrollment or during the first 4 months after Part D enrollment. Among these patients, we used the Part D Prescription Drug Event File (PDE) to identify those with one or more prescription fill for insulin of any type during their first 4 months of Part D enrollment who followed achievement of diagnostic inclusion criteria.
+
+Exposure/treatment group assignment
+
+We used the first 4 months of Part D records following achievement of inclusion criteria to assign patients to one of three insulin treatment groups: 1) glargine only (glargine), 2) nonglargine only (nonglargine), and 3) glargine plus nonglargine insulin (combination) (Supplementary Fig. 1). A mean daily insulin dose was calculated for each patient based on dispensing in Part D months 2 through 4 and categorized into quartiles; implausibly high doses were set equal to the 99th percentile.
+
+The first 4-month fill records were also used to identify use of metformin, which may lower cancer risk, or other medications suspected of increasing cancer risk (oral estrogen and tumor necrosis factor-α inhibitors) (16–18). Antineoplastic prescription fills were used to exclude patients with prevalent cancers who did not have a corresponding anatomically specific ICD-9 cancer code (see below) and patients on antineoplastic prophylaxis (e.g., tamoxifen).
+
+Cancer measures
+
+We used ICD-9 codes to identify prevalent and incident cancers. Prevalent cancers were defined as those appearing during the 36 months preceding Part D enrollment. We defined cancer broadly as one inpatient or two outpatient cancer diagnoses (ICD-9 140–239, excluding V codes) (separated by 7–270 days). Based on the literature, cancers were classified using Clinical Classification Software (CCS) as breast, colon, pancreas, prostate, other anatomically specific (CCS categories 11–40), or “unspecified” (CCS cancer categories 41–44) (19). Incident cancer diagnoses (our main measure) were defined by the same method but occurred after the 4-month treatment classification period. Patients with prevalent, anatomically specific cancers were included in the cohort and permitted to contribute an anatomically distinct cancer. Patients with unspecified cancers in a 36-month look back (CCS categories 41–44) and patients filling an antineoplastic drug prescription in the first 4 months of Part D enrollment with no anatomically specific cancer diagnosis were excluded. ICD-9 codes are available in the Supplementary Data.
+
+Covariates
+
+Covariates included were age (categorized as 68–69, 70–74, 75–79, 80–84, and over 84 years), race/ethnicity (black, Hispanic, or other), sex, and Part D low-income subsidy status, a measure of poverty (dichotomized) (20). We included the following comorbidities if diagnosed once on an inpatient claim or twice on outpatient claims during the 36-month look back: obesity diagnosis, tobacco exposure (one inpatient or two outpatient diagnoses of tobacco use or chronic obstructive pulmonary disease), and Charlson comorbidities excluding malignancy, diabetes, and tobacco exposure (21). Diabetes complications diagnosed during the 36-month look back were included as a proxy measure of diabetes severity and duration (diabetic retinopathy, nephropathy, neuropathy, and diabetes-associated peripheral circulatory disorder).
+
+Analysis
+
+The study included five incident cancer measures: any type, breast, pancreas, colon, and prostate. Patients were followed from follow-up initiation until the first of these events: death, an incident cancer diagnosis, or censoring (end of study 31 December 2008 or fee-for-service Medicare disenrollment) (Supplementary Fig. 1).
+
+Primary analyses
+
+Cox proportional hazards regression models estimated the HR for each cancer type associated with treatment group relative to the nonglargine group. Models were run initially without and then with insulin dose quartile variables. The proportionality of hazards assumption was assessed, and no violations were found. We repeated these main models stratified by age-group (≤75 and >75 years) because U.S. screening guidelines recommend breast and colon cancer screening up to age 75 years and explicitly recommend against prostate screening after age 75 years (22). We felt this would impact the observed effect of exposure by age-group because testing and events would likely drop off.
+
+Secondary analyses
+
+To further explore dose-dependent cancer promotion, we conducted secondary analyses including only patients whose calculated daily insulin use was in the highest quartile overall. This analysis was expected to isolate a relatively homogeneous subcohort with the highest exposure and likely highest rates of other cancer risks such as extreme obesity, more advanced diabetes, and, possibly, longer duration of diabetes. We repeated age stratification for this highest-dose subcohort to further isolate relatively homogeneous subgroups.
+
+Other subanalyses repeated models after excluding patients with a cancer diagnosis in the 36-month look back. To test for possible indication bias that could result if prescribers selectively avoided glargine in patients with a personal history of cancer, logistic models assessed the relationship between cancer during the look back and treatment category assignment.
+
+RESULTS
+
+Patients
+
+Overall, 81,681 patients met inclusion criteria during the study period. Table 1 presents the distribution of patients by treatment group: glargine 20.7% (17,060), nonglargine 60.5% (49,761), and combination insulin 18.5% (15,385). Combination insulin users had the highest rates of diagnosed diabetes complications. Metformin use was more common in the glargine group (27.6%) than in the nonglargine (16.8%) and combination insulin (15.0%) groups. Mean daily insulin dose was lower in the glargine group (52.7 units/day) than in the nonglargine (73.4 units/day) and combination insulin (62.7 units/day) groups.
+
+Primary analyses
+
+We identified 5,466 incident cancer cases: 553 breast, 428 colon, 204 pancreas, and 427 prostate cancers (Table 2). Crude cancer incidence overall and by anatomic site was not significantly different across treatment groups. In fully adjusted Cox proportional hazards regression models (Table 3), compared with users of nonglargine, we found no association between glargine and risk of cancer of the breast, pancreas, prostate, or any location; colon cancer risk was lower among glargine users (HR 0.75 [95% CI 0.58–0.98]). Metformin use was associated with a higher risk of breast cancer (1.28 [1.05–1.57]). The addition of indicator variables for quartile of daily insulin dose in these main models resulted in essentially identical estimates; no estimates associated with dose quartile were significant. Analyses stratified by age-group (≤75 and >75 years) produced estimates similar to unstratified models; glargine and combination insulin were associated with no significant increased risk of any cancer measure, though estimates diverged substantially for the two age-groups in breast and prostate cancer models (Table 3). Combination insulin use was associated with a significantly lower risk of pancreas cancer in the older stratum (0.5 [0.28–0.91]).
+
+Secondary analyses
+
+Models including only the 20,415 patients in the highest daily insulin dose quartile (mean dose 119 units/day) (11.7% glargine, 75.3% nonglargine, and 13.0% combination insulin) revealed no association between glargine-only use and cancer (Table 4). In contrast, high-dose combination insulin was associated with an increased risk of breast cancer (HR 1.75 [95% CI 1.10–2.78]) and a lower risk of colon cancer (0.33 [0.13–0.80]). Age-group–stratified analyses of individuals in the highest daily dose quartile revealed no significant associations between treatment and cancer for those over 75 years old (N = 11,580). Among younger patients (≤75 years) in the highest daily dose quartile (N = 8,835), glargine alone was associated with no significant risk differences but high-dose combination insulin was associated with a higher risk of breast cancer (2.87 [1.47–5.59]); these models included 626 “any cancer” events and 54 breast cancer events.
+
+Secondary analyses including only the 72,314 patients with no cancer during the 36-month look back yielded estimates essentially identical to main models. A logistic regression assessing the relationship between a cancer diagnosis during the look back period and treatment group revealed slightly increased odds of glargine-only use among patients with prevalent cancer (compared with no prevalent cancer) (odds ratio 1.06 [95% CI 1.00–1.12]; P = 0.043). Cancer during look back was not significantly associated with combination insulin use (data not shown).
+
+CONCLUSIONS
+
+In a large cohort of older patients with type 2 diabetes and substantial use of glargine, we found no significant increased risk of cancer among glargine-only users compared with nonglargine insulin users. In the main models including all age-groups, glargine was associated with a slightly lower risk of colon cancer. Overall, these principal findings are reassuring. Results of secondary analyses including only the subcohort of highest-dose users raise new questions. These models revealed a higher risk of breast cancer among high-dose combination insulin users compared with high-dose nonglargine users, especially among patients aged 75 years and younger.
+
+This association between breast cancer and high-dose combination insulin use has not previously been reported. In contrast, the two previously published studies associating glargine-only use with breast cancer found no increased risk associated with combination insulin use in models that did not account for dose (7,8). The increased risks we observed in the younger age stratum (≤75 years) suggest that age may be an effect modifier acting either through physiologic pathways, healthy survivor bias of the older stratum, or detection bias among patients more likely to receive screening tests for the outcome of interest. It is also possible that this younger group suffers disproportionate residual confounding due to more extreme obesity, longer duration of disease, greater insulin resistance, or other unmeasured breast cancer risks.
+
+The juxtaposition of treatment-associated higher risk for breast cancers in some models and lower risk of distinct cancers (colon and pancreas) in other models raises further questions about the overall findings. It is unclear whether this reflects diverse insulin sensitivity of distinct tumor types, the result of multiple comparisons, or unmeasured confounding.
+
+The small but consistent association between metformin and breast cancer was unexpected (18). This finding echoes the U.K. study of Currie et al. (9) in which metformin was not associated with lower breast or prostate cancer risk but was associated with lower risk of other cancers. More extreme obesity is an indication for metformin use and a risk factor for breast cancer; this may explain some or all of the association. The finding suggests a potential differential effect of metformin on diverse tumor types.
+
+Our study differs from published European studies in important ways. Due to common use of glargine in the U.S., the number of glargine-only users and the number of incident cancers among glargine users were larger than those of previous studies. Our patients were older than the European cohorts. Indications for glargine insulin and combination insulin may differ in the U.S. compared with European nations.
+
+Our study has limitations common to claims-based research. Indication bias and residual confounding could account for some or all of observed associations. The subcohort patients on very high doses of insulin likely have disproportionately high insulin resistance, which is associated with obesity, an independent risk factor for breast cancer (23). Our comorbidity assignments and cancer events depend on the coding accuracy in these data. Studies have demonstrated that Medicare administrative data can identify cancer cases with good specificity (≥98%) and acceptable sensitivity (83–90%) (24). In this analysis, we used a 36-month look back period to identify prevalent cancer cases and assumed patients with no cancer diagnosis during this period to be cancer free. Some recurrent cancer cases could have been misclassified as incident, but we believe such cases to be rare.
+
+We lack data on important clinical risk factors for cancer including undiagnosed tobacco use, women’s age at first birth, BMI, family history of cancer, and environmental exposures. Some previous studies addressing this research question had many of these data elements but found none significant in analytic models (7–9). However, lack of clinical data remains an important limitation of this study.
+
+We do not have records of prescription fills preceding Part D enrollment. This precludes estimating cumulative lifetime exposure, as well as the impact of early exposure in the majority of our patients. The key assumption is that the unmeasured previous exposure correlates with measured exposure, and whereas “crossover” patients could attenuate estimated effects, they are unlikely to change our results. Previous studies found incident cancer associated with glargine after follow-up times as short as 1.3 years. If glargine acts rapidly to promote preclinical cancers, our cohort may be biased because of the resulting attenuation in healthy glargine survivors. Lastly, we rely on dose dispensed rather than dose administered, a reasonable but imperfect measure of actual use.
+
+This study finds no associations between glargine-only use (at any dose) and increased risk of cancer. This should reassure most users of glargine. In secondary analyses involving multiple comparisons, we find a higher risk of breast cancer among users of high-dose combination insulin therapy, especially among relatively young patients (≤75 years). Our findings reinforce null results reported by most research groups assessing the risk of cancer in association with glargine-only use. Regarding treatment-associated risk of breast cancer specifically, our results echo (but do not replicate) the results of some while contradicting others. This suggests that breast cancer in particular deserves focused attention in future research, ideally conducted with data and methods that can optimally adjust for individual breast cancer risk factors. The use of glargine will likely expand as the prevalence of type 2 diabetes increases. Resolving this question should be a research priority.
+
+ Supplementary Material
+
+   
+

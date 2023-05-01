@@ -1,0 +1,62 @@
+Obesity-susceptibility loci and the tails of the pediatric BMI distribution
+
+Abstract
+
+Objective
+
+We aimed to determine if previously identified adult obesity susceptibility loci were associated uniformly with childhood BMI across the BMI distribution.
+
+Design and Methods
+
+Children were recruited through the Children's Hospital of Philadelphia (n=7225). Associations between the following loci and BMI were assessed using quantile regression: FTO (rs3751812), MC4R (rs12970134), TMEM18 (rs2867125), BDNF (rs6265), TNNI3K (rs1514175), NRXN3 (rs10146997), SEC16B (rs10913469), and GNPDA2 (rs13130484). BMI z-score (age and gender adjusted) was modeled as the dependent variable, and genotype risk score (sum of risk alleles carried at the 8 loci) was modeled as the independent variable.
+
+Results
+
+Each additional increase in genotype risk score was associated with an increase in BMI z-score at the 5th, 15th, 25th, 50th, 75th, 85th and 95th BMI z-score percentiles by 0.04 (±0.02, p=0.08), 0.07 (±0.01, p=9.58 × 10-7), 0.07 (±0.01, p=1.10 × 10-8), 0.09 (±0.01, p=3.13 × 10-22), 0.11 (±0.01, p=1.35 × 10-25), 0.11 (±0.01, p=1.98 × 10-20), and 0.06 (±0.01, p=2.44 × 10-6), respectively. Each additional increase in genotype risk score was associated with an increase in mean BMI z-score by 0.08 (±0.01, p=4.27 × 10-20).
+
+Conclusion
+
+Obesity risk alleles were more strongly associated with increases in BMI z-score at the upper tail compared to the lower tail of the distribution.
+
+Introduction
+
+Since 2007, genome-wide association studies (GWAS) have identified adult obesity-susceptibility loci, and some of those loci are associated with childhood obesity (1-4). Linear regression and logistic regression were used in those studies, and body mass index (BMI) was used as a measure of obesity (1-4). The former regression approach determined if risk alleles were associated with mean BMI, whereas the latter regression approach determined if risk alleles increased the likelihood of being classified as obese (5). A limitation of modeling the mean BMI is that the associations at the upper and lower tails of the distribution are not distinguished, and the upper tail of the BMI distribution is of primary interest when studying childhood obesity. Categorizing children as obese recognizes the importance of the upper tail of the BMI distribution; however, such categorization of a continuous variable reduces statistical power; and considers individuals in proximity, but on opposite sides of the category cutoff, as being very different, when in reality they are very similar (6).
+
+In contrast to linear regression and logistic regression, quantile regression allows for the study of predictors across the entire BMI distribution, without having to categorize, and may provide additional insight into the relationship between obesity-susceptibility loci and BMI (7). To the best of our knowledge only a single study in the UK has used quantile regression to study obesity-susceptibility loci across the childhood BMI distribution (8). In that study each additional risk allele carried was associated with increases in BMI, and the associations were stronger at the upper tail, compared to the lower tail, of the BMI distribution (8). The purpose of our study was to determine if previously identified adult obesity-susceptibility loci were uniformly associated with BMI across the BMI distribution, in a large sample of U.S. children and adolescents.
+
+Methods and Procedures
+
+Participants were recruited through the Children's Hospital of Philadelphia network between 2006 and 2010 (n=7225). All participants were of European ancestry, unrelated, and aged between 2 and 18 years old (3). Parental informed consent was given for each participant, and the Institutional Review Board of the Children's Hospital of Pennsylvania approved the study.
+
+The participant's height (m) and weight (kg) were measured and BMI was calculated (kg/m2). BMI's were converted to age and gender specific z-scores(9). Participants with a BMI z-score of ≤ 3 or ≥3 were excluded from the study as this may reflect measurement error, or a Mendelian cause of extreme obesity in the case a ≥3 z-score (n=265).
+
+DNA was extracted from blood samples and high-throughput genotyping was performed at the Center for Applied Genomics at the Children's Hospital of Philadelphia, using Illumina Infinium™ II HumanHap550 BeadChip (4). All genotyped SNPs had call rates >95%, minor allele frequencies >1%, and did not deviate from Hardy Weinberg equilibrium.
+
+Based on the linear and logistic regression analyses in the two previous studies involving our cohort of children, associations between the following adult obesity-susceptibility loci and BMI were observed: FTO (rs3751812), MC4R (rs12970134), TMEM18 (rs2867125), BDNF (rs6265), TNNI3K (rs1514175), NRXN3 (rs10146997), SEC16B (rs10913469), and GNPDA2 (rs13130484)(3, 4). In the present study these SNPs were selected for re-analysis using quantile regression.
+
+Quantile regression was used to address the aims of the study (7, 8). The coefficients at the 5th, 15th, 25th, 50th, 75th, 85th, and 95th BMI percentiles are presented. Each SNP was bi-allelic and was coded 0, 1, or 2 to represent the number of risk alleles carried. A genotype risk score was created by summing the number of risk alleles carried at the 8 obesity-susceptibility loci. The coefficients at each BMI percentile are interpreted as the change in BMI z-score for each additional risk allele carried. The 95% confidence intervals and standard errors (SE) were calculated based on 500 bootstrap samples. All analyses were performed using the simultaneous quantile regression command in Stata 12.1 (StataCorp LP, College Station, TX)(10).
+
+Results
+
+For the SNPs at SEC16B, TMEM18, GNPDA2, BDNF, NRXN3, FTO, and MC4R no associations were observed with BMI at the 5th BMI percentile (Table 1). The SNP at FTO was associated with an increase in BMI at the 15th BMI percentile (β=0.10, SE ±0.04), and the association gained in strength towards the 85th BMI percentile (β=0.19, SE ±0.03) (Table 1). A similar pattern of increasing association from the 15th to the 85th BMI percentile was observed for the SNPs at SEC16B, GNPDA2, BDNF, and NRXN3 (Table 1). Relatively constant associations were observed between the SNPs at TMEM18 and MC4R between the 15th and 85th BMI percentiles (Table 1). For the SNP at TNNIK3, associations were observed with BMI at the 5th BMI percentile and between the 50th and 75th BMI percentiles (Table 1). The overall genotype score was not associated with BMI at the 5th BMI percentile, but was associated with BMI at all other percentiles, with the association gaining in strength from the 15th to the 85th BMI percentile (Table 1). At all the loci (except GNPDA2) the strength of the associations weakened towards the null between the 85th and 95th BMI percentile; only associations between the SNPs at FTO and GNPDA2, and the genotype risk score remained at the 95th BMI percentile (Table 1). To help interpret the findings in Table 1, visual representation of BMI z-score distributions by rs3751812 genotype (FTO) are presented in Supplementary Figure 1. The proportion of overweight/obesity was 9.5% higher among the homozygotes for the risk allele at rs3751812 (FTO), compared to homozygotes for the non-risk allele at rs3751812 (FTO) (Supplementary Figure 1).
+
+Comparisons between linear and quantile regression findings are presented in Figure 1. Based on the point estimates, the linear regression findings tended to overestimate the strength of the association at the lower tail of the BMI distribution (<50th BMI percentile), and underestimate the strength of the association at the upper tail of the BMI distribution (> 50th BMI percentile), especially for the SNPs at SEC16B, GNPDA2, BDNF, NRXN3, and FTO, and for the genotype risk score (Figure 1). Post-estimation tests found that the 85th percentile point estimate was greater than the 15th percentile point estimate for the overall score (0.04, SE ±0.02, p=0.017); and for the FTO (0.09, SE ±0.04, p=0.03) and GNPDA2 SNPs (0.09, SE ±0.04, p=0.05).
+
+Discussion
+
+Compared to linear regression findings, we found that SNPs at SEC16B, GNPDA2, BDNF, NRXN3, and FTO were more strongly associated with childhood BMI at the upper tail of the BMI distribution, and more weakly associated with childhood BMI at the lower tail of the BMI distribution. These findings complement those reported in a study of children (8), and in a study of adults (11). Collectively, these data demonstrate that modeling the mean BMI may have underestimated the strength of the association between obesity-susceptibility loci in the context of obesity.
+
+We hypothesize that the non-uniform associations observed across the BMI distribution may be explained by gene-environment interactions. For example, those at the lower tail of the BMI distribution may be more physically active, or consume fewer calories, compared to those at the upper tail of the BMI distribution, thereby modifying the associations. In support of this hypothesis, there is evidence that more physical activity attenuates the association between FTO and BMI in children (12-14). However, not all studies support this modifying effect in children (15), and there is little evidence that caloric intakes modify the association between FTO and childhood obesity (16). Importantly, these studies modeled the mean BMI, or BMI categories, and it would be of interest to determine if gene-environment interactions are uniform across the BMI distribution. It is a limitation that no environmental exposure data are available in our cohort of children to directly test for gene-environment interactions across the BMI distribution. This modeling approach, coupled with large sample sizes and valid environmental measures, could advance the study of childhood obesity gene-environment interactions.
+
+An interesting observation was the decreasing strength of the association between the obesity-susceptibility loci and childhood BMI from the 85th to the 95th BMI percentiles. This pattern of association may be due to the biological limitations of increasing BMI greatly beyond the 95th percentile, and so finding the strongest association at the 95th BMI percentile would not be expected. We observed associations for FTO, GNPDA2 and the genotype risk score at the 95th BMI percentile, and a larger sample size would likely detect associations at the 95th BMI percentile for the other loci. The standard errors and 95% confidence intervals were narrower at the upper tail of the BMI distribution compared to the lower tail of the BMI distribution for all the loci, supporting the consensus that a larger sample size could detect associations at the 95th BMI percentile.
+
+In conclusion, we found that previously identified adult obesity-susceptibility loci were more strongly associated with childhood BMI at the upper tail of the BMI distribution. Gene-environment interactions may explain the non-uniform associations across the BMI distribution, and quantile regression could be used to better understand gene-environment interactions in relation to childhood obesity.
+
+Figure 1
+
+Non-uniform association between obesity-susceptibility loci and childhood BMI across the BMI distribution. Data presented are the quantile regression coefficients (solid black line); the quantile regression 95% confidence intervals (shaded gray area); the linear regression coefficients (horizontal black dashed lines); and the linear regression 95% confidence intervals (horizontal gray dashed lines).
+
+Figure 2
+
+Predicted quantile regression BMI distributions by rs3751812 genotype (FTO). The solid gray line represents the non-risk allele homozygotes (G/G), and the dashed black line represents the risk allele homozygotes (T/T). The vertical reference line corresponds to CDC defined overweight.
+

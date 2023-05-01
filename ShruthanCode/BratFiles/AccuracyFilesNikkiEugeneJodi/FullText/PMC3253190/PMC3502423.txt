@@ -1,0 +1,122 @@
+Systems mapping of HIV-1 infection
+
+Abstract
+
+Mathematical models of viral dynamics in vivo provide incredible insights into the mechanisms for the nonlinear interaction between virus and host cell populations, the dynamics of viral drug resistance, and the way to eliminate virus infection from individual patients by drug treatment. The integration of these mathematical models with high-throughput genetic and genomic data within a statistical framework will raise a hope for effective treatment of infections with HIV virus through developing potent antiviral drugs based on individual patients’ genetic makeup. In this opinion article, we will show a conceptual model for mapping and dictating a comprehensive picture of genetic control mechanisms for viral dynamics through incorporating a group of differential equations that quantify the emergent properties of a system.
+
+Introduction
+
+To control HIV-1 virus, antiviral drugs have been developed to prevent the infection of new viral cells or stop already-infected cells from producing infectious virus particles by inhibiting specific viral enzymes [1,2]. Because of the multifactorial complexity of viral-host association, however, the development and delivery of clinically more beneficial novel antiviral drugs have proved a difficult goal [3]. In this essay, we argue that this bottleneck may be overcome by merging two recent advances in mathematical biology and genotyping techniques toward precision medicine. First, viral-drug interactions constitute a complex dynamic system, in which different types of viral cells, including uninfected cells, infected cells, and free virus particles, cooperate with each other and together fight with host immune cells to determine the pattern of viral change in response to drugs [4-6]. A number of sophisticated mathematical models have been developed to describe viral dynamics in vivo, providing incredible insights into the mechanisms for the nonlinear interaction between virus and host cell populations, the dynamics of viral drug resistance, and the way to eliminate virus infection from patients by drug treatment [7-15]. Second, the combination between novel instruments and an increasing understanding of molecular genetics has led to the birth of high-throughput genotyping assays such as single nucleotide polymorphisms (SNPs). Through mapping or associating concrete nucleotides or their combinations with the dynamic process of HIV infection [16,17], we can precisely taxonomize this disease by its underlying genomic and molecular causes, thereby enabling the application of precision medicine to diagnose and treat it.
+
+Systems mapping: a novel tool to dissect complex traits
+
+Beyond a traditional mapping strategy focusing on the static performance of a trait, systems mapping dissolves the phenotype of the trait into its structural, functional or metabolic components through design principles of biological systems, maps the interrelationships and coordination of these components and identifies genes involved in the key pathways that cause the end-point phenotype [18-23]. Systems mapping not only preserves the capacity of functional mapping [24-26] to study the dynamic pattern of genetic control on a time and space scale, but also shows a unique advantage in revealing the dynamic behavior of the genetic correlations among different but developmentally related traits. Its methodological innovation is to integrate mathematical aspects of phenotype formation and progression into a genetic mapping framework to test the interplay between genes and development. Various differential equations which have been instrumental for studying nonlinear and complex dynamics in engineering [27] have shown increasing value and power to quantify the emergent properties of a biological system and interpret experimental results [9-12,28,29].
+
+The past two decades have witnessed an excellent success in modeling HIV dynamics with differential equations [9-12]. Treating viral-host interactions as a system, Appendix 1 gives a basic model composed of three ordinary differential equations (ODE) for describing the short-term overall dynamics of uninfected cells (x), infected cells (y), and free virus particles (v). These three components together determine the extent and process of pathogenesis according to six ODE parameters, i.e., the rates of production and death of uninfected cells, the rate of production of infected cells from free viruses, the rate of death of infected cells, and the rates of production and death of new viruses from infected cells. Thus, by changing the values of these parameters singly or in combination, the dynamic properties of viral infection, such as viral half life, the limiting ratio of infected to uninfected cells, and the basic reproductive ratio of the virus, can be quantified and predicted [10]. By embedding a system of ODEs within a mixture model framework (Appendix 1), we can use systems mapping to identify specific host genes and their interactions for the pattern of viral dynamics and infection inside a host body. Figure 1 illustrates the characterization of a hypothesized gene that contributes to variation in viral dynamic behavior. Per these genotype-specific changes, an optimal strategy for HIV treatment in terms of the dose and time at which an antiviral drug is administrated can be determined, thus providing a first step toward personalized medicine [23].
+
+In practice, a drug may be resisted if HIV-1 viruses mutate to create new strains [30]. The emergence of drug resistance is a consequence of evolution and presents a response to pressures imposed on the viruses. Different viruses vary in their sensitivity to the drug used and some with greater fitness may be capable of surviving drug treatment [31,32]. In order to understand how viruses are resistant to drugs through mutation, the basic model of Appendix 1 should be expanded to include three additional variables, cells infected by mutant virus, mutant virus particles, and the probability of mutation from wild-type to resistant mutant during reverse transcription of viral RNA into proviral DNA [9]. Systems mapping shows tremendous power to detect genes for virus drug resistance [21] and predict the dynamics of drug resistance (Figure 2). Systems mapping can not only better interpret the genetic mechanisms of drug resistance from experimental data, but also provide scientific guidance on the administration of new antiviral drugs.
+
+Mapping triple genome interactions
+
+It has been widely accepted that the symptoms and severity of infectious diseases are determined by pathogen-host specificity through cellular, biochemical and signal exchanges [4,33-35]. This specificity, established by undermining a host’s immunological ability to mount an immune response against a particular pathogen, is found to be under genetic determination. Current genetic studies of pathogen-host systems focus on either the host or the pathogen genome, but there is increasing recognition that the complete genetic architecture of pathogen-host specificity, described by the number, position, effect, pleiotropy, and epistasis among genes, involves interactive components from both host and viral genomes [35-38]. In other words, the infection phenotype does not merely result from additive effects of host and pathogen genotypes, but also from specific interactions between the two genomes [35,37].
+
+While many molecular studies define pathogen-host interactions, regardless of the type of hosts, epidemiological models distinguish the difference of hosts as a recipient and transmitter to better characterize the epidemic structure of disease infection, given that infectious diseases like HIV/AIDS are transmitted from an infected person to another [39-41]. From this point of view, the infection outcome should be determined differently but simultaneously by genes from transmitters and recipients. To chart a comprehensive picture of genetic control mechanisms for viral dynamics, we need to address the questions of how genes from viral and host genomes interact to influence viral dynamics and how genetic interactions between recipients and transmitters of virus play a part in the dynamic behavior of viruses. Li et al. [42] pioneered the unification of quantitative genetic theory and epidemiological dynamics for characterizing triple-genome interactions from viruses, transmitters and recipients.
+
+Systems mapping described in Appendix 2 should be embedded within Li et al.’s [42] unifying model to include the interactions of genes derived from the three genomes. This integration allows main genetic effects and epistatic interactions expressed at the genome level to be tested and characterized, including additive effects from the (haploid) viral genome, additive and dominant effects from the transmitter genome, additive and dominant effect from the recipient genome as well as all possible interactions among these main effects. It is interesting to note that the integrated system mapping is capable of estimating and testing high-order epistasis from the viral, recipient and transmitter genomes. Given a growing body of evidence that high-order epistasis is an important determinant of the genetic architecture of complex traits [43-45], systems mapping should be equipped with triple genome interaction modeling.
+
+It should be pointed out that virus evolves through gene recombination and mutations. The genetic machineries that cause viral evolution can be incorporated into systems mapping without technical difficulty. Through such incorporation, systems mapping will provide a useful and timely incentive to detect the genetic control mechanisms of viral dynamics and antivirus drug resistance dynamics and ultimately to design personalized medicine to treat HIV-1 infection from increasingly available genome and HIV data worldwide.
+
+Toward precision medicine
+
+A major challenge that faces drug development and delivery for controlling viral diseases is to develop computational models for analyzing and predicting the dynamics of decline in virus load during drug therapy and further providing estimates of the rate of emergence of resistant virus. The integration of well-established mathematical models for viral dynamics with high-throughput genetic and genomic data within a statistical framework will raise a hope for effective diagnosis and treatment of infections with HIV virus through developing potent antiviral drugs based on individual patients’ genetic makeup.
+
+In this opinion article, we have provided a synthetic framework for systems mapping of viral dynamics during its progression to AIDS. This framework is equipped with unified mathematical and statistical power to extract genetic information from messy data and possess the analytical and modeling efficiency which does not exist for traditional approaches. By fitting the rate of change of virus infection with clinically meaningful mathematical models, the spatio-temporal pattern of genetic control can be illustrated and predicted over a range of time and space scales. Statistical modeling allows the estimation of mathematical parameters that specify genetic effects on viral dynamics. By genotyping both host and viral genomes, systems mapping is able to identify which viral genes and which human genes from recipients and transmitters determine viral dynamics additively or through non-linear interactions. In this sense, it paves a new way to chart a comprehensive picture of the genetic architecture of viral infection.
+
+An increasing trend in drug development is to integrate it with systems biology aimed to gain deep insights into biological responses. Large-scale gene, protein and metabolite (omics) data that found the building blocks of complex systems have become essential parts of the drug industry to design and deliver new drug [46,47]. However, the true wealth of systems biology will critically rely upon the way of how to incorporate it into human cell and tissue function that affects pathogenesis. By integrating knowledge of organ and system-level responses and omics data, systems mapping will help to prioritize targets and design clinical trials, promising to improve decision making in pharmaceutical development.
+
+Appendix 1. Mathematical models of viral dynamics
+
+Basic model
+
+Bonhoeffer et al. [10] developed a basic model for short-term virus dynamics. The model includes three variables: uninfected cells, x, infected cells, y, and free virus particles, v. These three types of cells interact with each other to determine the dynamic changes of virus in a host’s body, which can be described by a system of differential equations:
+
+ 
+
+where uninfected cells are yielded at a constant rate, λ, and die at the rate dx; free virus infects uninfected cells to yield infected cells at rate βxv; infected cells die at rate ay; and new virus is yielded from infected cells at rate ky and dies at rate uv. The system (1) is defined by six parameters (λdβaku) and some initial conditions about x, y, and v.
+
+The dynamic pattern of this system can be determined and predicted by the change of these parameters and the initial conditions of x, y, and v. The basic reproductive ratio of the virus is defined as R  = βλk/(adu). If R  is larger than one, then system converges in damped oscillations to the equilibrium x* = au/(βk), y* = λ/a – du/(βk), and v* = λk/(au) – d/β. The average life-times of uninfected cells, infected cells, and free virus are given by 1/d, 1/a, and 1/u, respectively. The average number of virus particles produced over the lifetime of a single infected cell (the burst size) is given by k/a.
+
+Resistance model
+
+When a treatment is used to control HIV-1, the viruses will produce the resistance to the drug through mutation. The dynamics of drug resistance can be modeled by
+
+ 
+
+where y, y , v, and v  denote cells infected by wild-type virus, cells infected by mutant virus, free wild-type virus, and free mutant virus, respectively [10]. The mutation rate between wild-type and mutant is given by ε (in both directions). For a small ε, the basic reproductive ratios of wild-type and mutant virus are R  = βλk/(adu) and R  = β λk /(adu).
+
+Model (2) shows that the expected pretreatment frequency of resistant mutant depends on the number of point mutations between wild-type and resistant mutant, the mutation rate of virus replication, and the relative replication rates of wild-type virus, resistant mutant, and all intermediate mutants. Whether or not resistant virus is present in a patient before therapy will crucially depend on the population size of infected cells.
+
+Cell diversity model
+
+The infected cells may harbor actively replicating virus (y ), latent virus (y ) and defective virus (y ). The basic model (1) can be expanded to include these three types, expressed as
+
+ 
+
+where q , q , and q  (q  + q  + q  = 1) are the proportions that the cell will immediately enter active viral replication at a rate of virus production k, become latently infected with the virus at a (much slower) rate of virus production c, and produce a defective provirus that will not produce any offspring virus, respectively; and a , a , and a  are the decay rates of actively producing cells, latently infected cells, and defectively infected cells, respectively.
+
+The basic reproductive ratio of the wild-type is R  = βλA/(du). If R  is larger than one, then system converges to the equilibrium x* = u/(βA),  , and  , where  .
+
+A full model of viral dynamics can be obtained by unifying the resistance model and cell diversity model to form a system of nine ODEs, expressed as
+
+ 
+
+This group of ODEs provides a comprehensive description of how viral loads change their rate in a time course, how infected cells are generated in response to the emergence of viral particles, and how viral mutation impacts on viral dynamics and drug resistance dynamics. The emerging properties of system (4) were discussed in ref. [10], which can be integrated with systems mapping described in Appendix 2.
+
+Appendix 2. Systems mapping of viral dynamics
+
+Systems mapping allows the genes and genetic interactions for viral dynamics to be identified by incorporating ODEs into a mapping framework. Consider a segregating population composed of n HIV-infected patients genotyped for a set of molecular markers. These patients were repeated sampled to measure uninfected cells (x), infected cells (y) and viral load (v) in their plasma at a series of time points. If specific genes exist to affect the system (1) in Appendix 1, the parameters that specify the system should be different among genotypes. Genetic mapping uses a mixture model-based likelihood to estimate genotype-specific parameters. This likelihood is expressed as
+
+ 
+
+where x  = (x (t ), …, x(tT )) , y  = (y (t ), …, y(tT )) and v  = (v (t ), …, v (tT )) are the phenotypic values of x, y, and v for subject i measured at T  time points, ω  is the conditional probability of QTL genotype j (j = 1, …, J) given the marker genotype of patient i, and f (x ,y ,v ) is a multivariate normal distribution with expected mean vector for patient i that belongs to genotype j, 
+
+ 
+
+and covariance matrix for subject i,
+
+ 
+
+ with  ,   and   being (T  × T ) covariance matrices of time-dependent x, y and v values, respectively, and elements off-diagonal being a (T  × T ) systematical covariance matrix between the two variables.
+
+For a natural population, the conditional probability of functional genotype given a marker genotype (ω ) is expressed in terms of the linkage disequilibria between different loci [48]. In systems mapping, we incorporate ODEs (1) of Appendix 1 into mixture model (1) to estimate genotypic means (2) specified by ODE parameters for different genotypes, expressed as (λ d β a k u ) for j = 1, …, J. Since x, y and v variables obey dynamic system (1) of Appendix 1, the derivatives of genotypic means can be expressed in a similar way. Let g (tμ ) denote the genotypic derivative for variable k (k = x, y, or z), i.e.,
+
+ 
+
+We use μ  to denote the genotypic mean of variable j for individual i belonging to genotype j at an arbitrary point in a time course. The Runge–Kutta fourth order algorithm can be used to solve the ODEs.
+
+Next, we need to model the covariance structure by using a parsimonious and flexible approach such as an autoregressive, antedependence, autoregressive moving average, or nonparametric and semiparametric approaches. Yap et al. [49] provided a discussion of how to choose a general approach for covariance structure modeling. In likelihood (1), the conditional probabilities of functional genotypes given marker genotypes can be expressed as a function of recombination fractions for an experimental cross population or linkage disequilibria for a natural population [48,50]. The estimation of the recombination fractions or linkage disequilibria can be implemented with the Expectation-Maximization (EM) algorithm.
+
+To demonstrate the usefulness of systems mapping, we assume a sample of n HIV-infected patients drawn from a natural human population at random. The sample is analyzed by systems mapping, leading to the detection of a molecular marker which is associated with a QTL that determines the dynamics of drug resistance in a way described by (2) in Appendix 1. At the QTL detected, there are three genotypes AA, Aa and aa, each with a different set of curve parameters (λ, d, β, β , a, k, k , u, ε) estimated by systems mapping. We assume that these parameters are estimated as (10, 0.01, 0.005, 0.02, 0.5, 10, 10, 3, 0.0001) for genotype AA, (12, 0.01, 0.005, 0.02, 0.6, 8, 8, 3, 0.0001) for genotype Aa, and (12, 0.008, 0.005, 0.02, 0.55, 8, 12, 4, 0.0001) for genotype aa. Using these estimated values, we draw the curves of drug resistance dynamics for each genotype (Figure 2). Pronounced differences in the form of these curves indicate that the QTL plays an important part in determining the resistance dynamics of drugs used to treat HIV/AIDS.
+
+The model for systems mapping described above can be expanded in two aspects, mathematical and genetic, to better characterize the genetic architecture of viral dynamics. The mathematical expansions are to incorporate the drug resistance model (2), the cell diversity model (3) and the unifying resistance and cell diversity model (4). These expansions allow the functional genes operating at different pathways of viral-host reactions to be identified and mapped, making system mapping more clinically feasible and meaningful. The genetic expansions aim to not only model individual genes from the host or pathogen genome but also characterize epistatic interactions between genes from different genomes. This can be done by expanding the conditional probability of functional genes given marker genotypes ω  using a framework derived by Li et al. [42].
+
+By formulating and testing novel hypotheses, system mapping can address many basic questions. For example, they are
+
+1) How do DNA variants regulate viral dynamics?
+
+2) How do these genes affect the average life-times of uninfected cells, infected cells, and free virus, respectively?
+
+3) How do genes determine the emergence and progression of drug resistance?
+
+4) Are there specific genes that control the possibility of virus eradication by antiviral drug?
+
+5) How important are gene-gene interactions and genome-genome interactions to the dynamic behavior of viral load with or without treatment?
+
+Figure 1
+
+        The simulated gene has three genotypes AA, Aa and aa, each displaying a different time trajectory for each of these three cell types. Based on these differences, one can test and determine how the gene affects the emerging properties of viral dynamic system, such as average life-times of different cell types and the points of three variables (indicated by triangles) when the system converges to an equilibrium state. The parameter values are (λ, d, β, a, k, u) = (10, 0.01, 0.005, 0.5, 10, 3), (12, 0.01, 0.005, 0.6, 8, 3), and (12, 0.008, 0.005, 0.55, 8, 4) for genotypes AA, Aa and aa, respectively.
+
+Figure 2
+
+  The system simulation focuses on uninfected cell, x ( ), infected cells, y, for wild-type virus (solid line) and mutant virus (dash lines) ( ), and free virus, v, for wild-type virus (solid line) and mutant virus (dash line) ( ), and relative frequency of mutant virus in free virus (solid line) and infected cell population (dash line) ( ).
+

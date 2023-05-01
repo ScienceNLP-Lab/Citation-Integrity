@@ -1,0 +1,100 @@
+Wellington-bootstrap: differential DNase-seq footprinting identifies cell-type determining transcription factors
+
+Abstract
+
+Background
+
+The analysis of differential gene expression is a fundamental tool to relate gene regulation with specific biological processes. Differential binding of transcription factors (TFs) can drive differential gene expression. While DNase-seq data can provide global snapshots of TF binding, tools for detecting differential binding from pairs of DNase-seq data sets are lacking.
+
+Results
+
+In order to link expression changes with changes in TF binding we introduce the concept of differential footprinting alongside a computational tool. We demonstrate that differential footprinting is associated with differential gene expression and can be used to define cell types by their specific TF occupancy patterns.
+
+Conclusions
+
+Our new tool, Wellington-bootstrap, will enable the detection of differential TF binding facilitating the study of gene regulatory systems.
+
+Electronic supplementary material
+
+The online version of this article (doi:10.1186/s12864-015-2081-4) contains supplementary material, which is available to authorized users.
+
+Background
+
+Digital DNaseI footprinting is a high throughput adaptation of classical DNaseI footprinting [1]. By subjecting nuclei to digestion by DNaseI, nucleosome-depleted genomic regions (accessible chromatin) that are sensitive to cleavage can be identified as DNase Hypersensitive Sites (DHSs) [2, 3]. Analyses of the patterns by which DNase I cuts within DHSs enables the identification of regions protected from digestion or “footprints”, which accurately demarcate transcription factor binding sites (TFBSs) at sub-30 bp resolution [4–10]. However, all currently available footprinting tools are designed for the analysis of a single DNase-seq data set at a time and thus will indiscriminately identify TFBSs that are part of a variety of different gene regulatory networks, limiting the ability to link regulatory events to cell- and tissue-specific processes, such as changes in cell fate or response to extracellular signals. For gene expression studies, a plethora of computational methods have been developed in order to identify genes that are differentially expressed in different conditions, thereby linking gene expression to changes in cellular status. However, a similar methodology that identifies differential transcription factor occupancy between DNase-seq datasets has so far been lacking, and methods such as DiffBind [11], designed for ChIP-seq are not appropriate for DNase-seq data. Here we describe the development of a novel computational tool to identify differential footprints (DFPs). We show that this tool can be used to link differential TF occupancy with differential gene expression and to identify closely related cell types by virtue of their TF occupancy patterns.
+
+Results and discussion
+
+We have developed a conceptually simple and computationally efficient method, Wellington-bootstrap, for pairwise analysis of DNase-seq data sets. Wellington-boostrap builds on the Wellington method for detecting footprints in individual data sets [8]. Wellington uses knowledge of the strand imbalance around the TFBS introduced by the size-selection step in the double-hit DNase-seq method [12] in order to accurately detect footprints. This strand imbalance results in a characteristic pattern of reads aligning to the positive reference strand directly upstream of the TFBS and reads aligning to the negative reference strand directly downstream of the TFBS. With Wellington-bootstrap, footprints in data set A are detected and at each footprint locus a statistical test is performed testing whether pooling the data of data set B with A contributes to the footprint pattern or not. This yields a set of sites that are over-footprinted in A (under-footprinted in B) and associated DFP scores. Repeating the analysis with reversed roles for A and B yields over-footprinted sites in B (under-footprinted in A). We chose the approach of pooling data at individual loci in order to avoid biases that may be brought about by variations in sequencing depth.
+
+Table 1 A large proportion of differential footprints occurs in shared DHSs. Applying Wellington-bootstrap to publically available DNase-seq data for CD8+ and CD19+ cells we find 37,488 sites with evidence for DFPs. Furthermore, the Wellington-bootstrap score provides a way to order DFPs by the extent of footprint differences (Fig. 1). We found similar results making pairwise comparisons for all DNase-seq data sets for seven cell types from clinical tissue samples. A large proportion (up to 98.5 %, 43.9 % on average) of DFPs are found in DHSs that are shared between cell types, in particular in closely related cell types, indicating that these differences would be missed by restricting analyses to the presence or absence of DHSs (Table 1).
+
+Using Spinal cord and CD4+ cells as example we tested the ability of DFPs to re-discover known regulatory links and predict gene expression. In CD4+ cells, the T cell specific TF T-bet binds T-box motifs and enhances target gene expression as part of the Th1-differentiation programme [13]. In spinal cord cells, the TF MAZ is known to be involved in neuronal development [14]. Among the set of all DFPs located near transcriptional start sites and over-footprinted in CD4+ cells we identified the sites containing a match for the T-box motif. We found that the expression of nearby genes differed significantly, with the DNase-seq data providing strong evidence for the presence of protein binding in CD4+ cells and absence of binding in spinal cord cells (Fig. 2a, b). Similarly, we found that a link between binding to MAZ motifs and gene expression was evident (Additional file 1: Figure S1a, b), demonstrating the ability of the DFP approach to isolate the effect of individual TFs from their genomic context.
+
+Previously, comparisons of total read numbers in DHSs have been used as a means of analysing pairs of DNase-seq data sets [15]. We identified the set of T-box motif-containing DHSs in gene promoters with the highest increase in read numbers in CD4+ cells compared to spinal cord cells. While these showed differential expression of nearby genes, no evidence for differences in binding was revealed using this approach (Fig. 2c, d). Similarly, this approach did not reveal the regulatory link between MAZ binding and target gene expression (Additional file 1: Figure S1c, d). The cleavage profiles shown in Fig. 2b, d and Additional file 1: Figure S1b, d have been corrected for the known sequence preference of the DNaseI enzyme. Additional file 1: Figure S2 compares cleavage profiles with and without this correction. Overall, this suggests that unlike DFPs, motif analysis of DHSs is insufficient to link a given TF to changes in gene expression, making the use of DFPs a valuable tool for this purpose.
+
+We sought to further explore the potential of the DFP approach to reveal cell type-specific regulatory mechanisms. Using differential footprints amongst all pairs of DNase-seq data sets of seven primary cell types, we determined the relative frequency of motif occurrences for a set of known TF binding motifs and used this data to cluster the set of pairs of cell lines as well as the set of TF binding motifs (Fig. 3). This analysis generated a number of striking results. Firstly, our DFP methodology combined with clustering recovered the different cell types as separate clusters. Moreover, it was able to distinguish between the different cell types as their specifically occupied DNA sequences clustered together. Secondly, the analysis gave interesting insights into the relative role of individual TF families within a given cell type. For example, high differential C/EBP motif occupancy was a classifier for CD14+ monocytes as well as fibroblasts, both of which express CEBPA, but the relative motif frequency was lower in fibroblasts which agrees with the fact that this factor is absolutely essential for monocyte but not fibroblast development [16, 17]. Another interesting finding was that increased occupancy of PU.1 motifs was a classifier for both B cells and CD14+ monocytic cells where this factor plays an important role [18], but a significant number of such sites were occupied also in T cells. PU.1 is expressed in hematopoietic stem cells from which all hematopoietic cells originate, but its expression is down-regulated in T cells and its overexpression is detrimental for their development [19]. There is some overlap between the binding specificities of different ETS-family proteins [20]. It is therefore possible that some of these sequences are bound by another ETS factor in T cells. Importantly, gene expression patterns of typical TFs corresponding to motifs enriched in differential footprints showed tissue-specific expression, whereby they tended to be expressed in the cell type in which they were differentially footprinted. Comparable motifs could also be obtained in an unbiased way via de novo motif discovery, as exemplified for a CD19 versus CD4 differential footprinting analysis (Additional file 1: Figure S4). These motif results are supported by previous findings in B-cells [21, 22].
+
+To facilitate the wide-spread use of our method, we provide an implementation of Wellington-bootstrap alongside a substantial update of pyDNase, including increased performance and parallelised computations. This is released as open source under the GPLv3 license at https://github.com/jpiper/pyDNase.
+
+Conclusions
+
+In conclusion, we introduce a fundamental and useful method for differential footprints, provide a tool for the detection of DFPs, and reveal the potential of this approach to map regulators to context-specific gene expression. Applying this methodology will be highly relevant for classifying closely related cell types, both in the normal, but also the diseased state and to assess the relative importance of specific TF families for each state. Wellington-bootstrap is applicable to any pair of DNase-seq data sets obtained with comparable experimental protocols including perturbation and time course experiments, making it a widely applicable approach for the identification of transcriptional regulatory hierarchies.
+
+Methods
+
+DNase-seq data and peak-finding
+
+DNase-seq data from the NIH Roadmap Epigenomics project [23] were downloaded from the Short Read Archive (accessions CD4: SRX214041, CD8: SRX204403, CD19: SRX342324, CD14: SRX252602, CD56: SRX204402, spinal cord: SRX121287, fibroblasts: SRX135564) and were aligned to hg19 using Bowtie 2.2.0 [24] using the default parameters. DNase hypersensitive site detection for all DNase-seq data was performed using HOMER’s findPeaks.pl tool [25] with the parameters “findPeaks -region -size 500 -minDist 50 -o auto -tbp 0”.
+
+Differential footprinting – Wellington-bootstrap
+
+Wellington-bootstrap first determines Wellington footprints in the primary dataset. At each footprint locus the data from the comparator dataset is added and the Wellington footprint score for the pooled data evaluated. Wellington-bootstrap then assesses if the change in footprint score is a consequence of the increase in read numbers after pooling reads or if the data from the comparator dataset makes a contribution to the footprint structure. To do this, the comparator data is randomly shuffled 1000 times, pooled, and the Wellington footprint score evaluated (see example in Additional file 1: Figure S3). Shuffling is done in a strand independent manner, randomising the positions of the counts of 5′ DNase cuts per base pair on the positive and negative strand. The score of pooled data without shuffling is assessed against the bootstrap distribution and the percentile used as the differential footprinting score. Low scores indicate non-differential footprints, high scores differential footprints. Figure 1 shows that sorting by this score orders pairs of footprints in an intuitive manner enabling the user to retrieve the most differential footprints while choosing the stringency. 10 was used as the threshold in this work. The role of the two datasets is reversed and the computation repeated to obtain both over- and under-footprinted sites.
+
+It was initially thought that flexibility would be required regarding the width of the footprint and its position in the two datasets. Whilst initial methods were developed to take this into consideration, we found that this provided no improvement to the method, yet yielded a significant speed decrease. This analysis has been implemented in the wellington_bootstrap.py script as part of pyDNase 0.2.0.
+
+Differential DHSs – Fig. 2 and Additional file 1: Figure S1
+
+Differential DHSs (∆DHS) scores were calculated according to the method proposed by He et al. 2012 [15] and the implementation used here has been provided as dnase_dshs_scores.py in pyDNase 0.2.0. DHSs were then filtered to those that were within 2 kb of a single TSS using the hg19 UCSC knownGene gene model, and the DHSs showing the top and bottom n = 1000 ∆DHS scores were chosen as the differential DHSs. Equivalent results were obtained using the following alternative choices for n: 50 (matching the number of DFPs used in Fig. 2a,b), top 476 and bottom 300 (corresponding to two standard deviations difference to mean ∆DHS score), 1403 (corresponding to top and bottom 10 %).
+
+RNA-seq analysis
+
+RNA-seq data were downloaded from the Short Read Archive (accessions CD4: SRR643766, spinal cord: SRR980477) and FPKM was estimated using Tophat 2.0.11 [26] and Cufflinks 2.1.1 [27] with the Illumina iGenomes UCSC hg19 knownGene GTF file.
+
+Motif analysis – Fig. 3
+
+The annotatePeaks.pl script of the HOMER package was used to find occurrences of known motifs in peaks. Wellington-bootstrap was applied to compute 42 sets of differential footprints for all ordered pairs of the seven cell types used (CD4/CD8 T-cells, CD56 NK cells, CD19+ B cells, spinal cord cells, fibroblasts, CD14+ monocytes). To analyse motif frequencies in differential footprints motif search was done within the differential footprint coordinates extended by 10 bp either side. Relative motif frequencies were calculated as 
+
+where C is a scaling constant, n  is the number of differential footprints in set j (j = 1,2,…,42) that are occupied by motif i (i = 1, 2,….,I), I is the total number of motifs used, and M  the total number of differential footprints in each subset j (j = 1,2,…,42). A matrix was generated and motif scores displayed as a heatmap after hierarchical clustering with Euclidean distance and complete linkage. Blue indicates low relative frequency; red/black indicates high relative frequency. Heatmaps were generated using Mev of the TM4 microarray software suite [28].
+
+Gene expression of transcription factors in all tissues
+
+HG_U133A microarray expression data from BioGPS [29], covering 84 normal tissues as well as penis foreskin fibroblasts (GEO accession number GSE4521) were retrieved, concatenated and normalized via R using the normalizeQuantiles function of limma [30]. Heatmap images were obtained via Java Treeview [31].
+
+De novo motif discovery
+
+The findMotifsGenome.pl script of the HOMER package was used to perform de novo motif discovery in CD19 versus CD4 differential footprints.
+
+pyDNase 0.2.0 – cutting bias correction
+
+In order to plot cut bias corrected average DNase cleavage plots, the DNaseI 6-mer cutting bias data from naked genomic data from the IMR90 cell line and for each region an ‘expected count’ was calculated using the ‘predicted count’ formula from He et al. 2014 [32]. The observed cuts at each base pairs were then divided by the expected counts. Bias correction modes have been added to the plotting scripts in pyDNase that can be invoked with the ‘-b < genome.fa>’ option. The BAMHandlerWithBias class in pyDNase provides underlying access to the bias correction for power users. In this we have provisioned the ability for the user to supply a Variant Call Format (VCF) file so that the reference DNA sequence can be corrected using SNPs present in the sample being analysed if desired.
+
+pyDNase 0.2.0 – other new features and improvements
+
+pyDNase 0.2.0 represents a major release for pyDNase, bringing several improvements. The core Wellington algorithm was reimplemented in C, and the underlying code structure was refactored in order to allow for parallelisation of Wellington score calculation. On a dual 2.66Ghz i7 Xeon workstation with 8 cores, footprinting a single dataset takes approximately 30 min, compared to up to 20 h previously on a single core – this performance increase scales linearly with number of cores utilised. In addition, a number of analysis scripts have been added to the pyDNase library for calculating ∆DHS scores, calculating Wellington-bootstrap scores, annotation of BED files with Footprint Occupancy Scores, and the annotation of a BED file with DNase cuts. A comprehensive DNase-seq footprinting tutorial has also been added to assist those new to DNase-seq analysis and DNase-seq footprinting. Full details can be found at the pyDNase github repository (https://github.com/jpiper/pyDNase).
+
+Data access
+
+All software is released as open source under the GPLv3 license at http://jpiper.github.io/pyDNase/.
+
+Fig. 1
+
+Wellington-bootstrap scores differential footprint occupancy between DNase-seq datasets. Wellington-bootstrap was applied at footprint loci in CD8+ cells to detect over-footprinted sites relative to CD19+ cells.   53,539 loci were sorted by increasing Wellington-bootstrap score comparing CD8 vs CD19. Eight thousand seven hundred eighty loci were deemed to be DFPs. Red indicates an excess of positive strand cuts over negative strand cuts per nucleotide position, and green indicates an excess of negative strand cuts. Common footprints at the top of the heatmap share similar DNase activity as exemplified in ( ) and ( ) whereas footprints with increasing differential score towards the bottom of the heatmap show increasingly differential footprints ( ,  ,  )
+
+Fig. 2
+
+Differential footprints reveal links between TF binding and gene expression.   Differential gene expression (p < 0.005, Mann–Whitney U test) of all genes that have a differential CD4 footprint containing a match for the T-box motif in their promoter.   Average bias-corrected DNase-seq cleavage profiles (red: positive strand cuts, green: negative strand cuts) centred on T-box motifs in promoters of genes from ( ) show evidence for binding of T-box motifs in CD4+ cells, but not in spinal cord cells. Genes over-footprinted for T-box in CD4+ cells are also over-expressed, confirming a known lineage-determining link.   Differential gene expression of all genes that have a differential CD4+ DHS containing a match for the T-box motif in their promoter.   Average bias-corrected DNase-seq cleavage profiles centred on T-box motifs in promoters of genes from ( ) do not show evidence for binding in either cell type. The differential expression observed in ( ) cannot be linked to TF binding using differential DHS scores alone
+
+Fig. 3
+
+Analysis of differential footprints in the haematopoietic system reveals cell-type specific transcription factor networks. Differential footprints in 42 pairs of cell types and matches to known motifs inside differential footprints were determined using DNase-seq data from the NIH Roadmap Epigenomics project. Coloured boxes represent motif frequency with red indicating higher than average frequency. Hierarchical clustering was applied to rows and columns. Red arrows highlight members of the ETS family of transcription factors. BioGPS gene expression of typical tissue-specific TFs corresponding to motifs enriched in DFPs is shown to the right, with GAPDH as a positive control (bottom). The result correctly groups cell types and reveals known and likely regulatory factors
+
