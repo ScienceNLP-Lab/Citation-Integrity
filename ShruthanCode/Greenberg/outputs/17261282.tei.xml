@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">ENDOPLASMIC RETICULUM STRESS INDUCES MYOSTATIN PRECURSOR PROTEIN AND NF-κB IN CULTURED HUMAN MUSCLE FIBERS: RELEVANCE TO INCLUSION-BODY MYOSITIS</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2007-07-05">2007 July 5.</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Anna</forename><surname>Nogalska</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Slawomir</forename><surname>Wojcik</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">W</forename><surname>King Engel</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Janis</forename><surname>Mcferrin</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><roleName>MD</roleName><forename type="first">Valerie</forename><surname>Askanas</surname></persName>
+							<email>askanas@usc.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Neurology</orgName>
+								<orgName type="institution" key="instit1">USC Neuromuscular Center</orgName>
+								<orgName type="institution" key="instit2">University of Southern California Keck School of Medicine</orgName>
+								<orgName type="institution" key="instit3">Good Samaritan Hospital</orgName>
+								<address>
+									<postCode>90017</postCode>
+									<settlement>Los Angeles</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">USC Neuromuscular Center</orgName>
+								<orgName type="institution" key="instit2">Good Samaritan Hospital</orgName>
+								<address>
+									<addrLine>637 S. Lucas Ave</addrLine>
+									<postCode>90017</postCode>
+									<settlement>Los Angeles</settlement>
+									<region>CA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">ENDOPLASMIC RETICULUM STRESS INDUCES MYOSTATIN PRECURSOR PROTEIN AND NF-κB IN CULTURED HUMAN MUSCLE FIBERS: RELEVANCE TO INCLUSION-BODY MYOSITIS</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2007-07-05">2007 July 5.</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">998C7E6DE41355491E68552E5EBB9799</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.2" ident="GROBID" when="2023-03-30T18:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Myostatin precursor protein</term>
+					<term>myostatin</term>
+					<term>endoplasmic reticulum stress</term>
+					<term>inclusion-body myositis</term>
+					<term>Nuclear factor-κB</term>
+					<term>cultured human muscle fibers</term>
+					<term>proteasome inhibition</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Sporadic-inclusion body myositis (s-IBM) is the most common progressive muscle disease of older persons. It leads to pronounced muscle fiber atrophy and weakness, and there is no successful treatment. We have previously shown that myostatin precursor protein (MstnPP) and myostatin (Mstn) dimer are increased in biopsied s-IBM muscle fibers, and proposed that MstnPP/Mstn increase may contribute to muscle fiber atrophy and weakness in s-IBM patients. Mstn is known to be a negative regulator of muscle-fiber mass. It is synthesized as MstnPP, which undergoes posttranslational processing in the muscle fiber to produce mature, active Mstn. To explore possible mechanisms involved in Mstn abnormalities in s-IBM, in the present study we utilized primary cultures of normal human muscle fibers and experimentally modified the intracellular microenvironment to induce endoplasmic-reticulum (ER)-stress, thereby mimicking an important aspect of the s-IBM muscle fiber milieu. ER-stress was induced by treating well-differentiated cultured muscle fibers with either tunicamycin or thapsigargin, both well-established ER-stress inducers. Our results indicate for the first time that the ER-stress significantly increased MstnPP mRNA and protein.</p><p>The results also suggest that in our system ER-stress activates NF-κB, and we suggest that MstnPP increase occurred through the ER-stress-activated NF-κB. We therefore propose a novel mechanism leading to the Mstn increase in s-IBM. Accordingly, interfering with pathways inducing ER-stress, NF-κB activation, or its action on the MstnPP gene promoter might prevent Mstn increase and provide a new therapeutic approach for s-IBM and, possibly, for muscle atrophy in other neuromuscular diseases.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Sporadic-inclusion body myositis (s-IBM) is the most common muscle disease associated with aging (recently reviewed in <ref type="bibr" target="#b9">Engel and Askanas, 2006)</ref>. It is a relentlessly progressive disease, manifested by pronounced muscle weakness and wasting, leading to severe disability. There is no successful treatment <ref type="bibr" target="#b9">(Engel and Askanas, 2006)</ref>. Histological hallmarks of s-IBM muscle fibers include: a) vacuolar degeneration and atrophy of muscle fibers, accompanied by intramuscle-fiber accumulations of congophilic, ubiquitinated, multi-protein aggregates; and b) lymphocytic inflammation <ref type="bibr" target="#b2">(Askanas and Engel, 2006;</ref><ref type="bibr" target="#b7">Dalakas, 2006)</ref>. The pathogenesis of s-IBM appears complex and multifactorial <ref type="bibr" target="#b2">(Askanas and Engel, 2006</ref>). An intriguing aspect of the s-IBM muscle-fiber phenotype is its similarity to Alzheimer-disease brain, including accumulations of amyloid-β (Aβ), and of phosphorylated tau in the form of paired helical filaments (reviewed in <ref type="bibr" target="#b1">Askanas and Engel, 2001;</ref><ref type="bibr" target="#b2">Askanas and Engel, 2006)</ref>. Endoplasmic reticulum (ER)-stress and the unfolded protein response (UPR) were recently demonstrated in s-IBM muscle fibers <ref type="bibr" target="#b44">(Vattemi et al., 2004)</ref>. Further evidence of ER-stress involvement in the s-IBM pathogenesis is the increased mRNA and protein of Herp, a novel ER-stress-induced protein <ref type="bibr" target="#b32">(Nogalska et al., 2006)</ref>. Inhibition of 26S proteasome activity and the presence of aggresomes were also recently demonstrated within s-IBM muscle fibers <ref type="bibr" target="#b11">(Fratta et al., 2005)</ref>. Previously, NF-κB was shown to be an aspect of the s-IBM pathology, but its activation has not been studied <ref type="bibr" target="#b47">(Yang et al., 1998)</ref>.</p><p>We recently showed that in s-IBM muscle fibers both myostatin precursor protein (MstnPP) and myostatin (Mstn) dimer were significantly increased, and we proposed that this increase might contribute to the muscle fiber atrophy of s-IBM <ref type="bibr" target="#b46">(Wojcik et al., 2005)</ref>.</p><p>Mstn, a member of the transforming growth factor-β (TGF-β) superfamily, is a negative regulator of muscle growth during development, and of muscle mass in adulthood (reviewed in <ref type="bibr">Gonzales-Cadavid and Bhasin, 2004;</ref><ref type="bibr" target="#b19">Joulia-Ekaza and Cabello, 2006)</ref>. A child, who has a homozygous MstnPP gene mutation resulting in reduced production of Mstn protein, has increased muscle bulk and strength <ref type="bibr" target="#b42">(Schuelke et al., 2004)</ref>. Conversely, mature Mstn protein was reported increased in muscle tissue of patients with HIV-associated muscle wasting <ref type="bibr">(Gonzales-Cadavid et al., 1998)</ref>, and increased MstnPP mRNA was reported in muscle wasting associated with osteoarthritis <ref type="bibr" target="#b39">(Reardon et al., 2001)</ref>. In mouse models, knocking out the myostatin gene, overexpressing proteins neutralizing myostatin, or natural mutations of the myostatin gene cause increased muscle mass <ref type="bibr">(Gonzales-Cadavid and Bhasin, 2004)</ref>. Accordingly, diminishing the action of myostatin might be considered a potential method for treating muscle atrophy in various neuromuscular disorders.</p><p>Within muscle fibers, Mstn is synthesized as Mstn precursor protein (MstnPP) <ref type="bibr">(Gonzales-Cadavid and</ref><ref type="bibr">Bhasin, 2004,McFarlane et al., 2005)</ref>. MstnPP, a 375 aminoacid protein translated from a 3.1-kb mRNA <ref type="bibr">(Gonzales-Cadavid et al., 1998)</ref>, undergoes a series of intracellular posttranslational modifications in order to produce mature, active Mstn <ref type="bibr">(Gonzales-Cadavid and Bhasin, 2004;</ref><ref type="bibr" target="#b29">McFarlane et al., 2005)</ref>.</p><p>One of our approaches to explore molecular pathogenic mechanisms in s-IBM involves experimentally modifying the cellular micro-environment of cultured human muscle fibers (CHMFs) to mimic various aspects of the s-IBM pathogenesis <ref type="bibr" target="#b4">(Askanas et al, 1996;</ref><ref type="bibr">1997;</ref><ref type="bibr" target="#b30">McFerrin et al., 1998;</ref><ref type="bibr" target="#b11">Fratta et al., 2005;</ref><ref type="bibr" target="#b32">Nogalska et al., 2006)</ref>. To address possible mechanisms involved in Mstn increase in s-IBM, in the present study we induced ER-stress in CHMFs and studied its influence on: a) expression of MstnPP mRNA and protein, and b) NF-κB activation.</p><p>Our rationale was that: a) both ER-stress and NF-κB are components of the s-IBM pathogenesis <ref type="bibr" target="#b47">(Yang et al., 1998;</ref><ref type="bibr" target="#b44">Vattemi et al., 2004;</ref><ref type="bibr" target="#b32">Nogalska et al., 2006)</ref>; b) ER-stress has been reported to activate NF-κB in other cells <ref type="bibr" target="#b34">(Pahl and Baeuerle, 1995;</ref><ref type="bibr" target="#b33">Pahl, 1999;</ref><ref type="bibr" target="#b8">Deng et al., 2004)</ref>; and c) the MstnPP gene promoter has been reported to have an NF-κB binding site <ref type="bibr" target="#b28">(Ma et al., 2001)</ref>. In our human muscle culture model, we here report for the first time that: a) ER-stress induces both MstnPP mRNA and its protein, and b) the induction of Mstn might occur through the NF-κB activated by the ER-stress. We also demonstrate that NF-κB is activated in s-IBM muscle biopsies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EXPERIMENTAL PROCEDURES Cultured Human Muscle Fibers</head><p>Primary cultures of normal human muscle were established, as we described, from satellite cells of portions of diagnostic muscle biopsies from patients who, after all tests were performed, were considered free of muscle disease <ref type="bibr" target="#b0">(Askanas and Engel, 1992)</ref>. Experiments were performed on eight culture sets, each established from satellite cells derived from a different muscle biopsy. All experimental conditions were studied on sister cultures in the same culture set. 20 days after fusion of myoblasts, well-differentiated myotubes were treated for 24 hours with two well-known ER stress inducers, Tunicamycin, an N-glycosylation inhibitor (4μg/ml), or Thapsigargin, an inhibitor of ER calcium-ATPase (300 nM) <ref type="bibr" target="#b5">(Back et al., 2005;</ref><ref type="bibr" target="#b25">Lee, 2005)</ref> (both inhibitors from Sigma Co, St. Louis, MO). After treatment, experimental cultures and their untreated-sister-controls were processed for: RNA isolation, immunoblotting, and isolation of nuclei for electrophoretic mobility shift assay (EMSA). In addition, treatment with two well-established NF-κB inhibitors, Bay 11-7082, an inhibitor of IκB phosphorylation and its subsequent degradation (10μM) <ref type="bibr" target="#b37">(Pierce et al., 1997;</ref><ref type="bibr" target="#b10">Epinat and Gilmore, 1999)</ref>, or pyrrolidine dithiocarbamate (PDTC), an inhibitor of IκB polyubiquitination and its subsequent degradation (50 μM) <ref type="bibr" target="#b10">(Epinat and Gilmore, 1999;</ref><ref type="bibr" target="#b15">Hayakawa et al., 2003)</ref> (both from Sigma), were applied for 24 hours simultaneously with the ER-stress inducers, and to control untreatedcultures. To determine whether any of the treatments induced apoptosis in CHMFs, immunoblots of all groups were performed using a polyclonal antibody against activated caspase 3 (Santa Cruz, CA), diluted 1:200.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RNA isolation and RT-PCR</head><p>Total RNA was isolated as described, using RNA-bee reagent (Tel-Tech, Friendwood, TX) <ref type="bibr" target="#b32">(Nogalska et al., 2006)</ref>. 1μg of RNA was used in the RT-PCR reaction utilizing OneStep RT-PCR kit (Qiagen,Valencia, CA) and primers for myostatin (Fw-GTGGTACCTCATGCAAAAACTGCAACTCTGT; Rv -ATGGATCCAA TCTCATGAGCACCCACAGC) or for GAPDH <ref type="bibr" target="#b26">(Lehmann et al., 2002)</ref>. The optimized conditions for myostatin were 30 min at 50°C, 15 min at 95°C, followed by 31 cycles of amplification (94°C for 30 s, 60°C for 30 s, 72°C for 90 s). The final incubation was 10 min at 72°C. In addition, 1μg of RNA was submitted for cDNA synthesis as described <ref type="bibr" target="#b32">(Nogalska et al., 2006)</ref>, and used in PCR reactions with specific primers obtained from Invitrogen that allow amplification of the ER-chaperone GRP78 <ref type="bibr" target="#b25">(Lee, 2005)</ref>, ER-protein Herp <ref type="bibr" target="#b32">(Nogalska et al., 2006</ref><ref type="bibr" target="#b22">,Kokame et al., 2000)</ref>, and XBP-1 <ref type="bibr" target="#b5">(Back et al., 2005)</ref>. The conditions of the reactions were experimentally checked to ensure that signals were in the linear range of the PCR. All experiments were performed in duplicate. Identity of the products was confirmed by sequencing. GAPDH was used as a loading control for the PCR reactions. Evaluation of PCR bands was performed by densitometric analysis using NIH Image J 1.310 software.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Immunoblotting</head><p>CHMFs were harvested in RIPA buffer, homogenized, and protein concentration measured using the Bradford method <ref type="bibr" target="#b44">(Vattemi et al., 2004;</ref><ref type="bibr" target="#b11">Fratta et al., 2005)</ref>. Denatured 40μg protein samples were loaded onto 10%NuPage gels, electrophoresed in MOPS-SDS buffer, transferred to nitrocellulose membranes, and immuno-probed overnight with anti-myostatin rabbit polyclonal antibody (Chemicon, Temecula, CA), diluted 1:500. This antibody has been shown to be highly specific in studies by ourselves and others <ref type="bibr">(Gonzales-Cadavid et al., 1998;</ref><ref type="bibr">Reisz-Poraszasz et al., 2003;</ref><ref type="bibr" target="#b46">Wojcik et al., 2005)</ref>. On immunoblots, this antibody recognizes both a 55kDa band of MstnPP and a 26kDa band of mature Mstn dimer in biopsied adult muscle fibers, and a 55kDa band in cultured muscle fibers <ref type="bibr" target="#b29">(McFarlane et al., 2005</ref>; and our results herein). After incubation with an appropriate secondary antibody, blots were developed using the enhanced chemiluminescence system. Protein loading was evaluated by actin bands visualized with a mouse monoclonal anti-actin antibody (1:2000) (Santa Cruz). Quantification of immunoreactivity was performed by densitometric analysis using the Kodak-GelLogic-440 system (Eastman Kodak Company, Rochester, NY).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrophoretic mobility shift assay (EMSA)</head><p>This was performed on nuclei isolated from CHMFs, and from s-IBM and normal-control muscle biopsies.</p><p>A. Nuclear extracts were prepared from CHMFs as described for other cells <ref type="bibr" target="#b27">(Li et al., 2005)</ref>, with some modifications. In brief, CHMFs grown in 35mm dishes were washed twice with PBS. After addition of 100μl of cold buffer (100mM HEPES pH7.9, 10mM KCl, 10mM EDTA, 1mM DTT, 0.4% NP-40) containing phosphatase <ref type="bibr">(Pierce, Rockford, IL)</ref> and protease (Roche Diagnostic, Mannheim, Germany) inhibitor cocktails, cells were incubated 10 minutes on ice, and then scraped and disrupted by pipetting and homogenization. The lysates were centrifuged for 3 min at 14,000 rpm at 4°C. The pellet was resuspended in 20mM HEPES pH7.9, 200mM NaCl, 1mM EDTA, 10% glycerol, 1mM DTT and phosphatase and protease inhibitor cocktails, by vortexing for 60 seconds. The samples were kept on ice and repetitively vortexed for 60sec every 5 min on the maximum setting, and then centrifuged for 5min at 14,000 rpm at 4°C. The supernatants (nuclear fraction) were immediately transferred to new pre-chilled tubes. Doublestranded oligonucleotides, representing consensus sequences of either NF-κB or Octomer -1 (OCT-1) (an irrelevant ubiquitous transcription factor used as a loading control <ref type="bibr" target="#b18">[Jiang et al., 2003]</ref>) (both from Promega, Madison, WI), were labelled with [γ-32 P]ATP (3000Ci/mmol; Perkin Elmer, Boston, MA) using reagents provided in the Gel Shift Assay System (Promega). 5μg of nuclear protein isolated from CHMFs was incubated for 30 min at room temperature in 1x EMSA binding buffer <ref type="bibr">(Pierce)</ref> with addition of glycerol (2.5%), Poly (dI-dC) (50 ng/ μl), NP-40 (0.05%), MgCl 2 (5mM), in a final assay volume of 20μl. DNA/protein complexes were separated by gel electrophoresis in 6% DNA retardation gel (Invitrogen).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B.</head><p>EMSA for translocated nuclear NF-κB was performed on nuclear extracts prepared from three control and three s-IBM muscle biopsies, as described above for CHMFs. The results were densitometrically scanned and calculated per OCT-1 as a loading control.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistical analysis</head><p>The statistical significance was determined by ANOVA followed by the Tukey-Kramer posthoc test, using GraphPad InStat software. Statistical significance of differences between s-IBM and control muscle biopsies (comparing two groups) was determined by Student T-test. The level of significance was set at p&lt;0.05. Data are presented as means ± SEM for all groups.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Treatment with tunicamycin or thapsigargin induces ER-stress in CHMFs</head><p>We used 24 hours of treatment with 4 μg/ml tunicamycin (Tm) or 300 μM thapsigargin (Tg) in all experiments, since in our previous study <ref type="bibr" target="#b32">(Nogalska et al., 2006)</ref> those doses and the timing were the most effective, and they did not induce any adverse morphological abnormality or affect muscle-fiber viability. Because human muscle material from which those primary cultures are derived is very sparse, we were not able to perform ranges of doses. In the present study, treatment of CHMFs with Tg or Tm induced characteristic molecular markers of ERstress such as: a) XBP-1 mRNA splicing; b) increase of GRP78 mRNA; and c) increase of Herp mRNA (Fig. <ref type="figure" target="#fig_0">1A and 1B</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ER-stress induces MstnPP mRNA and protein in CHMFs</head><p>24 hours of treatment with either ER-stress inducer greatly increased MstnPP mRNA (Fig. <ref type="figure" target="#fig_1">2A,  B</ref>). (Because CHMFs treated with Tg for either 6 or 24 hours had similarly increased MstnPP mRNA level, 24 hour-treatment was used in all experiments.) In addition to the increased MstnPP mRNA, treatment with either Tg or Tm significantly increased MstnPP protein (Fig. <ref type="figure" target="#fig_1">2C, D</ref>). (Mature 13kDa myostatin and 26kDa myostatin dimer were not apparent on our immunoblots, which is consistent with a recent study demonstrating that in well-differentiated myotubes of a C2C12 mouse-muscle cell-line and bovine myotubes, mature myostatin was not detected on immunoblots <ref type="bibr" target="#b29">[McFarlane et al., 2005]</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ER-stress activates NF-κB in CHMFs</head><p>To evaluate whether ER-stress activates NF-κB in our CHMFs, we studied the induction of NF-κB DNA-binding activity by EMSA performed on nuclear extracts prepared from cultures treated with Tg or Tm, as compared to the unstressed-sister-control cultures. NF-κB DNAbinding in CHMFs was dramatically increased in cultures treated with either Tg or Tm. As a loading control, we measured DNA-binding of a ubiquitous transcription factor OCT-1 (Fig. <ref type="figure" target="#fig_2">3A</ref>). The specificity of the NF-κB DNA-binding was confirmed by adding to the binding mixture either: a) a 100x molar excess of a specific cold unradiolabeled DNA probe containing the NF-κB consensus sequence (Fig. <ref type="figure" target="#fig_2">3B</ref>, sp), or b) an excess of a non-specific cold CREB DNA probe containing the ATF consensus binding sequence <ref type="bibr" target="#b18">(Jiang et al., 2003)</ref> (Fig. <ref type="figure" target="#fig_2">3B, nsp</ref>). Only the specific probe containing the NF-κB consensus binding sequence eliminated the DNA-NF-κB binding (Fig. <ref type="figure" target="#fig_2">3B, sp</ref>). Simultaneous treatment of CHMFs with either of the ERstress inducers and a known NF-κB inhibitor, Bay 11-7082 or PDTC, resulted in no shifted band being present (Fig. <ref type="figure" target="#fig_2">3C</ref>), which suggested an inhibition of NF-κB activation. Together, the above indicate that, similarly to other cells, in cultured human muscle fibers NF-κB is induced by ER-stress.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>NF-κB participates in ER-stress-induced increase of MstnPP mRNA</head><p>To evaluate possible involvement of NF-κB in transcriptional regulation of Mstn mRNA expression during ER-stress, we cultured human muscle fibers in the presence of each of the ER-stress inducers and each NF-κB inhibitor, and evaluated their influence on MstnPP mRNA. Treatment with an NF-κB inhibitor, either Bay 11-7082 or PDTC, did not influence morphology or viability, or lead to apoptosis of either control or ER-stress-induced CHMFs. Lack of apoptosis was evidenced by lack of caspase-3 cleavage on the immunoblots (Fig. <ref type="figure" target="#fig_2">3D</ref>). However, in contrast to the control-unstressed-sister cultures in which NF-κB inhibitors had no effect on MstnPP mRNA (Fig. <ref type="figure" target="#fig_3">4A, B</ref>), simultaneous treatment of CHMFs with either ERstress inducer, Tg or Tm, and either NF-κB inhibitor profoundly inhibited the MstnPP mRNA increase obtained by treatment with either ER-stressor alone (Fig. <ref type="figure" target="#fig_3">4C, D</ref>). Those results strongly suggest NF-κB involvement in the regulation of Mstn mRNA during ER-stress. To evaluate the specificity of the observed response, we studied the influence of the NF-κB inhibitors on GRP78 and Herp mRNAs in the same cultures in which MstnPP mRNA was studied. In contrast to MstnPP mRNA, simultaneous treatment of CHMFs with the ER-stressinducer thapsigargin and NF-κB inhibitor Bay 11-7082, increased GRP78 but not Herp mRNAs, while treatment with tunicamycin and Bay 11-7082 did not cause any significant changes in expression of GRP78 and HERP mRNAs (Fig. <ref type="figure" target="#fig_3">4E-H</ref>). This suggests a distinct regulation of the MstnPP gene from those of GRP78 and Herp. However, the other NF-κB inhibitor, PDTC, decreased GRP78 and Herp mRNAs in tunicamycin treated cultures (Fig. <ref type="figure" target="#fig_3">4E-H</ref>), but to a lesser degree than it decreased Mstn mRNA studied in the same cultures (Fig. <ref type="figure" target="#fig_3">4C-D</ref>). Since, in addition to inhibiting NF-κB activation, PDTC has also been shown to inhibit activity of the 26S proteasome <ref type="bibr" target="#b21">(Kim et al., 2004;</ref><ref type="bibr" target="#b43">Si et al., 2005)</ref>, in two independent experiments we simultaneously treated CHMFs for 24 hours with either of the ER-stress inducers together with 1μM epoxomicin (Biomol Research Laboratories, Plymouth Meeting, PA), an irreversible proteasome inhibitor <ref type="bibr" target="#b31">(Meng et al., 1999)</ref>. In our previous studies, 24 hours of treatment with this dose of epoxomicin did not affect muscle morphology or viability, but it effectively inhibited proteasome activity <ref type="bibr" target="#b11">(Fratta et al., 2005;</ref><ref type="bibr" target="#b32">Nogalska et al., 2006)</ref>. In the present study, similarly to the PDTC effect, epoxomicin treatment prominently decreased MstnPP mRNA, and to a lesser degree also decreased mRNAs of GRP78 and Herp (Fig. <ref type="figure" target="#fig_4">5A</ref>). Moreover, as previously reported for other proteasome inhibitors tested in other cells <ref type="bibr" target="#b10">(Epinat and Gilmore, 1999)</ref>, in our studies treatment with epoxomicin also inhibited NF-κB DNAbinding activity in CHMFs (Fig. <ref type="figure" target="#fig_4">5B</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>NF-κB activation is increased in s-IBM muscle fibers</head><p>EMSA performed on nuclei isolated from s-IBM and control muscle biopsies showed 4-fold (p&lt;0.05) increase of NF-κB binding in s-IBM muscle biopsies as calculated by a densitometric analysis of NF-κB per OCT-1 (Figs. <ref type="figure" target="#fig_5">6A and 6B</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head><p>Our study provides novel results suggesting that MstnPP gene expression is regulated at least partly by ER-stress. Additionally, our results suggest that, in human cultured muscle fibers, increased expression of MstnPP occurs through ER-stress-induced activation of transcription factor NF-κB. The mechanism of ER-stress-increased MstnPP mRNA appears to be different from the ER-stress-induced increase of mRNAs of the two well-known ER-stress-induced proteins: GRP78 and Herp, since a specific NF-κB inhibitor, Bay 11-7082, greatly reduced MstnPP mRNA abundance but did not have a similar influence on GRP78 and Herp mRNAs. Another NF-κB inhibitor, PDTC, which is known to also inhibit proteasome function <ref type="bibr" target="#b21">(Kim et al., 2004;</ref><ref type="bibr" target="#b43">Si et al., 2005)</ref>, decreased not only MstnPP mRNA, but also mRNAs of GRP78 and Herp. It has been previously reported that proteasome inhibition disturbs ER function, and it reduces activation of the ER-stress-induced chaperone GRP78 <ref type="bibr" target="#b24">(Lee et al., 2003)</ref> and Herp <ref type="bibr" target="#b32">(Nogalska et al., 2006)</ref>. It has also been reported that experimental proteasome inhibition reduces activation of NF-κB <ref type="bibr" target="#b10">(Epinat and Gilmore, 1999;</ref><ref type="bibr" target="#b15">Hayakawa et al., 2003)</ref>. Our study demonstrates for the first time that proteasome inhibition greatly decreases ER stress-induced Mstn mRNA, and we propose that this response is obtained through preventing NF-κB activation by ER-stress. Activation of NF-κB during ER-stress in other cells has been shown to occur through the ER-overload response (EOR) <ref type="bibr" target="#b36">(Pahl and Baeuerle, 1997)</ref>, whose signaling pathways were proposed to be distinct from the unfolded protein response (UPR) <ref type="bibr" target="#b36">(Pahl and Baeuerle, 1997;</ref><ref type="bibr" target="#b18">Jiang et al., 2003;</ref><ref type="bibr" target="#b17">Hung et al., 2004)</ref>. Although several pharmacological and biological agents induce both NF-κB activation and UPR, some of the inducers distinguish between the two pathways <ref type="bibr" target="#b36">(Pahl and Baeuerle, 1997)</ref>. NF-κB is a ubiquitous, inducible transcription factor, involved in many important biological processes, including inflammation and apoptosis. In non-stimulated cells, NF-κB resides in the cytoplasm where it is bound to its inhibitory protein IκB <ref type="bibr" target="#b14">(Grossmann et al., 1999)</ref>. In response to various stimuli, NF-κB dissociates from IκB and then translocates into the nucleus, where it binds to the promoters of various genes to influence their expression <ref type="bibr" target="#b14">(Grossmann et al., 1999;</ref><ref type="bibr" target="#b41">Schmitz et al., 2004)</ref>. NF-κB proteins can exists as homo-or hetero-dimers, composed of any of five different subunits, p50 (NF-κB1), p52 (NF-κB2), p65 (RelA), relB and c-Rel <ref type="bibr" target="#b14">(Grossmann et al., 1999;</ref><ref type="bibr" target="#b41">Schmitz et al., 2004)</ref>. We propose two possible mechanisms of MstnPP upregulation by ER-stressactivated action of NF-κB: a) a direct mechanism, in which NF-κB binds to its reported binding sequence in the MstnPP gene promoter, or b) an indirect mechanism, in which NF-κB binds to an NF-κB consensus site in the promoter of another gene(s?) that encodes a protein(s) involved in MstnPP regulation. The 5′-regulatory region of human MstnPP gene is known to contain various transcriptional response elements. Among them an NF-κB consensus site was identified, but no testing of its functionality was performed <ref type="bibr" target="#b28">(Ma et al., 2001)</ref>. There is no published evidence suggesting presence of any known ER-stress response elements in the promoter region of MstnPP gene. Further experimental studies are needed to elucidate the precise mechanism of the ER-stress-induced NF-κB influencing MstnPP regulation. Whether calcium release from the sarcoplasmic reticulum, p38 MAPK activation, or other pathways previously shown to activate NF-κB during ER stress <ref type="bibr" target="#b35">(Pahl and Baeuerle, 1996;</ref><ref type="bibr" target="#b18">Jiang et al., 2003;</ref><ref type="bibr" target="#b8">Deng et al., 2004;</ref><ref type="bibr" target="#b17">Hung et al., 2004;</ref><ref type="bibr" target="#b16">Hu et al., 2006)</ref> participate in the NF-κB induction and MstnPP mRNA increase in cultured human muscle fibers remain to be studied.</p><p>Previously, it was reported that TNFα-induced-NF-κB does not influence MstnPP mRNA in a C2C12 mouse muscle cell line <ref type="bibr" target="#b6">(Bakkar et al., 2005)</ref>. Similarly, in cultured human muscle fibers, we did not observe any changes in either MstnPP, or GRP78 and Herp mRNA levels when NF-κB was induced by treatment with TNFα (data not shown). While those results seem contradictory to our demonstration here that NF-κB activation increases Mstn mRNA, the difference might be explained by: a) the fact that under different stimulatory situations different homo-and hetero-dimer combinations of NF-κB take place, which subsequently may result in different NF-κB binding properties to its DNA targets <ref type="bibr" target="#b23">(Kunsch et al., 1992;</ref><ref type="bibr" target="#b33">Pahl 1999;</ref><ref type="bibr" target="#b18">Jiang et al., 2003)</ref>; or b) TNFα might have a separate, direct or indirect, inhibitory effect on activation of the MstnPP gene. Furthermore, different NF-κB co-activators or posttranslational modifications of its subunits might also influence its different binding properties <ref type="bibr" target="#b38">(Rahman et al., 2004;</ref><ref type="bibr" target="#b41">Schmitz et al., 2004;</ref><ref type="bibr" target="#b45">Viatour et al., 2005)</ref>.</p><p>Previously, NF-κB accumulation was shown in s-IBM muscle fibers <ref type="bibr" target="#b47">(Yang et al., 1998)</ref>, but its nuclear translocation was not studied. Our present study demonstrates that there is increased NF-κB bound to nuclear DNA, suggesting increased activation of NF-κB in s-IBM muscle fibers. Several factors proposed to participate in the s-IBM pathogenesis, including ER-stress, inflammation, and accumulation of amyloid-β <ref type="bibr" target="#b2">(Askanas and Engel, 2006;</ref><ref type="bibr" target="#b7">Dalakas, 2006)</ref>, might contribute to the NF-κB activation in s-IBM muscle fibers <ref type="bibr" target="#b34">(Pahl and Baeuerle 1995;</ref><ref type="bibr" target="#b33">Pahl 1999;</ref><ref type="bibr" target="#b8">Deng et al., 2004;</ref><ref type="bibr" target="#b20">Kaltschmidt et al., 2005)</ref>. Here, based on our experimental studies, we suggest that ER-stress causes NF-κB activation and increase of MstnPP in cultured human muscle fibers. Since ER-stress has been demonstrated in s-IBM muscle biopsies, the same mechanism might also be occurring in s-IBM patients' muscle fibers to explain their demonstrated increase of MstnPP and Mstn <ref type="bibr" target="#b46">(Wojcik et al., 2005)</ref>. The increased Mstn is likely contributing to the prominent muscle-fiber atrophy in s-IBM. Although the exact mechanisms involved in the ER-stress induction of MstnPP mRNA in human muscle fibers still need to be elucidated, our data suggest that interfering with the induction of, or effects of, ER-stress might prevent Mstn increase and provide new therapeutic approaches for s-IBM. Whether this mechanism contributes to muscle atrophy in other neuromuscular disorders needs to be evaluated. Representative agarose gel electrophoresis of XBP-1 (A), GRP78 and Herp (B) PCR products in control "C" and in Tg and Tm treated CHMFs. They illustrate evidence of the ER-stress by: XBP-1-splicing, and increased GRP78 and Herp mRNAs. GAPDH mRNA is used as a loading control. MW -DNA molecular weight marker.     </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig 1 .</head><label>1</label><figDesc>Fig 1. Treatment with Tg and Tm induce ER-stress in cultured human muscle fibers (CHMFs)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig 2 .</head><label>2</label><figDesc>Fig 2. ER-stress induces MstnPP mRNA and protein in CHMFs (A) Representative agarose gel electrophoresis of PCR products corresponding to myostatin precursor protein (MstnPP) mRNA obtained from control "C" cultured human muscle fibers (CHMFs), and CHMFs treated for 24 h with ER-stress inducers thapsigargin (Tg) or tunicamycin (Tm). GAPDH mRNA was used as a loading control. (B) Densitometric analysis of the PCR bands, performed using NIH Image J 1.310, and expressed in arbitrary units based on eight independent experiments. The GAPDH mRNA was used to normalize corresponding MstnPP mRNA bands. Control is designated as "1". (C) Immunoblots of homogenates of control CHMFs and CHMFs, treated with Tg or Tm, showing 55kDa MstnPP. The actin bands indicate protein loading in each sample. (D) Densitometric analysis of the bands performed with the Kodak-GelLogic-440 system, based on 8 independent experiments. Data are expressed in arbitrary units. ± S.E.M. "**" indicates significance of p&lt;0.001;"*" indicates significance of p&lt;0.05.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig 3 .</head><label>3</label><figDesc>Fig 3. ER-stress activates NF-κB in cultured human muscle fibers (A) Autoradiogram of an NF-κB EMSA performed on nuclear extracts from control "C" and Tg-and Tm-treated CHMFs. Shown below, as a loading control, is EMSA for the constitutive DNA-binding protein OCT-1 performed on the same nuclear extracts as NF-κB. (B) To determine the specificity for the NF-κB binding site, unlabeled DNA, containing either the NF-κB binding-site (sp = specific competitor) or the unrelated CREB DNA binding-site (nsp = nonspecific competitor), was added at 100x molar excess to EMSA binding mixtures containing nuclear extracts from Tm-treated cultures. Only the specific competitor eliminated NF-κB shift. (C) Autoradiograms of an NF-κB EMSA performed with nuclear extracts from CHMFs treated with Tm or Tg alone, and with addition of NF-κB inhibitors Bay 11-7082 or PDTC. Both inhibitors essentially eliminated the NF-κB shift. (D) Using antibody against caspase-3, immunoblot of homogenates of control CHMFs and CHMFs undergoing various treatments shows lack of apoptosis as evidenced by lack of 20 and 17 kDa bands that would indicate cleaved forms of caspase-3. Those bands are clearly visible in Jurkat cells undergoing apoptosis due to treatment with cytochrome c (J act), but are not present in untreated-control Jurkat cells (J). Control and cytochrome c-treated Jurkat cells (human leukemia T-cells) were obtained from Cell Signaling (Danvers, MA).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig 4 .</head><label>4</label><figDesc>Fig 4. NF-κB participates in ER-stress-induced increase of MstnPP mRNA (A) Representative agarose gel electrophoresis of the RT-PCR products corresponding to MstnPP in control "C" CHMFs, and in control cultures treated with ER-stress inhibitors Bay 11-7082 or PDTC. GAPDH was used as a loading control. NF-κB inhibitors do not influence MstnPP mRNA in control CHMFs (A and B). (C) Representative agarose gel electrophoreses of the RT-PCR products corresponding to the MstnPP mRNA from cultures simultaneously treated with either Tg and an NF-κB inhibitor Bay 11-7082 or PDTC, or with Tm and either of NF-κB inhibitor, as compared to cultures treated with either Tg or Tm alone, showed prominent decrease of MstnPP mRNA. (D) Densitometric analysis of the PCR bands as in (C), based on 8 experiments and expressed in arbitrary units, indicates that, compared to CHMFs treated with either Tg or Tm alone, simultaneous treatment of cultures with Tg plus either NF-κB inhibitor, or with Tm plus either NF-κB inhibitor, greatly decreased MstnPP mRNA (** = p&lt;0.001). (E and G) Representative agarose gel electrophoreses of the RT-PCR products corresponding to GRP78 (E) or Herp (G) mRNAs from cultures simultaneously treated with Tg plus either NF-κB inhibitor, Bay 11-7082 or PDTC, or with Tm plus either NF-κB inhibitor, as compared to cultures treated with either Tg or Tm alone. (F and H) Densitometric analyses of the PCR bands as in E and G, based on 8 experiments and expressed in arbitrary units, indicate that, cultures treated simultaneously with Tm and PDTC, had decreased mRNAs of both GRP78 and Herp, even though to a lesser degree that the decrease of MstnPP mRNA (D). (** = p&lt;0.001; * = p&lt;0.05).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig 5 .</head><label>5</label><figDesc>Fig 5. Epoxomicin decreases mRNAs of MstnPP, GRP 78 and Herp in ER-stress-induced CHMFs, and it eliminates the NF-κB shift in them (A) Representative agarose gel electrophoreses of the PCR products corresponding to MstnPP, GRP78 and Herp mRNAs from cultures simultaneously treated with either Tg or Tm combined with epoxomicin, or with Tg and Tm alone. There is a profound decrease of MstnPP mRNA, and a slightly smaller decrease of GRP78 and Herp mRNAs. (B) Autoradiogram of an NF-κB EMSA performed with nuclear extracts from control, Tg, and Tm treated CHMFs, as well from CHMFs simultaneously treated with the ER-stress inducer, Tg or Tm, plus epoxomicin. Addition of epoxomicin greatly reduces NF-κB activation.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig 6 .</head><label>6</label><figDesc>Fig 6. NF-κB activation is increased in s-IBM muscle fibers (A) Autoradiogram of an NF-κB EMSA shows increased activation of NF-κB in s-IBM. OCT-1 indicates loading control. (B) Densitometric analysis based on 3 control and 3 s-IBM muscle biopsies, normalized per OCT-1, shows greatly increased NF-κB activation in s-IBM muscle fibers (*= p&lt;0.05).</figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0">Exp Neurol. Author manuscript; available in PMC 2007 July 5.</note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>Supported by grants from the National Institutes of Health (AG16768 Merit Award), the Myositis Association, the Muscular Dystrophy Association (to VA), and the Helen Lewis Research Fund. Anna Nogalska is on leave from Department of Biochemistry, Medical University of Gdansk, Gdansk, Poland. Slawomir Wojcik is on leave from Department of Anatomy and Neurobiology, Medical University of Gdansk, Gdansk, Poland.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Cultured normal and genetically abnormal human muscle</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The Handbook of Clinical Neurology. 18. Myopathies Amsterdam</title>
+				<editor>
+			<persName><forename type="first">L</forename><forename type="middle">P</forename><surname>Rowland</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">S</forename><surname>Di Mauro</surname></persName>
+		</editor>
+		<meeting><address><addrLine>North Holland</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<biblScope unit="page" from="85" to="116" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Inclusion-body myositis: newest concepts of pathogenesis and relation to aging and Alzheimer disease</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neuropathol Exp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="1" to="14" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11202170</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Inclusion-body myositis: a myodegenerative conformational disorder associated with Abeta, protein misfolding, and proteasome inhibition</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="S39" to="48" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16432144</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Beta APP gene transfer into cultured human muscle induces inclusion-body myositis aspects</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroreport</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="2155" to="2158" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9243602</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Transfer of beta-amyloid precursor protein gene using adenovirus vector causes mitochondrial abnormalities in cultured normal human muscle</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Baque</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sarkozi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="1314" to="1319" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8577761</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">ER stress signaling by regulated splicing: IRE1/ HAC1/XBP1</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Back</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schroeder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Kaufman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Methods</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="395" to="416" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15804613</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Myostatin and NF-kB regulate skeletal myogenesis through distinct signaling pathways</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Bakkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wackerhage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Guttridge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Signal Transduction</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="202" to="210" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Inflammatory, immune, and viral aspects of inclusion-body myositis</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="S33" to="38" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16432143</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Translational repression mediates activation of nuclear factor kappa B by phosphorylated translation initiation factor 2</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Scheuner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Kaufman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sonenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Harding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ron</forename><forename type="middle">D</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="10161" to="10168" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15542827</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Inclusion-body myositis: clinical, diagnostic, and pathologic aspects</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="S20" to="29" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16432141</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Diverse agents act at multiple levels to inhibit the Rel/NF-kappaB signal transduction pathway</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Epinat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Gilmore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Oncogene</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="6896" to="6909" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10602465</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Proteasome inhibition and aggresome formation in sporadic inclusion-body myositis and in amyloid-beta precursor protein-overexpressing cultured human muscle fibers</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fratta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Davies</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">167</biblScope>
+			<biblScope unit="page" from="517" to="526" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16049336</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Role of myostatin in metabolism</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">F</forename><surname>Gonzalez-Cadavid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhasin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Clin Nutr Metab Care</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="451" to="457" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15192449</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Organization of the human myostatin gene and expression in healthy men and HIV-infected men with muscle wasting</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">F</forename><surname>Gonzalez-Cadavid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yarasheski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sinha-Hikim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ezzat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lalani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Asa</forename><forename type="middle">S</forename><surname>Mamita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nair</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Arver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhasin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="14938" to="14943" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9843994</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">New insights into the roles of ReL/NF-kappa B transcription factors in immune function, hemopoiesis and human disease</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Grossmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Nakamura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Grumont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gerondakis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Biochem Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="1209" to="1219" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10582348</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Evidence that reactive oxygen species do not mediate NF-kappaB activation</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hayakawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Miyashita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sakamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kitagawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tanaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yasuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Karin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kikugawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">EMBO J</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="3356" to="3366" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12839997</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Autocrine tumor necrosis factor alpha links endoplasmic reticulum stress to the membrane death receptor pathway through IRE1alpha-mediated NF-kappaB activation and down-regulation of TRAF2 expression</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Couvillon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Kaufman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Exton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="3071" to="3084" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16581782</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Endoplasmic reticulum stress stimulates the expression of cyclooxygenase-2 through activation of NF-kappaB and pp38 mitogen-activated protein kinase</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Hung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">J</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">Y</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">S</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Lai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">279</biblScope>
+			<biblScope unit="page" from="46384" to="46392" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15319438</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Phosphorylation of the alpha subunit of eukaryotic initiation factor 2 is required for activation of NF-kappaB in response to diverse cellular stresses</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">Y</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Wek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">C</forename><surname>Mcgrath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Scheuner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Kaufman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Cavener</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Wek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="5651" to="5663" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12897138</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Myostatin regulation of muscle development: Molecular basis, natural mutations, physiopathological aspects</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Joulia-Ekaza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cabello</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp Cell Res</title>
+		<imprint>
+			<biblScope unit="volume">312</biblScope>
+			<biblScope unit="page" from="2401" to="2414" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16793037</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Signaling via NF-kappaB in the nervous system</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kaltschmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Widera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kaltschmidt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochim Biophys Acta</title>
+		<imprint>
+			<biblScope unit="volume">1745</biblScope>
+			<biblScope unit="page" from="287" to="299" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15993497</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Pyrrolidine dithiocarbamate and zinc inhibit proteasome-dependent proteolysis</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">A</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">S</forename><surname>Ahn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp Cell Res</title>
+		<imprint>
+			<biblScope unit="volume">298</biblScope>
+			<biblScope unit="page" from="229" to="238" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15242777</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Herp, a new ubiquitin-like membrane protein induced by endoplasmic reticulum stress</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kokame</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Agarwala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Miyata</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">275</biblScope>
+			<biblScope unit="page" from="32846" to="32853" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10922362</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Selection of optimal kappa B/Rel DNA-binding motifs: interaction of both subunits of NF-kappa B with DNA is required for transcriptional activation</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kunsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Ruben</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Rosen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="4412" to="4421" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 1406630</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Proteasome inhibitors disrupt the unfolded protein response in myeloma cells</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Iwakoshi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Glimcher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="9946" to="9951" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12902539</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">The ER chaperone and signaling regulator GRP78/BiP as a monitor of endoplasmic reticulum stress</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Methods</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="373" to="381" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15804610</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Pseudogene-free amplification of human GAPDH cDNA</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Lehmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Weber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Gastmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Sigusch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biotechniques</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="769" to="770" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Free cholesterol-loaded macrophages are an abundant source of Tumor Necrosis Factor-{alpha} and Interleukin-6: model of NF-{kappa}B-and MAP kinase-dependent inflammation in advanced atherosclerosis</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">F</forename><surname>Schwabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Devries-Seimon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Gerbod-Giannone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Tall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Flavell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Brenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tabas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">280</biblScope>
+			<biblScope unit="page" from="21763" to="21772" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15826936</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Characterization of 5′-regulatory region of human myostatin gene: regulation by dexamethasone in vitro</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mallidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Artaza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Taylor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Gonzalez-Cadavid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhasin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Physiol Endocrinol Metab</title>
+		<imprint>
+			<biblScope unit="volume">281</biblScope>
+			<biblScope unit="page" from="E1128" to="1136" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11701425</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Proteolytic processing of myostatin is auto-regulated during myogenesis</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mcfarlane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Langley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Thomas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hennebry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Plummer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nicholas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mcmahon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kambadur</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Dev Biol</title>
+		<imprint>
+			<biblScope unit="volume">283</biblScope>
+			<biblScope unit="page" from="58" to="69" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15975431</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Impaired innervation of cultured human muscle overexpressing betaAPP experimentally and genetically: relevance to inclusion-body myopathies</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroreport</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="3201" to="3205" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9831451</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Epoxomicin, a potent and selective proteasome inhibitor, exhibits in vivo antiinflammatory activity</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>Kwok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Elofsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Crews</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="10403" to="10408" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10468620</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Homocysteine-induced endoplasmic reticulum protein (Herp) is up-regulated in sporadic inclusion-body myositis and in endoplasmic reticulum stress-induced cultured human muscle fibers</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nogalska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kokame</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Komano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurochem</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="1491" to="1499" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 16441512</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Activators and target genes of Rel/NF-kappaB transcription factors</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Pahl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Oncogene</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="6853" to="6866" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 10602461</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">A novel signal transduction pathway from the endoplasmic reticulum to the nucleus is mediated by transcription factor NF-kappa B</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Pahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Baeuerle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">EMBO J</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="2580" to="2588" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 7781611</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Activation of NF-kappa B by ER stress requires both Ca2+ and reactive oxygen intermediates as messengers</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Pahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Baeuerle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FEBS Lett</title>
+		<imprint>
+			<biblScope unit="volume">392</biblScope>
+			<biblScope unit="page" from="129" to="136" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 8772190</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The ER-overload response: activation of NF-kappa B</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Pahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Baeuerle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Biochem Sci</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="63" to="67" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9048485</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Novel inhibitors of cytokine-induced Ikappa Balpha phosphorylation and endothelial cell adhesion molecule expression show anti-inflammatory effects in vivo</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Pierce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Schoenleber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Jesmok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Best</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Gerritsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">272</biblScope>
+			<biblScope unit="page" from="21096" to="21103" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9261113</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Redox modulation of chromatin remodeling: impact on histone acetylation and deacetylation, NF-[kappa]B and pro-inflammatory gene expression</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Marwick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kirkham</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem Pharmacol</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="1255" to="1267" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15313424</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Myostatin, insulin-like growth factor-1, and leukemia inhibitory factor mRNAs are upregulated in chronic human disuse muscle atrophy</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Reardon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Kapsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Choong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Byrne</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Muscle Nerve</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="893" to="899" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 11410916</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Lower skeletal muscle mass in male transgenic mice with muscle-specific overexpression of myostatin</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Reisz-Porszasz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhasin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Artaza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sinha-Hikim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hogue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Fielder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">F</forename><surname>Gonzalez-Cadavid</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Physiol Endocrinol Metab</title>
+		<imprint>
+			<biblScope unit="volume">285</biblScope>
+			<biblScope unit="page" from="E876" to="888" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 12824080</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">NF-kappaB: a multifaceted transcription factor regulated at several levels</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Schmitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Mattioli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Buss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kracht</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chembiochem</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1348" to="1358" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>see comment. PubMed: 15457532</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Myostatin mutation associated with gross muscle hypertrophy in a child</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schuelke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Wagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E</forename><surname>Stolz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hubner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Riebel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Komen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Braun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Tobin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">N Engl J Med</title>
+		<imprint>
+			<biblScope unit="volume">350</biblScope>
+			<biblScope unit="page" from="2682" to="2688" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15215484</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Pyrrolidine dithiocarbamate reduces coxsackievirus B3 replication through inhibition of the ubiquitinproteasome pathway</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Si</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Mcmanus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cheung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Esfandiarei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Suarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Virol</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="8014" to="8023" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15956547</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Endoplasmic reticulum stress and unfolded protein response in inclusion body myositis muscle</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Vattemi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">164</biblScope>
+			<biblScope unit="page" from="1" to="7" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 14695312</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Phosphorylation of NF-kappaB and IkappaB proteins: implications in cancer and inflammation</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Viatour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Merville</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Bours</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chariot</forename><forename type="middle">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Biochem Sci</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="43" to="52" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15653325</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Myostatin is increased and complexes with amyloid-beta within sporadic inclusion-body myositis muscle fibers</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wojcik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol (Berl)</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="173" to="177" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 15983828</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Immunolocalization of transcription factor NF-kappaB in inclusion-body myositis muscle and at normal human neuromuscular junctions</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurosci Lett</title>
+		<imprint>
+			<biblScope unit="volume">254</biblScope>
+			<biblScope unit="page" from="77" to="80" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>PubMed: 9779924</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

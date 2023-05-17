@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">CME Molecular profiles of inflammatory myopathies</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><roleName>MD</roleName><forename type="first">Steven</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+							<email>sagreenberg@partners.org</email>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">;</forename><forename type="middle">D</forename><surname>Sanoudou</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">;</forename><forename type="middle">J N</forename><surname>Haslett</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>MD</roleName><forename type="first">I</forename><forename type="middle">S</forename><surname>Kohane</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">L</forename><forename type="middle">M</forename><surname>Kunkel</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">;</forename><forename type="middle">A H</forename><surname>Beggs</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">A</forename><forename type="middle">A</forename><surname>Amato</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Neurology (Drs. Greenberg and Amato)</orgName>
+								<orgName type="department" key="dep2">Division of Neuromuscular Disease</orgName>
+								<orgName type="department" key="dep3">Brigham and Women&apos;s Hospital</orgName>
+								<orgName type="department" key="dep4">Divisions of Genetics (Drs. Sanoudou, Kunkel, and Beggs, and J. Haslett) and Endocrinology (Dr. Kohane)</orgName>
+								<orgName type="institution">Harvard Medical School</orgName>
+								<address>
+									<settlement>Boston</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Children&apos;s Hospital Informatics Program (Drs. Greenberg and Kohane)</orgName>
+								<orgName type="institution" key="instit1">Children&apos;s Hospital</orgName>
+								<orgName type="institution" key="instit2">Harvard Medical School</orgName>
+								<address>
+									<settlement>Boston, Boston</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Neurology</orgName>
+								<orgName type="institution">Brigham and Women&apos;s Hospital</orgName>
+								<address>
+									<addrLine>75 Francis Street</addrLine>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">CME Molecular profiles of inflammatory myopathies</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4D6889217C8BFD18BD23424B6035F1AC</idno>
+					<note type="submission">Received March 6, 2002. Accepted in final form July 5, 2002.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.2" ident="GROBID" when="2023-03-30T18:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>To describe the use of large-scale gene expression profiles to distinguish broad categories of myopathy and subtypes of inflammatory myopathies (IM) and to provide insight into the pathogenesis of inclusion body myositis (IBM), polymyositis, and dermatomyositis. Methods: Using Affymetrix GeneChip microarrays, the authors measured the simultaneous expression of approximately 10,000 genes in muscle specimens from 45 patients in four major disease categories (dystrophy, congenital myopathy, inflammatory myopathy, and normal). The authors separately analyzed gene expression in 14 patients limited to the three major subtypes of IM. Bioinformatics techniques were used to classify specimens with similar expression profiles based on global patterns of gene expression and to identify genes with significant differential gene expression compared with normal. Results: Ten of 11 patients with IM, all normals and nemaline myopathies, and 10 of 12 patients with Duchenne muscular dystrophy were correctly classified by this approach. The various subtypes of inflammatory myopathies have distinct gene expression signatures. Specific sets of immunerelated genes allow for molecular classification of patients with IBM, polymyositis, and dermatomyositis. Analysis of differential gene expression identifies as relevant to disease pathogenesis previously reported cytokines, major histocompatibility complex class I and II molecules, granzymes, and adhesion molecules, as well as newly identified members of these categories. Increased expression of actin cytoskeleton genes is also identified. Conclusions: The molecular profiles of muscle tissue in patients with inflammatory myopathies are distinct and represent molecular signatures from which diagnostic insight may follow. Large numbers of differentially expressed genes are rapidly identified.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Dermatomyositis, polymyositis, and inclusion body myositis (IBM) are the three major categories of idiopathic inflammatory myopathy (IM). <ref type="bibr">1</ref> Dermatomyositis is believed to be an autoimmune, humoral-mediated microangiopathy. Polymyositis results from an HLArestricted, antigen-specific, cell-mediated immune response directed against muscle fibers. The antigens to which these autoimmune attacks are generated or the trigger of these responses are not known. IBM may be a primary inflammatory myopathy, like dermatomyositis and polymyositis, or a primary degenerative myopathic disorder, such as a dystrophy with secondary inflammation. <ref type="bibr">2</ref> The inflammatory response and immunohistochemical studies support the hypothesis that IBM is an autoimmune disorder mediated by cytotoxic T cells. <ref type="bibr">3</ref> However, poor clinical response to immunosuppressive therapies argues against a primary autoimmune basis for IBM. <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b4">5</ref> Although clinically distinct, difficulties may arise in distinguishing these disorders by standard clinical and histopathologic criteria. Diagnostic inaccuracies, particularly in regard to inclusion body myositis, result in significant morbidity. <ref type="bibr" target="#b5">6</ref> As many as 20% to 30% of muscle biopsies are interpreted as polymyositis even by myopathologists quite familiar with IBM. <ref type="bibr" target="#b5">6</ref> Significant endomysial inflammation with invasion of non-necrotic muscle fibers and more commonly rimmed vacuoles, tubulofilaments, and amyloid deposition are not always evident and probably reflects sampling bias. <ref type="bibr">2,</ref><ref type="bibr" target="#b5">6,</ref><ref type="bibr" target="#b6">7</ref> A second or third biopsy may be required prior to histologically confirming the diagnosis of IBM. Significant morbidity can arise from the misclassification of patients with IBM as polymyositis because patients with IBM do not typically respond to immunosuppressive medications, unlike polymyositis. Because of the poor response of IBM to immunosuppressive agents, its classification as a primary inflammatory myopathy or a degenerative disease with an inflammatory component is uncertain. <ref type="bibr">2,</ref><ref type="bibr" target="#b7">8</ref> Polymyositis has recently been described as "a challenge in definition and diagnosis." <ref type="bibr" target="#b7">8</ref> Many patients described in the literature as having polymyositis may in fact have had IBM. <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b9">10</ref> Further, an inflammatory response can be seen on muscle biopsies in patients with muscular dystrophy, which can lead to misdiagnosis and unnecessary treatment with immunosuppressive therapies. <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> These misdiagnoses may account for the lower response rate of polymyositis in some published series. <ref type="bibr">14</ref> The biopsies in patients with dermatomyositis can also be misleading. The older literature comments on the common presence of perifascicular atrophy. Although this may be common in children, in our experience and that of others, perifascicular atrophy is a late and infrequent finding in adults. <ref type="bibr" target="#b14">15</ref> The earliest histologic abnormalities are the detection of membrane attack complex deposition on small arterioles and capillaries and demonstration of tubuloreticular inclusions in endothelial walls on electron microscopy. <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref> Nevertheless, these histologic abnormalities are not always evident, again perhaps due to sampling bias.</p><p>DNA microarray technology incorporates molecular genetics and computer science on a massive scale. <ref type="bibr" target="#b28">19</ref> This technology can rapidly provide a detailed comprehensive view of the simultaneous expression of entire genomes and provide new insights into gene function, disease pathophysiology, disease classification, and drug development. <ref type="bibr" target="#b28">[19]</ref><ref type="bibr" target="#b29">[20]</ref><ref type="bibr" target="#b30">[21]</ref><ref type="bibr" target="#b31">[22]</ref><ref type="bibr" target="#b32">[23]</ref><ref type="bibr" target="#b33">[24]</ref><ref type="bibr" target="#b34">[25]</ref><ref type="bibr" target="#b35">[26]</ref><ref type="bibr" target="#b36">[27]</ref><ref type="bibr" target="#b37">[28]</ref><ref type="bibr" target="#b38">[29]</ref> As the set of genes expressed in a cell determines its uniqueness, function, and biochemical activities, microarrays have the potential to serve as "microscopes to see a comprehensive, dynamic molecular picture of the living cell." <ref type="bibr" target="#b39">30</ref> In particular, microarrays have been successfully used to define clinically significant disease subtypes in several diseases through the use of molecular profiles. The molecular profile of a tissue is a quantitative list of relative levels of gene expression, as reflected by the degree of mRNA abundance. This profile may serve as a "signature" of large-scale gene expression. The use of molecular profiles for disease classification and diagnosis has been successful in the study of several types of cancer. <ref type="bibr" target="#b29">[20]</ref><ref type="bibr" target="#b30">[21]</ref><ref type="bibr" target="#b31">[22]</ref><ref type="bibr" target="#b32">[23]</ref><ref type="bibr" target="#b33">[24]</ref><ref type="bibr" target="#b34">[25]</ref> In this study, we applied this method to the classification of myopathies, with particular emphasis on the inflammatory myopathies. We have also explored the ability of microarray measurements to reflect known and possibly new aspects of the pathogenesis of the major subtypes of inflammatory myopathy, IBM, polymyositis, and dermatomyositis.</p><p>Patients and methods. Patients. For the first study of molecular classification, patients from several major cate-gories of myopathies and healthy subjects were studied. This group consisted of 11 unaffected individuals, 12 persons with Duchenne muscular dystrophy, 11 persons with congenital nemaline myopathies, and 11 with inflammatory myopathies. Mean ages and ranges of the patients in each group were as follows: normal subjects, mean 17 years (range 2 to 59 years); Duchenne muscular dystrophy, mean 3 years (range 1 to 7 years); nemaline myopathies, mean 8 years (range 0.06 to 28 years); and inflammatory myopathies, mean 64 years (range 32 to 87 years). The clinical features of the patients with inflammatory myopathies are summarized in table 1; the first 11 patients (GEIM1 -GEIM21) were used for this first classification study.</p><p>For additional classification studies limited to patients with the major subtypes of inflammatory myopathies (IBM, polymyositis, and dermatomyositis), 14 of the 16 patients in table 1 were included; the two patients with other inflammatory myopathies, one with paraneoplastic acute necrotizing myopathy and the other with granulomatous myositis, were excluded. For studies of differential gene expression based on fold ratios, these same 14 patients were used, as well as the only two healthy subjects matched for identical tissue-handling protocol (i.e., biopsy by same surgeon and tissue frozen immediately).</p><p>Patients with IBM fulfilled research criteria for definite or probable IBM. <ref type="bibr">2</ref> The diagnosis of polymyositis and dermatomyositis required symmetrical proximal Ͼ distal weakness, an elevated serum creatine kinase level, and myopathic findings on electromyography. Muscle biopsy in polymyositis revealed endomysial inflammation and invasion of non-necrotic muscle fibers without rimmed vacuoles or inclusions. The diagnosis of dermatomyositis required the presence of a characteristic rash. <ref type="bibr">1</ref> No patients with dermatomyositis had endomysial inflammation and one (GEIM39) had perifascicular atrophy; however, all but one (GEIM12, see below) had membrane attack complex deposition on small blood vessels and tubuloreticular inclusions on electron microscopy. Biopsies were performed for strictly clinical indications, independent of the current study, with an extra piece of tissue removed after informed consent for gene expression studies. An institutional review board approved the study.</p><p>Data sets from patients with nemaline myopathies (Sanoudou et al., unpublished data) and Duchenne muscular dystrophy (Haslett et al., unpublished data) were obtained from specimens in tissue banks at the Children's Hospital in Boston, came from a variety of sources, and included biopsy and autopsy materials. All tissues were obtained through institutional review board-approved protocols.</p><p>Normal tissue came from surgical samples from individuals undergoing surgical procedures unrelated to a neuromuscular disorder (nϭ7), from autopsy specimens (nϭ2), and from histologically normal biopsies performed on patients with chronic fatigue or myalgias but without a neuromuscular disorder (by history, normal neurologic examination, serum creatine kinase, and EMG studies), upon specific request of a referring physician (nϭ2).</p><p>RNA extraction. Normal and patient muscle tissue samples weighing 70 to 120 mg were homogenized in 1 mL of Trizol (Life Technologies, Rockville, MD) at 4 °C. The solution was vortexed and centrifuged. Proteins were removed by chloroform: isoamyl alcohol (49:1) extraction.</p><p>Isopropanol, sodium citrate (0.8 M), and sodium chloride (1.2 M) were used for RNA precipitation. The RNA concentration was measured using the spectrophotometer, and RNA quality was evaluated by running 1 g of RNA on 1% agarose gels.</p><p>Target preparation, hybridization, and signal detection. Approximately 6 to 8 g of RNA were used for cDNA synthesis (Superscript II kit, Life Technology). Biotinlabeled cRNA was produced through in vitro transcription of 1 g of cDNA (BioArray High Yield RNA Transcript Labeling Kit, Enzo, Farmingdale, NY). The cRNA was fragmented and hybridized together with control targets (according to Affymetrix recommendations) on U95A Gene-Chips (Affymetrix, Santa Clara, CA).</p><p>The GeneChips were incubated (16 to 17 hours, 45 °C and 60 rpm) in a rotating oven. They were washed and stained using streptavidin phycoerythrin (Molecular Probes, Eugene, OR) and goat anti-streptavidin biotinylated antibody (Vector Laboratories, Burlingame, CA) in the Affymetrix Fluidics Station, and scanned by the Affymetrix Scanner.</p><p>Data processing. Affymetrix GeneChip software version 4.0 was used for initial raw data processing for classification studies. The more recently released GeneChip software version 5.0 was used for fold ratio analyses because these new algorithms do not produce negative expression levels. Custom software (DAP, Data Analysis Pipeline, Children's Hospital Informatics Program, Boston, MA) was used for additional noise analysis and quality control of the raw data. To confirm the reproducibility of GeneChip hybridization, washing, and staining procedures, two pairs of duplicate experiments were performed (figure <ref type="figure">1</ref>). For each of two tissue samples, a pool of cRNA targets were divided in half and hybridized separately to two GeneChips. Data obtained from hybridization 1 was highly correlated with hybridization 2 (r 2 ϭ 0.99).</p><p>Data analysis and visualization. Average difference values (the Affymetrix computed measure of expression levels) for 12,600 probe sets for each tissue sample were used for data analysis. <ref type="bibr" target="#b40">31</ref> Absolute call values (the Affymetrix computed measure representing confidence in gene expression presence) were not used for data analysis.</p><p>For classification studies, data were normalized by rows (probe sets) and columns (tissue samples) so that all rows have a mean of 0 and standard deviation of 1. In the first study, probe sets showing low variation across all 45 experiments, defined by a standard deviation of the row of less than 1,000, were removed from the analysis, leaving 3,578 varying probe sets. Similarly, to focus on distinctions between IBM and polymyositis, removal of nonvarying genes for the separate analysis of eight samples of IBM and polymyositis left 2,050 genes. Agglomerative cluster analysis using Pearson correlation coefficients was performed and visualized as a hierarchical dendrogram using publicly available software, Cluster and TreeView. <ref type="bibr" target="#b41">32</ref> Annotations provided by Affymetrix for all probe sets were replaced with f-IBM ϭ familial inclusion body myositis; s-IBM (def) ϭ definite sporadic inclusion body myositis; s-IBM (prob) ϭ probable sporadic inclusion body myositis; PM ϭ polymyositis; DM ϭ dermatomyositis; GM ϭ granulomatous myositis; PANM ϭ paraneoplastic acute necrotizing myopathy; MRC ϭ Medical Research Council; CK ϭ creatine kinase; SLE ϭ systemic lupus erythematosus; Jo-1 ϭ anti Jo-1 antibodies present; ILD ϭ interstitial lung disease present.</p><p>official gene nomenclature <ref type="bibr" target="#b42">33</ref> obtained through custom database software <ref type="bibr" target="#b43">34</ref> that accesses resources provided by the National Center for Biotechnology Information (NCBI). <ref type="bibr" target="#b44">35</ref> Differential gene expression by fold ratios was com- set. The ratio of the average expression levels (signal or average differences) for each condition compared with normal subjects was used as the fold ratio and results rank ordered. Distortion of fold values results when expression levels are low; for example, an expression level of 100 for a condition and 10 for normal results in a fold ratio of 10, yet both measurements may be within the level of background noise. To avoid this distortion, we considered significantly overexpressed those genes whose average expression in a given IM subtype was Ͼ500 and a fold ratio of Ͼ10. An analogous definition of significant underexpression was used (average normal expression Ͼ 500 and 1/fold ratio Ͼ 10). As most microarray studies have used a fold ratio of 1.7 to 2.0 as a cutoff of significance, our approach is highly conservative and designed to avoid labeling experimental noise as valid gene changes.</p><formula xml:id="formula_0">puted</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Figure 3. Clusters of genes that distinguish patients with various inflammatory myopathies from other myopathies. (A) A cluster of immunoglobulin genes with overexpression (represented by red) of two polymyositis and three IBM samples compared with dermatomyositis. (B) A different cluster of genes, mostly interferon-inducible, with overexpression in two dermatomyositis samples relative to the other inflammatory samples.</head><p>Results. The classification of the 45 tissue samples representing four diagnostic categories is displayed in a hierarchical dendrogram derived by the Cluster/TreeView software package in figure <ref type="figure">2</ref>. Such dendrograms facilitate the interpretation of large gene expression data sets by allowing a natural visualization of the data, represented as genes in rows and tissues in columns, and a color-coded scale to represent expression level. <ref type="bibr" target="#b41">32</ref> All the normal samples were classified without error by this computational approach. All nemaline myopathy cases were also similarly classified together in a distinct group. Two Duchenne cases were misclassified, together with the group of nemaline myopathies. All inflammatory myopathy cases were classified together into a single group with one exception, GEIM1-IBM. This patient did in fact differ from the other IBM patients and had familial IBM (f-IBM) (see Discussion).</p><p>Because dendrogram patterns may be sensitive to the type and number of data sets, the robustness of the hierarchical classification of all 45 samples was tested through a leave-some-out crossvalidation approach. Ten alternate data sets were constructed by randomly deleting eight samples (two from each of the four groups nemaline, Duchenne muscular dystrophy, IM, and normal) from the set of 45, leaving 37 samples in each. Cluster analysis using the same parameters was performed for each of these 10 data sets. Four of the resulting dendrograms showed classification into the four balanced (of almost equal size) subgroups illustrated in figure <ref type="figure">2</ref>, with two or less samples misclassified in each alternate data set and no misclassifications for the inflammatory myopathy group other than the f-IBM sample, as noted above. The remaining six dendrograms all showed different classifications into four unbalanced groups, with up to half of the IM samples sometimes clustering in a large group with the normals. It is likely that the smaller number of samples used in this crossvalidation analysis reduces the power of this algorithm to distinguish some of the IM samples from the normals. Overall, we found hierarchical clustering to be quite robust for the classification of our data.</p><p>Since the inflammatory myopathy specimens unavoidably came from an older group of patients than, for instance, the Duchenne muscular dystrophy specimens, the possibility that age differences among the four groups accounted for the distinct clustering was considered. Agematched subgroups of patients were clustered in three separate analyses. Notably, cluster analysis of three patients with inflammatory myopathies with a mean age of 36 years (range 32 to 40) and three normal subjects with a mean age of 42 years (range 30 to 59) resulted in two distinct subgroups without misclassification. Similar analysis of three nemaline patients with a mean age of 20 years (range 15 to 28) and three normals with a mean age of 27 years (range 13 to 37) resulted in full separation into two groups without misclassification. A third analysis of three nemaline patients with a mean age of 0.9 years (range 0.6 to 2.5) and three Duchenne muscular dystrophy patients with a mean age of 1.1 years (range 0.8 to 1.5) resulted in two groups without misclassification. Finally, a fourth analysis of a separate data set of 15 normals alone (mean age 25 years, range 1 to 72) showed no tendency for an age-related clustering effect.</p><p>A number of gene clusters reveal distinctions among the various inflammatory myopathies, separating them from the larger group of myopathies and are demonstrated in figure <ref type="figure">3</ref>. In particular, focusing only on the patients with the major forms of inflammatory myopathy (IBM, polymyositis, and dermatomyositis), a subset of genes, including many immunoglobulin and interferon-inducible genes, can be constructed whose expression differences distinguish the patients with IBM from patients with dermatomyositis (figure <ref type="figure">4</ref>). IBM and polymyositis considered under a separate cluster analysis were readily distinguished from each other (figure <ref type="figure" target="#fig_0">5</ref>).</p><p>Using our cutoff of a 10-fold ratio and minimum average expression level of 500, we obtained 144 genes overexpressed in IBM, 122 in polymyositis, and 49 in dermatomyositis. Only two genes were underexpressed in polymyositis and none in IBM and dermatomyositis, reflecting a much greater degree of relative overexpression of genes in the inflammatory myopathy tissues. The relative expression levels of many of the overexpressed genes are shown in table 2. The percentage of genes in each group with known inflammatory or immune-related function was 76% for IBM, 74% for polymyositis, and 76% for dermatomyositis, providing some validation for this conservative level of significance. Many other potentially relevant genes (nϭ2,172) with differential expression by less stringent criteria (3-to 10-fold ratio with minimum average expression level of 150) were noted; some of these are listed in table <ref type="table" target="#tab_5">3</ref>. Underexpressed genes by these criteria were more abundant as well (nϭ147). Expression levels for several nonimmune genes of particular relevance to IBM, such as ␤-amyloid and tau, are listed in table 4. The complete IM gene expression data set and various analyses can be found in the supplementary data on the Neurology Web site (go to www.neurology.org and scroll down the Table of Contents to find the title link for this article).</p><p>Of note, one patient (GEIM12) with a normal biopsy but typical dermatomyositis by clinical criteria had a gene expression profile similar to our other patients with dermatomyositis, as evident in figure <ref type="figure">2</ref>.</p><p>Discussion. In several recent studies, bioinformatics techniques applied to large-scale gene expression data obtained from DNA microarray experiments have been shown to be of value in the classification of various neoplasms, including lymphoma, melanoma, colon cancer, breast cancer, and oligodendrogliomas. <ref type="bibr" target="#b29">[20]</ref><ref type="bibr" target="#b30">[21]</ref><ref type="bibr" target="#b31">[22]</ref><ref type="bibr" target="#b32">[23]</ref><ref type="bibr" target="#b33">[24]</ref><ref type="bibr" target="#b34">[25]</ref> The current study demonstrates that the molecular profiles of muscle tissues from patients with inflammatory myopathies are distinct from normal muscle and several other major categories of myopathies (see figure <ref type="figure">2</ref>). Furthermore, these profiles also differ among the various subtypes of inflammatory myopathies.</p><p>The essential requirement for classification by microarrays is the presence of a reproducible and strong signal that can be used as a large-scale expression signature, as demonstrated in figure <ref type="figure">1</ref>. <ref type="bibr" target="#b28">19</ref> Scatter plots of measured expression levels across all 12,600 probe sets for pairs of samples demonstrate high reproducibility of microarray hybridization, at the level of correlation coefficients of 0.995, as well as differing degrees of correlation among pairs of samples within and between the subgroups of inflamma-tory myopathies. The small percentage of genes with spuriously measured expression levels due to sequence inaccuracies in the databases from which these microarrays are designed have only a minor effect on a large-scale gene expression signature. <ref type="bibr" target="#b28">19</ref> Clustering techniques allow one to take advantage of reproducible gene expression signatures to group samples with similar patterns together. We used a hierarchical clustering technique to organize our samples based on similarity of pair-wise correlation coefficients (see figure <ref type="figure">2</ref>), a method used in other studies of disease classification with microarrays. <ref type="bibr" target="#b29">20,</ref><ref type="bibr" target="#b30">21,</ref><ref type="bibr" target="#b32">23</ref> The use of software to replace numerical expression levels with a color-coded scale greatly facilitates the ability to make sense of these very large data sets. Distinctive patterns of gene expression can be readily identified by looking at such figures as figure <ref type="figure">2A</ref>.</p><p>In addition to large-scale gene expression differences, certain subsets of genes were informative in the distinction among the inflammatory myopathies. In particular, a number of "immunoglobulin genes" were consistently overexpressed in IBM and polymyositis, relative to dermatomyositis, while a group of interferon-inducible genes exhibited the reverse pat-tern (see table <ref type="table" target="#tab_2">2</ref> and figure <ref type="figure">4</ref>). The high expression levels for many probe sets designed to detect immunoglobulin mRNA is surprising in light of known histopathology of these T-cell mediated disorders. One possible explanation is the very close homology of immunoglobulin genes to T-cell receptor genes, which together form a subgroup of the immunoglobulin superfamily. However, extensive database similarity computations using the Basic Local Alignment Search Tool <ref type="bibr" target="#b44">35</ref> (pairwise BLAST) did not demonstrate homology matches for any of these immunoglobulin Affymetrix 25-oligomer probes to known T-cell receptor gene sequences.</p><p>In our study, increased expression of interferoninducible genes in dermatomyositis muscles is an important distinction separating dermatomyositis from polymyositis and IBM. Other recent work also found increased expression of interferon-inducible genes as the most prominent expression changes in four patients with juvenile-onset dermatomyositis in comparison to Duchenne muscular dystrophy and normal controls. <ref type="bibr">36</ref> These investigators hypothesized a pathogenic model for dermatomyositis of viral antigen induction of an autoimmune disorder. It is unclear if juvenile-onset dermatomyositis and adult-onset dermatomyositis have distinct pathogenesis. It is noteworthy that our study demonstrates similar increased expression of interferon-inducible genes in adult-onset dermatomyositis.</p><p>Recent work has also suggested that the myopathy with anti-Jo-1 antibodies represents a distinct category of inflammatory myopathy separate from dermatomyositis. <ref type="bibr" target="#b46">37</ref> However, our two patients with anti-Jo-1 antibodies had typical dermatomyositis clinically and histologically. We did not recognize any differences by gene expression between our Jo-1 antibody-positive and -negative dermatomyositis patients.</p><p>Differences in large-scale gene expression among patients within a given subtype of IM are also noteworthy. Cluster analyses limited to the six samples of IBM (5 s-IBM and 1 f-IBM) and two samples of polymyositis separated IBM and polymyositis (see figure <ref type="figure" target="#fig_0">5</ref>). Regarding the patients in whom we diagnosed IBM, it is important to note that in no case did the referring rheumatologist or neurologist suspect this diagnosis, highlighting the difficulty in diagnosing IBM. Some have argued that there is a distinct form of polymyositis with cytochrome oxidasenegative fibers who have older age at onset, mildly increased serum creatine kinase, early quadriceps weakness, and a poor response to prednisone. <ref type="bibr" target="#b8">9</ref> We would classify such patients as probable IBM. <ref type="bibr">2</ref> In this regard, our cases of probable IBM had similar gene expression profiles as those with definite IBM (see figure <ref type="figure" target="#fig_0">5</ref>). Two subgroups of IBM, one more similar to polymyositis than the other, are suggested by large-scale clustering (see figure <ref type="figure" target="#fig_0">5</ref>). Similarly, a cluster of genes highly expressed in only two of four dermatomyositis patients is evident in figure <ref type="figure">3</ref>, lower panel. The number of patients we have studied here is too small to distinguish measurement error or confounding variables from true differences. We wonder whether clinically relevant variables (i.e., steroid responsiveness, degree of weakness) might be linked to differences in gene expression signatures given sufficient number of patients, as has been accomplished in several other microarray studies in other diseases. <ref type="bibr" target="#b29">20,</ref><ref type="bibr" target="#b32">23,</ref><ref type="bibr" target="#b34">25</ref> The potential for microarray studies to elucidate pathogenic mechanisms in inflammatory myopathies is evident from our data. Many genes previously demonstrated by other investigators as overexpressed in the inflammatory myopathies are similarly increased in our data (see table 2), including expression of major histocompatibility complex class I and II genes, <ref type="bibr" target="#b47">[38]</ref><ref type="bibr" target="#b48">[39]</ref><ref type="bibr" target="#b49">[40]</ref> cytokines, <ref type="bibr" target="#b50">41,</ref><ref type="bibr" target="#b51">42</ref> adhesion molecules, <ref type="bibr" target="#b52">43</ref> granzyme proteases, <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b50">41</ref> and matrix metalloproteinases. <ref type="bibr" target="#b53">44</ref> Many additional genes overexpressed in our studies but not previously reported await further biologic validation. Because we used a highly conservative cutoff for significance (i.e., Ͼ10-fold ratio increase), it is likely that many genes whose overexpression are relevant but with lower fold ratios are not included in this list (table <ref type="table" target="#tab_5">3</ref>). For example, adhesion molecules L-selectin, VLA-4, and ICAM-1, the cytokine transforming growth factor-␤, and the MHC I antigen HLA-G have all been reported as amplified in patients with IBM and polymyositis. <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b48">39,</ref><ref type="bibr" target="#b50">41,</ref><ref type="bibr" target="#b54">45,</ref><ref type="bibr" target="#b55">46</ref> Our data suggests many other likely relevant genes, including several other adhesion molecules (selectin P, ICAM-2, and ICAM-3), and two additional granzymes that may be released by cytotoxic T cells (GZMB and GZMM). As suggested previously by others, these cytokines, adhesion molecules, and chemotactic proteins may be potential targets for directed immunotherapies in the future. <ref type="bibr" target="#b7">8</ref> Of particular interest, we note the increased expression of a number of genes related to the actin cytoskeleton. These genes are not involved in muscle Š Figure <ref type="figure">4</ref>. A subset of genes that acts as a classifier, distinguishing patients with dermatomyositis from patients with IBM. Analysis of gene expression for all dermatomyositis, polymyositis, and IBM samples with this set of immunerelated genes results in a dendrogram with two initial branches that separate the six dermatomyositis patients from the six IBM patients. The two polymyositis patients are classified one in each group, likely in part due to the smaller number of polymyositis samples (nϭ2) than IBM or dermatomyositis.  </p><formula xml:id="formula_1">SCYA21 (AB002409) 1 1 SCYB9 T-cell specific cytokine MIG (X72755) 11111111 1111<label>11</label></formula><formula xml:id="formula_2">SCYB10 (X02530) 1 1<label>1</label></formula><formula xml:id="formula_3">SCYB11 (AF030514) 1 1 ATRN attractin (AF034957) 1 IFNG interferon, gamma (X13274)<label>1</label></formula><p>Immunoglobulins (or ? homologous to immunoglobulin genes) IGHM IgM heavy chain constant region (X67301; AF015128) 11111 1</p><p>IGHG3 immunoglobulin heavy chain (Y14737) 1111111111 111111111 11</p><p>Immunoglobulin rearranged gamma chain V-J-C region (M63438) 111111111 1111111 11</p><p>Immunoglobulin rearranged lambda chain (X57809;M18645) 11111 1111</p><p>Immunoglobulin related 14.1 protein precursor (AI932613) 111 111</p><p>Immunoglobulin heavy chain variable region (U80114) 1 1</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Immunoglobulin invariant gamma-chain (M13560) 1</head><p>Immunoglobulin IgA heavy chain (S71043) 11 1</p><formula xml:id="formula_4">MHC I HLA-C (X58536)<label>1</label></formula><formula xml:id="formula_5">HLA-F (AL022723)<label>1</label></formula><formula xml:id="formula_6">HLA-J (M80469)<label>1 1</label></formula><p>MHC II HLA-DM-alpha (X62744) 1</p><formula xml:id="formula_7">HLA-DQ-beta (DR7 DQw2) (M81141) 111<label>11</label></formula><formula xml:id="formula_8">HLA-DP-beta-1 (M83664)<label>1</label></formula><formula xml:id="formula_9">HLA-DQ-beta-1 (DQw9) (M60028)<label>1 1</label></formula><p>HLA-DR-beta-1 (M32578) 1</p><p>HLA-DR2-Dw12 DQw1-beta (M16276) 111111</p><p>ABCB3 TAP-2 transporter antigen processing 2 (X87344)</p><formula xml:id="formula_10">1 1 1 1</formula><p>Other lymphocyte/monocyte markers CD14 macrophage phagocytosis of apoptotic cells (X06882) 1 1</p><p>CD37 leukocyte differentiation antigen, tetraspanin (X14046) 1</p><p>CD45 leukocyte common antigen (LCA)</p><formula xml:id="formula_11">1 1 CD53 tetraspanin component (M37033)<label>1 1 1</label></formula><p>CD163 macrophage receptor for scavenging hemoglobin (Z22971)</p><formula xml:id="formula_12">1 1 1</formula><p>LY117 activating natural killer cell receptor (AF000424)</p><formula xml:id="formula_13">1 1 T-cell specific protein (X00437)<label>11 1</label></formula><p>T-cell specific protein tyrosine kinase (U23852)</p><formula xml:id="formula_14">1 LCP1 interleukin-2 stimulated T-cell cytosolic protein (J02923) 1 1</formula><p>Actin cytoskeleton ARPC1B control of actin polymerization (AF006084) 1 1</p><p>ARHGAP4 actin filament regulation (X78817) 1 1</p><p>PFN1 profilin-inhibitor of actin polymerization (J03191) 1 1</p><p>FMNL formin-like; actin cytoskeleton reorganization (AJ008112) 1 1</p><p>CORO1A coronin, actin-binding protein p57 (D44497) 111 1</p><p>Alpha-interferon induced transcription factors STAT1 (M97935) 1</p><p>ISGF3 interferon stimulated transcription factor-3 (M97936) actin synthesis. It has been previously noted that in IBM and polymyositis, CD8ϩ T cells send spike-like processes into non-necrotic muscle fibers that traverse the basal lamina of muscle fibers. <ref type="bibr" target="#b56">47</ref> The genes involved in this process have not been previously identified in patients with inflammatory myopathies; the increased expression of actin cytoskeleton genes we have found may reflect this aspect of disease pathogenesis.</p><p>A number of non-immune-related genes have been reported as relevant to the pathogenesis of IBM based on differential expression at the protein level, mRNA level, or both. These include ␤-amyloid, 48 phosphorylated-tau, <ref type="bibr" target="#b58">49</ref> ubiquitins, <ref type="bibr" target="#b59">50</ref> prion protein, 51 alpha 1-antichymotrypsin, <ref type="bibr" target="#b61">52</ref> apolipoprotein E, <ref type="bibr" target="#b62">53</ref> both the cooper, zinc superoxide dismutase (SOD1) <ref type="bibr" target="#b63">54</ref> and manganese superoxide dismutase (SOD2), <ref type="bibr" target="#b64">55</ref> the putative apoptotic regulators Bcl-2, Bcl-x, and BAX, <ref type="bibr" target="#b65">56</ref> and the lipoprotein receptors for low-density lipoprotein, very low-density lipoprotein, and the related protein lipoprotein receptor-related protein (LRP). <ref type="bibr" target="#b66">57</ref> It has been noted that muscle specimens from patients with postpoliomyelitis syndrome and chronic, long-standing neurogenic weakness have vacuolated muscle fibers with 15 nm filaments immunoreactive for ␤-amyloid and ubiquitin in a pattern identical to IBM, suggesting that the findings are not specific for IBM. <ref type="bibr" target="#b67">58</ref> ␤-Amyloid mRNA is also found within macrophages in a variety of muscle diseases. <ref type="bibr" target="#b68">59</ref> At the mRNA level, we find differentially increased expres-sion at a level of threefold or greater for ␤-amyloid, apolipoprotein E, the nicotinic acetylcholine receptor, SOD2, the proapoptotic regulator BAX, LDLR, and LRP (see table <ref type="table">4</ref>). All of these genes, however, are also significantly differentially expressed in polymyositis, dermatomyositis, or both in our data, and some at much higher fold ratios than in IBM. Furthermore, at the mRNA level, we see significant expression of tau (fold ratio 6.8 in dermatomyositis) and alpha 1-antichymotrypsin (fold ratio 6.8 in polymyositis). These findings support the hypothesis that many of the nonimmune changes at the level of mRNA expression seen in IBM are nonspecific and may be seen in polymyositis or dermatomyositis. This suggests that the basis of the abnormal accumulation of these proteins is due to posttranscriptional events.</p><p>Two patients in this series illustrate the potential for the use of this technology for diagnosis. One patient (GEIM12) with a clinical diagnosis of dermatomyositis had a normal muscle biopsy, including the absence of staining for membrane attack complex and the absence of tubuloreticular inclusions on electron microscopy. However, this patient had a molecular profile similar to the other patients with dermatomyositis and was classified as such by our work. One patient (GEIM1) with a clinical diagnosis of IBM was not classified as an inflammatory myopathy. This patient, with typical distribution of weakness (greatest for finger flexors and quadriceps) and * Genes with Ͼ10-fold ratio in at least one of the three IM subtypes compared with normal. When more than one probe set was present for a single gene, the average values across the probe sets were used. For PM and IBM, there is overexpression of cytokines, immunoglobulins, MHC class I and II, cytotoxic proteases, and adhesion molecules. For DM, there is relatively higher expression of several interferon-induced proteins. It is possible that probe sets designed for immunoglobulin targets are crosshybridizing to highly homologous T-cell receptor or other mRNA. Differences in the HLA types among tissue samples could be the cause of differential expression of MHC seen. The Human Gene Nomenclature Committee gene names are used. <ref type="bibr" target="#b42">33</ref> GenBank accession numbers for each gene are given in parentheses. Each 1 ϭ Ͼ10-fold ratio of average signal compared to normals. 11 ϭ 20 to 29 fold ratio, 111 ϭ 30 to 39 fold ratio, etc.</p><p>inflammatory changes diagnostic for definite IBM, 2 also had a sister with the clinical and histologic features of sporadic IBM. Rare familial cases of sporadic IBM have been reported <ref type="bibr" target="#b69">60,</ref><ref type="bibr" target="#b70">61</ref> and should be distinguished from hereditary inclusion body myopathies <ref type="bibr" target="#b71">62</ref> which have an earlier age at onset, different pattern of muscle weakness, and absence of inflammation and invasion of non-necrotic muscle fibers on biopsy.</p><p>Our patient with familial IBM and a distinct gene expression pattern, as determined by the clustering algorithm, demonstrates the potential for this ap-proach to provide diagnostic insight beyond standard histopathology.</p><p>Computational clustering of expression data organizes not just tissue samples but also genes into groups based on patterns of similarity. Many clusters of similar genes are created by this approach, as evident in the two clusters demonstrated in figure <ref type="figure">3</ref>. The striking similarity of gene function within these clusters, found by an unsupervised computational process, suggests an inflammatory function for the two unknown genes present in these clusters (Gen- Selected genes (from total of n ϭ 2,172) with fold ratios of 3 to 10 for average gene expression of at least one subtype compared to normal. Official gene names are used. <ref type="bibr" target="#b42">33</ref> GenBank accession numbers for each gene given in parentheses.</p><p>Bank accession numbers AI660656 and AL047596). <ref type="bibr">63</ref> This "functional genomic" strategy for discovering gene function, when supported by biologic validation, may be capitalized through additional extensive data mining, not performed in this study. Several limitations of our approach are notable. Microarray technology is immature and is limited by available knowledge of gene function and sequence information, accuracy of public databases, and control of highly parallel hybridization on small arrays. <ref type="bibr" target="#b28">19</ref> The U95A arrays used in this work contain probes for only a minority of the human genome. The next generation Affymetrix human microarray is capable of assessing expression levels for 33,000 defined human genes. <ref type="bibr">64</ref> As coverage of the human genome on microarrays increases and approaches completeness over the next several years, the accuracy of this technology is expected to increase substantially, as cross-hybridization of probes is minimized. Other promising microarray technologies, such as ink-jet oligonucleotide spotting, are recently available. <ref type="bibr" target="#b72">65</ref> In addition, the bioinformatics techniques for the analysis of gene expression data are still developing. These developments will likely allow the approach we have taken in this small number of patients to provide valuable insights into the classification and pathogenesis of the inflammatory myopathies.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Expression signatures of IBM and polymyositis distinguished by hierarchical clustering. Clustering of gene expression limited to all six IBM and two polymyositis samples using the same parameters as in figure2(with 2,050 genes) results in separation of the two polymyositis samples. GEIM20 and GEIM38 are probable IBMs, and the other four are definite IBMs. The significance of two IBM groups is uncertain.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Clinical features of patients with inflammatory myopathies</figDesc><table><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>Treatment</cell><cell></cell></row><row><cell></cell><cell></cell><cell></cell><cell>Disease</cell><cell></cell><cell></cell><cell>MRC</cell><cell>duration prior</cell><cell></cell></row><row><cell>Patient</cell><cell>Age, y/sex</cell><cell>Diagnosis</cell><cell>duration</cell><cell>CK (IU/L)</cell><cell>Muscle biopsied</cell><cell>grade</cell><cell>to biopsy</cell><cell>Other</cell></row><row><cell>GEIM1</cell><cell>76/F</cell><cell>f-IBM (def)</cell><cell>1 y</cell><cell>720</cell><cell>Biceps brachii</cell><cell>4</cell><cell>No</cell><cell></cell></row><row><cell>GEIM3</cell><cell>75/M</cell><cell>PANM</cell><cell>3 mo</cell><cell>5,997</cell><cell>Deltoid</cell><cell>4</cell><cell>No</cell><cell>ANA 1:2560</cell></row><row><cell>GEIM4</cell><cell>36/F</cell><cell>DM</cell><cell>2 wk</cell><cell>13,066</cell><cell>Biceps brachii</cell><cell>4ϩ</cell><cell>2 d</cell><cell></cell></row><row><cell>GEIM7</cell><cell>78/M</cell><cell>s-IBM (def)</cell><cell>6 y</cell><cell>486</cell><cell>Biceps brachii</cell><cell>4ϩ</cell><cell>No</cell><cell></cell></row><row><cell>GEIM9</cell><cell>73/M</cell><cell>DM</cell><cell>1 mo</cell><cell>687</cell><cell>Biceps brachii</cell><cell>5*</cell><cell>No</cell><cell>ANA 1:2560</cell></row><row><cell>GEIM12</cell><cell>73/F</cell><cell>DM</cell><cell>2 wk</cell><cell>3,683</cell><cell>Biceps brachii</cell><cell>4</cell><cell>3 d</cell><cell></cell></row><row><cell>GEIM16</cell><cell>51/F</cell><cell>PM</cell><cell>6 mo</cell><cell>6,600</cell><cell>Biceps brachii</cell><cell>4Ϫ</cell><cell>8 wk</cell><cell>ANA 1:2560</cell></row><row><cell>GEIM17</cell><cell>31/F</cell><cell>PM</cell><cell>2 mo</cell><cell>2,238</cell><cell>Deltoid</cell><cell>4</cell><cell>No</cell><cell>ANA 1:5120</cell></row><row><cell>GEIM19</cell><cell>39/M</cell><cell>DM</cell><cell>2 mo</cell><cell>6,030</cell><cell>Deltoid</cell><cell>4Ϫ</cell><cell>8 wk</cell><cell>SLE</cell></row><row><cell>GEIM20</cell><cell>86/M</cell><cell>s-IBM (prob)</cell><cell>2 y</cell><cell>800</cell><cell>Quadriceps</cell><cell>4</cell><cell>No</cell><cell></cell></row><row><cell>GEIM21</cell><cell>71/F</cell><cell>GM/IBM †</cell><cell>8 y</cell><cell>158</cell><cell>Biceps brachii</cell><cell>4</cell><cell>2 y</cell><cell></cell></row><row><cell>GEIM27</cell><cell>64/F</cell><cell>s-IBM (def)</cell><cell>2 y</cell><cell>149</cell><cell>Biceps brachii</cell><cell>4</cell><cell>No</cell><cell></cell></row><row><cell>GEIM30</cell><cell>74/M</cell><cell>DM</cell><cell>6 wk</cell><cell>1,945</cell><cell>Quadriceps</cell><cell>5*</cell><cell>No</cell><cell>Jo-1, ILD</cell></row><row><cell>GEIM36</cell><cell>60/M</cell><cell>s-IBM (def)</cell><cell>3 y</cell><cell>1,204</cell><cell>Biceps brachii</cell><cell>4</cell><cell>No</cell><cell></cell></row><row><cell>GEIM38</cell><cell>57/M</cell><cell>s-IBM (prob)</cell><cell>4 y</cell><cell>877</cell><cell>Biceps brachii</cell><cell>4</cell><cell>No</cell><cell></cell></row><row><cell>GEIM39</cell><cell>57/F</cell><cell>DM</cell><cell>4 wk</cell><cell>8,770</cell><cell>Deltoid</cell><cell>4</cell><cell>3 wk</cell><cell>Jo-1, ILD</cell></row></table><note>* Although patients GEIM9 and GEIM30 had normal MRC grades of the muscle chosen for biopsy, electromyography in the respective contralateral muscles demonstrated muscle membrane instability, small polyphasic motor unit action potentials, and early recruitment. † Patient with both GM and IBM.</note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc>after reanalysis of data by the recently released Affymetrix Microarray Analysis Software version 5.0. Data underwent normalization by linear regression to an arbitrarily chosen reference sample (GEIM7) within the data Figure 1. High reproducibility of microarray hybridization. Scatter plots of 12,600 expression values (average difference)for two pairs of samples. Two independent duplicate experiments consisting of hybridization of the identical musclederived cRNA target pool (split in half) to two microarrays are shown. In experiment 1, the cRNA pool of target from a tissue labeled "H" is split into samples, H1 and H2. H1 and H2 are separately hybridized to two microarray chips, producing two sets of expression values. The nearly perfect squared correlation of 0.99 reflects the high reproducibility of the hybridization results. Similarly, a separate duplicate experiment was performed for sample "E.</figDesc><table /><note>" Figure 2. Molecular classification of myopathies. Hierarchical dendrogram produced by agglomerative clustering of expression levels (average differences) for 45 tissue samples (columns) and 3,578 genes (rows), for a total of 161,010 data points. Visual representation, with green representing low expression levels, black representing intermediate levels, and red high expression levels, facilitates interpretation. The boxed portion of the panel in (A) is enlarged across (B). The algorithm used successfully detects four large clusters of tissue samples, evident from the four initial branches of the tree, one each corresponding to normals (NORM), inflammatory myopathies (IBM ϭ inclusion body myositis, PMϭ polymyositis, DM ϭ dermatomyositis, PANM ϭ paraneoplastic acute necrotizing myopathy, and GMϭ granulomatous myositis), nemaline myopathies (NEM), and Duchenne muscular dystrophy (DMD).</note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2</head><label>2</label><figDesc>Relative expression levels of the highest differentially overexpressed genes in IBM, dermatomyositis (DM), and polymyositis (PM)*</figDesc><table><row><cell>Gene</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4"><head>Table 2 Continued</head><label>2</label><figDesc></figDesc><table><row><cell>Gene</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5"><head>Table 3</head><label>3</label><figDesc>Selected genes overexpressed by 3-to10-fold   </figDesc><table><row><cell>Gene</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0">October (2 of 2) 2002 NEUROLOGY 59 1171</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1">October (2 of 2) 2002NEUROLOGY 59 1173   </note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1174" xml:id="foot_2">NEUROLOGY 59 October (2 of 2) 2002</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3">October (2 of 2) 2002NEUROLOGY 59 1175   </note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_4">October (2 of 2) 2002NEUROLOGY 59 1177   </note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_5">October (2 of 2) 2002NEUROLOGY 59 1179   </note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_6">October (2 of 2) 2002 NEUROLOGY 59 1181</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1182" xml:id="foot_7">NEUROLOGY 59 October (2 of 2) 2002</note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>S.A.G. was supported by National Library of Medicine Grant 5T15 LM07092-07. Microarray data were generated by the Children's Hospital Gene Expression Core (NS40828). This work was also supported by the Muscular Dystrophy Association, the Joshua Frase Foundation, and National Institutes of Health Grant R01 AR44345. L.M.K. is an investigator of the Howard Hughes Medical Institute.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Idiopathic inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Amato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Barohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurol Clin</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="615" to="648" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis and myopathies</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Griggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dimauro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="705" to="713" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Sporadic inclusion body myositis: counts of different types of abnormal fibers</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Pruitt</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Ii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Showalter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="139" to="143" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The therapeutic dilemma of inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Barohn</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="567" to="568" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis: explanation for poor response to therapy</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Barohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Amato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sahenk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="1302" to="1304" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis: clinical and pathological boundaries</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Amato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Gronseth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Jackson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="581" to="586" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis: observations in 40 patients</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Lotz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nishino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="727" to="747" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Progress in inflammatory myopathies: good but not good enough</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurol Neurosurg Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="569" to="573" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Polymyositis with cytochrome oxidase negative muscle fibres: early quadriceps weakness and poor response to immunosuppressive therapy</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Blume</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pestronk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Johns</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="39" to="45" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Inflammatory myopathy with cytochrome oxidase negative muscle fibers: methotrexate treatment</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Levine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pestronk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Muscle Nerve</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="1724" to="1728" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Congenital muscular dystrophy with primary laminin alpha2 (merosin) deficiency presenting as inflammatory myopathy</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pegoraro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mancias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Swerdlow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="782" to="791" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Inflammatory myopathy with facioscapulohumeral distribution</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Munsat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Piper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cancilla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mednick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="335" to="347" />
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Splicing mutation in dysferlin produces limb-girdle muscular dystrophy with inflammation</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Mcnally</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T</forename><surname>Ly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Rosenmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Med Genet</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="305" to="312" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Drug therapy of the idiopathic inflammatory myopathies: predictors of response to prednisone, azathioprine, and methotrexate and a comparison of their efficacy</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Joffe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Love</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Leff</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Med</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="379" to="387" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Pathology of skeletal muscle</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Carpenter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Karpati</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<publisher>Oxford University Press</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note>2nd ed</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Microvascular changes in early and advanced dermatomyositis: a quantitative study</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Emslie-Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="343" to="356" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Microvascular deposition of complement membrane attack complex in dermatomyositis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Kissel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Mendell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Rammohan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">N Engl J Med</title>
+		<imprint>
+			<biblScope unit="volume">314</biblScope>
+			<biblScope unit="page" from="329" to="334" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">The relationship of complement-mediated microvasculopathy to Table 4 Relative expression levels of selected genes implicated in nonimmune, degenerative pathways in IBM</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Kissel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Halterman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Rammohan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Mendell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Gene IBM PM DM Ubiquitin family pseudogene Diubiquitin</title>
+		<imprint>
+			<date>AL031983</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">CHRNA1 nicotinic acetylcholine receptor, alpha subunit (Y00762)</title>
+		<idno>APOE apolipoprotein E (M12529) 21.6 15.1 7.0</idno>
+		<imprint>
+			<biblScope unit="page">15</biblScope>
+		</imprint>
+	</monogr>
+	<note>9 21.3 16.2 BAX BCL2-associated X protein (U19599)</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m">BCL2L1 BCL2-like 1; Bcl-x(L) (Z23115)</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">APP amyloid beta</title>
+		<imprint>
+			<biblScope unit="issue">Y00264</biblScope>
+		</imprint>
+	</monogr>
+	<note>A4) precursor protein (Alzheimer disease</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m">SERPINA3 alpha1-antichymotrypsin exon 1 (X68733)</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m">SOD1 Cu/Zn superoxide dismutase (X02317)</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m">LDLR low density lipoprotein receptor (L00352)</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title level="m">VLDLR very low density lipoprotein receptor (D16532)</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m">LRP1 LDL-related protein 1; LDL-receptor related protein (X13916)</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m">MAPT microtubule-associated protein tau (J03778)</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Previous studies have noted overexpression at the mRNA level of ␤-amyloid precursor protein (APP), nicotinic acetylcholine receptor, SOD1, and prion protein genes, and overexpression at the protein level of all other genes listed. the histologic features and clinical duration of disease in dermatomyositis</title>
+	</analytic>
+	<monogr>
+		<title level="j">Arch Neurol</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="26" to="30" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">DNA microarray technology and its application to neurological disorders</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="755" to="761" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Distinct types of diffuse large B-cell lymphoma identified by gene expression profiling</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Alizadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Eisen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Davis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">403</biblScope>
+			<biblScope unit="page" from="503" to="511" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Broad patterns of gene expression revealed by clustering analysis of tumor and normal colon tissues probed by oligonucleotide arrays</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Alon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Barkai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Notterman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="6745" to="6750" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Molecular classification of cancer: class discovery and class prediction by gene expression monitoring</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Golub</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Slonim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tamayo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">286</biblScope>
+			<biblScope unit="page" from="531" to="537" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Molecular classification of cutaneous malignant melanoma by gene expression profiling</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bittner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Meltzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">406</biblScope>
+			<biblScope unit="page" from="536" to="540" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Gene expression profiling with oligonucleotide microarrays distinguishes World Health Organization grade of oligodendrogliomas</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Watson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Perry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Budhjara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cancer Res</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="1825" to="1829" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Gene-expression profiles in hereditary breast cancer</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Hedenfalk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Duggan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">N Engl J Med</title>
+		<imprint>
+			<biblScope unit="volume">344</biblScope>
+			<biblScope unit="page" from="539" to="548" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Pharmacogenetics and the practice of medicine</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Roses</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">405</biblScope>
+			<biblScope unit="page" from="857" to="865" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Pharmacogenomics: translating functional genomics into rational therapeutics</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Evans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Relling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">286</biblScope>
+			<biblScope unit="page" from="487" to="491" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">DNA microarrays in drug discovery and development</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Debouck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">N</forename><surname>Goodfellow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Genet</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="48" to="50" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Drug target validation and identification of secondary drug target effects using DNA microarrays</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Marton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Derisi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bennett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Med</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1293" to="1301" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Exploring the new world of the genome with DNA microarrays</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Botstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Genet</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="33" to="37" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+	<note>suppl</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<title level="m">Affymetrix GeneChip Analysis Suite User Guide, Version 3.3</title>
+				<imprint>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Cluster analysis and display of genome-wide expression patterns</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Eisen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Spellman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Botstein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="14863" to="14868" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title level="m" type="main">The Human Gene Nomenclature Committee</title>
+		<ptr target="http://www.gene.ucl.ac.uk/nomenclature" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<ptr target="http://bio.chip.org:8080/bio/unchip" />
+		<title level="m">CHIP bioinformatics tools</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Basic Local Alignment Search Tool</title>
+		<ptr target="http://ncbi.n-lm.nih.gov/" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Gene expression profiling in DQA1*0501(ϩ) children with untreated dermatomyositis: a novel model of pathogenesis</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Tezak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Hoffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Lutz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Immunol</title>
+		<imprint>
+			<biblScope unit="volume">168</biblScope>
+			<biblScope unit="page" from="4154" to="4163" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Myopathy with anti-Jo-1 antibodies: pathology in perimysium and neighbouring muscle fibres</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mozaffar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pestronk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurol Neurosurg Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="472" to="478" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">MHC class I, MHC class II, and intercellular adhesion molecule-1 (ICAM-1) expression in inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bartoccioni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gallucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Scuderi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Clin Exp Immunol</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="page" from="166" to="172" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Muscle fibers in inflammatory myopathies and cultured myoblasts express the nonclassical major histocompatibility antigen HLA-G</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wiendl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Behrens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Maier</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="679" to="684" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Skeletal muscle fibers express major histocompatibility complex class II antigens independently of inflammatory infiltrates in inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Englund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lindroos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nennesmo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">159</biblScope>
+			<biblScope unit="page" from="1263" to="1273" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Immunopathogenesis of inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="S74" to="S86" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+	<note>suppl</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Cytokine expression profile in idiopathic inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Tews</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Goebel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neuropathol Exp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="342" to="347" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Expression of cell adhesion molecules in inflammatory myopathies and Duchenne dystrophy</title>
+		<author>
+			<persName><forename type="first">De</forename><surname>Bleecker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neuropathol Exp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="369" to="376" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Expression of matrix metalloproteinases in the muscle of patients with inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="65" to="71" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Molecular immunology and genetics of inflammatory muscle diseases</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch Neurol</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="1509" to="1512" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Analysis of cytokine expression in muscle in inflammatory myopathies, dystrophy, and non-weak controls</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Lundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Brengman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neuroimmunol</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="9" to="16" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Monoclonal antibody analysis of mononuclear cells in myopathies. III: Immunoelectron microscopy aspects of cell-mediated muscle fiber injury</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arahata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="112" to="125" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Beta-amyloid precursor protein mRNA is increased in inclusion-body myositis muscle</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sarkozi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroreport</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="815" to="818" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Twisted tubulofilaments of inclusion body myositis muscle resemble paired helical filaments of Alzheimer brain and contain hyperphosphorylated tau</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Selkoe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page" from="177" to="187" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Immunocytochemical localization of ubiquitin in inclusion body myositis allows its light-microscopic distinction from polymyositis</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Serdaroglu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="460" to="461" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Abnormal accumulation of prion protein mRNA in muscle fibers of patients with sporadic inclusion-body myositis and hereditary inclusion-body myopathy</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sarkozi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">145</biblScope>
+			<biblScope unit="page" from="1280" to="1284" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Strong immunoreactivity of alpha 1-antichymotrypsin co-localizes with beta-amyloid protein and ubiquitin in vacuolated muscle fibers of inclusionbody myositis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol (Berl)</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="378" to="382" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Askanas V. Apolipoprotein E and apolipoprotein E messenger RNA in muscle of inclusion body myositis and myopathies</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mirabella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Weisgraber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="864" to="872" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">SOD1 gene and protein in vacuolated muscle fibers of s-IBM, h-IBM, and in cultured human muscle after bAPP gene transfer</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sarkozi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Siddique</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page">487</biblScope>
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Increased expression of manganese superoxide dismutase is associated with that of nitrotyrosine in myopathies with rimmed vacuoles</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tsuruta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Furuta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Taniguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yamada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Iwaki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol (Berl)</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page" from="59" to="65" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Bcl-2, Bcl-x, and Bax expression by immunohistochemistry in inclusion body myositis: a study of 27 cases</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Prayson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch Pathol Lab Med</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="1326" to="1330" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Three lipoprotein receptors and cholesterol in inclusion-body myositis muscle</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jaworska-Wilczynska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Wilczynski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Strickland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Weisgraber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="438" to="445" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Rimmed vacuoles with betaamyloid and ubiquitinated filamentous deposits in the muscles of patients with long-standing denervation (postpoliomyelitis muscular atrophy): similarities with inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Semino-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hum Pathol</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="1128" to="1133" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Human muscle macrophages express beta-amyloid precursor and prion proteins and their mRNAs</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sarkozi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroreport</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1045" to="1049" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis in twins</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Amato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">T</forename><surname>Shebert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="598" to="600" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">An inflammatory, familial, inclusion body myositis with autoimmune features and a phenotype identical to sporadic inclusion body myositis: studies in three families</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sivakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Semino-Mora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="653" to="661" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">The spectrum of familial inclusion body myopathies in 13 families and a description of a quadriceps-sparing phenotype in non-Iranian Jews</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sivakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="977" to="984" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">Expression profiling using microarrays fabricated by an ink-jet oligonucleotide synthesizer</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Hughes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Jones</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Biotechnol</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="342" to="347" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

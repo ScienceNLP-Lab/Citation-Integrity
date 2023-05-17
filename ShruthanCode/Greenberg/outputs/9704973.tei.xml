@@ -1,0 +1,1921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Chloroquine myopathy suggests that tau is degraded in lysosomes: implication for the formation of paired helical filaments in Alzheimer&apos;s disease</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Fumitaka</forename><surname>Oyama</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Neuropathology</orgName>
+								<orgName type="department" key="dep2">Faculty of Medicine</orgName>
+								<orgName type="institution">Uni6ersity of Tokyo</orgName>
+								<address>
+									<addrLine>7-3-1 Hongo, Bunkyo-ku</addrLine>
+									<postCode>113-0033</postCode>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nobuyuki</forename><surname>Murakami</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Anatomy and Structural Biology</orgName>
+								<orgName type="institution">Uni6ersity of Otago</orgName>
+								<address>
+									<postBox>P.O. Box 913</postBox>
+									<settlement>Dunedin</settlement>
+									<country key="NZ">New Zealand</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department" key="dep1">Department of Ultrastructural Research</orgName>
+								<orgName type="department" key="dep2">National Center of Neurology and Psychiatry (NCNP)</orgName>
+								<address>
+									<addrLine>4-1-1 Ogawahigashi</addrLine>
+									<postCode>187-0031</postCode>
+									<settlement>Kodaira</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Yasuo</forename><surname>Ihara</surname></persName>
+							<email>yihara@m.u-tokyo.ac.jp</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Neuropathology</orgName>
+								<orgName type="department" key="dep2">Faculty of Medicine</orgName>
+								<orgName type="institution">Uni6ersity of Tokyo</orgName>
+								<address>
+									<addrLine>7-3-1 Hongo, Bunkyo-ku</addrLine>
+									<postCode>113-0033</postCode>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">CREST (Core Research for E6olutional Science and Technology)</orgName>
+								<orgName type="institution">the Japan Science and Technology Corporation (JST)</orgName>
+								<address>
+									<settlement>Tokyo</settlement>
+									<country key="JP">Japan</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Chloroquine myopathy suggests that tau is degraded in lysosomes: implication for the formation of paired helical filaments in Alzheimer&apos;s disease</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">829BB29A3F5BA09C49C7B4069282EF56</idno>
+					<note type="submission">Received 7 January 1998; accepted 24 February 1998</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.2" ident="GROBID" when="2023-03-30T18:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Alzheimer&apos;s disease</term>
+					<term>Chloroquine myopathy</term>
+					<term>Lysosome</term>
+					<term>Rimmed vacuole</term>
+					<term>tau</term>
+					<term>Paired helical filaments</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We have found that amorphous tau deposits in chloroquine myopathy (CM), a vacuolar myopathy induced by the administration of chloroquine, a well-known lysosomotropic agent. The dynamics of tau in CM and immunocytochemistry strongly suggest that the accumulation of tau is due to defective tau degradation in the lysosomal compartment in the muscle. This observation may offer a new view on the formation of paired helical filaments in Alzheimer's disease: this selective protein degradation pathway may be defective and result in intracellular accumulation of tau, thereby forming the unusual filaments.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>tau, a microtubule-associated phosphoprotein, plays an important role in maintaining neuronal morphology <ref type="bibr" target="#b39">(Kanai et al., 1989)</ref>, and is the major component of paired helical filaments (PHF), unusual fibrils accumulating in a subset of neurons in Alzheimer's disease (AD) brains <ref type="bibr" target="#b42">(Lee et al., 1991)</ref>. PHF-bearing neurons are abundant in areas in which neuronal loss is found in AD. This strongly suggests that the formation of PHF is closely related to the extensive loss of selected neurons, the final consequence of AD.</p><p>Many isoforms of tau arise from a single gene by alternative splicing. The two major tau isoforms referred to here, small and big, are generated by the exclusion or inclusion of exon 4A-encoded sequence in the amino-terminal half (see Fig. <ref type="figure" target="#fig_0">1</ref>). The so-called small tau indicates tau found primarily in the central nervous system, having apparent molecular mass of 48-67 kDa <ref type="bibr" target="#b25">(Goedert et al., 1989)</ref>, while big tau (or high-molecularweight tau) was originally detected in the peripheral nervous system <ref type="bibr" target="#b23">(Georgieff et al., 1991;</ref><ref type="bibr" target="#b54">Oblinger et al., 1991)</ref> and in peripheral neuron-like cell lines <ref type="bibr" target="#b20">(Drubin et al., 1988)</ref>, with an apparent molecular mass of 110-120 kDa <ref type="bibr" target="#b13">(Couchie et al., 1992;</ref><ref type="bibr" target="#b26">Goedert et al., 1992)</ref>. Each isoform generates further diversity by many combinations of exclusion or inclusion of exon 2 or 3-encoded insert in the amino-terminal half (referred to as L, M, and S isoforms; see Fig. <ref type="figure" target="#fig_0">1A</ref>), of exon 6-encoded insert in the midportion, and of exon 10-encoded repeat in the carboxyl-terminal half (referred to as 3-and 4-R tau, respectively; see Fig. <ref type="figure" target="#fig_0">1A</ref>), rather complicated splicing which is developmentally regulated <ref type="bibr" target="#b25">(Goedert et al., 1989;</ref><ref type="bibr" target="#b33">Himmler, 1989;</ref><ref type="bibr" target="#b41">Kosik et al., 1989)</ref>. The insertion in the amino-terminal portion generates three isoforms (L, M, and S), while that in the carboxyl-terminal portion provides two isoforms (4-R and 3-R). (B) Small tau in brain and big tau in muscle. tau 1 recognizes the non-phosphorylated state at Ser-199/202 or Ser-199 <ref type="bibr" target="#b43">(Liu et al., 1993;</ref><ref type="bibr" target="#b58">Szendrei et al., 1993)</ref>; The numbering follows the 441-residue human tau isoform. After alkaline phosphatase treatment, the intensity of immunoreactivity increases.</p><p>tau is phosphorylated mainly at proline-directed Ser or Thr residues, and the extent of phosphorylation is also developmentally regulated; fetal tau is phosphorylated to a greater extent than adult tau <ref type="bibr" target="#b62">(Watanabe et al., 1993)</ref>. The tau composing the framework of PHF (PHF-tau) is now known to be even more phosphorylated than fetal tau. The phosphorylation of PHF-tau occurs on a number of proline-directed and non-proline-directed Ser or Thr residues, amounting to 20 residues per molecule <ref type="bibr" target="#b49">(Morishima-Kawashima et al., 1995)</ref>.</p><p>Since hyperphosphorylation is the most striking characteristic of PHF-tau, it has long been thought that elucidation of the characteristics and mechanism of hyperphosphorylation would lead us to a better understanding of the significance of PHF. In fact, phosphorylated tau has a reduced affinity for microtubules, and PHF-tau has almost none <ref type="bibr" target="#b7">(Bramblett et al., 1993;</ref><ref type="bibr" target="#b64">Yoshida and Ihara, 1993)</ref>. Thus, one possible scenario is that tau is hyperphosphorylated in AD brain by activated protein kinase or inactivated protein phosphatase, resulting in the destabilization of microtubules and finally their complete disassembly (see <ref type="bibr" target="#b60">Trojanowski and Lee, 1995;</ref><ref type="bibr" target="#b36">Imahori and Uchida, 1997</ref> for recent reviews). However, we were unable to detect increased levels of soluble, cytosolic PHF-tau in AD brain. Although it has been a puzzle, the difficulty in detecting such species may be explained by rapid dephosphorylation during postmortem <ref type="bibr" target="#b46">(Matsuo et al., 1994;</ref><ref type="bibr" target="#b22">Garver et al., 1996)</ref>. Even if cytosolic tau is hyperphosphorylated in this way in affected neurons, this alone would not lead to PHF formation because free tubulin that would have been released as a result of microtubule disassembly should act as a very strong inhibitor of tau-tau interaction; free tubulin strongly interacts with the microtubule-binding domain of tau, that is essential for the framework of PHF <ref type="bibr" target="#b63">(Wille et al., 1992)</ref>. Thus, in the above scheme one should postulate the presence of a specific molecule(s) which promotes tau-tau interaction and reduces its affinity for microtubules or tubulin (see <ref type="bibr" target="#b27">Goedert et al., 1996)</ref>.</p><p>These considerations led us to a different view: PHF formation first of all requires segregation of tau from tubulin or microtubules, and hyperphosphorylated tau must be selectively and sufficiently concentrated for effective tau-tau interaction. This assumption is consistent with the following neuropathological observations: (i) PHF-containing dendrites (neuropil threads or curly fibers) have almost no microtubules when viewed under an electron microscope <ref type="bibr" target="#b21">(Flament-Durand and Couck, 1979;</ref><ref type="bibr" target="#b29">Gray et al., 1987;</ref><ref type="bibr" target="#b55">Paula-Barbosa et al., 1987;</ref><ref type="bibr" target="#b48">Metuzals et al., 1988)</ref> and (ii) hardly any tubulin or MAP2 immunoreactivity is detected in neuropil threads <ref type="bibr" target="#b38">(Iwatsubo et al., 1992)</ref>. It is likely that degenerating neurons or neuronal processes in which PHF are to be formed have already lost normal cytoskeletons including microtubules and neurofilaments <ref type="bibr" target="#b56">(Perry et al., 1991)</ref>, and even their disassembled components <ref type="bibr" target="#b38">(Iwatsubo et al., 1992)</ref>. We therefore have come to think that this kind of segregation, rather than phosphorylation, is a prerequisite for the PHF formation. Further, the aggregation of tau, but not PHF formation itself, may be an essential feature of this segregation. Possibly, if the concentrations of tau in degenerating cells or cellular processes are very high, crystal structures (PHF) are precipitated, but if they are not high enough, only amorphous deposits could be formed.</p><p>In this context, we have been concerned about inclusion body myositis (IBM), an unusual form of myopathy, and related myopathies, in which the presence of tau-immunoreactive, PHF-like fibrils has been confirmed <ref type="bibr" target="#b4">(Askanas et al., 1994)</ref>, and tau appears to be segregated from tubulin <ref type="bibr">(Murakami et al., 1995a,c)</ref>. IBM has long been known to be mimicked by chloroquine myopathy (CM). We sought to examine experimental CM to learn how tau dynamics is altered to cause amorphous tau deposition in CM.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">tau in chloroquine myopathy</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Skeletal muscles exclusi6ely express big tau</head><p>Although the expression of tau had long been considered to be restricted to neurons <ref type="bibr" target="#b19">(Drubin et al., 1986;</ref><ref type="bibr" target="#b24">Goedert et al., 1988)</ref>, recent studies showed that tau accumulates in muscle under certain pathological conditions, and thus suggest that tau is expressed in muscle at least at low levels <ref type="bibr" target="#b4">(Askanas et al., 1994;</ref><ref type="bibr" target="#b44">Lu ¨bke et al., 1994;</ref><ref type="bibr">Murakami et al., 1995a,b)</ref>. These rather unexpected findings prompted us to investigate whether tau is expressed at detectable levels in muscle and other non-neural tissues <ref type="bibr" target="#b30">(Gu et al., 1996)</ref>.</p><p>tau mRNA is widely expressed in many tissues besides the nervous system, at relatively high levels in the heart, skeletal muscle, lung, kidney, and testis, and at low levels in the adrenal gland, stomach, and liver <ref type="bibr" target="#b30">(Gu et al., 1996)</ref>. Several well-characterized antibodies to tau have also confirmed the presence of tau in various non-neural tissues (see Fig. <ref type="figure" target="#fig_0">1B</ref>). In terms of the tau isoform expression, tissues fall into three classes: those in which small tau is predominantly expressed (brain, spinal cord, testis, and kidney), those in which big tau is predominantly expressed (skeletal muscle, and heart; see Fig. <ref type="figure" target="#fig_0">1B</ref>), and the remainder in which both small and big tau are expressed at comparable levels.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Chloroquine myopathy</head><p>Chloroquine, an antimalarial drug, is a weak base that is taken up by cells where it is concentrated particularly well in acidic compartments such as lysosomes, which markedly swell due to the osmotic influx of water <ref type="bibr" target="#b35">(Holtzman, 1989)</ref>, causing a vacuolar myopathy. Elevation of pH to 6.0-6.5 in these organelles results in the inhibition of their acid-dependent hydrolases. Long-term administration of chloroquine to rat induces CM, which occurs preferentially in the red muscle (e.g. soleus) <ref type="bibr" target="#b45">(MacDonald and Engel, 1970)</ref>. Interestingly, in addition to tau, many AD-related molecules including amyloid i-protein, APP, ubiquitin, h1-antichymotrypsin, and ApoE were reported to deposit around and within vacuoles in affected muscle fibers <ref type="bibr" target="#b3">(Askanas et al., 1992;</ref><ref type="bibr" target="#b6">Bilak et al., 1993;</ref><ref type="bibr" target="#b51">Murakami et al., 1995b;</ref><ref type="bibr" target="#b61">Tsuzuki et al., 1995)</ref>. These observations raise the possibility that AD and CM may share some pathogenetic aspects, in particular the process of the deposition of these molecules.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Transient upregulation of tau mRNA in the early phase and accumulation of tau in the late phase</head><p>tau mRNA was transiently upregulated in the early phase of CM with a peak on day 28 (approximately 1.8 times that in the control), and returned to the normal level in the late phase (Fig. <ref type="figure">2A</ref>). The levels of big tau appeared not to change significantly immediately after the chloroquine treatment, but increased remarkably in the late phase, after day 56, and thereafter somewhat decreased.</p><p>i-Amyloid protein precursor (APP), a large membrane-spanning protein, is known to be degraded in lysosomes <ref type="bibr" target="#b28">(Golde et al., 1992;</ref><ref type="bibr" target="#b31">Haass et al., 1992)</ref>, after very complicated intracellular trafficking <ref type="bibr" target="#b57">(Selkoe, 1994)</ref>. Chloroquine treatment of cultured cells causes intracellular accumulation of APP and its carboxyl-terminal fragments <ref type="bibr" target="#b8">(Caporaso et al., 1992)</ref>. Their lysosomal fractions contain the carboxyl-terminal fragments where APP spanned the membrane <ref type="bibr" target="#b8">(Caporaso et al., 1992;</ref><ref type="bibr" target="#b28">Golde et al., 1992)</ref>.</p><p>During CM, the levels of APP mRNA followed a time course very similar to that of tau mRNA: a transient increase in the early phase with a peak on day 28 ( 1.5 times), followed by continued suppression to one third of the initial level in the late phase (Fig. <ref type="figure">2B</ref>). On the other hand, the APP levels in the muscle gradually increased with a peak on day 56 and somewhat declined thereafter (Fig. <ref type="figure">2B</ref>). The levels of the carboxyl-terminal fragments were gradually elevated up to day 42, and increased even further later. Thus, the profiles of APP expression and accumulation were very similar to those of tau. In contrast, the mRNA and protein levels of h-tubulin (Fig. <ref type="figure">2C</ref>) and ApoE (data not shown) took entirely different time courses in CM.</p><p>Upregulation of the mRNAs for tau and APP in the early phase did not cause significant accumulation of both proteins in the muscle. Both proteins started to accumulate on day 56 after their mRNA levels returned to normal or subnormal levels. Thus, the intracellular degradation systems for the two proteins were able to compensate for their overproduction in the early phase, but became seriously defective in the late phase, despite normal or subnormal levels of each mRNA. These findings strongly suggest that tau and APP share the same intracellular degradation system.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4.">Accumulation of tau in rimmed 6acuoles</head><p>The soleus muscle (the most affected muscle in CM) appeared to be normal until day 28 (early phase), as judged from several histochemical stains. Some vacuolated fibers with varying diameters appeared on day 42 (late-phase) and their numbers constantly increased thereafter. On day 84, the majority of fibers were atrophic and contained numerous rimmed vacuoles showing increased acid phosphatase activity. The tau immunoreactivity, but not that of tubulin, accumulated within rimmed vacuoles in the muscle in the late phase (Fig. <ref type="figure">3</ref>). On immunoelectron microscopy, there were a large number of autophagic vacuoles containing tauimmunoreactive amorphous materials in vacuolated fibers <ref type="bibr" target="#b53">(Murakami et al., 1998)</ref>.</p><p>From a morphological point of view, lysosomes are found only rarely in the muscle <ref type="bibr" target="#b45">(MacDonald and Engel, 1970)</ref>. However, rimmed vacuoles in CM are known to contain lysosomal enzymes including acid phosphatase, and cathepsins B, H, and D. In addition, the rimmed vacuoles in CM contained APP, especially its carboxyl-terminal fragments <ref type="bibr" target="#b51">(Murakami et al., 1995b)</ref> which are shown to be tightly associated with lysosomes in senile plaque neurites <ref type="bibr" target="#b40">(Kawai et al., 1992)</ref>. These observations indicate that, although morphologically rare, there are lysosomes or their functional equivalents in the muscle, which are the origin of rimmed vacuoles in CM.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Degradation of cytosolic protein in lysosomes</head><p>Although most cytosolic proteins are considered to be degraded by cytosolic proteases including calpains and proteasome, several lines of evidence indicate that some cytosolic proteins, including RNase A, glyceraldehyde-3-phosphate dehydrogenase (GAPDH), and Fos, are selectively degraded in lysosomes <ref type="bibr" target="#b1">(Aniento et al., 1993</ref><ref type="bibr" target="#b2">(Aniento et al., , 1996;;</ref><ref type="bibr" target="#b16">Cuervo et al., 1994)</ref>. LAMP 2, a heavily glycosylated lysosomal membrane protein, has recently been identified as a receptor for RNase A and GAPDH <ref type="bibr" target="#b14">(Cuervo and Dice, 1996)</ref>. Their binding to the receptor <ref type="bibr" target="#b11">(Chiang and Dice, 1988;</ref><ref type="bibr" target="#b12">Chiang et al., 1989;</ref><ref type="bibr" target="#b59">Terlecky et al., 1992)</ref> and subsequent degradation <ref type="bibr" target="#b0">(Agarraberes et al., 1997)</ref> is modulated by heat shock cognate protein (hsc73).</p><p>Recently, it has been found that there are two populations of rat liver lysosomes, distinguished by the presence or absence of hsc73 within the lysosomal lumen <ref type="bibr" target="#b17">(Cuervo et al., 1997)</ref>. The lysosomal fraction containing hsc73 exhibits much higher efficiencies in the in vitro uptake and degradation of GAPDH and RNase A. In this context, it is noteworthy that hsc73 is associated with neurofibrillary tangles <ref type="bibr" target="#b32">(Hamos et al., 1991)</ref>, and also accumulates within rimmed vacuoles in Fig. <ref type="figure">2</ref>. Illustrated temporal profiles for tau and its mRNA (A), APP, its mRNA, and its carboxyl fragments (B), and a tubulin and its mRNA (C). Fig. <ref type="figure">3</ref>. Rimmed vacuole containing tau. Tibialis anterior muscle was excised from rats treated with chloroquine (day 84) and immunostained for tau (the tibialis anterior is much less affected than the soleus). (Left) A cross section stained with hematoxylin and eosin. There are fibers of various sizes, characteristic of myopathy. A muscle fiber in the center has a large rimmed vacuole. (Middle) The vacuole in the adjacent section is labeled with tau 1. (Right) After alkaline phosphatase treatment the intensity of immunoreactivity increases, especially in the subsarcolemmal area. Original magnification, × 250.</p><p>CM <ref type="bibr">(Murakami et al., unpublished observations)</ref>. In addition, GAPDH is also localized to rimmed vacuoles in CM <ref type="bibr">(Murakami et al., unpublished observations)</ref>.</p><p>The lysosomal degradation of cytosolic protein should consist of three steps (Fig. <ref type="figure" target="#fig_1">4</ref>): binding of a particular cytosolic protein to its lysosomal receptor(s), entry into the luminal space, degradation by lysosomal proteases and release of degraded products to the cytosol. Thus, depending on the lesion site, a particular cytosolic protein may accumulate in the cytosol or in the lysosomes. It seems likely that in CM, step 1 is normal, but step 3, intralysosomal protein degradation, is defective, causing tau accumulation within rimmed vacuoles, the lysosomal equivalents in the muscle.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Tau and lysosomes in the AD brain -a speculation</head><p>Granulovacuolar bodies (GVB) in AD brain show a striking similarity to rimmed vacuoles in terms of morphology and immunoreactivity. GVB are confined to the cytoplasm of pyramidal cells in the hippocampus where several vacuoles, 3-5 vm in diameter, containing central granules are found <ref type="bibr" target="#b5">(Ball and Lo, 1977)</ref>. Occasionally, GVB coexist with neurofibrillary tangles in the same neuron. Electron microscopy showed that each consists of a membrane-bound vacuole containing a highly osmiophilic granular core, suggesting a lysosomal origin <ref type="bibr" target="#b34">(Hirano et al., 1968)</ref>. A subpopulation of GVB are immunoreactive for ubiquitin and phosphorylated tau <ref type="bibr" target="#b47">(Mena et al., 1992;</ref><ref type="bibr" target="#b18">Dickson et al., 1993;</ref><ref type="bibr" target="#b35">Ikegami et al., 1996)</ref>. It is tempting to speculate that a very restricted population of pyramidal cells in the hippocampus <ref type="bibr" target="#b5">(Ball and Lo, 1977)</ref> can incorporate PHF-tau into their lysosomes and attempt to digest it. Steps 1-3 are binding of tau to a receptor on lysosomal membrane, entry of tau into the luminal space, and digestion of tau, respectively. In CM step 3 is blocked.</p><p>This may explain why GVB-bearing neurons often lack tangles because the lysosomal function should be maintained in these neurons (see below).</p><p>Beside this, there is substantial evidence suggesting that lysosomes are defective in AD brain. First, in those neurons to be lost during AD (pyramidal neurons in layers 3 and 5 of the association cortex), the number of cathepsin D-positive lysosomes greatly increases and their intracellular distribution is altered <ref type="bibr" target="#b9">(Cataldo et al., 1995)</ref>. Second, the level of cathepsin D mRNA is significantly elevated in those at-risk neurons <ref type="bibr" target="#b9">(Cataldo et al., 1995)</ref>. Third, lysosomal active proteases and hydrolases are demonstrable in senile plaques, suggesting that they are released from degenerating neurons <ref type="bibr" target="#b10">(Cataldo et al., 1991)</ref>.</p><p>On the other hand, the assumption that tau is degraded in lysosomes is consistent with the previous observation of build-up of tau immunoreactivities in Purkinje cell dendrites after intrathecal leupeptin administration to young rats <ref type="bibr" target="#b37">(Ivy et al., 1989)</ref>. Intrathecal leupeptin administration is a reliable procedure for creating lipofuscin-like granules in young rats and this rat model provides substantial evidence that lipofuscin is the consequence of defective lysosomal protein degradation.</p><p>Taking all the results into consideration, lysosomal dysfunction in AD brain may offer a novel explanation as to why only hyperphosphorylated species of tau is found in PHF and how PHF are formed in affected dendrites. In this lysosomal pathway of proteolysis, cytosolic proteins are translocated through the lysosomal membrane, assisted by cytosolic and lysosomal molecular chaperones <ref type="bibr" target="#b0">(Agarraberes et al., 1997)</ref> and a receptor protein in the lysosomal membrane. Importantly, the activity of this pathway appears to significantly decrease with age <ref type="bibr" target="#b15">(Cuervo and Dice, 1998)</ref>. The extent of phosphorylation of tau may be involved in the efficiency of this lysosomal pathway, especially in the affinity for its receptor and/or translocation though the membrane. While normal tau could be efficiently incorporated and digested, the hyperphosphorylated cytosolic tau (cytosolic PHF-tau) may no longer be incorporated into somehow defective lysosomes in degenerating neurons or neuronal processes where normal cytoskeletons are lost. Thus, hyperphosphorylation and/or lysosomal dysfunction would contribute to the accumulation of PHF-tau. While the majority of cytosolic proteins are degraded by cytosolic proteases, only tau could form aggregates and acquire protease resistance. Thus, PHF formation would reflect particular dysfunction of the lysosomal degradation pathway for cytosolic proteins, and therefore may represent the consequence rather than the cause of neuronal degeneration.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. (A)Exon structure of tau mRNA. Exons 2, 3, 4A, 6, and 10 are alternatively spliced. The insertion in the amino-terminal portion generates three isoforms (L, M, and S), while that in the carboxyl-terminal portion provides two isoforms (4-R and 3-R). (B) Small tau in brain and big tau in muscle. tau 1 recognizes the non-phosphorylated state at Ser-199/202 or Ser-199<ref type="bibr" target="#b43">(Liu et al., 1993;</ref><ref type="bibr" target="#b58">Szendrei et al., 1993)</ref>; The numbering follows the 441-residue human tau isoform. After alkaline phosphatase treatment, the intensity of immunoreactivity increases.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Schematic illustration for the lysosomal degradation of tau.Steps 1-3 are binding of tau to a receptor on lysosomal membrane, entry of tau into the luminal space, and digestion of tau, respectively. In CM step 3 is blocked.</figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>This work was supported in part by a Grant-in-Aid for Scientific Research on Priority Areas (No. 07264210) and Grants-in-Aid for Scientific Research (Nos. 07408025, 08838006 and 09835003) from the Ministry of Education, Science and Culture, by a Grant-in-Aid for Scientific Research from the Ministry of Health and Welfare, and by grants from the Takeda Science Foundation, the Smoking Research Foundation, and the Kato Memorial Trust for Nambyo Research. We thank M. Anzai for typing the manuscript.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Note added in proof</head><p>The following report is added for reference. Murakami, N., Oyama, F., <ref type="bibr">Gu</ref> </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">An intralysosomal hsp70 is required for a selective pathway of lysosomal protein degradation</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Agarraberes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Terlecky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dice</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="page" from="825" to="834" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Uptake and degradation of glyceraldehyde-3-phosphate dehydrogenase by rat liver lysosomes</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Aniento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Roche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cuervo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Knecht</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">268</biblScope>
+			<biblScope unit="page" from="10463" to="10470" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Selective uptake and degradation of c-Fos and v-Fos by rat liver lysosomes</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Aniento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Papavassiliou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Knecht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Roche</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FEBS Lett</title>
+		<imprint>
+			<biblScope unit="volume">390</biblScope>
+			<biblScope unit="page" from="47" to="52" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Light and electron microscopic localization of i-amyloid protein in muscle biopsies of patients with inclusion-body myositis</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Pathol</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="31" to="36" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Twisted tubulofilaments of inclusion-body myositis muscle resemble paired helical filaments of Alzheimer brain and contain hyperphosphorylated tau</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Selkoe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Pathol</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page" from="177" to="187" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Granulovacuolar degeneration in the aging brain and in dementia</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Ball</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neuropathol. Exp. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="474" to="487" />
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Strong immunoreactivity of h1-antichymotrypsin co-localizes with i-amyloid protein and ubiquitin in vacuolated muscle fibers of inclusion-body myositis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="260" to="264" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Abnormal tau phosphorylation at Ser 396 in Alzheimer&apos;s disease recapitulates development and contributes to reduced microtubule binding</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Bramblett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Goedert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jakes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Merrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Q</forename><surname>Trojanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">-Y</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1089" to="1099" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Chloroquine inhibits intracellular degradation but not secretion of Alzheimer i/A4 amyloid precursor protein</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">L</forename><surname>Caporaso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">E</forename><surname>Gandy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Buxbaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Greengard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Natl. Acad. Sci. USA</title>
+				<meeting>Natl. Acad. Sci. USA</meeting>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="2252" to="2256" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Gene expression and cellular content of cathepsin D in Alzheimer&apos;s disease brain. Evidence for early up-regulation of the endosomal-lysosomal system</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cataldo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Barnett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Berman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Quarless</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bursztajn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lippa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Nixon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="671" to="680" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Lysosomal hydrolases of different classes are abnormally distributed in brains of patients with Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cataldo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Paskevich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kominami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Nixon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="page" from="10998" to="11002" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Peptide sequences that target proteins for enhanced degradation during serum withdrawal</title>
+		<author>
+			<persName><forename type="first">H.-L</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dice</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">263</biblScope>
+			<biblScope unit="page" from="6797" to="6805" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A role for a 70-kilodalton heat shock protein in lysosomal degradation of intracellular proteins</title>
+		<author>
+			<persName><forename type="first">H.-L</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Terlecky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Plant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dice</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">246</biblScope>
+			<biblScope unit="page" from="382" to="385" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Primary structure of high molecular weight tau present in the peripheral nervous system</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Couchie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mavilia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Georgieff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K H</forename><surname>Liem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Shelanski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nunez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Natl. Acad. Sci. USA</title>
+				<meeting>Natl. Acad. Sci. USA</meeting>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="4378" to="4381" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A receptor for the selective uptake and degradation of proteins by lysosomes</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cuervo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dice</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">273</biblScope>
+			<biblScope unit="page" from="501" to="503" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">How do intracellular proteolytic systems change with age?</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cuervo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dice</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Biosci</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="25" to="43" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Selective binding and uptake of ribonuclease A and glyceraldehyde-3-phosphate dehydrogenase by isolated rat liver lysosomes</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cuervo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Terlecky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Knecht</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">269</biblScope>
+			<biblScope unit="page" from="26374" to="26380" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">A population of rat liver lysosomes responsible for the selective uptake and degradation of cytosolic proteins</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cuervo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dice</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Knecht</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">272</biblScope>
+			<biblScope unit="page" from="5606" to="5615" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Phosphorylated tau immunoreactivity of granulovacuolar bodies (GVB) of Alzheimer&apos;s disease: localization of two amino terminal tau epitopes in GVB</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Dickson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kress</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ku</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Dejesus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Yen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol. (Berl.)</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="463" to="470" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Association of tau protein with microtubules in living cells</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Drubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kirschner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. N.Y. Acad. Sci</title>
+		<imprint>
+			<biblScope unit="volume">466</biblScope>
+			<biblScope unit="page" from="257" to="268" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Regulation of microtubule protein levels during cellular morphogenesis in nerve growth factor-treated PC12 cells</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Drubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kellogg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kirschner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="1583" to="1591" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Spongiform alterations in brain biopsies of presenile dementia</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Flament-Durand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Couck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="159" to="162" />
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Microtubule assembly competence analysis of freshly-biopsied human tau, dephosphorylated tau, and Alzheimer tau</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Garver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Lehman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Billingsley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci. Res</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="12" to="20" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">High molecular weight tau: preferential localization in the peripheral nervous system</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Georgieff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K H</forename><surname>Liem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Mellado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Nunez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Shelanski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cell Sci</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="55" to="60" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Cloning and sequencing of cDNA encoding a core protein of the paired helical filament of Alzheimer disease: identification of the microtubule associated protein tau</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Goedert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wischik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Crowther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Walker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Klug</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="page" from="4025" to="4055" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Multiple isoforms of human microtubule-associated protein tau: sequences and localization in neurofibrillary tangles of Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Goedert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Spillantini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jakes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rutherford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Crowther</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="519" to="526" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Cloning of a big tau microtubule-associated protein characteristic of the peripheral nervous system</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Goedert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Spillantini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Crowther</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. Natl. Acad. Sci. USA</title>
+				<meeting>Natl. Acad. Sci. USA</meeting>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="1983" to="1987" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Assembly of microtubule-associated protein tau into Alzheimer-like filaments induced by sulfated glycosaminoglycans</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Goedert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jakes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Spillantini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hasegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Crowther</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">383</biblScope>
+			<biblScope unit="page" from="550" to="553" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Processing of the amyloid protein precursor to potentially amyloidogenic derivatives</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Golde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Estus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Younkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Selkoe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Younkin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">255</biblScope>
+			<biblScope unit="page" from="728" to="730" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Alzheimer&apos;s disease: paired helical filaments and cytomembranes</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Gray</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Paula-Barbosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Roher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuropathol. Appl. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="91" to="110" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">~is widely expressed in rat tissues</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Oyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurochem</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="1235" to="1244" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Targeting of cell-surface i-amyloid precursor protein to lysosomes: alternative processing into amyloid-bearing fragments</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Haass</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Koo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mellon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Y</forename><surname>Hung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Selkoe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">359</biblScope>
+			<biblScope unit="page" from="322" to="325" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Expression of heat shock proteins in Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Hamos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Oblas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pulaski-Salo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Welch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Bole</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Drachman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="345" to="350" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Structure of the bovine tau gene: alternatively spliced transcripts generate a protein family</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Himmler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1389" to="1396" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">The fine structure of some intraganglionic alterations</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hirano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Dembitzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">T</forename><surname>Kurland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Zimmerman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neuropathol. Exp. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="167" to="182" />
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Immunohistochemical examination of phosphorylated tau in granulovacuolar degeneration granules</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Holtzman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ikegami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kimura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Katsuragi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Miyamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Miyakawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Psychiatry Clin. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="137" to="140" />
+			<date type="published" when="1989">1989. 1996</date>
+			<publisher>Lysosomes. Plenum Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Physiology and pathology of tau protein kinases in relation to Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Imahori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Uchida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biochem</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="179" to="188" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Anomalous accumulation of tau and ubiquitin immunoreactivities in rat brain caused by protease inhibition and by normal aging: a clue to PHF pathogenesis?</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">O</forename><surname>Ivy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kitani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">498</biblScope>
+			<biblScope unit="page" from="360" to="365" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Lack of ubiquitin immunoreactivities at both ends of neuropil threadspossible bidirectional growth of neuropil threads</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Iwatsubo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hasegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Esaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Pathol</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page" from="277" to="282" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Expression of multiple tau isoforms and microtubule bundle formation in fibroblasts transfected with a single tau cDNA</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kanai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Takemura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Oshima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Mori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yanagisawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Masaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Hirokawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="1173" to="1184" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Subcellular localization of amyloid precursor protein in senile plaque of Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kawai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Richey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tabaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Lowery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Gonzalez-Dewhitt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gambetti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Perry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Pathol</title>
+		<imprint>
+			<biblScope unit="volume">255</biblScope>
+			<biblScope unit="page" from="728" to="730" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Developmentally regulated expression of specific tau sequences</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kosik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Orecchio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bakalis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Neve</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1389" to="1397" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">A68: a major subunit of paired helical filaments and derivatized forms of normal tau</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">.-Y</forename><surname>Balin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Otvos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Trojanowski</surname><genName>Jr</genName></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Q</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">251</biblScope>
+			<biblScope unit="page" from="675" to="678" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Application of synthetic phospho-and unphospho-peptides to identify phosphorylation sites in a subregion of the tau molecule, which is modified in Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">W.-K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">T</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">L</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Yen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci. Res</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="371" to="376" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Microtubule-associated protein tau epitopes are present in fiber lesions in diverse muscle disorders</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Lu ¨bke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Six</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Villanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Boons</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vandermeeren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ceuterick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Cras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-J</forename><surname>Martin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am. J. Pathol</title>
+		<imprint>
+			<biblScope unit="volume">145</biblScope>
+			<biblScope unit="page" from="175" to="188" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Experimental chloroquine myopathy</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Macdonald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neuropathol. Exp. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="479" to="499" />
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Biopsyderived adult human brain tau is phosphorylated at many of the same sites as Alzheimer&apos;s disease paired helical filament tau</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Matsuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Billingsley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Van Devoorde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Q</forename><surname>Trojanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="989" to="1002" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">New patterns of intraneuronal accumulation of the microtubular binding domain of tau in granulovacuolar degeneration</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mena</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Robitaille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Cuello</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Geriatr. Psychiatry Neurol</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="132" to="141" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Neuronal transformations in Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Metuzals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Robitaille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Houghton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gauthier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Leblanc</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell Tissue Res</title>
+		<imprint>
+			<biblScope unit="volume">252</biblScope>
+			<biblScope unit="page" from="239" to="248" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Proline-directed and non-proline-directed phosphorylation of PHF-tau</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Morishima-Kawashima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hasegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yoshida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Titani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">270</biblScope>
+			<biblScope unit="page" from="823" to="829" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Muscle fiber degeneration in distal myopathy with rimmed vacuole formation</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Murakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nonaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="29" to="34" />
+			<date type="published" when="1995">1995a</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Chloroquine treated rat: a possible model for Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Murakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nonaka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Muscle Nerve</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="123" to="125" />
+			<date type="published" when="1995">1995b</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Different behavior of tau immunoreactivity in muscle fibers with rimmed vacuoles and regenerating muscle fibers</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Murakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ishiguro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nonaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Sugita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Imahori</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol</title>
+		<imprint>
+			<biblScope unit="volume">90</biblScope>
+			<biblScope unit="page" from="467" to="471" />
+			<date type="published" when="1995">1995c</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Accumulation of tau in autophagic vacuoles in chlorogaine myopathy</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Murakami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Oyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Mclennan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Nonaka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neuropathol. Exp. Neurol</title>
+		<imprint>
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Tau gene expression in rat sensory neurons during development and regeneration</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Oblinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Argasinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kosik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="2453" to="2459" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">A quantitative study of frontal cortex dendritic microtubules in patients with Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Paula-Barbosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Tavares</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cadete-Leite</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">416</biblScope>
+			<biblScope unit="page" from="139" to="142" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Neuropil threads of Alzheimer&apos;s disease show a marked alteration of the normal cytoskeleton</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Perry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kawai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tabaton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Onorato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mulvihill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Richey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Morandi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Connolly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gambetti</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1748" to="1755" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Normal and abnormal biology of the i-amyloid precursor protein</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Selkoe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Annu. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="489" to="517" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Recognition of the minimal epitope of monoclonal antibody Tau-1 depends upon the presence of a phosphate group but not its location</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">I</forename><surname>Szendrei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">.-Y</forename><surname>Otvos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci. Res</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="243" to="249" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Protein and peptide binding and stimulation of in vitro lysosomal proteolysis by the 73-kDa heat shock cognate protein</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Terlecky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Olson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Dice</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">267</biblScope>
+			<biblScope unit="page" from="9202" to="9209" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Phosphorylation of paired helical filament tau in Alzheimer&apos;s disease neurofibrillary lesions: focusing on phosphatases</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Q</forename><surname>Trojanowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">M</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FASEB J</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1570" to="1576" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Co-localization of amyloid-associated proteins with amyloid i in rat soleus muscle in chloroquine-induced myopathy: a possible model for amyloid i formation in Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tsuzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fukatsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Takamaru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yoshida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mafune</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fujii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Takahata</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">699</biblScope>
+			<biblScope unit="page" from="260" to="265" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">In vivo phosphorylation sites in fetal and adult rat tau</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hasegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Morishima-Kawashima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Titani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Arai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Kosik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biol. Chem</title>
+		<imprint>
+			<biblScope unit="volume">268</biblScope>
+			<biblScope unit="page" from="25712" to="25717" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Alzheimer-like paired helical filaments and antiparallel dimers formed from microtubule-associated protein tau in vitro</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wille</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Drewes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Biernat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E.-M</forename><surname>Mandelkow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Mandelkow</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Cell Biol</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="573" to="584" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">~in paired helical filaments is functionally distinct from fetal ~: assembly incompetence of paired helical filament-~</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yoshida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ihara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurochem</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="1183" to="1186" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

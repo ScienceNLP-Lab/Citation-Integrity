@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Proteomic Analysis of Inclusion Body Myositis</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><roleName>MD</roleName><forename type="first">Jie</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Chunyue</forename><surname>Yin</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Hiroaki</forename><surname>Okamoto</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>MD</roleName><forename type="first">Howard</forename><surname>Jaffe</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Edward</forename><forename type="middle">H</forename><surname>Oldfield</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>MD</roleName><forename type="first">Zhengping</forename><surname>Zhuang</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>PhD</roleName><forename type="first">Alexander</forename><forename type="middle">O</forename><surname>Vortmeyer</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><roleName>MD</roleName><forename type="first">Elisabeth</forename><forename type="middle">J</forename><surname>Rushing</surname></persName>
+							<email>rushinge@afip.osd.mil</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">NIH</orgName>
+								<address>
+									<settlement>Bethesda</settlement>
+									<region>Maryland</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Neuropathology and Ophthalmic Pathology (EJR)</orgName>
+								<orgName type="institution">Armed Forces Institute of Pathology</orgName>
+								<address>
+									<settlement>Washington</settlement>
+									<region>DC</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Neuropathology and Ophthalmic Pathology</orgName>
+								<orgName type="institution">Armed Forces Institute of Pathology</orgName>
+								<address>
+									<postCode>20306-6000</postCode>
+									<settlement>Washington</settlement>
+									<region>DC</region>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Proteomic Analysis of Inclusion Body Myositis</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">8B3CDA9443726231A0C920F89349DAD4</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.2" ident="GROBID" when="2023-03-30T18:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Inclusion body myositis</term>
+					<term>Inflammatory myopathy</term>
+					<term>Mass spectrometry</term>
+					<term>Proteomics</term>
+					<term>2-D PAGE</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Sporadic inclusion body myositis (IBM) is the most frequently acquired inflammatory myopathy of late adult life, yet its diagnostic criteria and pathogenesis remain poorly defined. Because effective treatment is lacking, research efforts have intensified to identify specific markers for this debilitating disorder. In this study, proteomic analysis of 4 cases of sporadic IBM was compared with 5 cases of inflammatory myopathy without clinicopathologic features of IBM to distinguish the IBM-specific proteome. Proteins were separated by 2-dimensional polyacrylamide gel electrophoresis and profiled by mass spectrometric sequencing. Expression of most proteins remained unchanged; however, 16 proteins were upregulated and 6 proteins were downregulated in IBM compared with cases of non-IBM inflammatory myopathy. These IBM-specific proteins included apolipoprotein A-I, amyloid beta precursor protein, and transthyretin, which have been associated with amyloidosis; superoxide dismutase, enolase, and various molecular chaperones indicate perturbations in detoxification, energy metabolism, and protein folding, respectively. The IBM-downregulated proteins mainly serve as carriers for muscle contraction and other normal muscle functions. We further applied Western blot and immunohistochemistry to verify the proteomic findings. This study validates proteomics as a powerful tool in the study of muscle disease and indicates a unique pattern of protein expression in IBM.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>Sporadic inclusion body myositis (IBM) is an indolent, progressive myopathy of older adults that is refractory to therapy. Patients with IBM exhibit a characteristic pattern of clinical involvement consisting of early weakness and atrophy of the quadriceps, volar forearm muscles, and ankle dorsiflexors (1Y3). Variable endomysial inflammation that frequently invades nonnecrotic fibers and rimmed vacuoles containing granular material are among the common pathologic findings (1Y4). A neurogenic component consisting of angular atrophic fibers either randomly distributed or in small clusters completes the characteristic light microscopic picture. Ultrastructural examination of the vacuoles reveals autophagic debris and 15-to 18-nm tubulofilamentous inclusions (1Y3). Recent studies have emphasized the importance of mitochondrial cytopathy in IBM, which can be identified in biopsies by the presence of cytochrome oxidase (COX)-negative fibers <ref type="bibr" target="#b4">(5)</ref>. Despite the acknowledged clinicopathologic constellation of findings, the pathologic diagnosis is difficult in many patients, in part because of the small number of fibers in frozen sections containing rimmed vacuoles and the difficulty of capturing rimmed vacuoles on plastic-embedded sections for the ultrastructural identification of tubulofilamentous inclusions.</p><p>Although of unknown etiology, potential mechanisms underlying this disorder include immune system abnormalities possibly triggered by infectious agents, increased oxidative stress, and muscle aging leading to the accumulation of amyloid beta (AA) and other Alzheimer-related proteins <ref type="bibr">(1, 6Y16)</ref>. Because this entity continues to generate considerable controversy, investigators have applied a variety of techniques to clarify the diagnostic features that may yield potential therapeutic targets. Using proteomic analysis, the objective of the present study was to distinguish whether there are proteins uniquely expressed in IBM that will provide candidates for future single protein investigation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MATERIALS AND METHODS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Patient Characteristic and Pathologic Observations</head><p>Muscle biopsy specimens from 4 cases of sporadic IBM and 5 cases of inflammatory myopathy were collected from the files of the Armed Forces Institute of Pathology (AFIP). Table <ref type="table" target="#tab_0">1</ref> summarizes the clinical characteristics and pathologic findings. Tissue and clinical information were obtained as part of an Institutional Review Board-approved study at the AFIP. We selected 4 cases from over 100 cases of IBM because of their classic clinical history and morphologic features, especially the abundance of rimmed vacuoles. All of the cases were from patients with clinically suspected IBM and none of the cases came from patients with a known family history of IBM to exclude the possibility of the inherited form of the disease. The average age for the 3 male and one female patients with IBM was 63 years (range, 48Y77 years). Of the 5 cases of non-IBM inflammatory myopathy, there were 2 males and 3 females with an average age of 62 years (range, 57Y68 years). These cases were selected because they lacked clinicopathologic criteria suggestive of IBM. Specifically, they lacked rimmed vacuoles, significant neurogenic features, or COX-negative fibers. Histopathologic examination of these cases revealed variable chronic inflammatory infiltrates accompanied by myopathic features (regeneration, degeneration, and myophagocytosis).</p><p>Available on all cases were a standard battery of enzyme histochemical preparations performed on frozen tissue that included myoadenylate deaminase, myofibrillary, adenosine triphosphatase at pH 10.4, myofibrillary, adenosine triphosphatase at pH 4.5, nicotinamide adenine dinucleotideY tetrazolium reductase, alkaline phosphatase, nonspecific esterase, and immunohistochemical methods for staining the major histocompatibility complex class 1 (MHC-1). Histologic methods that included hematoxylin and eosin (H&amp;E), periodic Schiff, and modified Gomori trichrome were performed on paraffin-embedded tissue. Mitochondrial stains, COX, and succinate dehydrogenase performed on frozen tissue were also available on all cases. Electron micrographs were available for all IBM cases.</p><p>The histopathologic diagnosis of IBM was based on criteria promulgated by Griggs et al <ref type="bibr" target="#b2">(3)</ref>. In all 4 cases of IBM, there was variable chronic inflammatory cell infiltration with invasion of nonnecrotic muscle fibers, abundant rimmed vacuoles highlighted by the Gomori trichrome stain, and a neurogenic component characterized by scattered esterase-positive, angular atrophic fibers, and occasional pyknotic nuclear clumps (Fig. <ref type="figure" target="#fig_0">1AYC</ref>). Other myopathic features consisted of scattered regenerating/degenerating fibers and myophagocytosis. Although the inflammatory component was mild in 2 cases, MHC-1 was diffusely unregulated in all cases (Fig. <ref type="figure" target="#fig_0">1E</ref>). Two cases revealed more extensive endomysial fibrosis. COX-negative fibers were present in 3 cases (Fig. <ref type="figure" target="#fig_0">1D</ref>); no significant changes were noted on succinate dehydrogenase-stained sections. In all cases, electron microscopy revealed intracytoplasmic inclusions consisting of 15-to 18-nm filaments (Fig. <ref type="figure" target="#fig_0">1F</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Selective Tissue Microdissection and Two-Dimensional Polyacrylamide Gel Electrophoresis</head><p>To avoid procurement of unwanted areas (e.g. hemorrhage, vessels, and other nonmuscular tissues), selective tissue microdissection was done before protein preparation for proteomic profiling as described previously (17Y19). From all 9 frozen biopsy specimens, a single 10-Km-thick section was taken and stained with H&amp;E for histologic evaluation. Subsequently, these observed areas were subjected to selective tumor dissection from the next 5 to 10 serial sections, to achieve at least 300 Kg protein, that were prepared for 3 runs of 2-dimensional polyacrylamide gel electrophoresis (2-D PAGE), as previously described (17Y19). Tissue dissection was done manually on unstained sections to avoid possible heating artifact induced by laserassisted technology or chemical artifacts induced by tissue staining. Microdissected tissues were dissolved into Extraction Buffer II (Bio-Rad Laboratories, Hercules, CA) vigorously vortexed at room temperature and centrifuged at 12,000 g. The supernatant was combined with a rehydration buffer mixture containing rehydration buffer (Bio-Rad Laboratories), IPG buffer (Amersham Biosciences, Piscataway, NJ), and bromophenol blue and subsequently rehydrated overnight with Immobiline Drystrips (pH 4/7, 11 cm; Amersham Biosciences).</p><p>The isometric focusing for the first dimensional electrophoresis was performed with a Multiphore II Electrophoresis System (Amersham Biosciences). The strips were subjected to high voltages at 3,500 V. Immobilized pH gradient (IPG) strips were equilibrated with Equilibration Buffer I and Buffer II (Bio-Rad Laboratories) for 15 minutes each. Precast ExcelGel SDS gels (Amersham Biosciences) were used for the second dimension of protein separation by a Multiphor II Flated System (Amersham Biosciences) under a constant voltage of 700 V for 3 hours. A silver staining kit (Amersham Biosciences) was used according to the manufacturer's instructions to detect protein spots. All samples were run in duplicate to guarantee over 90% identity (see BImage Analysis[) before performing further experiment.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Image Analysis and Gel Digestion</head><p>The 2-D PAGE images from all 9 specimens were assigned into IBM (n = 4) and non-IBM (n = 5) groups before being analyzed. The intensities of protein spots on each 2-D gel were analyzed with Proteomweaver according to the manufacturer's protocol (Definiens, Munich, Germany). Briefly, the program automatically normalizes the background of each gel image; averages the intensity of each protein spot from the 4 images in IBM group and intensity of protein spots at the same location in the 5 images in the non-IBM group; compares the average intensity of each protein spots between the 2 groups; and presents the distinguishing protein spots that were significantly different (t test, p G 0.05). These distinguishing protein spots were excised from the gels and subjected to in-gel trypsin digestion based on a previously described procedure <ref type="bibr" target="#b16">(17)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Mass Spectrometry</head><p>Peptides from in-gel digests were analyzed by liquid chromatography/mass spectrometry/mass spectrometry (LC-MS/MS) on a ProteomeX LC/MS system (ThermoElectron Corp., San Jose, CA) operated in the high-throughput mode. Reversed-phase high-performance liquid chromatography was carried out using a BioBasic-18 column (0.18 Â 150 mm; ThermoElectron Corp.) eluted at 1 to 2 KL/minute with a gradient of 2% to 50% B over 30 minutes. Mobile phase A was H 2 O (0.1% FA) and mobile phase B was CH 3 CN (0.1% FA). Column effluent was analyzed on the LCQ Deca XP Plus (ThermoElectron Corp.) operating in the BTop Five[ mode.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Protein Identification</head><p>Uninterpreted MS/MS spectra were searched against a human database using the BioWorks and SEQUEST programs (ThermoElectron Corp.). Protein identification was accepted when MS/MS spectra of at least 2 peptides from the same protein exhibited at a minimum the default Xcorr versus charge values set by the program (for Z = 1, 1.50; for Z = 2, 2.00; for Z = 3, 2.50).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Western Blotting and Immunohistochemistry</head><p>Western blot and immunohistochemical staining were performed following standard procedures <ref type="bibr" target="#b16">(17)</ref>. The frozen tissues were microdissected and 30 Kg protein was loaded in Western blotting for each lane. Anti-DJ-1 polyclonal antibody (1:500 in Western blot; 1:250 in immunohistochemistry; Santa Cruz Biotechnology, Inc., Santa Cruz, CA), anti-Apo A-I polyclonal antibody (1:1,000 in Western blot; 1:500 in immunohistochemistry; GenWay Biotech, Inc., San Diego, CA), and Hsp27 (1:200 in Western blot; 1:100 in immunohistochemistry; Lab Vision, Co., Fremont, CA) were used. Anti-A-actin polyclonal antibody (1:1,000; Santa Cruz Biotechnology, Inc.) was applied to Western blot as an internal loading control.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head><p>Duplicated 2-D PAGE, performed in a manner blinded to the tissue diagnosis, achieved a consistent proteomic pattern of each sample (supplemental figure). According to the computerized comparison between 2 groups (4 images of the IBM group with 5 images of the non-IBM group) differentially expressed protein spots were marked onto the representative 2-D PAGE images (case 1 in the IBM group and case 1 in the non-IBM group; Fig. <ref type="figure" target="#fig_1">2</ref>). Tandem mass spectrometry sequencing was performed on these discrete protein spots and a total of 22 proteins (approximately 900 protein spots were recognized from each gel) were found to distinguish IBM from non-IBM inflammatory muscle (1Y16 in Table <ref type="table" target="#tab_1">2</ref> upregulated; AYE in Table <ref type="table" target="#tab_2">3</ref>: downregulated in IBM).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Contractile Proteins</head><p>In striated muscle, force is generated by conversion of chemical energy in the form of ATP into mechanical energy. This process is mediated through the interaction among myosin, the major protein of thick filaments, and actin, the principal thin filament <ref type="bibr" target="#b19">(20)</ref>. Most of the proteins that showed decreased expression in IBM are contractile-related. These include different forms of myosin (A, D, and F in Table <ref type="table" target="#tab_2">3</ref>) and troponin (B and C in Table <ref type="table" target="#tab_2">3</ref>). The latter group is an important component of the skeletal muscle contractile apparatus. The alpha 1 actin precursor (5 in Table <ref type="table" target="#tab_1">2</ref>) and the fast skeletal myosin alkali light chain (14 in Table <ref type="table" target="#tab_1">2</ref>) are upregulated in IBM tissue, indicating the differential dysfunction of muscle contraction between the 2 myopathies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Protein Unfolding or Misfolding</head><p>Evidence of protein unfolding or misfolding in IBM was provided by the selective upregulation of various molecular chaperones, including heat shock protein (Hsp) 27 (spots 6, 12, and 15), Hsp 20 (spot 11), and DJ-1 (spot 10) (21Y23).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Energy Metabolism</head><p>Proteins involved in energy metabolism include a number of glycolytic and oxidative phosphorylation enzymes. Members of the enolase family catalyze the dehydration of 2phosphoglycerate to phosphoenolpyruvate <ref type="bibr" target="#b23">(24)</ref>. Compared with non-IBM inflammatory muscle, IBM expresses a higher level of enolase 1 (spot 2) and muscle specific beta-enolase (spot 4). Another protein indicating perturbations of energy metabolism in IBM was the upregulated creatine kinase (spot 3) (25Y28).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Detoxification of Cytotoxic Products</head><p>Cellular superoxide anion (O 2 j ) is a normal byproduct of the mitochondrial electron transport chain. Superoxide dismutase (SOD) catalyzes the dismutation of O 2 j yielding relatively stable hydrogen peroxide (H 2 O 2 ) <ref type="bibr" target="#b28">(29)</ref>. SOD (spot 13) is sharply increased in IBM tissue. Peroxiredoxins (spots 7 and 9) are involved in the redox regulation of the cell, eliminating peroxides generated during metabolism through the thioredoxin system <ref type="bibr" target="#b29">(30)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Amyloidosis-Related Proteins</head><p>An important observation related to the pathogenesis of IBM is the upregulation of transthyretin (spot 16) <ref type="bibr" target="#b30">(31)</ref>. Defects in transthyretin are among the causes of certain types of amyloidosis, complementing data that suggests IBM is a degenerative muscle disorder. Amyloid beta A4 protein precursor (AAPP, spot 1) and apolipoprotein AYI preproprotein (APOA1, spot 8) are closely involved in amyloidosis <ref type="bibr" target="#b31">(32,</ref><ref type="bibr" target="#b32">33)</ref>.</p><p>Subject to the availability of antibodies, we performed Western blot and immunohistochemistry on selected proteins that were identified from MS/MS sequencing. We compared Apo AYI, Hsp27, and DJ-1 expression in 4 IBM tissues with that in 5 non-IBM inflammatory muscle tissues. Western blotting quantitatively indicated overexpression of these proteins (Fig. <ref type="figure" target="#fig_2">3A</ref>). Immunohistochemical staining detected diffuse positive signal (light brown) within the sarcolemma with greater intensity (dark brown) in the rimmed vacuoles (Fig. <ref type="figure" target="#fig_2">3B</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head><p>The term IBM was coined by Yunis and Samaha in 1971 to describe a case of chronic polymyositis that showed distinctive cytoplasmic rimmed vacuoles, eosinophilic inclusions in the cytoplasm, and rare intranuclear inclusions <ref type="bibr" target="#b33">(34)</ref>. Sporadic and inherited cases encompass the spectrum of this disease, leading some authors to postulate that the morphologic changes may represent a common histologic end point resulting from different etiologies. In sporadic IBM, 2 key pathogenetic hypotheses (which appear to be interrelated) are immune dysregulation and an amyloid-related degenerative process <ref type="bibr" target="#b1">(2,</ref><ref type="bibr" target="#b5">6)</ref>. Detection of rimmed vacuoles by light microscopy combined with ultrastructural demonstration of tubulofilaments is still the gold standard for the routine diagnosis of IBM, but provides little insight into the constituent elements or specificity of the hallmark inclusions.</p><p>Myositis is a multitiered process with numerous, interdependent interactions among a variety of gene products. Copyright @ 2006 by the American Association of Neuropathologists, Inc. Unauthorized reproduction of this article is prohibited.</p><p>Given this diversity, molecular profiling may have advantages compared with the single candidate approach as a result of its ability to interrogate multiple genes and their products. Among the most versatile of the genomic techniques are high-density arrays of oligonucleotides or complementary DNAs, also known as DNA microarrays or oligonucleotide arrays. Greenberg et al reported that various subtypes of inflammatory myopathies have distinct gene expression signatures <ref type="bibr" target="#b34">(35)</ref>. In another study, the authors detected unique patterns of gene expression in patients with dermatomyositis who responded to therapy with intravenous immunoglobulin infusions compared with patients with IBM who did not improve <ref type="bibr" target="#b35">(36)</ref>. Gene microarray data support the role of inflammation in IBM in the form of cytotoxic T lymphocytemediated autoimmunity and confirm the participation of dendritic cells <ref type="bibr" target="#b36">(37)</ref>.</p><p>Although providing thousands of gene candidates that vary between diseases, the microarray approach offers immense statistical power that has the potential to discover pathways not detected by other methods. Despite the fact that microarray data are based on hybridization, an indirect tool that reveals gene expression, it can only represent the mRNA expression level. With recent improvements in proteomic techniques, proteome profiling has become a powerful complementary approach to nucleic acid-based molecular profiling in large-scale gene analyses. Mass spectrometryY proteomic profiling has emerged as an equally formidable platform to identify the components of small protein complexes, protein interactions, or determine posttranslational modifications and biomarkers. Basically, this technique catalogs proteins based on a combination of methods that include 2-D PAGE or other non-gel-based protein separation tools, MS/MS analysis of molecular mass, and sequencing of electrophoretically divided proteinaceous material with subsequent analysis using bioinformatic methods. 2-D PAGEbased proteomic profiling, as the only quantitative tool for Of the 16 differentially expressed proteins in the present IBM study, we identified apolipoprotein AYI, a major component of high-density lipoproteins that is also one of the major amyloid fibril proteins and a minor constituent of senile plaques in Alzheimer disease <ref type="bibr">(1, 6Y10, 13, 15, 16, 38, 39)</ref>. Several lines of evidence suggest that oxidative stress in aging muscle combined with inflammation leads to the formation of intracellular amyloid in IBM. Dalakas reported that interleukin-1, secreted by the chronically activated endomysial inflammatory cells, upregulates AAPP gene expression and AAPP promoter and colocalizes with AAPP within the vacuolated muscle fiber (2).  Askanas and Engel hypothesized that the overexpression of AAPP within the aging muscle fibers is an early upstream event causing a subsequent pathogenetic cascade. According to their observations, several processes seem to be important to the pathogenesis of IBM: 1) increased transcription and accumulation of AAPP, accumulation of its proteolytic fragment AA; 2) abnormal accumulation of cholesterol, caveolin-1, and apolipoprotein; 3) oxidative stress; 4) accumulations of intramuscular fiber multiprotein aggregates; and 5) unfolded/ misfolded proteins (1).</p><p>In our study, various molecular chaperones, including Hsp 27 and the not previously described Hsp 20 and DJ-1, were selectively upregulated in IBM cases. Molecular chaperones are quality control agents that are critical for cell viability. Their induction occurs in response to cellular conditions causing unfolded proteins <ref type="bibr" target="#b15">(16,</ref><ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b39">40)</ref>. The Hsp70 family of molecular chaperones acts to prevent protein misfolding, imports proteins into organelles, unravels protein aggregates, and enhances cell survival under stress conditions <ref type="bibr" target="#b20">(21)</ref>. In IBM, Ozturk et al described Hsp70immunoreactive inclusions that colocalized with Hsp40, Hip, and Bag1, as well as with AA and p-tau-immunoreactive inclusions in the majority of vacuolated and several nonvacuolated muscle fibers <ref type="bibr" target="#b40">(41)</ref>.</p><p>Although most of the research on Hsp20 has been on cardiac muscle, recent data suggest that it may modulate actin cytoskeletal dynamics by competing with the actin depolymerizing protein cofilin for binding to the scaffolding protein 14-3-3 <ref type="bibr" target="#b41">(42)</ref>. Little is known about the role of DJ-1 in IBM, but it has been linked to early-onset Parkinson disease, perhaps through disruption of mitochondrial function. In this setting, DJ-1 protects dopaminergic neurons from oxidative stress through upregulation of glutathione synthesis and from the toxic consequences of mutant human alphasynuclein through increased expression of Hsp70 <ref type="bibr" target="#b42">(43)</ref>. Another study postulated that translocation of DJ-1 to mitochondria after oxidative stress is carried out in association with chaperones <ref type="bibr" target="#b20">(21)</ref>. Using cultured human muscle fibers, Fratta et al studied the effect of amyloid-A precursor protein on proteasome function and found that 26S proteasome subunits were immunodetected in F-tubulin-associated aggresomes, which also contained AA, p-tau, ubiquitin, and Hsp70 <ref type="bibr" target="#b12">(13)</ref>. Accordingly, the authors concluded that proteasome dysfunction in IBM muscle fibers may contribute to the accumulation of misfolded, potentially cytotoxic proteins and may be induced by increased intracellular AAPP/AA. Mutant ubiquitin, a product of Bmolecular misreading,[ appears to be cytotoxic because its ubiquitinated form inhibits the proteasome and contributes to accumulation of misfolded proteins (misfolded amyloid-A and phosphorylated-tau) and their ensuing toxicity <ref type="bibr" target="#b11">(12)</ref>. Clusterin is a multiple-function protein that participates in Abeta-amyloid, PrP(res), and a-synuclein aggregation in Alzheimer disease, prionopathies, and a-synucleinopathies, respectively. In IBM and other myofibrillar myopathies, Ferrer et al reported clusterin immunoreactivity in association with abnormal protein deposits <ref type="bibr" target="#b10">(11)</ref>.</p><p>We also isolated transthyretin, which was initially discovered in IBM using immunohistochemical methods <ref type="bibr" target="#b14">(15)</ref>.</p><p>Askanas et al reported a 70-year-old black man who was homozygous for the transthyretin Val122Ile allele and who had both sporadic IBM and cardiac amyloidosis <ref type="bibr" target="#b7">(8,</ref><ref type="bibr" target="#b9">10)</ref>. Using cultured muscle fibers from the same patient, the authors observed vacuolation, congophilic inclusions, and clusters of immuno-colocalizing amyloid beta-peptide (AA) and transthyretin accumulations <ref type="bibr" target="#b7">(8,</ref><ref type="bibr" target="#b9">10)</ref>.</p><p>We detected significant perturbations of cellular energy homeostasis characterized by increased levels of enolase and the upregulation of creatine kinase. Oxidative stress may also contribute to mitochondrial dysfunction in IBM <ref type="bibr" target="#b4">(5)</ref>. Superoxide in the mitochondrial matrix has been proposed to activate uncoupling proteins, thus providing a feedback mechanism that will lower respiratory chain superoxide production by increasing a proton leak across the inner mitochondrial membrane <ref type="bibr" target="#b43">(44)</ref>. Although the precise role of increased SOD in the setting of IBM is unknown, its induction may function as a protective mechanism against further oxidative stress in the aging milieu <ref type="bibr" target="#b44">(45)</ref>. Given that denervation atrophy is a common biopsy feature of IBM, it is interesting to note that SOD mutations are associated with familial amyotrophic lateral sclerosis, a denervating condition that can occasionally mimic a myopathy <ref type="bibr" target="#b45">(46)</ref>.</p><p>Although not practical for routine diagnostic work, our observations suggest that proteome technology, which analyzes protein expression profiles, provides a promising new approach to study diseases of skeletal muscle. By focusing on multiple proteins, instead of one, the odds of finding useful disease associations and potential therapeutic targets is enhanced by proteome analysis. In the present study, a unique constellation of protein expression abnormalities were identified in the IBM cases, some of which have not been not previously reported. Further studies that include a larger number of cases will be required to establish the precise biologic role of these proteins in IBM. More research of inflammatory muscle diseases using this novel technology may provide the basis for earlier and more accurate diagnosis, prognosis, and therapeutic intervention.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIGURE 1 .</head><label>1</label><figDesc>FIGURE 1. Pathologic features of inclusion body myositis. (A) Hematoxylin &amp; eosin-stained section from case 1 demonstrates marked variation in fiber diameter and rimmed vacuoles (arrows). (B) A focus of lymphocytic inflammation (arrows). (C) The Gomori trichrome stain highlights rimmed vacuole (arrows). (D) Cytochrome oxidase-negative fiber (arrow) is a feature of mitochondrial involvement. (E) Diffuse upregulation of major histocompatibility complex class 1. (F) Tubulofilamentous structures are identified on electron microscopy.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIGURE 2 .</head><label>2</label><figDesc>FIGURE 2. Proteomic comparison between inclusion body myositis (IBM) and non-IBM inflammatory muscles by 2-dimensional polyacrylamide gel electrophoresis (2-D PAGE) analysis. (A) Representative 2-D PAGE image from one IBM specimen. (B) One non-IBM inflammatory muscle control. Twentytwo silver-stained protein spots (proteins 1Y16: upregulated; proteins AYE: downregulated in IBM) were assigned to numbers and circles to indicate the difference between 2 groups.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIGURE 3 .</head><label>3</label><figDesc>FIGURE 3. Validation of the proteomic results by Western blot and immunohistochemistry. (A) Western blot: selected candidates (3 of 21) from the proteins distinguishing inclusion body myositis (IBM) (lanes 6Y9) from non-IBM inflammatory myopathy (lanes 1Y5) were applied to Western blot. Compared with non-IBM inflammatory myopathy, Apo AYI (31 kDa), Hsp27 (23 kDa), and DJ-1(20 kDa) were upregulated in IBM. (B) Immunohistochemistry (original magnification: 400x): the expression of Apo AYI (Ac, Ai), Hsp27 (Hc, Hi), and DJ-1 (Dc, Di) were also investigated by immunohistochemical staining. The left 3 panels indicate non-IBM inflammatory myopathy; the right panels are IBM specimens. All 3 antibodies detected stronger immunosignal (dark brown) in IBM than in non-IBM inflammatory myopathy and the majority staining localized in rimmed vacuoles.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE 1 .</head><label>1</label><figDesc>Summary of Patient Characteristics and Biopsy Findings</figDesc><table><row><cell></cell><cell>Age (year)/</cell><cell>Clinical</cell><cell></cell><cell>Biopsy</cell><cell></cell></row><row><cell>Case</cell><cell>Sex</cell><cell>Diagnosis</cell><cell>CPK</cell><cell>Site</cell><cell>Biopsy Findings</cell></row><row><cell>1</cell><cell>48/M</cell><cell>IBM</cell><cell>NA</cell><cell>Thigh</cell><cell>Abundant RV, inflammation, variable fiber size (EST positive), moderate fibrosis,</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>rare COX-negative fibers</cell></row><row><cell>2</cell><cell>68/M</cell><cell>IBM</cell><cell cols="3">Elevated Quadriceps Abundant RV, inflammation, variable fiber size (EST positive), mild fibrosis,</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>no COX-negative fibers</cell></row><row><cell>3</cell><cell>60/F</cell><cell>IBM</cell><cell>Elevated</cell><cell>Thigh</cell><cell>Abundant RV, inflammation, variable fiber size (EST positive), moderate fibrosis,</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>rare COX-negative fibers</cell></row><row><cell>4</cell><cell>77/M</cell><cell>IBM</cell><cell>NA</cell><cell cols="2">Quadriceps Abundant RV, inflammation, variable fiber size, moderate fibrosis,</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>rare COX-negative fibers</cell></row><row><cell>5</cell><cell>57/F</cell><cell>Weakness</cell><cell>NA</cell><cell>Thigh</cell><cell>Inflammation, myopathic features, no fibrosis or COX-negative fibers</cell></row><row><cell>6</cell><cell>59/M</cell><cell>Proximal</cell><cell>Elevated</cell><cell>Thigh</cell><cell>Inflammation, myopathic features, no fibrosis or COX-negative fibers</cell></row><row><cell></cell><cell></cell><cell>weakness</cell><cell></cell><cell></cell><cell></cell></row><row><cell>7</cell><cell>62/M</cell><cell>Pain</cell><cell cols="3">Elevated Quadriceps Inflammation, myopathic features, mild fibrosis, no COX-negative fibers</cell></row><row><cell>8</cell><cell>65/F</cell><cell>Myopathy</cell><cell cols="3">Elevated Quadriceps Inflammation, myopathic features, no fibrosis, no COX-negative fibers</cell></row><row><cell>9</cell><cell>68/F</cell><cell>Myopathy</cell><cell cols="3">Elevated Quadriceps Inflammation, myopathic features, mild fibrosis, no COX-negative fibers</cell></row></table><note>IBM, inclusion body myositis; CPK, creatine phosphokinase; NA, not available; RV, rimmed vacuoles; EST, nonspecific esterase; COX, cytochrome oxidase.</note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>TABLE 2 .</head><label>2</label><figDesc>Upregulated Proteins in Sporadic Inclusion Body Myositis Compared With Inflammatory Muscle Tissues</figDesc><table><row><cell></cell><cell></cell><cell></cell><cell>Gene</cell><cell></cell></row><row><cell>Protein</cell><cell>Protein Name</cell><cell>ID</cell><cell>Locus</cell><cell>Potential Function</cell></row><row><cell>1</cell><cell>Amyloid beta A4 protein</cell><cell>gi|4502167</cell><cell>21q21.2</cell><cell>Forms the protein basis of the amyloid plaques found in the brains of patients with</cell></row><row><cell></cell><cell>precursor (ABPP)</cell><cell></cell><cell></cell><cell>Alzheimer disease</cell></row><row><cell>2</cell><cell>Enolase 1</cell><cell>gi|4503571</cell><cell>1p36.3</cell><cell>Multifunctional enzyme in glycolysis, growth control, hypoxia tolerance, and allergic</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>responses; also serves as an activator of plasminogen on the cell surface leukocytes</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>and neurons and participate in the intravascular and pericellular fibrinolytic process</cell></row><row><cell>3</cell><cell>Muscle creatine kinase</cell><cell>gi|21536288</cell><cell>19q13.2</cell><cell>Reversibly catalyzes the transfer of phosphate between ATP and various phosphogens</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>(e.g. creatine phosphate); creatine kinase isoenzymes play a central role in energy</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>transduction in tissues with large, fluctuating energy demands such as skeletal</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>muscle, heart, brain, and spermatozoa</cell></row><row><cell>4</cell><cell>Enolase 3, beta, muscle</cell><cell>gi|16554592</cell><cell>17p11</cell><cell>Involved in striated muscle development and regeneration through catalyzing</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>2-phospho-D-glycerate into phosphoenolpyruvate</cell></row><row><cell>5</cell><cell>Alpha 1 actin precursor</cell><cell>gi|4501881</cell><cell>1q42.13</cell><cell>Actins are highly conserved proteins that are involved in various types of cell motility</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>and are ubiquitously expressed in all eukaryotic cells</cell></row><row><cell>6</cell><cell cols="2">Heat shock 27-kDa protein 1 gi|450451</cell><cell>7q11.23</cell><cell>Involved in stress resistance and actin organization</cell></row><row><cell>7</cell><cell>Peroxiredoxin 6</cell><cell>gi|4758638</cell><cell>1q25.1</cell><cell>Involved in redox regulation, phospholipids turnover, and protection against</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>oxidative injury</cell></row><row><cell>8</cell><cell>Apolipoprotein AYI</cell><cell>gi|4557321</cell><cell>11q23</cell><cell>Participates in the reverse transport of cholesterol from tissues to the liver for</cell></row><row><cell></cell><cell>preproprotein (Apo A YI)</cell><cell></cell><cell></cell><cell>excretion by promoting cholesterol efflux from tissues and by acting as a cofactor</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>for the lecithin cholesterol acyltransferase (LCAT)</cell></row><row><cell>9</cell><cell>Peroxiredoxin 2 isoform a</cell><cell>gi|32189392</cell><cell>19p13.2</cell><cell>Involved in redox regulation and peroxides eliminating; reduces peroxides with</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>reducing equivalents provided through the thioredoxin system; participates in the</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>signaling cascades of tumor necrosis factor-alpha</cell></row><row><cell>10</cell><cell>DJ-1 protein</cell><cell>gi|31543380</cell><cell>1p36.33</cell><cell>Acts as positive regulator of androgen receptor-dependent transcription; function as</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>redox-sensitive chaperone and as sensor for oxidative stress; protects neurons</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>against oxidative stress and cell death</cell></row><row><cell>11</cell><cell>Heat shock protein, alpha-</cell><cell>gi|21389433</cell><cell cols="2">19q13.12 Belongs to the small heat shock protein (hsp20) family; plays a vital role in</cell></row><row><cell></cell><cell>crystallin-related, B6</cell><cell></cell><cell></cell><cell>embryonic development</cell></row><row><cell>12</cell><cell>Heat shock 27-kDa protein</cell><cell>gi|7657202</cell><cell>1p36.23</cell><cell>Belongs to the small heat shock protein family; the synthesis of Hsp27 is induced by</cell></row><row><cell></cell><cell>family, member 7</cell><cell></cell><cell></cell><cell>heat shock and other environmental and pathophysiological stresses such as</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>ultraviolet radiation, hypoxia, and ischemia; Hsp27 may act as energy-independent</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>traps preventing irreversible protein aggregation under stress</cell></row><row><cell>13</cell><cell>Superoxide dismutase 1</cell><cell>gi|4507149</cell><cell>21q22.1</cell><cell>Destroys radicals by catalyzing 2 superoxide into hydrogen peroxide</cell></row><row><cell>14</cell><cell>Fast skeletal myosin alkali</cell><cell>gi|17986273</cell><cell>2q33</cell><cell>Regulatory light chain of myosin; does not bind calcium</cell></row><row><cell></cell><cell>light chain 1 isoform 1f</cell><cell></cell><cell></cell><cell></cell></row><row><cell>15</cell><cell>Heat shock 27-kDa protein</cell><cell>gi|7657202</cell><cell>1p36.23</cell><cell>Same as 17th protein</cell></row><row><cell></cell><cell>family, member 7</cell><cell></cell><cell></cell><cell></cell></row><row><cell>16</cell><cell>Transthyretin</cell><cell>gi|4507725</cell><cell>18q12.1</cell><cell>Thyroid hormone-binding protein; involved in thyroxine transport; defects in</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>transthyretin cause amyloidosis</cell></row></table><note>Copyright @ 2006 by the American Association of Neuropathologists, Inc. Unauthorized reproduction of this article is prohibited.</note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>TABLE 3 .</head><label>3</label><figDesc>Upregulated Proteins in Inflammatory Muscle Tissues Compared With Sporadic Inclusion Body Myositis</figDesc><table><row><cell></cell><cell></cell><cell></cell><cell>Gene</cell><cell></cell></row><row><cell>Proteins</cell><cell>Protein Name</cell><cell>ID</cell><cell>Locus</cell><cell>Potential Function</cell></row><row><cell>A</cell><cell>Myosin heavy chain 6</cell><cell cols="2">gi|27764861 14q11.2</cell><cell>Muscle contraction</cell></row><row><cell>B</cell><cell>Tropomyosin 2 (beta)</cell><cell cols="2">gi|42476296 9p13.3</cell><cell>Binds to actin filaments in muscle cells; plays a central role, in association with</cell></row><row><cell></cell><cell>isoform 1</cell><cell></cell><cell></cell><cell>the troponin complex, in the calcium-dependent regulation of vertebrate striated</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>muscle contraction</cell></row><row><cell>C</cell><cell cols="4">Troponin T1, skeletal, slow gi|39930527 19q13.42 The tropomyosin-binding subunit of troponin, the thin filament regulatory complex,</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>which confers calcium sensitivity to striated muscle actomyosin ATPase activity</cell></row><row><cell>D</cell><cell>Myosin, heavy polypeptide</cell><cell>gi|4557773</cell><cell>14q11.2</cell><cell>Muscle contraction</cell></row><row><cell></cell><cell>7, cardiac muscle, beta</cell><cell></cell><cell></cell><cell></cell></row><row><cell>E</cell><cell>Crystallin, alpha B</cell><cell>gi|4503057</cell><cell>11q23.1</cell><cell>Selectively expressed in slow-twitch oxidative muscle fibers with chaperone-like</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>activity and maintenance of cytoskeletal network in muscle, involved in</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell>desmin-related myopathy</cell></row><row><cell>F</cell><cell>Myosin light chain 2</cell><cell>gi|4557775</cell><cell>16p11.2</cell><cell>Involved in the regulation of myosin ATPase activity in smooth muscle</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2006" xml:id="foot_0">American Association of Neuropathologists, Inc.</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1">Downloaded from https://academic.oup.com/jnen/article/65/8/826/2645302 by Applied Life Studies Library user on 07 March 2023</note>
+		</body>
+		<back>
+
+			<div type="funding">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>From the Surgical Neurology Branch (JL, CY, HO, EHO, ZZ, AOV) and the Protein/Peptide Sequencing Facility (HJ), National Institutes of Neurological Disorders and Stroke (NINDS), National Institutes of Health</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Inclusion-body myositis: Newest concepts of pathogenesis and relation to aging and Alzheimer disease</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neuropathol Exp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="1Y" to="14" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Molecular immunology and genetics of inflammatory muscle diseases</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch Neurol</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="1509Y" to="1512" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis and myopathies</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Griggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dimauro</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="705Y" to="713" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis: Explanation for poor response to immunosuppressive therapy</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Barohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Amato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sahenk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="1302Y" to="13304" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Mitochondrial abnormalities in inclusion-body myositis</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Oldfors</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Moslemi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jonasson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="S49Y" to="55" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Proposed pathogenetic cascade of inclusionbody myositis: Importance of amyloid-beta, misfolded proteins, predisposing genes, and aging</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Rheumatol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="737Y" to="744" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Sporadic inclusion-body myositis and hereditary inclusion-body myopathies: Diseases of oxidative stress and aging?</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch Neurol</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="915" to="Y920" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis, muscle blood vessel and cardiac amyloidosis, and transthyretin Val122Ile allele</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="544Y" to="549" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Twisted tubulofilaments of inclusion body myositis muscle resemble paired helical filaments of Alzheimer brain and contain hyperphosphorylated tau</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page" from="177Y" to="1787" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Transthyretin Val122Ile, accumulated Abeta, and inclusion-body myositis aspects in cultured muscle</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="257Y" to="2560" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Involvement of clusterin and the aggresome in abnormal protein deposits in myofibrillar myopathies and inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ferrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carmona</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Blanco</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Pathol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="101Y" to="108" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">IBM-type inclusions in a patient with slow-channel syndrome caused by a mutation in the AChR epsilon subunit</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fidzianska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ryniewicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">M</forename><surname>Shen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuromuscul Disord</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="753Y" to="7559" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Mutant ubiquitin UBB+1 is accumulated in sporadic inclusion-body myositis muscle fibers</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fratta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">W</forename><surname>Van Leeuwen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="1114Y" to="1117" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Tau aggregates are abnormally phosphorylated in inclusion body myositis and have an immunoelectrophoretic profile distinct from other tauopathies</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Maurage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Busiere</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sergeant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuropathol Appl Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="624Y" to="634" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Amyloid filaments in inclusion body myositis. Novel findings provide insight into nature of filaments</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Mendell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sahenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gales</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch Neurol</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="1229" to="Y1234" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Difference in expression of phosphorylated tau epitopes between sporadic inclusion-body myositis and hereditary inclusion-body myopathies</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mirabella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neuropathol Exp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="774" to="Y86" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Protein patterns and proteins that identify subtypes of glioblastoma multiforme</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Furuta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Weil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">O</forename><surname>Vortmeyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Oncogene</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="6806Y" to="6814" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Proteomic applications for differential diagnosis of histologically identical tumors</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">O</forename><surname>Vortmeyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Weil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhuang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="1626Y" to="1627" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A microdissection technique for archival DNA analysis of specific cell populations in lesions G 1 mm in size</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bertheau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Emmert-Buck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<biblScope unit="page" from="620Y" to="625" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Molecular organizations of myofibrils of skeletal muscle studied by atomic force microscopy</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yamada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kunioka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wakajama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Exp Med Biol</title>
+		<imprint>
+			<biblScope unit="volume">538</biblScope>
+			<biblScope unit="page" from="285" to="Y94" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">On the path to the heat shock response: Destabilization and formation of partially folded protein intermediates, a consequence of protein thiol modification</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Freeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Borrelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Meredith</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Free Radic Biol Med</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="737" to="Y745" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Chaperone-assisted protein folding in the cell cytoplasm</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Houry</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Protein Pept Sci</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="227Y" to="244" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Protein folding and diseases</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Yu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biochem Mol Biol</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="275Y" to="2780" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Role of metal ions in catalysis by enolase: An ordered kinetic mechanism for a single substrate enzyme</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Poyner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cleland</forename><forename type="middle">Ww</forename><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochemistry</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="8009Y" to="8017" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Manipulating creatine kinase activity in transgenic mice to study control of energy metabolism</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Brosnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Halow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Koretsky</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem Soc Trans</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="1010Y" to="1014" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Respiratory control and the integration of heart highenergy phosphate metabolism by mitochondrial creatine kinase</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Jacobus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Rev Physiol</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="page" from="707Y" to="725" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Endoplasmic reticulum stress and unfolded protein response in inclusion body myositis muscle</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Vattemi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">164</biblScope>
+			<biblScope unit="page" from="1Y" to="7" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Creatine kinase: An enzyme with a central role in cellular energy metabolism</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wallimann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dolder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Schlattner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MAGMA</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="116Y" to="119" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Antioxidant superoxide dismutaseVA review: Its function, regulation in the testis, and role in male fertility</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Mruk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Silvestrini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Mo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Contraception</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="305Y" to="311" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Peroxiredoxins in antioxidant defense and redox regulation</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Flohe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Budde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hofmann</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biofactors</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="3Y" to="10" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Transthyretin-associated neuropathic amyloidosis. Pathogenesis and treatment</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Linke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Willig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="431Y" to="435" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Independent expression of fibril-forming collagens I, II, and III in chondrocytes of human osteoarthritic cartilage</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Aigner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Bertling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Stoss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Clin Invest</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="829Y" to="837" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">The primary translation product of rat intestinal apolipoprotein A YI mRNA is an unusual preproprotein</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Andy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">257</biblScope>
+			<biblScope unit="page" from="971Y" to="9778" />
+			<date type="published" when="1982">1982</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Yunis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Samaha</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Lab Invest</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="240Y" to="248" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Molecular profiles of inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sanoudou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Haslett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="1170Y" to="11782" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Gene expression profile in the muscles of patients with inflammatory myopathies: Effect of therapy with IVIg and biological validation of clinically relevant genes</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Raju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="page" from="1887Y" to="18896" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Discovering statistically significant pathways in expression profiling studies</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Kong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="13544Y" to="13549" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Proteasome inhibition and aggresome formation in sporadic inclusion-body myositis and in amyloid-beta precursor protein-overexpressing cultured human muscle fibers</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fratta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">167</biblScope>
+			<biblScope unit="page" from="517Y" to="526" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Myostatin is increased and complexes with amyloid-beta within sporadic inclusion-body myositis muscle fibers</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wojcik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol (Berl)</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="173" to="Y77" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Association of DJ-1 with chaperones and enhanced association and colocalization with mitochondrial Hsp70 by oxidative stress</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Niki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Taira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Free Radic Res</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="1091" to="1Y99" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">HSP70 chaperone machinery in sporadic-inclusion-body myositis muscle fibers</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ozturk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcferrin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page">168</biblScope>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Transducible heat shock protein 20 (HSP20) phosphopeptide alters cytoskeletal dynamics</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Dreiza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Brophy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Komalavilas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">FASEB J</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="261Y" to="2663" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">DJ-1 upregulates glutathione synthesis during oxidative stress and inhibits A53T alpha-synuclein toxicity</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Freed</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Biol Chem</title>
+		<imprint>
+			<biblScope unit="volume">280</biblScope>
+			<biblScope unit="page" from="43150Y" to="431558" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Increased expression of manganese superoxide dismutase is associated with that of nitrotyrosine in myopathies with rimmed vacuoles</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tsuruta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Furuta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Taniguchi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol (Berl)</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="page" from="59Y" to="65" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Clinicopathological phenotype of ALS with a novel G72C SOD1 gene mutation mimicking a myopathy</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Stewart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">R</forename><surname>Mackenzie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Eisen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Muscle Nerve</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="701Y" to="706" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Mitochondrial creatine kinase: A key enzyme of aerobic energy metabolism</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wyss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Smeitink</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Wevers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochim Biophys Acta</title>
+		<imprint>
+			<biblScope unit="volume">1102</biblScope>
+			<biblScope unit="page" from="119Y" to="1166" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

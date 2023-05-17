@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A gene expression approach to study perturbed pathways in myositis</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><roleName>MD</roleName><forename type="first">Steven</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+							<email>sagreenberg@partners.org</email>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Division of Neuromuscular Disease</orgName>
+								<orgName type="department" key="dep2">Department of Neurology</orgName>
+								<orgName type="institution" key="instit1">Brigham and Women&apos;s Hospital</orgName>
+								<orgName type="institution" key="instit2">Harvard Medical School</orgName>
+								<address>
+									<settlement>Boston</settlement>
+									<region>Massachusetts</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Children&apos;s Hospital Informatics Program and Harvard-MIT Division of Health Sciences and Technology</orgName>
+								<address>
+									<settlement>Boston</settlement>
+									<region>Massachusetts</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Neurology</orgName>
+								<orgName type="institution">Brigham and Women&apos;s Hospital</orgName>
+								<address>
+									<addrLine>75 Francis Street</addrLine>
+									<postCode>02115</postCode>
+									<settlement>Boston</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A gene expression approach to study perturbed pathways in myositis</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9E5974A9244A52910B653A184AB3EFC2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.2" ident="GROBID" when="2023-03-30T18:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>dermatomyositis</term>
+					<term>inclusion body myositis</term>
+					<term>interferon</term>
+					<term>plasmacytoid dendritic cell</term>
+					<term>polymyositis</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Purpose of review</head><p>To review new insights into the disease mechanisms of dermatomyositis, inclusion body myositis, and polymyositis gained from large-scale microarray gene expression studies of patient tissue samples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Recent findings</head><p>The detection of unexpected gene transcripts using microarrays in inflammatory myopathy tissue has led to the discovery of new types and roles of immune system cells present in muscle in these diseases. Plasmacytoid dendritic cells, the immune system's professional producer of the type 1 interferons a and b, are prominent in dermatomyositis muscle. Plasma cells and myeloid dendritic cells are abundant in polymyositis and inclusion body myositis muscle. Type 1 interferon induction is the single most upregulated pathological pathway genomewide in dermatomyositis muscle and blood. In individual patients with dermatomyositis and some with polymyositis, a blood type 1 interferon-signature correlates with disease activity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Summary</head><p>The identification of new cells and pathways in inflammatory myopathies has led to deeper mechanistic understanding of these diseases and potential therapeutic approaches. Through insights gained in gene expression studies, a strong scientific rationale has developed for blockade of the type 1 interferon pathway for treatment of dermatomyositis.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>The inflammatory myopathies, whose main subtypes are inclusion body myositis (IBM), dermatomyositis, and polymyositis, are diseases in which the immune system injures skeletal muscle. Much of what is known about the mechanisms of these diseases has come from the observation of human muscle tissue samples under the microscope and electron microscope using various histochemical, immunohistochemical, and immunofluorescent methods. Recently, a new technology has uncovered key pathways in these diseases.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Microarrays: driving technologies for understanding inflammatory myopathies</head><p>Technological advances have been instrumental in driving forward our understanding of the inflammatory myopathies. The initial use of microscopy in this field resulted in paradigm shifts in the understanding of the role of the immune system in myositis. Recently, the application of microarray technology to the field has resulted in further substantial advances. Eight published papers and one abstract have reported primary data from microarray studies performed on muscle, blood, and skin specimens from patients with inflammatory myopathies (Table <ref type="table">1</ref>) <ref type="bibr" target="#b1">[1]</ref><ref type="bibr" target="#b2">[2]</ref><ref type="bibr" target="#b3">[3]</ref><ref type="bibr" target="#b4">[4]</ref><ref type="bibr" target="#b5">[5]</ref><ref type="bibr">[6]</ref><ref type="bibr">[7]</ref><ref type="bibr" target="#b6">[8]</ref><ref type="bibr" target="#b7">[9]</ref>.</p><p>Microarray technology is a method for measuring largescale gene expression within tissue samples, providing relatively unbiased views of the disease mechanisms present. Just as the microscope allows one to see cells and tissue components present in a muscle section, microarrays allow one to see the activity of most of the known genes, as reflected by the relative abundances of their various messenger RNAs. These technologies differ in the scale of observation possible, with microscopy capable of tens of observations and microarray technology providing tens of thousands of observations from a single tissue sample.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>New immune system cells: their detection in muscle by microarrays</head><p>Microarray studies of muscle biopsy samples have led directly to the discovery of three previously unrecognized immune system cells within muscle specimens in these diseases: plasmacytoid dendritic cells <ref type="bibr" target="#b4">[4]</ref>, plasma cells <ref type="bibr" target="#b5">[5]</ref>, and myeloid dendritic cells <ref type="bibr" target="#b8">[10,</ref><ref type="bibr" target="#b9">11 ]</ref>. These cells were identified through the detection of transcripts specific to or highly suggestive of their presence, and subsequent confirmation by immunohistochemistry (Fig. <ref type="figure" target="#fig_1">1</ref>).</p><p>Given previous models of dermatomyositis as a disease in which ischemia produces myofiber damage, microarray studies of dermatomyositis muscle biopsy samples were expected to show the upregulation of genes believed to be induced by ischemia. Upregulation of this class of genes, however, was not found specifically in dermatomyositis muscle. Instead, 84% of the top 25 genes upregulated in dermatomyositis muscle compared with both normal and other inflammatory myopathy muscle were within a common pathway of genes induced by the type 1 interferons IFN-a and IFN-b <ref type="bibr" target="#b4">[4]</ref>. For example, the transcript encoded by interferonstimulated gene 15 (ISG15) was elevated approximately 83-fold averaged over 13 dermatomyositis muscle samples compared with 10 normal samples. The abundance of many different IFN-a/b-inducible transcripts in muscle suggested that plasmacytoid dendritic cells (pDCs), the immune system's professional producer of type 1 interferons, may be present. Immunohistochemical studies then identified pDCs in dermatomyositis muscle samples. pDCs also express CD4, and likely account for most of the CD4þ cells present in dermatomyositis muscle tissue <ref type="bibr" target="#b4">[4]</ref>, previously interpreted as T-helper cells <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b12">13]</ref>. These cells are also present in dermatomyositis skin <ref type="bibr" target="#b13">[14]</ref>.</p><p>For IBM and polymyositis muscle, microarray studies demonstrated high immunoglobulin gene expression <ref type="bibr" target="#b5">[5]</ref>. As immunoglobulin genes are only transcribed in B cells and their progeny, this finding appeared paradoxical given previously performed immunohistochemical studies suggesting no significant presence of B cells in muscle in these diseases; such studies were influential in characterizing IBM and polymyositis as diseases mediated by cytotoxic T cells <ref type="bibr" target="#b11">[12]</ref>. This discrepancy was clarified with further immunohistochemical studies that showed few B cells as defined by the expression of CD20, but abundant CD138þ plasma cells, effector antibody-secreting cells derived from B cells after antigen stimulation and differentiation.</p><p>Microarray studies of IBM and polymyositis also predicted the presence of myeloid dendritic cells (mDCs), the immune system's professional antigen-presenting cell central to the development of adaptive immune responses. Although high levels of certain specific transcripts suggested that these cells may be present, no single transcripts were definitive; rather, bioinformatic pathway analyses suggested that local intramuscular antigen presentation by mDCs was occurring <ref type="bibr" target="#b8">[10]</ref>. These cells were subsequently confirmed by immunohistochemistry in large numbers in most IBM and polymyositis muscle biopsy samples studied <ref type="bibr" target="#b9">[11 ]</ref>, having been recognized previously in polymyositis <ref type="bibr" target="#b14">[15]</ref> but not in IBM.</p><p>Perturbed pathways in myositis Greenberg 537</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 1 Summary of published microarray gene expression studies in inflammatory myopathies</head><p>Greenberg <ref type="bibr" target="#b1">[1]</ref> Greenberg <ref type="bibr" target="#b4">[4]</ref> Greenberg <ref type="bibr" target="#b5">[5]</ref> Raju <ref type="bibr">[6]</ref> Tezak <ref type="bibr" target="#b2">[2]</ref> Zhou <ref type="bibr" target="#b3">[3]</ref> Walsh <ref type="bibr">[7]</ref> Baechler <ref type="bibr" target="#b6">[8]</ref> Kea <ref type="bibr" target="#b7">[9]</ref>  Copyright © Lippincott Williams &amp; Wilkins. Unauthorized reproduction of this article is prohibited.</p><p>A new pathway in dermatomyositis: identification of interferon-a/b associated tissue injury in dermatomyositis</p><p>Dermatomyositis has specific pathology in muscle capillaries and the perifascicular myofibers. The idea that perifascicular atrophy, the most characteristic pathological feature of myofibers in dermatomyositis muscle, is due to muscle ischemia has been asserted as fact in many publications. This claim is a hypothesis, not a fact, and has no direct supporting evidence <ref type="bibr" target="#b15">[16]</ref>. No study has demonstrated that the perifascicular region of muscle is a watershed region susceptible to ischemia or that perifascicular myofibers are in fact preferentially injured by ischemia in dermatomyositis. Vasculitis, a disease of muscle blood vessels, does not produce perifascicular atrophy, nor do animal models of muscle ischemia. Overproduction of transcripts or proteins induced by ischemia has not been shown to be present in abnormal perifascicular myofibers.</p><p>Prior to gene expression studies, it was known that perifascicular myofibers overexpressed the signal transducer and activator of transcription 1 (STAT-1) protein.</p><p>This finding led to the hypothesis that overproduction of IFN-g together with ischemia led to injury of dermatomyositis perifascicular myofibers, as STAT-1 is known to be induced by IFN-g <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b17">18]</ref>. Interferons exist as two distinct classes: the type 1 interferons, which include IFN-a and IFN-b, and the type 2 interferon, IFN-g. A microarray study of two pooled samples in juvenile dermatomyositis furthermore hypothesized that both IFN-a/b and IFN-g resulted in ischemic injury to dermatomyositis muscle <ref type="bibr" target="#b2">[2]</ref>. STAT-1, however, is also induced by IFN-a/b, not just IFN-g, and IFN-ginducible transcripts are not specific to dermatomyositis amongst the inflammatory myopathies. Microarray and PCR studies have shown that IFN-g-inducible transcript upregulation is far higher in IBM <ref type="bibr" target="#b1">[1,</ref><ref type="bibr">6,</ref><ref type="bibr" target="#b18">19]</ref> and polymyositis <ref type="bibr" target="#b1">[1]</ref> muscle, diseases without perifascicular atrophy, than in dermatomyositis.</p><p>To more fully understand the nature of the immune pathology present in dermatomyositis muscle, it was important to study dermatomyositis in comparison to other inflammatory myopathies and to ask what is different about the inflammation in dermatomyositis. When dermatomyositis was compared directly with IBM and polymyositis through microarray experiments, marked differential upregulation of IFN-a/b-inducible transcripts alone, but not IFN-g-inducible transcripts, became evident <ref type="bibr" target="#b4">[4]</ref>. The recognition of overexpression of IFN-a/b-inducible genes led to immunohistochemical studies that have identified three IFN-a/b-inducible proteins (MxA, ISG15, and IRF7) as overexpressed in the characteristic sites of dermatomyositis myofiber pathology, and some of these in capillaries as well <ref type="bibr" target="#b4">[4,</ref><ref type="bibr" target="#b19">20]</ref>. These findings suggest the hypothesis by which the overproduction of IFN-a/b-inducible transcripts or proteins within myofibers themselves may directly result in the muscle injury seen in dermatomyositis <ref type="bibr" target="#b4">[4]</ref>.</p><p>538 Myositis and myopathies </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Plasma cells</head><p>Antigen-specific antibody responses</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Local maturation of lymphocytes</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Myeloid dendritic cells</head><p>Microarray studies of human muscle biopsy samples resulted in the identification of distinct classes of transcripts (interferon-a/b inducible; immunoglobulins; and dendritic cell transcripts). The presence of these transcripts pointed towards the presence of particular immune system cells and pathways that was subsequently confirmed by other methods.</p><p>Copyright © Lippincott Williams &amp; Wilkins. Unauthorized reproduction of this article is prohibited.</p><p>Although the direct injury to tissue in autoimmune diseases is often conceived of as due to products of the adaptive immune system (the antibodies produced by B cells or the cytotoxic effector molecules produced by T cells), dermatomyositis may be a disease in which myofibers are directly injured by the overproduction by the myofibers themselves of proteins of the innate immune system, perhaps by an effect on myofiber growth or maintenance. If this hypothesis is correct, it would represent a new model of how the immune system injures tissue in an autoimmune disease.</p><p>Recent work reported in abstract format <ref type="bibr" target="#b7">[9]</ref> has examined the gene expression profile of skin biopsies from 12 patients with dermatomyositis. The highest differentially expressed genes in skin are the same IFN-a/b-inducible genes upregulated in muscle. The gene ISG15 is the most upregulated gene in both dermatomyositis muscle and skin.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A blood signature of type 1 interferons and relationship to disease activity</head><p>One microarray study has examined both blood and muscle gene expression in 44 patients with muscle diseases, of which 36 had inflammatory myopathies (12 with dermatomyositis, 13 with IBM, and 11 with polymyositis). This study additionally examined nine pairs of blood samples from patients with dermatomyositis and polymyositis obtained at differing time points in their disease course and 15 muscle samples (five each with dermatomyositis, IBM, and polymyositis) from the same patients whom had blood studies <ref type="bibr">[7]</ref>. Among approximately 38 000 distinct gene transcripts, 21 of the top 25 genes overexpressed in active dermatomyositis blood were type 1 interferon inducible. Furthermore, many patients with active polymyositis also had marked upregulation of these type 1 interferon-inducible genes, while patients with IBM did not. Paired specimens from the same patients before and after treatment-induced disease control showed reductions of up to 95% in the magnitude of the type 1 interferon signature. In refractory dermatomyositis, no change in this interferon signature was seen with treatment.</p><p>Several important conclusions follow from this large study that included all of the major inflammatory myopathy subtypes and correlating paired blood and muscle specimens from the same patients at differing points of disease activity. First, in dermatomyositis and some patients with polymyositis, the overexpression of type 1 interferon-inducible genes is the single most prominent difference from normal blood gene expression across the entire genome. Second, inclusion body myositis lacks such an intense blood signature. Third, the type 1 interferon signature in dermatomyositis muscle is much higher than in blood, suggesting intramuscular production of type 1 interferons, furthermore indicated by the presence of pDCs infiltrating dermatomyositis muscle <ref type="bibr" target="#b4">[4]</ref>. The specific interferon-inducible transcripts present in muscle additionally provide important directions for understanding which specific interferoninducible genes are more associated with muscle injury in dermatomyositis. Fourth, the measurement of interferon-inducible transcripts in blood provides significant opportunities for use as diagnostic and management biomarkers. For juvenile dermatomyositis, MxA transcript measurement for these purposes has been previously suggested <ref type="bibr" target="#b20">[21]</ref>. Lastly, the reduction in intensity of the type 1 interferon signature in patients during treatment and remission of disease suggests that the major effects of the treatments given these patients resulted in blockade along some step of the type 1 interferon pathway.</p><p>A second study has examined blood gene expression from 12 patients with dermatomyositis <ref type="bibr" target="#b6">[8]</ref>. Whereas the Walsh et al.</p><p>[7] study confined analysis to the very top 25 most differentially expressed genes, all at least six-fold overexpressed, this second study used less stringent criteria and analyzed the results of 665 genes changed by more than 1.5-fold. Unlike the study by Walsh et al., this study did not find prominent expression of type 1 interferoninducible genes in dermatomyositis samples. Instead, dermatomyositis blood was distinguished by the downregulation of several classes of genes, including a set of 'muscle-related' genes purportedly expressed in normal blood cells. Many of these genes in fact do not have muscle-specific functions, such as myosin 16 (MYO16, listed as MYR8, a myosin participating in neuronal migration), myosin 5c (MYO5C, a predominantly epithelial cell myosin), myosin light chain interacting protein (MYLIP, involved in neurite growth), and myosin regulatory light chain 3 (MRCL3). These genes encode primarily nonsarcomeric forms of myosin or myosin-interacting proteins. Other genes listed as muscle related are expressed abundantly in many tissues, such as collagen subtypes COL4A3, COL4A5, and COL4A6. To focus attention on type 1 interferon genes, this study analyzed the expression levels of a subset of 315 genes previously characterized as type 1 interferon-inducible genes and found overexpression of these genes in dermatomyositis, though at magnitudes lower than seen in the Walsh et al. study. There was a trend toward correlation of a gene expression interferon score and disease activity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A new pathway in inclusion body myositis and polymyositis: a role for intramuscular antigen-driven humoral autoimmunity</head><p>For more than two decades, IBM muscle has been known to contain abundant cytotoxic T cells and reported to contain few or no B cells <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b21">22]</ref>. Evidence for the antigen-specific nature of the T cells present in IBM has been suggested by at least 11 publications studying the T-cell antigen receptor repertoire (reviewed in <ref type="bibr" target="#b19">[20]</ref>). As it was widely believed that there was no analogous antigen-driven B-cell response in IBM muscle, no studies were performed to examine the B-cell immunoglobulin receptor repertoire. The discovery of plasma cells in IBM muscle through microarray experiments opened the door to performing such studies <ref type="bibr" target="#b5">[5]</ref>. Using PCR reactions to amplify and then sequence immunoglobulin gene transcripts from whole muscle and selected muscle regions isolated by laser capture microdissection, it was shown that the B-cell immunoglobulin repertoire in IBM, and also in polymyositis and dermatomyositis, has developed as a consequence of antigen stimulation <ref type="bibr" target="#b22">[23 ]</ref>. Clonal expansion, isotype switching, and somatic hypermutation have occurred in the plasma cells present in inflammatory myopathy muscle.</p><p>The implications of autoantibody production within muscle in IBM, polymyositis, and dermatomyositis are active areas of investigation currently. As plasma cells produce antigen-specific antibodies in IBM, these autoantibodies can be used as reagents to identify the muscle antigens to which they are directed. Using mass spectrometry-based proteomic methods this approach has led to the discovery and confirmation of muscle aB-crystallin as the first identified autoantigen in IBM <ref type="bibr" target="#b24">[24]</ref>. The significance and generalization of this finding, published in abstract format, remains to be determined.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Lymphocyte maturation in inflammatory myopathy muscle</head><p>Although B and T lymphocytes typically undergo significant periods of maturation within lymph nodes, it appears that muscle may serve directly as a site for their maturation. Laser capture microdissection and serial sectioning followed by sequencing of immunoglobulin transcripts demonstrated the presence of B-cell clonal variation within nearby adjacent regions of muscle, suggesting that B cells may expand into related plasma cell families within muscle <ref type="bibr">[23 ,25]</ref>. Dense collections of T cells, myeloid dendritic cells, and follicular dendritic cells with plasma cells at their periphery are present as nodular infiltrates in inflammatory myopathy muscle and may be sites of intense T-helper cell activation and B-cell maturation <ref type="bibr" target="#b25">[25]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Negative results from inclusion body myositis microarray studies: a lack of specific overexpression of beta-amyloid precursor protein transcripts</head><p>What has not been seen in gene expression studies is the specific overexpression in IBM muscle samples of transcripts for any of the more than 65 proteins that have been reported as present and abnormally accumulated in this disease. The immunohistochemical detection of many of these proteins has led to modeling of IBM as sharing certain pathophysiological features with Alzheimer's disease. Several of these proteins have been reported to have increased gene expression in IBM and a transgenic mouse overexpressing transcripts for the b-amyloid precursor protein (bAPP) has been created as an IBM model <ref type="bibr" target="#b26">[26]</ref>. Immunohistochemical studies, however, have found overexpression of bAPP transcripts not just in a small percentage of abnormal fibers in IBM, but also in regenerating muscle fibers in various other muscle diseases <ref type="bibr" target="#b27">[27,</ref><ref type="bibr" target="#b28">28]</ref>. Microarray data have similarly shown a lack of specificity to increased bAPP gene expression in IBM, in which the three-fold increase was no different compared with the 2.8-fold increase seen in polymyositis <ref type="bibr" target="#b1">[1]</ref>. Similarly, microarray data did not show differences among IBM, polymyositis, and dermatomyositis for a range of other genes whose proteins have been reported as accumulated in IBM muscle <ref type="bibr" target="#b1">[1]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p>Many fundamental advances in science have come from detailed and unbiased observation without preconceived hypotheses. Microarray technology applied to the study of inflammatory myopathies has proven to be an exquisite observational tool. The discoveries that have been made so far from such research could otherwise only have emerged from hypotheses for which there was no previous scientific basis for conceiving. The ability to see things for which we could not have otherwise known to look for will likely be a lasting legacy of gene expression studies in the field of inflammatory myopathies.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head></head><label></label><figDesc>; IBM, inclusion body myositis; PM, polymyositis; JDM, juvenile dermatomyositis; K, 1000; IVIG, intravenous immunoglobulin. a Abstract published only. b Study confined to patients with juvenile dermatomyositis who had a specific genotype (DQA1Ã0501 combined with specific tumor necrosis factor-a polymorphisms). c No. of independent RNA samples from diseased tissues hybridized to microarray chips, not including replicate samples; the Tezak study pooled RNA from four patients with dermatomyositis into two pools. d Stanford HEEBO arrays with approximately 31 K constitutive exonic probes and 8.4 K alternatively spliced exonic probes. e Some patients with the diagnosis of polymyositis had no symptoms of weakness and no inflammatory cells present on muscle biopsy. f Treatment status not specified for two patients constituting one of the two pools of RNA samples used. Downloaded from http://journals.lww.com/co-rheumatology by BhDMf5ePHKav1zEoum1tQfN4a+kJLhEZgbsIHo4XM i0hCywCX1AWnYQp/IlQrHD3i3D0OdRyi7TvSFl4Cf3VC1y0abggQZXdtwnfKZBYtws= on 03/08/2023</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1</head><label>1</label><figDesc>Figure 1 From microarrays to the identification of immune cells and pathways in inflammatory myopathy muscle tissue</figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0">Downloaded from http://journals.lww.com/co-rheumatology by BhDMf5ePHKav1zEoum1tQfN4a+kJLhEZgbsIHo4XM</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1">Perturbed pathways in myositis Greenberg 539Downloaded from http://journals.lww.com/co-rheumatology by BhDMf5ePHKav1zEoum1tQfN4a+kJLhEZgbsIHo4XM i0hCywCX1AWnYQp/IlQrHD3i3D0OdRyi7TvSFl4Cf3VC1y0abggQZXdtwnfKZBYtws= on 03/08/2023</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_2">Raju R, Dalakas MC. Gene expression profile in the muscles of patients with inflammatory myopathies: effect of therapy with IVIg and biological validation of clinically relevant genes. Brain 2005; 128:1887-1896.</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="7" xml:id="foot_3">Walsh RW, Kong SW, Yao Y, et al. Type 1 interferon-inducible blood gene expression is present and reflects disease activity in dermatomyositis and polymyositis. Arthritis Rheum 2007 (in press).</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_4">Perturbed pathways in myositis Greenberg 541Downloaded from http://journals.lww.com/co-rheumatology by BhDMf5ePHKav1zEoum1tQfN4a+kJLhEZgbsIHo4XM i0hCywCX1AWnYQp/IlQrHD3i3D0OdRyi7TvSFl4Cf3VC1y0abggQZXdtwnfKZBYtws= on 03/08/2023</note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>Supported by grants from the Muscular Dystrophy Association, the Sporadic Inclusion Body Myositis Research Foundation, and the NIH, National Institute of Neurological Disorders and Stroke R01NS43471.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Copyright © Lippincott Williams &amp; Wilkins. Unauthorized reproduction of this article is prohibited.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">and recommended reading Papers of particular interest, published within the annual period of review, have been highlighted as: of special interest of outstanding interest Additional references related to this topic can also be found in the Current World Literature section in this issue</title>
+		<imprint>
+			<biblScope unit="page">651</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Molecular profiles of inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sanoudou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Haslett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="1170" to="1182" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Gene expression profiling in DQA1Ã0501þ children with untreated dermatomyositis: a novel model of pathogenesis</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Tezak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Hoffman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Lutz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Immunol</title>
+		<imprint>
+			<biblScope unit="volume">168</biblScope>
+			<biblScope unit="page" from="4154" to="4163" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">cDNA microarrays reveal distinct gene expression clusters in idiopathic inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Dimachkie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Xiong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Med Sci Monit</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="R191" to="R197" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Interferon-alpha/beta-mediated innate immune mechanisms in dermatomyositis</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Pinkus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Pinkus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="664" to="678" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Plasma cells in muscle in inclusion body myositis and polymyositis</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Bradshaw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Pinkus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="1782" to="1787" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">An interferon signature in the peripheral blood of dermatomyositis patients is associated with disease activity</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Baechler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Slattery</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Med</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="59" to="68" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Genomic analyses identify lipid metabolism abnormalities in dermatomyositis patients</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pesich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Chung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Invest Dermatol</title>
+		<imprint>
+			<biblScope unit="volume">127</biblScope>
+			<biblScope unit="page">S12</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Discovering statistically significant pathways in expression profiling studies</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">W</forename><surname>Kong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="13544" to="13549" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Myeloid dendritic cells in inclusion-body myositis and polymyositis</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Pinkus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Amato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Pinkus</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Muscle Nerve</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="17" to="23" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m">mDCs, central to the development of adaptive immune responses, are abundant in IBM and polymyositis muscle</title>
+				<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Monoclonal antibody analysis of mononuclear cells in myopathies. I: Quantitation of subsets according to diagnosis and sites of accumulation and demonstration and counts of muscle fibers invaded by T cells</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arahata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Engel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="193" to="208" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Nature of the mononuclear infiltrate and the mechanism of muscle damage in juvenile dermatomyositis and Duchenne muscular dystrophy</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Mcdouall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Dunn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dubowitz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurol Sci</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="199" to="217" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Type I interferon-associated skin recruitment of CXCR3þ lymphocytes in dermatomyositis</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wenzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Schmidt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Proelss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Clin Exp Dermatol</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="576" to="582" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Anatomic localization of immature and mature dendritic cell subsets in dermatomyositis and polymyositis: interaction with chemokines and Th1 cytokine-producing cells</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Page</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chevrel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Miossec</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arthritis Rheum</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="199" to="208" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Uncertainties in the pathogenesis of adult dermatomyositis</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Amato</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr Opin Neurol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="359" to="364" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Cathepsins are upregulated by IFN-gamma/ STAT1 in human muscle culture: a possible active factor in dermatomyositis</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gallardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>De Andres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Illa</forename><forename type="middle">I</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neuropathol Exp Neurol</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="847" to="855" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Signal transducer and activator of transcription 1 in human muscle: implications in inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">I</forename><surname>Illa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gallardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gimeno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">151</biblScope>
+			<biblScope unit="page" from="81" to="88" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Expression of IFN-gammainducible chemokines in inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Raju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vasconcelos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Granger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Dalakas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neuroimmunol</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="125" to="131" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Proposed immunological models of the inflammatory myopathies and potential therapeutic implications</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Greenberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint/>
+	</monogr>
+	<note>in press</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">MxA gene expression in juvenile dermatomyositis peripheral blood mononuclear cells: association with muscle involvement</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Abbott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sabin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Clin Immunol</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="319" to="325" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Monoclonal antibody analysis of mononuclear cells in myopathies. II: Phenotypes of autoinvasive cells in polymyositis and inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Arahata</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann Neurol</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="209" to="215" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">A local antigen-driven humoral response is present in the inflammatory myopathies</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Bradshaw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Orihuela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Mcardel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Immunol</title>
+		<imprint>
+			<biblScope unit="volume">178</biblScope>
+			<biblScope unit="page" from="547" to="556" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Whereas many papers have previously provided evidence for an antigen-directed T-cell response in IBM and polymyositis, this paper is the only study that has shown that an antigen-driven B-cell humoral immune response within muscle is occurring in dermatomyositis, IBM</title>
+		<imprint/>
+	</monogr>
+	<note>and polymyositis</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Using humoral immunity for the identification of candidate antigens in inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Salajegheh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Y</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Parker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">A361</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Nodular infiltrates serving as sites of B cell maturation in muscle of patients with inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Salajegheh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Pinkus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Nazareno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurology</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page">A301</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Inclusion body myositis-like phenotype induced by transgenic overexpression of beta APP in skeletal muscle</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Sugarman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Yamasaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Oddo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci U S A</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="6334" to="6339" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">beta-Amyloid precursor protein mRNA is increased in inclusion-body myositis muscle</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sarkozi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Johnson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroreport</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="815" to="818" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Human muscle macrophages express beta-amyloid precursor and prion proteins and their mRNAs</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sarkozi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bilak</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroreport</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1045" to="1049" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main"></title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">M</forename><surname>Villanova</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">A</forename><surname>Malandrini</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Guazzi</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">C</forename><surname>Ceuterick</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">U</forename><forename type="middle">J J</forename><surname>Lübke</surname></persName>
+						</author>
+						<author>
+							<persName><surname>Martin</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Dotti</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">N</forename><surname>De</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">A</forename><surname>Federico</surname></persName>
+							<email>federico@unisi.it</email>
+						</author>
+						<author>
+							<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Santorelli</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">C</forename><surname>Casali</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Institute of Neurological Sciences</orgName>
+								<orgName type="laboratory">Laboratory of Neuropathology</orgName>
+								<orgName type="institution">University of Siena</orgName>
+								<address>
+									<settlement>Siena</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Born-Bunge Foundation</orgName>
+								<orgName type="laboratory">Laboratory of Neuropathology</orgName>
+								<orgName type="institution">University of Antwerp</orgName>
+								<address>
+									<settlement>Wilrijk</settlement>
+									<country key="BE">Belgium</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Institute of Neurological Sciences</orgName>
+								<orgName type="institution">Neurometabolic Unit</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">University of Siena</orgName>
+								<address>
+									<postCode>I-5100</postCode>
+									<settlement>Siena</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Institute of Neurological Sciences</orgName>
+								<orgName type="laboratory">Laboratory of Genetics</orgName>
+								<orgName type="institution">University &quot;La Sapienza&quot;</orgName>
+								<address>
+									<settlement>Rome</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">206D3692D1623E497859E754FB7EA271</idno>
+					<note type="submission">Received: 19 August 1998 / Revised: 16 November 1998 / Accepted: 18 November 1998</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.2" ident="GROBID" when="2023-03-30T18:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Muscle biopsy tissue from a patient affected by the juvenile form of neuronal ceroid lipofuscinosis (NCL) was studied immunohistochemically using antibodies to β-amyloid peptide and amyloid precursor protein. Positive reaction in muscle was specifically localized to autophagic vacuoles and blood vessel walls. Increased acid phosphatase reaction suggested enhanced lysosomal activity. We hypothesize that β-amyloid is deposited in NCL muscle by a lysosomal mechanism similar to that proposed in other disorders involving β-amyloid.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Neuronal ceroid lipofuscinoses (NCL) are autosomal recessive neurodegenerative disorders of infancy or childhood with a global incidence of 1 in 12,500 live births. Common to all NCL forms is the presence of intralysosomal autofluorescent lipopigments in several tissues, including neurons, leukocytes, and endothelial cells. These deposits can have different ultrastructural features, varying from granular structures to fingerprint or curvilinear bodies <ref type="bibr" target="#b13">[14]</ref>. The three main clinical forms of NCL are usually classified as infantile (Santavuori-Haltia disease), late infantile (Jansky-Bielschowsky disease), and juvenile (Spielmeyer-Vogt-Sjögren disease). The defective genes responsible for the infantile and juvenile NCL have been localized to chromosomes 1 <ref type="bibr" target="#b22">[23]</ref> and 16 <ref type="bibr" target="#b17">[18]</ref>, respectively. More recently, the structural organization and sequence of the defective gene in classical late infantile NCL (CLN2) <ref type="bibr" target="#b21">[22]</ref> and variant late-infantile NCL (CLN5) <ref type="bibr" target="#b20">[21]</ref> have also been identified. Here we report on a patient affected by a juvenile form of NCL in whom the diagnosis was based on the clinical picture, and on skin and muscle biopsy findings. Since the composition of the lipopigments in brains in juvenile NCL patients is complex and includes such unusual components as β-amyloid <ref type="bibr" target="#b16">[17]</ref> and amyloid precursor protein (APP) <ref type="bibr" target="#b24">[25]</ref>, we also investigated the biochemical composition of the autophagic vacuoles found in the muscle of our patient by immunohistochemistry with antibodies to β-amyloid filaments, APP, and ubiquitin. We also used antibodies against immunoglobulin lambda and kappa chains, against the neoantigens of the complement C5b-9 membrane attack complex (MAC) and against major histocompatibility complex class I molecules (MHC-I).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Case report</head><p>The patient was a 21-year-old male. The parents were healthy and nonconsanguineous. He was born after a normal pregnancy with an uneventful delivery. The neonatal period was unremarkable. Psychomotor development was normal up to age 6 years. While attending primary school, he started to complain of visual failure. The consulted ophthalmologist diagnosed a macular degeneration. A neurological examination at this age was normal. Visual loss gradually worsened, with another funduscopic examination at age 14 showing papillary atrophy. At age 17, the patient was admitted to a neurological clinic because of progressive gait and speech abnormalities associated with generalized seizures and mental retardation. Speech was monotonous. EEG showed generalized epileptiform discharges with abnormal background activity. Computed tomography (CT) showed dilatation of the fourth ventricle. Phenobarbital was administered leading to complete seizure control. The patient was brought to our attention at the age of 20 due to progressive deterioration of his clinical condition. Generalized seizures had become frequent, and administration of various anti-epileptic Detection of β-A4 amyloid and its precursor protein in the muscle of a patient with juvenile neuronal ceroid lipofuscinosis (Spielmeyer-Vogt-Sjögren) drugs could not completely control the seizures. Neurological examination showed severe mental retardation, diffuse muscle hypotonia, ataxic gait, visual loss and areflexia. The convulsive disorder was associated with myoclonus of the arms. EEG showed significant deterioration compared to the previous one performed at age 17. CT scan and magnetic resonance imaging showed generalized cerebral atrophy, and even more severe atrophy of the cerebellum. An important dilation of the fourth ventricle concomitant with enlarged cerebellar sulci was observed. Needle electromyography (EMG) showed neurogenic changes. Measurement of sensory nerve action potentials and conduction velocity was normal.</p><p>Visual studies showed abnormalities of the retinal pigment epithelium associated with electrophysiological (ERG) changes. Metabolic disorders able to cause myoclonus epilepsy and mental retardation were excluded by biochemical studies. A muscle biopsy was taken from the left vastus lateralis, with the overlying skin.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Tissue</head><p>Muscle and skin biopsies were taken from the left vastus lateralis muscle. Prior to immunohistochemical study, the muscle biopsy sample was examined with standard histological staining techniques, including hematoxylin-eosin, trichrome Masson, periodic acid-Schiff (PAS), PAS following amylase treatment, Sudan, and enzyme histochemical techniques for succinate dehydrogenase (SDH), NADH-tetrazolium reductase (NADH-TR), menadione αglycerophosphate dehydrogenase, cytochrome c oxidase (COX), phosphorylase, and ATPase <ref type="bibr" target="#b5">[6]</ref>. Histochemical methods were also used to detect acid phosphatase <ref type="bibr" target="#b1">[2]</ref>.</p><p>Control tissue was obtained from three patients without detectable muscle disease, three patients with sporadic inclusion body myositis (IBM), two patients with oculopharyngeal muscular dystrophy (OPMD), and two patients with polymyositis with severe structural muscle changes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Immunocytochemistry</head><p>The muscle biopsy samples were snap-frozen in liquid nitrogencooled isopentane, and 7-µm-thick cryostat sections were cut. Nonspecific immunoglobulin binding sites in the tissue were blocked by incubation of the sections with 1:25 normal swine serum (Dakopatts, Glostrup, Denmark) in 0.05 M TRIS-buffered saline (TBS) pH 7.4, containing 1% bovine serum albumin fraction V (BSA). Sections were then incubated overnight with primary antibodies. The antibodies and dilutions used are listed in Table <ref type="table" target="#tab_0">1</ref>. Immunostaining was performed by the avidin-biotin-complex (ABC) or the peroxidase-antiperoxidase (PAP) <ref type="bibr" target="#b14">[15]</ref> methods. Sections were photographed in a Reichert Polyvar optical microscope.</p><p>Negative controls consisted of preincubation with TBS and 0.1% BSA, incubation with non-immune mouse IgG, or omission of the primary antibody.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Autofluorescence</head><p>To evaluate autofluorescence, a frozen muscle section from the NCL patient and from an aged control were examined under a Zeiss Axioplan fluorescence microscope using an ultraviolet filter with excitation bandpasses of 340-380 nm.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electron microscopy</head><p>For electron microscopic examination, muscle and skin tissue from our patient was fixed in 4% glutaraldehyde and postfixed in 2% osmium tetroxide, dehydrated in graded alcohols and embedded in Araldite (Fluka, Buchs, Switzerland). Ultrathin sections were stained with 2% uranyl acetate and lead citrate and observed in a Philips CM 10 electron microscope at 60 kV. A pellet of lymphocytes, isolated from our patient according to established techniques, was also studied by electron microscopy.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Molecular genetics</head><p>Using oligonucleotide primers BD1F and BD2R, we tested leukocyte total DNA for the presence of the 1.02-kb deletion in the CLN3 gene, as previously reported <ref type="bibr" target="#b25">[26]</ref>. This genomic deletion has been determined to be a common mutation, encountered in about 70% of Batten disease chromosomes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Light microscopy</head><p>The muscle biopsy showed an overall myopathic aspect, with increased variation in fiber size and both atrophic and, more rarely, hypertrophic muscle fibers. Rare internalized nuclei were also observed. Regenerative muscle fibers or necrotic fibers undergoing phagocytosis were only rarely seen. A number of fibers appeared to be vacuolated (Fig. <ref type="figure">1A</ref>). Some of these vacuoles were rimmed (Fig. <ref type="figure">1B</ref>). The NADH-TR, menadione α-glycerophosphate dehydrogenase, SDH, COX, and ATPase preparations showed focal loss of activity (Fig. <ref type="figure">1C, D</ref>). However, a two fiber pattern with slight type 1 predominance was retained. The PAS staining was positive in many vacuoles, though some vacuoles remained negative. Several vacuoles showed an increased Sudan reaction (Fig. <ref type="figure">1E</ref>). There was strong acid phosphatase activity throughout the muscle tissue (Fig. <ref type="figure">1F</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Immunohistochemistry</head><p>Positive immunostaining was found around and inside many vacuoles with antibodies against β-amyloid and APP (Fig. <ref type="figure" target="#fig_1">2A, C</ref>). Endomysial capillaries and large perimysial blood vessels were also positive for these antibodies (Fig. <ref type="figure" target="#fig_1">2B</ref>). The antibody against ubiquitin also stained some vacuoles. Anti-desmin antibody diffusely stained normal muscle fibers, representing the normal reactivity of the intermyofibrillar network, but a stronger reaction was found in vacuolated muscle fibers (Fig. <ref type="figure" target="#fig_1">2D</ref>). No deposits of MAC, IgG or immunoglobulin light chains were observed. Normal immunostaining was found with the antibody against HLA-ABC.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Control tissue</head><p>In muscle biopsy specimens from patients affected by OPMD and IBM, the wall and sometimes the center of the rimmed vacuoles were immunolabeled with antibodies to APP and β-amyloid. With the antibody against HLA-ABC, all muscle fibers in muscle biopsies from patients with polymyositis showed a significant sarcolemmal immunostaining. Most of the necrotic fibers were immunolabeled by antibodies against immunoglobulin light chains. Few of them were MAC positive. This pattern of immunostaining was completely absent in muscle biopsy specimens from patients without detectable muscle dis-ease. No immunostaining was observed with omission of the primary antibody. After staining with non-immune mouse IgG, a weak stain was observed in the endomysium, but no other structures were labeled.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Autofluorescence</head><p>A considerable increase in autofluorescent material was observed in the sarcoplasm of the muscle fibers in our patient compared to aged control tissue.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electron microscopy</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Muscle</head><p>Numerous inclusions (1-1.5 µm) with curvilinear and rectilinear profiles were observed in the subsarcolemmal area and the intermyofibrillar network. Numerous vacuoles containing lamellar curvilinear and rectilinear aggregates were also observed (Fig. <ref type="figure" target="#fig_2">3</ref>). These vacuoles also showed occasional myelin-like figures. Non-filamentous material was also seen. Numerous osmiophilic granular and amorphous inclusions were also found in the endomysial fibroblasts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Skin</head><p>Numerous inclusions with curvilinear, rectilinear and fingerprint profiles were observed in smooth muscle cells (Fig. <ref type="figure" target="#fig_3">4</ref>), eccrine sweat glands and Schwann cells.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Pellet of lymphocytes</head><p>Membrane-bound vacuoles containing inclusions with fingerprint profiles, were encountered in some lymphocytes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Molecular genetics</head><p>Employing a PCR-derived method, we did not detect the common 1.02-kb CLN3 deletion in our patient.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>In the present study, we immunocytochemically examined a muscle biopsy specimen of a patient affected by a juvenile form of NCL. The diagnosis of NCL in our patient was made by clinical and morphological studies. In molecular genetic studies we did not detect the common 1.02kb CLN3 deletion in our patient <ref type="bibr" target="#b25">[26]</ref>. These results, however, cannot rule out that other, less common CLN3 mutations could have produced this patient's neurodegenerative illness. The diagnosis of NCL is usually made by skin biopsy and, probably for this reason, muscle tissue has rarely been studied <ref type="bibr" target="#b4">[5,</ref><ref type="bibr" target="#b9">10]</ref>. Many hypotheses of its pathogenesis have been advanced, but relatively few are still currently entertained <ref type="bibr" target="#b8">[9]</ref>. The composition of the lipopigments characteristic of NCL is highly complex, but amongst others includes amyloid proteins. Amyloid is a generic term used to designate proteins of diverse origins that are often biochemically unrelated, but invariably form fibrillar deposits by aggregation of relatively small peptides in a characteristic cross-β conformation <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b7">8]</ref>.</p><p>These amyloid peptides are usually formed by the enzymatic processing of a precursor protein (amyloidogenic protein). The nature of the precursor protein may vary, from immunoglobulin light chains <ref type="bibr" target="#b7">[8]</ref> through various serum proteins <ref type="bibr" target="#b2">[3,</ref><ref type="bibr" target="#b11">12]</ref> to APP <ref type="bibr" target="#b15">[16]</ref>. We have found no evidence that immunoglobulin light chains were involved in this case. On the other hand, β-amyloid has been previously demonstrated in storage pigments in neurons of NCL patients <ref type="bibr" target="#b16">[17]</ref>. In that study, β-amyloid was ultrastructurally immunolocalized to curvilinear and fingerprint profiles in affected neurons. However, these authors did not study any muscle tissue. In our present study of NCL muscle we were able to show β-amyloid and APP immunoreactivity in autophagic vacuoles and blood vessel walls, which corresponded ultrastructurally to lipopigment inclusions with curvilinear and rectilinear profiles.</p><p>β-Amyloid has previously been described in other diseases: Alzheimer's disease (AD), where it forms the core of senile plaques; and several muscle disorders, including OPMD <ref type="bibr" target="#b23">[24]</ref> and IBM <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b23">24]</ref>, where it is specifically associated with rimmed vacuoles. These data are confirmed in this study. The rimmed vacuoles have been also shown to be positive for the lysosomal proteases cathepsin B and D <ref type="bibr" target="#b23">[24]</ref>, which suggests a lysosomal involvement in the processing of β-amyloid in these disorders. Lysosomal processing of β-amyloid has also been hypoth- esized to play a role in AD neurodegeneration <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b12">13]</ref>. Furthermore, the strong acid phosphatase reactivity observed in the muscle of our NCL patient suggests a high lysosomal activity. Taken together, these results suggest that β-amyloid and APP deposition in NCL muscle may be determined by lysosomal activity, as seems to be the case for other muscle and neurological diseases involving β-amyloid and APP. Defective lysosomal processing of βamyloid and other proteins may be an important factor in lipofuscinogenesis in NCL, as already postulated for AD <ref type="bibr" target="#b3">[4,</ref><ref type="bibr" target="#b10">11,</ref><ref type="bibr" target="#b12">13]</ref> and aging <ref type="bibr" target="#b19">[20]</ref>. Thus, altered regulation of APP processing in the lysosomal system could also represent an aspect of the pathogenesis of NCL. Further study will be needed to elucidate this hypothesis.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Cryostat sections of muscle stained with antibodies to β-A4 A showing positive staining in two vacuoles (arrows) and B in perimysial blood vessel walls; C APP (22C11) showing granular immunoreactivity in a vacuole; D desmin, showing stronger reaction in vacuolated muscle fibers (APP amyloid precursor protein). A × 312; B, C × 324; D × 220</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3</head><label>3</label><figDesc>Fig. 3 Electron microscopy of NCL muscle biopsy specimen. Mixed curvilinear and rectilinear lamellar profiles within an intermyofibrillar vacuole. × 61 500</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4 A</head><label>4</label><figDesc>Fig. 4 A Electron microscopy of NCL skin biopsy specimen. Arteriolar smooth muscle cells displaying two membrane-bound pleomorphic inclusions (arrows) with fingerprints. B Higher magnification of the typical fingerprint profiles. A × 10 875; B × 61 500</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Antibodies used in this study (pAb polyclonal antibody, mAb monoclonal antibody, APP amyloid precursor protein, MAC membrane attack complex, Ig immunoglobulin)</figDesc><table><row><cell>Antibody</cell><cell>Dilution</cell><cell cols="2">Clonality Source</cell></row><row><cell>Ubiquitin</cell><cell>1/200</cell><cell>pAb</cell><cell>Dakopatts</cell></row><row><cell>β-A4 amyloid</cell><cell>1/500</cell><cell>pAb</cell><cell>Prof. Beyreuther</cell></row><row><cell>APP 22C11</cell><cell>1/30</cell><cell>mAb</cell><cell>Boehringer Mannheim</cell></row><row><cell>Desmin</cell><cell>1/100</cell><cell>mAb</cell><cell>Dakopatts</cell></row><row><cell>HLA-ABC</cell><cell>1/100</cell><cell>mAb</cell><cell>Dakopatts</cell></row><row><cell>MAC</cell><cell>1/100</cell><cell>mAb</cell><cell>Dakopatts</cell></row><row><cell>IgG</cell><cell>1/200</cell><cell>mAb</cell><cell>Dakopatts</cell></row><row><cell>Ig λ chain Ig κ chain</cell><cell>1/100 1/200</cell><cell>mAb mAb</cell><cell>Dakopatts Dakopatts</cell></row></table><note>Fig. 1 Cryostat sections of NCL muscle biopsy stained with hematoxylin-eosin A, trichrome Masson B, NADH-TR B, ATPase 10,4 D; Sudan E, acid phosphatase F (NCL neuronal ceroid lipofuscinosis). A-F × 190</note></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>We thank Roberta Salvestroni for excellent technical work. We also thank Marie Louise Basso for editing the manuscript.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Light and electron microscopic localizatio of β-amyloid protein in muscle biopsies of patients with inclusion-body myositis</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Askanas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Engel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Alvarez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="31" to="36" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A simple azo-dye method for histochemical demonstration of acid phosphatase</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Barka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">187</biblScope>
+			<biblScope unit="page" from="248" to="249" />
+			<date type="published" when="1960">1960</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Chemical classes of amyloid substance</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">P</forename><surname>Benditt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Erksen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Am J Pathol</title>
+		<imprint>
+			<biblScope unit="volume">65</biblScope>
+			<biblScope unit="page" from="231" to="252" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Properties of the endosomal-lysosomal system in the human central nervous system: disturbances mark most neurons in populations at risk to degenerate in Alzheimer&apos;s disease</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cataldo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Hamilton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Barnett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="186" to="199" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Adult ceroid lipofuscinosis (Kuf&apos;s disease) in two brothers. Retinal and visceral storage in one; diagnostic muscle biopsy in the other</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Dom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Brucher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ceuterick</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Neuropathol (Berl)</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="67" to="72" />
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Muscle biopsy: a practical approach</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dubowitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Sewry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Fitzsimons</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1985">1985</date>
+			<publisher>Baillière Tindall</publisher>
+			<pubPlace>London</pubPlace>
+		</imprint>
+	</monogr>
+	<note>2nd edn</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Physical and chemical properties of amyloid fibers. I. X ray diffraction studies on amyloid filaments</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Eanes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Glenner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Histochem Cytochem</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="673" to="677" />
+			<date type="published" when="1968">1968</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">An amyloid protein: the amino-terminal variable fragment of an immunoglobulin light chain</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Glenner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Harbaugh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">I</forename><surname>Ohms</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem Biophys Res Commun</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="1287" to="1289" />
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The neuronal ceroid lipofuscinoses</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Goebel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Child Neurol</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="424" to="437" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Significance of muscle biopsies in neuronal ceroid lipofuscinosis</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">H</forename><surname>Goebel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zeman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Pilz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurol Neurosurg Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="985" to="993" />
+			<date type="published" when="1975">1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Processing of the amyloid protein precursor to potentially amyloidogenic derivatives</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Golde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Estus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Younkin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">255</biblScope>
+			<biblScope unit="page" from="728" to="730" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Polymerization of intact β2-microglobulin in tissue causes amyloidosis in patients on chronic hemodialysis</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Gorevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Munoz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Casey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc Natl Acad Sci</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="7908" to="7912" />
+			<date type="published" when="1986">1986</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Targeting of cell surface β-amyloid precursor protein to lysosomes: alternative processing into amyloid-bearing fragments</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Haas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Koo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mellon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">357</biblScope>
+			<biblScope unit="page" from="500" to="503" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">From locus to cellular disturbances: positional cloning of the infantile neuronal ceroid lipofuscinosis gene</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hellsten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vesa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jalanko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Peltonen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuropediatrics</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="9" to="11" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Use of avidin-biotin peroxidase complex (ABC) in immunoperoxidase techniques: a comparison between ABC and unlabeled antibody (PAP) procedures</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Hsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Raine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Fanger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Histochem Cytochem</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="577" to="580" />
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The precursor of Alzheimer&apos;s disease amyloid A4 protein resembles a cell surface receptor</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Lemaire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Unterbeck</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">325</biblScope>
+			<biblScope unit="page" from="733" to="736" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">) β-Protein immunoreactivity in brains of patients with neuronal ceroid lipofuscinosis: ultrastructural and biochemical demonstration</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kitaguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Wisniewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Maslinski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurosci Lett</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="115" to="160" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Isolation of a novel gene underlying Batten disease, CLN3. The International Batten Disease Consortium</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Lerner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Boustany</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Anderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cell</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="949" to="957" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Amyloid filaments in inclusion body myositis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Mendell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Sahenk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gales</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Paul</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch Neurol</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="1229" to="1234" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Increased expression of cathepsin E and D in neurons of the aged rat brain and their colocalization with lipofuscin and carboxyterminal fragments of Alzheimer amyloid precursor protein</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakanishi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Amano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Sastradipura</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Neurochem</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="739" to="749" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">CLN5, a novel gene encoding a putative transmembrane protein mutated in Finnish variant late infantile neuronal ceroid lipofuscinosis</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Savukoski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Klockars</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Holmberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Santavuori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Lander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Peltonen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Genet</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="286" to="288" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Association of mutations in a lysosomal protein with classical late-infantile neuronal ceroid lipofuscinosis</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Sleat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Donnelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lackland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Sohar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Pullarkat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lobel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">277</biblScope>
+			<biblScope unit="page" from="1802" to="1805" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Mutations in the palmitoyl protein thioesterase gene causing infantile neuronal ceroid lipofuscinosis</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vesa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Hellsten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Verkruyse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Camp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rapola</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Santavuori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Hofmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Peltonen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">376</biblScope>
+			<biblScope unit="page" from="584" to="587" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Rimmed vacuoles of oculopharyngeal muscular dystrophy and inclusion body myositis contain amyloid precursor protein and lysosomal markers</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Villanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kawai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Lübke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">603</biblScope>
+			<biblScope unit="page" from="343" to="347" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Abnormal processing of carboxyl-terminal fragment of beta precursor protein (βPP) in neuronal ceroid lipofuscinosis (NCL) cases</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Wisniewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Kida</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Inherit Metab Dis</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="312" to="316" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Molecular screening of Batten disease: identification of a missense mutation (E295 K) in the CLN3 gene</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Wisniewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Kaczmarski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hum Genet</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="page" from="57" to="62" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
