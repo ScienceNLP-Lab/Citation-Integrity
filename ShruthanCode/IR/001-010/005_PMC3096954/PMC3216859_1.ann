@@ -1,9 +1,0 @@
-T0	Citation 104 106	27
-T1	Context 0 108	Prediction of the claudin-low subtype was done using the claudin-low predictor developed in Prat et al [27].
-A1	Level T1 Sentence
-T2	ACCURATE 8526 8678	To robustly identify claudin-low samples, we built two predictors on the basis of either our human tumor data or the cell line data of Neve et al. [21].
-A2	Level T2 Sentence
-T3	ACCURATE 8679 8941	To build a predictor, we first selected those genes that were significantly differentially expressed between claudin-low tumors defined by SigClust [22] (or cell lines) and all other subtypes using a two-class, unpaired SAM, with < 5% false discovery rate (FDR).
-A3	Level T3 Sentence
-T4	ACCURATE 8942 9183	Then we used these gene lists and calculated a claudin-low centroid and an "others" centroid from the training data. For every sample, we calculated the Euclidean distances to the two centroids and assigned the class of the nearest centroid.
-A4	Level T4 Sentence
