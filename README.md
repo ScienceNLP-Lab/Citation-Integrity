@@ -1,6 +1,3 @@
-# Citation-Integrity
-Natural language processing to assess and improve citation integrity in biomedical publications
-
 # Assessing Citation Integrity in Biomedical Publications: Annotation and NLP Models
 
 This folder will contain the citation accuracy classification code for the paper "[Assessing Citation Integrity in Biomedical Publications: Corpus Annotation and NLP Models]." Partial code was borrowed from the folder (https://github.com/dwadden/multivers/tree/main).
