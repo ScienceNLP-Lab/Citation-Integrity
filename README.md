@@ -1,6 +1,10 @@
 # Assessing Citation Integrity in Biomedical Publications: Annotation and NLP Models
 
-This folder will contain the citation accuracy classification code for the paper "[Assessing Citation Integrity in Biomedical Publications: Corpus Annotation and NLP Models]." Partial code was borrowed from the folder (https://github.com/dwadden/multivers/tree/main).
+This repository contains the citation accuracy classification data and code for the paper "[Assessing Citation Integrity in Biomedical Publications: Corpus Annotation and NLP Models]."
+
+Data is in the same format as the SciFact dataset [(schema information)](https://github.com/allenai/scifact/blob/master/doc/data.md)
+
+Code was adapted from [MultiVerS](https://github.com/dwadden/multivers/tree/main).
 
 ## Run the script to train the model on the dataset
 
