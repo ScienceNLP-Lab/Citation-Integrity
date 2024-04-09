@@ -4,7 +4,7 @@ This repository contains data and code for the paper "[Assessing Citation Integr
 
 ## Data
 
-Data is in the same format as the SciFact dataset [(schema information)](https://github.com/allenai/scifact/blob/master/doc/data.md). The dataset is split into 3 subsets: training (70 reference articles), development (10), and test (10).
+Data is in the same format as the SciFact dataset [(schema information)](https://github.com/allenai/scifact/blob/master/doc/data.md). The dataset is split into 3 subsets: training (70 reference articles), development (10 articles), and test (20 articles).
 
 ## Code
 
